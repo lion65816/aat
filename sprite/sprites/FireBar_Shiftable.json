@@ -1,0 +1,202 @@
+{
+  "$1656": {
+    "Object Clipping": 0,
+    "Can be jumped on": false,
+    "Dies when jumped on": false,
+    "Hop in/kick shell": false,
+    "Disappears in cloud of smoke": true
+  },
+  "$1662": {
+    "Sprite Clipping": 0,
+    "Use shell as death frame": false,
+    "Fall straight down when killed": false
+  },
+  "$166E": {
+    "Use second graphics page": true,
+    "Palette": 4,
+    "Disable fireball killing": true,
+    "Disable cape killing": true,
+    "Disable water splash": true,
+    "Don't interact with Layer 2": false
+  },
+  "$167A": {
+    "Don't disable cliping when starkilled": false,
+    "Invincible to star/cape/fire/bounce blk.": true,
+    "Process when off screen": false,
+    "Don't change into shell when stunned": false,
+    "Can't be kicked like shell": false,
+    "Process interaction with Mario every frame": true,
+    "Gives power-up when eaten by yoshi": false,
+    "Don't use default interaction with Mario": true
+  },
+  "$1686": {
+    "Inedible": true,
+    "Stay in Yoshi's mouth": false,
+    "Weird ground behaviour": false,
+    "Don't interact with other sprites": true,
+    "Don't change direction if touched": true,
+    "Don't turn into coin when goal passed": false,
+    "Spawn a new sprite": false,
+    "Don't interact with objects": true
+  },
+  "$190F": {
+    "Make platform passable from below": false,
+    "Don't erase when goal passed": false,
+    "Can't be killed by sliding": true,
+    "Takes 5 fireballs to kill": false,
+    "Can be jumped on with upwards Y speed": false,
+    "Death frame two tiles high": false,
+    "Don't turn into a coin with silver POW": true,
+    "Don't get stuck in walls (carryable sprites)": false
+  },
+  "AsmFile": "FireBar.asm",
+  "ActLike": 0,
+  "Type": 1,
+  "Extra Property Byte 1": 1,
+  "Extra Property Byte 2": 0,
+  "Additional Byte Count (extra bit clear)": 4,
+  "Additional Byte Count (extra bit set)": 4,
+  "Map16": "",
+  "Displays": [
+    {
+      "Description": "Firebar Clockwise",
+      "ExtraBit": false,
+      "Tiles": [
+        {
+          "X offset": 36,
+          "Y offset": 20,
+          "map16 tile": 276
+        },
+        {
+          "X offset": 4,
+          "Y offset": 4,
+          "map16 tile": 182
+        },
+        {
+          "X offset": 20,
+          "Y offset": 4,
+          "map16 tile": 182
+        },
+        {
+          "X offset": 12,
+          "Y offset": 4,
+          "map16 tile": 182
+        },
+        {
+          "X offset": 28,
+          "Y offset": 4,
+          "map16 tile": 182
+        },
+        {
+          "X offset": 36,
+          "Y offset": 4,
+          "map16 tile": 182
+        },
+        {
+          "X offset": 44,
+          "Y offset": 4,
+          "map16 tile": 182
+        }
+      ],
+      "X": 0,
+      "Y": 0,
+      "DisplayText": "",
+      "UseText": false
+    },
+    {
+      "Description": "Firebar Counter",
+      "ExtraBit": true,
+      "Tiles": [
+        {
+          "X offset": 36,
+          "Y offset": -12,
+          "map16 tile": 276
+        },
+        {
+          "X offset": 20,
+          "Y offset": 4,
+          "map16 tile": 182
+        },
+        {
+          "X offset": 12,
+          "Y offset": 4,
+          "map16 tile": 182
+        },
+        {
+          "X offset": 4,
+          "Y offset": 4,
+          "map16 tile": 182
+        },
+        {
+          "X offset": 28,
+          "Y offset": 4,
+          "map16 tile": 182
+        },
+        {
+          "X offset": 36,
+          "Y offset": 4,
+          "map16 tile": 182
+        },
+        {
+          "X offset": 44,
+          "Y offset": 4,
+          "map16 tile": 182
+        }
+      ],
+      "X": 0,
+      "Y": 0,
+      "DisplayText": "",
+      "UseText": false
+    }
+  ],
+  "Collection": [
+    {
+      "Name": "Fire-Bar Clockwise",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 5,
+      "Extra Property Byte 2": 40,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0
+    },
+    {
+      "Name": "Fire-Bar Counter",
+      "ExtraBit": true,
+      "Extra Property Byte 1": 5,
+      "Extra Property Byte 2": 40,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0
+    },
+    {
+      "Name": "Long Fire-Bar Clockwise",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 11,
+      "Extra Property Byte 2": 40,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0
+    },
+    {
+      "Name": "Long Fire-Bar Counter",
+      "ExtraBit": true,
+      "Extra Property Byte 1": 11,
+      "Extra Property Byte 2": 40,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0
+    },
+    {
+      "Name": "Fast Fire-Bar Clockwise",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 5,
+      "Extra Property Byte 2": 56,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0
+    },
+    {
+      "Name": "Fast Fire-Bar Counter",
+      "ExtraBit": true,
+      "Extra Property Byte 1": 5,
+      "Extra Property Byte 2": 56,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0
+    }
+  ]
+}

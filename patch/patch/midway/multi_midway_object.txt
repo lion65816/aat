@@ -1,0 +1,32 @@
+; Note that this file has to be inserted with ObjecTool 0.4 in order to use it.
+; Inserting it as a block or as a patch won't do much good
+
+incsrc multi_midway_defines.asm
+
+if !sa1
+	!RAM_Midway = !RAM_Midway_SA1
+endif
+
+!FirstMidwayTile = $0220
+
+	LDX $13BF|!addr		; Load translevel
+	LDA !RAM_Midway,x	; If the current midway point index
+	CMP $58				; smaller than midway point object number
+	BCS .return			; ... return
+
+	LDY $57
+	REP #$20			; A = 16-bit
+	LDA $58				; Get midway point index from object
+	AND #$00FF			; Only add the low byte with the first midway point tile
+	CLC : ADC.w #!FirstMidwayTile
+	SEP #$20			; A = 8-bit
+	STA [$6B],y			; Low
+	XBA
+	STA [$6E],y			; High
+	JSR ShiftObjLeft
+	LDA #$35			; Store the other midway point tile (low)
+	STA [$6B],y
+	LDA #$00			; Ditto (high)
+	STA [$6E],y
+.return
+RTS

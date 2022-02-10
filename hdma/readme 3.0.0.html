@@ -1,0 +1,453 @@
+﻿<style>
+
+.maincontainer{
+	background: url('http://www.smwcentral.net/images/background.gif');
+	background-color: black;
+	color: white;	
+	margin-left: auto;
+	margin-right: auto;
+	width: 930px;
+	padding: 10px;
+}
+
+a:link { color: rgb(0,200,0); text-decoration:none; }
+a:active,
+a:visited { color: rgb(0,150,0); }
+a:hover { text-decoration:underline; rgb(0,200,0); }
+
+.code{
+	color: rgb(0,180,0);
+	border: 1px solid rgb(0,180,0);
+	padding: 5px;
+}
+
+body{
+	overflow: scroll;
+	background-color: black;
+}
+
+h1{
+	text-align: center;
+}
+
+</style>
+<html>
+	<head>
+		<title>Readme &amp; Instructions</title>
+	</head>
+	<body>
+	<div class="maincontainer">
+	<center>Readme V1.0</center>
+	<h1>Table of Content</h1>
+	<ul><li><a href="#info">Short info about HDMA</a></li>
+	<li><a href="#basic">Basic functions</a></li>
+	<li><a href="#bg">BG Gradient</a>
+		<ul><li><a href="#bgsingle">Single Channel</a></li>
+		<li><a href="#bgmulti">Multi Channel</a></li>
+		<li><a href="#bgdialog">Color Dialog</a></li>
+		<li><a href="#bgimage">Image</a></li>
+		<li><a href="#bgtable">Table</a></li></ul></li>
+	<li><a href="#fg">FG Gradient</a>
+		<ul><li><a href="#fgsingle">Single Channel</a></li>
+		<li><a href="#fgmulti">Multi Channel</a></li>
+		<li><a href="#fgdialog">Color Dialog</a></li></ul></li>
+	<li><a href="#bright">Brightness Gradient</a>
+		<ul><li><a href="#brightsimple">Simple</a></li>
+		<li><a href="#brightindi">Individual</a></li></ul>
+	<li><a href="#para">Parallax Scrolling</a></li>
+	<li><a href="#wave">Waves</a>
+		<ul><li><a href="#wavex">Horizontal Waves</a></li>
+		<li><a href="#wavey">Vertical Waves</a></li></ul></li>
+	<li><a href="#window">Windowing</a>
+		<ul><li><a href="#windowcircle">Circle</a></li>
+		<li><a href="#windowimage">Image</a></li></ul></li>
+	</ul>
+		
+	<h1><a name="info"></a>Short info about HDMA</h1>
+	So, before I go on about what this tool does, let me tell you something about what HDMA is.<br />
+	You don't need to worry, I won't go into any difficult to understand details, for those of you who already know what HDMA is,
+	you may as well skip this segment.<br />
+	HDMA allows us to put the effects of registers (such as brightness, color, x-position and so on) not over the entire screen but instead
+	only effect a certain number of scanlines. Now you may ask yourself, what are those scanlines? Well, I promised not to go into details,
+	so just think of it as a horizontal line of pixels. The SNES screen is 224 (E0 in hex) pixels high, so we have 224 scanlines.
+	So, when the tool asks for scanline height, you know, it just wants to know the height of the effect.<br />
+	<br />
+	So much for that, now let's talk about channels. Most of the tabs ask you to select a HDMA channel (by default CH 3)
+	Simply put, the HDMA effect needs a channel to work in. There is a total of 8 channels: 0-7, however the original game too needs some
+	To make sure we don't run into any unwanted conflicts, the channel choice is limited to 3,4 and 5 which are considered save in the
+	vanilla game. If you plan to use multiple HDMA effects in the same level, that's fine, just make sure they don't use the same channel(s)
+	However, if you looked through the tabs, you may have noticed that some of these don't have an option to choose a channel. Well, all that
+	that means is that <del>you're screwed</del> the effect you want to create probably takes all 3 channels. However, the tool may
+	calculate a way, so that not all 3 channels are needed. What will happen in that case, is something I'll talk about in the next point.<br />
+	
+	<br /><hr /><br />
+	
+	<h1><a name="basic"></a>Basic functions</h1>
+	So, now let's talk about some basic functions of this tool.<br />
+	I think most options are very user friendly, in the sense of... just making sense. For example, I doubt there is anybody out there who'd
+	mistake	what the "Code" button does, but just in case, it generates the code for the displayed above (on the mainscreen) displayed
+	gradient. It may happen, that no code can be generated due to the user (aka you) having input some weird ass settings. Anyway, in that
+	case you'll be greeted with a message informing you that there was an error and what exactly caused the error to happen.<br />
+	Granted though, that message will probably only hold information the developer (aka me) can do something with, so please be so kind as
+	to rely that message to me if that ever happens for unexplainable reasons (with that I'm trying to say, check if it not might be your
+	fault before complaining, alright?)<br />
+	<br />
+	While we're on the topic of codes, let's talk about channels (once more). On most tabs, you're able to set which channel you want the
+	HDMA to work on, but on some others, there is no option for that. That's simply because, by default, those effects need all 3 channels.
+	For example most BG/FG multicolor gradients. However, this isn't always the case. With certain settings, the code may can be done with
+	2 or even only 1 HDMA channel, so if the tool calculates that all 3 channels are needed, you will be presented with a short message box
+	that informs you of said fact and after closing it<br />
+	Now you may ask yourself, what's this higher and lower priority stuff. Well, if the tool finds a way to calculate the gradient with only
+	one channel, then it will only use the one set in higher priority and ignore the lower one, if two channels are needed, it will simply
+	use both.<br />	
+	<br />
+	Having all the interruptions out of the way, you should be having the code window now.<br />
+	The window can be changed in size to your liking. You can change the code (if you for whatever reason feel the need to) and of course,
+	you can also copy the code either by selecting all of it or by clicking the "Copy To Clipboard" button. In general the code is meant
+	to be used with uberASMTool. 
+	The "Save as ASM" function can be used to save the code as an asm file which can be placed in the level folder of UberASMTool and applied to the desired level(s) using UberASMTool's list.txt.<br />	
+	<br />
+	Another (maybe) important feature I should talk about are screenshots. Some tabs allow you to work with screenshots from your hack.
+	To load a screenshot, just click the "Load Screenshot" button (who would have guessed), which is located below the main screen next
+	to the "Code" button. Please note that the "BG Gradients" don't have this option. The screenshot must be a SNES screenshot, which
+	simply means has to be 224 pixels high and 256 wide. Aside from that, you can also choose from most SMW backgrounds. Every tab that
+	uses the blue hills by default can be changed with the combobox in the menu bar. If you are ever unhappy with the screenshot you chose
+	and would like the good	ol' "level 105" screen back, just click on the "Reset Current BG" button in the menu, and everything will be
+	back to the way it was.<br />
+		
+	<br /><hr /><br />
+	
+	<h1><a name="bg"></a>BG Color Gradient</h1>
+	I think we've wasted enough time with instructions, let's get to the real thing now. Let's start of with the BG gradients.
+	You can get to the BG gradient window, by clicking on the "BG Gradient" node below the Gradients folder in the tree to the left.<br />
+	<h2><a name="bgsingle"></a>BG - Single Channel</h2>
+	First tab first. The "Single Channel" tab. This basicly just means that you are limited to creating gradients with only one channel
+	and thus only a fixed color value per scanline. For example, if the first scanline is set to full brightness, you can still choose 	
+	which colors to use, like red, gree, red and green and so on, but the color will always be at full brightness. You can't have full red
+	and a little bit of green. (Technicly you can, but that's for the other tabs)<br />
+	Let's start of by how to do things. I think if you just mess a little with the controls, you'll figure it out soon on your own, but
+	me assuming this would make you reading this pointless, so... let me explain xD<br />
+	The "Top" scrollbar sets how bright the color to start with is. Same goes for the "Bottom" bar, except it sets what color the gradient
+	ends with. In the "Colors" box, you can set which colors the gradient uses. You can choose multiple ones to have a mix of colors too.
+	The centered checkbox makes things kinda flipped over the middle. The "Top" scrollbar now decides which color will be at the top AND
+	the bottom and the bottom scrollbar sets the color that will be in the middle.<br />
+	Lastly, the "Divider" scrollbar. Frankly, I doubt you'll ever need it, but this one sets how "extreme" the split from one color of the
+	gradient to the next one is. Kinda difficult to explain, but you'll undestand once you try it out.<br />
+	<br />
+	<br />
+	<h2><a name="bgmulti"></a>BG - Multi Channel</h2>
+	The "Multi Channel" tab doesn't work much different than the single channel one. You, again, got a trackbar for the top and bottom value
+	and a checkbox to make the values work for top/bottom and center again. Except, this time, you have all of those settings for each color
+	separately. I decided to leave out the divider because... honestly, who needs it? Anyway, with this, you now have the possibility to
+	make far more complex (and better looking) gradients than with the single channel one.<br />
+	As you've probable noticed, this tab doesn't have an option to set the channel. That's simply because, as the name implies, the code
+	most likely needs all 3 channels anyway. If not... well, we've already been over <a href="#basic">this</a>.
+	In addition, there is a little graphics showing what each color gradient looks like on it's own.<br />
+<br />
+	<h2><a name="bgdialog">BG - Color Dialog/Individual Scanlines</a></h2>
+	This one is actually 2 different methods which I just combined in one tab. You'll find that the first one is almost stupidly easy, while
+	the other one (is still easy) but requires a lot more time and effort but allows for ANY gradient to be simply made.<br />
+	On this tab, you can create gradients using the windows color dialog. If you don't know what this is, <del>shame on you</del> look at this:<br />
+	<center><img src="http://tabsstudio.files.wordpress.com/2010/11/edit-colors-dialog-in-windows-7.png" alt="Color Dialog"></center><br />
+	Whether you use the simple or the individual method is decided by the checkbox "Set Scanlines Individually". You may guessed it, if the
+	box is unchecked, it will be the simple and if checked the individual method. So, let's start with the really simple one (default).<br />
+	<br />
+	For the simple method, you only need (3) 4 controls. The function of the "Center" checkbox should be clear by now but how do we set the
+	colors for the top and the bottom (and middle if centered? You simply click on the little black boxes. The color dialog will pop up and
+	you can simply set the color of your liking. The box will now change its color to whatever you set and the tool will calculate a gradient
+	which goes from the top to the bottom color (or from the top to the middle and than to the bottom).<br />
+	Lastly, there is once more the "divider" trackbar. If you now ask yourself, why I implemented that again even though I don't expect
+	anyone to ever use it, it's simply because I had the leftover empty space and it only took me 3 minutes to do so :3 
+	I think this is really as simple as it can get in terms of making gradients. 
+
+	Now, let's move on to the slightly more complex but also more advanced part. By checking the "Set Scanlines Individually" checkbox, you
+	will enable the "Individual Settings" box and disable the "Simple" box. The controls for this are actually fairly simple. You, once again
+	can set the color by clicking on the color box or, this time, by inputing the hex-code into the little textblock below. Note that you have
+	to press RETURN afterwards for the program to read the input number.<br />
+	Now you need to set how thick the color bar should be. That's done via the "Scanline" control where you can either use the up/down arrows
+	or just write the value in yourself. Note here that the maximum is 128.<br />
+	After you're satisfied with the thickness and the color the bar will later have, you can click the "Add" button, and the part of the
+	gradient will be added to the list. In the 3 lists below, you can see the red, green and blue tables that will later be in the code.
+	You can select one entry from any list and use the buttons to move the selected bar up, down or delete (remove) it. You can also click
+	the button located next to the "Code" button marked as "Delete All"... I think no further explanation is needed on what this button does
+	<p style="font-size:xx-small;">hint: it removes all the bars</p>
+	<br />
+	<br />
+	<h2><a name="bgimage">BG - Image</a></h2>
+	You know that feeling, when you play a SMW hack and encounter an awesome looking gradient and you wish, you could use it for your hack to?
+	Well, worry no more, with this tab, you can easily rip gradients from images (in most cases screenshots I assume). Now, how does this work?
+	You simply click the "Load Image" button and browse for your image. It doesn't need to be a screenshot, it can be ANYTHING. After you
+	found and loaded an image, it will be displayed in the small (previously grey) box above. With that out of the way, you now need to select a
+	column to rip the gradient from. Remember that HDMA is something that works on a horizontal line, hence we can't make any doted or
+	separated lines. Hence (once more) we can only turn one column of pixels into a gradient. Which column that is, can be set with the trackbar
+	below. That alone is enough to get your gradient. If you're troubled with a level where you can't get a clean shot of just the gradient
+	without any other layers or sprites in the way, don't forget that most emulators are capable of disabling layers. Use that feature to get a
+	nice and clean screenshot.<br />
+	<br />
+	Lastly, you may want to apply a little color correction. After all, a (for example) purple gradient shown in the level might be the result
+	of a red gradient and a blue background color. While of course, you can just use the purple gradient with black background, it will cost you
+	more channels. That's what the color-correction is here for. With it, you can subtract a color from the gradient to eventually save channels.
+	The color-correction can simple be enabled/disabled by checking the checkbox with the same name<br />
+	<h2><a name="bgtable">BG - Table</a></h2>
+	The table tab is a tab that creates a gradient based on raw values you put in. Frankly, I doubt that you'll use that frequently seeing as
+	most of the other tabs are better suited to create gradients. This tab will probably find it's use in previewing HDMA gradients.<br />
+	Anyway, let's talk about how to input the values. You can input them using 3 different methods. The first being normal decimal values.
+	Simply by typing the number out, for example <b>255</b>. The second would be to input hex values by the standard 0xhh where hh are the hex
+	values, like this for example: <b>0xFF</b>. Last but not least, the ASM standard of just using the $ sign to indicate a hex value $hh
+	An example for this would be <b>$FF</b>. You can criss cross those methods as you see fit. If you feel like typing them all using the ASM
+	standard, that's fine as is using decimal values for the scanlines and $-hex ones for the values.
+	<ul><li>decimal - ddd - d = number from 0-9</li>
+	<li>hexadecimal - 0xhh - h = hex number from 0-F</li>
+	<li>hexadecimal - $hh - h = hex number from 0-F</li></ul>
+	Now that we've got that out of the way, let's talk about the actual input pattern. For those who've written HDMA gradients before, this one
+	will probably seem obvious. At first, you write the scanlines then a comma ',' and then the color value. Like this for example:<br />
+	<br />
+	13,255<br />
+	$0F,128<br />
+	0x14,$E0<br />
+	<br />
+	(Note that any "db" at the beginning of a line will be ignored)<br />
+	The first line would set the first 13 scanlines to full brightness of whatever color you put the text in.<br />
+	The second line would set the following 15 (0F hex) scanlines to half brightness of whatever color.<br />
+	The last line sets the following 20 (14 hex) scanlines to about 87% brightness.<br />
+	The ASM knowledgeable people amongst you probably noticed, that this would NOT work to preview tables written for HDMA gradients. Why?<
+	Simple, the colors in HDMA don't range from 0-255 (0-FF) like normal but actually only from 0-31 (0-1F) where 31 is full brightness.
+	The reason for that is because the register that the HDMA works with, uses colors in that weird patter of using the last 5 bits for the
+	brightness, and the first 3 for the color to effect, using this format <span style="color:blue">b</span><span style="color:green">g</span><span style="color:red">r</span><span style="color:grey">ccccc</span>
+	So, if you copy the HDMA table into the textbox, you'd get some mixed up color because 3F (00<span style="color:red">1</span><span style="color:grey">11111</span>) in the ASM would mean
+	full red brightness, while the program would read it as only about 24% intensity. Worry not though. At the bottom, below the preview screen,
+	you'll find two buttons, one labelled "8 Bit" and the other "5 Bit". By changing those to "5 Bit", the tool will now read the intensity value
+	only using the last 5 Bit of the input value (0-1F / 0-31). The other bits will just be cut off. The scanlines however, are still read as normal.
+	Lastly, let me talk about the little box bellow the textbox. This box lists all the lines which have an error or can otherwise not be processed.
+	Any line in that box will be ignored from the total gradient. For example, if you have 3 lines. Each setting 10 scanlines in a slightly darker
+	color, and the second one is also in the box bellow, than only the first an third line will be processed.<br />
+	Before I forget, the button labelled "Backcolor" allows you to choose a different background color for the separate bars (display only), if
+	want to work with darker colors gradients they would be hard to see with the black background color, no?<br />
+	<br />
+	Oh, one more thing. The non-ASMer should know, that scanline values higher than $80 (128) don't work. Well, they do, but I don't want to
+	get into details here.<br />
+	<br />
+	
+	<br /><hr /><br />
+	
+	<h1><a name="fg"></a>FG Color Gradient</h1>
+	Well than, onwards with the next function. This is the FG Color Gradient control. Mush like the BG one, this one creates color gradients, but
+	unlike the BG one, the gradients created by this control don't just stretch all the way from the top to the bottom of the screen, but instead
+	have a variable stretching range. With this, you can easily create a dangerous looking bright red lava indicating like gradient.<br />
+	A word of advice though. To you non ASMers, you probably wouldn't be able to make much sense if I told you about sub and main screen now, so
+	just know this: When using these effects in a level, every layer has sort of a higher priority. That means that object (sprites) that go
+	behind layers now go behind ALL the layers. For example, a piranha plant. It goes behind layer 1 to hid in it's pipe but with this effect
+	applied, it will also go behind all the other layers, this includes the background. Those sprites still hurt though. So you should plan
+	around the use of such sprites (or pipes as Mario too works like this) when using this effect.<br />
+	<br />
+	Another thing of importance you should know. The effect won't be absolutely drawn on-top of everything, instead it will be "added" to the
+	layers. That is to say, the colors get added together. Assuming you have a gradient of full red brightness <span style="color:red">(r = 255, g = 0, b = 0)</span> then these
+	values will be added to every pixel of the other layers (with 255 being the maximum). So, if you have a green pixel <span style="color:green">(r = 0, g = 255, b = 0)</span>
+	on the main layer then the result pixel will have the color <span style="color:#FFFF00">(r = 255, g = 255, b = 0)</span>
+	I assume that in 90% of the cases, you want them to just be added together, however to be prepared for the other 10%, there is this box on
+	every tab.<br />
+	<br />
+	With this you can decide what method is to be used for the pixels. Addition is the default one, meaning (as stated before) that every pixel
+	will be added to the main layer ones. Another option would be subtracting. With this, every pixel of the gradient will be subtracted from the
+	main layers (with a minimum of 0). For example, if you have a white pixel on the mainscreen (r = 255, g = 255, b = 255) and a red gradient
+	<span style="color:red">(r = 255, g = 0, b = 0)</span> then the resulting pixel color will be <span style="color:#00FFFF">(r = 0, g = 255, b = 255).</span>.<br />
+	There is also the option of "Add - halfed" and "Sub - halfed". They basicly work the same as addition and subtraction but the result of the
+	pixel calculation is than divided by 2. The maximum of 255 is only enforced AFTER the division. That means, that after an addition, the
+	values for red, green and blue can be higher than 255 (logic maximum of 510) before being divided by 2. So 255 remains the maximum intensity
+	a color of a pixel can have.<br />
+	<br />
+	<h2><a name="fgsingle"></a>FG - Single</h2>
+	With all that out of the way, let's get started. You'll find that you can, like with the BG gradients, set the begin value and the colors to
+	use for the top as well as the bottom. With those you can set the intensity the gradient has when it begins as well as which color. You can
+	use blue, red and green as well as any mix of those colors. Unlike the BG gradient, you now also have a "Reach" trackbar for the top as well
+	as for the bottom. With it you can set how far the gradient reaches from the top/bottom. Note that the top and bottom gradient <b>cannot</b> cross
+	each other. That's why the maximum reach that can be set with the trackbar depends on how far the other trackbar is set to reach. For example,
+	if I set the top one to reach for 100 scanlines, the bottom one can reach a maximum of 124 (224 - 100) scanlines. That's all there is to this tab,
+	the channels and methods have been covered before so any explanation on them seems obsolete.<br />
+<br />	
+	
+	<br />
+	<h2><a name="fgmulti"></a>FG - Multi</h2>
+	Do you understand how the simple one works? Than you should have no trouble with this one. It's basicly the same. You still set the intensity of
+	the color and how far it should reach. Only this time you don't have boxes to check which color to use (Red, Green Blue) but insead seperated
+	controls for all of them. Note that you can only few the controls of one of the gradients at a time (either top or bottom) to change which one
+	you see, just select a different tab to the right of the preview image.<br />
+	There is still the matter of top and bottom gradient not being able to cross each other, but that only applies pre color. That means you can't
+	have the bottom red gradient cross the top red gradient, however you can mix other color. Like make the top red gradient reach all the way from
+	the top to the bottom and the bottom green gradietn all the way from the bottom to the top.<br />
+	The small black bars in each box always show the total gradient for this color, that is what both, the top and the bottom one, would look like.<br />
+	<br />	
+	
+	<br />
+	<h2><a name="fgdialog"></a>FG - Color Dialog/Individual Scanlines</h2>
+	You know what a color dialog is now, right? RIGHT? Well if you don't I recommend you go check it out elswhere for I'm not gonna explain that
+	over and over again xD. So yeah, on this tab you can create gradients using the windows color dialog. That's really about as easy as I can
+	make it for	you. On this tab, I combined two different methods because both don't take up much space. One is the simple method where you
+	just select a color	and the reach for the top and the bottom. The other one is a bit more complex but allows you to set the color of each
+	scanline individually. You can switch between which option to use by un/checking the checkbox "Set Scanlines Individually"
+	By default it's unchecked which lets you use the simple method and if I say simple, I mean SIMPLE. So yeah, you can bring up the color dialog
+	by clicking the small black boxes which display the current color. You should know them from the other tabs. After selecting a color you 
+	like, all that's left for you to do is set the reach and you're done. Really, if you want it any simplier than that I'd have to implement a
+	mind reading function (if you have one at hand, I totally wouldn't mind, just so you know).<br />
+	<br />		
+	Now for the other method, the invidual one. If you set "Set Scanlines Indivdually", you'll be able to use the controls in the groupbox below.
+	The color can be set like before by clicking on the black (by defualt) box and selecting a color in the following color dialog. For this, you
+	also have the option of inputing the hex value of a color in the textbox below. Note that any input won't be used until you hit the enter key
+	while having the textbox selected. On the left side, you can select how many scanlines the color should take up. After you've set everything to
+	your liking, just hit "Add" and the line will be added. You can build any gradient of your liking by doing so. Using the "Remove", "Move Up"
+	and "Move Down" button, you can reconfigurate the gradient as you wish. Now the "Delete All" button has also been enabled. You can use it to,
+	you guessed it, remove all the current lines and start anew.<br />
+	<br />	
+		
+	<br /><hr /><br />
+	
+	<h1><a name="bright"></a>Brightness Gradient</h1>
+	Ok, enough of the fancy colors, let's move on to the brightness gradients. These are the gradients that make a portion of the screen darker
+	often used to create a dark atmosphere in ghost houses for example. Before we get started, let me just give you some small info on the ASM.
+	The brightness gradient works with the register $2100. This register supports 16 different brightness types from 0 to F. 0 is absolute
+	darkness, while F is full brightness. Usually when you set this register, it would effect the whole screen, but HDMA being the awesome thing
+	it is, it allows us to to it on a scanline base. And that's already all you need to know about this. Simple, isn't it :3<br />
+	<br />
+	<h2><a name="brightsimple"></a>Brightness - Simple</h2>
+	So let's get right started. As you should have noticed by the explanation above, brightness gradients are about as simple as it can get in HDMA.
+	To use this tab, you just set how far the gradiant should reach from the top/bottom. Additionally, you can set the brightness the gradient will
+	start with. By default it's 0, meaning the gradient goes from full darkness to full brightness. (Note that the gradient will always go to full
+	brightness in the end) So, if you want a less darker gradient, you'd just put in a higher number. (maximum being F but then there would be no
+	gradient at all :P<br />
+	<br />	
+	<br />
+	<h2><a name="brightindi"></a>Brightness - Individual</h2>
+	With this tab you can set the brightness on a per scanline basis. This tab has two methods combined in it (because both don't take up much space.
+	Which method (Individual Setting or Table) is controlled by the checkbox at the top "Set Lines Individually" by default it is checked, so let's
+	start with that method first.<br />
+	With this you can easily create a brightness effect as you like, doesn't even need to be a real gradient. How do I use this you ask? Simple! You
+	just select how many scanlines a bar should take up and then select a brightness for that bar. The brightness can be entered using two ways.
+	One would be as a normal hex number from 0-F (again, 0 = total darkness F = full brightness) or you can input them as percentage 0-100% ( 0% =
+	total darkness, 100% = full brightness). If you write a "%" at the end of the value, it will be read as percentage input. Of course, even if you
+	choose the percentage input, there are still only 16 different brightnesses (&lt;- that a word?) so there is no difference between 0% and 6%.
+	Using the button "Add" you can than add the bar to the list. Using the buttons "Remove", "Up" and "Down" you can then edit the list. With the
+	"Clear" button you can remove all the entries from the list, with which you'd start from 0 again, so use with care ^^'<br />	
+	<br />	
+	Now for the table, the smart ones may have figured it out already, you can enable the table box by unchecking the "Set Lines Individually". For
+	those who haven't figured that out... may god help you.<br />	
+	All jokes aside, let's move on to how to use this. In general it works much like any of the other table tabs, like the <a href="#bgtable">BG one</a> for example.
+	I think the most common use for this function will be it's previewing abilety. If you download an already existing brightness gradient, you can
+	throw the table in there to see what it looks like. Of course, you can also type values by hand. It accepts 3 different input types:<br />
+	ddd for decimals, 0xhh for hex and $hh for hex as well. You write the table by typing a value for the scanline and than a value for the
+	brightness. Like: "20,$05" This would set 20 (decimal) scanlines at the brightness 5. Of course this isn't ASM standart but you can just
+	write them like you would in ASM too if you like. Though it seems pointless to me as the generated code will have a converted table anyway.
+	Note also, that any leading "db" will be ignored.<br />	
+	<br />		
+
+	<br /><hr /><br />
+	
+	<h1><a name="para"></a>Parallax Scrolling</h1>
+	Ah, the joys of a nicely set up parallax scrolling effect in levels, they always look kinda neat don't they. However, those who've worked with
+	them before know, how much of a pain creating them can be. For those of you who don't know parallax, it's the type of effect that makes the
+	background of a level scroll at different speeds to create a feeling of depth. You know, how when you drive in a car or a train (or any other
+	fast moving object) the trees and object near you just rush by, while the mountains in the distance don't seem to move at all. Parallax allows
+	you to have just that effect in your ROM.<br />
+	The way this works is by controlling the layer 2 (BG) x position on a per scanline basis. That means, this effect only works on backgrounds
+	which have a clear line between one moving segment and the other. You can't have "multilayer backgrounds" like clouds behind the mountains
+	moving slower than the mountains.<br />
+	<br />
+	Given that there is only one tab for this, let's get right into it. This one is similiar to the table tabs we've worked with before, yet slightly
+	different. Previously, we entered the value like this &lt;scanline>,&lt;value>, now we do it like this &lt;scanline>/&lt;value> reason for that simply
+	is that the value can now contain a comma as well. Possible values are 0, 0.125, 0.25, 0.5, 1, 2, 4, 8. Mathematicans amongs you probably noticed
+	those are all values with a base of 2<sup>n</sup> or 1/2<sup>n</sup>. The reason for that is that those values are <b>FAR</b> easier to work with than others.
+	The values stand for the scroll rate that is gonna be used on the selected scanlines. 1 is the normal scrollrate, which means everything goes at
+	the usual speed. 0.5 would mean that everything goes with half the usual scroll speed. 2 would be twice as fast and so on.
+	0 means that there is no scrolling at all, that means that the portion of the BG you see at the beginning will stay there throughout the level
+	Simple enough, right? Now for the freeRAM box. This HDMA effect needs to change during the level, as such it needs to be written in the RAM.
+	Fortunately for use, SMW has more than enough freeRAM for this effect. I'd say in 99.9% of the cases you don't need to change that. Only if you'd 
+	want multiple effects that need freeRAM.<br />
+	Lastly, there is the "Animation" checkbox. It's simply there to allow you to preview what the effect will look like in action. I'll be honest, it 
+	can be heave on the processor, if anybody knows a good way to code animations in C#, feel free to contact me about it :/.<br />
+	<br />	
+	
+	<br /><hr /><br />
+	
+	<h1><a name="wave"></a>Waves</h1>
+	Wave effect are neat things to have commonly used in desert or underwater levels. As "neat" as they are though, they are also hard to code.
+	Luckily though, you can usually reuse the same effect over and over again, since if it looks good in one level, it should look good in most others as well.<br/>
+	However, what if you do want some crazy wave effects every now and then? Well, that's what this is for. Allowing you to create wave effect to your liking.
+	Wave effects, much like parallax scrolling, are tables that need to adjust their values during the game, after all, if the didn't all you'd see would be a
+	stationary wave... if you're into that than sure, but I guess most others would rather having moving waves. As such, this table needs to be in the RAM.
+	How much free RAM it takes up exactly can be found in the generated code later.<br />
+
+	<h2><a name="wavex"></a>X-Waves (Horizontal)</h2>
+	I really think there isn't much to explain here. For those of you who know what a sinus is... well, it works pretty much just like that. For those who don't
+	know them, they should be able to figure out how to use the controls after one minute of trail and error and lastly, for those who are still lost:<br />
+	There are 3 main trackbars. "Amp" stands for Amplitude and describes how "heave" or "strong" the wave is. If you pick a low value, the separate bars are just gonna
+	move a little left and right, if you pick a large value, they will move further.<br />
+	The "width" describes how many scanlines one such a moving "bar" is made up out of. I guess you'd usually want this to be a rather low value, for to high ones... just look stupid.<br />
+	Lastly, the "Speed" trackbar... do I really need to say it? It sets how fast the wave is. Well to be accurate it sets how slow the wave is. Because depending on the value, a number
+	of LSR will be used, slowing down the animation process.
+	Lastly, you can choose which layer this should effect. Just to avoid possible later confusion. This only effects one layer at a time. Not all of them. If you load a screenshot, of course
+	it will effect everything... because it's just a picture, not some multilayer screen like on SNES. So if you plan to use this effect on sprites, because you saw how awesome it looks in
+	the preview provided by the tool, I'm afraid you're out of luck.<br />
+	<br />		
+	
+	<h2><a name="wavey"></a>Y-Waves (Vertical)</h2>
+	This is like 1:1 the same. All the controls work just like they did with the X-Waves, the only difference is that this one doesn't resemble a sinus. Don't forget that HDMA only
+	works horizontally. So even though we're calling them vertical waves, they wave isn't really like a 90° version of the horizontal one, instead, it's just moving horizontal lines vertically.<br />
+	<br />		
+
+	<br /><hr /><br />
+	
+	<h1><a name="window"></a>Windowing</h1>
+	Windowing is, to my believe, one of the best and most powerful effects in SMW, but hardly ever used. Now why is that? Simple! A: Not many people even know about it. 
+	B: For those who know, setting up the tables is usually too much of a pain. Well good sirs, not anymore :3.<br />
+	But for those who don't know windowing yet, let me give you a short explanation. Windowing allows us to effect the screen in various ways, for example making parts of become black, 
+	as you know it from the past goal scene, where the circle closes in on Mario. Yeah, that's right, that's done by windowing. Of course you don't have to make the screen become black.
+	You can also use to hide only specific layers, for example cut out parts of layer1 (visually only), allow color math only on certain parts of the screen or hide all the sprites near Mario... 
+	that would be hella evil but I'm just naming a few possibilities >:D.<br />
+	I'll give you a rough explanation on windowing: A window has a left and a right position that can be set, additionally it also has the option of being inverted. Usually the window would be 
+	in between the set left and right position, but being inverted, the window will instead reach from the very left to the left position, and from the right position to the end of the screen.
+	You can set which layers a windows should work on. All the effected layers will become invisible. Windows can be set to effect ANY layer (BG1, BG2, BG3, BG4, OBJ) in case of SMW, BG4 is unused
+	and the OBJ layer would be the sprites. Quite powerful, don't cha think?<br />
+	Additionally, it's also possible to make windows work on the "Color" layer if you wanna call it that. And no, that doesn't mean things are gonna become black and white, it just means we
+	can use a number of color-effecting things on the screen. We could set the mainscreen black outside or inside the window (regardless of the window being inverted itself) we could make
+	the screen NOT use color math inside or outside the window. We could also turn off the subscreen or enable 256 color mode. These are kinda "advanced ASM" things, so you won't really need them
+	for those who DO want to use them though, there is this little groupbox containing the controls for these settings. Please note, that any of these settings will NO BE PREVIED.
+	That means, if you change something, it will be embeded in the later code, but you won't see any changes on the left screen. I may implement them sometime... someday... or not.<br />
+	<br />
+
+	SMW has two windows we can use. The register 2126 is the left position of Window 1, 2127 is the right position of W1, 2128 is left for W2 and 2129 is right for W2.<br />
+	"But wait Jack", you may ask me now, "if there is only a left and a right position, how do you make circles or other forms?" The answer: HDMA you silly. As I've said before HDMA allows us to
+	use effects on a scanline basis and windowing is no exception to that. We can use HDMA to set a different left and right position of one, or even both windows for each scanline as we please.
+
+	<h2><a name="windowcirle"></a>Windowing - Circle</h2>
+	I thought circles are pretty much the standard use for windowing, so here it is... the circle tab :P<br />
+	With the X and Y scrollbars, you can set the position the circle should have on screen, using the "Mario" checkbox will make it follow the player with Mario in it's center. The Free RAM box should be
+	clear by now, but just in case I'll say it again. Dynamic HDMA (that is HDMA that changes during the game) needs it's table to be located in the RAM, so we can change it during the game.
+	With the BGs you can set which layers the windowing effect should work on.<br/>
+	<b><span color="#E00000">BIG FAT NORE</span></b> due to some laziness on my end, you can only use the Color layer to set things black. (As seen by the default appearance of the tab)
+	This the things inside the window become black if use disable all the layers and color math within them. As I said before, the below advanced options for the color layer will be taken into the
+	code but not previewed. If you don't know what you're doing, you'd better just leave that box alone.<br />
+	The only thing that you might not are sure about yet is the window box... if you read the Windowing instruction above though, you should be able to figure it out. No? Ok. It sets which window will 
+	be used for the effect :3<br />	
+	<br />	
+	
+	<h2><a name="windowimage"></a>Windowing - Image</h2>
+	Ok, this one is a little bit more complex. But it's here to make your life more easy, so look at it from the bright side<br />
+	With this tab, you can create windowing effects from images. Of course not every image can be turned into a working windowing effect, but that's not too big a limitation. If you want to know what
+	images can be used... well I recommend images like the example one, that don't have many corners or turns, and are in the middle of an otherwise plain image. To get the windowing effect from the image,
+	we need to render it and for that we have 3 options. "Outline", "Transparent", "Color".<br />
+	Starting with "Color". This one is the most simple one. It just runs a simple color filter on the image, turning it into a black and white version of itself. With the scrollbar "Black/White Setting" you can change the filter to
+	bleach more colors or to leave more colors black.<br />
+	"Transparent" too is fairly simple. It just sees everything transparent in the image as white, and everything else as black. Using the scrollbar here, you can set how much transparency is still viewed as white/black.<br />
+	Lastly "Outline" this one is the most useful I dare to say, but also the most complex... it's not really complex, just more so than the others :P Outline removes the "border" of an image. If you have an image like that
+	Mario head of mine with a white border around it, the Transparent option wouldn't work, and running the color filter on it looks awesome but it can't be turned into an effect. So, Outline removes the border. I recognizes
+	pixels that are the same or similar to the last checked one and removes them. You may noticed the "Border Corner" box. Here you can set which corner(s) the outline effect will start on in case one isn't enough. If one is enough though,
+	I recommend not starting from multiple corners. It works, put it puts unnecessary pressure on your CPU... The scrollbar can here be used to set how similar the pixels have to be to still be counted as outline.<br />
+	
+	<br />	
+	
+	
+	</div>
+	</body>
+</html>
+
+
+	

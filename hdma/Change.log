@@ -1,0 +1,13 @@
+3.0 - UberASMTool conversion by dtothefourth
+-Removed SA-1 option and instead added !addr defines to make hybrid code
+-Replaced RTS with RTL in generated code
+-added init/main labels to appropriate sections
+-simplified saving system to just save to an UberASMTool compatible levelASM file
+
+
+2.0.1
+-Added check for .dll before launch, abord if not present
+-Added check for "Mulitlayer" folder and warning if not present
+-Replaced $1462 with $1A (for all layers x/y)
+-Removed Color Math using $0D9D/$0D9E
+-Fixed second LDY in wave coude that should have been an LDX
