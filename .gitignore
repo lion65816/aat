@@ -1,6 +1,6 @@
 *.smc
 *.smc~
-lunar\ moni\ help/config_user.txt
+monitor/config_user.txt
 uberasm/asm/work/*.asm
 music/stats
 music/SPCs
