@@ -5,7 +5,16 @@
 -- are relative to the project path like levels, and tools like Lunar Magic that each
 -- collaborator may have installed at a different location, as in this example
 -- (see config_user.txt for the rest of the example configuration)
- 
+
+ -- rom paths
+clean = SMW_clean.smc
+output = my_hack.smc
+temp = temp.smc
+package = my_hack.bps
+
+-- tools
+asar_path = patch/asar.exe
+lm_path = Lunar Magic.exe
  
 -- if defined, the initial patch will be applied before any other steps
 -- It's good idea to open your clean ROM in Lunar Magic, save it to another location, and create a patch
