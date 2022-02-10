@@ -14,7 +14,7 @@ package = my_hack.bps
 
 -- tools
 asar_path = patch/asar.exe
-lm_path = Lunar Magic.exe
+lm_path = lm331/Lunar Magic.exe
  
 -- if defined, the initial patch will be applied before any other steps
 -- It's good idea to open your clean ROM in Lunar Magic, save it to another location, and create a patch
