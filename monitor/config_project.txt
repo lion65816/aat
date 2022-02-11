@@ -44,7 +44,6 @@ patches
 	patch\patch\scrollfix.asm
 	patch\patch\shellbuzzyfix.asm
 	patch\patch\slopepassfix.asm
-	patch\patch\tolerance-timer.asm
 	patch\patch\yourfatface.asm
 	patch\patch\mode 7\easy_mode7\easy_mode7.asm
 	patch\patch\BounceBlocks\CustBounceBlocks.asm
