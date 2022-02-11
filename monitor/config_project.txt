@@ -13,9 +13,9 @@ temp = temp.smc
 package = my_hack.bps
 
 -- tools
-asar_path = patch/asar.exe
-lm_path = lm331/Lunar Magic.exe
- 
+asar_path = patch\asar.exe
+lm_path = lm331\Lunar Magic.exe
+
 -- if defined, the initial patch will be applied before any other steps
 -- It's good idea to open your clean ROM in Lunar Magic, save it to another location, and create a patch
 -- of that saved ROM. This lets Lunar Magic apply a VRAM patch that will be required for some things
@@ -48,7 +48,6 @@ patches
 	patch\patch\yourfatface.asm
 	patch\patch\mode 7\easy_mode7\easy_mode7.asm
 	patch\patch\BounceBlocks\CustBounceBlocks.asm
-	patch\patch\layer2nmi.asm
 	patch\patch\midway\multi_midway_1.7.asm
 ]
 

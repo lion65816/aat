@@ -1,9 +1,14 @@
-if read1($00FFD5) == $23
+
+if read1($00FFD6) == $23
 	sa1rom
 	!bank = $000000
+	!dp = $3000
+	!addr = $6000
 else
-	lorom
+    lorom
 	!bank = $800000
+	!dp = $0000
+	!addr = $0000
 endif
 
 org $008275
@@ -13,9 +18,9 @@ autoclean JML Layer2Upload
 freecode
 Layer2Upload:
     REP #$20
-    LDA $010B
+    LDA $010B|!addr
     CMP #$0105
-    BNE +
+    BEQ +
     SEP #$20
     
     LDA #$80
@@ -38,7 +43,7 @@ Layer2Upload:
     BRA ++
 
 +   SEP #$20
-++  LDA.w $0D9B					;$008275	|\ If not in a special level continue as normal.
+++  LDA.w $0D9B|!addr				;$008275	|\ If not in a special level continue as normal.
 	BEQ Continue
     JML $00827A
 Continue:
