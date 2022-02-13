@@ -75,6 +75,7 @@
 4A bullet_bill_1C.cfg
 4B donut_lift.cfg
 4C SMW_Hammer_Bro.cfg
+4D babyyoshi.json
 
 C0 balloon_shooter.cfg
 C1 lasershooter.cfg

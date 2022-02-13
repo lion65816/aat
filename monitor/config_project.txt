@@ -14,7 +14,7 @@ package = my_hack.bps
 
 -- tools
 asar_path = patch\asar.exe
-lm_path = lm331\Lunar Magic.exe
+lm_path = Lunar Magic.exe
 
 -- if defined, the initial patch will be applied before any other steps
 -- It's good idea to open your clean ROM in Lunar Magic, save it to another location, and create a patch
@@ -48,6 +48,7 @@ patches
 	patch\patch\mode 7\easy_mode7\easy_mode7.asm
 	patch\patch\BounceBlocks\CustBounceBlocks.asm
 	patch\patch\midway\multi_midway_1.7.asm
+	patch\patch\ExtendedLevelNames.asm
 ]
 
 -- tools
@@ -65,7 +66,7 @@ map16 = resource\all.map16
 -- that will hold the overworld, ex global animations, credits, intro screen, and title moves.
 -- You will work on these things from the built output ROM in Lunar Magic, 
 -- then use the "S - Save" option in Lunar Helper to save your changes to this BPS file so that they appear in your next build.
-global_data = global_data.bps
+global_data = resource\global_data.bps
 
 -- test_level is a 3-digit hex value specifying the level number of a level that will be copied to the 3-digit level number
 -- specified by test_level_dest *only* when Lunar Helper's "T - Test" option is run

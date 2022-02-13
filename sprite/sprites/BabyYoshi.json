@@ -1,0 +1,87 @@
+{
+  "$1656": {
+    "Object Clipping": 0,
+    "Can be jumped on": false,
+    "Dies when jumped on": false,
+    "Hop in/kick shell": false,
+    "Disappears in cloud of smoke": false
+  },
+  "$1662": {
+    "Sprite Clipping": 0,
+    "Use shell as death frame": false,
+    "Fall straight down when killed": false
+  },
+  "$166E": {
+    "Use second graphics page": false,
+    "Palette": 5,
+    "Disable fireball killing": true,
+    "Disable cape killing": true,
+    "Disable water splash": false,
+    "Don't interact with Layer 2": false
+  },
+  "$167A": {
+    "Don't disable cliping when starkilled": false,
+    "Invincible to star/cape/fire/bounce blk.": true,
+    "Process when off screen": true,
+    "Don't change into shell when stunned": true,
+    "Can't be kicked like shell": true,
+    "Process interaction with Mario every frame": false,
+    "Gives power-up when eaten by yoshi": false,
+    "Don't use default interaction with Mario": true
+  },
+  "$1686": {
+    "Inedible": true,
+    "Stay in Yoshi's mouth": false,
+    "Weird ground behaviour": false,
+    "Don't interact with other sprites": true,
+    "Don't change direction if touched": false,
+    "Don't turn into coin when goal passed": false,
+    "Spawn a new sprite": false,
+    "Don't interact with objects": false
+  },
+  "$190F": {
+    "Make platform passable from below": false,
+    "Don't erase when goal passed": false,
+    "Can't be killed by sliding": true,
+    "Takes 5 fireballs to kill": false,
+    "Can be jumped on with upwards Y speed": false,
+    "Death frame two tiles high": false,
+    "Don't turn into a coin with silver POW": true,
+    "Don't get stuck in walls (carryable sprites)": true
+  },
+  "AsmFile": "BabyYoshi.asm",
+  "ActLike": 45,
+  "Type": 1,
+  "Extra Property Byte 1": 0,
+  "Extra Property Byte 2": 128,
+  "Additional Byte Count (extra bit clear)": 4,
+  "Additional Byte Count (extra bit set)": 4,
+  "Map16": "",
+  "Displays": [
+    {
+      "Description": "Baby Yoshi\\n\\nExtra Bytes (all 00 for vanilla)\\n1 : Palette - 00(green), 01(red), 02(blue), 03(yellow)\\n2 : Hunger (eats before growing)\\n3 : Powerup eat value\\n4 : Hop speed (80+ = no hops)",
+      "ExtraBit": false,
+      "Tiles": [
+        {
+          "X offset": 0,
+          "Y offset": 0,
+          "map16 tile": 128
+        }
+      ],
+      "X": 0,
+      "Y": 0,
+      "DisplayText": "",
+      "UseText": false
+    }
+  ],
+  "Collection": [
+    {
+      "Name": "Baby Yoshi",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 0,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0
+    }
+  ]
+}
