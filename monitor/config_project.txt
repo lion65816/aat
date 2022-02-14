@@ -6,16 +6,6 @@
 -- collaborator may have installed at a different location, as in this example
 -- (see config_user.txt for the rest of the example configuration)
 
- -- rom paths
-clean = SMW_clean.smc
-output = my_hack.smc
-temp = temp.smc
-package = my_hack.bps
-
--- tools
-asar_path = patch\asar.exe
-lm_path = Lunar Magic.exe
-
 -- if defined, the initial patch will be applied before any other steps
 -- It's good idea to open your clean ROM in Lunar Magic, save it to another location, and create a patch
 -- of that saved ROM. This lets Lunar Magic apply a VRAM patch that will be required for some things
@@ -50,6 +40,16 @@ patches
 	patch\patch\midway\multi_midway_1.7.asm
 	patch\patch\ExtendedLevelNames.asm
 ]
+
+ -- rom paths
+clean = SMW_clean.smc
+output = my_hack.smc
+temp = temp.smc
+package = my_hack.bps
+
+-- tools
+asar_path = patch\asar.exe
+lm_path = Lunar Magic.exe
 
 -- tools
 gps_path = block\gps.exe
