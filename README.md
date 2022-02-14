@@ -16,11 +16,10 @@ I will include jsons that allow to more easily place sprites in SMW so please re
 
 Be sure that AN2 slot is filled with gfx file 81 (or other valid animation file). Then you can copy the animations from an another level that has them properly set up. Switch to than level then click on the SMB3 brick on the toolbar and either click "Copy All Slots" or click "Copy Slots" on a slot which are you interested in, then switch back to your level and click "Paste (All) Slots".
 
-
 -- Migrating to a new ROM (automatic way - Lunar Monitor and Lunar Helper) --
 
 Lunar Monitor let's you export resources automatically upon saving. It's useful so they can be quickly inserted with Lunar Helper.
-To install Lunar Monitor, run lunar-monitor-injector.exe once. It should now be there everytime you open Lunar Magic, but you have to have lunar-monitor.dll in the same directory as Lunar Magic.
+To inject Lunar Magic with Lunar Monitor, have lunar-monitor.dll, lunar-monitor-injector.exe and usertoolbar.txt in the same directory as Lunar Magic.
 To migrate to a new ROM, grab your levels from "Levels" directory and your resources from "resource" directory and move them to the new folders.
 Note that the all.map16 file may conflict, though that's being worked on. For a workaround, export and import your Map16 pages using the method outlined in the next section.
 
