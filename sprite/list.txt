@@ -76,6 +76,7 @@
 4B donut_lift.cfg
 4C SMW_Hammer_Bro.cfg
 4D babyyoshi.json
+4E VenusVerticalSpitTwo.cfg
 
 C0 balloon_shooter.cfg
 C1 lasershooter.cfg

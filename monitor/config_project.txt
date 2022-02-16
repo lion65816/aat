@@ -14,6 +14,8 @@ initial_patch = initial_patch.bps
 -- asar
 patches
 [
+	patch\patch\HEX_EDITS.asm
+	patch\patch\deathcounter.asm
 	patch\patch\dcsave.asm
 	patch\patch\bwram_plus.asm
 	patch\patch\PIR.asm
@@ -35,7 +37,6 @@ patches
 	patch\patch\shellbuzzyfix.asm
 	patch\patch\slopepassfix.asm
 	patch\patch\yourfatface.asm
-	patch\patch\mode 7\easy_mode7\easy_mode7.asm
 	patch\patch\BounceBlocks\CustBounceBlocks.asm
 	patch\patch\midway\multi_midway_1.7.asm
 	patch\patch\ExtendedLevelNames.asm

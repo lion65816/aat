@@ -1,0 +1,167 @@
+#amk 2
+
+#spc
+{
+	#author "VecchiaZim"
+	#game	"custom"
+	#comment "nothing but vanilla percussion"
+	#title	"Percussive Maintenance"
+}
+
+#instruments
+{
+@12 $0E $6A $70 $05 $00 ;@30
+@12 $0E $6A $70 $02 $AA ;@31
+@12 $0E $6A $70 $01 $CC ;@32
+@23 $7C $E0 $7F $06 $00 ;@33
+n1F $00 $00 $E1 $00 $00 ;@34
+@12 $0E $6A $7F $11 $00 ;@35
+n1F $00 $00 $7F $00 $00 ;@36
+}
+
+;global
+w215 t53
+$EF $FF $50 $50
+$F1 $00 $20 $01
+
+#0 ;bongos
+@30 v224 o4
+[r16 g16 e8 g8 e8 g8 e16 g8 e16 g8
+r16 g16 e8 g8 e8 c8. c8. r8]12
+
+[[r2]]15 r4 r16 v255 c+16 e8 l24
+[g v64 $E8$A0$FF ggggg gggggg gggggg ggg] b-8 r2 r4 r16 c+16 e8 
+* ggg b-16 b-8 b-8 g16 b-8 r4 r16 c+16 e8
+* b-8. b-8. b-8. b-16 l16 r g b- g b- g c+ e l24
+g v64 $E8$28$FF ggggg b-8 g v96 $E8$28$FF ggggg b-8 ggg b-8
+l12 b- b- b- b- b- b- b-4 r4
+
+[[r2]]24
+
+
+
+#1 ;mid toms, agogos
+@31 v224 o4 y15
+[r2 g8 e16 g8 e16 g8
+r2 c8. c8. r8]12
+
+l16
+[ [[q7f g q78 ee q7f g q78 ee q7f c q74 e]]3 q7f c4 c4  
+[[q7f g q78 ee q7f g q78 ee q7f c q74 e]]3 q7f c8 b16 g8 b16 g8]3
+[q7f g q78 ee q7f g q78 ee q7f c q74 e]3 q7f c4 c4
+*2 l12 ggg ggg g2
+
+[[r2]]8 
+@35 v255 r64
+[ [[y15 f+8. y5 c8.]]2 y15 f+8 y5 c8]6
+r4.... r1.
+
+
+
+#2 ;low toms, blocks, agogos
+@32 v224 o4 y5
+[r2 g8 e16 g8 e16 g8
+r2 c8. c8. r8
+r2 g8 e16 g8 e16 g8
+r2 c8. c16 b16 g16 e16 c16]6
+
+l16
+[ [[q7f g q78 ee q7f g q78 ee q7f c q74 e]]3 q7f c4 c4  
+[[q7f g q78 ee q7f g q78 ee q7f c q74 e]]3 q7f c8 b16 g8 b16 g8]3
+[q7f g q78 ee q7f g q78 ee q7f c q74 e]3 q7f c4 c4
+*2 l12 ggg ggg g8 @25 y10 v176 d24a24>d24 a8 < a8
+
+[[r2]]8 @35 v255
+[ [[y5 f+8. y15 c8.]]2 y5 f+8 y15 c8]6
+r1^1
+
+
+
+#3 ;kit, blocks
+o4 v255
+[[r2]]6 r4 (1)[@10 l16 v64 $E8$90$FF cccc cccc cccc]
+[ [[@21 c8 @22 c8]]6 @21 c8 @22 c16 @22 c16 @21 c16 @22 c16 @22 c16 @22 c16]2
+*2
+*2
+r1 ^1
+^1 ^4 (1)
+*2
+
+[[r2]]8
+[@21 c4]45
+r4. @25 v176 y0 c24 g24 > c24 g8 < g8
+
+[[r2]]8 @33 y10 o4 v240
+$E8$C0$A0 [ [[c32c32 c16 c16]]4 [[c32c32c16]]2 ] $E8$C0$50 *
+$E8$C0$A0 * $E8$C0$E0 *
+$E8$C0$70 * $E8$C0$E0 *
+r1^1
+
+
+
+#4 ;shaker, agogos
+[[r2]]16 @33 v255 y13 o4 l16
+[ [[q7f c q74 ccc q7f c q74 ccc q7f c q74 cc q7f c q74 cc q7f c q74 c]]3
+q7f c q74 ccc q7f c q74 ccc q7f l24 v96 $E8$60$FF cccccc cccccc]4
+
+[[r2]]15 r8 @22 c32c32c32c32 c16c16c16c16
+[r8 c16c8c16c8]3 r8 c8 r8 c8
+*3 r8 c32c32c32c32 c16c16c16c16
+*3 r8 c8 r8 c8
+*2 l12 ccc ccc c8 @25 v176 y20 e24b24>e24 b8 < b8
+
+r1^1 v255 o4
+[ y5 [[@22 c16 @22 c8 @22 c16 @22 c8]]2 @22 c8 @22 c8
+y15 [[@22 c16 @22 c8 @22 c16 @22 c8]]2 @22 c4]4
+@35
+r64 g4 e8. c16 c+16 e8 e16 r8. c+16 c8 e8 e8 a+8 l24 g v48 $E8$28$FF ggggg f+8...
+
+
+
+#5 ;agogos, noise
+[[r2]]14 r64 @35 v255 y15 o4
+c4 c4 c4 c4
+(4)[r8 y5 f+8 y15 c8. y5 f+8 f+8 f+16 y15 c16 y5 f+16 y15 c8]7
+(5)[r8 y5 f+8 y15 c8 c16 y5 f+8 f+16 y15 c16 c16 y5 f+16 f+16 y15 c16..]
+v80 @34
+[[y20 c1 y0 c1]]4
+
+[[r2]]16
+@30 y5 v128 o5
+r64 r2.. a-8 r1
+r1 a-16 a-8 a-8 f16 a-8 r2
+r2.. a-8. a-8. a-8. a-16 r2
+r4 a-4 r8 a-8 r8 a-8 l12 a-a-a- a-a-a- a-4 r8...
+
+@36 v48 y0 l16 
+[$E8$C0$50 $DC$C0$0A [[q18 cc q1f cc]]4 $E8$C0$80 $DC$C0$14 [[q18 cc q1f cc]]4
+$E8$C0$50 $DC$C0$0A [[q18 cc q1f cc]]4 $E8$C0$28 $DC$C0$00 [[q18 cc q1f cc]]4]2
+$E8$C0$50 $DC$C0$0A[[q18 cc q1f cc]]4 $E8$C0$80 $DC$C0$14 [[q18 cc q1f cc]]4
+@35 v255 o4 y5
+g4 e8. c16 c+16 e8 e16 r8. c+16 c8 e8 e8 a+8 l24 g v48 $E8$28$FF ggggg f+4 
+
+
+
+#6 ;agogos
+[[r2]]14 @35 y5 o4
+c4 c4 c4 c4 l16
+(2)[r8 y15 f+8 y5 c8. y15 f+8 f+8 f+16 y5 c16 y15 f+16 y5 c8]7
+(3)[r8 y15 f+8 y5 c8 c16 y15 f+8 f+16 y5 c16 c16 y15 f+16 f+16 y5 c8]
+[[r2]]8
+(2)3
+(3)
+
+[[ r2 ]]36 v255 o4
+r=1 [ y5 [[@23 c16 @23 c8 @23 c16 @23 c8]]2 @23 c8 @23 c8
+y15 [[@23 c16 @23 c8 @23 c16 @23 c8]]2 @23 c4]4
+r=191 r1
+
+
+
+#7
+[[r2]]40 r64
+@35 o4
+(4)3
+(5)
+
+[[r2]]56

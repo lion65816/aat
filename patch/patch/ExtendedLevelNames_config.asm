@@ -35,14 +35,14 @@ NameData:
  db "                   "
  db "                   "
  ;Level 007
- db "The castle which is"
- db "actually very hard!"
+ db "                   "
+ db "                   "
  ;Level 008
- db "Green Switch of    "
- db "Possible 1UP       "
+ db "                   "
+ db "                   "
  ;Level 009
- db "The level like     "
- db "Very Loooooong Cave"
+ db "   NO VEGETABLES,  "
+ db "    ONLY TREES     "
  ;Level 00A
  db "You're near the    "
  db "Castle! Seriously! "
