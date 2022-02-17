@@ -7,22 +7,22 @@
     "Disappears in cloud of smoke": false
   },
   "$1662": {
-    "Sprite Clipping": 48,
+    "Sprite Clipping": 0,
     "Use shell as death frame": false,
-    "Fall straight down when killed": true
+    "Fall straight down when killed": false
   },
   "$166E": {
     "Use second graphics page": true,
-    "Palette": 2,
+    "Palette": 0,
     "Disable fireball killing": true,
     "Disable cape killing": true,
-    "Disable water splash": true,
-    "Don't interact with Layer 2": true
+    "Disable water splash": false,
+    "Don't interact with Layer 2": false
   },
   "$167A": {
-    "Don't disable cliping when starkilled": true,
+    "Don't disable cliping when starkilled": false,
     "Invincible to star/cape/fire/bounce blk.": false,
-    "Process when off screen": true,
+    "Process when off screen": false,
     "Don't change into shell when stunned": false,
     "Can't be kicked like shell": false,
     "Process interaction with Mario every frame": false,
@@ -32,12 +32,12 @@
   "$1686": {
     "Inedible": true,
     "Stay in Yoshi's mouth": false,
-    "Weird ground behaviour": true,
+    "Weird ground behaviour": false,
     "Don't interact with other sprites": true,
-    "Don't change direction if touched": false,
+    "Don't change direction if touched": true,
     "Don't turn into coin when goal passed": false,
     "Spawn a new sprite": false,
-    "Don't interact with objects": true
+    "Don't interact with objects": false
   },
   "$190F": {
     "Make platform passable from below": false,
@@ -46,31 +46,51 @@
     "Takes 5 fireballs to kill": false,
     "Can be jumped on with upwards Y speed": false,
     "Death frame two tiles high": false,
-    "Don't turn into a coin with silver POW": true,
+    "Don't turn into a coin with silver POW": false,
     "Don't get stuck in walls (carryable sprites)": false
   },
-  "AsmFile": "AngrySun.asm",
-  "ActLike": 0,
+  "AsmFile": "ball-n-chain-pendulum.asm",
+  "ActLike": 169,
   "Type": 1,
-  "Extra Property Byte 1": 1,
-  "Extra Property Byte 2": 1,
+  "Extra Property Byte 1": 0,
+  "Extra Property Byte 2": 0,
   "Additional Byte Count (extra bit clear)": 0,
   "Additional Byte Count (extra bit set)": 0,
   "Map16": "",
   "Displays": [
     {
-      "Description": "Angry Sun. SP4=98. Waits a while until Mario gets in a certain screen, and starts spinning in circles and swinging downwards at Mario while locked on the screen horizontally. Extra Property Byte 1 indicates what screen it starts attacking from.",
+      "Description": "A ball n chain that moves in a pendulum formation. SP4=03",
       "ExtraBit": false,
       "Tiles": [
         {
           "X offset": 0,
-          "Y offset": -16,
-          "map16 tile": 465
+          "Y offset": 0,
+          "map16 tile": 470
         },
         {
           "X offset": 0,
-          "Y offset": 0,
-          "map16 tile": 481
+          "Y offset": 16,
+          "map16 tile": 470
+        },
+        {
+          "X offset": -16,
+          "Y offset": 32,
+          "map16 tile": 452
+        },
+        {
+          "X offset": 0,
+          "Y offset": 32,
+          "map16 tile": 453
+        },
+        {
+          "X offset": -16,
+          "Y offset": 48,
+          "map16 tile": 468
+        },
+        {
+          "X offset": 0,
+          "Y offset": 48,
+          "map16 tile": 469
         }
       ],
       "X": 0,
@@ -79,7 +99,7 @@
       "UseText": false
     },
     {
-      "Description": "Happy Moon. SP4=98. Waits a while until Mario gets in a certain screen, and starts spinning in circles and swinging downwards at Mario while locked on the screen horizontally. Touching it will cause it to instantly kill all sprites that are not set to \"Invincible to star/cape/fire/bouncing blk\". Extra Property Byte 1 indicates what screen it starts diving from.",
+      "Description": "A ball n chain that moves in a pendulum formation. SP4=03",
       "ExtraBit": true,
       "Tiles": [
         {
@@ -88,14 +108,29 @@
           "map16 tile": 470
         },
         {
-          "X offset": -16,
-          "Y offset": 0,
-          "map16 tile": 432
+          "X offset": 0,
+          "Y offset": 16,
+          "map16 tile": 470
         },
         {
           "X offset": 0,
-          "Y offset": -16,
-          "map16 tile": 521
+          "Y offset": 32,
+          "map16 tile": 452
+        },
+        {
+          "X offset": 16,
+          "Y offset": 32,
+          "map16 tile": 453
+        },
+        {
+          "X offset": 0,
+          "Y offset": 48,
+          "map16 tile": 468
+        },
+        {
+          "X offset": 16,
+          "Y offset": 48,
+          "map16 tile": 469
         }
       ],
       "X": 0,
@@ -106,10 +141,10 @@
   ],
   "Collection": [
     {
-      "Name": "Angry Sun",
+      "Name": "Pendulum Ball n Chain",
       "ExtraBit": false,
-      "Extra Property Byte 1": 5,
-      "Extra Property Byte 2": 1,
+      "Extra Property Byte 1": 0,
+      "Extra Property Byte 2": 0,
       "Extra Property Byte 3": 0,
       "Extra Property Byte 4": 0,
       "Extra Property Byte 5": 0,
@@ -122,10 +157,10 @@
       "Extra Property Byte 12": 0
     },
     {
-      "Name": "Happy Moon",
+      "Name": "Pendulum Ball n Chain - Reverse",
       "ExtraBit": true,
-      "Extra Property Byte 1": 5,
-      "Extra Property Byte 2": 1,
+      "Extra Property Byte 1": 0,
+      "Extra Property Byte 2": 0,
       "Extra Property Byte 3": 0,
       "Extra Property Byte 4": 0,
       "Extra Property Byte 5": 0,
