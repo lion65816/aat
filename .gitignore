@@ -10,10 +10,10 @@ music/SPCs
 lm331
 Flips
 monitor
+sysLMRestore
 resource/lunar-monitor-log.txt
 resource/global_data.bps
 resource/all.map16
 resource/shared.pal
 **.mwl
 sprite/sprites/ExGFX
-sysLMRestore
