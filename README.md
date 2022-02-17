@@ -2,9 +2,9 @@
 
 ## Getting Started
 
-Extract Lunar Magic from lm331.zip and move the .exe and .chm into the root project directory.
-Patch my_hack.bps (using Flips or an online patcher for example) to smw rom and make sure the output rom's name is my_hack.smc.
-For more info on hacking Mario, check the readmes of the tools as well as Lunar Magic's help file for more details.
+Extract Lunar Magic from lm331.zip into lm331 directory (so it can be used with [Lunar Monitor](#export-resources-lunar-monitor) and [Lunar Helper](#import-resources-lunar-helper)).
+Patch `my_hack.bps` (using Flips or an online patcher for example) to smw rom and make sure the output rom's name is `my_hack.smc` and is in the main project directory.
+For more info on hacking SMW, check the readmes of the tools as well as Lunar Magic's help file for more details.
 
 ## Custom Graphics
 
@@ -29,7 +29,7 @@ The following steps assume you have downloaded the new base ROM in a separate di
 #### Export resources (Lunar Monitor)
 
 Lunar Monitor lets you export resources automatically upon saving.
-To inject Lunar Magic with Lunar Monitor, simply move Lunar Magic to the root directory (where there are lunar-monitor.dll, lunar-monitor-injector.exe and usertoolbar.txt - they have to be in the same directory).
+To inject Lunar Magic with Lunar Monitor, simply move Lunar Magic to the lm331 directory (where lunar-monitor.dll, lunar-monitor-injector.exe and usertoolbar.txt are located - they have to be in the same directory).
 
 #### Import resources (Lunar Helper)
 
@@ -73,19 +73,19 @@ For everything but graphics, you must add them in their respective list.txt as w
 
 For example:
 
-```30 [title].txt```
+`30 [title].txt`
 For a song.
 
-```4D [title].cfg```
-or ```4D [title].json```
+`4D [title].cfg`
+or `4D [title].json`
 For sprites.
 
 And
-```[Map16 block number]:[Number of Page 0 and Page 1 block you wish to make it act like] [block].asm```
+`[Map16 block number]:[Number of Page 0 and Page 1 block you wish to make it act like] [block].asm`
 For blocks.
 
 Graphics files merely have to be named
-```ExGFX[hexadecimal number].bin```
+`ExGFX[hexadecimal number].bin`
 
 For UberASM simply add your level or sublevel ID and the asm file of the UberASM you want to use.
 Please don't use overworld, or gamemode ASM.
