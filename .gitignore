@@ -1,18 +1,11 @@
 *.smc
 *.smc~
-monitor/config_user.txt
+monitor
 uberasm/asm/work/*.asm
 music/stats
 music/SPCs
 **.lrp
 **/Lunar\ Magic.exe
 **/Lunar\ Magic.chm
-Flips
-monitor
 resource/lunar-monitor-log.txt
-resource/global_data.bps
-resource/all.map16
-resource/shared.pal
-**.mwl
-sprite/sprites/ExGFX
 sysLMRestore
