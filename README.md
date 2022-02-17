@@ -16,10 +16,16 @@ I will include jsons that allow to more easily place sprites in SMW so please re
 
 Be sure that AN2 slot is filled with gfx file 81 (or other valid animation file). Then you can copy the animations from an another level that has them properly set up. Switch to than level then click on the SMB3 brick on the toolbar and either click "Copy All Slots" or click "Copy Slots" on a slot which are you interested in, then switch back to your level and click "Paste (All) Slots".
 
+-- Migrating to a new ROM (automatic way - Lunar Monitor) --
+
+Lunar Monitor lets you export resources automatically upon saving.
+To inject Lunar Magic with Lunar Monitor, have lunar-monitor.dll, lunar-monitor-injector.exe and usertoolbar.txt in the same directory as Lunar Magic.
+To migrate to a new ROM, grab your levels from "Levels" directory and your resources from "resource" directory and move them to the new folders.
+Note that the all.map16 file may conflict, though that's being worked on. For a workaround, export and import your Map16 pages using the method outlined in the next section.
+
 -- Migrating to a new ROM (manual way) --
 
-(Not all steps may be needed)
-1. First export all the resources:
+Export all the resources:
 - Save your level and your sublevels to files (File->Save Level to File) then drop the files to the new Levels directory
 - Save your Map16 page(s) by selecting your page and clicking on a yellow question block with green arrow pointing to the right in the 16x16 Tile Map Editor dialog. Drop the file to the new resource directory.
 - If you edited custom graphics using built-in Lunar Magic editor then click on the blue mushroom (Quick Extract ExGFX from ROM)
