@@ -5,8 +5,5 @@ uberasm/asm/work/*.asm
 music/stats
 music/SPCs
 **.lrp
-**/Lunar\ Magic.exe
-**/Lunar\ Magic.chm
-lm331
 Flips
 resource/lunar-monitor-log.txt
