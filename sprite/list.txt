@@ -66,20 +66,20 @@
 47 bumpty.json
 48 blooper.json
 49 FireBar_Shiftable.json
-4A bullet_bill_1C.json
+4A bullet_bill.json
 4B donut_lift.json
 4C SMW_Hammer_Bro.json
 4D babyyoshi.json
 
-C0 balloon_shooter.json
-C1 lasershooter.json
-C2 missile_bill_shooter.json
-C3 missile_bill_shooter_v.json
-C4 diag_bill_up.json
-C5 diag_bill_down.json
-C6 vertical_bill_ud.json
+C0 balloon_shooter.cfg
+C1 lasershooter.cfg
+C2 missile_bill_shooter.cfg
+C3 missile_bill_shooter_v.cfg
+C4 diag_bill_up.cfg
+C5 diag_bill_down.cfg
+C6 vertical_bill_ud.cfg
 
-D0 gusty_generator.json
+D0 gusty_generator.cfg
 
 CLUSTER:
 00 cluster_sparkle.asm
