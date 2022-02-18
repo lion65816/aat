@@ -1,21 +1,84 @@
+00	Classic Goomba
+01	Piranha Plant/Venus Fire Trap
+08	Boomerang Bro
+09	Hammer Bro
+0A	Ice Bro
+0B	Fire Bro
+0C	Sledge Bro
+0D	Buster Beetle
+0F	Giant Goomba
+10	Giant Parakoopa
+11	Giant Piranha Green
+12	Giant Piranha Red
+13	Giant Piranha Sideways Green
+14	Giant Piranha Sideways Red
+15	Giant Spiny
+16	Giant Green Koopa
+17	Giant Red Koopa
+18	Giant Blue Koopa
+19	Giant Yellow Koopa
+1A	Lava Lotus Smb3
+1B	Nipper Smb3
+1C	Para Beetle
+1D	Piledriver
+1E	Ptooie
+1F	Rocky
+20	Spike Green
+21	Spike Red
+22	Spike Blue
+23	Spike Yellow
+24	Spikes Ball
+25	Stretch
+26	Missile Bill Horz
+27	Missile Bill Vert
+28	Hotfoot
 29	Fire Snake
 2A	Directional Platform
 2B	Directional Platform
 2C	Directional Platform
+2D	Chainchomp
 2E	Burner Horizontal, Right.
 	Burner Horizontal, Left.
 2F	Burner Vertical, Down
 	Burner Vertical, Up
+30	Boss Bass
+	Boss Bass - Small
 31	Angry Sun
 	Happy Moon
 32	Bomb Bro
 33	Shell Bro
+34	Propeller Block
+35	Thwomp Left
+36	Thwomp Right
+37	Thwomp Up
+38	Rotating-gray-platform-pendulum
+39	Phanto
 3A	Pendu Disc
 	Pendu Disc-extra bit
+3B	Lotus Down
+3C	Gusty
+3D	Goonie
+3E	Baron Von Zeppelin
+3F	Green Needlenose
+40	Baron Von Zeppelin
+	Baron Von Zeppelin - Return
+41	Birdo
+42	Birdo's Egg
+43	Blue Parakoopa
+	Blue Parakoopa - Counter clockwise
+44	Pendulum Ball n Chain
+	Pendulum Ball n Chain - Reverse
+45	Egg Plant
+46	Rideable Balloon
+47	Bumpty
+48	Blooper
 49	Fire-Bar Clockwise
 	Fire-Bar Counter
 	Long Fire-Bar Clockwise
 	Long Fire-Bar Counter
 	Fast Fire-Bar Clockwise
 	Fast Fire-Bar Counter
+4A	Bullet Bill
+4B	Donut Lift
+4C	S M W Hammer Bro
 4D	Baby Yoshi

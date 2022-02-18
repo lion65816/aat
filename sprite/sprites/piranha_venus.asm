@@ -142,14 +142,7 @@ RTL
 
 PiranhaInit:
 
-LDA !extra_bits,x	; check the extra bit
-AND #$04	; if the extra bit is clear...
-BNE EP2		;
-LDA !extra_prop_1,x	; use the extra property byte 1
-BRA StoreEP	;
-EP2:		;
-LDA !extra_prop_2,x	;
-StoreEP:		;
+LDA !extra_byte_1,x	;
 STA !1510,x	;
 
 AND #$03	;

@@ -54,8 +54,8 @@
   "Type": 1,
   "Extra Property Byte 1": 0,
   "Extra Property Byte 2": 0,
-  "Additional Byte Count (extra bit clear)": 0,
-  "Additional Byte Count (extra bit set)": 0,
+  "Additional Byte Count (extra bit clear)": 1,
+  "Additional Byte Count (extra bit set)": 1,
   "Map16": "",
   "Displays": [
     {
@@ -63,9 +63,9 @@
       "ExtraBit": false,
       "Tiles": [
         {
-          "X offset": 0,
+          "X offset": 8,
           "Y offset": 0,
-          "map16 tile": 0
+          "map16 tile": 200
         }
       ],
       "X": 0,
