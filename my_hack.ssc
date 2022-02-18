@@ -14,8 +14,10 @@
 2F 0022 0,0,40A 0,16,40B 0,32,40C
 2F 0030 A vertical burner from Super Mario 3, facing up.
 2F 0032 0,0,409 0,-16,408 0,-32,407
-31 0020 Undefined Sprite
-31 0022 0,0,0
+31 0020 Angry Sun. SP4=98. Waits a while until Mario gets in a certain screen, and starts spinning in circles and swinging downwards at Mario while locked on the screen horizontally. Extra Property Byte 1 indicates what screen it starts attacking from.
+31 0022 0,-16,1D1 0,0,1E1
+31 0030 Happy Moon. SP4=98. Waits a while until Mario gets in a certain screen, and starts spinning in circles and swinging downwards at Mario while locked on the screen horizontally. Touching it will cause it to instantly kill all sprites that are not set to "Invincible to star/cape/fire/bouncing blk". Extra Property Byte 1 indicates what screen it starts diving from.
+31 0032 0,0,1D6 -16,0,1B0 0,-16,209
 32 0020 A Bro throwing stunned Bob-Ombs that will explode after a while.
 32 0022 8,-16,1BC 0,0,40E 0,-8,40D
 33 0020 A Bro throwing green shells while jumping.

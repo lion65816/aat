@@ -12,3 +12,6 @@ sysLMRestore
 lunar-helper/.vscode
 lunar-helper/bin
 lunar-helper/obj
+lunar-monitor.dll
+lunar-monitor-injector.exe
+usertoolbar.txt
