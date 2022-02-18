@@ -50,7 +50,7 @@ package = my_hack.bps
 
 -- tools
 asar_path = patch\asar.exe
-lm_path = Lunar Magic.exe
+lm_path = lm331\Lunar Magic.exe
 
 -- tools
 gps_path = block\gps.exe
