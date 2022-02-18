@@ -1,0 +1,12 @@
+-- working directory (all paths are relative to this one)
+dir = /Users/xma/z/aat
+
+-- tools
+flips_path = ../floating/flips.exe
+gps_path = /Users/xma/z/aat/block/gps.exe
+uberasm_path = /Users/xma/z/aat/uberasm/UberASMTool.exe
+addmusick_path = /Users/xma/z/aat/music/AddmusicK.exe
+
+-- emulator and testing
+-- retroarch_path = C:\Users\user\AppData\Roaming\RetroArch\retroarch.exe
+-- retroarch_core = C:\Users\user\AppData\Roaming\RetroArch\cores\snes9x_libretro.dll

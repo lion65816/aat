@@ -9,3 +9,6 @@ music/SPCs
 **/Lunar\ Magic.chm
 resource/lunar-monitor-log.txt
 sysLMRestore
+lunar-helper/.vscode
+lunar-helper/bin
+lunar-helper/obj
