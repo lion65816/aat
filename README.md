@@ -3,7 +3,8 @@
 ## Getting Started
 
 Extract Lunar Magic from lm331.zip into lm331 directory (so it can be used with [Lunar Monitor](#export-resources-lunar-monitor) and [Lunar Helper](#import-resources-lunar-helper)).
-Patch `my_hack.bps` (using Flips or an online patcher for example) to smw rom and make sure the output rom's name is `my_hack.smc` and is in the main project directory.
+**Type in the path to the main project directory in `lunar-helper\config_user.txt`** as follows `dir = C:\path\to\aat (see `example_config_user.txt`).
+Run Lunar Helper and choose "Build". Alternatively, patch `my_hack.bps` (using Flips or an online patcher for example) to smw rom and make sure the output rom's name is `my_hack.smc` and is in the main project directory.
 For more info on hacking SMW, check the readmes of the tools as well as Lunar Magic's help file for more details.
 
 ## Custom Graphics
@@ -13,8 +14,7 @@ For custom graphics click on the red poison mushroom (on the left) on the toolba
 
 ## Custom Sprites (for now)
 
-With the Yoshi button pressed, press insert and choose a sprite to insert from the sprite folder's list.txt.
-I will include jsons that allow to more easily place sprites in SMW so please rest assured.
+The custom sprites should appear in sprite list (baby yoshi icon on the toolbar). Most of them are presented as an 'X' because making them display properly in Lunar Magic is a lot of work. Some sprites may use extra bit/extra bytes (refer to the top of appropiate sprite .asm file, in the future we should indicate it in their description), alt-right click them to change those.
 
 ## ON/OFF Blocks & Animating Tiles
 

@@ -1,0 +1,6 @@
+-- working directory (all paths are relative to this one)
+dir = C:\Users\user\aat
+
+-- emulator and testing
+retroarch_path = C:\Users\user\AppData\Roaming\RetroArch\retroarch.exe
+retroarch_core = C:\Users\user\AppData\Roaming\RetroArch\cores\snes9x_libretro.dll
