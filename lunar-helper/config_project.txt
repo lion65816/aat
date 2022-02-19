@@ -51,12 +51,11 @@ package = my_hack.bps
 -- tools
 asar_path = patch\asar.exe
 lm_path = lm331\Lunar Magic.exe
-
--- tools
 gps_path = block\gps.exe
 pixi_path = sprite\pixi.exe
 addmusick_path = music\AddMusicK.exe
 uberasm_path = uberasm\UberASMTool.exe
+flips_path = Flips\flips.exe
 
 -- content
 levels = Levels

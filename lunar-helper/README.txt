@@ -585,10 +585,3 @@ If I had a snes9x libretro core at
 I would write 
 
     retroarch_core = C:/Program Files/retroarch/cores/snes9x_libretro.dll
-
-
-### Finishing up ###
-
-Before trying to use Lunar Helper, please get the included Lunar Monitor set 
-up and then return to the readme in the root directory of this zip archive to 
-learn what you should do once both of these tools are set up!

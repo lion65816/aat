@@ -12,3 +12,4 @@ sysLMRestore
 lunar-helper/.vscode
 lunar-helper/bin
 lunar-helper/obj
+lunar-helper/config_user.txt

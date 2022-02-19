@@ -158,6 +158,17 @@ everything else to file, Log will just log everything to a file while Silent wil
 not log anything.
 
 
+# human_readable_map16_cli_path
+
+`human_readable_map16_cli_path` specifies the path to a Human Readable 
+Map16 Conversion Executable(https://github.com/Underrout/human-readable-map16-cli). 
+This value is optional, if it is present, this executable will be used to convert the 
+map16 file exported to `map16_path` into a human readable text format. These text files 
+will be output into a directory with the same name as the .map16 file, but with 
+the .map16 extension stripped. The directory will be in the same location as the 
+.map16 file. The .map16 file will **not** automatically be deleted after conversion.
+
+
 # log_path
 
 `log_path` specifies the path where the logging messages will be written to.
@@ -207,5 +218,3 @@ If it doesn't seem to be working, please double check that:
   lunar-monitor-injector.exe, lunar-monitor.dll and usertoolbar.txt
 - you're using Lunar Magic 3.30 or 3.31 and have the correct version of the .dll for your 
   Lunar Magic version
-
-Once you're satisfied, feel free to return to the readme in this zip archive's root directory.

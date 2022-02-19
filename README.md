@@ -33,7 +33,7 @@ To inject Lunar Magic with Lunar Monitor, simply move Lunar Magic to the lm331 d
 
 #### Import resources (Lunar Helper)
 
-- Grab your levels from "Levels" directory and your resources from "resource" directory and copy them to the folders in the new root directory. (Note that the all.map16 file may conflict, though that's being worked on. For a workaround, export and import your Map16 pages using the method outlined in [the next section](#export-resources).)
+- Grab your levels from "Levels" directory and your resources from "resource" directory and copy them to the folders in the new root directory.
 - Don't forget other resources like custom music and uberasm.
 - Run Lunar Helper and select Build.
 
