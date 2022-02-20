@@ -13,3 +13,4 @@ sysLMRestore
 lunar-helper/config_user.txt
 lunar-monitor-log.txt
 resource/all.map16
+*.extmod
