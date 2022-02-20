@@ -55,8 +55,8 @@ gps_path = block\gps.exe
 pixi_path = sprite\pixi.exe
 addmusick_path = music\AddMusicK.exe
 uberasm_path = uberasm\UberASMTool.exe
-flips_path = Flips\flips.exe
-human_readable_map16_cli_path = human-readable-map16-cli\human-readable-map16-cli.exe
+flips_path = other-tools\flips\flips.exe
+human_readable_map16_cli_path = other-tools\human-readable-map16-cli\human-readable-map16-cli.exe
 
 -- content
 levels = Levels
