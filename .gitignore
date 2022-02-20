@@ -12,5 +12,5 @@ music/temp.asm
 sysLMRestore
 lunar-helper/config_user.txt
 lunar-monitor-log.txt
-resource/all.map16
+resource/temp/all.map16
 *.extmod
