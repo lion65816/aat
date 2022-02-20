@@ -61,7 +61,8 @@ human_readable_map16_cli_path = human-readable-map16-cli\human-readable-map16-cl
 -- content
 levels = Levels
 shared_palette = resource\shared.pal
-map16 = resource\all.map16
+map16 = resource\temp\all.map16
+human_readable_map16_directory_path = resource\map16
 
 -- global_data is a BPS patch file, to be created by Lunar Helper, 
 -- that will hold the overworld, ex global animations, credits, intro screen, and title moves.

@@ -149,15 +149,6 @@ exported to. This should be the same as the `shared_palette` variable from
 Lunar Helper.
 
 
- # log_level
-
-`log_level` specifies the type of logging that's going to be done by the tool. 
-There are 3 possible logging levels: Warn, Log and Silent. Warn is the noisiest 
-one, which will pop up a message box when a warning/error is issued and log 
-everything else to file, Log will just log everything to a file while Silent will 
-not log anything.
-
-
 # human_readable_map16_cli_path
 
 `human_readable_map16_cli_path` specifies the path to a Human Readable 
@@ -167,6 +158,25 @@ map16 file exported to `map16_path` into a human readable text format. These tex
 will be output into a directory with the same name as the .map16 file, but with 
 the .map16 extension stripped. The directory will be in the same location as the 
 .map16 file. The .map16 file will **not** automatically be deleted after conversion.
+
+
+# human_readable_map16_directory_path
+
+`human_readable_map16_directory_path` specifies the path you would like Lunar Monitor 
+to write the human readable map16 directory to. This variable is optional and has no 
+effect if `human_readable_map16_cli_path` is not defined. If `human-readable_map16_cli_path`
+is defined, but this variable isn't, Lunar Monitor will store the human readable map16 
+directory in a directory in the same location and with the same name as the `map16_path`
+variable.
+
+
+ # log_level
+
+`log_level` specifies the type of logging that's going to be done by the tool. 
+There are 3 possible logging levels: Warn, Log and Silent. Warn is the noisiest 
+one, which will pop up a message box when a warning/error is issued and log 
+everything else to file, Log will just log everything to a file while Silent will 
+not log anything.
 
 
 # log_path

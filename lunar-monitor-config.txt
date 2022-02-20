@@ -1,8 +1,9 @@
 level_directory: "Levels"
 mwl_file_format: "level #.mwl"
 flips_path: "Flips\flips.exe"
-map16_path: "resource\all.map16"
+map16_path: "resource\temp\all.map16"
 human_readable_map16_cli_path: human-readable-map16-cli\human-readable-map16-cli.exe
+human_readable_map16_directory_path: resource\map16
 clean_rom_path: "SMW_clean.smc"
 global_data_path: "resource\global_data.bps"
 shared_palettes_path: "resource\shared.pal"
