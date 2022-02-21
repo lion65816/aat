@@ -46,7 +46,7 @@ patches
 clean = SMW_clean.smc
 output = my_hack.smc
 temp = temp.smc
-package = my_hack.bps
+package = my_hack_bps.bps
 
 -- tools
 asar_path = patch\asar.exe
