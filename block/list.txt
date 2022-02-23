@@ -4,8 +4,8 @@
 201:25 turnbig.asm
 202:25 turnfire.asm
 203:25 turncape.asm
-204:25 sprite_solid.asm
-205:25 mario_solid.asm
+204:130 sprite_solid.asm
+205:130 mario_solid.asm
 206:25 shatter_mario.asm
 207:25 shatter_mario_sprite.asm
 208:25 shatter_sprite.asm
