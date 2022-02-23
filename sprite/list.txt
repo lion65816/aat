@@ -72,6 +72,7 @@
 4D babyyoshi.json
 50 upside_ninji.json
 51 volcano_lotus.json
+52 ChasinRex.cfg
 
 C0 balloon_shooter.cfg
 C1 lasershooter.cfg

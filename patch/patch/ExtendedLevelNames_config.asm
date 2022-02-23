@@ -119,8 +119,8 @@ NameData:
  db "Good Level Design  "
  db "REALLY?            "
  ;Level 023
- db "Platforming 101    "
- db "                   "
+ db "  The Feeling of   "
+ db "    a Freshman     "
  ;Level 024
  db "DO NOT EDIT        "
  db "(actually, you can)"
