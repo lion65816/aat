@@ -1,5 +1,9 @@
 *.smc
 *.smc~
+*.zst
+*.srm
+*.bak
+*.sfc
 monitor
 uberasm/asm/work/*.asm
 music/stats

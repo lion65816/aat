@@ -1,0 +1,161 @@
+
+#amk 2
+#spc
+{
+#title "Lakeside"
+#game "Sparkster"
+#author "Konami"
+#comment "Ported by brickblock369"
+}
+
+#path "Sparkster - Lakeside"
+#samples
+{
+#optimized
+"1A Timpani.brr"
+"1B Strings.brr"
+"1C Octave Brass.brr"
+"1D Synth Bass.brr"
+"1F Choir.brr"
+"2B Horn.brr"
+"15 Bass Drum.brr"
+"16 Snare Drum.brr"
+"17 Cymbal.brr"
+"29 Piano.brr"
+"14 Trombone.brr"
+}
+
+
+#instruments
+{
+"1A Timpani.brr" $8F $EB $00 $01 $4C ;30
+"1B Strings.brr" $8F $E8 $00 $01 $6E ;31
+"1C Octave Brass.brr" $8E $E9 $00 $01 $72 ;32
+"1D Synth Bass.brr" $8F $ED $00 $07 $80 ;33
+"1F Choir.brr" $8A $F0 $00 $05 $D0 ;34
+"2B Horn.brr" $8F $EC $00 $03 $0A ;35
+"15 Bass Drum.brr" $8F $F7 $00 $0A $B7 ;36
+"16 Snare Drum.brr" $8F $F2 $00 $0C $BE ;37
+"17 Cymbal.brr" $8F $E0 $00 $05 $00 ;38
+"29 Piano.brr" $8F $E0 $00 $02 $DA ;39
+"14 Trombone.brr" $8F $E9 $00 $0D $87 ;40
+"1F Choir.brr" $8A $EC $00 $05 $D0 ;41 Slower Decay
+"17 Cymbal.brr" $8F $E0 $00 $0C $11 ;42 Hi-Hat Tuning
+}
+
+"BrassFastADSR=$ED $0B $DC"
+"BrassRegularADSR=$ED$0B$E8"
+"BrassFastADSR2=$ED $08 $FC"
+"BrassRegularADSR2=$ED $08 $E8"
+"Vibrato=$DE$20$16$20"
+"BrassRegularADSR3=$ED $0F $F1"
+
+"BassDrum=@36 v162"
+"SnareDrum=@37 v250 "
+"HiHatClosed=@42$ED$0F$FB v140"
+"HiHatOpen=@42$ED$0F$F0 v140"
+
+$F4$02
+
+#0
+t40 @31 v115 o4 y7  Vibrato $FA$03$20
+a16 b16 > e16 f+16 t41 a24  b24 > c+24 d+24 e24 f+24
+<<<
+t49 v123
+b4^12 b12 b12^2^12 > e12 f+12^4 a4 > c+4 d+6 f+6 < b6^1^2.  
+
+
+@38   y11
+$ED$0F$F2 v210 d+4 
+/  y8 r12 l16 v145 @32 BrassFastADSR2 e^<BrassRegularADSR2b>e v130 (1)[ f+4^2^8 v110 f+8 g+8 a8 b4. > c+16 d+16]
+$FA$02$0C < BrassFastADSR2 e^<BrassRegularADSR2b>e * >
+$FA$02$00 >  (7)[BrassFastADSR2 v100 e^<BrassRegularADSR2g+>ed+2 < g+4 BrassFastADSR2 > c+^<BrassRegularADSR2e>c+<b2 e4 
+BrassFastADSR2 g+^BrassRegularADSR2f+ef+2.] BrassFastADSR2 e^BrassRegularADSR2d+c+ d+2.
+
+ < BrassFastADSR2 v145 e^<BrassRegularADSR2b>e  v130 (1) $FA$02$0C BrassFastADSR2  v110 e^<BrassRegularADSR2b>e (1)
+$FA$02$00  (7) > $FA$02$05 e^BrassRegularADSR2d+c+ @31  d+24 @39 <<<< v120 y13  $E8$60$58 $FA$02$0C $DC$30$07 l12 eb>a>eb>a>eb v80 b24
+<
+
+$FA$02$00 @31 y9 v145 (4)[l4 egf+d l12eg>c]<f+a>d^2 $FA$02$02 (4) d2.
+$FA$02$00 l4 < (6)[b>d+c+<a+ l12 bg+b a+2 f+4 e4. d+16 e16 g+4 b4 g4. f+16 g16> c4 g2. a2] v125 b2^6^4
+@32 < y12 v210 f+1 y9 v160 e1 f2 g+4 b4
+
+@33 v170 y10 <<b2$DD$20$70>>b^2
+
+#1
+@32 v130 o4 y14 Vibrato  $FA$03$20
+b16 > e16 f+16 a16 b24 > c+24 d+24 e24 f+24 g+24
+< y11 BrassRegularADSR v180 
+a4^12 l12 aaag+f+g+eg+bag+af+a>c+6<b6a6b6>c+6d+6^1^1
+/
+
+<< l16 y11 v240 BrassFastADSR  e^<BrassRegularADSRb>e v210 (5)[f+4^2^8 v180 f+8 g+8 a8  b4. > c+16 d+16]
+$FA$02$0C BrassFastADSR < e^<BrassRegularADSRb>e (5) >
+$FA$02$00 >  (8)[v170 BrassFastADSR e^<BrassRegularADSRg+>ed+2 < g+4 BrassFastADSR > c+^<BrassRegularADSRe>c+<b2 e4 
+BrassFastADSR g+^BrassRegularADSRf+ef+2.] BrassFastADSR e^BrassRegularADSRd+c+ d+2. <
+
+v240 BrassFastADSR  e^<BrassRegularADSRb>e v210 (5) $FA$02$0C BrassFastADSR  e^<BrassRegularADSRb>e (5)
+$FA$02$00  (8) $FA$02$05 > e^BrassRegularADSRd+c+ d+2. <
+
+$FA$02$00 @31 v175 y11 (4)l12 f+a>d^2 $FA$02$02 (4) d2.
+$FA$02$00 l4 (6) v150 b1^1
+@32 < y12 v185 g+1 a2 > c4 d+4^1
+
+#2
+@34 o4 Vibrato  $FA$03$20
+v130 y11 r16 e8  a16^24 > c+12 e12 g+24
+@33 o1 y10 v170 b4 @40 >> y12 v100  f+4^12 < l12 bbbab>f+f+<b>f+<b>f+ f+^f+^f+^f+3^6^1^2.
+^4
+/
+(9)[v110  @41  y8  g+8$ED$0A$FA^8 @41 a2^8 @32 >> v120 BrassRegularADSR3 b16 b16  b2] <<  v110 @41 b2 * (10)[v110 @41 y13 g+2$ED$0A$F9^4
+@35 < v125 g+4. b8 > d+8 g+8 > @41 v110 c+8$ED$0A$FA^8 @41 < b2. @35 v125d4.]  c+16 d16 v140  a2 v155 f+4. < v162 b16 > f+16 b2
+(9)  v110 @41 b2 (9) (10)  d16 c+16  v140 d2 v155 e4. v162 < b16 > e16 b2
+@41 y7 v130 g4 > c4 < a4 f+4 g4 a4^2 a4 > d4 < b4 g+4 a12 > d12 f+12 g+4^2 e4 g+4 f+4 c+4 e12 < b12 > e12 c+2 < a+4
+y12 v130 @32 $ED$0F$EA > g+2 b4 > e4 c2 e4 > c4^2 d2 v125 $ED$0B$EA e1 @32 << y10 v145 $ED$0F$EA d1^16 v140 g+1 a2 > c4 d+4^=132 @38   y11
+$ED$0F$F2 v145 < d+4 
+
+#3
+@34 o3 Vibrato  $FA$03$20
+v130 y9 b8 > f+8 b12 > d+12 f+12
+@32<< y10 v210 b1^12 v190 b12 > e12 < f+4 a4 > c+4 d+6 c+6 < b6^1^1
+/
+(11)[v110  @41  y12  e8$ED$0A$FA^8 @41 e2^8 @32 >>> v120 BrassRegularADSR3 e16 e16  e2] <<  v110 @41 d+2 *
+(12)[v110 y7 @41 d+2 y13 e8$ED$0A$FA^8 @41 d+2 < g+4 > @35 v125 < a4. e16 d+16 e2
+@31 l16 v110 y8 >> dc+$F4$01c+d$F4$01dc+c+dd<b>c+def+g+a]
+ba+a+bba+a+bbf+g+ab>c+d+<b
+(11) v110 @41 < d+2 (11)
+(12)
+v100 > b4^6 @39 <<<< $FA$02$0C y13 v120 a12 >y12v116 e12 y11 v113 b12 > y10 v110 a12 > y9 v105 e12 y8v100 b12> y7v95 a12 
+$FA$02$00 @35 y13 v130 << c4 e4 d4 < a4 > c4 d2. d4 f+4 e4 < b4 > d12 f+12 a12 b2.
+g+4 b4 a+4 f+4 g+12 e12 g+12 f+2 c+4
+y7 @31 $FA$02$00 l16 > b>c+<bb-b>c+<bb-b>c+<bb- l24 b>c+d+ef+g+ l16 b>c<bb-b>c<bb-b>c<bb-l24 b>cdef+g l16 c<gg>cc<gg>c d<aa>d d<aa>d
+< ag+ec-ag+ec-ag+ec-ag+ec- g+f+d<a>g+f+d<a>g+f+d<a>g+f+d<a> ag+ec-ag+ec-ag+ec-ag+ec-
+<b+afcb+afc >d+c<g+d+ > [f+d+<bf+]5
+
+#4
+@41 o3 Vibrato  $FA$03$20
+v130 b2 $DF
+@38 y12 $ED$0F$F0 v252 a2^12
+@30 v227 b6 b6 b12^4 > d+2 d+4^6 d+6 < r24 [[b12]]12 b12^2^8^24
+y10 t58 BassDrum c16 c16 SnareDrumc4
+/
+
+@33 l8 v140 [ [[eeeeeee<b>]]3 eeeed+16d+16d+d+d+ c+c+<g+g+g+g+g+g+ aa>eeeeee ddddd16d16ddd] <bbbbb16b16bbb
+* > eeeee16e16edd
+[[c]]12 ccc16c16c [ [[e]]10 e16e16eeeee ] $FA$02$02 * [[e]]20 $FA$02$00 cccc [[e]]8 [[d]]8 [[e]]8 ffff < g+16g+16g+bbb16b16bbbbbbb
+
+#5
+@38 o3 Vibrato  $FA$03$20
+v252 y12 $ED$01$E0 a2
+@36 v186 y10 c4 @30 v227 y8 b4^6 b6 b6 b2 b2 b3 [[b12]]13 b2.^12
+@33 y10 v140 e4$DD$00$30<a >
+/
+(100)[BassDrum c8 HiHatClosed y11 c8 SnareDrum y10 c8 BassDrum c8 HiHatClosed y11 c8 BassDrum y10 c8 SnareDrum c8
+v255 @30 b8 > e4 < SnareDrum y10 c8 BassDrum c8 HiHatClosed y11 c8 BassDrum y10 c8 SnareDrum c8 HiHatOpen y11 c8]2
+(101)[BassDrum y10 c8 HiHatClosed y11 c8 SnareDrum y10 c8 BassDrum c8 HiHatClosed y11 c8 BassDrum y10 c8 SnareDrum c8 HiHatOpen y11 c8]4
+(100)2
+(101)3 (102)[BassDrum y10 c8 HiHatClosed y11 c8 SnareDrum y10 c8 BassDrum c8 HiHatOpen y11 c8 SnareDrum y10 c8 c8] c16 c16
+(101)3 (102) c8
+(101)2 [BassDrum y10 c8 HiHatClosed y11 c8 SnareDrum y10 c8 BassDrum c8 SnareDrum c8 BassDrum c8 SnareDrum c8 HiHatOpen y11 c8]3
+(101)3 BassDrum y10 c8 HiHatClosed y11 c8 SnareDrum y10 c8 BassDrum c8 SnareDrum c8 HiHatClosed y11 c8 SnareDrum y10 c8 HiHatOpen y11 c8
+SnareDrum y10 c16 c16 HiHatOpen y11 c8 BassDrum y10 c8 SnareDrum c16 c16 HiHatOpen y11 c8 BassDrum y10 c16 c16 SnareDrum v255 c+4

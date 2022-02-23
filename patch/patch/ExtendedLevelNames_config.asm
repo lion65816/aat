@@ -131,8 +131,8 @@ NameData:
  db "Riverside Race     "
  db "(not much of race) "
  ;Level 103
- db "...?               "
- db "                   "
+ db "James Turner (temp "
+ db "name, may keep it) "
  ;Level 104
  db "                   "
  db "yoshis house       "
