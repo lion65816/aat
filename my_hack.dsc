@@ -235,4 +235,4 @@
 3ff	0	SSP_Tiles/turn_down-left.asm
 17a0	0	
 17a1	0	
-1840	0	A brick block.
+1840	0	A simple brick block.

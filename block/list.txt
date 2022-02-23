@@ -27,7 +27,7 @@
 222:100 donutblk.asm
 17A0:2 hurt.asm
 17A1:2 hurt.asm
-1840:130 brickv14.asm
+1840:25 SMB3Brick.asm
 
 ;;2-way pipe caps
 ;;;Vertical pipe caps
