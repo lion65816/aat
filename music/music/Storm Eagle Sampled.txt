@@ -1,0 +1,102 @@
+#amk 2
+
+#path "Stuff"
+#samples
+{
+#optimized
+"Bass Drum.brr"
+"Electric Snare.brr"
+"Open Hi-Hat (2).brr"
+"String Ensemble 1.brr"
+"Electric Bass (Pick).brr"
+}
+
+#instruments
+{
+	"Bass Drum.brr" $cd $c0 $00 $06 $d2 ;@30 Bass Drum
+	"Electric Snare.brr" $cd $c5 $00 $08 $98 ;@31 Snare
+	"Open Hi-Hat (2).brr" $cd $c0 $00 $07 $a8 ;@32 hi-hat
+	@4 $ff $88 $00 $03 $00 ;@33 Cello aka Guitar
+	"String Ensemble 1.brr" $cd $c5 $00 $02 $7d ;@34 flute
+	"Electric Bass (Pick).brr" $ff $a5 $00 $06 $40 ;@35 Bass
+	@3 $fd $e5 $00 $03 $00 ;@36 Marimba
+}
+
+#SPC
+{
+#title "Storm Eagle Stage"
+#game "Rockman X/Megaman X"
+#author "Capcom"
+#comment "Ported by Dark Mario Bros™"
+}
+
+#option dividetempo 5
+
+$EF $FF $88 $68
+$F1 $03 $46 $01
+$F5 $Eb $FC $01 $34 $00 $E5 $33 $33
+
+
+#0 @33 o3 q6a l8 w225 t70 p5,5
+[<bb>b<bb>b<b>a2^4<f+aa+>]2/
+q66y13[>b2^8a+b>c+{dc+<b>}f+2^4
+g4^8f+16e16f+4^8e16d16]1c+4^8<f+16f16f+2
+*>c+2f+2
+[gdgb]2[>c+<ba+]2>c+<a+>d2e2f+4ed2^8<
+[gdgb]2[>c+<ba+]2>c+<
+b16a+16b4^8f+16e16f+4^8d16c+16d4^8
+<b16a+16b4^8f+16e16f+4^8d16c+16d4^8<b16a16b1>
+q6ay10o3[<bb>b<bb>b<b>a2^4<f+aa+>]2
+
+#1 @33 o3 q66 l8 y10 p5,5
+[r4^16f+r4f+re2^4r4^16]2/
+@34 o4 q6a y7
+[b2^8a+b>c+{dc+<b>}f+2^4
+g4^8f+16e16f+4^8e16d16]1c+4^8<f+16f16f+2*>c+2f+2
+r4g4a8b4^8a+4g+4f+8a+4^8b2>c+2d4c+8<b2^8
+r4g4a8b4^8a+4g+4f+8a+4
+b16a+16b4^8f+16e16f+4^8d16c+16d4^8<
+b16a16b4^8f+16e16f+4^8d16c16d4^8<b16a16b1
+@33 p5,5 q66 y10 o3[r4^16f+r4f+re2^4r4^16]2
+
+#2 @35 q6a o3 l8 
+[r1]4/(1)[bb>b<b]2
+(2)[f+f+>f+<f+]2(3)[gg>g<g]2
+(4)[aa>a<aa+a+>a+<a+](1)2(2)2(3)2(4)
+(3)2(2)2(1)>c+c+>c+<c+dd>d<d<(2)(3)2(2)2
+[bb>b<bb>b<bb4b>b<bbf+aa+]4
+
+#3 @33 q6a l8 o3 p5,5
+[r4f+r4f+re2^4r4^8]2/ q66 y7
+[<b]8[f+]8[g]8[a]4[a+>]4[<b]8[f+]8[g]8[a]4[a+>]4
+[<g]8[a+]8[b>]4[c+]4[d]4[f+]4
+[<g]8[a+>]8 q6a y10[r4f+r4f+re2^4r4^8]4
+
+#4 @33 l8 o3 p5,5
+q68[r16<bb>b<bb>b<b>a2^4<f+aa+16>]2/
+q66y13[<b>]8[c+]8[<b>]8[e]8[<b>]8[c+]8[<b>]8[e]8
+[d]8[c+]8[f+]4[e]4[<a>]4[f+]4
+[d]8[c+]8y10q69[<bb>b<bb>b<b>a2^4<f+aa+>]2
+q68[r16<bb>b<bb>b<b>a2^4<f+aa+16>]2
+
+#6 @36 o5 q5a l16 
+[r1]4/[bbaabbf+f+]16
+[ggddggbb]2[a+a+f+f+]3c+c+a+a+
+f+d<b>f+d<b>f+dgec+gec+ge
+af+daf+daf+baf+baf+ba
+[ggddggbb]2[a+a+f+f+]3c+c+a+a+
+[bbaabbf+f+]16
+
+#5 q7e l16 o4
+[r1]3r2^8
+@30y11cc@31y9dr8^16/
+[@32c4@31y9dr8^16@30y11crcr@31y9dr8^16
+@30y11crcr@31y9dr@30y11cr8^16cr@31y9dr@30y11cr
+cr8^16@31y9dr8^16@30y11crcr@31y9dr8^16]
+@30y11crcr@31y9dr@30y11cr8^16cr@31y9dr@30y11cr
+*@30y11crcr@31y9dr@30y11cr8^16cr@31y9drdd
+@32c4@31y9dr8^16@30y11crcr@31y9dr8^16@30y11crcr@31y9dr@30y11cr8^16cr@31y9dr@30y11cr
+cr8^16@31y9dr8^16@30y11crcr@31y9dr8^16@30y11crcr@31y9dr@30y11cr8^16cr@31y9drdd
+@32c4@31y9dr8^16@30y11crcr@31y9dr8^16@30y11crcr@31y9dr@30y11cr8^16cr@31y9drdd
+[@32y9c4@31y9dr8^16@30y11crcr@31y9dr8^16@30y11cr8^16@31y9dr8^16@30y11crcr@31y9dr@30y11cr]3
+@32c4@31y9dr@30y11cr8^16cr@31y9dr@30y11cr8^16cr@31y9dr8^16@30y11crcr@31y9drdd

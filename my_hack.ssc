@@ -160,3 +160,9 @@
 4C 0022 0,0,0
 4D 0020 Baby Yoshi\n\nExtra Bytes (all 00 for vanilla)\n1 : Palette - 00(green), 01(red), 02(blue), 03(yellow)\n2 : Hunger (eats before growing)\n3 : Powerup eat value\n4 : Hop speed (80+ = no hops)
 4D 0022 0,0,80
+50 0020 upside ninji
+50 0022 0,0,0
+50 0030 upside ninji walking
+50 0032 0,0,0
+51 0020 Undefined Sprite
+51 0022 0,0,0

@@ -62,8 +62,8 @@ NameData:
  db "Take a Yoshi to    "
  db "skip this level    "
  ;Level 010
- db "Flying Forest      "
- db "With some moles    "
+ db "The Beginning      "
+ db "          of Spring"
  ;Level 011
  db "Everybody seem to  "
  db "hate this level    "
