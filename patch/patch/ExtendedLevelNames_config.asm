@@ -95,7 +95,7 @@ NameData:
  db "ROM contains beta  "
  db "version of this    "
  ;Level 01B
- db "MADNESS FORTRESS   "
+ db "  THE SANBO WOODS  "
  db "                   "
  ;Level 01C
  db "There too...       "
