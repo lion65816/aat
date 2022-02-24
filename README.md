@@ -3,9 +3,11 @@
 ## Getting Started
 
 Extract Lunar Magic from lm331.zip into lm331 directory (so it can be used with [Lunar Monitor](#export-resources-lunar-monitor) and [Lunar Helper](#import-resources-lunar-helper)).
-**Type in the path to the main project directory in `lunar-helper\config_user.txt`** as follows `dir = C:\path\to\aat (see `example_config_user.txt`).
+**Type in the path to the main project directory in `lunar-helper\config_user.txt`** as follows `dir = C:\path\to\aat` (see `example_config_user.txt`).
 Run Lunar Helper and choose "Build". Alternatively, patch `my_hack_bps.bps` (using Flips or an online patcher for example) to a clean smw rom and make sure the output rom's name is `my_hack.smc` and is in the main project directory.
 For more info on hacking SMW, check the readmes of the tools as well as Lunar Magic's help file for more details.
+
+If you wish to only make a vanilla stage, feel free to just look at Level Setup.
 
 ## Custom Graphics
 
@@ -56,7 +58,7 @@ Note: not all steps may be needed.
 - Use File->Levels->Import Multiple Levels from Files...
 - In Map16 dialog click on the yellow question block with red arrow pointing to the left.
 - Click on the yellow mushroom (Quick Insert ExGFX to ROM)
-- Insert other resources using appropriate tools.
+- Insert other resources using appropriate tools, or the batch files.
 
 ### Using git
 
@@ -93,4 +95,20 @@ Graphics files merely have to be named
 For UberASM simply add your level or sublevel ID and the asm file of the UberASM you want to use.
 Please don't use overworld, or gamemode ASM.
 
-They can all be inserted by simply building or packaging your hack in Lunar Helper.
+They can all be inserted by simply building or packaging your hack in Lunar Helper or using the tools or batch files if you find Lunar Helper to be too confusing.
+
+### Inserting new assets in a level
+
+- UberASM is inserted the instant it's inserted in the rom.
+- Graphics have to be loaded through the **Super GFX Bypass** (Red Poison Mushroom) button. Simply select the corresponding slot for your ExGFX file. If you've downloaded from SMWC, they might come with a *.mwl level file* or *.txt file* that contain the slots each ExGFX ID goes to, or they could simply be named in the *filenames*.
+- Sprites can be inserted with the **Custom Collection of Sprites** list on the **Add Sprites** button (tiny blue Yoshi button) or you can input by pressing Insert on a level with Sprite Editing Mode on (shell button). **Command** is the ID number of the sprite, which you can check in `list.txt` on the **sprite** folder. To insert a custom sprite, make sure the **Extra Bits** setting is 2, or 3 if you wish to insert it with the Extra Bit option. Extension bytes can also be used by a few sprites to customize them more, for more details check their respective `.asm` files, or ask around in the Discord or Talkhaus.
+- Blocks are inserted from the **16x16 Tile Map Editor** window (Question block). Scroll down to the respective page and pick as though you were inserting a normal block.
+- To **Insert** new Map16, press the **Import Map16 tiles from file(s)** button (yellow Question block with red arrow, on *16x16 Tile Map Editor*) and select the Map16 file, **make sure to move it to the proper Map16 page you claimed in the spreadsheet page though!!!!**
+
+#### Further Questions?
+
+Please reach us at our Discord server or on Talkhaus.
+Talkhaus subforum: https://talkhaus.raocow.com/viewforum.php?f=86
+Main discussion thread (Discord is in the first post, press on "Discort"): https://talkhaus.raocow.com/viewtopic.php?f=86&t=20411
+
+We'll try to reply as soon as possible.
