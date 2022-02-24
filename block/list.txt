@@ -25,6 +25,8 @@
 220:25 MultiMidwayBlock1.asm
 221:25 MultiMidwayBlock2.asm
 222:100 donutblk.asm
+560:25 boostdown.asm
+561:25 boostup.asm
 17A0:2 hurt.asm
 17A1:2 hurt.asm
 1840:25 SMB3Brick.asm

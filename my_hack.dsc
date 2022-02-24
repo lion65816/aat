@@ -233,6 +233,8 @@
 3f6	0	SSP_Tiles/caps/exit_only/right_horizontal_pipe_cap_B_exit.asm
 3fc	0	SSP_Tiles/turn_left-up.asm
 3ff	0	SSP_Tiles/turn_down-left.asm
+560	0	A block that will boost the player downwards.
+561	0	A block that will boost the player upwards.
 17a0	0	
 17a1	0	
 1840	0	A simple brick block.

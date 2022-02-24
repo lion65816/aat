@@ -50,8 +50,8 @@ NameData:
  db "Underwater Fortress"
  db "Fishbones are there"
  ;Level 00C
- db "Only 0B screens but"
- db "it's autoscrolling "
+ db " What the House?!  "
+ db "                   "
  ;Level 00D
  db "Random platforms   "
  db "everywhere         "
