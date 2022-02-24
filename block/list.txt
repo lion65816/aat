@@ -6,11 +6,11 @@
 203:25 turncape.asm
 204:130 sprite_solid.asm
 205:130 mario_solid.asm
-206:25 shatter_mario.asm
-207:25 shatter_mario_sprite.asm
-208:25 shatter_sprite.asm
-209:25 shatter_fire.asm
-20A:25 shatter_cape.asm
+206:130 shatter_mario.asm
+207:130 shatter_mario_sprite.asm
+208:130 shatter_sprite.asm
+209:130 shatter_fire.asm
+20A:130 shatter_cape.asm
 20B:25 removeitem.asm
 20C:25 teleport.asm
 20D:130 laser_left.asm
