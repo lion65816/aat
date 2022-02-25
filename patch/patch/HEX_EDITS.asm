@@ -108,7 +108,8 @@ db $7C,$30,$73,$31,$76,$31,$83,$30,$FC,$38,$2C,$31,$FC,$38
 org $05B839|!bank ; demo c
 db $7C,$30,$73,$31,$76,$31,$83,$30,$FC,$38,$2D,$31,$FC,$38
 
-org $008C89|!bank ;death counter, coin rejiggering
+; status bar rejiggering
+org $008C89|!bank
     db $30,$28,$31,$28,$32,$28,$33,$28
 	db $34,$28,$FC,$38,$FC,$3C,$FC,$3C
 	db $FC,$3C,$FC,$3C,$FC,$38,$FC,$38
@@ -116,34 +117,38 @@ org $008C89|!bank ;death counter, coin rejiggering
 	db $76,$3C,$77,$3C,$FC,$38,$FC,$38
     db $FC,$38,$FC,$38,$0D,$28,$0E,$28
     db $16,$28,$18,$28,$1C,$28,$FC,$38
-
 org $008CDF|!bank
     db $2E,$3C,$26,$38,$FC,$38,$FC,$38
     db $FC,$38,$4A,$38,$FC,$38,$FC,$38
     db $4A,$78,$2E,$3C,$26,$38
-
 org $008CF5|!bank
-    db $FC,$38
-    
+    db $FC,$38 
 org $008E73|!bank
     db $0B
-    
 org $008E79|!bank
     db $0C
-
 org $008E7F|!bank
     db $0D
-    
+
+; where to draw coins on status bar
 org $008F7F|!bank
 db $27
 org $008F82|!bank
 db $26
 
+; where to draw time on status bar
 org $008E8D|!bank
 db $FB,$0E
 
+; initial lives (15)
 org $009E25|!bank
 db $0E
+
+;Noteblock
+org $02878A|!bank
+db $02
+org $0291F2|!bank
+db $20
 
 ;Hex edits for Course Clear
 org $05CC17|!bank			; move "DEMO" text Layer 3 text (2nd byte)
