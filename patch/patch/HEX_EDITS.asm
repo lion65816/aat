@@ -1,4 +1,3 @@
-header 
 if read1($00FFD5) == $23
 	sa1rom
 	!bank = $000000
@@ -167,3 +166,7 @@ org $00FAE0|!bank
 db $F0,$F0,$F0,$F1 ;change item reward table for non-small player
 org $00FAE7|!bank
 db $F0,$F0,$F0,$F1 ;change item reward table for non-small player
+
+; Palette edits
+org ($07F3FE+$7D)|!bank  ; P-Balloon
+db $25  ; palette A | originally: db $21
