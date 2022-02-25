@@ -47,3 +47,4 @@ Locals:
 2E  voile, the magic library.txt
 32  Storm Eagle Sampled.txt
 33  Still, the Road is Full of Dangers.txt
+36  another mansion theme.txt
