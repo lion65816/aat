@@ -113,17 +113,34 @@ org $008C89|!bank ;death counter, coin rejiggering
 	db $34,$28,$FC,$38,$FC,$3C,$FC,$3C
 	db $FC,$3C,$FC,$3C,$FC,$38,$FC,$38
 	db $4A,$38,$FC,$38,$FC,$38,$4A,$78
-	db $2E,$3C,$26,$38,$FC,$38,$FC,$38
-    db $FC,$38,$FC,$38,$7C,$30,$73,$31
-    db $76,$31,$83,$30,$31,$31,$FC,$38
+	db $76,$3C,$77,$3C,$FC,$38,$FC,$38
+    db $FC,$38,$FC,$38,$0D,$28,$0E,$28
+    db $16,$28,$18,$28,$1C,$28,$FC,$38
+
+org $008CDF|!bank
+    db $2E,$3C,$26,$38,$FC,$38,$FC,$38
+    db $FC,$38,$4A,$38,$FC,$38,$FC,$38
+    db $4A,$78,$2E,$3C,$26,$38
 
 org $008CF5|!bank
     db $FC,$38
     
+org $008E73|!bank
+    db $0B
+    
+org $008E79|!bank
+    db $0C
+
+org $008E7F|!bank
+    db $0D
+    
 org $008F7F|!bank
-db $0C
+db $27
 org $008F82|!bank
-db $0B
+db $26
+
+org $008E8D|!bank
+db $FB,$0E
 
 org $009E25|!bank
 db $0E

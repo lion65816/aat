@@ -40,6 +40,7 @@ patches
 	patch\patch\BounceBlocks\CustBounceBlocks.asm
 	patch\patch\midway\multi_midway_1.7.asm
 	patch\patch\ExtendedLevelNames.asm
+	patch\patch\extendmario.asm
 ]
 
  -- rom paths
