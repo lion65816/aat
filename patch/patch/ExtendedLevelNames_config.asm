@@ -113,7 +113,7 @@ NameData:
  db "#4 NOT ROY'S CASTLE"
  db "                   "
  ;Level 021
- db "Garbage in sky     "
+ db "how eerie, an eerie"
  db "                   "
  ;Level 022
  db "Good Level Design  "
