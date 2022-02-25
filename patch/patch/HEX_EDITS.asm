@@ -168,5 +168,7 @@ org $00FAE7|!bank
 db $F0,$F0,$F0,$F1 ;change item reward table for non-small player
 
 ; Palette edits
+org ($07F3FE+$1B)|!bank  ; Football
+db $05  ; palette A | originally: db $01
 org ($07F3FE+$7D)|!bank  ; P-Balloon
 db $25  ; palette A | originally: db $21
