@@ -116,8 +116,8 @@ NameData:
  db "how eerie, an eerie"
  db "                   "
  ;Level 022
- db "Good Level Design  "
- db "REALLY?            "
+ db "   THE OBSTACLE    "
+ db "                   "
  ;Level 023
  db "  The Feeling of   "
  db "    a Freshman     "
