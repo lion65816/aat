@@ -65,8 +65,8 @@ NameData:
  db "The Beginning      "
  db "          of Spring"
  ;Level 011
- db "Everybody seem to  "
- db "hate this level    "
+ db " Warning!  It's a  "
+ db "Red Radish Morning "
  ;Level 012
  db "STAR ROAD          "
  db "                   "
