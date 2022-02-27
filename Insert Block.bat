@@ -1,7 +1,6 @@
 @echo off
 
-copy "my_hack.smc" "block\"
-cd block
-
-gps my_hack.smc
+pushd block
+gps ..\my_hack.smc
+popd
 pause
