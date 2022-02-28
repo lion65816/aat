@@ -3,8 +3,13 @@
 ## Getting Started
 
 Extract Lunar Magic from lm331.zip into lm331 directory (so it can be used with [Lunar Monitor](#export-resources-lunar-monitor) and [Lunar Helper](#import-resources-lunar-helper)).
-**Type in the path to the main project directory in `lunar-helper\config_user.txt`** as follows `dir = C:\path\to\aat` (see `example_config_user.txt`).
-Run Lunar Helper and choose "Build". Alternatively, patch `my_hack_bps.bps` (using Flips or an online patcher for example) to a clean smw rom and make sure the output rom's name is `my_hack.smc` and is in the main project directory.
+
+- **Type in the path to the main project directory in `lunar-helper\config_user.txt`** as follows `dir = C:\path\to\aat` (see `example_config_user.txt`).
+- Have a clean SMW ROM in the main project directory and name it ``SMW_clean.smc``.
+- Run Lunar Helper and choose "Build".
+
+Alternatively, patch `my_hack_bps.bps` (using Flips (it's in other-tools) or an online patcher) to a clean SMW ROM and make sure the output ROM's name is `my_hack.smc` and is in the main project directory.
+
 For more info on hacking SMW, check the readmes of the tools as well as Lunar Magic's help file for more details.
 
 If you wish to only make a vanilla stage, feel free to just look at Level Setup.
