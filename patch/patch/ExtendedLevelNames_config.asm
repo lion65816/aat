@@ -77,8 +77,8 @@ NameData:
  db "Please, don't make "
  db "blatant edits of it"
  ;Level 015
- db "Use the Cape to    "
- db "Abuse. It's easy!  "
+ db "Demo in            "
+ db " thornbush scrumble"
  ;Level 016
  db "STAR ROAD          "
  db "                   "
