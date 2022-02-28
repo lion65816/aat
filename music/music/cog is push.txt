@@ -1,0 +1,119 @@
+#amk 1
+#path "cogpush"
+
+#SPC
+{
+#title "cog is push (chrono trigger mix)"
+#game "thx to RednGreen for base port"
+}
+
+#samples
+{
+	#optimized
+	"ct_uuh.brr"
+	"ct_flute.brr"
+	"ct_string.brr"
+	"ct_bass.brr"
+	"ct_harp.brr"
+	"ct_piano_short.brr"
+	"ct_bongo_2_short.brr"
+	"ct_bongo_short.brr"
+	"ct_perc_short.brr"
+}
+
+#instruments
+
+{
+"ct_harp.brr" 		$FD $ED $00 $03 $2E ;@30
+"ct_flute.brr" 		$FF $E7 $00 $05 $15 ;@31
+"ct_piano_short.brr" 	$FF $EE $00 $06 $04 ;@32
+"ct_string.brr" 	$F6 $E3 $00 $04 $27 ;@33
+"ct_bass.brr" 		$FF $EC $00 $03 $16 ;@34
+"ct_string.brr" 	$F8 $E3 $00 $04 $27 ;@35
+"ct_bongo_short.brr" 	$FF $E0 $00 $08 $E6 ;@36
+"ct_bongo_2_short.brr" 	$FF $E0 $00 $07 $F9 ;@37
+"ct_uuh.brr" 		$F8 $E0 $00 $04 $F0 ;@38
+"ct_perc_short.brr" 	$FF $E0 $00 $07 $20 ;@39
+}
+
+$EF$FF$30$30
+$F1$04$64$01
+
+w150 t58
+$F4 $02
+
+
+
+#0
+@30 h-1 o5 v180 $ED$7F$ED f+2f+2f+2<b2> f+2 v160 f+2 v140 f+2 v110 <b2
+/ 
+@32 h0 o4 [v80 c+4 v150 c+4 v195 c+4 v215 c4 c4 v195 c4 v150 c4 v80 c4 v80  c4 v150  c4 v195 c4 << v215 a+4 a+4 v195 a+4 v150 a+4 v80  a+4 >>]2 [r2]8
+@30 h-1 v190 $ED$7F$ED o4 (9)[ [[a+8>c+8f+8a+8<]]2 [[a+8> c8f+8a+8<]]8 [[a+8>c+8f+8a+8<]]2 b8>c+8f+8 b8< b8>c+8f+8a+8< [[a+8>c+8f+8a+8<]]2 ]2
+[b8> c+8f+8 b8<]8 [a+8>c+8f+8a+8<]4 [b8> c+8f+8 b8<]4 (9)2
+@30 h-1 o5 v180 $ED$7F$ED [f+2f+2f+2<b2>]3 f+2 v160 f+2 v140 f+2 v110 <b2
+
+
+
+#1
+@30 h-1 o4 v180 $ED$7F$ED r8 f+2f+2f+2e2 f+2 v160 f+2 v140 f+2 v110 e4.
+/ 
+@32 h0 o3 [v80 a+4 v150 a+4 v195 a+4 v215 a+4 a+4 v195 a+4 v150 a+4 v80 a+4]4 [r2]8
+@33 o4 v190 [q7f c+2 q79 c+4 q7f c2. q79 c2 q7f c2  q79 c4 < q7f a+2.q79 a+2 q7f e2  q79 e4 q7f f+2.q79 f+2 q7f b2  q79 b4 q7f a+2.q79 a+2]2 q7f o3 b1^1^1^1 a+1^1 b1^1 *2
+@30 h-1 o4 v180 $ED$7F$ED r8 [f+2f+2f+2e2]3 f+2 v160 f+2 v140 f+2 v110 e4. 
+
+
+
+#2
+@30 h-1 o5 v180 $ED$7F$ED r4 c+2e2<a+2a+2 > c+2 v160 e2 v140 < a+2 v110 a+4
+/ 
+@32 h0 o3 [v80 f+4 v150 f+4 v195 f+4 v215 f+4 f+4 v195 f+4 v150 f+4 v80  f+4]4 [r2]8
+@33 o3 v160 y12 [q7f a+2 q79 a+4 q7f a+2.q79 a+2 q7f a+2 q79 a+4 q7f f+2.q79 f+2 q7f c2  q79 c4 q7f c+2.q79 c+2 q7f g+2 q79 g+4 q7f f+2.q79 f+2]2 q7f f+1^1^1^1 f+1^1^1^1 *2
+@30 h-1 o5 y10 v180 $ED$7F$ED r4 [c+2e2<a+2a+2>]3 c+2 v160 e2 v140 < a+2 v110 a+4
+
+
+
+#3
+@30 h-1 o4 v180 $ED$7F$ED r4. f+2f+2e2e2 f+2 v160 f+2 v140 e2 v110 e8 / 
+@32 h0 o3 [v80 c+4 v150 c+4 v195 c+4 v215 c4 c4 v195  c4 v150  c4 v80 c4 v80 c4 v150 c4 v195 c4 v215 c+4 c+4 v195 c+4 v150 c+4 v80 c+4]2 [r2]8
+@33 o3 v140 y8 (20)[q7f f+2 q79 f+4 q7f f+2.q79 f+2 q7f f+2 q79 f+4 q7f c+2.q79 c+2 < q7f a+2 q79 a+4 q7f a+2.q79 a+2 > q7f f+2 q79 f+4] q7f c+2.q79 c+2 (20) q7f c+2 
+o1 $ED$73$E0 y10,1,1 $F4$01 v230 f+2. [f+2]14 $E8$C0$50 f+2 $F4$01 ^2 
+@33 o3 v140 y8,0,0 (20) q7f c+2.q79 c+2 (20) q7f c+2.q79 c+2 q7f
+@30 y10 h-1 o4 v180 $ED$7F$ED r4. [f+2f+2e2e2]3 f+2 v160 f+2 v140 e2 v110 e8
+
+
+
+#4
+v250 q6f @34 o3 y10,0,0 (3)[f+1^2^4^8>c+8<] f+1^2^4 v180 e4
+/ 
+v230 [f+4^8>c+8r8r8f+2^8g+8f+8c+8<f+4 f+4^8>c+8r8r8g+4^8f+4^8c+4<] e4 * f+4
+(3) f+1^1 (1)[f+2r4f+1^4]2 (2)[f+2r4f+1^8 > c+8 <] f+1^2^8 f8 r4 (1)2 (2) f+2. > f+1^4 < (3) f+1^2^8 > f+4. < (3)  f+1^2^8 f+8 r8 f8
+[f+2 > a+4 < f+2 >> c4 << f+2f+2 > c+4 < f+2 > c+4 e4 c+4 > c4 << f+2 f+2. > e4 < f+2 f+4 > b4 < f+4 > a+4 > c+4 <<] f+2 * f+1^1^4^8 > c+8 < f+1.. e4
+(3) f+1^2^4 v180 e4 
+
+
+
+#5 
+[r2]8
+/
+$FA$03$00 [r2]16
+v170 $E8$FF$CB $FA$03$50 o2 @36 y12 b4 y15 b4 y6 @37 $FA$03$00 >c8y10< g+4 g+8 @38 > y8 $DC$60$14 d16 $DD$00$20$9D ^16^16 $DD$00$30$99 ^32 $ED$78$F5 ^32 ^8 ^8 < $EE$00 y5 @39 $FA$03$40 v255 >>c+2<<
+(10)[o2 @36 y15 b4 b4 y6 @37 $FA$03$00 v220 >c8y10< v210 g+4 g+8 @38 > y8 $DC$60$14 d16 $DD$00$20$9D ^16^16 $DD$00$30$99 ^32 $ED$78$F5 ^32 ^8 ^8 < $EE$00 y5 @39 $FA$03$40 v255 >>c+2<<] $FA$03$40
+[@33 h0 o3 v190 y10 q7f c+2 q79 c+4 q7f @31 h-2 o4 $DE$3A$09$24 v220 r4. f+8 g+8 > v230 c8 c+8 v235 d4 $DD$00$1A$B1 ^8 v150 ^8 v250 r1 < e8 c+8 c8 c+8 e4^8 v150 ^8 v240 r1 c+8e8c+8e8f+8c+4 v150 ^8 v232 r4 f+8b8g+8f+8 v238 a+4^8] v150 ^8 r2^8 * 
+$DF @32 o4 h0 v200 > c+4. < v220 f+4. v240 c+2^8 c+8 e8 c+8 f+2 f+4 < a+4 b2 b8 > c+8 d+8 e4 < b8 > c+8 d+8 e8 f+4.a+4 r4 a+8 g+8 f+8 d8 c+8 < b8 > c+2 d+8 e8 c+2 < b8 > d8 < b8 a+4. g+4 g+4 b4 a+1 r8 
+[@31 h-2 o4 $DE$3A$09$24 v220 f+8 g+8 > v230 c8 c+8 v235 d4 $DD$00$1A$B1 ^8 v150 ^8 v250 r1 < e8 c+8 c8 c+8 < a+4^8 v150 ^8 > v240 r1 f+8e8c+8e8f+8c+4 $DF @33 h0 o2 v190 y10 q7f b4. @31 h-2 o4 $DE$3A$09$24 v232 f+8b8g+8f+8 v238 a+4^8 > c+4^8 < f+4 v150 ^8]
+@33 h0 o3 v190 y10 q7f c+2 q79 c+4 q7f r4. * > h-2 v230 f+1^1^1^1 [r2]8
+
+
+
+#6
+[r2]8
+/
+[r2]24 @33 o3 v160 y10,0,0 [r2. q7f c2. q79 c2 q7f c2  q79 c4 < q7f a+2.q79 a+2 r2. q7f a+2.q79 a+2 q7f b2  q79 b4 q7f a+2.q79 a+2]2 q7f >
+[$F4$01 [[c+4]]14 c+4 $F4$01 ^4]2 @33 o1 $ED$75$E0 y10,1,1 $F4$01 v210 [f+4]30 f+4 $F4$01 ^4 $F4$01 v210 [f+4]30 $E8$C0$50 f+4 $F4$01 ^4 [r2]24
+
+
+
+#7
+[r2]8
+/
+[r2]24 v250 $FA$03$50 (10)22 [r2]8 

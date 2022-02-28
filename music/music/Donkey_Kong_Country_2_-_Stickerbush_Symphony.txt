@@ -1,0 +1,661 @@
+﻿;*******************************************************************
+; Title = Stickerbush Symphony
+; Ported by LadiesMan217
+; Comment = HOLY FUCK!!! ENHALE MY DONG ENRAGEMENT SONG!!!
+;*******************************************************************
+; Insert size: 3471 bytes
+; Number of channels: 8
+; Total song length: 2:08
+; Version: AddmusicK 2
+; Samples: Yes (brr)
+;*******************************************************************
+; SPC Generator Info
+#SPC
+{
+	#author "David Wise"
+	#title "Stickerbush Symphony"
+	#game "Donkey Kong Country 2"
+	#comment "Ported by LadiesMan217"
+}
+;*******************************************************************
+;Samples and Info
+#path "DKC2"
+#samples
+{
+	#optimized
+	"dkc2-08.brr"
+	"dkc2-09.brr"
+	"dkc2-0f.brr"
+	"dkc2-10.brr"
+	"dkc2-11.brr"
+	"dkc2-12.brr"
+	"dkc2-13.brr"
+	"dkc2-14.brr"
+	"dkc2-15.brr"
+	"dkc2-16.brr"
+	"dkc2-17.brr"
+	"dkc2-18.brr"
+	"dkc2-19.brr"
+	"dkc2-1a.brr"
+	"dkc2-1b.brr"
+	"dkc2-1c.brr"
+	"dkc2-1d.brr"
+	"dkc2-21.brr"
+	"dkc2-22.brr"
+	"dkc2-23.brr"
+	"dkc2-25.brr"
+	"dkc2-26.brr"
+	"dkc2-27.brr"
+	"dkc2-28.brr"
+	"dkc2-29.brr"
+	"dkc2-2a.brr"
+	"dkc2-2b.brr"
+	"dkc2-2c.brr"
+	"dkc2-2d.brr"
+	"dkc2-2e.brr"
+	"dkc2-2f.brr"
+	"dkc2-30.brr"
+	"dkc2-31.brr"
+	"dkc2-32.brr"
+	"dkc2-33.brr"
+	"dkc2-34.brr"
+	"dkc2-35.brr"
+	"dkc2-36.brr"
+}
+#instruments
+{
+	"dkc2-16.brr" $8f $fa $00 $02 $ff	;@30 marimba
+	"dkc2-16.brr" $cf $f0 $00 $02 $ff	;@31 bass marimba
+	"dkc2-15.brr" $81 $e1 $00 $03 $0e	;@32 rising synth string
+	"dkc2-15.brr" $85 $e8 $00 $01 $86	;@33 harmonic lead synth string
+	"dkc2-14.brr" $81 $ea $00 $01 $86	;@34 chior
+	"dkc2-08.brr" $ff $20 $00 $03 $0b	;@35 bass drum
+	"dkc2-09.brr" $df $ca $00 $01 $ea	;@36 snare
+	"dkc2-17.brr" $df $57 $00 $02 $26	;@37 closed hi-hat
+	"dkc2-17.brr" $df $cb $00 $02 $26	;@38 open hi-hat
+	"dkc2-2b.brr" $de $a0 $00 $02 $80	;@39 pitch envelope
+	"dkc2-2c.brr" $de $a0 $00 $02 $80	;@40 pitch envelope
+	"dkc2-2d.brr" $de $a0 $00 $02 $80	;@41 pitch envelope
+	"dkc2-2e.brr" $de $a0 $00 $02 $80	;@42 pitch envelope
+	"dkc2-2f.brr" $de $a0 $00 $02 $80	;@43 pitch envelope
+	"dkc2-30.brr" $de $a0 $00 $02 $80	;@44 pitch envelope
+	"dkc2-0f.brr" $de $a0 $00 $02 $80	;@45 pitch envelope
+	"dkc2-31.brr" $de $a0 $00 $02 $80	;@46 pitch envelope
+	"dkc2-10.brr" $de $a0 $00 $02 $80	;@47 pitch envelope
+	"dkc2-32.brr" $de $a0 $00 $02 $80	;@48 pitch envelope
+	"dkc2-11.brr" $de $a0 $00 $02 $80	;@49 pitch envelope
+	"dkc2-33.brr" $de $a0 $00 $02 $80	;@50 pitch envelope
+	"dkc2-12.brr" $de $a0 $00 $02 $80	;@51 pitch envelope
+	"dkc2-34.brr" $de $a0 $00 $02 $80	;@52 pitch envelope
+	"dkc2-13.brr" $de $a0 $00 $02 $80	;@53 pitch envelope
+	"dkc2-35.brr" $de $a0 $00 $02 $80	;@54 pitch envelope
+	"dkc2-36.brr" $de $a0 $00 $02 $80	;@55 pitch envelope
+	"dkc2-18.brr" $9f $8a $00 $04 $8b	;@56 piano
+	"dkc2-19.brr" $9f $8a $00 $04 $00	;@57 piano
+	"dkc2-2a.brr" $aa $6a $00 $02 $fe	;@58 pitch envelope
+	"dkc2-29.brr" $aa $6a $00 $02 $fe	;@59 pitch envelope
+	"dkc2-28.brr" $aa $6a $00 $02 $fe	;@60 pitch envelope
+	"dkc2-27.brr" $aa $6a $00 $02 $fe	;@61 pitch envelope
+	"dkc2-26.brr" $aa $6a $00 $02 $fe	;@62 pitch envelope
+	"dkc2-25.brr" $aa $6a $00 $02 $fe	;@63 pitch envelope
+	"dkc2-23.brr" $aa $6a $00 $02 $fe	;@64 pitch envelope
+	"dkc2-22.brr" $aa $6a $00 $02 $fe	;@65 pitch envelope
+	"dkc2-21.brr" $aa $6a $00 $02 $fe	;@66 pitch envelope
+	"dkc2-1a.brr" $ff $60 $00 $03 $0b	;@67 alto sax
+	"dkc2-1b.brr" $fe $80 $00 $03 $1c	;@68 contrabrass
+	"dkc2-1d.brr" $de $d1 $00 $03 $02	;@69 piano
+	"dkc2-1c.brr" $fd $2e $00 $0a $01	;@70 piano pseudo-echo
+}
+;*******************************************************************
+;percussion
+"@p35=@35 v255 y10"
+"@p36=@36 v255 y9"
+"@p37=@37 v163 y8"
+"@p38=@38 v163 y8"
+;*******************************************************************
+;(9) softer
+"@m39=@39 $ed $0e $3c"
+"@m41=@41 $ed $0e $3c"
+"@m43=@43 $ed $0e $3c"
+"@m44=@44 $ed $0e $3c"
+"@m46=@46 $ed $0e $3c"
+"@m48=@48 $ed $0e $3c"
+"@m50=@50 $ed $0e $3c"
+"@m53=@53 $ed $0e $3c"
+"@m55=@55 $ed $0e $3c"
+;*******************************************************************
+;psuedo-echo/smooth effect
+"@e39=@39 $ed $28 $65"
+"@e41=@41 $ed $28 $65"
+"@e43=@43 $ed $28 $65"
+"@e44=@44 $ed $28 $65"
+"@e46=@46 $ed $28 $65"
+"@e48=@48 $ed $28 $65"
+"@e50=@50 $ed $28 $65"
+"@e53=@53 $ed $28 $65"
+"@e55=@55 $ed $28 $65"
+"@e58=@58 $ed $28 $65"
+"@e59=@59 $ed $28 $65"
+"@e60=@60 $ed $28 $65"
+"@e61=@61 $ed $28 $65"
+"@e62=@62 $ed $28 $65"
+"@e63=@63 $ed $28 $65"
+"@e64=@64 $ed $28 $65"
+"@e65=@65 $ed $28 $65"
+"@e66=@66 $ed $28 $65"
+;*******************************************************************
+;Channel 1
+
+#0
+t40 w180
+$ef $fd $5d $5d
+$f1 $00 $37 $01
+$f5 $58 $bf $db $e0 $fe $01 $2c $2c
+$f4 $02 / @30 [[ 
+(1)[r8 o4 v208 y8 b16
+v123 y13 b16 
+> v208 y8 c16
+v123 y13 c16
+v82 y7 c16
+< v208 y8 b16
+v123 y13 b16
+v82 y7 b16
+> v208 y8 c16
+v123 y13 c16 <
+v208 y8 g16
+v123 y13 g16
+v82 y7 g16
+v50 y14 g16]3
+(2)[r8 o4 v208 y8 b16
+v123 y13 b16
+> v208 y8 c16
+v123 y13 c16
+v82 y7 c16
+< v208 y8 b16
+v123 y13 b16
+v82 y7 b16
+> v208 y8 c16
+v123 y13 c16
+< v208 y8 g16
+v123 y13 g16
+> v198 y8 g32
+v112 y14 g32
+v198 y8 g32
+v112 y14 g32]
+]]7
+[[
+(14)[$fa $03 $75
+@31 y10 v255 o1 a8
+$fa $03 $00
+@30 o4 v208 y8 b16
+v123 y13 b16 
+> v208 y8 c16
+v123 y13 c16
+v82 y7 c16
+< v208 y8 b16
+v123 y13 b16
+v82 y7 b16
+> v208 y8 c16
+v123 y13 c16 <
+v208 y8 g16
+v123 y13 g16
+v82 y7 g16
+v50 y14 g16]3
+(19)[$fa $03 $75
+@31 y10 v255 o1 a8
+$fa $03 $00
+@30 o4 v208 y8 b16
+v123 y13 b16
+> v208 y8 c16
+v123 y13 c16
+v82 y7 c16
+< v208 y8 b16
+v123 y13 b16
+v82 y7 b16
+> v208 y8 c16
+v123 y13 c16
+< v208 y8 g16
+v123 y13 g16
+> v198 y8 g32
+v112 y14 g32
+v198 y8 g32
+v112 y14 g32]
+]]5
+(1)3(2)
+
+;*******************************************************************
+;Channel 2
+
+#1
+$fa $03 $00
+@32 y12 v85 $f4 $01 
+o1 a=25 
+$ee $70 > d=25 
+$ee $80 f+=25 
+$ee $e0 a=25 
+$ee $a5 > c=25 
+$ee $10 d+=25 
+$ee $2a e+=25 
+$ee $09 g=25 
+$ee $b9 g+=25 
+$ee $4a a+=25 
+$ee $b0 b=25 
+$ee $00 > c+=25 
+$ee $3a d=25 
+$ee $5a d+=25 
+$ee $6a e=25 f=25 
+$ee $55 f+=25 
+$ee $3c g=25 
+$ee $17 g+=25 
+$ee $e7 g+=25 
+$ee $b0 a=25 
+$ee $6d a+=25 
+$ee $26 b=25 
+$ee $d4 b=25 
+$ee $7c > c=25 
+$ee $20 c+=25 
+$ee $c0 c+=25 
+$ee $55 d=25 
+$ee $e7 d=25 
+$ee $75 d+=25 
+$ee $00 e=25 
+$ee $85 e=25 
+$ee $09 f=25 
+$ee $83 f=25 
+$ee $00 f+=25 
+$ee $75 f+=25 
+$ee $ea f+=25 
+$ee $58 g=25 
+$ee $ca g=25 
+$ee $35 g+=25 
+$ee $9d g+=25 
+$ee $04 a=25 
+$ee $67 a=25 
+$ee $ca a=25 
+$ee $2a a+=25 
+$ee $87 a+=25 
+$ee $3d b=25 
+$ee $95 b=25 
+$ee $ec b=25 
+$ee $42 > c=25 
+$ee $95 c=25 
+$ee $e7 c=25 
+$ee $68 c+=25 
+$ee $7f c+=25 
+$ee $d3 c+=25 
+$ee $20 d=25 
+$ee $68 d=25 
+$ee $b4 d=25 
+$ee $fd d=25 
+$ee $43 d+=25 
+$ee $88 d+=25 
+$ee $ce d+=11
+$f4 $01 $ee $00
+[[
+$fa $02 $05 $fa $03 $f9
+(5)[o3 v205 y10
+@39 c16 
+@40 c16 
+@41 c16 
+@42 c16 
+@43 c16 
+@44 c16 
+@45 c16 
+@46 c16 
+@47 c16 
+@48 c16
+@49 c16 
+@50 c16 
+> @51 c16 
+< @52 c16 
+> v167  y10,1,0 @53 c16
+< < v237 @54 c16]
+$fa $02 $0b (5)
+$fa $02 $04 (5)
+(6)[$fa $02 $00 o3
+@39 y10 v205 a16 
+@41 a16 
+@43 a16 
+@45 a16 
+@47 a16 
+@49 a16 
+@53 y10,1,0 a16
+@55 y10,0,1 a16
+y10 @39 g16 
+@41 g16 
+@43 g16 
+@45 g16 
+@47 g16 
+@49 g16
+@53 y10,1,0 g16
+@55 y10,0,1 g16]
+]]4
+$fa $02 $02 (5)
+$fa $02 $04 (5)
+$fa $02 $05 (5)
+$fa $02 $07 (5)
+$fa $02 $09 (5)2
+$fa $02 $00 (5)2
+$fa $02 $09 (5)2
+$fa $02 $00 (5)2
+[[
+$fa $02 $05 (5)
+$fa $02 $0b (5)
+$fa $02 $04 (5)(6)
+]]2
+$fa $02 $02 (5)
+$fa $02 $04 (5)
+$fa $02 $05 (5)
+$fa $02 $07 (5)
+$fa $02 $00 $fa $03 $a8
+@33 v255 y10 $ed $5e $eb 
+o1 d1 e1 f1 g2 g2
+
+;*******************************************************************
+;Channel 3
+
+#2
+$df [r16]65
+(9)[o6
+@m41 y16 v133 c16 c16
+y5 v80 c16
+@m43 y14 v125 c16
+y6 v73 c16
+y14 v125 c16 c16
+@m44 y6 v73 c16
+y12 v121 c16
+y8 v73 c16
+y12 v121 c16
+@m46 y11 v120 c16
+y9 v70 c16
+y11 v120 c16 c16 r16
+@m48 y9 v120 c16 c16
+y11 v70 c16
+y8 v120 c16
+y12 v73 c16
+@m50 y8 v120 c16 c16
+y12 v73 c16
+@m53 y6 v125 c16
+y13 v73 c16
+y6 v125 c16
+@m55 y4 v133 c16
+y15 v80 c16
+y4 v133 c16 c16
+@m53 y5 v80 c16
+y16 v133 c16 c16
+y5 v80 c16
+@m50 y14 v125 c16
+y7 v73 c16
+y14 v125 c16 c16
+y7 v73 c16
+@m48 y12 v120 c16
+y8 v73 c16
+y12 v120 c16
+@m46 y11 v120 c16
+y9 v70 c16
+y11 v120 c16 c16 r16
+@m44 y9 v120 c16 c16
+y11 v70 c16
+@m43 y8 v120 c16
+y12 v73 c16
+y8 v120 c16 c16
+y12 v73 c16
+@m41 y6 v125 c16
+y13 v73 c16
+y6 v125 c16
+y4 v133 c16
+@m39 y15 v80 c16
+y4 v133 c16 c16 r2]
+@56 (7)[o3 r8
+y7 v173 b16
+y12 v100 b16
+>y7 v173 c16
+y12 v100 c16
+y7 v173 g16
+y12 v100 g16
+y8 v80 g16
+y12 v70 g16
+<y13 v103 b16
+y8 v60 b16
+>y13 v103 c16
+y8 v60 c16
+y13 v103 g16
+y8 v60 g16
+y12 v58 g16
+y8 v45 g16
+<y8 v73 b16
+y12 v58 b16
+>y8 v73 c16
+y12 v58 c16
+y8 v73 g16
+y12 v58 g16
+y9 v50 g16
+y8 v45 g16 r4]
+(32)[r4 o4 y7 v173 g16
+y12 v100 g16
+y7 v173 a16
+y12 v100 a16
+y7 v173 e16
+y12 v100 e16]
+y8 v93 
+(8)[@58 o5 c32 < b32 g32
+>@59 c32 < b32 g32
+>@60 c32 < b32 g32
+>@61 c32 < b32 g32
+>@62 c32 < b32 g32
+>@63 c32 < b32 g32
+>@60 c32 < b32 g32
+>@64 c32 < b32 g32
+>@65 c32 < b32 g32
+>c32 < @66 b32 g32
+> c32 < b32 r2]
+@57 (7)
+(21)[o5 y7 v173 c16
+y12 v100 c16
+< y7 v173 b16
+y12 v100 b16
+y7 v173 g16
+y12 v100 g16
+y7 v173 e16
+y12 v100 e16
+y7 v173 a16
+y12 v100 a16]
+y8 v93 (8) r4.
+v193 y11
+(22)[$de $00 $11 $28
+@67 o4 d8 $dd $04 $10 $a8
+d2. < g8 >f8 $dd $00 $0f $ab
+f2 $dd $00 $0f $ab
+f6 $dd $00 $0f $ab
+r=1 f6 e=31
+c4. $dd $00 $0f $a6
+d16 $dd $00 $06 $a8
+d16 c6 r=1 < b6 > c=31
+g2 $dd $00 $10 $ad 
+r8 g4 $dd $00 $0f $ad
+e8 d8] y8 v125
+(23)[@68 g4 $dd $00 $0e $ad e8 d4]
+v193 y11
+(24)[< @67 g8 > f8 $dd $00 $0f $ab
+f2 $dd $00 $0f $ab
+f6 $dd $00 $0f $ab
+r=1 a6
+a=31 $dd $00 $0f $af
+b4 b8 $dd $00 $0f $b0
+b4 g4
+e8 g2 $dd $00 $0f $ad]
+y8 v125 
+(28)[@68 c6 r=1 d6 e=31 f4. $dd $00 $10 $ab]
+v193 y11
+(29)[@67 c8 < b6 r=1 > c6 e=31 g4. $dd $00 $0f $ad]
+y8 v125
+(25)[@68 c8 < a6 b6 r=1 > c=31
+e4 f8 e4 d4 c8 e1 $df]
+[r16]49
+(9) $de $00 $11 $28
+y8 v255 @69 o4 d8 e8 d8 c16 d8.
+y12 v200 e8 d8 c16 d8.
+y8 v165 e8 d8 c16 d8.
+y12 v125 e8 d8 c16 d16
+y8 v255 (26)[d8 e8 g8
+e8 d4. e16 d16 c4 < b8
+> c8 a=120 a4
+e8 d=120 < g4
+> g8 g2 g6 a6 r=1 b=31
+b4 > c8 < b4 g8 e8
+a=120]
+y9 v140 (28)
+v193 y11 (29)
+y9 v140
+(30)[@68 c8 < a6 b6 r=1 > c=31
+e4 f8 e4 d4
+c8 e2 c6 r=1 d6 e=31	
+f4. $dd $00 $10 $ab] 
+v193 y11 (29) 
+y8 v125
+(31)[@68 c8 < a6 b6 r=1 > c=31 e4 f8] 
+y12 v105
+e4 f8 d4
+
+;*******************************************************************
+;Channel 4
+
+#3
+@33 v233 
+o2 a1 ^1 > c1 ^1 < a1 ^1 c1 ^1
+[f1 < b1 > e1 a2 g2]2 [r1]12
+(10)[o4 @p35 c16 > @p37 c16 @p38 c8 @p36 c16 @p37 c16 
+@p38 c16 < @p35 c16 > @p37 c16 < @p35 c16 < b16 > > @p37 c16 
+@p36 c16 @p37 c16 @p38 c8]20
+v180 y9 [r16 @37 c16 @38 c8 @37 c16 < b16 > @38 c8]2 
+v155 *2 v130 *2 v93 *2
+
+;*******************************************************************
+;Channel 5
+
+#4
+@34 v160 y13 $de $00 $11 $2a
+[o5 e1 ^1 g1 ^1]2
+(12)[e1 < g1 > g1 e1]4
+(13)[c1 e1 f1. g2]
+[e1 ^1]4
+(12)2 (13)2
+
+;*******************************************************************
+;Channel 6
+
+#5
+$df [r16]65
+(20)[o5
+@m41 y16 v133 a16 a16
+y5 v80 a16
+@m43 y14 v125 a16
+y6 v73 a16
+y14 v125 a16 a16
+@m44 y6 v73 a16
+y12 v121 a16
+y8 v73 a16
+y12 v121 a16
+@m46 y11 v120 a16
+y9 v70 a16
+y11 v120 a16 a16 r16
+@m48 y9 v120 a16 a16
+y11 v70 a16
+y8 v120 a16
+y12 v73 a16
+@m50 y8 v120 a16 a16
+y12 v73 a16
+@m53 y6 v125 a16
+y13 v73 a16
+y6 v125 a16
+@m55 y4 v133 a16
+y15 v80 a16
+y4 v133 a16 a16
+@m53 y5 v80 a16
+>y16 v133 e16 e16
+y5 v80 e16
+@m50 y14 v125 e16
+y7 v73 e16
+y14 v125 e16 e16
+y7 v73 e16
+@m48 y12 v120 e16
+y8 v73 e16
+y12 v120 e16
+@m46 y11 v120 e16
+y9 v70 e16
+y11 v120 e16 e16 r16
+@m44 y9 v120 e16 e16	
+y11 v70 e16
+@m43 y8 v120 e16
+y12 v73 e16
+y8 v120 e16 e16
+y12 v73 e16
+@m41 y6 v125 e16
+y13 v73 e16
+y6 v125 e16
+y4 v133 e16
+@m39 y15 v80 e16
+y4 v133 e16 e16 r4]
+r4. r96 @70 (7) (32)
+y12 v73
+(27)[o5 @e58 c32 < b32 g32
+> @e59 c32 < b32 g32
+> @e60 c32 < b32 g32
+> @e61 c32 < b32 g32
+> @e62 c32 < b32 g32
+> @e63 c32 < b32 g32
+> @e60 c32 < b32 g32
+> @e64 c32 < b32 g32
+> @e65 c32 < b32 g32
+> c32 < @e66 b32 g32
+> c32 < b32 r2]
+@57 $ed $7b $25
+(7) (21)
+y12 v63 (27) r4.
+y9 v137 (22) 
+y12 v98 (23)
+y9 v137 (24)
+y12 v98 (28)
+y9 v137 (29)
+y12 v98 (25)
+r1 r1 r2. r6 r96
+(20) r8.. r6
+$de $00 $11 $28
+y12 v141 @69 $ed $5d $cf
+o4 d8 e8 d8 c16 d8.
+y9 v100 e8 d8 c16 d8.
+y12 v93 e8 d8 c16 d8.
+y8 v63 e8 d8 c16 d16
+y12 v141 (26) 
+y12 v98 (28) 
+y9 v137 (29) 
+y12 v98 (30) 
+y9 v137 (29) 
+y12 v98 (31) 
+y8 v73 e4 f8 d=22
+
+;*******************************************************************
+;Channel 7
+
+#6
+@34 v160 y7 $de $00 $11 $2a
+[o4 g1 ^1 b1 ^1]2
+(15)[a1 b1 ^1 g1]4
+(16)[f1 g1 a1. b2]
+[g1 ^1 g1 ^1]2
+(15)2 (16)2
+
+;*******************************************************************
+;Channel 8
+
+#7
+@34 v160 y11 $de $00 $11 $2a 
+[o5 c1 ^1 e1 ^1]2
+(17)[o5 c1 d1 ^1 c2 < b2]4
+(18)[o4 a1 > c1 ^1 ^2 d2]
+[o5 c1 ^1 < b1 ^1]2
+(17)2 (18)2
+
+;*******************************************************************
+
+#amk 2

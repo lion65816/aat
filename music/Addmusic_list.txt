@@ -48,4 +48,6 @@ Locals:
 31  FFMQ - Battle 1.txt
 32  Storm Eagle Sampled.txt
 33  Still, the Road is Full of Dangers.txt
+35  Donkey_Kong_Country_2_-_Stickerbush_Symphony.txt
 36  another mansion theme.txt
+38  cog is push.txt

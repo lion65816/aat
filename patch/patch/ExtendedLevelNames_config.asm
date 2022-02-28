@@ -65,8 +65,8 @@ NameData:
  db "The Beginning      "
  db "          of Spring"
  ;Level 011
- db "Everybody seem to  "
- db "hate this level    "
+ db " Warning!  It's a  "
+ db "Red Radish Morning "
  ;Level 012
  db "STAR ROAD          "
  db "                   "
@@ -77,14 +77,14 @@ NameData:
  db "Please, don't make "
  db "blatant edits of it"
  ;Level 015
- db "Use the Cape to    "
- db "Abuse. It's easy!  "
+ db "Demo in            "
+ db " thornbush scrumble"
  ;Level 016
  db "STAR ROAD          "
  db "                   "
  ;Level 017
- db "The third copy of  "
- db "015, with bad BG   "
+ db " matcha ampersand  "
+ db "      avocado      "
  ;Level 018
  db "You can take Yoshi "
  db "there... Weird.    "
