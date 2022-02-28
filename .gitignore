@@ -7,9 +7,11 @@
 monitor
 uberasm/asm/work/*.asm
 music/stats
-music/SPCs
+music/SPCs/*.spc
 music/asm/SNES/SongSampleList.asm
+music/asm/main.bin
 music/temp.asm
+music/temp.bin
 **.lrp
 **/Lunar\ Magic.exe
 **/Lunar\ Magic.chm
