@@ -83,8 +83,8 @@ NameData:
  db "STAR ROAD          "
  db "                   "
  ;Level 017
- db "The third copy of  "
- db "015, with bad BG   "
+ db " matcha ampersand  "
+ db "      avocado      "
  ;Level 018
  db "You can take Yoshi "
  db "there... Weird.    "
