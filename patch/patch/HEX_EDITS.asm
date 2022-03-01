@@ -170,3 +170,5 @@ org ($07F3FE+$1B)|!bank  ; Football
 db $05  ; palette A | originally: db $01
 org ($07F3FE+$7D)|!bank  ; P-Balloon
 db $25  ; palette A | originally: db $21
+org ($07F3FE+$2E)|!bank  ; Spike Top
+db $15  ; palette A | originally: db $19
