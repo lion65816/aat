@@ -47,8 +47,8 @@ NameData:
  db "You're near the    "
  db "Castle! Seriously! "
  ;Level 00B
- db "Underwater Fortress"
- db "Fishbones are there"
+ db "  Siege at Castle  "
+ db "    Wolfenstein    "
  ;Level 00C
  db " What the House?!  "
  db "                   "
