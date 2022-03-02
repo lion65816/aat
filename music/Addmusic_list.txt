@@ -52,3 +52,4 @@ Locals:
 36  another mansion theme.txt
 38  cog is push.txt
 39  mustnotlose.txt
+3A  Stilt Village.txt

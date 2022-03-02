@@ -89,7 +89,7 @@ NameData:
  db "You can take Yoshi "
  db "there... Weird.    "
  ;Level 019
- db "                   "
+ db "  Fishing Grounds  "
  db "                   "
  ;Level 01A
  db "ROM contains beta  "
