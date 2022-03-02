@@ -9,7 +9,7 @@
 ;; Uses first extra bit: NO
 ;; Uses extra bytes: YES, 1
 ;; Uses extra property bytes: NO
-;;
+;; 
 ;; Extra Byte:
 ;;
 ;; Bit 0: Direction.  0 = up/left, 1 = right/down.

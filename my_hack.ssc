@@ -166,3 +166,5 @@
 50 0032 0,0,0
 51 0020 Undefined Sprite
 51 0022 0,0,0
+5A 0020 A Hammer Bro from Super Mario Bros. 3. It walks back and forth and sometimes jumps high between blocks. It frequently throws hammers in Mario's direction.
+5A 0022 0,-16,43B 0,0,43C 8,-16,43D
