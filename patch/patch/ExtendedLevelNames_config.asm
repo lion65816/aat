@@ -74,8 +74,8 @@ NameData:
  db "Special Boo as Boss"
  db "Level              "
  ;Level 014
- db "Please, don't make "
- db "blatant edits of it"
+ db "sttlimimvdkm-lmwiw9"
+ db "                   "
  ;Level 015
  db "Demo in            "
  db " thornbush scrumble"
