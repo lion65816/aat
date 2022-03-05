@@ -215,8 +215,8 @@ NameData:
  db "DO WIGGLER GLITCH  "
  db "(or fix it)        "
  ;Level 11F
- db "I have no idea of  "
- db "what random..?     "
+ db "  A Warm Welcome   "
+ db "                   "
  ;Level 120
  db "Expect HURRY UP    "
  db "sound there        "
