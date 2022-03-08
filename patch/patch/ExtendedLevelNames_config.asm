@@ -128,8 +128,8 @@ NameData:
  db "IGGY WAS THERE     "
  db "                   "
  ;Level 102
- db "Riverside Race     "
- db "(not much of race) "
+ db "Chrystal Caves     "
+ db "                   "
  ;Level 103
  db "James Turner (temp "
  db "name, may keep it) "
