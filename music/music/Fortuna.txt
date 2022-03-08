@@ -1,0 +1,287 @@
+#amk 2
+
+#spc
+{
+    #title   "Fortuna"
+    #game    "Star Fox"
+    #author  "Hajime Hirasawa"
+    #comment "Ported by KevinM"
+}
+
+#path "fortuna"
+
+#samples
+{
+    #default
+    "1a.brr"
+    "1b.brr"
+    "26.brr"
+    "21.brr"
+    "18.brr"
+    "23.brr"
+    "28.brr"
+    "24.brr"
+    "00.brr"
+    "17.brr"
+}
+
+#instruments
+{
+    "1a.brr" $ff $e0 $00 $01 $b0 ; @30 kick
+    "1b.brr" $ff $e0 $00 $03 $90 ; @31 snare
+    "26.brr" $ff $f2 $00 $06 $f0 ; @32 tom
+    "21.brr" $ff $f0 $00 $03 $80 ; @33 bass
+    "18.brr" $ff $e0 $00 $03 $00 ; @34 synth sax
+    "23.brr" $ff $e0 $00 $03 $00 ; @35 synth brass
+    "28.brr" $ff $e0 $00 $01 $00 ; @36 synth flute
+    "24.brr" $ff $f8 $00 $01 $50 ; @37 triangle wave
+    "00.brr" $ff $e0 $00 $03 $40 ; @38 ambient noise
+    "17.brr" $ff $e0 $00 $05 $b0 ; @39 hi-hat
+}
+
+;==================;
+; Volume  /  Tempo ;
+;==================;
+   w170       t22
+
+; Original volumes: w230
+
+;==================;
+;       Echo       ;
+;==================;
+$ef $3f $42 $42
+$f1 $02 $32 $01
+$f5 $34 $33 $00 $d9 $e5 $01 $fc $eb
+
+;==================;
+;    Channel #0    ;
+;==================;
+#0
+v249
+
+(00)[
+@30 y10 q7f o4 c16. c32
+@31 a16
+@30 c8 c16
+@31 a8
+@30 c16. c32
+@31 a16
+@30 c16 q7b c16. q79 c32
+@31 q7f a8
+]
+(03)[
+@30 q7f o4 c16. c32
+@31 a16
+@30 c8 c16
+@31 a8
+]
+@30 o4 c16. c32
+@31 a24 a48
+@30 c16 q7b c=20
+@31 a48 q7f a24 a48
+@32 y3 << c24 y17 < a48
+(00)
+(03)
+@30 o4 c48..
+@31 q77 a48 q7f a=13
+@31 a24 q79 a48
+@30 q7f c16
+@31 y0 q7d << c8 >>
+@31 y10 q7f a48 q77 a48 a48 q7f a16 
+(00)
+(03)
+(02)[
+@30 o4 c16. c32
+@31 a16
+@30 c16 q7b c=20
+@31 a48 q7f a24 a48
+@32 y3 << c24 y17 < a48
+]
+(00)
+(01)[
+@30 q7f o4 c16. c32
+@31 a16
+@30 c8 c16
+@31 q79 a16 q7f a16
+@30 o4 c48..
+@31 q77 a48 q7f a=13 a24 q79 a48
+@30 q7f c16
+@31 [[q7f a48 q77 a48 a48]]2
+] q7f o1 a8
+(00)
+(03)
+(02)
+(00)
+(01) q7f a24 a48
+@32 o2 a24 e48 
+(01) q7f o1 a8
+
+;==================;
+;    Channel #1    ;
+;==================;
+#1
+@33 v249 y10
+(10)[
+q7b o3 f24 d+48 q2b f16 r16
+q7b c16 d+24 c48 < a+24 g+48 r8 f24 > f24 < f24 q2b f16 f16
+]
+q7b o2 f16. f32 r8
+
+(10)
+(12)[
+q5f o2 f24 q7f f48 q5f e24 q7f e48 q5f d+24 q7f d+48 q5f d24 q7f d48
+]
+
+(10)
+q7b o2 f16. f32 r8
+
+(11)[
+q7f o3 f24 d+48 q2f f16 r16
+q7f c16 d+24 c48 < a+24 g+48 r8 f24 > f24 < f24 q2f f16 f16
+]
+q7f o2 f8 r8
+
+[[ (11) o2 q7f f16. f32 r8 ]]3
+
+(11)
+(12)
+
+[[ (11) o2 q7f f16. f32 r8 ]]3
+
+(11)
+(12)
+
+(11) q7f o2 f16. f32
+
+@31 o1 a8 
+
+;==================;
+;    Channel #2    ;
+;==================;
+#2
+$eb$00$00$00 $de$0c$14$28 y11
+
+(20)[@34 v150 o3
+q7f r24 f48 q7b > c24
+q7f < f48 q2b > c16 d16 d16 d+16 q7b d+24
+q7f < f48 q7b > d24 c48 r24
+q7f < f48 q7b > c24
+q7f < f48 q2b > c16 c16 q7b c16. $dd$02$03$a3 q6b c32 r16
+@35 v150 q5f > f24 f48
+
+@34 v150 o3
+q7f r24 f48 q7b > c24
+q7f < f48 q2b > c16 d16 d16 d+16 q7b d+24
+q7f < f48] q7b o4 f24 g48 r24
+q7f < f48 q6b > g24
+q7f < f48 q6b > g24
+q7f < f48 q6b > f24
+q7f < f48 q6b > d+24
+q7f < f48 q6b > f24 q7b d48 r24 q7f < a+48 >
+@35 v150 q5f > f24 f48
+
+(20) q7b o4 d24 c48 r24
+q7f < f48 q7b > c24
+q7f < f48 q2b > c16 c16
+
+@31 v250 y20 q7d << c+8 >>
+
+(21)[@36 v170 y10 q7f c24 q6f f48 q7f f24 > c48 @36 v150 q7f < b4. g8 a+4 g+8 g8]
+(22)[@36 v150 $eb$12$06$08 q7f g+8 y3 q79 g+8 y17 q77 g+8 y3 q75 g+8 y17 q73 g+8 y3 q72 g+8 q71 g+8 $eb$00$00$00]
+(21)
+(23)[@36 v150 $eb$12$06$08 q7f > c+8 y3 q79 c+8 y17 q77 c+8 y3 q75 c+8 y10] q7f o5 c8 y17 q79 c8 y3 q77 c8 < $eb$00$00$00
+(21)
+(22)
+(21)
+(23) q7f o4 b8 y3 q79 b8 y10 q7f > c8 y17 q79 c8
+
+@36 v150 y10 q7f $eb$18$a8$f4 f1
+
+;==================;
+;    Channel #3    ;
+;==================;
+#3
+$eb$00$00$00 $de$0c$14$28 y9
+
+[@34 v130 o3 q7f r16 g+24 r48 q2f g+16 a+16 a+16 > c16
+q7f c24 r48 < a+24 g+48 r24 r48 g+24 r48 q2f g+16 g+16
+q7f g+16. $dd$02$03$9f q6f g+32 r16
+@35 v150 q5f > f24 f48
+
+@34 v130 o3 q7f r16 g+24 r48 q2f g+16 a+16 a+16 > c16
+q7f c24 r48] q7f o4 d24 d+48 r24 r48 q6b d+24 r48 d+24 r48 d24 r48
+q6f c24 r48 q6b d24
+q7b < a+48 r24 q7f f48
+@35 v150 q5f > f24 f48 
+
+* q7f o3 a+24 g+48 r24 r48 g+24 r48 q2f g+16 g+16 r8
+
+@36 v140 y8 q7f r=13 > c24 f64 
+
+[@36 v120 o4 q7f r=13 b4. g8 a+4 g+8 g=11 
+
+@36 v120 $eb$12$06$08
+r=17 q7f g+8 y3 q79 g+8 y17 q77 g+8 y3 q75 g+8 y17 q73 g+8 y3 q72 g+8 q71 g+8 v130 y8 q7f c48..
+$eb$00$00$00
+
+@36 v120 q7f r=13 b4. g8 a+4 g+8 g=11 
+
+@36 v120 $eb$12$06$08
+r=17 q7f > c+8 y3 q79 c+8 y17 q77 c+8 y3 q75 c+8 y10] q7f o5 c8 y17 q79 c8 y3 q77 c8 v130 y8 q7f c48.. <
+$eb$00$00$00
+
+* q7f o4 b8 y3 q79 b8 y10 q7f > c8 y17 q79 c48..
+
+@36 v100 y12 q7f $eb$18$a8$f4 r=13 f2^=83
+
+;==================;
+;    Channel #4    ;
+;==================;
+#4
+(40)[@37 v200 q7f o2
+y2 g24 y18 e48 y10 > c24 y2 < a48 y10 q7d > g8 g8 y18 q7f < a24 y2 > c48 y10 < e24 y18 g48 y10 q7d o3 g8 g8
+@38 v30 $e8$18$dc] (41)[y0 $dc$30$14 q7f o3 c4 $dd$18$18$95]
+
+(40) y20 $dc$30$00 q7f o3 c4 $dd$18$18$95
+
+[[ (40) (41) ]]2
+
+y11
+(42)[@34 v120 o3
+q7f r24 f48 q7b > c24
+q7f < f48 q2b > c16 d16 d16 d+16 q7b d+24
+q7f < f48 q7b > d24 c48 r24
+q7f < f48 q7b > c24
+q7f < f48 q2b > c16 c16
+q7b c16. $dd$02$03$a3 q6b c32 r16
+@35 v150 q5f > f24 f48]3
+
+(43)[@34 v110 o3
+q7f r24 f48 q7b > f24
+q7f < f48 q2b > f16 e16 e16 d+16 q7b d+24
+q7f < f48] q7b o4 d24 c+48 r24
+q7f < f48 q7b > c24
+q7f < f48 q2b > c16 c16
+q7b c16. $dd$02$03$a3 (44)[q6b o4 c32 r16
+@35 v150 q5f > f24 f48]
+
+(42)3 
+
+(43) q7b o4 d24 c48 r24
+q7f < f48 q7b b24
+q7f f48 q2b b16 b16
+q7b b16. $dd$02$03$a3 (44)
+
+r2...
+
+@35 v150 q5f o5 f24 f48
+
+;==================;
+;    Channel #5    ;
+;==================;
+#5
+@39 y10 o5
+v120 [ [[q0d c24 q09 c48]]4 c24 c48 [[q0d c24 q09 c48]]3 ]8
+v150 *17
+[[q0d c24 q09 c48]]4 c24 c48
+[[q0d c24 q09 c48]]2 q0d c48 c48 c48 

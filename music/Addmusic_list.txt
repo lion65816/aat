@@ -57,3 +57,4 @@ Locals:
 3D  Return Of The Gohei.txt
 3E  remixhills.txt
 41  DejaVu.txt
+42  Fortuna.txt
