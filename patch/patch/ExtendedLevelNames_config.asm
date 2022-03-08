@@ -152,8 +152,8 @@ NameData:
  db "Rare vertical      "
  db "design             "
  ;Level 10A
- db "Lavaside Race      "
- db "(not much of race) "
+ db "Lucifer's Lava Lamp"
+ db "                   "
  ;Level 10B
  db "Is it done yet?    "
  db "                   "

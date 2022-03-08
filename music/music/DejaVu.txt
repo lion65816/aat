@@ -1,0 +1,343 @@
+#amk 2
+;************************
+
+; SPC Generator Info
+#SPC
+{
+    #author  "Misaki Okibe, Hidehito Aoki"
+    #title   "Deja Vu"
+    #game    "Majin Tensei 2: Spiral Nemesis"
+    #comment "Ported by Ahrion"
+}
+
+#path "DejaVu"
+
+#samples
+{
+	#default
+	"Bass.brr"
+	"Choir.brr"
+	"Cymbal.brr"
+	"Kick.brr"
+	"Piano.brr"
+	"Snare.brr"
+	"Synth.brr"
+	"Wood.brr"
+}
+
+#instruments
+{
+	"Bass.brr" 	$FF $F4 $BF $06 $14 ; @30
+	"Choir.brr"	$A2 $E7 $00 $04 $0D ; @31
+	"Cymbal.brr"	$CF $BC $00 $02 $69 ; @32
+	"Kick.brr"	$FF $F8 $00 $02 $69 ; @33
+	"Piano.brr"	$FF $F1 $00 $03 $78 ; @34
+	"Snare.brr"	$FF $E0 $00 $09 $A3 ; @35
+	"Synth.brr"	$FF $FC $00 $09 $1A ; @36
+	"Wood.brr"	$FF $E0 $00 $04 $0D ; @37
+}
+
+w210
+t51
+
+"Bass1 = y8 q78 v246 $FA $03 $F8"
+"Bass2 = y10 q7F v249 $FA $03 $00"
+
+"Choir = v129"
+
+"Wood1 = v129"
+"Wood2 = v87"
+"Wood3 = v75"
+"Wood4 = v61"
+
+"Kick = y10 v255"
+"Crash1 = y11 v150"
+"Crash2 = y0 v51"
+
+"Snare1 = v87"
+"Snare2 = v61"
+"Snare3 = v186"
+"Snare4 = v110"
+"Snare5 = v129"
+"Snare6 = v114"
+"Snare7 = v160"
+"Snare8 = v172"
+
+"Snare21 = y14 v73"
+"Snare22 = v51"
+"Snare23 = q77 y11 v236 $FA $03 $8F"
+"Snare24 = q7F y12 v98 $FA $03 $00"
+"Snare25 = y11 v116 $FA $03 $10"
+"Snare26 = y12 v105 $FA $03 $00"
+
+"Synth = v143"
+
+"Piano1 = v129"
+"Piano2 = v146"
+"Piano3 = v160"
+"Piano4 = v110"
+
+(!100)[$F4 $09]
+(!101)[$ED $80 $BF]
+
+$F4 $02
+
+
+
+; +---------------------+
+; |     Channel #0	|
+; |     Bass		|
+; |     Snare		|
+; +---------------------+
+
+#0
+o5
+[[r2]]8 r8
+
+(11)[@35 r16 Snare21 f+16 Snare22 f+8 Snare23 f+8. Snare24 f+16 Snare25 r8. f+16 Snare26 r8 f+8]3
+r16 Snare21 f+16 Snare22 f+8 Snare23 f+8. Snare24 f+16 r16 Snare25 f+8. Snare23 f+8. Snare24 f+16
+(11)3
+
+r2..
+
+<
+
+/
+(!100,-1)
+(!101,3)
+
+@30
+(13)[Bass1 b32. r64 > y12 b32. r64 << Bass2 b8. > d8 r16 e8 r16 e8 r16 d8]15
+r1
+(13)16 
+
+
+
+; +---------------------+
+; |     Channel #1	|
+; |     Cymbal		|
+; |     Kick		|
+; +---------------------+
+
+#1
+o6
+[[r2]]16
+@32
+(!100,-1)
+(!101,3)
+[[Crash1 r8 a8]]12
+(!101,0)
+r1 <
+
+/
+
+
+
+[[
+(21)[@33 Kick a8 > @32 Crash1 c+16 Crash2 c+64 r32. <]7
+(22)[@33 Kick a8 > @32 Crash1 $ED $7F $F6 c+=2 c+=22 <]
+]]7
+
+(21)4
+r1
+
+[[
+(21)7
+(22)
+]]7
+
+(21)4
+r1
+
+
+
+; +---------------------+
+; |     Channel #2	|
+; |     Snare		|
+; |     Piano		|
+; +---------------------+
+
+#2
+o5
+[[r2]]8
+(!100,-1)
+(!101,3)
+
+(31)[@35 r16 Snare1 f+16 Snare2 f+8 Snare3 f+8. Snare4 f+16 Snare5 r8. f+16 Snare6 r8 f+8]3
+(32)[r16 Snare1 f+16 Snare2 f+8 Snare3 f+8. Snare4 f+16 r16 Snare5 f+8. Snare3 f+8. Snare4 f+16]
+(31)3
+
+r1
+
+/
+
+$FA $02 $69
+(!101,3)
+(31)3
+(32)
+(31)3
+r16 Snare5 f+16 Snare7 f+16 r16 Snare5 f+16 Snare7 f+8 Snare1 f+32 Snare7 f+32 Snare3 f+16. Snare1 f+32 Snare3 f+16. Snare1 f+32 Snare5 f+16 Snare7 f+8 Snare3 f+16
+
+(31)3
+(32)
+(31)3
+r8 Snare5 f+8 Snare7 f+16 Snare3 f+8 Snare5 f+32 Snare7 f+32 Snare3 f+16 f+8 f+8 Snare7 f+16 Snare3 f+8
+
+$FA $02 $00
+(!100,3)
+@34
+r16 Piano1 c8 < Piano3 a+8 Piano1 a1^16^32^96 Piano3 a4^8^16^64^192 a8 Piano4 f1 g2.. >
+Piano1 c1^1^8 < a+8 Piano3 a+8. Piano4 f1^2^16 >
+Piano2 f1 f8 < Piano4 a2^4^16 > Piano1 f8. Piano4 < a+2... > Piano2 d2 f4^16 a+4
+Piano3 a+=16 g2^4^=8 f=16 e2^=8 < Piano2 a+4. Piano4 a+1^1^8 
+
+
+
+; +---------------------+
+; |     Channel #3	|
+; |     Choir		|
+; +---------------------+
+
+#3
+o4
+@31 $ED $22 $E8 Choir a1^1^1^2^8
+@31
+a1^1^1^1
+a1^1^1^1
+a4^8
+
+/
+
+^1^1^1^2^8
+[[a1^1^1^1]]8
+
+
+
+; +---------------------+
+; |     Channel #4	|
+; |     Choir		|
+; +---------------------+
+
+#4
+o5
+@31 Choir
+r1..
+d1^1^1^1
+d1^1^1^1
+d1^1^4
+
+/
+
+^1^2^4
+
+[[d1^1^1^1]]8
+
+
+
+
+; +---------------------+
+; |     Channel #5	|
+; |     Synth		|
+; |     Piano		|
+; +---------------------+
+
+#5
+o3
+
+[[r2]]16
+y8
+[[
+(61)[@36 Synth d16 a16 > d16 a16 f16 a16 < d16 > d16 > d16 < a16 f16 a16 f16 < d16 a16 f16]
+(62)[d16 d16 > d16 < d16 > f16 a16 d16 f16 a16 < d16 > d16 < d16 > f16 d16 a16 < a16]
+]]2
+
+/
+y8
+[[
+(61)
+(62)
+]]7
+(61)
+
+r1 >>
+@34 y10
+Piano1 d8 Piano2 d8 c1^16 r64^192 < g8^32^96 a+4.. Piano1 g2... e2^8 a+2
+Piano2 a1^1^16  a8 g16 Piano1 a1^4^8 > g4.
+e2... e2^16 g4^8^32^96 e2^4^16^64^192 c2 Piano3 e4. a4 > c8^32^96 <
+a16^64^192 a2^4^32^96 g16^64^192 Piano2 f2^8^16 < Piano1 a4^16 > Piano4 g1 r1 
+
+
+
+; +---------------------+
+; |     Channel #6	|
+; |     Synth		|
+; |     Snare		|
+; +---------------------+
+
+#6
+o3
+
+[[r2]]16 r8
+y12
+$EE $05
+(61)
+(62)
+(61)
+d16 d16 > d16 < d16 > f16 a16 d16 f16 a16 < d16 > d16 < d16 > f16 d16
+
+/
+(!100,3)
+y12
+$EE $05
+$FA $02 $00
+@36
+a16 < a16
+
+[[
+(61)
+(62)
+]]7
+(61)
+
+(!100,-1)
+(!101,3)
+
+r2.. >>
+y10
+$EE $00
+$FA $02 $69
+(31)3
+(32)
+(31)3
+r16 Snare5 f+16 Snare7 f+8 Snare5 f+16 Snare7 f+8 Snare1 f+32 Snare7 f+32 Snare3 f+16. Snare1 f+32 Snare3 f+16. Snare1 f+32 Snare5 f+16 Snare7 f+8 Snare3 f+16
+
+(31)3
+(32)
+(31)3
+
+Snare7 f+8 Snare5 f+16 f+8 Snare3 f+8 Snare5 f+16 Snare3 f+16 Snare5 f+16 Snare1 f+16 Snare8 f+4^16
+
+
+; +---------------------+
+; |     Channel #7	|
+; |     Wood		|
+; +---------------------+
+
+#7
+o5
+
+[[r2]]24
+
+/
+
+[r2]16
+r8
+
+@37
+(81)[Wood1 f+16 Wood2 f+16 Wood3 f+16 Wood4 f+16]28
+
+[[r2]]18
+
+(81)28
+
+r2.. 

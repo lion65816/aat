@@ -1,19 +1,19 @@
-4000: ~
-4001: ~
-4002: ~
-4003: ~
-4004: ~
-4005: ~
-4006: ~
-4007: ~
-4008: ~
-4009: ~
-400A: ~
-400B: ~
-400C: ~
-400D: ~
-400E: ~
-400F: ~
+4000: 01FF { 0FB 3 -yp  04A 3 -yp  0FB 3 -yp  04B 3 -yp }
+4001: 01FF { 048 3 x-p  049 3 x-p  04A 3 x-p  0FB 3 x-p }
+4002: 01FF { 049 3 x-p  049 3 x-p  0FB 3 x-p  0FB 3 x-p }
+4003: 01FF { 049 3 xyp  048 3 xyp  0FB 3 xyp  04A 3 xyp }
+4004: 01FF { 0FB 3 -yp  04A 3 -yp  049 3 -yp  048 3 -yp }
+4005: 01FF { 04C 3 -yp  0F8 3 -yp  04D 3 -yp  0F8 3 -yp }
+4006: 01FF { 04E 3 -yp  04C 3 -yp  04F 3 -yp  04D 3 -yp }
+4007: 01FF { 043 3 xyp  041 3 xyp  042 3 xyp  040 3 xyp }
+4008: 01FF { 041 3 xyp  0F8 3 -yp  040 3 xyp  0F8 3 -yp }
+4009: 01FF { 044 3 -yp  0F8 3 -yp  045 3 -yp  044 3 -yp }
+400A: 01FF { 047 3 xyp  046 3 xyp  046 3 xyp  0F8 3 -yp }
+400B: 01FF { 0FB 3 -yp  04E 3 -yp  0FB 3 -yp  04F 3 -yp }
+400C: 01FF { 0FB 3 -yp  043 3 xyp  0FB 3 -yp  042 3 xyp }
+400D: 01FF { 0FB 3 -yp  045 3 -yp  0FB 3 -yp  0FB 3 -yp }
+400E: 01FF { 0FB 3 -yp  0FB 3 -yp  0FB 3 -yp  047 3 xyp }
+400F: 01FF { 0FB 3 --p  0FB 3 --p  049 3 --p  049 3 --p }
 4010: ~
 4011: ~
 4012: ~
