@@ -143,8 +143,8 @@ NameData:
  db "KIRBY'S ISLAND 2   "
  db "                   "
  ;Level 107
- db "Ghost House        "
- db "                   "
+ db "This Cave is       "
+ db "no Ghost House!    "
  ;Level 108
  db "STAR ROAD          "
  db "                   "
