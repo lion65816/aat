@@ -140,7 +140,7 @@ NameData:
  db "YOSHI'S ISLAND 1   "
  db "                   "
  ;Level 106
- db "KIRBY'S ISLAND 2   "
+ db "  Horse Adventure  "
  db "                   "
  ;Level 107
  db "This Cave is       "

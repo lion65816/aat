@@ -1,0 +1,270 @@
+#amk 2
+
+#samples
+{
+#default
+}
+
+#SPC
+{
+#title "Rusty Ruin Zone Act 2"
+#game "Sonic 3D Blast (Genesis/MD)"
+#author "Tatsuyuki Maeda"
+#comment "on tourne et on tourne"
+}
+
+#instruments
+{
+@4 $CD $72 $00 $03 $00		;@30
+@13 $AC $E8 $00 $06 $00		;@31
+@4 $AF $E7 $00 $03 $00		;@32
+@21 $EF $E0 $00 $04 $00		;@33
+n1E $AE $74 $00 $00 $00		;@34
+@10 $EF $E4 $00 $02 $00		;@35
+@29 $EE $C5	$00 $03 $00		;@36
+@23 $CE $E0 $00 $04 $00		;@37
+@5 $ED $F2 $00 $07 $00		;@38
+@0 $EF $E7 $00 $06 $00		;@39
+@0 $FC $E9 $00 $06 $00		;@40
+@5 $ED $E6 $00 $07 $00		;@41
+}
+
+"M=@33"
+"S=@36"
+"Cym=@34"
+"Tom=@35 $EC $00 $04 $F0"
+"End=$EC $00 $00 $00"
+"K=@37"
+
+
+
+#0 $F4 $02 /
+
+$EF $4F $32 $C8
+$F1 $06 $D0 $01
+
+w150 t46 y8
+@30 v180 o4 l24 p8,28
+
+[[(0)[c12c<a+12>c r12c<a+12>c r12c<ga+>c] d+12d+d12<a+	;2
+(0) >g12g6 ]]3	;3
+
+(0) d+12d+d12<a+
+>c12c<a+12>c r12c<a+12>c  gfg fd+f d+dd+ dc<a+	;9
+
+@39 v150 y10 o4 p48,16,32
+g1^1g1^1g1^1a+1^1	;16
+g1^1a+1^1a1^1g1^1	;25
+g1^1a+1^1	;29
+
+l24 @40 v160
+[[grggr12 grfr12g r12gfr12gra+r12g	;20
+r12gfr12 gra+r12f r2]]2		;31-33
+
+[[(1)[g+12g+r12g+ r12g+r12g+ g+2 q77 ^1 q7f] 
+$FA $02 $FE (1) $FA $02 $00]]2
+
+r1	;42
+(4)[r2 gcg>c<g>c<gcgc8]2
+r1^1^1
+(4)2 (5)[r1	;50
+
+f4d4<a+4g4	;51
+c2g2 c4g4>d+4]a+4	;53
+
+
+#1
+@30 v180 o3 y12 p8,28
+[[(100)[g12gf12g r12gf12g r12gd+fg] a+12a+ g12g	;2
+(100) a+12>d6< ]]3
+
+(100) a+12a+ g12g
+g12gf12g r12gf12g> d+dd+ dcd c<a+>c< a+gf	;9
+
+@39 v150 y10 o4 p48,16,32
+c1^1c1^1c1^1d+1^1	;16
+c1^1d+1^1f1^1d+1^1	;25
+c1^1d+1^1	;29
+
+l24 @40 v160
+[[d+rd+d+r12 d+rdr12d+ r12d+dr12 d+rgr12d+	;30
+r12d+dr12 d+rgr12d r2]]2		;31-33
+
+[[(101)[c+12c+r12c+ r12c+r12c+ c2 q77 ^1 q7f] $FA $02 $FE (101) $FA $02 $00]]2
+
+y6 @41 v170 o2 p64,12,28
+
+g1^1>	;43
+g2.g12gr12g	;44	
+(106)[r12gg2^8 g12gr12g]	;45
+r12d+d+2^8d+12d+r12d+	;46
+r12dd4.d4<g4	;47
+>g2. g12gg12g	;48
+(106)2	;49-50
+r12a+a+4.>d2c1<g4g4g4g4	;53
+
+
+#2 @31 v200 o4 p12,32 y10
+
+c1>c4<g4 a+8.d+8.<a+8>	;3
+c1>c4<g4 a+8.d+8.>d+8<	;5
+c1c4g4>c8.d+8.g8		;7
+g2f2d+2< l24 (200)[g fd+f d+dd+ dc<a+ga+]	;9
+
+l8
+>c1 r1^1^1	;13
+f2.gc		;14
+d+2d+dd+a+	;15
+a2g1r2		;17
+g1c2c4gd+	;19
+a+2>c2<		;20
+a1g2c2		;22
+d+4d4<a+4aa+>	;23
+c2g1r2			;25
+d+1d+dd+ga+4af	;27
+g4f2a+8.a1^16	;29
+a1 >>q7a c4<g4a+8.a8.c	;31
+d+1 r1 q7f<<	;33
+
+g+2>c2<d+1f+2<a+2>	;36
+c+1g+2d+2g+2>d+2	;39
+f+2<f+1.	;41
+>c1<c1>c2<g2>	;44
+g1d+2a+2g1c2<g2>	;48
+g2f2d+1f2d2	;51
+g1.>d+4d4<	;53
+
+
+
+
+#3 v200 p12,6,20 y10 o2 @32 ;$EC $02 $02 $FC 
+c1.. c8d8	;3
+d+1^1		;5
+f1f2.f8f+8	;7
+g1g2 l24 $FA $02 $E8 (200)
+
+$FA $02 $00
+
+(300)[c12c<g8a+8>c12c r2	r12cr8c8r8< a+r12a+12r]a+8g12a+	;11
+(300)						 grg6		;13
+
+[[(300)a+8g12a+]]10	;15-33
+
+(301)[g+12>d+g+12d+< g+12g+r12g+4^12 r6 g+]	;34
+>g+4 r8g+d+g+> c+8c8< g+8d+12g+		;35
+$FA $02 $FE (301)	;36
+(302)[$FA $02 $00 f+r<f+r12f+ f+8f12f+ r12f+f+>c+f+ b12a+b12a+]	;37
+
+
+(301)	;38
+g+4 r8f+d+f+> c+cc+g+d+<a+ f+ff+da+d+	;39
+$FA $02 $FE (301)	;40
+(302)	;41
+
+o1 v250 [[c12ccr12 c8d12d+ r12c8cc c12dd+12]]11	;42
+c12ccr12 c8d12d+ g8r8 g4
+
+
+#4
+y10 $DF
+r1^1
+l24
+(400)[K o4 v160 c8c12c]24
+
+$F4 $03
+@38 y14 l16
+[[
+(401)[v160 o3 g8>g8<g>f8<g> d+8<g>d8<g>d+r]	;10
+(402)[<g24r12>c12d24 d+12g24r12 <g24>c12d24 d+12g24r12 a+6]
+(401)
+(403)[c12<g24>g12f24 d+12d24r12d+24 f12d+24f24r12 g12a+24g24r12]	;13
+]]6
+
+l24
+(405)[r1 
+r4> c<g+d+g+d+c d+c<g+>c<g+d+< g+4	;35
+r1
+>>f+c+<a+f+a+>c+f+<a+d+c+f+a+ f+c+<a+f+4.]2	;37
+
+
+@41 v170 p64,12,28
+
+>c1^1	;43
+>c2.c12cr12c	;44
+<r12a+a+2^8 a+12a+r12a+	;45
+r12g+g+2^8g+12g+r12g+	;46
+r12gg4. g8f8d+8d8	;47
+>c2.c12cc12c	;48
+r12dd2^8d12dr12d	;49
+r12d+d+2^8d+12d+r12d+	;50
+r12ff4. a+2	;51
+g1 c4c4d+4d4	;53
+
+
+#5 o4 y10 l24
+
+v140 Cymc1.. v255 Mc8c8	;3
+v140 Cymc1.. v200 Tom bge ged End	;5
+v140 Cymc1.. v255 Mc8c8	;7
+v140 Cymc1^12 v255 Sg6c4 c8g8 v230 Tom cccccc End	;9
+
+v255 (500)[Mc4Sc4 Mc8c8 Sc4]	;10
+(501)[Mc6^24c Sc6^24 Mcc8c8Sc4]	;11
+(500)						;12
+Mc4 Sc6^24Mc c8c8 Sc8ccc	;13
+[[(501)						;14
+(502)[Mc6^24c Sc4 Mc8c8 Sc8Mc8] ]]7	;15-27
+
+v140 Cymc6^24 v255 Mc Sc6^24Mc c8c8 Sc4	;28
+
+Mc6^24c Sc4 Mcccc8 Sc8ccc			;29
+
+[[ (501)(502) ]]2	;33
+
+v140 Cymc8 v255 Mc12c8 Sc8 Mc c2	;34
+
+c8c12c8c8c c4c4	;35
+c8c12c8Sc8Mc c6^24cSc4	;36
+Mc12Sc6c4 Mc12cSc8Mc12cSc8	;37
+
+v140 Cymc4 v255 Sc4 Mc8c8 Sc4	;38
+(501)(500)	;40
+Mc4 Sc6^24Mc c8c8 Sc8ccc	;41
+
+(503)[Mc4 Sc6^24Mc8cc8 Sc4]		;42
+Mc4 Sc6^24Mc8cc8 Sc8 v200 Tom bge End	;43
+v255 (503)8	;51
+
+v140 Cymc4 v255 Sc6^24 Mc8cc8 Sc8Mc12c	;52
+c4c4 [[Sc]]12	;53
+
+
+
+#6 
+[[r2]]16
+
+@38 y6 $DF
+$FA $02 $F4 [[ (401)(402)(401)(403) ]]6
+
+$FA $02 $00
+r8
+(405)2
+
+;switch to sq wave echo, put @5 on #1
+
+@39 v170 y10 o4 p48,16,32
+r1	;42
+(4)2
+r1^1^1
+(4)2 (5)a+8
+
+
+
+#7
+
+[[r2]]16
+(400)10 o4
+c8c8<g8>c8	;
+(400)164
+
+
