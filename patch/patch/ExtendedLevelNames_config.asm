@@ -98,7 +98,7 @@ NameData:
  db "  THE SANBO WOODS  "
  db "                   "
  ;Level 01C
- db "There too...       "
+ db "   DUCKMOUNTAIN    "
  db "                   "
  ;Level 01D
  db "Feel free to try   "

@@ -1,0 +1,358 @@
+#amk 2
+
+#spc
+{
+	#title "Busy Flare"
+	#game "Ristar The Shooting Star"
+	#author "Tomoko Sasaki"
+	#comment "Ported by Kitikuchan"
+}
+#samples
+{
+#default
+}
+
+#instruments
+{
+@6  $AF $C7 $B8 $03 $00 ;30
+@17 $8F $66 $7F $05 $00 ;31
+@4  $FF $F3 $B8 $03 $00 ;32
+@4  $9F $AA $B8 $03 $00 ;33
+@0  $FF $E0 $B8 $06 $00 ;34
+@9  $8F $F4 $B8 $05 $5F ;35
+@1  $9F $60 $00 $06 $00 ;36
+@1  $9F $60 $00 $06 $00 ;37
+@5  $BF $38 $B8 $07 $00 ;38
+"default/13 SMW Thunder.brr" $00 $00 $DF $11 $00 ;39
+@2  $FF $F8 $8C $03 $04 ;40
+n1e $9F $70 $00 $00 $00 ;41
+@8  $8E $D2 $B8 $1E $00 ;42
+@0  $9C $A0 $B8 $06 $00 ;43
+@3  $9F $48 $B8 $03 $00 ;44
+}
+
+$EF$FF$20$20
+$F1$05$40$01
+
+w130 t62
+
+"!VibratoA	= $DE$07$10$30"
+"!VibratoB	= $DE$07$10$40"
+"!VibratoC	= $DE$07$09$F2"
+"!VibratoD	= $DE$07$10$20"
+"!VibratoE	= $DE$10$FF$F0"
+"!VibratoF	= $DE$07$15$A0"
+"!VibratoG	= $DE$07$10$90"
+"!VibratoH	= $DE$07$10$90"
+"!VibratoI	= $DE$15$15$80"
+"!VibratoJ	= $DE$15$15$A0"
+"!VibratoH	= $DE$07$10$90"
+"!VibratoI	= $DE$15$15$80"
+"!VibratoJ	= $DE$15$15$A0"
+
+
+"!GainA	= $FA$03$60"
+"!GainB	= $FA$03$90"
+"!GainC	= $FA$03$FF"
+"!GainD	= $FA$03$E0"
+
+"!PitchA	= $DD$00$ED$21"
+"!PitchB	= $DD$00$ED$17"
+"!PitchC	= $DD$00$80$20"
+"!PitchD	= $DD$00$0A$10"
+"!PitchE	= $DD$00$ED$1D"
+"!PitchF	= $DD$00$ED$13"
+"!PitchG	= $DD$00$0D$0D"
+"!PitchH	= $DD$00$0D$35"
+"!PitchI	= $DD$00$0D$32"
+"!PitchJ	= $DD$00$0D$2B"
+"!PitchK	= $DD$00$0D$2D"
+"!PitchL	= $DD$00$0D$30"
+"!PitchM	= $DD$00$0D$28"
+"!PitchN	= $DD$00$0D$24"
+
+"!FadeA 	= $E8$20$D0"
+"!FadeB 	= $E8$20$60"
+"!FadeC 	= $E8$10$30"
+"!FadeD 	= $E8$10$10" 
+
+
+
+;*******************************************************************
+#0
+$F4$02
+!GainA
+@30 v160 o5 y15 !VibratoA
+[d4 !PitchH ^4^4^8 e16.r32]3 q5F <b4 !PitchI ^4^2  q7F
+/
+@31 o3 l4 v240 y10  !VibratoB
+g.a.fg.>c.<ba.g.a $F4$01 b4 !VibratoC [a+4]3 $F4$01 !VibratoB
+g.a.fg.>c.<ba.g.f $F4$01 g4 !VibratoC [f+4]2 f+8... $F4$01 r64 !VibratoB
+
+@32 o5 l8 v210
+(0)[g4a4 @33 e. @32 f.g4>c<@33 b. @32g.@33 f @32ef g4f4e.c.] c4<b>c<b>c<b>cd @33 f4 !FadeC ^8 v210 e1..
+r1r2r4r8
+@32(0)g4>c<b>c @33 d.e.<b1..
+r1r4r8
+
+@34 o2 l16 y20 v150 !VibratoD $F4$01
+g2 !PitchA ^2^2^2  
+o3 [a1]5
+a2 !PitchB ^2^2^2  $F4$01
+
+@31 o3 l4 y10 v240  !VibratoB
+g.a.fg.>c.<ba.g.a $F4$01 b4 !VibratoC [a+4]3 $F4$01 !VibratoB
+g.a.fg.>c.<ba.g.f $F4$01 g4 !VibratoC [f+4]3 $F4$01 !VibratoB
+
+@36 o4 v230 l8 y15 !VibratoE
+(1)[frfre.f.f4fe.f.ded]
+(2)[frfrefrg4fedr2]
+v255 y15
+(1)
+y20
+(2)
+;*******************************************************************
+#1
+!GainB
+@30 v160 o4 y12 !VibratoA
+[e4 !PitchJ ^4^4^8^16r16]4
+/
+@30 v160 l8 o5 !VibratoA y15
+(10)[
+[[d4 !PitchH ^4^4^8 e16.r32]]3 <b4 !PitchI ^4^4^8]>e16.r32
+(10) q3F 
+<b
+(11)[
+[[>c r2. <b]]3 >c r2. c q7F $F4$01 < b1 b2...r16 $F4$01
+f+4 !PitchK ^8] b1^2 q3F b
+(11) b1^2 r8
+
+@38 o2 v255 l16 !VibratoF
+(12)[a>fca+g+d+fcd+<a+4a+a+8
+a>fca+g+d+fcd+<a+>g8r4<
+a>fca+g+d+fcd+<a+g8r4]
+a>fca+g+d+fcd+d+8d+8fg8
+(12)<
+a>fca+g+d+fcd+^64f^32g+^64a+^64>c^32d+^64
+
+[q7D ffff q7F f8 q7D ffff q7F f q7D f q7B f q79 f q77 f q75 f]7
+q7F ffff q7F f8 q7F ffff q7F f r8 @30v190y10 !VibratoA o5 q4F d8 r16 q7F
+v190
+(13)[@30o5 g+4 !PitchC]
+v160(13)v140(13)v120(13)
+v100(13)v80(13)v60(13)v40(13) [r1]2
+
+@38 o4 y13 v220 l16 !VibratoF 
+[ffff]8
+
+v250 y10
+[ffff]4
+f8 r4 r8
+
+@40o5v250 !VibratoA
+(14)[y20 g32 y15 f32 y05 e32 y00 d32]
+v200(14)v150(14)v100(14)
+;*******************************************************************
+#2
+!GainB
+@30 v160 o4 y08 !VibratoA
+[a4 !PitchL ^4^4^8b16.r32]3 q5F f+4 !PitchK ^4^2 q7F
+/
+@30 v160 l8 o4 y05 !VibratoA
+(20)[
+[[a4 !PitchL ^4^4^8b16.r32]]3 f+4 !PitchK ^4^4^8] b16.r32>
+(20) q3F
+<
+f+
+(21)[
+[[g r2. f+]]3 g r2. g q7F $F4$01 f+1 f+2...r16 $F4$01
+c+4 !PitchM ^8] f+1^2 q3F f+
+(21) f+1^2 r8
+
+@38 o2 v220 l16 !VibratoF
+r16 (22)[a>fca+g+d+fcd+<a+4a+a+8
+a>fca+g+d+fcd+<a+>g8r4<
+a>fca+g+d+fcd+<a+g8r4]
+a>fca+g+d+fcd+d+8d+8fg8
+(22)<
+a>fca+g+d+f v255 < g+^64a+^32>c+^64d+^64f^32g+^64
+
+[q7D aaaa q7F a8 q7D aaaa q7F a q7D a q7B a q79 a q77 a q75 a]7
+q7F aaaa q7F a8 q7F aaaa q7F a r8 r8 r16
+
+@36 o4 v230 l8 !VibratoE
+(23)[crcr<b.>c.c4c<b.>c.<aba>] crcr<b>crd4c<bar2>
+
+@38 o3 y07 v230 l16 !VibratoF 
+[aaaa]8
+
+@31 o4 l8 v210 y10  !VibratoB
+frfrefrg4fedr2
+
+;*******************************************************************
+#3
+$F4$02 !GainA
+@30 v160 o3 y05 !VibratoA
+[a4 !PitchN ^4^4^8^16 r16]4
+/
+@30 v130 l8 o4 y10 !VibratoA
+c2..<b16.>r32 c4 r16
+
+@44o5v230 l32 
+(31)[y20c<y15g>y10c<y05g y00c y05g y10c<y15g>y20c<y15g y10c y05g y00c<y05g >y10c<y15g>y20cy15g>y10c<y05g>y00c<y05g>y10cy15g>]
+(30)[y20c y15f y10e y05c y00f y10e]
+v230(30)v210(30)v190(30)v170(30)v150(30)v130(30)v110(30)v90(30)v70(30) r16
+
+@30 v130 l8 o4 y10 
+c2..<b16.>r32 c4 r16
+
+@44o5v230 l32 
+(31)
+(30)
+v230(30)v210(30)v190(30)v170(30)v150(30)v130(30)v110(30)v90(30)v70(30) r16
+
+$F4$01
+@43 o4 y10 !VibratoG
+v100 !FadeA e2  v200[e1]3 !FadeB e2
+v100 !FadeA d2  v200[d1]3 !FadeB d2
+v100 !FadeA e2  v200[e1]3 !FadeB e2
+v100 !FadeA d2  v200[d1]2 !FadeB d4^8^16
+r16
+
+@34 o2 l16 y00 v150 !VibratoD
+d+2 !PitchE ^2^2^2  
+o3 [f1]5
+f2 !PitchF ^2^2^2  $F4$01
+
+@31 o2 l4 y10 v200  !VibratoB
+g.a.fg^16
+
+@44o5v230 l32 
+(31)
+(30)
+v230(30)v210(30)v190(30)v170(30)v150(30)v130(30)v110(30)v90(30)v70(30)
+r16 v200
+
+@31 o2 l4 y10 v200
+g.a.fg^16
+
+@44o5v230 l32 
+(31)
+(30)
+v230(30)v210(30)v190(30)v170(30)v150(30)v130(30)v110(30)v90(30)v70(30)
+r16 v200
+
+[r1]2
+@32 o5 l8 v190 y10  !VibratoB
+frfrefrg4fedr2
+o6 y05 v180
+frfre.f.f4fe.f.ded
+y00 frfrefrg4fedr2
+
+;*******************************************************************
+#4
+!GainC !VibratoH
+@42 v255 o2 l16
+(40)[
+[[fg32r16.]]4 f8r8]
+(40)3
+/
+@42 v255 o2 l16
+(40)8
+
+(41)[f8>crc8<b>c8<b>c<b>c8d8<f8>crc8<b>c8<b>c<b>c<bg8]
+(41)
+(42)[f8>crc8<b>c8<b>c<b>cde8]
+(42)2 <
+f8>crc8<b>c8<b>c<b>c<bg8
+
+(41)
+(41)
+(42)3
+f8 r2..
+
+(41)3
+f8>crc8<b>c8<b>c<b>c8d8<
+f8 r2..
+(40)8
+
+(43)[f8fa+8a>c8.cc+8c8<a+8]
+(43)2
+f8f8>c+grfrc+r<a+32>c+32c8<a+8
+(43)3
+f8 r2..
+;*******************************************************************
+#5
+
+l16 !VibratoJ !GainD
+[@21o3q7fv255 c @29v255o3q2f aaa @39v230o4q7f d+ @29o3q2f aaa]6
+[@21v255o3q7f c8r8]2
+@29o3 aa8aaaaa
+/
+(50)[@21o3q7f c @29o3q1f a q7f a q1f a q7fo4 e q1fo3 a q7fo4 c<a @21o3q7f c @29q1fo3 a q7fo3 a q1fo3 a q7fo4 e q1fo3 a q7fo4 c<a]
+(50)14
+@29o3q7f a8 r2..
+(50)7
+@29o3q7f a8 r2..
+
+[@21o3q7f c @29o3q1f a q7fo4 e o3q1f a 
+@21o4q7b c @29o3q7b a q7Bo4 c @29o4q1f e  
+@29o3q7f a @29o3q1f a @29o4q7b c @29o3q1f a
+@29o3q7b a @29o3q1f a @29o4q7b c q7f e]7
+@29o3q7f a8 r2..
+
+(50)15
+@29o3q7f a8 r2..
+
+;*******************************************************************
+#6
+$F4$03
+l16 !VibratoI !GainD
+[@41o6q2fv70 aaaaaaaa]6
+[@14o2v255q7f g8 !PitchG @29o3q2fv200 aa]4
+/
+(60)[@14o2v255q7f g !PitchD @41o6q2fv60 a @14o2v255q7f g !PitchD @41o6q2fv60 a @39v210o4q7f d+ @41o6q2fv60 a @14o2v255q7f g !PitchD @41o6q2fv60 a
+@41o6q2fv60 a a @14o2v255q7f g !PitchD @14o2v255q7f g !PitchD @39v210o4q7f d+ @14o2v255q7f g !PitchD @41o6q2fv60 a a]
+(60)14
+@14o2v255q7f g8 !PitchG r2..
+(60)7
+@14o2v255q7f g8 !PitchG r2..
+
+[@14o2v255q7f g !PitchD @41o6q2fv60 a @39v210o4q7f d+ @41o6q2fv60 a @14o2v255q7f g !PitchD @41o6q2fv60 a a @39v210o4q7f d+ @29o3q1f a @41o6q2fv60 a
+@14o2v255q7f g !PitchD @41o6q2fv60 a @39v210o4q7f d+ @41o6q2fv60 a @14o2v255q7f g !PitchD @39v210o4q7f d+]7
+@14o2v255q7f g8 !PitchG r2..
+
+(60)15
+@14o2v255q7f g8 !PitchG r2..
+;*******************************************************************
+#7
+$F4$03
+@30 v80 o5 !VibratoA
+r16[f2..e16.r32]3 q5F d2^4^8^16 q7F
+/
+@31 o3 l4 v100  !VibratoB
+r16 g.a.fg.>c.<ba.g.a $F4$01 b4 !VibratoC [a+4]3 $F4$01 !VibratoB
+g.a.fg.>c.<ba.g.f $F4$01 g4 !VibratoC [f+4]3 $F4$01 !VibratoB
+
+@32 o5 l8 v70
+(0) c4<b>c<b>c<b>cd @33 f4 !FadeD ^8  v70 e1..
+r1r2r4r8
+@32(0)g4>c<b>c @33 d.e.<b1..
+r1r4r8
+
+@34 o2 l16  v70 !VibratoD $F4$01
+g2 !PitchA ^2^2^2  
+o3 [a1]5
+a2 !PitchB ^2^2^2  $F4$01
+
+@31 o3 l4 v100  !VibratoB
+g.a.fg.>c.<ba.g.a $F4$01 b4 !VibratoC [a+4]3 $F4$01 !VibratoB
+g.a.fg.>c.<ba.g.f $F4$01 g4 !VibratoC [f+4]3 $F4$01 !VibratoB
+
+@36 o4 v120 l8  !VibratoE
+(1)
+frfrefrg4fedr2
+v120 
+(1)
+
+frfrefrg4fedr4^8^16
