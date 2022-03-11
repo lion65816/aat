@@ -168,3 +168,19 @@
 51 0022 0,0,0
 5A 0020 A Hammer Bro from Super Mario Bros. 3. It walks back and forth and sometimes jumps high between blocks. It frequently throws hammers in Mario's direction.
 5A 0022 0,-16,43B 0,0,43C 8,-16,43D
+61 0020 A numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
+61 0022 0,0,43E 16,0,43F 0,16,440 16,16,441 8,8,444
+61 0030 A small numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
+61 0032 0,0,448
+62 0020 A numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
+62 0022 0,0,44C 16,0,44D 0,16,44E 16,16,44F 8,8,452
+62 0030 A small numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
+62 0032 0,0,456
+63 0020 A numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
+63 0022 0,0,45A 16,0,45B 0,16,45C 16,16,45D 8,8,460
+63 0030 A small numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
+63 0032 0,0,464
+64 0020 A numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
+64 0022 0,0,468 16,0,469 0,16,46A 16,16,46B 8,8,46E
+64 0030 A small numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
+64 0032 0,0,472

@@ -6,6 +6,10 @@ verbose: on
 ; Level list. Valid values: 000-1FF.
 level:
 009	disableflight.asm
+010	lvlfilter.asm
+015	lvlfilter.asm
+023	lvlfilter.asm
+112	lvlfilter.asm
 
 ; OW list. Valid values: 0 = Main map; 1 = Yoshi's Island; 2 = Vanilla Dome;
 ; 3 = Forest of Illusion; 4 = Valley of Bowser; 5 = Special World; and

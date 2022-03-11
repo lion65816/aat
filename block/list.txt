@@ -29,6 +29,7 @@
 561:25 boostup.asm
 DA0:130 sprite_solid.asm
 DA1:130 mario_solid.asm
+E70-E71:25 killsprite.asm
 17A0:2 hurt.asm
 17A1:2 hurt.asm
 1840:25 SMB3Brick.asm

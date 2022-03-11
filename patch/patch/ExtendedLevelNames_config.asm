@@ -176,7 +176,7 @@ NameData:
  db "Fortress of 1      "
  db "FAST SMASH ACTION!!"
  ;Level 112
- db "#4 STAR ROAD       "
+ db "Good Ol' Days      "
  db "                   "
  ;Level 113
  db "Rather generic     "

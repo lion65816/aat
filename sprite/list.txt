@@ -75,6 +75,20 @@
 52 ChasinRex.cfg
 56 barrel.cfg
 5A HammerBro2.json
+5C venus_chuckthrow.cfg
+5D venus_koopathrow.cfg
+5E venus_mushthrow.cfg
+5F venus_shower.cfg
+60 venus_spreadshot.cfg
+61 numbered_platform.json
+62 numbered_platform_2.json
+63 numbered_platform 3.json
+64 numbered_platform 4.json
+65 grey_plat_fast.cfg
+66 grey_plat_slow.cfg
+67 piranha_venus sfx.cfg
+68 ngrinder.cfg
+69 venus_grindthrow.cfg
 
 C0 balloon_shooter.cfg
 C1 lasershooter.cfg
