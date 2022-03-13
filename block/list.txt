@@ -34,6 +34,8 @@ EC0:25 one_way_right.asm
 17A0:2 hurt.asm
 17A1:2 hurt.asm
 1840:25 SMB3Brick.asm
+1D0E:130 weak_break_block.asm
+1D0F:130 donutblk_solid.asm
 
 
 ;;2-way pipe caps

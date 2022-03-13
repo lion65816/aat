@@ -74,6 +74,7 @@
 51 volcano_lotus.json
 52 ChasinRex.cfg
 56 barrel.cfg
+59 donut_lift_solid.json
 5A HammerBro2.json
 5C venus_chuckthrow.cfg
 5D venus_koopathrow.cfg

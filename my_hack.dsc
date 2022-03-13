@@ -243,3 +243,5 @@ ec0	0	Solid if anything goes left
 17a0	0	
 17a1	0	
 1840	0	A simple brick block.
+1d0e	0	weak_break_block.asm
+1d0f	0	A Donut Lift, which will fall shortly after being stepped on.

@@ -56,6 +56,7 @@ Locals:
 3A  Stilt Village.txt
 3D  Return Of The Gohei.txt
 3E  remixhills.txt
+3F  At DooM's Gate.txt
 40  snp_arle_a1_0_2.txt
 41  DejaVu.txt
 42  Fortuna.txt

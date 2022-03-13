@@ -107,8 +107,8 @@ NameData:
  db "Actually... it was "
  db "reference          "
  ;Level 01F
- db "You have only 1F   "
- db "seconds!!!         "
+ db "    PREHISTORIC    "
+ db "    DOOM CASTLE    "
  ;Level 020
  db "#4 NOT ROY'S CASTLE"
  db "                   "

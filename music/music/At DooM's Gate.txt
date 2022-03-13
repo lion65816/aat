@@ -1,0 +1,409 @@
+;================================;
+;	SPC Generator
+;================================;
+
+#SPC
+{
+	#title "At Doom's Gate ~ E1M1"
+	#game "DOOM (MS-DOS)"
+	#author "Mick Gordon"
+	#comment "arr. Hooded Edge"
+	#length "auto"
+}
+
+;================================;
+;	THIS RIGHT HERE IS DEFINITELY IMPORTANT!
+;================================;
+
+; There are 2 different options for changing the loop
+; of the song.
+
+; To change this option, replace the number after
+; ''L00P'' to any number between 1 - 2.
+
+; I made this an option in case you prefer how the original song loops
+; like in the original game.
+; I have the "new" loop turned on by default
+
+;================================;
+;	Loop
+;================================;
+
+	#define L00P 1 ; Change Value between 1 - 2
+
+;================================;
+
+; 1 = Song will loop at 00:18 (New)
+
+; 2 = Song will loop from the very beginning of the song (Original)
+
+;================================;
+;	Samples
+;================================;
+
+#path "DooMooD"
+
+#SAMPLES
+{
+	#optimized
+
+	"R&RR Overdrive.brr"
+	"Sans Undertale.brr"
+
+	"@8 Fixed.brr"
+
+	"Yasui Snare.brr"
+	"DR-660 Kick.brr"
+	"R8 Tom 2.brr"
+	"MM7 Hi-Hat 1.brr"
+	"R8 Ride.brr"
+	"R8 Ride Bell.brr"
+	"R8 Crash.brr"
+}
+
+;================================;
+;	Instruments
+;================================;
+
+#INSTRUMENTS
+{
+	"Yasui Snare.brr" $9F $F5 $B8 $15 $00 ; @30 snare
+	"DR-660 Kick.brr" $CF $FA $B8 $14 $00 ; @31 bass drum
+	"R8 Tom 2.brr" $FF $F2 $B8 $0A $00 ; @32 tom
+	"MM7 Hi-Hat 1.brr" $FF $FB $B8 $0A $00 ; @33 closed hi-hat
+	"R8 Ride.brr" $9F $F4 $B8 $0A $00 ; @34 ride cym
+	"R8 Ride Bell.brr" $9F $F4 $B8 $0A $00 ; @35 ride bell
+	"R8 Crash.brr" $9F $F2 $B8 $0A $00 ; @36 crash cym
+
+	"R&RR Overdrive.brr" $9F $CB $B8 $06 $A0 ; @37 overdrive
+	"Sans Undertale.brr" $9E $CB $B8 $06 $10 ; @38 you're gonna have a hell time
+
+	"@8 Fixed.brr" $AF $8D $B8 $07 $A0 ; @39 flat bass
+}
+
+;================================;
+;	Main Macros
+;================================;
+
+	"@echo = $F4 $03"
+	
+	"@rest = [ r2 ]16"
+
+;================================;
+;	Remote Commands
+;================================;
+
+	(!800)[ $F4 $09 ]
+	(!810)[ $ED $7F $F9 ]
+
+	"@on = (!800, -1) (!810, 3)"
+	"@off = (!800, 0) (!810, 0)"
+
+;================================;
+;	Instrument Macros
+;================================;
+
+	"@overdrive = @37 v210 | $DE $1D $1A $4F"
+	"@sansguitar = @38 v225 | $DE $1D $1A $4F"
+	
+	"@flatbass = @39 o3 v200"
+
+;================================;
+;	Percussion Macros
+;================================;
+
+		"(vol) = v230"
+	"@snare = @30"
+	"@kick = @31"
+	"@tom = @32 v235"
+		
+		"(ride-vol) = v235"
+	"@closed = @33"
+	"@ridecym = @34 y9"
+	"@ridebell = @35 y12"
+	"@crash = @36 v255 | $FA $03 $3F"
+
+;================================;
+;	Echo Values
+;================================;
+
+	$EF $F8 $32 $C2 ; OFF - #0, #1, #2
+	$F1 $06 $A4 $01
+	$F4 $02
+	
+;================================;
+;	Don't mess with this
+;	unless you know what you're doing!
+;================================;
+
+#if L00P == 1 ; Loop after the beginning
+	"/1/ = /"
+	"/2/ = "
+#endif
+
+#if L00P == 2 ; Loop from beginning
+	"/1/ = "
+	"/2/ = /"
+#endif
+
+;================================;
+;	Extras
+;================================;
+
+	"Channel # = #"
+
+;================================;
+;	Global Volume / Tempo
+;================================;
+	w125 t90
+;================================;
+
+;================================;
+	Channel #0 /2/
+;================================;
+
+o3 (vol)
+[ @kick c4 r1.. ]7
+[ c4 ]4 [ @snare c8 ]8 /1/
+
+[[ (000)[ @kick c4 @snare c4
+@kick c8 c8 @snare c4 ]7
+(001)[ c4 c4
+c8 c8 c16 c16 c16 c16 ] ]]3
+(000)7
+c1
+
+[ @kick c4 r1.. ]3 [ c4 ]4
+[ @snare c8 ]8
+
+[[ (000)7 (001) ]]3
+(000)7
+c1
+
+;================================;
+	Channel #1 /2/
+;================================;
+
+o3 (vol)
+[ y10 @snare c1^1 ]7 c1 >
+
+(ride-vol)
+[ @ridecym c4 c4 c4 c4 ] /1/
+
+(100)[ @ridecym c4 ]32
+
+(105)[ @ridebell c4 ]32
+
+(100)32
+
+(105)28 c1
+
+(vol)
+< [ y10 @snare c1^1 ]3 c1 >
+@ridecym [ c4 ]4
+
+(100)32 (105)32
+(100)32 (105)28 c1
+
+;================================;
+	Channel #2 /2/
+;================================;
+
+o3 | l8
+[ @tom f+4 r1.. ]7 f+4 r2.
+(vol) [ @kick c8 > ]8 @closed /1/
+
+(200)[ c r c r c c c r ]7
+(205)[ @tom y13 g4 y11 e4 y9 c+4 y7 < a+ a+ > (vol) y10 @closed ]
+[[ (200)7 [ r c ]4 ]]2
+
+(200)7 c r2..
+
+< [ @tom f+4 r1.. ]3 f+4 r2.
+(vol) [ @kick c8 > ]8 @closed 
+
+(200)7 (205)
+[[ (200)7 [ r c ]4 ]]2
+
+(200)7 c r2..
+
+;================================;
+	Channel #3
+;================================;
+
+@flatbass | l8
+(300)[ e. q78 e q75 e q72 e q7F r1^4.. ]4
+
+(310)[ e. q78 e q75 e q72 e q7F r1^16 e e e ]3
+(300) /1/
+
+(320)[ [[ e q78 e q7F ]]29 d q78 d q7F c q78 c q7F c- q78 c- q7F
+< [[ a q78 a q7F ]]29 b q78 b q7F > c+ q78 c+ q7F d+ q78 d+ q7F
+[[ e q78 e q7F ]]31 d+ q78 d+ q7F
+[[ c+ q78 c+ q7F ]]8 < [[ b q78 b q7F ]]4 [[ a q78 a q7F ]]4 >
+[[ e q78 e q7F ]]12 e. q78 e q75 e q72 e q7F r4.. ]
+
+(310)3 (300)
+
+(320)
+
+;================================;
+	Channel #4 | @on /2/ @rest
+;================================;
+
+@sansguitar o2 y11 | l16
+q7D (400)[ e48 r^24 e8 > e8 < e48 r^24 e8 > d8 < e48 r^24 e8 b+8
+e48 r^24 e8 a+8 e48 r^24 e8 b8 b+8
+e48 r^24 e8 > e8 < e48 r^24 e8 > d8 < e48 r^24 e8 ]
+(405)[ b+8 e48 r^24 e8 a+2^8 ]
+
+(400)
+
+(410)[ > > d+ c c- d+ f+ e d+ c- d+ e f+ g f+ e d+ c- < < ] /1/
+
+(400) (405)
+(400) > > g e b e g e g b g e g e g b > e g < <
+
+(420)[ < a48 r^24 a8 > a8 < a48 r^24 a8 > g8 < a48 r^24 a8 > f8
+< a48 r^24 a8 > d+8 < a48 r^24 a8 > e8 f8
+< a48 r^24 a8 > a8 < a48 r^24 a8 > g8 < a48 r^24 a8 > ]
+(425)[ f8 < a48 r^24 a8 > d+2^8 ]
+
+(420)
+
+(430)[ > a f e a e c e a b+ a e a e a e c < ]
+
+(400) (405)
+(400) (405)
+
+(440)[ c+48 r^24 c+8 > c+8 < c+48 r^24 c+8 b8 c+48 r^24 c+8 a8
+c+48 r^24 c+8 g8 c+48 r^24 c+8 g+8 a8
+c-48 r^24 c-8 b8 c-48 r^24 c-8 a8 c-48 r^24 c-8
+g8 < a+48 r^24 a8 > f2^8 < ]
+
+(400)
+
+> > g b e c- g e b g b g e c- g b > e g < < <
+
+(400) (405)
+(400) > > f+ e d+ c- a f+ d+ c- b a f+ d+ > d+ c+ < b a <
+
+(450)[ < e48 r^24 e8 > g8 < e48 r^24 e8 > f+8 < e48 r^24 e8 > d+8
+< e48 r^24 e8 > d8 < e48 r^24 e8 > d8 e8
+< e48 r^24 e8 > g8 < e48 r^24 e8 > f+8 < e48 r^24 e8 > ]
+(455)[ d+8 < e48 r^24 e8 > c+2^8 ]
+(450) > > g e < b g > e g e < b g b > e c- g e < b g <
+
+(460)[ < a48 r^24 a8 > b+8 < a48 r^24 a8 > b8 < a48 r^24 a8 > g+8
+< a48 r^24 a8 > g8 < a48 r^24 a8 > g8 a8
+< a48 r^24 a8 > b+8 < a48 r^24 a8 > b8 < a48 r^24 a8 > ]
+a8 < a48 r^24 a8 > g2^8
+(460) (430)
+
+(450) (455)
+(450) (455)
+
+c+48 r^24 c+8 > g8 < c+48 r^24 c+8 > f+8 < c+48 r^24 c+8 > e8 <
+c+48 r^24 c+8 > c+8 < c+48 r^24 c+8 > c+8 e8 <
+c-48 r^24 c-8 > f+8 < c-48 r^24 c-8 > e8 < c-48 r^24 c-8
+> d+8 < < a+48 r^24 a8 > > c-2^8
+(450)
+b a f+ d+ < b a f+ d+ > > d+ c+ < b a f+ d+ < b a
+
+;================================;
+	Channel #5 | @on /2/
+;================================;
+
+@overdrive o2 y9 | l16
+q7D [[ (500)[ e48 r^24 e8 > e8 < e48 r^24 e8 > d8 < e48 r^24 e8 b+8
+e48 r^24 e8 a+8 e48 r^24 e8 b8 b+8
+e48 r^24 e8 > e8 < e48 r^24 e8 > d8 < e48 r^24 e8 ]
+(505)[ b+8 e48 r^24 e8 a+2^8 ] ]]3
+
+(500)
+
+(510)[ > > f+ e d+ f+ a g f+ d+
+f+ g a b a g f+ d+ < < ] /1/
+
+(500) (505)
+(500) > > b g e g b g b > e < b g b g b > e g b < <
+
+(530)[ < a48 r^24 a8 > a8 < a48 r^24 a8 > g8 < a48 r^24 a8 > f8
+< a48 r^24 a8 > d+8 < a48 r^24 a8 > e8 f8
+< a48 r^24 a8 > a8 < a48 r^24 a8 > g8 < a48 r^24 a8 > ]
+(535)[ f8 < a48 r^24 a8 > d+2^8 ]
+
+(530)
+
+(540)[ > e d c e c < a > c e a e c e c e c < a ]
+
+(500) (505)
+(500) (505)
+
+(546)[ c+48 r^24 c+8 > c+8 < c+48 r^24 c+8 b8 c+48 r^24 c+8 a8
+c+48 r^24 c+8 g8 c+48 r^24 c+8 g+8 a8
+c-48 r^24 c-8 b8 c-48 r^24 c-8 a8 c-48 r^24 c-8
+g8 < a+48 r^24 a8 > f2^8 ]
+
+(500)
+
+> e g c- < g > e c- g e g e c- < g > e g b > e < <
+
+(500) (505)
+(500) > d+ c+ c- < f+ > f+ d+ < b a > a f+ d+ c- b a f+ d+ <
+
+(500) (505)
+(500) > > e < b g e b > e < b g e g b g > e < b g e <
+
+(530) (535)
+(530) (540)
+
+(500) (505)
+(500) (505)
+
+(546)
+
+(500)
+
+> a f+ d+ < b a f+ d+ c-
+> b a f+ d+ < b a f+ d+
+
+;================================;
+	Channel #6 /2/
+;================================;
+
+@overdrive o2
+q7D (600)[ [[ r2 ]]6 r4. e2^8 ]3 [ r2 ]8 /1/
+
+(600) [ r2 ]8 (610)[ [[ r2 ]]6 r4. a2^8 [[ r2 ]]8 ]
+(600)2 (610)
+
+(600) [ r2 ]8
+
+(600) [ r2 ]8 (610)
+(600)2 (610)
+
+;================================;
+	Channel #7 /2/ @rest
+;================================;
+
+o4 | l1
+@crash [ c r ]4 /1/
+
+(700)[ c [[ r2 ]]12 c4 c4 c4 c4
+c [[ r1 ]]3 c r1^1 c4 c4 c4 c4 ]
+c [ r2 ]14
+
+(710)[ c r c c c r c c ]
+
+[ c r2^8 c8 c8 c8 ]3 c^
+
+(700)
+c [ r2 ]14
+(710)
+
+;================================;
+;	AddmusicK 1.0.6
+;================================;
+
+#amk 2
