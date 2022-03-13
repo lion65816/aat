@@ -284,8 +284,8 @@ NameData:
  db "Generic STAR ROAD  "
  db "Level              "
  ;Level 136
- db "There is secret    "
- db "world at exit      "
+ db "Who put Touhou     "
+ db "in my hack??       "
  ;Level 137
  db "STAR ROAD          "
  db "                   "

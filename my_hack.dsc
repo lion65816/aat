@@ -239,6 +239,7 @@ da0	0	A block that will act like tile 25 for Mario
 da1	0	A block that will act like tile 25 for sprites
 e70	0	Kill the sprites when touching this block
 e71	0	Kill the sprites when touching this block
+ec0	0	Solid if anything goes left
 17a0	0	
 17a1	0	
 1840	0	A simple brick block.

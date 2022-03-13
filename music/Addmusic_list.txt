@@ -60,4 +60,5 @@ Locals:
 41  DejaVu.txt
 42  Fortuna.txt
 43  Busy Flare.txt
+46  Tengu Rush Hour.txt
 48  Rusty Ruins Zone Act 2.txt

@@ -89,6 +89,7 @@
 67 piranha_venus sfx.cfg
 68 ngrinder.cfg
 69 venus_grindthrow.cfg
+6A shooter.json
 
 C0 balloon_shooter.cfg
 C1 lasershooter.cfg
@@ -103,6 +104,7 @@ D0 gusty_generator.cfg
 CLUSTER:
 00 cluster_sparkle.asm
 01 laser.asm
+10 bullet.asm
 
 EXTENDED:
 00 boomerang.asm
