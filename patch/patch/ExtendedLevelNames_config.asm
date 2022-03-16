@@ -146,8 +146,8 @@ NameData:
  db "This Cave is       "
  db "no Ghost House!    "
  ;Level 108
- db "STAR ROAD          "
- db "                   "
+ db "   The Castle      "
+ db "      of Spirits   "
  ;Level 109
  db "Rare vertical      "
  db "design             "

@@ -1,0 +1,550 @@
+#amk 2
+
+#spc
+{
+    #title   "Suspicion"
+    #game    "Ghost Trick"
+    #author  "Masakazu Sugimori"
+    #comment "Ported by KevinM"
+}
+
+#path "suspicion"
+
+#samples
+{
+    #suspicion2
+    "Kick (32k).brr"
+    "Snare 1 (32k).brr"
+    "Closed Hi-Hat (32k).brr"
+    "Open Hi-Hat (32k).brr"
+    "Snare 2 (32k).brr"
+    "Ride (32k).brr"
+    "Snare 3 (32k).brr"
+    "Pad (24k).brr"
+    "Stacked Bass (24k).brr"
+    "Clavinet (24k).brr"
+    "EPiano (24k).brr"
+    "Pulse 25%.brr"
+}
+
+#instruments
+{
+    "Kick (32k).brr"          $00 $00 $df $07 $a8 ; @30
+    "Snare 1 (32k).brr"       $00 $00 $df $07 $a8 ; @31
+    "Closed Hi-Hat (32k).brr" $00 $00 $df $07 $a8 ; @32
+    "Open Hi-Hat (32k).brr"   $00 $00 $df $07 $a8 ; @33
+    "Snare 2 (32k).brr"       $00 $00 $1f $07 $a8 ; @34
+    "Ride (32k).brr"          $00 $00 $df $07 $a8 ; @35
+    "Snare 3 (32k).brr"       $00 $00 $df $07 $a8 ; @36
+    "Pad (24k).brr"           $00 $00 $d1 $06 $6a ; @37
+    "Stacked Bass (24k).brr"  $00 $00 $df $08 $1f ; @38
+    "Clavinet (24k).brr"      $00 $00 $df $05 $b3 ; @39
+    "EPiano (24k).brr"        $00 $00 $df $0b $77 ; @40
+    "EPiano (24k).brr"        $00 $00 $51 $0b $77 ; @41
+    "EPiano (24k).brr"        $00 $00 $2f $0b $77 ; @42
+    "EPiano (24k).brr"        $00 $00 $bb $0b $77 ; @43
+    "Pulse 25%.brr"           $9b $6d $b7 $08 $00 ; @44
+    "Pulse 25%.brr"           $00 $00 $b7 $08 $00 ; @45
+}
+
+;==================;
+; Volume  /  Tempo ;
+;==================;
+   w220       t31
+
+;==================;
+;       Echo       ;
+;==================;
+;$ef $6c $40 $40
+;$f1 $00 $c0 $01
+$f0
+
+;==================;
+;      Macros      ;
+;==================;
+"Kick    = @30 h0  o4 y10 v229"
+"Snare1  = @31 h0  o4 y10 v210"
+"CHat    = @32 h0  o4 y14 v160" ;v152
+"OHat    = @33 h0  o4 y14"
+"Snare2  = @34 h0  o4 y11 v210"
+"Ride    = @35 h0  o4 y7  v134"
+"Snare3  = @36 h0  o4 y8  v191"
+"Pad     = @37 h0     q7b $e5$0c$06$2c $de$01$0e$14"
+"Bass    = @38 h24 o1 y10 v182 q7f"
+"Clav    = @39 h0     y7"
+"EPiano  = @40 h0     y14"
+"EPianoL = @41 h0     y14"
+"EPianoE = @42 h0     y15"
+"Pulse   = @43 h0     y13 $de$20$0d$18"
+
+"KickR   = $ed$3f$34" ; after 6 ticks
+"Snare1R = Gain$b3"   ; after 10 ticks
+"CHatR   = Gain$b7"   ; after 5 ticks
+"OHatR   = Gain$b1"   ; after 10 ticks
+"Snare2R = Gain$b1"   ; after 10 ticks
+"RideR   = Gain$b0"   ; after 16 ticks
+"Snare3R = $ed$2f$30" ; after 10 ticks
+"ClavR   = Gain$b0"   ; after 22/26/30 ticks
+"ClavR2  = Gain$b2"
+"EPianoR = Gain$b1"   ; after 22/26/30 ticks
+
+"E    = " ; $f4$03
+"R    = $f4$09"
+"L    = $f4$01"
+"Gain = $ed$80"
+
+"_2  =  1 q7f ^=1"
+"_3  =  2 q7f ^=1"
+"_4  =  3 q7f ^=1"
+"_6  =  5 q7f ^=1"
+"_8  =  7 q7f ^=1"
+"_10 =  9 q7f ^=1"
+"_14 = 13 q7f ^=1"
+"_16 = 15 q7f ^=1"
+"_38 = 37 q7f ^=1"
+
+"V69Q47 = v134"
+"V69Q40 = v120"
+"V69Q4D = v143"
+"V69Q48 = v134"
+"V69Q59 = v165"
+"V69Q4C = v143"
+"V69Q5B = v170"
+"V69Q52 = v154"
+"V69Q4A = v140"
+"V69Q50 = v149"
+"V69Q51 = v152"
+"V69Q4B = v140"
+"V69Q42 = v123"
+"V69Q58 = v165"
+"V69Q57 = v162"
+"V69Q5A = v167"
+"V69Q5D = v172"
+"V69Q56 = v159"
+"V69Q54 = v157"
+"V69Q41 = v123"
+"V69Q4F = v149"
+"V69Q65 = v186"
+"V69Q60 = v177"
+"V69Q3E = v117"
+"V69Q53 = v154"
+"V69Q55 = v159"
+"V69Q68 = v194"
+"V69Q64 = v184"
+"V69Q46 = v131"
+"V69Q63 = v184"
+"V69Q5C = v170"
+"V69Q5F = v177"
+"V69Q69 = v196"
+
+"V5AQ57 = v152"
+"V5AQ49 = v127"
+"V5AQ4A = v131"
+"V5AQ4C = v134"
+"V5AQ4E = v137"
+"V5AQ4B = v131"
+"V5AQ4F = v137"
+"V5AQ54 = v147"
+"V5AQ4D = v134"
+"V5AQ60 = v165"
+"V5AQ5F = v165"
+"V5AQ53 = v143"
+"V5AQ5B = v157"
+"V5AQ56 = v149"
+"V5AQ61 = v167"
+"V5AQ41 = v113"
+"V5AQ52 = v143"
+"V5AQ50 = v140"
+"V5AQ5A = v154"
+"V5AQ40 = v113"
+"V5AQ46 = v123"
+"V5AQ3E = v110"
+"V5AQ43 = v117"
+"V5AQ47 = v123"
+"V5AQ3D = v110"
+"V5AQ42 = v117"
+"V5AQ38 = v101"
+"V5AQ37 = v97"
+"V5AQ48 = v127"
+"V5AQ45 = v120"
+
+"V37Q3D = v89"
+"V37Q5B = v123"
+"V37Q56 = v117"
+"V37Q36 = v79"
+"V37Q53 = v113"
+"V37Q47 = v97"
+"V37Q4F = v110"
+"V37Q43 = v93"
+"V37Q50 = v110"
+"V37Q4C = v106"
+"V37Q42 = v93"
+"V37Q5A = v123"
+"V37Q3C = v84"
+"V37Q51 = v113"
+"V37Q52 = v113"
+"V37Q59 = v120"
+"V37Q48 = v101"
+"V37Q40 = v89"
+"V37Q49 = v101"
+"V37Q4A = v101"
+"V37Q3F = v89"
+"V37Q4B = v106"
+"V37Q46 = v97"
+"V37Q3E = v89"
+"V37Q54 = v117"
+"V37Q32 = v72"
+"V37Q3A = v84"
+
+;==================;
+;     Commands     ;
+;==================;
+(!900)[v174 y13,0,1 $e8$24$ca $dc$24$0a LL]
+(!902)[R]
+(!903)[Gain$bc]
+(!904)[Gain$b0]
+(!905)[@42]
+(!906)[@43]
+(!907)[@44]
+(!908)[@45]
+
+;==================;
+;    Channel #0    ;
+;==================;
+#0 $f4$02 /
+[[
+  (00)[
+    Kick q7f c=6 KickR ^=42
+    Snare1 c=10 Snare1R ^=62
+    Kick c=6 KickR ^=_6
+    Snare2 c-=_3 c=_3 c+=_4 Gain$df c=10 Snare2R ^=40
+  ]
+  Ride c=16 RideR ^=32 R q7d c=16 RideR ^=32 Gain$b9 ^8
+  (01)[
+    Kick c=6 KickR ^=18
+    Snare3 c=10 Snare3R ^=_38
+  ]
+  (00)
+  (03)[
+    CHat c=5 CHatR ^=19 R q79 c=5 CHatR ^=19 R q7e c=5 CHatR ^=19 R q7f c=5 CHatR ^=11 R q7a c=5 CHatR ^=_3
+    OHat c=10 OHatR ^=_14
+  ]
+  (01)
+]]4
+
+[[
+  (02)[
+  Kick c=6 KickR ^=42
+  Snare1 c=10 Snare1R ^=_14
+  Kick c=6 KickR ^=18
+  ]
+  ^8
+  (04)[
+  Kick c=6 KickR ^=_6
+  Snare2 c-=_3 c=_3 c+=_4 Gain$df c=10 Snare2R ^=40
+  Kick c=6 KickR ^=18 R c=6 KickR ^=18
+  Snare1 c=6 Snare1R ^=_10
+  Kick c=6 KickR ^=26
+  Ride c=16 RideR ^=_8
+  ]
+  (01)
+]]2
+
+[[
+  (02)
+  Ride q7d c=16 RideR ^=_8
+  (04)
+  (01)
+]]2
+
+;==================;
+;    Channel #1    ;
+;==================;
+#1 /
+Bass (!902,-1) (!903,3)
+[
+  g8. r48 g24 r2^12 g=7 r=1 a+=15 r=1 g=7 r=1
+  g=15 r=1 f=7 r=1 f+=15 r=1 g24 r4
+
+  Ride
+  q7e c=16 RideR ^4
+
+  Bass
+  g=7 r=1 f=23 r=1
+  g8. r48 g24 r2^12 g=7 r=1 a+=15 r=1 g=7 r=1
+  g=15 r=1 f=7 r=1 f+=15 r=1 g24 r3 a+=7 r=1 > c=15 r=1 c+=7 r=1 <
+]
+a+=15 r=1 g=7 r=1 L f12 f+24 L
+*
+> c=15 r=1 < a+=7 r=1 g=15 r=1 a+=7 r=1
+(10)[
+  g8. r48 g24 r4 a8. r48 a24 r4
+  a+=15 r=1 g=7 r=1 a=15 r=1 a+24 r4
+
+  Ride
+  q7e c=16 RideR ^=32
+  
+  Bass
+  a+=23 r=1 a=23 r=1
+  g8. r48 g24 r4 f8. r48 f24 r12 f=7 r=1 g=15 r=1
+] a24
+(11)[
+  e6 r24 e24 r3 a+=7 r=1 > c=15 r=1 c+=7 r=1 c=15 r=1 < a+=7 r=1 > L c12 d24 L <
+]
+(10) a+=7 r=1
+(11)
+
+Ride
+q7f c=16 RideR ^=32
+
+Bass
+g8 r8
+
+Ride
+q7d c=16 RideR ^=24
+
+Bass
+> f32 r=2 g=22 r=2 < g=22 r=2
+
+Ride
+q7e c=16 RideR ^=32
+
+Bass
+g=23 r=1 > g=23 r=1 c=45 r=3 < a+=45 r=3
+
+Ride
+q7f c=16 RideR ^=32
+
+Bass
+g8 r8
+
+Ride
+q7d c=16 RideR ^=24
+
+Bass
+> f32 r=2 g=22 r=2 < g=22 r=2
+L a+=3 b=3 > c=36 < b=6 L a+=47 r=1 f=47 r=1 f+=47 r=1
+
+[
+  Ride
+  q7f c=16 RideR ^=_8
+
+  Bass
+  g=23 r=1 a+=23 r=1 > c=23 r=1 c+=23 r=1 L c24 c+24 c24 L < a+=23 r=1 g=23 r=1
+
+  Ride
+  q7e c=16 RideR ^=_8
+]
+
+Bass
+> g=23 r=1 < g=23 r=1 > d=23 r=1 c+=23 r=1 c=23 r=1 < f=23 r=1 f+=23 r=1
+
+*
+
+Bass
+a+=23 r=1 g8 r8 a+=23 r=1 g=23 r=1 f=23 r=1 f+=23 r=1
+
+;==================;
+;    Channel #2    ;
+;==================;
+#2 /
+E
+
+Clav o3 (!902,-1) (!904,1,=28)
+V69Q47 f3 Gain$bc ^24 V69Q40 f3^8 Gain$bc ^24 f8
+^3 Gain$bc ^24 V69Q4D f4^24 Gain$bc ^12^4
+(20)[
+  V69Q47 f4^16 Gain$bc ^16 V69Q40 f4.^32. Gain$bc ^=15 V69Q59 d8
+  ^4^64 Gain$bc ^4^16..
+  
+  CHat
+  c=5 CHatR ^=19^4
+  
+  Clav o3
+  V69Q47 f4^16 Gain$bc ^16 V69Q40 f4.^32. Gain$bc ^=15 f8
+  ^=58 Gain$bc ^=14 V69Q4D f8.. Gain$bc ^4.^32
+  V69Q4C f4. V69Q5B f4..^=2 Gain$bc ^=10 V69Q52 f8
+  ^4^64 Gain$bc ^16.. f=11 Gain$bc ^8.^=1 f=11 Gain$bc ^=13 f4
+]
+
+E
+
+EPiano o3 (!902,-1) (!903,3)
+r3
+(21)[
+  V5AQ57 g=7 r=1 V5AQ49 a+=15 r=1 V5AQ4A g=5 r=2 V5AQ4C > c=1 V5AQ4E c+=15 r=1 V5AQ4B c=7 r=17 V5AQ4F < a+8 r32 V5AQ54 > e=_2 V5AQ4D f=10 r32 V5AQ4B < a+=7
+  r3^32. V5AQ60 > f=26 EPianoR ^=21 r=25 V5AQ5F <
+]
+(22)[
+  a+32 r=2 V5AQ53 g24 V5AQ4E f24 V5AQ5B g=15
+  r4..^6^64 V5AQ4C f+=_2 V5AQ4E g=7 r=1 V5AQ4B f=_16 V5AQ4F g8 r32 V5AQ54 a=_2 V5AQ4D a+=10 r32 V5AQ4B g=7
+  r3^=25 V5AQ60 g=7 r=1 V5AQ54 a+12 r24 V5AQ56 > c=7 r=15 V5AQ61 < b=_2 V5AQ4B > c=_16 V5AQ54 < a+=26 EPianoR ^=5 r=65
+]
+(21)
+(23)[
+  > d32 r=2 V5AQ4C c+=_8 V5AQ41 c=_8 V5AQ52 < a+=15 r=1 g=7
+  r=65 V5AQ57 g=7 r=1 V5AQ49 a+=15 r=1 V5AQ4A g=5 r=2 V5AQ4C > c=1 V5AQ4E c+=15 r=1 V5AQ4B c=7 r=17 V5AQ4F < a+8 r=5 V5AQ52 b=_3 V5AQ5A > c=26 EPianoR ^=21 r=1
+  < a+=26 EPianoR ^=37 r32. V5AQ56 a+=7 r=17 > c=7 r=17 c=15 r=1 V5AQ54 <
+]
+a+=26 EPianoR ^=5 r=1
+
+(25)[
+  Pulse o3 (!907,-1) (!908,3)
+  r=1 V37Q56 g4^=10 r=14 V37Q47 g4.^32 r=17 V37Q4F g4.^64
+  r4^16.. V37Q50 g=5 r=19 g=47 r=1
+]
+^=1 V37Q3C g4^16.. r=2 V37Q52 g4^6^64 r=13 V37Q48 f4.
+r16..^=2 V37Q47 > e=5 r4. V37Q49 c+24 r8. <
+
+EPianoL $df
+  (24)[
+  o4 (!902,-1) (!903,3)
+  r12 V69Q4A g24 V69Q50 a+12 V69Q48 g32 V69Q4D > c=_2 V69Q4A c+=15 r=1 V69Q51 c=11 r=13 V69Q50 < a+=7 r12 V69Q47 a+=_4 V69Q4C > c=_6 V69Q4B < a+=23
+  V69Q51 g=15 r=1 V69Q42 f24 V69Q58 f+=15 r=1 V69Q57 g24 r12
+  V69Q5A a+48 r48 V69Q48 g12 r8 V69Q5A g=7 r=1 V69Q48 f=15 r=1 V69Q5A g=7 r6^32. V69Q48 f=7 r=1 V69Q5D a+=23 r=1 g=23 r=17
+  V69Q4A g24 V69Q50 a+12 V69Q48 g32 r=1 V69Q56 > c=1 V69Q5A c+=15 r=1 V69Q48 c=15 r32. V69Q54 < a+=14 r=10 V69Q4B > c=22 r=2 V69Q54 < a+=5 r64
+  V69Q51 g=15 r=1 V69Q42 f24 V69Q58 f+=15 r=1 V69Q57 g24 r12
+  r24 V69Q4B > c+=7 r=1 V69Q41 c=_8 V69Q4B < a+=_8 V69Q52 g=15 r32. V69Q4F a+32 r=10 V69Q56 g=_8 V69Q54 > h-1 $ee$ff f=6 ClavR2 ^=9 r32. h0 $ee$00 < a+=15 r24 V69Q51 b=1 V69Q5A > c=_16 V69Q5D < a+=12 ClavR2 ^=20
+]
+
+;==================;
+;    Channel #3    ;
+;==================;
+#3 /
+E
+
+Clav o3 (!902,-1) (!904,1,=24)
+r=1 V69Q60 g=62 Gain$bc ^=10 V69Q51 g4..^=2 Gain$bc ^32. V69Q59 g8
+^=58 Gain$bc ^=15 V69Q5A g6^16.. Gain$bc ^=17
+(30)[
+  V69Q48 a48 Gain$bc ^8..^48
+  V69Q60 g8..^12 Gain$bc ^=14 V69Q51 g8
+  ^4^32 Gain$bc ^=17 V69Q40 f8
+  ^=58 Gain$bc ^4....^8..
+]
+(31)[
+  V69Q60 g8..^12 Gain$bc ^=14 V69Q51 g4.^32 Gain$bc ^=17 V69Q59 g8
+  ^4^64 Gain$bc ^=22 V69Q5A g8.^64 Gain$bc ^8^=7
+]
+(32)[
+  V69Q48 a48 Gain$bc ^8..^48
+  V69Q46 g4^16.. Gain$bc ^=2 V69Q5C g4^6^64 Gain$bc ^=14 V69Q5A g8
+  ^4^=2 Gain$bc ^=22 g=11 Gain$bc ^8.^=1 g=11 Gain$bc ^=13 g=47
+]
+g=1
+(31) (30) (31) (32)
+
+E
+
+Pulse o4 (!907,-1) (!908,3)
+[V37Q5B d6^8^64 r=13 V37Q53 c+4^6 r12 V37Q56 c4.^32.
+r8...^16. V37Q4C < a+=7 r=17 > c=47 r=1]
+V37Q5A c3^32 r=2 V37Q59 < a+3^16.. r=11 V37Q50 g=71
+r8^=1 V37Q4C > f6^16 r48 V37Q47 d12^48 r48 V37Q40 c48 r48 V37Q4A c=15 r=1 V37Q3F < a+=23 r=1 >
+*
+V37Q4B c4^32. r=15 V37Q47 < a+=65 r=31 V37Q4F > f3^32.
+r16.. V37Q3E $f4$01 c=2 V37Q54 c+8 $f4$01 ^16. r32 V37Q51 c24 r12 V37Q4B c=23 r=1 V37Q3A < a+=23 r=1
+
+;==================;
+;    Channel #4    ;
+;==================;
+#4 /
+Clav o3 (!902,-1) (!904,1,=20)
+V69Q65 a+8...^16. Gain$bc ^32. V69Q5D > c4..^64 Gain$bc ^32. V69Q60 c+8
+^4^=15 Gain$bc ^32. V69Q56 c4^=7 Gain$bc ^=17 <
+(40)[
+  (!903,3) V69Q5B a+=7 r=1 V69Q5A g=7 r=1 V69Q5D f=7 r=1 V69Q5F g=15 r=1 V69Q5A a+=7 r=1 (!904,1,=20)
+  V69Q65 > c6^8^64 Gain$bc ^=13 V69Q5D < a+4^6 Gain$bc ^12 V69Q60 g8
+  ^4^32. Gain$bc ^=15 V69Q68 g8... Gain$bc ^64 V69Q64 f8 V69Q69 g=23 Gain$bc ^=25
+]
+(41)[
+  V69Q65 a+6^8^64 Gain$bc ^=13 V69Q5D > c4^6 Gain$bc ^12 V69Q60 c+8
+  ^4^32. Gain$bc ^=15 V69Q56 c8.. Gain$bc ^8^32 <
+]
+(42)[
+  (!903,3) V69Q5B a+=7 r=1 V69Q5A g=7 r=1 V69Q5D f=7 r=1 V69Q5F g=15 r=1 V69Q5A a+=7 r=1 (!904,1,=20)
+  V69Q64 > c+3^32 Gain$bc ^=2 V69Q63 c3^16.. Gain$bc ^=11 V69Q5D < a+8
+  ^4^=2 Gain$bc ^=22 a+=11 Gain$bc ^8.^=1 a+=11 Gain$bc ^=13 > c4 <
+]
+(41) (40) (41) (42)
+
+E
+
+(43)[
+  Pulse o3 (!907,-1) (!908,3)
+  V37Q3D f4^16 r16 V37Q36 f4.^32. r=15 f3^16.
+  r=62 V37Q43 f24 r12 f=47 r=1
+]
+V37Q42 f=71 r=1 V37Q51 f4..^=2 r=10^8
+
+E
+
+Ride $df (!0,0)
+q7e c=16 RideR ^=176
+
+Clav
+(24)
+
+;==================;
+;    Channel #5    ;
+;==================;
+#5
+Pad o3 L (!900,-1) /
+[[g1^1 a+1^1]]4
+[> g4. f2 e2^8 d+2 d4. c2 < a+2^8] > f4 f+4 <
+* f4 g4
+
+;==================;
+;    Channel #6    ;
+;==================;
+#6 /
+E (!0,0) $df
+
+(99)[r8]61
+
+CHat
+q7f c=5 CHatR ^=19^4
+
+Clav o3 (!902,-1) (!904,1,=30)
+V69Q47 f4^16 Gain$bc ^16 V69Q40 f4.^32. Gain$bc ^=15 f8
+^=58 Gain$bc ^=14 V69Q4D f8.. Gain$bc ^4.^32
+(20)
+(!0,0)
+
+(99)24
+
+(03)
+CHat c=5 CHatR ^=19^8
+Kick c=6 KickR ^=18
+
+E
+
+o3 (25)
+V37Q4A g4^32. r=15 V37Q47 g3 r6 V37Q46 > c4.^64
+r16.. V37Q47 < g6^32. r=7 V37Q32 g=5 r=19 V37Q42 g12^48 r48 V37Q3C f=23 r=1
+
+;==================;
+;    Channel #7    ;
+;==================;
+#7 /
+E
+
+(99)64
+
+EPianoE o3 (!905,-1) (!906,3)
+r4..^48 (21) (22) (21) (23) a+=7 r=1
+(!0,0)
+
+(99)32
+
+o3
+(43)
+f4^=10 r=14 V37Q47 f=65 r=31 V37Q42 g4.
+$df (!0,0)
+
+E
+
+CHat q7e c=5 CHatR ^=19 R q7f c=5 CHatR ^=11 R q7a c=5 CHatR ^=_3
+OHat c=10 OHatR ^=_14
+CHat c=5 CHatR ^=19
+Snare1 c=10 Snare1R ^=38
