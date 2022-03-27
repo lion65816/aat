@@ -290,13 +290,13 @@ NameData:
  db "STAR ROAD          "
  db "                   "
  ;Level 138
- db "TO BOWSER          "
- db "              THERE"
+ db "Weird Teal House   "
+ db "                   "
  ;Level 139
  db "                   "
  db "                   "
  ;Level 13A
- db "                   "
+ db "Use Of A Goal Posts"
  db "                   "
  ;Level 13B
  db "                   "

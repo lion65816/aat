@@ -1,0 +1,151 @@
+#am4
+
+;-- HEADER AUTOMATICALLY GENERATED --
+$ED $80 $6D $2B 
+$ED $80 $7D $00 
+$F0
+;-- END OF HEADER -------------------
+
+;Zombies Ate My Neighbours - "Evening of the Undead" - SNN
+;1335 Bytes
+#0 @8	q7F v255 y10  p30,32 w220 t43 
+;Main Bass
+o3 l16
+[f+8^f+g+8o4c+8<g+8f+2
+r4f+8a8f+4a8
+d2^8r1^4^8]4
+
+b2^4^b^32>c+r32
+d4^c+^32<b^32a4^b^32>c+^32
+c+1
+<d+4e4f4c+4
+<b2^4rbr32>c+r32
+d4^c+r32<br32a4^br32>c+r32
+c+4^8o2a8o3d+4^8<b8
+>f4r8d+8f+4f4
+r1
+
+#1 @14	q7F v242 y10 p30,32
+;Supporting Harpsi.
+l16
+o2f+^32r32f+f+a8>c+8r8<f+f+a8>c+8
+r8<f+f+a8>c+8r8<f+f+a8>c+8
+[r8<f+f+a8>d8r8<f+f+a8>d8]2
+
+<f+^32r32f+f+a8>c+8r8<f+f+a8>c+8
+r8<f+f+a8>c+8r8<f+f+a8>c+8
+[r8<f+f+a8>d8r8<f+f+a8>d8]2
+
+c+4<a4f+4>c+8^c+32e32
+f+4e4d4c+4
+d8<f+f+a8>d8r8<f+f+a8>d8
+r8<f+f+a8>d8r8<f+f+a8>d8
+<f+^32r32f+f+a8>c+8r8<f+f+a8>c+8
+r8<f+f+a8>c+8r8<f+f+a8>c+8
+[r8<f+f+a8>d8r8<f+f+a8>d8]2
+
+<b4>c+4f+4f4
+e4d4c+4<b4
+a4b4>c+4<a4
+>d+4e4f4c+4
+<b2^4rbr32>c+r32
+d4^c+r32<br32a4^br32>c+r32
+c+2<b2
+>c+4<b4a4g+4
+r1
+
+#2  @0	q7F v245 y10 p30,32
+;Distorted Flute
+[r1]2 r2^8 l16
+o4f+8g+8a8
+b8^a8^g+8>c+8^<b8^a8
+f+2^4^8r1^4
+<
+@8 
+v20 a+g+r v40 ag+r v60 
+v80 ag+r v100 ag+r v130 ag+r v160 ag+r
+v180 ag+r v200 ag+r v215 ag+r v220 ag+r
+@0
+[r1]8
+b2^4^b^32>c+r32
+d4^c+^32<b^32a4^b^32>c+^32
+c+1 [r1]8 r2^8
+
+#4  @0	q7F v225 y10 p30,32
+;Fade-In Drums and Flute
+[r1]6 r8 l16
+@7
+v20 a+g+r v40 ag+r v60 
+v80 ag+r v100 ag+r v130 ag+r v160 ag+r
+v180 ag+r v200 ag+r v215 ag+r v220 ag+r
+@0
+[r1]3
+<b>c+d8f+4f4d4
+[r1]2 l8 r @3
+v100 fr
+v130 ar
+v150 ar
+v170 ar
+v190 ar
+v210 ar
+v230 ar
+v250 ar [r1]15
+
+
+#7 @11	q7F v235 y10 p30,32
+;Fade-In Marimba and Guitar
+[r1]6 r8 l16
+@3
+v20 a+g+r v40 ag+r v60 
+v80 ag+r v100 ag+r v130 ag+r v160 ag+r
+v180 ag+r v200 ag+r v215 ag+r v220 ag+r
+@5 [r1]3
+<b>c+d8f+4f4d4
+[r1]2 l8 r
+v100 fr
+v130 ar
+v150 ar
+v170 ar
+v190 ar
+v210 ar
+v230 ar
+v250 ar [r1]15
+
+
+#6 @6	q7F v241 y10 p30,32
+;Counter Melody
+l16
+o2f+^32r32f+f+a8>c+8r8<f+f+a8>c+8
+r8<f+f+a8>c+8r8<f+f+a8>c+8
+[r8<f+f+a8>d8r8<f+f+a8>d8]2
+
+<f+^32r32f+f+a8>c+8r8<f+f+a8>c+8
+r8<f+f+a8>c+8r8<f+f+a8>c+8
+[r8<f+f+a8>d8r8<f+f+a8>d8]2
+
+c+4<a4f+4>c+8^c+32e32
+f+4e4d4c+4
+d8<f+f+a8>d8r8<f+f+a8>d8
+b>c+d8f+4f4d4
+o2f+^32r32f+f+a8>c+8r8<f+f+a8>c+8
+r8<f+f+a8>c+8r8<f+f+a8>c+8
+[r8<f+f+a8>d8r8<f+f+a8>d8]2
+
+<b4>c+4f+4f4
+e4d4c+4<b4
+a4b4>c+4<a4
+>d+4e4f4c+4
+<b2^4rbr32>c+r32
+d4^c+r32<br32a4^br32>c+r32
+c+2<b2
+>c+4<b4a4g+4
+r1
+
+#5  @23	q7F v235
+;Silent Maracas
+l1
+r^^^^^^^^^^^^^^^^^^^
+o1
+[>g8r8<b8r8]10
+r^^^^^^^^^^^^^^^^^^^^8
+

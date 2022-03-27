@@ -64,4 +64,6 @@ Locals:
 44  Ghost Trick - Suspicion (optimized).txt
 46  Tengu Rush Hour.txt
 48  Rusty Ruins Zone Act 2.txt
+4B  Zombies Ate My Neighbours - Level 2.txt
+4C  CUSTOM - Badlands.txt
 4D  Homestuck - 'Showtime'.txt
