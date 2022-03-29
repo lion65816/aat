@@ -227,7 +227,7 @@ NameData:
  db "This BG gives me   "
  db "DEJA VU?           "
  ;Level 123
- db "Bob-omb Battlefield"
+ db " Coasting Redwoods "
  db "                   "
  ;Level 124
  db "Welcome to new     "
