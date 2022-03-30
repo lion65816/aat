@@ -1,0 +1,297 @@
+#amk 2
+#path "upanddown"
+
+$EF$03$40$40
+$F1$01$45$00
+
+
+#spc
+{
+	#author "Vengaboys"
+	#title "Up and Down"
+	#game "Custom"
+	#comment "Ported by ChefBoyEric"  
+}
+#samples
+{
+#default
+"up.brr"
+"anddown.brr"
+"and_.brr"
+"woo.brr"
+"KMT Snare.brr"
+"MM7 High Hat.brr"
+"DNB Bass Drum.brr"
+}
+#instruments
+{
+"up.brr"       $ff $e0 $00 $02 $7d ;@30 o4
+"anddown.brr"  $ff $e0 $00 $02 $7d ;@31 o4
+"and_.brr"     $ff $e0 $00 $02 $7d ;@32 o4
+"woo.brr"      $ff $e0 $00 $02 $7d ;@33 o4
+"KMT Snare.brr" $FF $F6 $B8 $0E $40 ; @34 snare
+n1F $FF $F4 $00 $00 $00 ; @35 crash cymbal
+"MM7 High Hat.brr" $FF $FB $B8 $0A $00 ; @36 closed hi-hat
+"MM7 High Hat.brr" $FF $F5 $B8 $0A $00 ; @37 open hi-hat
+"DNB Bass Drum.brr" $FF $F4 $B8 $07 $FC ; @38
+}
+
+
+;================================;
+;	Percussion Macros
+;================================;
+
+	"@snare = @34 o3 v150 y10 | $FA $03 $4F"
+	"@kick = @38 o3 v150 y10 | $FA $03 $00"
+
+	"@closed = @36 o4 v150 y11"
+	"@open = @37 o4 v150 y9"
+	"@crash = @35 o4 v125 y10"
+		"@crash1 = @crash | $ED $7F $F0 | c1"
+		"@crash2 = @crash | $ED $7F $F1 | c2"
+
+	"@block = @24 o3 v130 y10"
+		"@block4 = @block | $FA $03 $00 | c4"
+
+
+
+
+
+w255
+
+; Track 1 start
+#0 t56
+
+@1  $ed$7f$E0 
+v150 
+   (01)[o3a+8r4a+8$dd$18$06>d+^8r8d+8r8]
+   (02)[f8r4f8$dd$18$06d+^8r8d+8r8]
+   (01)
+   (02)   
+   (01)
+   (02)   
+   (01)
+
+   o4 f8 r4 (03)[o4 f32r32f32r32f16r16f16r16d+16r16d+16r16<a+8r16a+12r16^24>f16r16f16r16f16r16d+16r16d+16r16<a+16r16a+16r16a+16r16>f32r32f32r32f16r16f16r16d+16r16d+16r16<a+8r16a+12r16^24>f16r16f32r32f32r32f16r16d+16r16d+16r16<a+8r4]4 
+
+   r8^2 
+ v100  (01)(02)(01)
+ v110  (02)(01)
+ v125  (02)(01)
+   
+ v150  o4 f8 r4 
+   (03)8
+   r8^2 
+v80  (01)(02)(01)
+v90  (02)(01)
+v100 (02)(01)
+v110 (02)(01)
+v120 (02)(01)
+v130 (02)(01)
+v140 (02)(01)
+v145 (02)(01)
+v150 (02)(01) 
+r1
+o4 r8 r4 (03)6 r8^2
+
+r1
+r1
+
+
+; Track 2 start
+#1 
+
+@1  $ed$7f$E0
+v150 
+   (11)[o2f+8r4f+8$dd$18$06b^8r8b8r8] 
+   (12)[o3c+8r4c+8$dd$18$06<b^8r8b8r8]
+   (11)
+   (12)
+   (11)
+   (12) 
+   (11)
+   o3 c+8 r4 (13)[o3 c+32r32c+32r32c+16r16c+16r16<b16r16b16r16f+8r16f+12r16^24>c+16r16c+16r16c+16r16<b16r16b16r16f+16r16f+16r16f+16r16>c+32r32c+32r32c+16r16c+16r16<b16r16b16r16f+8r16f+12r16^24>c+16r16c+32r32c+32r32c+16r16<b16r16b16r16f+8r4]4
+   r8^2 
+  v125 (11)(12)(11) 
+  v150 (12)(11) 
+  v175 (12)(11)    
+   
+  v200 o3 c+8 r4 
+   (13)8  
+   r8^2
+v80  (11)(12)(11)
+v90  (12)(11) 
+v100 (12)(11)
+v110 (12)(11)
+v120 (12)(11)
+v130 (12)(11)
+v140 (12)(11)
+v145 (12)(11)
+v150 (12)(11)
+
+r1
+r8 r4 (13)6 r8^2
+r1
+r1
+
+#2; vocals /Track 3
+
+
+v175 o4
+
+
+
+[r1]8
+[r1]16
+(20)[@30 c8 r8  r2^8]           ;up
+(21)[@31 c8^4 r4^2]             ;and down
+(20)                            ;up
+(22)[@31 c8^4 r2^8 @32 c8]      ;and down and
+(23)[@30 c8 r4 @31 c8^4 r4]3    ;up and down 
+(20)               ;up
+(21)             ;and down
+
+[r1]6
+;Woop every 2 measures
+
+v250 ; loud woos
+r2^4^8^16^32^64  ; make the woos slightly earlier
+(28)[@33 c4 r4^2^1]8
+r64
+
+[r1]8
+
+
+v175 
+(20)      ;up
+(21)      ;and down
+(20)      ;up
+(22)      ;and down and
+(23)3     ;up and down
+[@30 c8 r4 @31 c8^4 r8 @32 c8]5                 ;up and down and 
+[@30 c8 @31 c8^4 @30 c8 @31 c8^4]4              ;up and down up and down 
+[@30 c8 @31 c4 @32 c8  @30 c8 @31 c4 @32 c8]3   ;up and down and up and down and
+(20)      ;up
+(21)      ;and down
+
+
+
+[r1]7
+; more woops
+
+v250
+r2^4^8^16^32^64  ; make the woops slightly earlier
+(28)4
+(29)[@33 c4 r4^2]7
+r64
+
+v175
+@30  c8 r4 @31 c8^4 r8^16^32^64     ;up and down
+
+v250
+(29) r64
+r1
+
+
+
+
+#3 ; Drums track 1
+
+(31)[@block4 @block4 @block4 @block4 ]7
+@block4 r4 r4 r4
+
+(32)[@kick c4 c4 c4 c4]7
+(33)[@kick c4 c4 c8 c8 c4]
+(32)7
+(34)[@kick c4 r4 r2]
+
+(32)7
+(34)
+
+(32)7
+(33)
+(32)7
+(33)
+(32)7
+(34)
+
+(32)7
+(34)
+
+(32)15
+(33)
+(32)2
+ @kick [c8]8
+(34)
+
+r1
+
+(32)22
+(33)
+
+r1
+r1
+
+
+#4 ; Drums track 2
+
+
+
+r1
+r1
+r1
+r1
+(40)[@open c4 @snare c4 r4 c4]
+(41)[@snare r4 c4 r4 c4]2
+(42)[@crash1]
+
+(43)[@open c8 @closed c8 @snare c8 @closed c8 r8 c8 @snare c8 @closed c8]
+(44)[r8 @closed c8 @snare c8 @closed c8 r8 c8 @snare c8 @closed c8]7
+
+(43)
+(44)6
+(42)
+
+
+[r1]4
+(41)3
+(42)
+
+(43)
+(44)2
+(45)[r8 @closed c8 @snare c8 @closed c8 r8 @snare c8 c8 @closed c8]
+(44)4
+(43)
+(44)2
+(45)
+(44)4
+(43)
+(44)2
+(45)
+(44)3
+(42)
+
+[r1]8
+
+(41)12
+(40)
+(41)3
+(40)2
+ @open c4 c4 c4 c4
+(42)
+
+r1
+
+(43)
+(44)6
+(45)
+(44)3
+(45)
+(44)3
+(45)
+(44)3
+(45)
+(44)3
+
+@closed c4 r4 r2
+@crash1

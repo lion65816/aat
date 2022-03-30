@@ -31,7 +31,7 @@ dw $001A,$001A	; Level 001A
 dw $001B,$001B	; Level 001B
 dw $001C,$001C	; Level 001C
 dw $001D,$001D	; Level 001D
-dw $001E,$001E	; Level 001E
+dw $001E,$004A	; Level 001E
 dw $001F,$001F	; Level 001F
 dw $0020,$0020	; Level 0020
 dw $0021,$0021	; Level 0021

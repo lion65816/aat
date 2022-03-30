@@ -104,8 +104,8 @@ NameData:
  db "Feel free to try   "
  db "glitches there     "
  ;Level 01E
- db "Actually... it was "
- db "reference          "
+ db "Aileron Moonbounce "
+ db "                   "
  ;Level 01F
  db "    PREHISTORIC    "
  db "    DOOM CASTLE    "
