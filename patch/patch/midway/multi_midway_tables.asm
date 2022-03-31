@@ -62,7 +62,7 @@ dw $0115,$0115	; Level 0115
 dw $0116,$0116	; Level 0116
 dw $0117,$0117	; Level 0117
 dw $0118,$0118	; Level 0118
-dw $0119,$0119	; Level 0119
+dw $8017,$0119	; Level 0119
 dw $011A,$011A	; Level 011A
 dw $011B,$011B	; Level 011B
 dw $011C,$011C	; Level 011C

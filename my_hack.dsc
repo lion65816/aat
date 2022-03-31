@@ -240,6 +240,15 @@ da1	0	A block that will act like tile 25 for sprites
 e70	0	Kill the sprites when touching this block
 e71	0	Kill the sprites when touching this block
 ec0	0	Solid if anything goes left
+ed0	0	Solid if anything goes left
+ed1	0	Solid if anything goes right
+ee0	0	Solid if anything goes up
+ee1	0	Solid if anything goes down
+117d	0	A Donut Lift, which will fall shortly after being stepped on.
+11d7	0	A block that bounces sprites and mario! Doesn't bounce mario when ON.
+11d8	0	A block that bounces sprites and mario! Doesn't bounce mario when OFF.
+11d9	0	P switch will be ended soon
+11e4	0	Spawns sprite $76. Extra Byte 1 = $1C and Extra Byte 2 = $0.
 17a0	0	
 17a1	0	
 1840	0	A simple brick block.

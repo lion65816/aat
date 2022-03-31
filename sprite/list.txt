@@ -92,6 +92,13 @@
 69 venus_grindthrow.cfg
 6A shooter.json
 70 SeaPokey.cfg
+71 reverse_donut.json
+72 bouncing_spiny_egg.json
+73 Flyin_Disco_Shell.cfg
+74 POW_dis.json
+75 XYFollowSprite.json
+76 RotatingVine.cfg
+79 Disco_shell.json
 
 C0 balloon_shooter.cfg
 C1 lasershooter.cfg

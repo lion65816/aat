@@ -197,8 +197,8 @@ NameData:
  db "Riverside water    "
  db "...?               "
  ;Level 119
- db "BULLET HELL (not   "
- db "much of Touhou)    "
+ db "  Jumpers Are      "
+ db "  All Winners!     "
  ;Level 11A
  db "Complex turn block "
  db "maze - easy!       "

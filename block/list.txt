@@ -31,11 +31,21 @@ DA0:130 sprite_solid.asm
 DA1:130 mario_solid.asm
 E70-E71:25 killsprite.asm
 EC0:25 one_way_right.asm
+ED0:25 one_way_right.asm
+ED1:25 one_way_left.asm
+EE0:25 one_way_down.asm
+EE1:25 one_way_up.asm
+117D:100 donutblk_upward.asm
+11D7:25 bounce_off.asm
+11D8:25 bounce_on.asm
+11D9:25 endP.asm
+11E4:130 Vine/Spawn/RotVineBlock_Up.asm
 17A0:2 hurt.asm
 17A1:2 hurt.asm
 1840:25 SMB3Brick.asm
 1D0E:130 weak_break_block.asm
 1D0F:130 donutblk_solid.asm
+
 
 
 ;;2-way pipe caps

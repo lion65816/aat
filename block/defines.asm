@@ -125,3 +125,8 @@ endmacro
 %define_sprite_table(bounce_map16_low, RAM_BounceMap16Low, !RAM_BounceMap16Low, !RAM_BounceMap16Low_SA1)
 %define_sprite_table(bounce_map16_high, RAM_BounceMap16High, !RAM_BounceMap16High, !RAM_BounceMap16High_SA1)
 %define_sprite_table(bounce_sprite_tile, RAM_BounceTileTbl, !RAM_BounceTileTbl, !RAM_BounceTileTbl_SA1)
+
+!sprite_extra_byte1 = !extra_byte_1
+!sprite_extra_byte2 = !extra_byte_2
+!sprite_extra_byte3 = !extra_byte_3
+!sprite_extra_byte4 = !extra_byte_4
