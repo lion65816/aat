@@ -179,8 +179,8 @@ NameData:
  db "Good Ol' Days      "
  db "                   "
  ;Level 113
- db "Rather generic     "
- db "level              "
+ db "   Quirky Quarry   "
+ db "                   "
  ;Level 114
  db "Ghost House with   "
  db "secret exit (key)  "
