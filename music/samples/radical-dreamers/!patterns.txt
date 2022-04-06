@@ -1,0 +1,43 @@
+"Sine-like Synth.brr"   $ff $e0 $b8 $04 $02 $a4 $40 $40
+"Organ.brr"             $f8 $e0 $b8 $03 $01 $a4 $40 $40
+"Acoustic Guitar.brr"   $ff $eb $b8 $04 $8c $a4 $40 $40
+"Choir.brr"             $ff $e0 $b8 $07 $aa $a4 $40 $40
+"Pan Flute.brr"         $ff $e7 $b8 $06 $10 $a4 $40 $40
+"Synth Bass.brr"        $ff $f1 $b8 $04 $c2 $a4 $40 $40
+"Violin.brr"            $ff $e0 $b8 $05 $d4 $a4 $40 $40
+"Pizzicato Strings.brr" $ff $e0 $b8 $04 $8b $a4 $40 $40
+"Strings.brr"           $ff $e0 $b8 $04 $29 $a4 $40 $40
+"Flute.brr"             $ff $e0 $b8 $03 $01 $a4 $40 $40
+"Vibraphone.brr"        $ff $f0 $b8 $03 $d3 $a4 $40 $40
+"Piano (High).brr"      $ff $ed $b8 $04 $02 $a4 $40 $40
+"Piano (Low).brr"       $ff $ed $b8 $06 $69 $a4 $40 $40
+"Music Box.brr"         $ff $ed $b8 $03 $d5 $a4 $40 $40
+"Pipe Organ.brr"        $ff $e0 $b8 $06 $02 $a4 $40 $40
+"Harp.brr"              $ff $ef $b8 $06 $02 $a4 $40 $40
+"Contrabass.brr"        $ff $ed $b8 $06 $02 $98 $40 $40
+"Bagpipes.brr"          $ff $e7 $b8 $04 $ad $a4 $40 $40
+"Voice (Bom).brr"       $ff $e0 $b8 $03 $f7 $9c $40 $40
+"Voice (Uoh).brr"       $ff $e0 $b8 $03 $d4 $a4 $40 $40
+"Voice (La).brr"        $ff $ef $b8 $03 $d4 $ad $40 $40
+
+; Percussions
+"Tambourine.brr"        $ff $e0 $b8 $05 $1b $b0 $40 $40 ; o5c (o3d for low pitched)
+"Tom.brr"               $ff $e0 $b8 $03 $d4 $a4 $40 $40 ; (o3c for bass drum)
+"Kick.brr"              $ff $e0 $b8 $0b $78 $a4 $40 $40 ; o3g+/o4c
+"Snare.brr"             $ff $e0 $b8 $03 $d4 $a4 $40 $40 ; o4c
+"Open Hi-Hat.brr"       $ff $e0 $b8 $06 $14 $a4 $40 $40 ; o4c
+"Wood Bang.brr"         $ff $e0 $b8 $03 $d4 $a4 $40 $40 ; o4c
+"Shaker 1.brr"          $ff $e0 $b8 $08 $1c $a1 $40 $40 ; o3a
+"Shaker 2.brr"          $ff $e0 $b8 $07 $a7 $a2 $40 $40 ; o3a+
+"Bongo.brr"             $ff $e0 $b8 $0d $12 $9c $40 $40 ; o3
+
+; SFX
+"Water Flow.brr"        $ff $e0 $b8 $04 $8f $98 $40 $40 ; o3c/o3e
+"Crickets.brr"          $fa $e0 $b8 $04 $8d $ab $40 $40 ; o4g
+"Creaky Door.brr"       $ff $e0 $b8 $02 $df $a4 $40 $40 ; o4c
+"Wind.brr"              $ff $e0 $b8 $02 $4a $98 $40 $40 ; o3c
+"Water Drop.brr"        $ff $e0 $b8 $04 $90 $97 $40 $40 ; o2/o3
+"Footsteps.brr"         $ff $e0 $b8 $04 $8d $a4 $40 $40 ; o4
+"Bird.brr"              $ff $e0 $b8 $03 $f0 $98 $40 $40 ; o3c
+"Rumbling.brr"          $ff $e0 $b8 $02 $48 $8c $40 $40 ; o1/o2
+"Electricity.brr"       $ff $e0 $b8 $02 $48 $a1 $40 $40 ; o2/o3

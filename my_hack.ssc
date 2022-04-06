@@ -200,7 +200,13 @@
 74 0032 0,1,65
 75 0020 A sprite which spawns another sprite and makes it stay on the same X or Y position as Mario.
 75 0022 0,0,0
+77 0020 Once on screen, it will cause flower pattels falling down and to the left to appear. (purely decorative)
+77 0022 0,0,*Cluster Flower\nSpawner*
 79 0020 A Green Koopa.
 79 0022 0,-14,10 0,2,20
 79 0030 A Green Shell.
 79 0032 0,1,30
+85 0020 A "Kun" beta sprite that can follow walls, and disappear in a puff of smoke when touched. This one will walk back and forth.
+85 0022 4,0,477
+85 0030 A "Kun" beta sprite that can follow walls, and disappear in a puff of smoke when touched. This one will follow walls.
+85 0032 4,0,478

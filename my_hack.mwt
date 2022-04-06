@@ -99,8 +99,12 @@
 	Silver POW/P-switch
 75	X Follow Sprite
 	Y Follow Sprite
+77	Cluster Flower Spawner
 79	Green Koopa
 	Green Shell (stationary)
 	Green Shell (stationary, Koopa inside)
 	Green Shell (kicked)
 	Disco Shell
+85	Kun (Walks Back and Forth)
+	Kun (Wall Following, Slow)
+	Kun (Wall Following, Fast)

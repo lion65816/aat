@@ -98,7 +98,9 @@
 74 POW_dis.json
 75 XYFollowSprite.json
 76 RotatingVine.cfg
+77 flowerspawn.json
 79 Disco_shell.json
+85 Kun.json
 
 C0 balloon_shooter.cfg
 C1 lasershooter.cfg
@@ -114,6 +116,7 @@ CLUSTER:
 00 cluster_sparkle.asm
 01 laser.asm
 10 bullet.asm
+11 flowers.asm
 
 EXTENDED:
 00 boomerang.asm

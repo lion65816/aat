@@ -149,8 +149,8 @@ NameData:
  db "   The Castle      "
  db "      of Spirits   "
  ;Level 109
- db "Rare vertical      "
- db "design             "
+ db " A Nighttime Hike  "
+ db "   Up the Mountain "
  ;Level 10A
  db "Lucifer's Lava Lamp"
  db "                   "
