@@ -1,0 +1,102 @@
+#amk 2
+#SPC
+{
+        #title "Maple Treeway"
+	#game "Mario Kart Wii"
+        #comment "big mkw bam shock doge pts"
+        #length "2:10"
+}
+#samples
+{
+#optimized	
+"C32016/cymbal.brr"
+"C32016/sax.brr"
+"C32016/harmonica.brr" 
+"C32016/strings.brr" 
+"C32016/piano.brr"
+"C32016/guitar.brr"
+"C32016/triangle.brr"
+"C32016/harp.brr"
+}
+#instruments
+{
+"C32016/cymbal.brr" $ff $e9 $00 $03 $cd     ;@30 
+"C32016/sax.brr" $00 $00 $d7 $02 $00        ;@31
+"C32016/harmonica.brr" $ff $e0 $00 $03 $01  ;@32 
+"C32016/sax.brr" $A6 $E7 $B8 $02 $00        ;@33 slow sax
+"C32016/strings.brr" $ff $e0 $00 $02 $7d    ;@34 
+"C32016/piano.brr" $AF $D3 $B8 $07 $B8      ;@35 
+"C32016/guitar.brr" $FF $F1 $B8 $04 $82     ;@36
+"C32016/triangle.brr" $00 $00 $20 $04 $00   ;@37
+"C32016/harp.brr" $FF $F3 $00 $03 $00       ;@38 
+}
+$EF$00$30$30
+$F1$06$50$00
+
+#0 @31 v200 y10 w149 t60 l16
+r8o3a+r>d+rgra+8g+rgrfrd+2>d+16r4^8^16l8@32v149r<a+>d+gg+gfd+/v149c+d+f$EC$00$10$04 c4$EC$00$00$00 c+c<g+ra+>d+gg+gfd+g2^4^r4<a+>d+gg+gfd+c+d+f$EC$00$10$04 c4$EC$00$00$00 c+c<g+ra+>d+gg+gg+a+g2^4^r4@31v220<dga+16^32a+32>c<a+>cd16^32d32d+c+<b>c+<a+4gfrd+g>c16^32c32dcdd+16r16f4d+f16^32f32g4f4@32r<dga+>c<a+>cdd+c+<bg+g4f4rd+g>cdcdd+f2c4f4g1@35v169<r<g>cev200fv169edc<b>cd<g16r^48@36v179>$EC$00$0C$01g^24$EC$00$00$00edc@35v169<g>cev200fv169edcer1<g>cev200fv169edc<b>cd<g16r^48@36v179>$EC$00$0C$01g^24$EC$00$00$00ebg@35v169<g>cev200fv169efger1<a>cev200fv169efgv200av169gab>v200cv169<gegfrfrfedcdr16dr16dr16dr16<bgrg>cev200fv169edc<b>cd<g16r^48@36v179>$EC$00$0C$01g^24$EC$00$00$00edc@35v169<g>cev200fv169edcer1<g>cev200fv169edc<b>cd<gr>V200gfeV179grg+a+d+<v159d+ga+>crdd+e4v200fgg2f2@32v149ra+>d+gg+gfd+[r1]100;
+
+#1 @36 v179 y10 l8
+r8o3a+>d+gv255g64g+64v179b-16^32g+gfV255c64d64v179d+4^8^16^32>d+8r4^8l16o3v200$EF$02$30$30@38d+8a+>d+8gd+<a+d+8b>d+8g+d+<b/$EF$02$30$30v200@38d+8d+g+8>c+<g+d+d+8d+g+8>c<g+d+d+8a+>d+8gd+<a+d+8b>d+8g+d+<bd+8a+>d+8gd+<a+d+8a+>d+8gd+<a+d+8a+>d+8gd+<a+d+8b>d+8g+d+<bd+8d+g+8>c+<g+d+d+8d+g+8>c<g+d+d+8a+>d+8gd+<a+d+8b>d+8g+d+<bd+8a+>d+8gd+<a+d+8a+>d+8gd+<a+<g8>dg8a+gd<g8>g>c8d+c<g<g8>d+g+8bg+d+d+8a+>d+<d8fa+c8g>c8d+c<g<a+8>fa+8>d<a+f<g+8>d+g+8>c<g+d+<a+8>fa+8>d<a+f<g8>dg8a+gd<g8>g>c8d+c<g<g8>d+g+8bg+d+d+8a+>d+<d8fa+c8g>c8d+c<g<a+8>fa+8>d<a+f$EF$00$30$30
+[r1]14l1v189@34g
+ggg4a4b4a4
+g
+g
+v159g
+<g+2^4>a+4
+a+2g+2
+a+2[r1]100;
+
+#2 @8 v255 y10 l8
+$FA$03$60
+ro1a+>d+ga+g+gfd+2>d+16r^16o1a+4>d+^16a+16r>d+4<a+d+<a+/a+^16>f16rg+4d+<g+>d+d+^16a+16r>d+4<a+d+<a+>d+^16a+16r>d+4o1a+a+4>d+^16a+16r>d+4<a+d+<a+a+^16>f16rg+4d+<g+>d+d+^16a+16r>d+4<a+d+<a+>d+^16a+16r>d+4<d+d+4g^16>d16rg4<gcg<g+^16>d+16rg+d+4ddc^16g16r>c4o1a+a+a+g+^16>d+16rg+<a+^16>f16ra+g^16>d16rg4<gcg<g+^16>d+16rg+d+4ddc^16g16r>c4o1a+a+a+>fr16fr16fr2gr16gr16gr2[cr16cr4cr^16c]7cr16cr4cr^16<b>ar16ar4ar^16agr16gr16freredr16dr4er^16fgr16gr4gr^16g[cr16cr4cr^16c]6d+r16d+r4d+r^16d+g+r16g+r4d+r^16<g+>a+1d+^16a+16r>d+4<a+d+<a+;
+
+#3 @36 v179 y10
+ro2a+>d+gv255g64g+64v179b-16^32g+gfv255c64d64v179d+4^^16^32>d+16r4^^16r1/[r1]7@33v140a+2>c2<b2a+2>c2<a+2>c2d1d+1^1d2@36v179c16rc16rc16r4^16c<ab16rb16rb16r2^^16
+@35v149<eg>cv200cv149c<bgggber16^48
+@36v200$EC$00$10$01>b8^24$EC$00$00$00g16r16f16r16e
+@35v149<eg>cv200cv149c<bg>cr
+@36v200gv159gv200d4>c32c+32d8^16c8<
+@35v149<eg>cv200cv149c<bggabe
+@36v200r16^48>$EC$00$10$01b8^24$EC$00$00$00g>dc
+@35v149<<eg>cv200cv149cccc
+@36v200l16r4>ef32e32dc<bagfedc8
+@35v149l8<ea>cv200cv149ccdv200fv149cffv200gv149ececrcrcc<aa
+ar16ar16ar16br16gdr8
+@35v149eg>cv200cv149c<bggaber16^48   
+@36v200$EC$00$10$01>b8^24$EC$00$00$00g16r16f16r16e
+@35v149<eg>cv200cv149c<bg>cr
+@36v200gv159gv200d4>c32c+32d8^16c8
+@35<<eg>cv200cv149c<bggaber2[r1]2@38<l16v200$EF$08$30$30a+8>fa+8>d+<a+f<a+8>fa+8>d<a+fd+8a+>d+8gd+<a+d+8b>d+8g+d+<b[r1]100;
+
+#4 @35 y10 l8
+ro2v170a+>d+gb-g+gfd+2>d+16r4^^16r1/[r1]7o4@33v140g1g+2g2g2f2g+2a+1>c2<b2a+2>c2<a+2@36v179a16ra16ra16r4^16ffg16rg16rg16r2^^16@34v220
+g>cefedc<b>cd<gr2^
+g>cefedcer1
+<g>cefedc<b>cd<gr2^
+g>cefefger1
+<a>cefefgagab>c<gegfrfrfedcdr4@35o5v179l16c<bagfedc<bal8g
+@34v220>>
+g>cefedc<b>cd<gr2^
+g>cefedcer1
+<g>cefedc<b>cd<gr<g>v179cegrg+a+d+4<ga+>crdd+4^fgv100$E8$20$B3g2v100$E8$20$B3f2v100$E8$20$B3d+2[r1]100;
+
+#5 y10 l1
+r^^/[r]7o4@33v149d2d+^d2d+2f2gg+2gf2@36v179f16r8f16r8f8r2d16r8d16r8d16[r]8r2^16o3@34<
+v189a2^4f4g4^8f4^8e4d2^4f4g>
+e
+d
+e
+e4f4g4f4
+e
+dv179
+d+
+r2^4g4>
+v100$E8$20$B3b-2v100$E8$20$B3a-2v100$E8$20$B3
+g2[r1]100;
+
+#6 @29 v255 y10 l16
+r1^2o3d8^o3@12ac8c8r4^8o3@10dr8dd8d8r8/r4^8[dr8dd8d8r2]6dr8dd8d8ddr4^8[dr8dd8d8r2]6dr8dd8dr8^[d8^]4d8d8d8r[d]9[e]4l8[@21cr16@21cr16@10er16e16ee@21c]7@21cr16@21cr16@10er16e16eee16e16[@21cr16@21cr16@10er16e16ee@21c]3@21cr16@21cr16@10er16e16e[e16]4[@21cr16@21cr16@10er16e16ee@21c]8r4^@10er16e16eer2er16e16ee[r1]100;
+
+#7 @0 v255 y10 l4
+r1^1o4r8@37b8@12e8@37bbb8/r8[@37b8@12e8@37bbb]6b8@12e8@37bbb8v179@30g8v255[@37b8@12e8@37bbb]8@37bbb@37b8v179@30e8v255[@37b8@12e8@37bbb]20@37bbb@37bb8@12e8@37bbb8[r1]100;

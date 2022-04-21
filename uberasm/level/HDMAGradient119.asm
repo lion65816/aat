@@ -81,15 +81,15 @@ init:
 		LDA #$18
 		TSB $0D9F|!addr
 
-LDA #$00
-STA $19
-
-LDA #$00
-STA $0DC2|!addr
-
-LDA #$00
-STA $14AF|!addr
-RTL
+	LDA $19
+	BEQ +
+	LDA #$01
+	STA $19
++	LDA $0DC2|!addr
+	BEQ +
+	LDA #$01
+	STA $0DC2|!addr
++	RTL
 
 .Table1
 db $03,$2A,$40

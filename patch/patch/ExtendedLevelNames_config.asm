@@ -170,8 +170,8 @@ NameData:
  db "DON'T take Yoshi   "
  db "for secret exit... "
  ;Level 110
- db "Complex block path "
- db "(fly over it)      "
+ db "My Green Garden    "
+ db "in Green Forest    "
  ;Level 111
  db "Fortress of 1      "
  db "FAST SMASH ACTION!!"
