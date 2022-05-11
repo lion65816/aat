@@ -108,3 +108,8 @@ db $0C,$5B
 db $0C,$5C
 db $05,$5D
 db $00
+
+load:
+    lda #$01 : sta $1B9B|!addr
+    rtl
+    

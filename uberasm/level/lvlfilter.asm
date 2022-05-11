@@ -65,3 +65,8 @@ init:
 	LDA #$01
 	STA $0DC2|!addr
 +	RTL
+
+load:
+    lda #$01 : sta $1B9B|!addr
+    rtl
+    

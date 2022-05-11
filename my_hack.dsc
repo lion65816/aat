@@ -237,8 +237,8 @@
 561	0	A block that will boost the player upwards.
 da0	0	A block that will act like tile 25 for Mario
 da1	0	A block that will act like tile 25 for sprites
-e70	0	Kill the sprites when touching this block
-e71	0	Kill the sprites when touching this block
+e70	0	Sprites touching this block will die.
+e71	0	Sprites touching this block will die.
 ec0	0	Solid if anything goes left
 ed0	0	Solid if anything goes left
 ed1	0	Solid if anything goes right
