@@ -70,5 +70,7 @@ STZ $0F48|!addr
 
 load:
     lda #$01 : sta $1B9B|!addr
+    lda #$01
+    sta $13E6|!addr
     rtl
     

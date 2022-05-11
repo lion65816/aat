@@ -41,6 +41,7 @@ patches
 	patch\patch\midway\multi_midway_1.7.asm
 	patch\patch\ExtendedLevelNames.asm
 	patch\patch\extendmario.asm
+	patch\patch\remove_statusbar_toggled.asm
 ]
 
  -- rom paths
