@@ -46,11 +46,13 @@ org $008EF4				; original code:
 					; LDA.W $0F38
 					; STA $03
 					; LDA.W $0F37
-	
 
-org $00F60F				; original code:
-	autoclean JSL IncreaseDeaths	; LDA.B #$FF
-	NOP				; STA.W $0DDA
+;Conflicts with SimpleHP. Hijack moved by Lord Ruby.
+;org $00F60F				; original code:
+;	autoclean JSL IncreaseDeaths	; LDA.B #$FF
+;	NOP				; STA.W $0DDA
+org $00F614						;This also saves a NOP, ought to have put it here in the first place :/
+autoclean JSL IncreaseDeaths	;Original code: LDA #$09 : STA $71
 
 freecode
 DeathReset:
@@ -105,7 +107,9 @@ IncreaseDeaths:
 	STA !700000+$07EF,x	; /
 	PLX
 
-	LDA #$FF		; \ restore original code
-	STA $0DDA|!addr		; /
+;	LDA #$FF		; \ restore original code
+;	STA $0DDA|!addr		; /
+
+	LDA #$09 : STA $71	;Restore (set animation to dying)
 
 	RTL

@@ -42,6 +42,7 @@ patches
 	patch\patch\ExtendedLevelNames.asm
 	patch\patch\extendmario.asm
 	patch\patch\remove_statusbar_toggled.asm
+	patch\patch\simpleHP.asm
 ]
 
  -- rom paths
