@@ -73,3 +73,4 @@ Locals:
 4F  07 The Girl Who Stole the Star.txt
 55  upanddown.txt
 57  MKW-Maple_Treeway.txt
+5A  Star Ocean - Tense Atmosphere.txt
