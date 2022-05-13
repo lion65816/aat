@@ -172,3 +172,5 @@ org ($07F3FE+$7D)|!bank  ; P-Balloon
 db $25  ; palette A | originally: db $21
 org ($07F3FE+$2E)|!bank  ; Spike Top
 db $15  ; palette A | originally: db $19
+org $02CAFA|!bank        ; Chuck Arm
+db $4B,$0B  ; palette D | originally db $47,$07
