@@ -44,6 +44,7 @@ patches
 	patch\patch\remove_statusbar_toggled.asm
 	patch\patch\simpleHP.asm
 	patch\patch\easy_mode7.asm
+	patch\patch\timeupfix.asm
 ]
 
  -- rom paths
