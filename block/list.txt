@@ -45,6 +45,21 @@ EE1:25 one_way_up.asm
 1840:25 SMB3Brick.asm
 1D0E:130 weak_break_block.asm
 1D0F:130 donutblk_solid.asm
+60DD:130 StickyBlock.asm
+60DE:130 StickyBlock.asm
+60DF:130 StickyBlock.asm
+60ED:130 StickyBlock.asm
+60EE:130 StickyBlock.asm
+60EF:130 StickyBlock.asm
+60FD:130 StickyBlock.asm
+60FE:130 StickyBlock.asm
+60FF:130 StickyBlock.asm
+61CD:130 conveyer move left fast.asm
+61CE:130 conveyer move left fast.asm
+61CF:130 conveyer move left fast.asm
+61DD:130 conveyer move right fast.asm
+61DE:130 conveyer move right fast.asm
+61DF:130 conveyer move right fast.asm
 
 
 
