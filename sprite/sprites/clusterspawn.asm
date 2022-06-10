@@ -1,8 +1,8 @@
 ; From Ladida's cluster sprite package. Slightly modified.
 ;
-; Cluster sprite number is set in the CFG file as extra property byte 1.
+; Cluster sprite number is set in lunar magic as extra extension byte 1.
 
-!SpikeCount       = $02   ; Amount of sprites to fall down, -1. Values outside of 00-13 are not recommended.
+!SpikeCount       = $04   ; Amount of sprites to fall down, -1. Values outside of 00-13 are not recommended.
 
 print "INIT ",pc
 
@@ -13,7 +13,8 @@ print "INIT ",pc
 
 	LDY #!SpikeCount
 -
-	LDA !extra_prop_1,x    ; \ set cluster sprite number
+	;LDA !extra_prop_1,x    ; \ set cluster sprite number
+	LDA !extra_byte_1,x
 	CLC                    ; |
 	ADC #!ClusterOffset    ; | add offset due to original cluster sprites.
 	STA !cluster_num,y     ; /

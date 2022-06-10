@@ -92,8 +92,8 @@ NameData:
  db "  Fishing Grounds  "
  db "                   "
  ;Level 01A
- db "ROM contains beta  "
- db "version of this    "
+ db "     Love Frog     "
+ db "    Hangout Spot   "
  ;Level 01B
  db "  THE SANBO WOODS  "
  db "                   "
@@ -194,8 +194,8 @@ NameData:
  db "Number of Yoshi    "
  db "coins - 1 (one)    "
  ;Level 118
- db "Riverside water    "
- db "...?               "
+ db " Hot Glue Garbage  "
+ db "                   "
  ;Level 119
  db "  Jumpers Are      "
  db "  All Winners!     "

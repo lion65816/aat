@@ -71,6 +71,9 @@ Locals:
 4C  CUSTOM - Badlands.txt
 4D  Homestuck - 'Showtime'.txt
 4F  07 The Girl Who Stole the Star.txt
+50  Yukari Space.txt
+51  BombRushBlush(MMX).txt
 55  upanddown.txt
 57  MKW-Maple_Treeway.txt
 5A  Star Ocean - Tense Atmosphere.txt
+5C  442.txt

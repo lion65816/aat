@@ -254,3 +254,18 @@ ee1	0	Solid if anything goes down
 1840	0	A simple brick block.
 1d0e	0	weak_break_block.asm
 1d0f	0	A Donut Lift, which will fall shortly after being stepped on.
+60dd	0	StickyBlock.asm
+60de	0	StickyBlock.asm
+60df	0	StickyBlock.asm
+60ed	0	StickyBlock.asm
+60ee	0	StickyBlock.asm
+60ef	0	StickyBlock.asm
+60fd	0	StickyBlock.asm
+60fe	0	StickyBlock.asm
+60ff	0	StickyBlock.asm
+61cd	0	conveyer move left fast
+61ce	0	conveyer move left fast
+61cf	0	conveyer move left fast
+61dd	0	conveyer move right fast
+61de	0	conveyer move right fast
+61df	0	conveyer move right fast

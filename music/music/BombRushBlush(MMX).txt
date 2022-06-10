@@ -1,0 +1,190 @@
+#amk 2
+
+#SPC
+{
+    #game    "Splatoon"
+    #author  "Remixer : JX"
+    #title "Bomb Rush Blush(MMX Style)"
+}
+
+#path "BombRushBlush(MMX)"
+
+#samples
+{
+    #optimized
+    "1a.brr"
+    "12.brr"
+    "14.brr"
+    "15.brr"
+    "16.brr"
+    "18.brr"
+    "23.brr"
+    "Hit.brr"
+    "Tom.brr"
+    "bass.brr"
+    "synth strings.brr"
+}
+
+#instruments
+{
+    "16.brr"                      $ff $e8 $b8 $0f $5e
+    "Tom.brr"                     $FF $F5 $80 $07 $A8 
+    "23.brr"                 $FF $F6 $B8 $04 $00 
+    "18.brr"                      $ff $e0 $b8 $08 $00 
+    "synth strings.brr"           $FF $E0 $B8 $04 $80
+    "Hit.brr"                     $FF $E0 $80 $07 $9F 
+    "15.brr"                      $ff $e0 $b8 $0f $58 
+    "12.brr"                      $ff $f4 $b8 $07 $7e 
+    "bass.brr"                    $FF $ED $B8 $04 $79
+    "14.brr"                      $f6 $f1 $b8 $0b $c4
+    "1a.brr"                      $ff $e0 $b8 $05 $fc
+}
+
+w150 t66
+
+$F4 $02
+
+(!900)[$F6$05$FF]
+(!901)[$F6$05$00]
+(!902)[$F6$15$FF]
+(!903)[$F6$15$00]
+(!904)[$F6$25$FF]
+(!905)[$F6$25$00]
+(!906)[$F6$35$FF]
+(!907)[$F6$35$00]
+
+$ef $2f $9d $63
+$f1 $03 $44 $01
+$f5 $34 $33 $00 $d9 $e5 $01 $fc $eb
+
+"S = @30"
+"Tm = @31"
+"K = @36"
+"Cy = @39 v162"
+
+#0 l8 (!900,-1) (!901, 3) o3 q7f r=191 /
+    
+    @32 v172
+    [ [[bb > b < b]]6 > ee > e < ef+f+ > f+ < f+=23 <]3
+    [bb > b < b]4 > [[dd > d < d]]2 f+f+ > f+ < f+ f+f+ > f+ < f+=23  <
+    
+    [[gg > g < g]]2 [[aa > a < a]]2
+    [[dd > d < d]]2 [[f+f+ > f+ < f+]]2
+    
+    [[ee > e < e]]2 [[aa > a < a]]2
+    [[> f+ < f+f+f+]]2 [[> f+ < f+]]4
+    
+    > [b > db < b > a < b4 > baa4aef+4d] d4.dad4da < a4a > af+ed
+    f+ < b4b > f+ < b > f+ < b> a4f+4ef+df+ < a > db < a > a4f+ < a> af+ga > d < agf+ <
+    * a > db < a > a < a > f+ < a > a4edaf+ed <
+    
+   [b > db < b > a < b > f+b] < a4g4f+4ed >
+   * a > d < af+ef+d=47
+
+
+
+
+#1 l8 (!902,-1) (!903, 3) o3 q7f r=191 / 
+    
+    @33 v224 
+    (70)[a4rf+16r16a4rf+16r16] a16r16f+16r16a16r16f+16r16a4r4
+    (70) (72)[e16r16d16d16e16r16e16r16d4r=47]
+    
+    (70)
+    a16a16f+16r16a16r16f+16r16a4rf+16r16
+    a16r16f+16r16a16r16f+16r16brarb16r16brf+a4r=47
+    
+    > (71)[^=27 $EE $25 @40 v104 e16r16d16r16ef+16r16ered16r16ef+16r16ef+16r16ef+16r16e=21]
+    $EE $00 @33 v181 < (70) (72)
+    (71) $EE $00 @33 v181 a4rf+16r16b4ra16r16b16r16brf+a4r4
+    ^=27 $EE $25 @40 v104 b2.rabr4 > drd16r16ed16r16f+2.ref+rarba16r16f+=23
+    
+    d16r16erf+ < brb > dref+16r16ef+16r16drd
+    ef+r4.f+r4.f+a16r16f+a16r16f+r=45
+    
+    $EE $00 @34 v182 < 
+    [ddrdrdrdeererereaarararaf+f+rf+rf+rf+]2
+    [ddrdrdrdeererere]f+f+rf+rf+rf+bbrbrbrb * < aa [[ra]]5 r=95
+
+
+
+#2 l8 (!904,-1) (!905, 3) o2 q7f r=191 / @34 v162
+    
+    [[f+babf+b4bbb16b16 > b < bf+b4b f+babf+b4bee16e16 > e < ef+f+16f+16 > f+ < f+=23]]3
+    
+    f+babf+b4bbb16b16 > b < bf+b4b [[a > d > d < d <]]2 >
+    f+16r16f+16f+16 > f+16r16f+16r16 < f+16r16 > f+rf+16r=11
+    
+    < g16r16 > g16r16 < d16r16 > d16r.d16r16g16r.
+    < e16r16e16e16a16r16e16r16 < e16r16 > e16r16a16r.
+    d16r16 > d16r16 << a16r16 > a16r.a16r16 > d16r.
+    < [c+16r16c+16c+16f+16r16f+16r16]2
+    
+    re > e16r16 < e16r16re16e16 > e16r16 < e16r. > ar < ar < a16a16a16r16 > a16a16 < f+4r4f+4r4 > 
+    f+16r16 > f+16r16c+16r16c+16r16 < f+16r16 > c+16r16 < f+16 > [[f+16]]3
+    
+    v182 << 
+    [ggrgrgrgaarararaddrdrdrdbbrbrbrb]2
+    ggrgrgrgaarararabbrbrbrb > eererere <
+    ggrgrgrg @33 v181 >> arbraf+16r16gf+r
+    @34 v162 < [[dr]]5 dr=95
+
+
+
+#3 l8 (!906,-1) (!907, 3) o2 q7f r=191 / 
+    
+    [@35 v196 b v162 b v118 b v91 b v70 b2 > Cy c1 < @35 v196 b v162 b v118 b v91 b v70 b2 > Cy c=191 < ]2
+    
+    @40 >> 
+    [e16r16d16r16ef+16r16ered16r16ef+16r16ef+16r16ef+16r16ef+16r16]
+    d < b16r2.^16 Cy c=191
+    @40 > * ar2.. Cy < c2.. @40 a=23
+    
+    b2.rabr4 > drd16r16ed16r16f+2.ref+rarba16r16f+d16r16
+    erf+ < brb > dref+16r16ef+16r16drde
+    f+r4.f+r4. f+a16r16f+a16r16f+r4.
+    
+    @33 v224 
+    [erererederbarf+e16r16d16r16ef+16r16ef+16r16ef+rf+16r16af+16r16edr4.d]
+    f+16r16drdf+16r16df+16r16grard16r16ef+16r16d16r16f+ r1 Cy < c2c4c4 >
+    @33 v224 * a16r16drda16r16drdf+rgrf+d16r16ed r1^=191
+
+#4 l8 q7f r2 @31 v224 o3 [b>e16<] >e16 * e=11 @38 <</
+    
+    (80)[ [[rbaf+rf+ab]]3 e16r16e16e16 > e < ef+16r16f+16f+16 > f+ < f+=23]
+    [rbaf+rf+ab]3 e16r16e16e16 > e < ef+rf+r=23
+    (80) [rbaf+rf+ab]2
+    r > drdrded r < f+rf+r > f+ < f+ > f+=23
+    
+    r < grgrgrgra16a16 > a16r16 < ar > a < a > ardrdrdrd
+    r < f+16f+16 > f+16r16 < f+r > f+ < f+ > f+
+    r < erere > e < erarara > a < a > f+4 < f+r > f+4 < f+r > f+rf+r < f+4f+ > f+
+    [r < grgrgrgaa > a < ara > a < a > ddrdrd > d < dr < brbr > b < b > b]2
+    r < grgrgrgaa > a < ara > a < arbrbrb > b < br > ererere
+    
+    g < grgrgrgrara > a < a > a < a> d4r4d4r4
+    d16r16d16r16 > d16r16 < d16r16d16r16d16d16 > d=46 q7f ^=1
+
+
+#5 l4 q7f S o3 cc c8c8c8c=23 / S v224
+    
+    (90)[ [[K c Sc K c Sc]]3 K c8 Tm v196 > c16 < a16 S v224 c8 Tm v196 > c8 < K c8 Tm v196 > c16 < a16 S v224 c8 Tm v196 > ] c=23 < v224
+    (92)[K c Sc K c Sc]3 K c8 Tm v196 > c16 < a16 S v224 c8 Tm v196 > c8 K v224 < c8 S [[c16]]5 c=11
+    (92)3 K c Sc K c8 Tm v196 > c16 < a16 S v224 c8 c16c=11
+    (92)3 K c Sc K c8 S [[c16]]5 c=11
+    (90) c8 [[K c Sc]]3 [[c16]]8 S c K c S c K c
+    Sccc Tm v196 > c16 < a16f+16d+16 v224 
+    (91)[ [[K c Sc K c Sc]]3 K c Sc K c8 Tm v196 > f16d16 S v224 < c8 Tm v196 > f16d16 <]
+    (92)3 K v224 c Sc K c8 Tm v196 > c16 < a16 S v224 c8 Tm v196 > c8 <
+    (91)(92) K v224 c Sc K c16 Tm v196 > f16d8 S v224 < c8 Tm v196 > f8
+    K v224 < c Tm v196 >> c < f8f8f8 f4ff8 < f8f16f16 > f16f16f16f=10 q7f ^=1
+
+
+
+#6 l8 q7f o4 r=191 @37 v128 / 
+    [ [[c]]31 c=23 ]4
+    [[c]]61 c4.
+    [[c]]127 c=23
+
+
+

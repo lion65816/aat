@@ -1,0 +1,98 @@
+#am4
+#spc
+{
+	#author "Talkhaus"
+	#title "On Cloud 9"
+	#game "A Super Mario Thing"
+}
+$ED $80 $6D $2B
+$ED $80 $7D $00
+$F0
+
+#0 w255 t28
+
+#0	@0	q7f v250 y10
+#1	@1	q7f v170 y12
+#2	@1	q7f v170 y8
+#3	@8	q7f v220 y5
+#4	@3	q7f v200 y5
+#6	@22	q7f v200 y10
+
+;Flute
+#0
+o4
+r1r1
+g+4^8a8 g+4e4 f+2c+2
+c+4^8d+8 e4g+4 f+2<b2>
+g+4^8a8 g+4e4 f+2c+2
+a4e4f+4{g+4f+8} e2r2
+e4^8d+8 e4f+4 d+2<b2>
+c+4^8d+8 c+4<b4 g+2<e2>>
+{f+8g+8f+8}e4e4d+4 e4<b4>d+2 
+c+4<b8>c+8 e4c+8e8 f+2a2
+
+
+;Light Strings
+#1
+o4
+b8 g+8 e8 g+8   b8 g+8 e8 g+8    b8 g+8 e8 g+8    b8 g+8 e8 g+8
+b8 g+8 e8 g+8   b8 g+8 e8 g+8     g+8 e8 f+8 c+8    g+8 e8 f+8 c+8
+f+8 e8 f+8 c+8   f+8 e8 f+8 c+8   a8 d+8 f+8 d+8   a8 d+8 f+8 d+8
+b8 g+8 e8 g+8   b8 g+8 e8 g+8   f+8 a8 f+8 e8  f+8 a8 f+8 e8
+c+8 e8< b8>e8 c+8e8d+8f+8 b8g+8e8g+8 b8g+8e8g+8
+e4c+4 e4c+4 g+4d+4 g+4d+4
+e4c+4 e4c+4 d+4<b4> d+4<b4>
+a4c+4 a4c+4 c+4e4 c+4e4
+a4c+4 a4c+4 d+4b4 d+4b4
+
+;Light Strings
+#2
+o4
+d+4<b4> d+4<b4> d+4<b4> d+4<b4>
+d+4<b4> d+4<b4> c+4a4 c+4a4
+e4c+4 e4c+4 <b4a4f+4d+4>
+d+4<b4> d+4<b4> e4f+4 e4f+4
+<a4g+4 f+4f+4  e4<b4> >d+4<b4>
+b4g+4 b4g+4 b4g+4 b4g+4
+g+4e4 g+4e4 g+4e4 g+4e4
+g+4f+4 g+4f+4 g+4e4 g+4e4
+g+4e4 g+4e4 f+4d+4 f+4d+4
+
+;Lead Bass
+#3
+o2
+e1e1
+e1a1
+f+1b1
+e1f+1
+a4g+4f+4b4 e1
+c+2 c+2 <b2 b2>
+a2 a2 e2 e2
+f+2 f+2 c+2 c+2
+a2 a2 b2 b2
+
+;Marimba
+#4
+o3
+r8b16b16g+16g+16e8 r4r4 r8b16b16g+16g+16e8 r4r4
+r8b16b16g+16g+16e8 r4r4  r8a16a16f+16f+16c+8 r4r4
+r8a16a16e16e16c+8 r4r4  r8b16b16f+16f+16d+8 r4r4
+r8b16b16g+16g+16e8 r4r4  r8a16a16f+16f+16c+8 r4r4
+r1r1
+>r8e16e16d+16d+16c+16c+16< b16 b16g+16g+16 d+16d+16 <b16b16> r1
+>r8a16a16g+16g+16e16e16c+16c+16<a16a16 g+16g+16 c+16c+16 r1
+r1r1
+r1r1
+
+;Cymbals
+#6
+o3
+e8r4^8 e8r4^8 e8r4^8 e8r4^8
+e8r4^8 e8r4^8 e8r4^8 e8r4^8
+e8r4^8 e8r4^8 e8r4^8 e8r4^8
+e8r4^8 e8r4^8 e8r4^8 e8r4^8
+r1r1
+>c4c4 c4c4 c4c4 c4c4<
+>c4c4 c4c4 c4c4 c4c4<
+>c4c4 c4c4 c4c4 c4c4<
+>c4c4 c4c4 c4c4 c4c4<

@@ -104,7 +104,15 @@
 79 Disco_shell.json
 7A chasing_ninji.cfg
 7C shy_bird.cfg
+80 BooBlah.cfg
+81 Blargg2.cfg
+82 Thwomp2.cfg
+83 MosaicThwimp.cfg
+84 Ninji2.cfg
 85 Kun.json
+8A fire_snake.json
+8B falling_fireball.cfg
+8C clusterspawn.json
 
 C0 balloon_shooter.cfg
 C1 lasershooter.cfg
@@ -113,6 +121,7 @@ C3 missile_bill_shooter_v.cfg
 C4 diag_bill_up.cfg
 C5 diag_bill_down.cfg
 C6 vertical_bill_ud.cfg
+C7 falling_fireball_shooter.cfg
 
 D0 gusty_generator.cfg
 
@@ -121,6 +130,7 @@ CLUSTER:
 01 laser.asm
 10 bullet.asm
 11 flowers.asm
+12 sandstorm.asm
 
 EXTENDED:
 00 boomerang.asm
