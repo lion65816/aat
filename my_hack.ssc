@@ -214,3 +214,13 @@
 8A 0022 0,0,479
 8C 0020 Once on screen, it will cause custom cluster sprites to appear, which is set via extra byte (purely decorative)
 8C 0022 0,0,*Cluster Spawner*
+90 0020 A SMW Banzai Bill that faces left.
+90 0022 0,0,180 16,0,181 32,0,182 48,0,183 0,16,190 16,16,191 0,32,1A0 16,32,1A1 32,16,192 32,32,1A2 0,48,1B0 16,48,1B1 32,48,1B2 48,16,193 48,32,1A3 48,48,1B3
+90 0030 A SMW Banzai Bill that faces right.
+90 0032 0,0,47A 16,0,47C 0,48,47D 16,48,47F 16,16,47E 16,32,47E 0,16,47B 0,32,47B 32,0,480 48,0,481 32,32,484 48,32,485 32,16,482 48,16,483 32,48,486 48,48,487
+91 0020 Angry Sun. SP4=98. Waits a while until Mario gets in a certain screen, and starts spinning in circles and swinging downwards at Mario while locked on the screen horizontally. Extra Property Byte 1 indicates what screen it starts attacking from.
+91 0022 0,-16,1D1 0,0,1E1
+91 0030 Happy Moon. SP4=98. Waits a while until Mario gets in a certain screen, and starts spinning in circles and swinging downwards at Mario while locked on the screen horizontally. Touching it will cause it to instantly kill all sprites that are not set to "Invincible to star/cape/fire/bouncing blk". Extra Property Byte 1 indicates what screen it starts diving from.
+91 0032 0,0,1D6 -16,0,1B0 0,-16,209
+92 0020 Undefined Sprite
+92 0022 0,0,0

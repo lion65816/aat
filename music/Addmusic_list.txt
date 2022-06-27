@@ -70,6 +70,7 @@ Locals:
 4B  Zombies Ate My Neighbours - Level 2.txt
 4C  CUSTOM - Badlands.txt
 4D  Homestuck - 'Showtime'.txt
+4E  Mario Forever - Apoplexy Tanks (Better Panning + Looped).txt
 4F  07 The Girl Who Stole the Star.txt
 50  Yukari Space.txt
 51  BombRushBlush(MMX).txt
@@ -77,3 +78,4 @@ Locals:
 57  MKW-Maple_Treeway.txt
 5A  Star Ocean - Tense Atmosphere.txt
 5C  442.txt
+60  kraid.txt

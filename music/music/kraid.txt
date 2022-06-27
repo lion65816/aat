@@ -1,0 +1,27 @@
+#am4
+
+#0 w200 t45 q7f v120 @0 y10
+o3l16
+r16^32
+[e4<b8>a4c8f+4d8<b4a+8>]4
+[g4d8e4<b8>f+4d8a4e8]2
+[g<b>g<b>g<b>a+ea+ea+eacacacad+f+d+bd+]4
+[f+gab>d<b>f+d<agf+b>af+d<agf+ega>der<]2
+[>argrf+rerf+rgr<]3
+>argrf+rerf+rg32
+
+#1 q7f v210 @0 y10
+o3l16
+[e4<b8>a4c8f+4d8<b4a+8>]4
+[g4d8e4<b8>f+4d8a4e8]2
+[g<b>g<b>g<b>a+ea+ea+eacacacad+f+d+bd+]4
+[f+gab>d<b>f+d<agf+b>af+d<agf+ega>der<]2
+[>argrf+rerf+rgr<]4
+
+#2 q7f v255 @13 y10
+o3l8
+[<e>e4]16
+[<c>c4<c>c4<d>d4<d>d4]2
+[<e>e>e<<f+>f+>f+<<f>f>f<<<b>b>b]4
+<[e4b>c4<bc4ga4b]2
+<e1^1^1>

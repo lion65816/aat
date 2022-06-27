@@ -113,6 +113,9 @@
 8A fire_snake.json
 8B falling_fireball.cfg
 8C clusterspawn.json
+90 banzai_bill_invincible.json
+91 AngrySun101.json
+92 volcano_lotus101.json
 
 C0 balloon_shooter.cfg
 C1 lasershooter.cfg
@@ -138,3 +141,4 @@ EXTENDED:
 02 hammer.asm
 03 iceball.asm
 04 volcano_lotus_pollen.asm
+05 volcano_lotus_pollen101.asm

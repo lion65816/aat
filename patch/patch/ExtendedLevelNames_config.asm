@@ -125,8 +125,8 @@ NameData:
  db "DO NOT EDIT        "
  db "(actually, you can)"
  ;Level 101
- db "IGGY WAS THERE     "
- db "                   "
+ db "Spikes do hurt     "
+ db "        (sometimes)"
  ;Level 102
  db "Chrystal Caves     "
  db "                   "
@@ -218,8 +218,8 @@ NameData:
  db "  A Warm Welcome   "
  db "                   "
  ;Level 120
- db "Expect HURRY UP    "
- db "sound there        "
+ db " The Legend of the "
+ db "Captain Blackpowder"
  ;Level 121
  db "Blue switch of     "
  db "chance             "
