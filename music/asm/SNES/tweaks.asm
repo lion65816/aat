@@ -21,7 +21,7 @@
 !BossClear	= #$03			; For example, if you changed the "Stage Clear" music to be number 9,
 !StageClear	= #$04			; Then you'd change "!StageClear = #$04" to "!StageClear = #$09".
 !Starman	= #$05
-!PSwitch	= #$06
+!PSwitch	= #$00
 !Keyhole	= #$07
 !IrisOut	= #$08
 !BonusEnd	= #$09
