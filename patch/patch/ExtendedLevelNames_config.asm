@@ -95,8 +95,8 @@ NameData:
  db "     Love Frog     "
  db "    Hangout Spot   "
  ;Level 01B
- db "  THE SANBO WOODS  "
- db "                   "
+ db "     BRAINY OR     "
+ db "     WORRIED?      "
  ;Level 01C
  db "   DUCKMOUNTAIN    "
  db "                   "

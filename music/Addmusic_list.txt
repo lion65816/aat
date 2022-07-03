@@ -78,4 +78,5 @@ Locals:
 57  MKW-Maple_Treeway.txt
 5A  Star Ocean - Tense Atmosphere.txt
 5C  442.txt
+5F  harvest.txt
 60  kraid.txt
