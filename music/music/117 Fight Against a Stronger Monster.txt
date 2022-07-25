@@ -1,0 +1,320 @@
+#amk 2
+
+#spc
+{
+    #title   "Fight Against a Stronger Monster"
+    #game    "Super Mario RPG"
+    #author  "Yoko Shimomura"
+    #comment "Ported by KevinM"
+}
+
+#path "stronger-monster"
+
+#samples
+{
+    #optimized
+    "Brass.brr"
+    "Clarinet.brr"
+    "Contrabass.brr"
+    "Kick.brr"
+    "Snare.brr"
+    "Drum Roll.brr"
+    "Scratch.brr"
+    "Weird Noise.brr"
+    "Orchestra Hit.brr"
+    "Tom.brr"
+    "Clap.brr"
+    "Tambourine.brr"
+}
+
+#instruments
+{
+    "Brass.brr"         $ff $e0 $00 $04 $47 ; @30
+    "Clarinet.brr"      $ff $e0 $00 $04 $7c ; @31
+    "Contrabass.brr"    $ff $f2 $00 $02 $00 ; @32
+    "Kick.brr"          $ff $e0 $00 $07 $a8 ; @33
+    "Snare.brr"         $ff $e0 $00 $03 $d4 ; @34
+    "Drum Roll.brr"     $ff $e0 $00 $03 $d4 ; @35
+    "Scratch.brr"       $ff $e0 $00 $03 $d4 ; @36
+    "Weird Noise.brr"   $ff $e0 $00 $03 $d4 ; @37
+    "Orchestra Hit.brr" $ff $e0 $00 $06 $63 ; @38
+    "Tom.brr"           $ff $e0 $00 $01 $b4 ; @39
+    "Clap.brr"          $ff $e0 $00 $07 $a8 ; @40
+    "Tambourine.brr"    $ff $e0 $00 $07 $a8 ; @41
+}
+
+;==================;
+; Volume  /  Tempo ;
+;==================;
+   w120       t49
+
+; Original volumes: w232
+
+;==================;
+;       Echo       ;
+;==================;
+$ef $fb $12 $12
+$f1 $04 $62 $01
+
+;==================;
+;    Channel #0    ;
+;==================;
+#0 $f4$02
+(99)[r16]28
+
+@30 y7 o4 l16
+v230 c32 d+32 f+32 a32 v235 > c32 < a32 v242 > c32 d+32
+v248 e24 v235 d+24 c24
+< a r f r f+ r d r
+d+1^4 $ed$7f$ed ^2^8
+
+@31 y10 o3
+v142 a24 v152 b24 v162 > c+24
+
+/
+
+d8. e f g r a r b12 r24 > c < b8 a r
+v178 g8. f
+v154 y7 > c+24 r48 c+24 r12
+v178 y10 < g r g8 f
+v154 y13 > c+24 r12 c+ r
+v162 y10 < d8. e f g r a r b12 r24 > c < b a > f c
+v178 < g+8. a+
+v154 y7 g24 r48 g24 r12
+v178 y10 g+ r g+8 a+
+v154 y13 g24 r12 g r
+
+@30 y10 o4
+v188 g+4 > c+ < g+ r f+2 r
+v208 g+ r g+ r > c+ f r g+ r f+4. r <
+
+@31 v162 o4
+e8. f g e r f r f c8 < g+8 a+12 a48 g+48 g2^4.. r >
+v168
+(00)[c8. d d+ f r g r a12 r24 a+ a g8.
+d8. e f g r a r b12 r24 > c < b a8.
+e8. f+ g+ a+ r b r > c+12 r24 d c+ < b8.]
+< f+8. g+ a+ > c r < g+ r a+12 r24 > c d e8.
+< a+8. > c d e r c r d12 r24 e f+ g+8.
+a r a r8 g+8 r a24 r48 a24 r12 a8. $dd$20$04$a5 r8
+
+;==================;
+;    Channel #1    ;
+;==================;
+#1
+(99)28
+
+@32 v255 y10 o3 l16 $fa$03$ff
+b4 >> c24 < b24 g+24 f r c+ r d r < a+ r b2
+a+24 b24 > d24 f24 d24 < g+24 b4 g+8. g+ g+8.
+g+=60 > c+24 d24 e24 f+24 g24 < a24
+
+/
+
+[[b8. b b8. b4 b b8. b a+8. a+ a+8. a+8 a+ a+ r a+8. a+]]2
+[a8. a a8. a+4 a+ a+8. a+ a8. a a8. a+8 a+ a+ r] a+8. a+
+* a+ g8.
+
+$fa$02$fd (00) $fa$02$00
+> d+8. f g a r f r g12 r24 a b > c+8. <
+g8. a b > c+ r << a r b12 r24 > c+ d+ f8.
+f+ r f+ r8 f8 r f+24 r48 f+24 r12 f+8. r8
+
+;==================;
+;    Channel #2    ;
+;==================;
+#2
+(99)58
+
+y10 o4 l16 $fa$03$cf
+@33 v247 c4 c8. c8 v210 c32 c32 v224 c v230 c
+@34 v212 c8 v227 c8
+
+/
+
+[[
+@33 v247 c4
+@34 v212 c8.
+@33 v247 c8. c8
+@34 v212 c4
+@33 v247 c
+@34 v205 c
+@33 v230 c8
+@34 v212 c8.
+@33 v247 c8. c8
+@34 v212 c8
+@33 v230 c
+@34 v205 c
+]]4 ^1^2^4^16
+
+v185 c v205 c v212 c
+@33 v230 c c
+@34 v185 c8
+@33 v230 c c
+v205 [@34 c
+@33 v247 c8 v251 c
+@34 v212 c8
+@33 v247 c v212 c
+@34 v212 c8
+@33 v247 c v251 c
+@34 v212] c8
+@33 v247 c v251 c
+v212 * c
+@33 v247 c v251 c
+[@33 v247 c
+@34 v212 c]
+@33 v247 c8 v251 c
+@34 v212 c
+@33 v247 c v251 c v212 c
+@34 v212 c
+*2
+@33 v212 c8 v255 c
+@34 v179 c v212 c
+@33 v212 c c8
+@34 v212 c48 v227 c=56
+
+;==================;
+;    Channel #3    ;
+;==================;
+#3
+(99)28
+
+@30 y13 o3 l16
+v230 g32 a+32 > c+32 e32 v235 g32 e32 v242 g32 a+32
+v248 b24 v230 a+24 g24 e r c r c+ r < a r
+a1^4 $ed$7f$ed ^2. / ^1^4
+
+@31 v123 o5 $fa$03$00
+y13 c24 r48 c24 r=76
+y7 c24 r12 c r1^=60
+y13 < f+24 r48 f+24 r=76
+y7 f+24 r12 f+ r
+
+@30 y10 o4
+v178 c+4 g+ c+ r < a2 r
+v200 > c+ r c+ r g+ > c+ r f r d4.
+
+(99)29
+
+$fa$03$78 o3
+v255 c+32 d+32 e32 f+32 v222 g+32 a32 v235 b32 > c32
+v180 $fa$02$01 (00) $fa$02$00
+v210
+< b8. > c+ d+ f r c+ r d+12 r24 f g a8.
+d+8. f g a r f r g12 r24 a b > c+8. <
+a+ r a+ r8 a8 r a+24 r48 a+24 r12 a+8. $dd$20$04$a7 r8
+
+;==================;
+;    Channel #4    ;
+;==================;
+#4
+@35 v205 y10 o4 l8 c r v195 c16 r v205 c=60 r
+@36 v230 y16 c r
+@35 v205 y10 c r16 c24 r12 v195 c4 r8. v205 c16 c32 r32
+
+(99)42
+
+/
+
+[[
+[@35 v188 y10 c r v178 c16 r v188 c=60 r
+@36 v255 y16 $fa$03$0a c r $fa$03$00
+@35 v188 y10 c r16 c24 r12 v178 c4 r] r16
+@37 v242 y8 c
+]]3
+*
+
+y4 (40)[@38 v191 o4
+g+. a+2^=60 a+. > c2^=60 c. d1]
+
+(99)32
+
+@30 v251 y10 o4
+f16 r16 f16 r f r16 f24 r48 f24 r12 f. $dd$20$04$a2 r
+
+;==================;
+;    Channel #5    ;
+;==================;
+#5
+@39 o5 l8 [[
+v222 y14 c v255 y10 d+ v233 y8 f
+[v222 y14 c16 v255 y10 d+ v233 y8 f]2
+]]2
+
+r2^8
+
+(50)[v205 y13 c v234 y10 d+ v212 y8 f
+v205 y13 c16 v234 y10 d+ v212 y8 f
+v205 y13 c16 v234 y10] (51)[d+ v212 y8 f]
+
+(50) d+ v233 y8 f
+
+/
+
+[[ (50) (51) ]]7
+(50) d+16
+
+y16 $fa$02$f4 (40) $fa$02$00
+
+@39 o5 [[ (50) (51) ]]2 r4
+f16 v234 y10 d+32 d+32 v205 y13 c16 r4.
+v212 y8 f16 v234 y10 d+32 d+32 v205 y13 c16
+
+;==================;
+;    Channel #6    ;
+;==================;
+#6
+@40 y14 o4 l16
+v125 c8 v110 c v120 c v125 c8 v110 c v120 c8
+v125 c8 v110 c v125 c8 v110 c v120 c
+v132 c8 v120 c v125 c8 v120 c v132 c v138 c8
+v132 c8 v120 c v132 c8 v120 c v138 c
+
+(99)26
+
+v141 c8 v116 c v130 c8 (60)[v116 c v130 c v141 c8 v130 c8 v116 c v141 c8] v165 c8
+
+/
+
+[[
+(61)[v141 c8 v116 c v130 c v141 c8 v116 c v130 c8] v141 c8 v116 c
+(61) (60) v116 c v130 c
+]]4
+
+(99)80
+
+v141 c8 v116 c v130 c8 v116 c v130 c8 v141 c v130 c8 v116 c8. v141 c v110 c
+
+;==================;
+;    Channel #7    ;
+;==================;
+#7
+r1
+
+@41 y6 o4 l16
+v156 [c v125 c v142 c v125 c]
+v178 c v125 c v142 c v156 c
+v125 c v156 c v125 c c
+v178 *
+
+r2^8
+
+[[ v160 [c v132 c v148 c v132 c v183]2 ]]4
+
+/
+
+[[ v148 [c v116 c v136 c v116 c v175]2 ]]16
+
+(99)32
+
+[[
+v148 *
+c v116 c v136 c v148 c
+v116 c v148 c v116 c c
+v175 *
+]]3
+
+v175 c v116 c v175 c v116 c8
+c32 c32 v136 c v148 c
+v175 c c v116 c v175 c8
+v116 c v136 c v148 c

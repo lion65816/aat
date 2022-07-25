@@ -1,0 +1,93 @@
+#amk 2
+#spc
+{
+#title "Approaching the Castle"
+#game "Stone Protectors"
+#author "Steve Duckworth"
+}
+#instruments
+{
+@8 $9F $8E $B8 $1E $03
+@1 $9d $60 $B8 $03 $03
+@4 $9d $85 $B8 $03 $03
+@6 $ac $A6 $B8 $03 $03
+@21 $00 $00 $FF $05 $BE
+@10 $00 $00 $FE $04 $C9
+n1F $FD $53 $A0 $00 $00
+n1F $FE $2F $A0 $00 $00
+}
+$EF $00 $1C $1C
+$F1 $03 $54 $01
+
+"KCK=$EF $9E $1C $1C @34 y10 v195"  ;225
+"SNR=$EF $BE $1C $1C @35 v215 y10"  ;245
+(!900)[$F4 $09]
+(!901)[$ED $80 $BD ]
+#0 @30 v215 y10 t72
+[[
+[o2f4f8r16f16d+8c4f8
+r8f8f8d+4c8d+8c8]3
+
+o2f4f8r16f16d+8c4<g+4
+>c8d+8f8c8d+8g+8g8
+]]3
+
+#1  v145 $DE $20 $10 $20 y12 ;11 08 (v145)
+(11)[@32r2 (!900, -1) (!901, 3) q3Co4f24r12f24r12f24r12 (!900, 0) @32 q7Df4
+d+24r12d+8r2..
+ (!900, -1) (!901, 3) q3Ad24r12q3Cf24r12f24r12f24r12f24r12 (!900, 0) @32    q7Dg+4
+f8d+24r12g+4a+8r4]2
+v160 y9 (12)[@31 q7F $DE $20 $0B $20 
+o4f1^1^8
+<f8>c8f8>c8<f8>c8f8
+c8<f8>d+8<a+8f8>c8<a+8>d+8
+f1^1^8
+<<f8>c8f8>c8<f8>c8f8
+c8<f8>d+8<a+8f8>c8d+4]
+v150 y10 $DE $1F $0B $50 $EA $50
+(13)[@33 o5c4. <f4f8g+8a+8
+b-8$DD $01 $05 b a+8g+8f4d+4f-8$DD $07 $15 f ^1^1
+r4f8g8g+8a+4>c4
+f-4$DD $01 $04 f d+4c4d+4
+g+4g4d+4 $DE $20 $0B $40 c8^2 $ED $80 $AF ^2]
+
+
+#2 @31 $DE $20 $0B $20 v148 y8 ;(v138)
+[o4f2..
+d+1^8
+d2..c+8
+r8c+8r8d+8r8d+4.]6
+
+
+#3 @31  $DE $20 $0B $20v148 y8 ;(v138)
+[o4c2..
+o3a+1^8
+a+2..g+8
+r8g+8r8a+8r8a+4.]6
+
+
+#4 @31  $DE $20 $0B $20 v148 y8 ;(v138)
+[o3g+2..
+g1^8
+f2..f8
+r8f8r8g8r8g4.]5
+g+2..
+g2. @33 v130 y10
+o4g+4g+4
+b+4a+4g+4
+f-8$DD $02 $06 f ^2 $ED $80 $AF ^2
+
+#5 
+[ o4KCK c8 q7D c8 q7FSNR c8 KCK q7D c8 q7Fc8 q7D c8 q7F SNR c8 KCK c4
+ q7E c8 q7F SNR c8 KCK q7d c8 q7F c8 q7D c8 SNR c8 KCK c8]12
+
+#6  y9 v73
+[@36 c8 $ED $80 $B8 ^8]96
+
+#7 $EE $08 r8 v88 y8 
+(11)2
+v100 y11
+(12)
+y8
+ (13)
+[r1]100

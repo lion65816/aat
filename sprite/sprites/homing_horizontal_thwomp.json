@@ -1,0 +1,159 @@
+{
+    "$1656": {
+        "Can be jumped on": false,
+        "Dies when jumped on": false,
+        "Disappears in cloud of smoke": false,
+        "Hop in/kick shell": false,
+        "Object Clipping": 1
+    },
+    "$1662": {
+        "Fall straight down when killed": false,
+        "Sprite Clipping": 6,
+        "Use shell as death frame": false
+    },
+    "$166E": {
+        "Disable cape killing": true,
+        "Disable fireball killing": true,
+        "Disable water splash": false,
+        "Don't interact with Layer 2": false,
+        "Palette": 1,
+        "Use second graphics page": true
+    },
+    "$167A": {
+        "Can't be kicked like shell": false,
+        "Don't change into shell when stunned": false,
+        "Don't disable cliping when starkilled": true,
+        "Don't use default interaction with Mario": false,
+        "Gives power-up when eaten by yoshi": false,
+        "Invincible to star/cape/fire/bounce blk.": false,
+        "Process interaction with Mario every frame": false,
+        "Process when off screen": false
+    },
+    "$1686": {
+        "Don't change direction if touched": false,
+        "Don't interact with objects": false,
+        "Don't interact with other sprites": false,
+        "Don't turn into coin when goal passed": false,
+        "Inedible": true,
+        "Spawn a new sprite": false,
+        "Stay in Yoshi's mouth": false,
+        "Weird ground behaviour": false
+    },
+    "$190F": {
+        "Can be jumped on with upwards Y speed": false,
+        "Can't be killed by sliding": true,
+        "Death frame two tiles high": true,
+        "Don't erase when goal passed": false,
+        "Don't get stuck in walls (carryable sprites)": false,
+        "Don't turn into a coin with silver POW": false,
+        "Make platform passable from below": false,
+        "Takes 5 fireballs to kill": false
+    },
+    "ActLike": 38,
+    "Additional Byte Count (extra bit clear)": 0,
+    "Additional Byte Count (extra bit set)": 0,
+    "AsmFile": "homing_horizontal_thwomp.asm",
+    "Collection": [
+        {
+            "Extra Property Byte 1": 0,
+            "Extra Property Byte 10": 0,
+            "Extra Property Byte 11": 0,
+            "Extra Property Byte 12": 0,
+            "Extra Property Byte 2": 0,
+            "Extra Property Byte 3": 0,
+            "Extra Property Byte 4": 0,
+            "Extra Property Byte 5": 0,
+            "Extra Property Byte 6": 0,
+            "Extra Property Byte 7": 0,
+            "Extra Property Byte 8": 0,
+            "Extra Property Byte 9": 0,
+            "ExtraBit": false,
+            "Name": "Homing Horizontal Thwomp (Left)"
+        },
+        {
+            "Extra Property Byte 1": 0,
+            "Extra Property Byte 10": 0,
+            "Extra Property Byte 11": 0,
+            "Extra Property Byte 12": 0,
+            "Extra Property Byte 2": 0,
+            "Extra Property Byte 3": 0,
+            "Extra Property Byte 4": 0,
+            "Extra Property Byte 5": 0,
+            "Extra Property Byte 6": 0,
+            "Extra Property Byte 7": 0,
+            "Extra Property Byte 8": 0,
+            "Extra Property Byte 9": 0,
+            "ExtraBit": true,
+            "Name": "Homing Horizontal Thwomp (Right)"
+        }
+    ],
+    "DisplayType": "XY",
+    "Displays": [
+        {
+            "Description": "A Homing Horizontal Thwomp that goes left, then returns to it's original position.",
+            "DisplayText": "",
+            "ExtraBit": false,
+            "Tiles": [
+                {
+                    "X offset": -4,
+                    "Y offset": 0,
+                    "map16 tile": 52
+                },
+                {
+                    "X offset": 12,
+                    "Y offset": 0,
+                    "map16 tile": 53
+                },
+                {
+                    "X offset": -4,
+                    "Y offset": 16,
+                    "map16 tile": 68
+                },
+                {
+                    "X offset": 12,
+                    "Y offset": 16,
+                    "map16 tile": 69
+                }
+            ],
+            "UseText": false,
+            "X": 0,
+            "Y": 0
+        },
+        {
+            "Description": "A Homing Horizontal Thwomp that goes right, then returns to it's original position.",
+            "DisplayText": "",
+            "ExtraBit": true,
+            "Tiles": [
+                {
+                    "X offset": -4,
+                    "Y offset": 0,
+                    "map16 tile": 52
+                },
+                {
+                    "X offset": 12,
+                    "Y offset": 0,
+                    "map16 tile": 53
+                },
+                {
+                    "X offset": -4,
+                    "Y offset": 16,
+                    "map16 tile": 68
+                },
+                {
+                    "X offset": 12,
+                    "Y offset": 16,
+                    "map16 tile": 69
+                }
+            ],
+            "UseText": false,
+            "X": 0,
+            "Y": 0
+        }
+    ],
+    "Extra Property Byte 1": 0,
+    "Extra Property Byte 2": 0,
+    "GFXInfo": [
+    ],
+    "Map16": "",
+    "Type": 1
+}

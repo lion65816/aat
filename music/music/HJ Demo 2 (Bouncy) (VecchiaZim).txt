@@ -1,0 +1,140 @@
+#amk 2
+
+#spc
+{
+	#author "VecchiaZim"
+	#game	"custom"
+	#comment "For the 2021 HackJam"
+	#title	"HJ Demo 2 (Bouncy)"
+}
+
+
+#instruments
+{
+n1F $00 $00 $04 $00 $00 ; @30
+@0  $FF $A0 $B8 $05 $00 ; @31
+@4  $FF $E0 $B8 $05 $00 ; @32
+}
+
+
+
+; global
+w255 t42
+$EF $77 $40 $40
+$F1 $03 $40 $0C
+
+
+
+#0 ; vamp1
+@31 q4f v255 o2 
+(5)[c8 r16 c8. d-8 e-8 r16 e-8. d-8 c8 r16 c8. d-8 e-8 f8 e-8 d-8]4 /
+(5)3
+c8 r16 c8. d-8 e-8 r16 e-8. d-8 c8 r16 c8. c8 > c8 < b-8 a8 g8
+(6)[f8 r16 f8. e8 d8 r16 d8. e8 f8 r16 f8. e8 d8 c8 d8] e8
+(6) e8
+(6) e8
+(6) < g8 >
+(5)
+c8 r16 c8. d-8 e-8 r16 e-8. d-8 c8 r16 c8. d-8 e-8 f8 e-8 d8
+[g4. f4. e-4. c4.] < b-4 > d4
+* < b-4 > d4
+* < b-4 > d4
+* d4 < g4 >
+(5)2
+
+
+
+#1 ; vamp2
+@31 q4f y11 v176 o2
+(7)[g8 r16 g8. a-8 b-8 r16 b-8. a-8 g8 r16 g8. a-8 b-8 > c8 < b-8 a-8]4 /
+(7)3
+g8 r16 g8. a-8 b-8 r16 b-8. a-8 g8 r16 g8. g8 > g8 f8 e8 d8
+(8)[c8 r16 c8. < b8 a8 r16 a8. b8 > c8 r16 c8. < b8 a8 g8 a8] b8
+(8) b8
+(8) b8
+(8) > d8 <
+[g8 r16 g8. a-8 b-8 r16 b-8. a-8 g8 r16 g8. a-8 b-8 > c8 < b-8] a-8
+* a8 >
+y8 [d8. d8. c8. c8. < b-8. b-8. g8. g8.] f4 a4
+y12 * f4 a4
+y8 * f4 a4
+y12 * a4 b-4
+y9 (7)2
+
+
+
+#2 ; vamp3
+@31 q4f y9 v144 o3 l16
+[e8 r16 e8. f8 g8 r16 g8. f8 e8 r16 e8. f8] g8 a-8 g8 f8
+* g a- b- a- g a- g f
+(1)[e g > c < e8 > c < f > c < g b- > c < g8 > c < f > c <
+e g > c < e8 > c < f > c < g > c < a- > c < g > c < f > c <
+e g > c < e8 > c < f > c < g b- > c < g8 > c < f > c <
+e g > c < e8 > ]
+c < f > c < g a- b- a- g a- g f /
+(1) > c < f > c < g a- b- a- g a- g f
+(1) e g > c e f e d c d c < b
+(4)[a > c f < a8 > f < b > g c f a c8 a < b > g <
+a > c f < a8 > f < b > g c a < b > g < a > f < g > e <
+a > c f < a8 > f < b > g c f a c8 a < b > g <
+a > c f < a8 > f < b > g] f g f  e f e f g
+(4) f e d c < b a g f
+(1) > c < f > c < g a- b- a- g f g a v176
+y12 [b g d b8 d > c < a e > c8 < e > d < b- f > d8 < f > e c < g > e8 < g] > f d < b- f > e c < g e
+y8 * > f d < b- > f e c < g e
+y12 * > f d < b- > f g e c < g
+y8 [b > d g < b8 > g c e a c8 a d f b- d8 b- e g > c < e8 > c] < f > d < a f d < b- g f v144
+y11 (1) > c < f > c < g a- b- a- g a- g f
+
+
+
+#3 ; tune1
+@31 $E5$00$16$38 y5 v144 o4
+r1r1r1r1
+r1r1r1r2. g4 / >
+g1^4 > c4 < b-4 f4 e16 f16 r16 g16^2.^2 r4 < g4 >
+g1^8 > c8 < b-8 f8 > e-8 c8 < g8 f8 e4 > c8 < g8^2^2 r4 c4 >
+c1^4 < b4 a8 > c8 e8 f8 c1^8 d8 c8 < b8 a8 g8 a8 > c8
+e8 d8 c4. < b8 a4. g8 f4. e8 d8 c8 q6f d4 e4 f4 g4 a4 b4 > c4 d4 <
+g1^1 r1r1
+r1r1r1r1r1r1r1r1
+r1r1r1r2. < q7f g4
+
+
+#4 ; perc
+@30 q3f v224
+r1r1 [[r8 c16c16 r8 c16 r16]]3 r8 c16c16 r16 c16c16 r16
+(2)[ [[@0@22 c8 @0@30 c16c16 @0@22 c8 @0@30 c16 r16]]3
+@0@22 c8 @0@30 c16c16 @0@22 c16 @0@30 c16c16 r16]
+(3)[ [[@0@22 c8 @0@30 c16c16 @0@22 c8 @0@30 c16 r16]]3
+@0@22 c8 @0@30 v160 $E8$48$DF c16c16 c16c16c16c16] /
+y10 v224
+(2)3
+(3)
+(2)3
+(3)
+(2)
+(3)
+@0@23 l16 v192
+y9 [q3fc8. q38 c8.]4 [q3fc q38c8c]2
+y11 [q3fc q38cc q3fc8 q38c]4 [q3fc q38ccc]2
+y9 [q3fc q38c32c32c q3fc q38cc]4 [q3fc q38c32c32cc]2
+y11 [q3fc q38c32c32c32c32 q3fc q38c32c32c]4
+y10 @22 v96 $E8$60$DF q3fcccc l48 ccc ccc ccc ccc
+(2)
+(3)
+
+
+#5 ; tune2
+@31 $E5$00$16$38 y15 v160 o3
+r1r1r1r1
+r1r1r1r2. g4 / >
+g1^4 > c4 < b-4 f4 e16 f16 r16 g16^2.^2 r4 < g4 >
+g1^8 > c8 < b-8 f8 > e-8 c8 < g8 f8 e4 > c8 < g8^2^2 r4 c4 >
+c1^4 < b4 a8 > c8 e8 f8 c1^8 d8 c8 < b8 a8 g8 a8 > c8
+e8 d8 c4. < b8 a4. g8 f4. e8 d8 c8 q6f d4 e4 f4 g4 a4 b4 > c4 d4 <
+g1^1 r1r1
+r1r1r1r1r1r1r1r1
+r1r1r1r2. < q7f g4
+
+

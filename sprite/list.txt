@@ -70,9 +70,13 @@
 4B donut_lift.json
 4C SMW_Hammer_Bro.json
 4D babyyoshi.json
+4F thwomp_up_large_range.cfg
 50 upside_ninji.json
 51 volcano_lotus.json
 52 ChasinRex.cfg
+53 thwomp_up_small_range.cfg
+54 homing_horizontal_thwomp.json
+55 thwomp_homing.cfg
 56 barrel.cfg
 59 donut_lift_solid.json
 5A HammerBro2.json
@@ -93,6 +97,8 @@
 6A shooter.json
 6C venus_ninjithrow.cfg
 6D Wiggler_86_4.cfg
+6E thwomp_homing_scroll.cfg
+6F level_ender.cfg
 70 SeaPokey.cfg
 71 reverse_donut.json
 72 bouncing_spiny_egg.json

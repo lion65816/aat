@@ -1,0 +1,6 @@
+[Message] - [ 2022-07-16 21:10:44 ] - ------- START OF LOG -------
+[Error] - [ 2022-07-16 21:10:44 ] - Failed to setup configuration file, error was "Non existing config var tried to be defined: mwl_file_format: "level #.mwl""
+[Message] - [ 2022-07-16 21:10:53 ] - Attempting to switch to new ROM
+[Message] - [ 2022-07-16 21:10:53 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\smw\my_hack.smc"
+[Message] - [ 2022-07-22 05:53:38 ] - ------- START OF LOG -------
+[Error] - [ 2022-07-22 05:53:38 ] - Failed to setup configuration file, error was "Non existing config var tried to be defined: mwl_file_format: "level #.mwl""

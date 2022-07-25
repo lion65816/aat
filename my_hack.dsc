@@ -235,6 +235,17 @@
 3ff	0	SSP_Tiles/turn_down-left.asm
 560	0	A block that will boost the player downwards.
 561	0	A block that will boost the player upwards.
+700	0	Automatically spins the player on contact.
+701	0	Hurts the player on contact.
+7c0	0	Password block init
+7c1	0	Password block 1 for door 1
+7c2	0	Password block 2 for door 1
+7c3	0	Password block 3 for door 1
+7c4	0	Password block 4 for door 1
+7c5	0	Password block 5 for door 1
+7c6	0	Password door number 1
+7f0	0	Thwomp Crush Block\nA block that shatters when hit by a Thwomp.
+7f1	0	Sprites touching this block will die as if by lava.
 da0	0	A block that will act like tile 25 for Mario
 da1	0	A block that will act like tile 25 for sprites
 e70	0	Sprites touching this block will die.

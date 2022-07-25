@@ -1,0 +1,545 @@
+; 1 = channel volumes are like the original, overall volume is twice as high
+; 0 = channel volumes are approx. halved, overall volume is similar to the original
+#define ORIGINAL_VOLUMES 0
+
+#amk 2
+
+#spc
+{
+    #title   "And My Name's Booster"
+    #game    "Super Mario RPG"
+    #author  "Yoko Shimomura"
+    #comment "Ported by KevinM"
+}
+
+#path "booster"
+
+#samples
+{
+    "../default/00 SMW @0.brr"
+    "../default/01 SMW @1.brr"
+    "../default/02 SMW @2.brr"
+    "../default/03 SMW @3.brr"
+    "../default/04 SMW @4.brr"
+    "../EMPTY.brr"
+    "../default/06 SMW @22.brr"
+    "../default/07 SMW @5.brr"
+    "../default/08 SMW @6.brr"
+    "../EMPTY.brr"
+    "../optimized/0A SMW @9.brr"
+    "../default/0B SMW @10.brr"
+    "../default/0C SMW @13.brr"
+    "../EMPTY.brr"
+    "../optimized/0E SMW @29.brr"
+    "../EMPTY.brr"
+    "../EMPTY.brr"
+    "../EMPTY.brr"
+    "../optimized/12 SMW @15.brr"
+    "../EMPTY.brr"
+    
+    "sample_00.brr"
+    "sample_09.brr"
+    "sample_0A.brr"
+    "sample_02.brr"
+    "sample_03.brr"
+    "sample_07.brr"
+    "sample_08.brr"
+    "sample_04.brr"
+    "sample_05.brr"
+    "sample_01.brr"
+    "sample_06.brr"
+}
+
+#instruments
+{
+    "sample_00.brr" $FF $E0 $00 $03 $25 ; @30
+    "sample_09.brr" $FF $E0 $00 $02 $3E ; @31
+    "sample_0A.brr" $FF $E0 $00 $06 $5B ; @32
+    "sample_02.brr" $FF $ED $00 $02 $5C ; @33
+    "sample_03.brr" $FF $E0 $00 $05 $1C ; @34
+    "sample_07.brr" $FF $E0 $00 $03 $09 ; @35
+    "sample_08.brr" $FF $E0 $00 $05 $1C ; @36
+    "sample_04.brr" $FF $F5 $00 $02 $45 ; @37
+    "sample_05.brr" $FF $E0 $00 $01 $B4 ; @38
+    "sample_01.brr" $FF $B3 $00 $03 $2D ; @39
+    "sample_06.brr" $FF $F4 $00 $05 $1C ; @40
+}
+
+;==================;
+;       Echo       ;
+;==================;
+$EF $69 $2A $2A
+$F1 $09 $6A $01
+
+;==================;
+; Volume  -  Tempo ;
+;==================;
+   w255       t42
+
+
+"tremolo = v167 y10 $E5 $00 $72 $A0"
+
+#if ORIGINAL_VOLUMES == 0
+    "amplify = "
+#endif
+#if ORIGINAL_VOLUMES != 0
+    "amplify = $FA $03 $FA"
+#endif
+
+;==================;
+;    Channel #0    ;
+;==================;
+#0 $F4 $02 amplify
+@30 o4 l16 tremolo
+f4 $DD $00 $18 $AB > d4 < /
+
+(00)[
+ a+2 $DD $00 $23 $B0 ^8. r8^48
+ a24 r12 f24 g2^8 r8 g8 > d24 r12
+ < a+2 $DD $00 $1D $B0 ^8. r8^48
+ > f24 r12 c24 < g2^8. r8^48
+]
+
+r1...^24
+
+(01)[f8 $DD $00 $0C $AB > d24 r12 <]
+(00)
+
+@31 v113 o4
+$E5 $00 $00 $00
+$DE $34 $0F $56
+[a24 b8 > d2^8. r d12
+ < b24 a12 b24 r12
+ e=120 r24
+ g8 g+24 r12 a2^8. r
+ a12] f+24 d12 e2. r8
+
+* b24 d12 e2. r8.
+$DF
+
+@30 v165 < d32 e32 f24
+[g r a+24 r12 > d r f24 r24
+ d r d48 r48 c r < a r f r]2
+
+v139 y14 *
+
+@32 v124
+> f r g+24 r12 > c r
+d+24 r24 c r c48 r48
+< a+ r g r d+ r
+
+@30 v147 y6
+[g r48 g32 r. g24 g48 r=20]2
+v162 f24 r12 f+. r32
+v147 *2
+
+tremolo (01)
+
+;==================;
+;    Channel #1    ;
+;==================;
+#1 amplify
+r2 /
+
+@33 v228 y10 o4 l8
+(10)[
+ $F4 $09 c=40 $ED $7F $F2 g a+24 > c <
+ $F4 $09 c=40 $ED $7F $F2 g a+24 > c <
+]
+$F4 $09 < g=40 $ED $7F $F2 > d f24 g <
+$F4 $09 g=40 $ED $7F $F2 > d f24 g
+*
+
+$ED $7F $F5
+< g=40 > d f24 g < g=40 > d f24
+v227 d24 v228 f24 v231 f+24
+v225
+(11)[
+ g > d c f12 d d24 c
+ < a+ f g > d c f12 d d24 c <
+]
+v228 < g24 a24 a+24 > c24 d24 f24
+
+v225
+[[ (10) $F4 $09 < g=40 > d f24 g < g=40 > d f24 g ]]2
+
+$ED $7F $F5
+(11)
+a+ f c g f a+12 g g24 f d+ < a+ >
+
+(11)
+a+ f g > d c f12 d d24 c
+< a+ f c g f a+12 a a24 c d f
+g > d c f12 d d24 c < a+
+d24 e24 f24 g a+ > d f12 d d24 c < a
+
+[[ f g a+ > d f12 d d24 c < a ]]3
+
+f g12 g g24 g g12 g g24 g f
+f+ g12 g g24 g g12 g g24 g g < g
+
+;==================;
+;    Channel #2    ;
+;==================;
+#2 amplify
+r2 /
+
+y10 o4 l12
+[[
+ (20)[
+  @34 v196 g8 @35 v172 a+ @34 v196 g8 g24
+  @35 v182 a+8 @34 v196 g g24 @35 v172 a+8
+ ]
+ (21)[ @34 v196 g8 @35 v182 a+8 ]
+]]4
+
+(22)[
+ @35 v172 a+8 v149 a+ v172 a+24
+ @34 v159 g
+ @35 v149 a+24 v182 a+ v120 a+24
+ @34 v147 g
+ @35 v120 a+24 v172 a+8 a+
+ @34 v184 g24
+ @35 v182 a+8
+] v172 a+8 v149 a+ v172 a+24
+@34 v159 g
+@35 v149 a+24 v182 a+
+@34 v184 g8
+@35 v120 a+48 a+48 v182 a+8
+v149 a+24 v137 a+48 a+48 v149 a+24
+v172 a+24 v182 a+24 v200 a+24
+
+[[
+ (22)
+ @34 v196 g8
+ @35 v149 a+ v172 a+24
+ @34 v159 g
+ @35 v149 a+24 v182 a+ v120 a+24
+ @34 v147 g
+ @35 v120 a+24 v172 a+8 a+
+ @34 v184 g24
+ @35 v182 a+8
+]]2
+
+[[ (20) (21) ]]3
+
+(20)
+
+(23)[
+ @34 v196 g24
+ @35 v137 a+24 v149 a+24 v172 a+24 a+24 v182 a+24
+]
+
+[[ (20) (21) ]]3
+
+(20)
+
+@34 v196 g8
+@35 v149 a+24 v172 a+24 v182 a+24
+
+@34 v196 g4 g=40 g8 g24
+[@36 v132 y5 g8 @34 v196 y10 g8]3
+@36 v132 y5 g
+@34 v196 y10 g8 g24
+*
+@36 v132 y5 g24
+@35 v137 y10 a+24 v149 a+24
+
+(22)
+
+@34 v184 g
+@35 v172 a+24 v182 a+8 v172 a+
+@34 v184 g24
+@35 v172 a+ v182 a+8
+v120 a+48 a+48 v182 a+8 v149 a+24 v137 a+48 a+48
+v149 a+24 v172 a+24 v182 a+24 v200 a+24
+[v182 a+ v172 a+8 a+24 a+8 a+ a+8 v182 a+24 v172 a+]
+@34 v196 g24
+@35 v137 a+24
+@34 v196 g24
+@35 v182 a+24 a+8 *
+@34 v196 g24
+
+(23)
+
+;==================;
+;    Channel #3    ;
+;==================;
+#3 amplify
+r2 /
+
+@37 v189 o4 l48
+[[
+ (30)[
+  y14 > d+16 r e r e r16
+  e16 r16 < b96 r32 > d16.. r64
+  y6 d+16 r e r e r16
+  e16 r16 < b96 r32 > d16.. r64 <
+ ]
+ y14 (31)[
+  a+16 r b r b r16
+  b16 r16 f+96 r32 a16.. r64
+ ]
+ y6 (31)
+]]2
+
+r1
+
+v225 y10 o4
+a+16 r b r b r16
+b16 r16 b96 r32 b16 r b16.. r64 b b b8
+f+ r f+ r f+ r e r f+ r a r
+
+v189
+(30)
+y14 (31) y6 (31)
+(30)
+y14 (31) y6 (31)3
+y14 (31) y6 (31)
+(30)
+[[ y14 (31) y6 (31) ]]3
+
+y14 > d+16 r e r e r16
+e16 r16 < b96 r32 > d16 r
+y6 f8 f+ r f+ r16
+f+16 r16 c+96 r32 e16.. r64 <
+y14 (31) y6 (31)
+
+r1^1
+
+v225 y10
+[[
+ f+16 r16 a32 r16. b16 r16
+ > d32 r=10 < b16 r16 b r
+ a32 r16. f+32 r16. e32 r16.
+]]2
+
+
+y14 [v191 a+16 r v189 b r b r16 b24 b12 r24]
+y6 *
+
+y14 v191 a16 r
+y6 v189 a r a+12 r24
+
+y14 *
+y6 *
+
+v225 y10 a+ r [[b r]]5
+
+;==================;
+;    Channel #4    ;
+;==================;
+#4 amplify
+r2 /
+
+@38 o4 l8
+[[
+ (40)[
+  v147 y8 > d+=40
+  v133 y13 < a+ y11 a+24
+  v165 y10 > d+
+  v139 y14 d+12 y6 f+
+  v152 y11 f+
+  v154 y10 < a+24 y9 > d+ <
+ ]
+ (41)[
+  v147 y8 a+=40
+  v133 y13 f y11 f24
+  v165 y10 a+
+  v139 y14 a+12 y6 > c+
+  v152 y11 c+
+  v154 y10 < f24 y9 a+
+ ]
+]]2
+
+(41)
+v152 y11 a+12
+v139 y6 a+
+v133 y13 f y11 f24
+v165 y10 a+12
+v139 y14 a+6 y6 > c+12
+v118 y5 c+24
+v152 y11 < a+12
+v133 a+24
+v154 y10 f12
+v134 f24
+
+[[ (40) (41) ]]2
+
+(41)2 (40)
+(41)3 (40)
+(41)
+
+r1^1
+
+@31 v118 y6 $F4 $03
+[[
+ e16 r16 g24 r12 b16 r16
+ > d24 r24 < b16 r16 b48 r48
+ a16 r16 f+16 r16 d16 r16
+]]2
+
+@38 $F4 $03
+[
+ v147 y8 a+
+ v139 y14 f12 f24 y6 f
+ v147 y12 a+
+ v139 y6 f12 f24
+]
+y14 f
+v147 y8 a+12
+v154 y11 a+24
+v139 y14 f
+
+*
+y14 f6
+v147 y8 > c+24
+v154 y11 < a+24 a+24
+v139 y14 f24 f24
+
+;==================;
+;    Channel #5    ;
+;==================;
+#5 amplify
+r=88
+
+@39 y8 o5 l48
+v107 c+ v130 c+ /
+v163
+[
+ c+8 v147 c+12 c+8 c+ r c+12
+ v107 c+24 r12
+ v147 [[c+ r c+12]]3 c+ r c8 c12 c8 c r c12
+ v107 c24 r12
+ v147 [[c r c12]]3 c r
+]2
+
+r1^1
+
+v163 *2 r8
+
+@32 v113 <
+[ f16 r8^48 f r f16 r8. ]13
+g16 r8^48 g r g16 r8.
+*2
+
+r2..
+
+@39 >
+v107 c8 c12 c8 c r c12
+v79 c24 r12 c r
+v94 c12 v107 c r v119 c12
+v130 c r v137 c12
+v147 c r c8 c12 c8 c r c12
+v107 c24 r12
+v147 [[c r c12]]3 c r
+v163 d+12 f24 f12 f r f8 d+12 f24 f12
+f r f8 d+12 f24 f r f r f r
+
+[@30 v147 y14 < d16 r d r=20 d24
+ @39 v179 y8 > f12 r24]2
+@30 v155 y14 < d24 r12 d16 r
+@39 v163 y8 > c24
+*2
+
+r=40
+
+v107 c v130 c
+
+;==================;
+;    Channel #6    ;
+;==================;
+#6 amplify
+r=88
+
+@39 y12 o4 l48
+v107 a+ v130 a+ / v163 a+8
+[
+ v147 a+12 a+8 a+ r a+12
+ v107 a+24 r12
+ v147 [[a+ r a+12]]3 a+ r g+8 g+12 g+8 g+ r g+12
+ v107 g+24 r12
+ v147 g+ r g+12 g+ r g+12 g+ r g+12 g+ r
+]
+
+a+8 *
+
+r1^1
+
+v163 a+8 *
+
+a+8 * r8
+
+@32 v113
+(60)[ c16 r8^48 c r c16 r8. ]4
+(61)[ < a+16 r8^48 a+ r a+16 r8. > ]2
+(60)6
+(61)
+(60)3
+
+r2..
+
+@39
+v107 g+8 g+12 g+8 g+ r g+12
+v79 g+24 r12 g+ r v94 g+12
+v107 g+ r v119 g+12
+v130 g+ r v137 g+12
+v147 g+ r g+8 g+12 g+8 g+ r g+12
+v107 g+24 r12
+v147 g+ r g+12 g+ r g+12 g+ r g+12 g+ r
+
+v163 > c12
+c24 c12 c r c8
+c12 c24 c12
+c r c8 c12
+c24 c r c r c r
+
+[@30 v174 y10 << g16 r g r=20 g24
+ @39 v179 y12 >> c12 r24]2
+v163 < g12 r24 r12 g24 > *2
+
+r=40
+
+v107 < g+ v130 g+
+
+;==================;
+;    Channel #7    ;
+;==================;
+#7 amplify
+r2 /
+
+o4 l8
+(70)[
+ @40 v120 y15 g12 g24 g g12 g24
+ @36 v132 y5 g
+ @40 v120 y15 g12 g24 g g12 g24
+ @36 v132 y5 g12 g24
+]4
+
+@40 y15
+g12 g24 g g12 g24 g=40
+g24 g g g g12 g24
+g g12 g24 g=40 g24 g
+v152 g12 v132 g24 v152 g
+
+[[
+ @40 v132 y15 g12 g24 g g12 g24
+ @36 v141 y5 g12
+ @40 v152 y15 g v132 g24 g g
+ @36 v141 y5 g12 g24
+ @40 v132 y15 g12 g24 g g12 g24
+ @36 v141 y5 g12
+ @40 v132 y15 g g24 g g
+ @36 v141 y5 g12 g24
+]]2
+
+(70)8
+
+@40 v120 y15
+[[ g12 g24 g ]]8
+v132 g12 g24 g g12 g24 g=40
+g24 g g g g12 g24 g g12 g24 g12
+v152 g v132 g24 g
+v152 g12 v132 g24 v152 g
+
+[[ [v132 g g12 g24 v152 g]2 g g ]]2

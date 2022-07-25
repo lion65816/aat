@@ -11,10 +11,20 @@ level:
 01A	PressuredWater.asm
 01B     1B.asm
 023	lvlfilter.asm
+02A	ConstantAutoscroll2A_RetryButton2A_OffscreenIndicator.asm
+02B	ConstantAutoscroll2B_RetryButton2B_OffscreenIndicator.asm
+02C	ConstantAutoscroll2C_RetryButton2C.asm
+02D	ConstantAutoscroll2D_RetryButton2D.asm
+052	RetryButton52.asm
 053	PressuredWater.asm
 054	PressuredWater.asm
 055	PressuredWater.asm
 090	Gradient110.asm
+0A0	DisableLR.asm
+0B0	DisableLR.asm
+0C0	DisableLR.asm
+0D0	HDMAGradient.asm
+0E0	HDMAGradient.asm
 0FE	statusbarremove.asm
 0FF	statusbarremove.asm
 102	statusbarremove.asm
@@ -23,11 +33,6 @@ level:
 118     GradientSky.asm
 119 	HDMAGradient119.asm
 136	lvlfilter.asm
-0A0	DisableLR.asm
-0B0	DisableLR.asm
-0C0	DisableLR.asm
-0D0	HDMAGradient.asm
-0E0	HDMAGradient.asm
 
 ; OW list. Valid values: 0 = Main map; 1 = Yoshi's Island; 2 = Vanilla Dome;
 ; 3 = Forest of Illusion; 4 = Valley of Bowser; 5 = Special World; and

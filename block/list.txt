@@ -27,6 +27,17 @@
 222:100 donutblk.asm
 560:25 boostdown.asm
 561:25 boostup.asm
+700:25 passable_spin.asm
+701:25 passable_hurt.asm
+7C0:130 password_block_init.asm
+7C1:124 password_block_1-1.asm
+7C2:124 password_block_1-2.asm
+7C3:124 password_block_1-3.asm
+7C4:124 password_block_1-4.asm
+7C5:124 password_block_1-5.asm
+7C6:25 door_block1.asm
+7F0:130 thwompcrush.asm
+7F1:5 killsprite_lava.asm
 DA0:130 sprite_solid.asm
 DA1:130 mario_solid.asm
 E70-E71:25 killsprite.asm

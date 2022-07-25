@@ -32,8 +32,8 @@ NameData:
  db "                   "
  db "                   "
  ;Level 006
- db "                   "
- db "                   "
+ db "  Thwompire State  "
+ db "     Building      "
  ;Level 007
  db "                   "
  db "                   "
@@ -122,8 +122,8 @@ NameData:
  db "  The Feeling of   "
  db "    a Freshman     "
  ;Level 024
- db "DO NOT EDIT        "
- db "(actually, you can)"
+ db "  Valley of Wheat  "
+ db "                   "
  ;Level 101
  db "Spikes do hurt     "
  db "        (sometimes)"
@@ -143,8 +143,8 @@ NameData:
  db "  Horse Adventure  "
  db "                   "
  ;Level 107
- db "This Cave is       "
- db "no Ghost House!    "
+ db "Doing Things       "
+ db "the Hard Way       "
  ;Level 108
  db "   The Castle      "
  db "      of Spirits   "

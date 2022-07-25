@@ -43,6 +43,9 @@ Locals:
 27  originals/39 The Yoshis Are Home.txt
 28  originals/40 Cast List.txt
 29  Percussive_Maintenance.txt
+2A  Welcome to Booster Tower (Game Over fix).txt
+2B  And my Name's Booster (Game Over fix).txt
+2C  117 Fight Against a Stronger Monster.txt
 2D  Sparkster - Lakeside.txt
 2E  voile, the magic library.txt
 31  FFMQ - Battle 1.txt
@@ -80,3 +83,5 @@ Locals:
 5C  442.txt
 5F  harvest.txt
 60  kraid.txt
+65  Approaching the Castle (Fullcannon).txt
+66  HJ Demo 2 (Bouncy) (VecchiaZim).txt
