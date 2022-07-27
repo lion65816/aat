@@ -293,8 +293,8 @@ NameData:
  db "Weird Teal House   "
  db "                   "
  ;Level 139
- db "                   "
- db "                   "
+ db "    Revenge of     "
+ db "     the Sushi     "
  ;Level 13A
  db "Use Of A Goal Posts"
  db "                   "

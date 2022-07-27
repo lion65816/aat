@@ -1,0 +1,196 @@
+#am4
+#path "DKC3_ER"
+#samples
+{
+	#optimized
+	"../EMPTY.brr"
+	"../EMPTY.brr"
+	"DKC3_ER-16.brr"
+	"DKC3_ER-17.brr"
+	"DKC3_ER-18.brr"
+	"DKC3_ER-19.brr"
+	"DKC3_ER-1a.brr"
+	"DKC3_ER-1b.brr"
+	"DKC3_ER-1c.brr"
+	"DKC3_ER-1d.brr"
+	"DKC3_ER-1e.brr"
+	"DKC3_ER-1f.brr"
+	"DKC3_ER-20.brr"
+	"DKC3_ER-21.brr"
+	"DKC3_ER-22.brr"
+	"DKC3_ER-23.brr"
+	"DKC3_ER-24.brr"
+}
+;Donkey Kong Country 3 - Enchanted Riverbank.txt
+;by Joey : )
+;Yoshis are welcome!
+
+;Headerだね、かっこいい！！！
+$ED $80 $6D $2B
+$ED $80 $7D $00
+$F0
+
+;Samples:
+;16 - Steel Drum
+;17 - Tom
+;18 - Tin
+;19 - Low Hit
+;1A - Can
+;1B - Flute
+;1C - Marimba
+;1D - Raindrop Synth
+;1E - Strings 1
+;1F - Strings 2
+;20 - Woodblock
+;21 - H.H. Closed
+;22 - H.H. Opened
+;23 - Ambient Bongo (High)
+;24 - Ambient Bongo (Low)
+;^ Sample spam olo
+
+#0 $F4 $02 / w230 q7F t56 $EF $9C $20 $20 $F1 $00 $37 $01 $ED $80 $1F $01 ;Bongo
+
+o3 [$E5 $A3 $0A $ED $7E $F6 $EE $60 v240 c16 $E5 $A4 $0A $ED $7E $F6 c16c16 $E5 $A3 $0A $ED $7E $F6 c16 $EF $9E $20 $20
+$E5 $A0 $08 $ED $7F $E0 $EE $00 v100 c16 $EF $9C $20 $20 $E5 $A4 $0A $ED $7E $F6 $EE $60 v240 c16 $E5 $A3 $0A $ED $7E $F6 c16
+$E5 $A4 $0A $ED $7E $F6 c16 $E5 $A3 $0A $ED $7E $F6 c16 $E5 $A4 $0A $ED $7E $F6 c16c16 $E5 $A3 $0A $ED $7E $F6 c16 $EF $9E $20 $20 r16
+$EF $9C $20 $20 $E5 $A4 $0A $ED $7E $F6 c16 $E5 $A3 $0A $ED $7E $F6 c16 $E5 $A4 $0A $ED $7E $F6 c16]9
+$EF $9E $20 $20 $E5 $A3 $0A $ED $7E $F6 $EE $60 v240 c16 $E5 $A4 $0A $ED $7E $F6 c16c16 $E5 $A3 $0A $ED $7E $F6 c16
+$E5 $A0 $08 $ED $7F $E0 $EE $00 v100 c16 $E5 $A4 $0A $ED $7E $F6 $EE $60 v240 c16 $E5 $A3 $0A $ED $7E $F6 c16
+$E5 $A4 $0A $ED $7E $F6 c16 $E5 $A3 $0A $ED $7E $F6 c16 $E5 $A4 $0A $ED $7E $F6 c16c16 $E5 $A3 $0A $ED $7E $F6 c16 r16
+$E5 $A4 $0A $ED $7E $F6 c16 $E5 $A3 $0A $ED $7E $F6 c16 $E5 $A4 $0A $ED $7E $F6 c16
+[$EF $9C $20 $20 $E5 $A3 $0A $ED $7E $F6 $EE $60 v240 c16 $E5 $A4 $0A $ED $7E $F6 c16 $EF $9E $20 $20 c16 $E5 $A3 $0A $ED $7E $F6 c16
+$EF $9C $20 $20 $E5 $A0 $08 $ED $7F $E0 $EE $00 v100 c16 $E5 $A4 $0A $ED $7E $F6 $EE $60 v240 c16 $EF $9E $20 $20  $E5 $A3 $0A $ED $7E $F6 c16
+$E5 $A4 $0A $ED $7E $F6 c16 $EF $9C $20 $20 $E5 $A3 $0A $ED $7E $F6 c16 $E5 $A4 $0A $ED $7E $F6 c16
+$EF $9E $20 $20 c16 $E5 $A3 $0A $ED $7E $F6 c16 $EF $9C $20 $20 r16
+$E5 $A4 $0A $ED $7E $F6 c16 $EF $9E $20 $20 $E5 $A3 $0A $ED $7E $F6 c16 $E5 $A4 $0A $ED $7E $F6 c16 $EF $9C $20 $20
+$E5 $A3 $0A $ED $7E $F6 $EE $60 v240 c16 $E5 $A4 $0A $ED $7E $F6 c16 $EF $9E $20 $20 c16 $E5 $A3 $0A $ED $7E $F6 c16
+$EF $9C $20 $20 $E5 $A0 $08 $ED $7F $E0 $EE $00 v100 c16 $E5 $A4 $0A $ED $7E $F6 $EE $60 v240 c16 $EF $9E $20 $20  $E5 $A3 $0A $ED $7E $F6 c16
+$E5 $A4 $0A $ED $7E $F6 c16 $EF $9C $20 $20 $E5 $A3 $0A $ED $7E $F6 c16 $E5 $A4 $0A $ED $7E $F6 c16
+$EF $9E $20 $20 c16 $E5 $A3 $0A $ED $7E $F6 c16 r16
+$EF $9C $20 $20 $E5 $A4 $0A $ED $7E $F6 c16 $EF $9E $20 $20 $E5 $A3 $0A $ED $7E $F6 c16 $E5 $A4 $0A $ED $7E $F6 c16]5
+[$EF $58 $20 $20 $E5 $A3 $0A $ED $7E $F6 $EE $60 v240 c16 $E5 $A4 $0A $ED $7E $F6 $EF $D8 $20 $20 c16
+$EF $5A $20 $20 c16 $E5 $A3 $0A $ED $7E $F6 c16 $EF $D8 $20 $20 $E5 $A0 $08 $ED $7F $E0 $EE $00 v100 c16
+$E5 $A4 $0A $ED $7E $F6 $EE $60 v240 c16 $EF $5A $20 $20 $E5 $A3 $0A $ED $7E $F6 c16
+$EF $DA $20 $20 $E5 $A4 $0A $ED $7E $F6 c16 $EF $58 $20 $20 $E5 $A3 $0A $ED $7E $F6 c16 $EF $D8 $20 $20 $E5 $A4 $0A $ED $7E $F6 c16
+$EF $5A $20 $20 c16 $E5 $A3 $0A $ED $7E $F6 c16 $EF $D8 $20 $20 r16
+$E5 $A4 $0A $ED $7E $F6 c16 $EF $5A $20 $20 $E5 $A3 $0A $ED $7E $F6 c16 $EF $DA $20 $20 $E5 $A4 $0A $ED $7E $F6 c16
+$EF $58 $20 $20 $E5 $A3 $0A $ED $7E $F6 $EE $60 v240 c16 $E5 $A4 $0A $ED $7E $F6 $EF $D8 $20 $20 c16
+$EF $5A $20 $20 c16 $E5 $A3 $0A $ED $7E $F6 c16 $EF $D8 $20 $20 $E5 $A0 $08 $ED $7F $E0 $EE $00 v100 c16
+$E5 $A4 $0A $ED $7E $F6 $EE $60 v240 c16 $EF $5A $20 $20 $E5 $A3 $0A $ED $7E $F6 c16
+$EF $DA $20 $20 $E5 $A4 $0A $ED $7E $F6 c16 $EF $58 $20 $20 $E5 $A3 $0A $ED $7E $F6 c16 $EF $D8 $20 $20 $E5 $A4 $0A $ED $7E $F6 c16
+$EF $5A $20 $20 c16 $E5 $A3 $0A $ED $7E $F6 c16 $EF $DA $20 $20 r16
+$EF $D8 $20 $20 $E5 $A4 $0A $ED $7E $F6 c16 $EF $5A $20 $20 $E5 $A3 $0A $ED $7E $F6 c16 $EF $DA $20 $20 $E5 $A4 $0A $ED $7E $F6 c16]14
+
+#1 q7F ;Hihat
+
+o3 $E5 $A1 $16 $ED $3D $60 v70 y8 r8c8 $E5 $A2 $0B $ED $7F $F2 $EE $C4 v125 y10 c8 $EE $00 $E5 $A1 $16 $ED $3D $60 v75 y8 c8r8 v85 c8
+$E5 $A2 $0B $ED $7F $F2 $EE $C4  v125 y10 c8 $E5 $A1 $16 $ED $3D $60 $EE $00 v90 y9 v140 c8r8 v100 c8 $EE $C4 $E5 $A2 $0B $ED $7F $F2 v125 y10 c8
+$EE $00 $E5 $A1 $16 $ED $3D $60 v110 c8r8 v115 c8 $E5 $A2 $0B $ED $7F $F2 $EE $C4 v125 c8 $EE $00 $E5 $A1 $16 $ED $3D $60 v120 c8 [r8 v125 c8
+$E5 $A2 $0B $ED $7F $F2 $EE $C4 v125 c8 $EE $00 $E5 $A1 $16 $ED $3D $60 v120 c8]14
+$E5 $A2 $0B $ED $7F $F2 $EE $C4 v60 c16 v80 c16 v100 c16 v110 c16 v140 c16 v110 c16c16c16 v120 c16c16 v140 c16 v120 c16 v105 c16 v120 c16c16c16
+y9 [$E5 $A1 $16 $ED $3D $60 $EE $00 c16c16 $E5 $A2 $0B $ED $7F $F2 $EE $C4 c8
+$E5 $A1 $16 $ED $3D $60 $EE $00 c16c16 $E5 $A2 $0B $ED $7F $F2 $EE $C4 c8
+$E5 $A1 $16 $ED $3D $60 $EE $00 c16c16 $E5 $A2 $0B $ED $7F $F2 $EE $C4 c8
+$E5 $A1 $16 $ED $3D $60 $EE $00 c16c16 $E5 $A2 $0B $ED $7F $F2 $EE $C4 c8
+$E5 $A1 $16 $ED $3D $60 $EE $00 c16c16 $E5 $A2 $0B $ED $7F $F2 $EE $C4 c8
+$E5 $A1 $16 $ED $3D $60 $EE $00 c16c16 $E5 $A2 $0B $ED $7F $F2 $EE $C4 c8
+$E5 $A1 $16 $ED $3D $60 $EE $00 c16c16 $E5 $A2 $0B $ED $7F $F2 $EE $C4 c8
+c16 $E5 $A1 $16 $ED $3D $60 $EE $00 c16 $E5 $A2 $0B $ED $7F $F2 $EE $C4 c8]19
+
+#2 ;Accent Strings 1/Accent Marimba 1/Cello ..? :V/Steel Drums (Main)
+
+o3 q4F [$E5 $9F $07 $ED $6D $D8 $ED $81 $00 v90 $EE $20 e8 $ED $6A $D9 v77 e8 v72 e8 $ED $6D $D8 v90 e16 $ED $6A $D9 v77 e16r8 $ED $6D $D8 v90 e16 $ED $6A $D9 v77 e16r8
+$ED $6D $D8 v90 e16 $ED $6A $D9 v72 e16]15
+$E5 $9F $07 $ED $6D $D8 v80 e8 $ED $6A $D9 v75 e8 v70 e8 $ED $6D $D8 v75 e16 $ED $6A $D9 v70 e16r8 $ED $6D $D8 v68 e16 $ED $6A $D9 v67 e16r8
+$ED $6D $D8 v66 e16 $ED $6A $D9 v64 e16
+q7F $E5 $9C $05 $ED $4F $94 $EE $DA v110 e8e16 v100 e16 v80 e8 v110 e16 v100 e16 v90 e8 v120 e16 v110 e16 v90 e8 v120 d16 v100 e16e16 v90 d16
+v110 e16 v100 e16 v90 e8 v115 e16 v105 e16 v95 e8 v120 e16 v110 e16 v130 g16 v120 e16 v130 f+16 v120 g16
+v110 e8 v90 e16 v90 e16 v95 e8 v85 e16 v75 e16 v100 e8 v85 e16 v75 e16 v70 e8 v105 d16 v85 e16 v90 e8e16 v80 e16  e8 v95 e16 v80 e16
+v75 e8 v70 e16 e16 e8 v85 d16 v70 e16
+< $E5 $9F $03 $ED $5E $A6 $EE $20 v230 c1^2^4 $DD $00 $F0 $8A ^4^1^1
+< $E5 $9E $02 $ED $23 $46 $EE $70 v175 e1^2^4 $DD $00 $F0 $80 ^4^1^1 [r1]4
+o3 $E5 $96 $06 $ED $7F $F6 $EE $C9 $ED $81 $FE v130 (8)[a8a8>c+8<a16>e8e8<a16>c+8<a8 e8a8>c+8<a8b16b8>f+16e16c+16<a8
+a8a8>c+8<a16>e8e8<a16>c+8<a8 e16g+16e16g+16e16e16g+8g+16a16^8^4]1
+< $EE $00 $ED $81 $00 $E5 $9C $05 $ED $4F $94 $EE $DA v150 (9)[a32e32a32e32a32e32a32e32 >c+8<a16>e8e8<a16> c+32<a32>c+16< a8
+e32a32e32a32a32e32a16> c+8 <a32e32a32e32 b32g+32b32g+32b32g+32> f+16e16c+16<a8
+a32c+32a32c+32a32c+32a32c+32 > c+8 < a16>e8e8<a16>c+8<a8
+e16g+16e16g+16e16e16g+8 g+16a16^8^4]1 v170 [d8d8r8d8r8d8r8c8d8d8r8d8r8d8r4]2
+o3 $E5 $96 $06 $ED $7F $F6 $EE $C9 $ED $81 $F7 v130 (8)1
+
+#3 q7F ;Raindrop Synth (Main)/Marimba/Flute (Main)/Steel Drums (Low)
+
+o3 $E5 $9D $05 $ED $1D $10 $ED $81 $00 $EE $F0 r1^1 (1)[v95 c+16 > v90 c+16 < v70 c+16 > v60 c+16<c+16 >c+16<c+16>c+16< r8
+v90 d16 > v70 d32 < v95 c+16 > v90 c+16 < v70 c+32 < v95 a16 > v70 a16 < v95 e16 > v90 e16 < v70 e16 > v60 e16<e16>e16<e16>e16<r4]1
+v95 a16 > v70 a32^64 < a64 v95 e16 > v70 e16 < v95 g16 > v90 g16 < v70 g16 > v60 g16<g16>g16< v95 f+16 > v70 f+16 < f+16>f+16< v60 f+16>f+16<
+v95 e16 > v70 e32^64 < e64 v95 d16 > v70 d16 < v95 e16 > v70 e16 < e16 > v60 e16 < e16 > e16 << v95 a16 > v70 a32<a16^32 >a16< v60 a16>a16<a16>a16r16r16
+(1)1 > v95 e16 > v90 e16 < v70 e16 > v60 e16 < v95 d16 > v90 d16 < v70 d16 > v60 d16 <d16>d16<d16>d16<d16>d16r8< v95 f+16 > v70 f+32r32 v60 f+32<
+v95 d16> v70 d16 < v95 e16 > v70 e16< v60 e16 >e16<e16>e16<e16>e16 r4^8^16^32
+o1 [$E5 $9C $05 $ED $4F $94 v240 r8 a16 $ED $4A $8B v170 a16> v150 a16< v130 a16 $ED $4F $94 v240 a16 $ED $4A $8B v170 a16 > $ED $4F $94 v240 d16 <
+$ED $4A $8B v170 a16>d16<a16 > $ED $4F $94 v240 e16 $ED $4A $8B v170 d8 v150 e4^16 v130 e8 < $ED $4F $94 v240 a16 $ED $4A $8B v170 a16 >]
+$ED $4F $94 v240 g16 < $ED $4A $8B v170 a16 > $ED $4F $94 v240 f+16 $ED $4A $8B v170 g16 $ED $4F $94 v240 e16 $ED $4A $8B v170 f+16
+v150 e16 v130 e16 * r8 < $ED $4F $94 v240 a16 $ED $4A $8B v170 a16 $ED $4F $94 v240 g16 $ED $4A $8B v150 a16 v130 g16g16 * >
+$ED $4F $94 v240 g16 < $ED $4A $8B v170 a16 > $ED $4F $94 v240 a16 $ED $4A $8B v170 g16 $ED $4F $94 v240 e16 $ED $4A $8B v170 a16 v150 e16
+130 e16 < v255 [a8a8r8a8r8a8r8g8a8a8r8a8r8a8r4]2 [r1]2
+o3 $E5 $9B $04 $ED $7A $E0 $EE $50 v80 (4)[d+16<g+16>c+8c+8<g+16>d+8<g+16>c+8^16<g+16>f+8]1 v110 (4)1 v140 (4)1 v170 (4)1 v110 (4)1 v80 (4)1 v110 (4)1
+v140 (4)1 v170 (4)1 v110 (4)1
+o3 $E5 $96 $06 $ED $7F $F6 $EE $C9 $ED $81 $FE v94 [a32e32]12 (12)[r32 a32>c+8^16^32 < e32a32e32a32e32a32e32e32a32e32a16 e32a32e16
+g+32b32g+32b32g+32b32g+32b32g+32^16^8]1 [a32c+32]8 [d32f+32]8 e16e16e16e16e16e16e16e16 [r1]8 r2
+o3 $E5 $96 $06 $ED $7F $F6 $EE $C9 $ED $81 $F7 v94 [a32e32]12 (12)1 [a32c+32]8 [d32f+32]8 e16e16e16e16e16e16e16e16 r2
+
+#4 ;Accent Strings 2/Accent Marimba 2/Ambience
+
+o2 q4F [$E5 $9F $07 $ED $6D $D8 $EE $20 v90 a8 $ED $6A $D9 v77 a8 v72 a8 $ED $6D $D8 v90 a16 $ED $6A $D9 v77 a16r8 $ED $6D $D8 v90 a16 $ED $6A $D9 v77 a16r8
+$ED $6D $D8 v90 a16 $ED $6A $D9 v72 a16]15
+$E5 $9F $07 $ED $6D $D8 v80 e8 $ED $6A $D9 v75 a8 v70 a8 $ED $6D $D8 v75 a16 $ED $6A $D9 v70 a16r8 $ED $6D $D8 v68 a16 $ED $6A $D9 v67 a16r8
+$ED $6D $D8 v66 a16 $ED $6A $D9 v64 a16
+q7F $E5 $9C $05 $ED $4F $94 $EE $DA v110 a8a16 v100 a16 v80 a8 v110 a16 v100 a16 v90 a8 v120 e16 v110 a16 v90 a8 v120 g16 v100 a16a16 v90 g16
+v110 a16 v100 a16 v90 a8 v115 a16 v105 a16 v95 a8 v120 a16 v110 a16 > v130 c16 < v120 a16 v130 b16 > v120 c16 <
+v110 a8 v90 a16 v90 a16 v95 a8 v85 a16 v75 a16 v100 a8 v85 a16 v75 a16 v70 a8 v105 g16 v85 a16 v90 a8a16 v80 a16  a8 v95 a16 v80 a16
+v75 a8 v70 a16 a16 a8 v85 g16 v70 e16
+(5)[o4 $E5 $99 $03 $ED $0F $1F $EE $EA v90 r4g4r4g4r4g4r8g8 < $E5 $97 $02 $ED $0F $E0 $EE $00 v170 f+4]4
+(6)[ v140 a+4 > $E5 $99 $03 $ED $0F $1F $EE $EA v90 g4r4g4r4g4r8g8 < $E5 $97 $02 $ED $0F $E0 $EE $00 v170 f+4]1 (5)1 (6)2 (5)1 (6)1
+[r1]4 (5)2
+
+#5 q7F ;Cello 1/Can
+
+o2 $E5 $9E $03 $ED $31 $62 $EE $70 v230 c+1^1^1^1^1^1^1^1^1^1 < $E5 $9E $02 $ED $7E $E2 v250 d1e1^1f+1e1^1e1^1^1^1 [r1]8
+o3 $E5 $9A $03 $ED $7F $E0 v100
+(7)[a+16e16a+16a+16e16a+16e16a+16a+16e16a+16e16a+16e16a+16e16a+16e16a+16a+16e16a+16e16a+16a+16e16a+16e16a+16]1 e16a+16a+16 (7)1
+[r1]2 (7)1 e16a+16a+16 a+16e16a+16a+16e16a+16e16a+16a+16e16a+16e16a+16e16a+16e16a+16e16a+16a+16e16a+16e16a+16a+16e16a+16e16a+16r4^8  [r1]2
+o2 $E5 $9F $03 $ED $5E $A6 $EE $1C v230 f1^2^4 $DD $00 $F0 $90 ^4^1^1 [r1]4
+
+#6 q7F ;Cello 2/Raindrop Synth/Flute (Sub)/Steel Drums (Sub)/Marimba (sub)
+
+o1 $E5 $9E $02 $ED $31 $62 $ED $81 $00 $EE $70 v255 e1^1^1^1^1^1^1^1^1^1 [r1]8
+v160 (3)[$E5 $9D $05 $ED $7F $E0 $EE $F0 a16  $E5 $9D $02 $ED $7F $E0 c+16  $E5 $9D $05 $ED $7F $E0g16 $E5 $9D $02 $ED $7F $E0 c+16 ]2
+v190 (3)2 v220 (3)2 v250 (3)2 [r1]2
+o3 $E5 $9B $04 $ED $7A $E0 $EE $50 v70 r8^16 (4)1 v90 (4)1 v110 (4)1 v130 (4)1 v90 (4)1 v70 (4)1 v90 (4)1
+v110 (4)1 v130 (4)1 v90 d+16<g+16>c+8c+8<g+16>d+8<g+16>c+8^16<g+16>f+32
+o3 $E5 $96 $06 $ED $7F $F6 $EE $C9 $ED $81 $FE v100 (8)1 $EE $00 $ED $81 $00 $E5 $9C $05 $ED $4B $94 $EE $DA v120 (9)1 r1^2^4^8^32
+o1 v160 (10)[$E5 $9D $05 $ED $7F $E0 $EE $F0 d16  $E5 $9D $01 $ED $7F $E0 f+16  $E5 $9D $05 $ED $7F $E0 c16 $E5 $9D $01 $ED $7F $E0 f+16]2
+v190 (10)2 v220 (10)2 v250 (10)2 o3 $E5 $96 $06 $ED $7F $F6 $EE $C9 $ED $81 $F7 v100 r16^32 (8)1
+
+#7 q7F ;Raindrop Synth (Sub)/Tin
+
+o3 $E5 $9D $05 $ED $18 $10 $EE $F0 q7F r1^1 r16^32 (2)[v85 c+16 > v70 c+16 < v60 c+16 > v55 c+16<c+16 >c+16<c+16>c+16< r8
+$E5 $9D $05 $ED $18 $10 $EE $F0 v70 d16 > v60 d32 < v85 c+16 > v70 c+16 < v60 c+32 < v85 a16 > v60 a16
+$E5 $9D $05 $ED $18 $10 $EE $F0 < v85 e16 > v70 e16 < v60 e16 > v55 e16<e16>e16<e16>e16<e16>e16<r8]1
+$E5 $9D $05 $ED $18 $10 $EE $F0 v85 a16 > v60 a32^64 < a64 v85 e16 > v60 e16 < v85 g16 > v70 g16
+$E5 $9D $05 $ED $18 $10 $EE $F0 < v60 g16 > v55 g16<g16>g16< v85 f+16 > 60 f+16 < f+16>f+16< v55 f+16>f+16<
+$E5 $9D $05 $ED $18 $10 $EE $F0 v85 e16 > v60 e32^64 < e64 v85 d16 > v60 d16 < v85 e16 > v60 e16 < e16 >
+$E5 $9D $05 $ED $18 $10 $EE $F0 v55 e16 < e16 > e16 << v85 a16 > v60 a32<a16^32 >a16< v55 a16>a16<a16>a16r16r16
+(2)1 $E5 $9D $05 $ED $18 $10 $EE $F0 > v85 e16 > v70 e16 < v60 e16 > v55 e16 < v85 d16 > v70 d16 < v60 d16 >
+$E5 $9D $05 $ED $18 $10 $EE $F0 v55 d16 <d16>d16<d16>d16<d16>d16r8< v85 f+16 > v60 f+32r32 v55 f+32<
+$E5 $9D $05 $ED $18 $10 $EE $F0 v85 d16> v60 d16 < v85 e16 > v60 e16< v55 e16 >e16<e16>e16<e16>e16 r4^8^16
+[r1]8 o1 r32 v110 (3)2 v140 (3)2 v170 (3)2 v200 (3)1
+$E5 $9D $05 $ED $7F $E0 $EE $F0 a16  $E5 $9D $02 $ED $7F $E0 c+16  $E5 $9D $05 $ED $7F $E0 g32
+(11)[o3 $E5 $98 $08 $ED $7F $F5 $EE $00 v110 f16
+$ED $7F $E0 v90 e16
+$ED $7F $F5 v110 e16
+$ED $7F $F5 f16
+$ED $7F $E0 v90 f+16e16
+$ED $7F $F5 v110 f16
+$ED $7F $E0 v90 e16]40
+[r1]2 o1 r16^32 v110 (10)2 v140 (10)2 v170 (10)2 v200 (10)1
+$E5 $9D $05 $ED $7F $E0 $EE $F0 d16  $E5 $9D $01 $ED $7F $E0 f+16  $E5 $9D $05 $ED $7F $E0 c32
+(11)8

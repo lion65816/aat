@@ -85,3 +85,6 @@ Locals:
 60  kraid.txt
 65  Approaching the Castle (Fullcannon).txt
 66  HJ Demo 2 (Bouncy) (VecchiaZim).txt
+67  Earthbound_-_Pokey_Means_Business (A3MT Edit).txt
+68  Donkey Kong Country 3 - Enchanted Riverbank.txt
+69  Il Maniero Spettrale - Forest.txt

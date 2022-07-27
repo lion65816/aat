@@ -265,6 +265,8 @@ ee1	0	Solid if anything goes down
 1840	0	A simple brick block.
 1d0e	0	weak_break_block.asm
 1d0f	0	A Donut Lift, which will fall shortly after being stepped on.
+3300	0	BlkMus1.asm
+3301	0	A block which destroys (Baby) Yoshi if touched.
 60dd	0	StickyBlock.asm
 60de	0	StickyBlock.asm
 60df	0	StickyBlock.asm

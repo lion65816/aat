@@ -1,0 +1,431 @@
+#amk 2
+
+#spc
+{
+	#title		"Pokey Means Business"
+	#game		"Earthbound"
+	#comment	"Ported by SiameseTwins"
+}
+
+#path "Earthbound - Pokey Means Business"
+
+#samples
+{
+	#default
+	"Noise.brr"
+	"Open Hi Hat 2.brr"
+	"Square Wave.brr"
+	"Kick 5.brr"
+	"Electric Bass (Finger).brr"
+	"Overdriven Guitar.brr"
+	"Snare 3.brr"
+}
+
+#instruments
+{
+	"Noise.brr"                     $8F $E0 $B8 $00 $E0	; @30
+	"Open Hi Hat 2.brr"             $8F $E0 $B8 $06 $20	; @31
+	"Square Wave.brr"               $8F $E0 $B8 $04 $00	; @32
+	"Kick 5.brr"                    $FF $E0 $B8 $05 $50	; @33
+	"Electric Bass (Finger).brr"    $FF $EC $B8 $16 $20	; @34
+	"Overdriven Guitar.brr"         $FF $E0 $B8 $07 $90	; @35
+	"Snare 3.brr"                   $8F $E0 $B8 $05 $50	; @36
+}
+
+
+
+#0 w240
+
+t26
+@31 y14 v140
+
+$EF $79 $66 $66
+$F1 $03 $32 $01
+$F5 $58 $BF $DB $F0 $FE $07 $0C $0C
+
+o4
+[q7d e16 q77 e16]64
+
+t19
+q7f e32 e16. e32 e16 e16. e8. e32 e16. e32 e16 e16. e8.
+
+t37
+q6d
+[[e8]]12
+q62 e8 e8 e8 e8
+
+*32
+
+t19
+q7f e32 e16. e32 e16 e16. e16 y2 q77 e16 y18 q75 e16 y14 q7f e32 e16. e32 e16 e16. e16 y2 q77 e16 y18 q75 e16 
+
+q6d e8 r4. r48
+
+q7f e16 q79 e16 [[q7d e16 q79 e16]]3
+[[q7d e16 q79 e16]]12
+
+q7f e16 q79 e16 q7d e16 q79 e16 q7d e16 q79 e16 q7d e16 q79 e16
+[[q7d e16 q79 e16 q7d e16 q79 e16 q7d e16 q79 e16 q7d e16 q79 e16]]3
+
+q7d e12 y18 q77 e12 y2 e12 y18 e12 y2 e12 y18 e12
+
+
+
+
+
+
+
+#1
+
+@33 v199 y10 o4
+
+(1)[
+[[q7f d32 q7b d32 d32 d32]]3 q7f d32 q7d d32 d32 d32]8
+
+[[
+q7d d16 (2)[d16 q73 d16 q7d d16 d32 d32 d16 q73 d16 q7d d16
+d16 d16 q73 d16 q7d d32 d32 d16 d16 q73 d16 q7d d16 d16 d16 d32 d32 d16 d16 d16 q73 d16 q7d d16 d16 d16 q73 d16 q7d d16 d16 d16 q73 d16 q7d d16]
+]]2
+
+q7f
+[d32 d16. d32 d16 d16. d8.]2
+
+q7d
+[[d16 d16 r4. r2]]2
+
+(1)8
+
+q7f
+* d32 d16. d32 d32 d32 d16. d16 d32 d32 d16
+q7d d8 r4. r48
+
+[[
+q7f d16 (2)
+]]2
+
+q7d d16 d16 q73 d16 q7d d16 d32 d32 d16 r8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#2
+
+@34 o1 v170 y10
+$EE $23
+$DE $12 $1B $28
+q7d
+[[a32 a32 a+32 a+32 b32 b32 > c32 c32 c+32 c+32 c32 c32 < b32 b32 a+32 a+32]]8
+
+q7d
+[[
+o1 a16 a16 a16 > d+16 d+16 d+16 d+16 d+16 < g+16 g+16 g+16 g+16 f16 f16 f16 f16 a16 a16 a16 > f16 f16 f16 f16 f16 < a+16 a+16 a+16 a+16 f+16 f+16 f+16 f+16]]2
+
+q7f o1 f32 f16. f32 f16 f16. f8. f32 f16. f32 f16 f16. f+8.
+
+q7d e16 $EB $0C $18 $FD e8 r6... r2 $EB $00 $00 $00
+e16 e16 r4. r2 
+
+[[
+v180 q7d >
+[$EB $0A $18 $F8 e8
+$EB $06 $18 $08 < g8
+$EB $00 $00 $00 > c+16 < e16 g16 e16 f32 q77 f32 q7d f32 f32 f32 q77 f32 q7d f32 f32]
+$EB $06 $18 $08 a8 f8
+*
+$EB $06 $18 $06 a8 > c8
+]]2
+
+$EB $00 $00 $00
+v170
+q7f < e32 q7d g16. f32 a+16 b16. $EB $0C $24 $F8 f+8. $EB $00 $00 $00
+q7f e32 q7d g16. f32 a+16 b16. > c8. 
+q7d c+8 r4. r48 
+
+[
+q3f o1 e16 q7d [[e16]]11 q1d g16 q7d a+8 f+16
+[[e16]]16
+]2
+
+q7d
+o1 [[e16]]8
+
+
+
+
+
+
+
+
+
+
+
+#3
+
+@35 y11 v150
+$EE $64
+$DE $14 $1D $5A
+$FA $02 $FC
+
+q7d o4
+[[
+$EB $00 $00 $00
+< < e8. f6... e8. $EB $28 $3C $FE g6... $EB $00 $00 $00
+e8. f6... o2 e8. $EB $28 $3C $FC g+6...
+]]2
+
+
+@35 v139
+$DE $00 $1D $1E
+
+y3 q79 g+8 y17 q77 g+8 y3 q75 g+8 y17 g+8 y3 q73 g+8 y17 g+8 y3 g+8 y17 q72 g+8
+r1
+
+$EB $06 $10 $E8
+y11 q7d a12 y2 q77 a12 y18 a12 y2 q75 a12 y18 a12 y2 a12 y17
+$DC $B4 $03
+q73
+[[a12]]12 r2 
+
+
+y12
+$DE $14 $1D $5A
+$EB $00 $00 $00
+[q7f f32 q7b f16. q7f f32 q7b f16 f16.] $EB $0C $24 $F8 f8. $EB $00 $00 $00
+* f+8.
+
+
+$DE $00 $1D $1E
+[
+$EB $00 $00 $00
+q3d e16 e16 q7d a+8 $EB $17 $19 $01 g4 $EB $00 $00 $00
+q3d e16 e16 $EC $00 $02 $01 q7d > d+8 $EB $17 $18 $FC < a4 $EB $00 $00 $00
+o2 e16 e16 a+8 $EB $16 $18 $01 g4 $EB $00 $00 $00
+e16 e16] $EB $17 $18 $FF > d+4 $EC $00 $02 $01 < a8
+
+[[
+*
+$E8 $18 $64 $EB $17 $18 $FF > d+4 $EC $00 $02 $01 v139 < a8
+]]2
+
+$DE $14 $1D $5A
+q7f e32 q7b g16. q7f f32 q7b a+16 b16. $EB $0C $24 $F8 f+8. $EB $00 $00 $00
+q7f e32 q7b g16. q7f f32 q7b a+16 b16. > c8. 
+
+y5 q39 c+8 y15 q37 c+8 y5 q35 c+8 y15 q33 c+8 r48
+
+y9 v150
+$DE $00 $1D $1E <
+[[q3f d8 q7d c+8 q3d d16 c+16 d16 q7d e16 ^4 r16 < a+8 q3d g+16 r16 > d16 q7d c+8 q3d < b16 > c+16 d16 q7d e16 ^8. f8. g8]]2
+
+y3 v139
+$EB $0C $18 $18
+q79 g+8 y17 q77 g+8 y3 q75 g+8 y17 g+8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#4
+
+@35 y9 v130
+$EE $64
+$FA $02 $FC
+
+[[
+$EB $00 $00 $00
+r96 q7d
+o2 b8. > c6... $EB $00 $00 $00 < b8. $EB $28 $3C $FE > d6... $EB $00 $00 $00
+< b8. > c6... < b8. $EB $28 $3C $FC > d+=58
+]]2
+
+
+v120
+y5 q79 d+8 y15 q77 d+8 y5 q75 d+8 y15 d+8 y5 q73 d+8 y15 d+8 y5 d+8 y15 q72 d+8
+r1
+
+$EB $06 $10 $24
+$DE $03 $1A $F0
+y9 q7d e16 y15 q77 e16 e16 q75 e16 e16 e16 e16 e16 $DC $B4 $05
+q73
+[[e16]]16 r2
+
+
+y13
+$DE $14 $1E $3C
+$EB $00 $00 $00
+[q7f c32 q7b c16. q7f c32 q7b c16 c16.] $EB $0C $24 $F8 c8. $EB $00 $00 $00
+* c+8.
+
+[
+$EB $00 $00 $00
+< b16 b16 > f8 $EB $16 $19 $01 d4 $EB $00 $00 $00
+< b16 b16 $EC $00 $02 $01 > a+8 $EB $17 $18 $FC e4 $EB $00 $00 $00
+< b16 b16 > f8 $EB $16 $18 $01 d4 $EB $00 $00 $00
+o2 b16 b16] $EB $17 $18 $FF > a+4 $EC $00 $02 $01 e8 
+
+$EE $78
+[[
+r96 * $E8 $18 $5A $EB $17 $18 $FF a+4 $EC $00 $02 $01 v120 e=22
+]]2
+
+
+$EE $64
+r192
+[q7f < b32 q7b > d16. q7f c32 q7b f16 f+16.] $EB $0C $24 $F8 c+8. $EB $00 $00 $00
+* g=35
+
+y18 q79 g+12 q77 g+12 q75 g+12 q73 g+12 g+12 q72 g+12 r48
+
+y11 v140
+
+[[r96 q7f < a8 q7d a8 a16 a16 a16 b16 ^4 r16 f8 q3d c+16 r16 q7d a16 a8 a16 a16 a16 b16 ^8. > c8. d=22]]2
+
+y5
+v120
+$EB $0C $18 $18
+q79 d+8 y15 q77 d+8 y5 q75 d+8 y15 d+8
+
+
+
+
+
+
+
+
+
+
+
+
+
+#5
+
+@36 o4 v190 y10
+(3)[
+q7d [[d8]]12 d32 d16. d32 d16. q71 d64 q72 d96 q73 d96 q75 d64 q77 d96 q79 d32 q7b d32 q7d d32 d32 q7f d32 d32]2
+
+q7d
+r8 d8 r8 d8 r8 d8 d8 d8 r8 d8 r8 d8 r8 d8
+[q77 d32 q79 d32 q7b d32 q7f d32 q7d d32 d32 q7f d32 q7d d32]
+
+r8 d8 r8 d8 r8 d8 d8 d8 r8 d8 r8 d8 d8 d8
+*
+
+[
+q7d d32 d32 q72 d32 d32 q7d d32 q72 d32 d32 q7d d32 q72 d32 d32 q7d d32 q72 d96 q73 d64 d64 q75 d96 q77 d96 q79 d32 q7b d32 q7d d32]2
+
+d16 d16 r4. r2 d16 d16 r4. d32 d32 d32 d32 d32 d32 d32 d32 q73 d48 q75 d48 d48 q77 d48 q79 d48 q7b d48 q72 d48 q73 d48 q77 d48 q79 d64 q7b d64 q7d d64 q7f d64
+
+(3)2
+
+*
+
+d32 q7f d32 q72 d32 d32 q7d d32 q72 d32 d32 q7d d32 d32 d32 q72 d32 d96 q73 d64 d64 q79 d96 q7b d96 q7d d32 q7f d32 q7d d32
+q7d d8 r4. r48 
+
+[[
+q7d r8 d8 r8 d8 r8 d16 q79 d32 q7b d32 q7d d32 d32 q7f d16 d8 r8 q7d d8 r8 d16 d16 r16 q72 d64 q73 d64 q79 d32 q7b d32 d32 q7d d16. q77 d32 d32 q79 d32 q7b d16 q7d d32 d32]]2
+r2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#6
+
+@35 y4 v80
+$EE $64
+$DE $14 $1D $5A
+$FA $02 $FC
+
+q7d
+[[
+$EB $00 $00 $00
+r16.
+o2 e8. f6... e8. $EB $28 $3C $FE g6... $EB $00 $00 $00
+e8. f6... o2 e8. $EB $28 $3C $FC g8..
+]]2
+
+
+y18 v70
+$DE $00 $1D $1E
+r24 q79 g+8 y2 q77 g+8 y18 q75 g+8 y2 g+8 y18 q73 g+8 y2 g+8 y18 g+8 y2 q72 g+8 r1
+
+$EB $02 $10 $18
+y8 q7d
+> > > a12 y3 q77 a12 a12 q75 a12 a12 a12 $DC $B4 $14
+[[a12]]8 q73 a12 a12 a12 a12 r=88
+
+
+$EE $78
+y3
+$DE $14 $1D $5A
+
+$EB $00 $00 $00
+r12 < < <
+q7f f32 q7b f16. q7f f32 q7b f16 f16. $EB $0C $24 $F8 f8. $EB $00 $00 $00
+q7f f32 q7b f16. q7f f32 q7b f16 f16. f+=20 
+
+
+$EE $64
+y3 v100
+$DE $00 $1D $1E
+
+[[
+r24 $EB $00 $00 $00
+q7d e16 e16 a+8 $EB $16 $19 $01 g4 $EB $00 $00 $00
+e16 e16 $EC $00 $04 $02 > d+8 $EB $17 $18 $FC < a4 $EB $00 $00 $00
+e16 e16 a+8 $EB $16 $18 $01 g4 $EB $00 $00 $00
+e16 e16 $EB $17 $18 $FF > d+4 $EC $00 $02 $01 < a12
+]]3
+
+
+v90
+$DE $14 $1D $5A
+r12 o2
+[q7f e32 q7b g16. q7f f32 q7b a+16 b16.] $EB $0C $24 $F8 f+8. $EB $00 $00 $00
+* > c=20
+
+r48 y2
+q79 c+16 c+16 q77 c+16 c+16 q75 c+16 c+16 c+16 c+16
+
+
+y15
+$DE $00 $1D $1E
+
+[[r12 q7d d8 c+8 d16 c+16 d16 e16 ^4 r16 < a+8 q3d f+16 r16 q7d > d16 c+8 d16 c+16 d16 e16 ^8. f8. g24]]2
+
+y18 v70
+
+$EB $0C $18 $18
+r24 q79 g+8 y2 q77 g+8 y18 q75 g+8 y2 g+12

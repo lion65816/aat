@@ -122,6 +122,7 @@
 90 banzai_bill_invincible.json
 91 AngrySun101.json
 92 volcano_lotus101.json
+9B VenusVerticalShortSpitTwo.cfg
 
 C0 balloon_shooter.cfg
 C1 lasershooter.cfg
