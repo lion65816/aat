@@ -3,7 +3,7 @@ JMP MarioBelow : JMP MarioAbove : JMP MarioSide
 JMP SpriteV : JMP SpriteH : JMP MarioCape : JMP MarioFireball
 JMP TopCorner : JMP HeadInside : JMP BodyInside
 
-!Slot = $2E
+!Slot = $67
 
 MarioBelow:
 MarioAbove:

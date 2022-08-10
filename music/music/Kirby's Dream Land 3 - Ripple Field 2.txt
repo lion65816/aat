@@ -1,0 +1,75 @@
+#am4
+;Kirby's Dream Land 3 - Ripple Field 2
+;by Joey : )
+;Addmusic4 (HuFlungDu's Addmusic) is required!
+;Header type: Level
+
+;k ‚Ü‚ŸA‚â‚Á‚Ï‚èHeader‚¾‚æ‚Ë‚—‚—‚—
+$ED $80 $6D $2B
+$ED $80 $7D $00
+$F0
+$EF $00 $00 $00
+
+#0 w230 t62 q7F v0 @0 c8 ;Percussion
+
+/v250 $EF $2C $37 $37 $F1 $04 $46 $01
+(1)[o2 y10 @21 c8 > @22 y15 a+16a+16a+16r16 < @21 y10 c8 > @22 y15 a+16a+16  @27 y5 d8 @29 y10 f8  @22 y15 a+16a+16]7
+o2 y10 @21 c8 > @22 y15 a+16a+16a+16r16 < @21 y10 c8 > @22 y15 a+16a+16  @27 y5 c8 @29 y10 f8 @27 c16b16
+(1)9 o2 y10 @21 c8 > @22 y15 a+16a+16a+16r16 < @21 y10 c8 > @22 y15 a+16a+16  @27 y5 d8 @29 y10 f8b16b16
+(1)7 (2)[o2 y10 @21 c8 > @22 y15 a+16a+16a+16r16 < @21 y10 c8 >  @22 y15 a+16a+16  @27 y5 c8 @29 y10 f8 @27 c16b16]1
+(1)1 (2)1 (1)1 (2)1 (1)1 o2 y10 @21 c8 > @22 y15 a+16a+16a+16r16 < @21 y10 c8 > @22 y15 a+16a+16 @29 y10 f8b16b16b16b16
+
+#1 q7F ;Bass
+
+r8/ @6 v255 $ED $7F $E0
+[o2 c8^16 > c16 < c8c8 r8c16c16c16c16c16r16 < f8^16 > f16 < f8f8 r8g16g16g16g16g16b16> c8^16 > c16 < c8c8 r8c16c16c16c16c16r16 <
+e8^16 >e16<e16>e16<e16r16 a8^16 >a16<a16>a16<a16g16 f8^16>f16<f8f8 r8 > f16f16<f16>f16<f16r16
+e8^16 >e16<e16>e16<e16r16 a8^16 >a16<a16>a16<a16g16 d8^16>d16< d8d8 r8 > d16d16<d16>d16<d16r16 g8^16>g16<g8g8r8 g16g16g16g16a16b16]2
+g+8^16>g+16<g+8g+8r8 a+16a+16a+16a+16a+16a+16 > c8^16c16c8c8r8 c16c16c16c16c16<a+16
+g+8^16>g+16<g+8g+8r8 g+16g+16g+16>g+16<g+8 g8^16>g16<g8g8r8 > c16c16c16c16<a+16a+16
+g+8^16>g+16<g+8g+8r8 g+16g+16g+16>g+16<g+8 g8^16>g16<g16>g16<g16r16 > c8^16>c16<c16c16<a+16a+16
+f8^16>f16<f8f8r8 a+16a+16a+16>a+16<a+16a+16 e8^16>e16<e16>e16<e16r16  a8^16>a16<a16a16g16g16
+f8^16>f16<f8f8r8 f16f16f16>f16<f16r16 f8^16>f16<f8f8r8 f16f16f16>f16<f16f16 e8^16>e16<e8e8r8 e16e16e16>e16<e16r16
+e8^16>e16<e8e8r8 e16e16e16>e16<e16e16 d+8^16>d+16<d+8d+8r8 d+16d+16d+16>d+16<d+16r16 d+8^16>d+16<d+8d+8r8 >d+16d+16<d+16>d+16<d+16d+16
+d8^16>d16<d8d8r8 >d16d16<d16>d16<d16r16 g8^16>g16<g8g8r8 >g16g16<g16g16a16b16
+
+#2 q7F  ;Flute/Brass/Strings
+
+r8/ @0 v170 p20,60 $ED $7B $E0
+o4 g2^8r8<b8>c8e4^8d8^4<g4> g2^8r8<b8>c8 b4^8a8^4g4 a2r8b8>c8d8<g8^16e16^8g8c4^8 c16d16 e4^8d8^4c8d8 e4^8 g16e16d4 
+@4 $ED $7F $E6 v130 p15,40 g4 > g2^8r8<b8>c8 e4^8d8^4<g4> g2^8r8<b8>c8 b4^8a8^4a8b8>c2^8 < b16 $DD $00 $0C $BC ^16 o6 d8c8 < f+16 $DD $00 $0C $B7 ^16^16 e8^16
+g8c4^8 c16d16e4^8d8^4c8d8e4^8g16e16d4<g4>c1^1
+@1 $ED $49 $A8 v200 o6 c2^8d8d+8f8 d8^16<g16^8a+8>c2 c2^8d8d+8f8 g8^16<a+16^8>d8e4c4 
+$ED $49 $70 c8 $DD $00 $18 $C3 ^2 o6 $ED $49 $A8 f8d+8f8 d8^16<g16^8b8>c+4<a4>
+c8^16<b16^8a2^1 g16a16 b8^16a16^8g8^2^1 a+8^16a16^8g8^2^1 v80 $E8 $60 $C8 a2^4 g8a8a2 b8^16 $DD $00 $20 $B7 ^4^16
+
+#3  ;Bell/Synth (Part 1)
+
+r8/ q4F @13 v140 y3 $ED $7F $E0
+o3 l16 eg>ce<eg>ce<eg>ce<eg>ce< fa>cf<fa>cf< fb>df< fb>f<b eg>ce<eg>ce<eg>ce<eg>ce< egb>d<egb>d< eg>ce<eg>ce<
+fg>cf<fg>cf<fg>cf<fg>cf< egb>d<egb>d< eg>ce<eg>ce< fg>cf<fg>cf<fg>cf<fg>cf< fb>df<fb>df<fb>df< ab>df
+o3 v120 q7F @6 $ED $7F $E0 eg>ce<eg>ce<eg>ce<eg>ce< fa>cf<fa>cf< fb>df< fb>f<b eg>ce<eg>ce<eg>ce<eg>ce< egb>d<egb>d< eg>ce<eg>ce<
+fg>cf<fg>cf< fg+>cf<fg+>cf< egb>d<egb>d< eg>ce<eg>ce< fa>cf<fa>cf<fa>cf<fa>cf< fb>df<fb>df<fb>df< fb>d<b
+d+g+>cd+<d+g+>cd+< fa+>df<fa+>df< eg>ce<eg>ce<eg>cd<eg>cd<
+@3 v255 y19 $ED $79 $F0 o4 $DC $BF $01 c<d+>d+cc<d+>d+cc<d+>d+cc<d+>d+c< $DC $BF $13 a+d>d<a+a+d>d<a+ gc>c<g g<a+>a+g>
+$DC $BF $01 c<d+>d+c c<d+>dc c<d+>dc c<d+>dc< $DC $BF $13  a+d>d<a a+d>d<a gc>c<g g<a+>a+g
+$DC $BF $01 g+c>c<g+ g+c>c<g+ g+d>d<g+ g+d>d<g+ $DC $BF $13 b<b>>d<b b<b>>d<b ac+>c+<a ac+>c+<g
+$DC $BF $01 ac>c<a ac>c<a acba acba $DC $BF $13 ac>c<a acba acba acba
+$DC $BF $01 g<b>bg g<b>bg g<b>bg g<b>bg $DC $BF $13 f+<b>bf+ g<b>bf+ g<b>bf+ g<b>bg
+$DC $BF $01 g<a+>a+g g<a+>a+g g<a+>a+g g<a+>a+g $DC $BF $13 g<a+>ag g<a+>ag g<a+>ag g<a+>ag
+$DC $BF $01 f<a>af f<a>af f<a>af f<a>af $DC $BF $13 f<a>af f<a>af f<b>bf f<b>d<b
+
+#5 ;Bell/Synth (Part 2)
+
+r8/ q4F @13 v140 y17 $ED $7F $E0
+o3 l16 g>ceg<g>ceg<g>ceg<g>ceg< a>cfa<a>cfa< b>dfb<b>dfd< g>ceg<g>ceg<g>ceg<g>ceg< gb>dg<gb>dg< a>ceg<a>ceg<
+a>cga<a>cga<a>cga<a>cga< gb>df+<gb>df+< a>ceg<a>cer< a>cfa<a>cfa<a>cfa<a>cfa< b>dfb<b>dfb<b>dfb<b>dfb<
+o3 v105 q7F @6 $ED $7F $E0 g>ceg<g>ceg<g>ceg<g>ceg< a>cfa<a>cfa< b>dfb<b>dfd< g>ceg<g>ceg<g>ceg<g>ceg< gb>dg<gb>dg< a>ceg<a>ceg<
+a>cga<a>cga< g+>cfg+<g+>cfg+< gb>df+<gb>df+< a>ceg< a>cer< a>cfa<a>cfa<a>cfa<a>cfa< b>dfb<b>dfb<b>dfb< b>dfd<
+g+>cd+g+<g+>cd+g+< a+>dfa+<a+>dfa+< g>ceg<g>ceg< g>deg<g>deg<
+@13 q4F v140 $ED $7F $E0 o5 [y14 d+ < y6 g+ > y14 g y6 d+ y14 d+ < y6 g+ > y14 g y6 d+ y14 d+ < y6 g+ > y14 g y6 d+ y14 d+ < y6 g+ > y14 g y6 d+
+y14 d < y6 g > y14 f y6 d y14 d < y6 g > y14 f y6 d y14 c < y6 e > y14 e y6 c y14 c < y6 e > y14 e y6 c]2
+y14 c < y6 f > y14 d+ y6 c y14 c < y6 f > y14 d+ y6 c y14 d < y6 f > y14 f y6 d y14 d < y6 f > y14 f y6 d y14 d < y6 e > y14 g y6 d y14 d < y6 e > y14 g y6 d
+y14 c+ < y6 e > y14 e y6 c+ y14 c+ < y6 e > y14 e y6 c+ [y14 c < y6 f > y14 e y6 c]6 y14 c < y6 f > y14 d y6 c y14 c < y6 f > y14 d y6 c < [y14 b y6 e > y14 d < y6 b]8
+[y14 a+ y6 d+ > y14 d < y6 a+]6 y14 a+ y6 d+ > y14 c < y6 a+ y14 a+ y6 d+ > y14 c < y6 a+ [y14 a y6 d > y14 c < y6 a]6
+y14 b y6 d > y14 d < y6 b y14 b y6 d y14 f y6 g

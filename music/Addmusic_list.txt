@@ -88,3 +88,5 @@ Locals:
 67  Earthbound_-_Pokey_Means_Business (A3MT Edit).txt
 68  Donkey Kong Country 3 - Enchanted Riverbank.txt
 69  Il Maniero Spettrale - Forest.txt
+6A  synth2.txt
+6B  13month_dancre.txt

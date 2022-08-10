@@ -155,8 +155,8 @@ NameData:
  db "Lucifer's Lava Lamp"
  db "                   "
  ;Level 10B
- db "Is it done yet?    "
- db "                   "
+ db "    Bad Day At     "
+ db "    the Garden     "
  ;Level 10C
  db "Go right and defeat"
  db "that idiot         "
@@ -182,8 +182,8 @@ NameData:
  db "   Quirky Quarry   "
  db "                   "
  ;Level 114
- db "Ghost House with   "
- db "secret exit (key)  "
+ db "   Moving Above    "
+ db "   Great Lengths   "
  ;Level 115
  db "Up and down is     "
  db "solution           "
