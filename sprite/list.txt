@@ -125,6 +125,9 @@
 97 panser_green.cfg
 98 panser_blue.cfg
 9B VenusVerticalShortSpitTwo.cfg
+B7 climbing_net_door.json
+B8 InfoBox.cfg
+B9 baba_block.cfg
 
 C0 balloon_shooter.cfg
 C1 lasershooter.cfg

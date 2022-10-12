@@ -174,3 +174,6 @@ org ($07F3FE+$2E)|!bank  ; Spike Top
 db $15  ; palette A | originally: db $19
 org $02CAFA|!bank        ; Chuck Arm
 db $4B,$0B  ; palette D | originally db $47,$07
+
+org $02AC18|!bank
+db $80				; fix the carry sprite into pipe glitch

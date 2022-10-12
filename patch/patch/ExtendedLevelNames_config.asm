@@ -167,8 +167,8 @@ NameData:
  db "Anticlimatic short-"
  db "cut and final boss "
  ;Level 10F
- db "DON'T take Yoshi   "
- db "for secret exit... "
+ db "     Sui Glide     "
+ db "                   "
  ;Level 110
  db "My Green Garden    "
  db "in Green Forest    "
@@ -221,8 +221,8 @@ NameData:
  db " The Legend of the "
  db "Captain Blackpowder"
  ;Level 121
- db "Blue switch of     "
- db "chance             "
+ db "  SWITCH IS BLUE   "
+ db "                   "
  ;Level 122
  db "This BG gives me   "
  db "DEJA VU?           "

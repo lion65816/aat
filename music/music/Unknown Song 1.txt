@@ -1,0 +1,106 @@
+#amm
+#spc
+{
+	#author	"Sui"
+	#title	"???"
+}
+#instruments
+{
+	@21 $0F $6A $7F $03 $00
+	@24 $FE $6A $B8 $07 $00
+	@27 $7E $6A $7F $08 $00
+}
+#0 w170 t60 
+@14 v255
+$EF $FD $50 $50 
+$F1 $04 $63 $01 
+$F2 $D8 $28 $28 
+(1)[q7F o2f+8c+8e8f+8a8f+8a8o3c+8]4/
+(2)[o2f+8c+8e8f+8a8f+8a8o3c+8o2f+8c+8e8f+8a8f+8a8o3c+8o2e8o1b8o2c+8e8g+8e8g+8b8e8o1b8o2c+8e8g+8e8g+8b8d8o1a8b8o2d8f+8d8f+8a8d8o1a8b8o2d8f+8d8f+8a8c+8o1g+8b8o2c+8e8o1b8o2e8g+8c+8o1g+8b8o2c+8e8o1b8o2e8g+8]2
+(3)[f+8c+8e8f+8a8f+8a8o3c+8]4
+(4)[o2f+8c+8e8f+8a8f+8a8o3c+8o2f+8c+8e8f+8a8f+8a8o3c+8o2e8o1b8o2c+8e8g+8e8g+8b8e8o1b8o2c+8e8g+8e8g+8b8d8o1a8b8o2d8f+8d8f+8a8d8o1a8b8o2d8f+8d8f+8a8c+8o1g+8b8o2c+8e8o1b8o2e8g+8c+8o1g+8b8o2c+8e8o1b8o2e8g+8]2
+(5)[f+8c+2r8r4r2r4f+8a8]2
+
+#1 v255
+(6)[
+@30 q7F o2c4
+@31 c4
+@30 c4
+@31 c4]3
+@30 q7F c4
+@31 c4c16c16c16c16c8c16c16/
+(7)[
+@30 o2c4
+@31 c4
+@30 c4
+@31 c4]15
+@30 c4
+@31 c4
+@30 c4
+@31 c8c16c16
+(7)3
+@30 c4
+@31 c4
+@30 c4
+@31 c16c16c16c16
+(7)7
+@30 c4
+@31 c4
+@30 c4
+@31 c8c16c16
+(7)7
+@30 c4
+@31 c4
+@30 c4
+@31 c8c16c16
+(8)[
+@32 c4a16a16g16g16f16f16e16e16d16d16c16c16a16a16f8a16a16f8a16a16f8a16g16f16e16]2
+
+#2 v255
+$DA $0F 
+(9)[q7F o2a+2r8g+4a+8r2r8g+4a+8]2/
+@17 
+(10)[o4c+=72c+2r8r8o3f+8a8f+8b8a8b8o4c+8o3b=72b2r8r8f+8g+8f+8a8g+8a8b8a=72a2r8r8e8f+8e8g+8f+8g+8a8g+=72g+2r8r8c+8e8c+8f+8e8f+8g+8]2
+$DA $0F 
+(11)[o2a+2r8g+4a+8r2r8g+4a+8]2
+@17 q7F o3a=72a=72b8o4c+8c+16d16c+16o3b16b16o4c+16o3b16a16a16b16a16g+16f+4f+16g+8a16b8g+8g+2g+2e16f+16g+4f+8c+16d8e=36f+8d16e8f+=36g+8o4f+=72e16f+16e16f+16e16d16c+16d16c+16o3b16b16o4c+16o3b16a16g+16a16g+16f+16g+2^2^2r8e16f+=36g+8a=72r16b16o4c+8o3b8o4c+4o3a2r8f+16g+=36a8b=72r16o4d16e8d8o3b4o4e2r8o3a4b8o4c+=72r16c+16d8c+8o3a4o4d2o3b16o4c+2^4r=36o3b16o4c+=72r16e2
+$DA $0F 
+(12)[o2a+2r8g+4a+8r2r8g+4a+8]2
+
+#3 v255
+$DE $00 $32 $32 
+$DA $0F 
+(13)[q7F o2f2r8c+4f8r2r8c+4f8]2/
+@17 
+(14)[o3f+=72f+2^8^2^2e=72e2r8b2^2d=72d2r8a2^2c+=72c+2r8g+2^2]2
+$DA $0F 
+(15)[o2f2r8c+4f8r2r8c+4f8]2
+@17 
+(16)[o3f+=72f+2^8^2^2e=72e2r8b2^2d=72d2r8a2^2c+=72c+2r8g+2^2]2
+$DA $0F 
+(17)[o2f2r8c+4f8r2r8c+4f8]2
+
+#4 v255
+$DE $00 $32 $32 
+$DA $0F 
+(18)[q7F o3f2r8c+4f8r2r8c+4f8]2/
+$DA $04 
+(19)[o4f+=72f+2^8^2^2e=72e2r8b2^2d=72d2r8a2^2c+=72c+2r8g+2^2]2
+$DA $0F 
+(20)[o3f2r8c+4f8r2r8c+4f8]2
+$DA $04 
+(21)[o4f+=72f+2^8^2^2e=72e2r8b2^2d=72d2r8a2^2c+=72c+2r8g+2^2]2
+$DA $0F 
+(22)[o3f2r8c+4f8r2r8c+4f8]2
+
+#5 v255
+$DA $0F 
+(23)[q7F o3a+2r8g+4a+8r2r8g+4a+8]2/
+$DA $04 
+(24)[o5c+=72c+2r8r8o4f+8a8f+8b8a8b8o5c+8o4b=72b2r8r8f+8g+8f+8a8g+8a8b8a=72a2r8r8e8f+8e8g+8f+8g+8a8g+=72g+2r8r8c+8e8c+8f+8e8f+8g+8]2
+$DA $0F 
+(25)[o3a+2r8g+4a+8r2r8g+4a+8]2
+$DA $04 q7F o4a=72a=72b8o5c+8c+16d16c+16o4b16b16o5c+16o4b16a16a16b16a16g+16f+4f+16g+8a16b8g+8g+2g+2e16f+16g+4f+8c+16d8e=36f+8d16e8f+=36g+8o5f+=72e16f+16e16f+16e16d16c+16d16c+16o4b16b16o5c+16o4b16a16g+16a16g+16f+16g+2^2^2r8e16f+=36g+8a=72r16b16o5c+8o4b8o5c+4o4a2r8f+16g+=36a8b=72r16o5d16e8d8o4b4o5e2r8o4a4b8o5c+=72r16c+16d8c+8o4a4o5d2o4b16o5c+2^4r=36o4b16o5c+=72r16e2
+$DA $0F 
+(26)[o3a+2r8g+4a+8r2r8g+4a+8]2
+

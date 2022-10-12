@@ -32,7 +32,16 @@ level:
 112	lvlfilter.asm
 118     GradientSky.asm
 119 	HDMAGradient119.asm
+121	BabaBlocks_RetryButton.asm
 136	lvlfilter.asm
+1CE	BabaBlocks_RetryButton.asm
+1CF	BabaBlocks_RetryButton.asm
+1D1	BabaBlocks_RetryButton.asm
+1D2	BabaBlocks_RetryButton.asm
+1D3	BabaBlocks_RetryButton.asm
+1D4	BabaBlocks_RetryButton.asm
+1D5	BabaBlocks_RetryButton.asm
+1D7	BabaBlocks_RetryButton.asm
 
 ; OW list. Valid values: 0 = Main map; 1 = Yoshi's Island; 2 = Vanilla Dome;
 ; 3 = Forest of Illusion; 4 = Valley of Bowser; 5 = Special World; and

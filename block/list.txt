@@ -51,6 +51,17 @@ EE1:25 one_way_up.asm
 11D8:25 bounce_on.asm
 11D9:25 endP.asm
 11E4:130 Vine/Spawn/RotVineBlock_Up.asm
+1601:130 baba_demo.asm
+1602:130 baba_is.asm
+1603:130 baba_blue.asm
+1604:130 baba_green.asm
+1605:130 baba_red.asm
+1606:130 baba_yellow.asm
+1607:130 baba_catnip.asm
+1608:130 baba_shell.asm
+1610:130 vertical_pipe_cap1.asm
+1611:130 vertical_pipe_cap2.asm
+1612:130 horizontal_pipe_cap.asm
 17A0:2 hurt.asm
 17A1:2 hurt.asm
 1840:25 SMB3Brick.asm

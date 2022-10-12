@@ -260,6 +260,17 @@ ee1	0	Solid if anything goes down
 11d8	0	A block that bounces sprites and mario! Doesn't bounce mario when OFF.
 11d9	0	P switch will be ended soon
 11e4	0	Spawns sprite $76. Extra Byte 1 = $1C and Extra Byte 2 = $0.
+1601	0	A DEMO block that can be picked up. Requires the sprite portion.
+1602	0	An IS block that can be picked up. Requires the sprite portion.
+1603	0	A BLUE block that can be picked up. Requires the sprite portion.
+1604	0	A GREEN block that can be picked up. Requires the sprite portion.
+1605	0	A RED block that can be picked up. Requires the sprite portion.
+1606	0	A YELLOW block that can be picked up. Requires the sprite portion.
+1607	0	A CATNIP block that can be picked up. Requires the sprite portion.
+1608	0	A SHELL block that can be picked up. Requires the sprite portion.
+1610	0	This is the no yoshi/sprite vertical pipe cap 1/2
+1611	0	This is the no yoshi/sprite vertical pipe cap 2/2
+1612	0	This is the no yoshi/sprite horizontal pipe cap
 17a0	0	
 17a1	0	
 1840	0	A simple brick block.

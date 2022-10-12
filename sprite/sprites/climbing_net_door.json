@@ -1,0 +1,127 @@
+{
+  "$1656": {
+    "Object Clipping": 0,
+    "Can be jumped on": false,
+    "Dies when jumped on": false,
+    "Hop in/kick shell": false,
+    "Disappears in cloud of smoke": false
+  },
+  "$1662": {
+    "Sprite Clipping": 3,
+    "Use shell as death frame": false,
+    "Fall straight down when killed": false
+  },
+  "$166E": {
+    "Use second graphics page": false,
+    "Palette": 0,
+    "Disable fireball killing": false,
+    "Disable cape killing": true,
+    "Disable water splash": false,
+    "Don't interact with Layer 2": false
+  },
+  "$167A": {
+    "Don't disable cliping when starkilled": false,
+    "Invincible to star/cape/fire/bounce blk.": true,
+    "Process when off screen": false,
+    "Don't change into shell when stunned": false,
+    "Can't be kicked like shell": false,
+    "Process interaction with Mario every frame": false,
+    "Gives power-up when eaten by yoshi": false,
+    "Don't use default interaction with Mario": false
+  },
+  "$1686": {
+    "Inedible": true,
+    "Stay in Yoshi's mouth": false,
+    "Weird ground behaviour": false,
+    "Don't interact with other sprites": true,
+    "Don't change direction if touched": false,
+    "Don't turn into coin when goal passed": true,
+    "Spawn a new sprite": false,
+    "Don't interact with objects": false
+  },
+  "$190F": {
+    "Make platform passable from below": false,
+    "Don't erase when goal passed": false,
+    "Can't be killed by sliding": true,
+    "Takes 5 fireballs to kill": false,
+    "Can be jumped on with upwards Y speed": false,
+    "Death frame two tiles high": true,
+    "Don't turn into a coin with silver POW": true,
+    "Don't get stuck in walls (carryable sprites)": false
+  },
+  "AsmFile": "climbing_net_door.asm",
+  "ActLike": 54,
+  "Type": 1,
+  "Extra Property Byte 1": 0,
+  "Extra Property Byte 2": 0,
+  "Additional Byte Count (extra bit clear)": 0,
+  "Additional Byte Count (extra bit set)": 0,
+  "Map16": "",
+  "Displays": [
+    {
+      "Description": "Disassembly of Sprite 54",
+      "ExtraBit": false,
+      "Tiles": [
+        {
+          "X offset": 8,
+          "Y offset": 8,
+          "map16 tile": 296
+        },
+        {
+          "X offset": 24,
+          "Y offset": 8,
+          "map16 tile": 297
+        },
+        {
+          "X offset": 40,
+          "Y offset": 8,
+          "map16 tile": 298
+        },
+        {
+          "X offset": 8,
+          "Y offset": 24,
+          "map16 tile": 312
+        },
+        {
+          "X offset": 8,
+          "Y offset": 40,
+          "map16 tile": 328
+        },
+        {
+          "X offset": 24,
+          "Y offset": 40,
+          "map16 tile": 329
+        },
+        {
+          "X offset": 40,
+          "Y offset": 40,
+          "map16 tile": 330
+        },
+        {
+          "X offset": 40,
+          "Y offset": 24,
+          "map16 tile": 314
+        },
+        {
+          "X offset": 24,
+          "Y offset": 24,
+          "map16 tile": 313
+        }
+      ],
+      "X": 0,
+      "Y": 0,
+      "DisplayText": "",
+      "UseText": false
+    }
+  ],
+  "Collection": [
+    {
+      "Name": "Rotating Net",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 0,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0
+    }
+  ]
+}
