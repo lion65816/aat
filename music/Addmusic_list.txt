@@ -1,15 +1,13 @@
 Globals:
 01  originals/01 Miss.txt
 02  originals/02 Game Over.txt
-03  originals/03 Boss Clear.txt
-04  originals/04 Stage Clear.txt
-05  originals/05 Starman.txt
-06  originals/06 P-switch.txt
+03  marisagoal.txt
+04  marisagoal.txt
+05  leek.txt
+06  originals/06 P-Switch.txt
 07  originals/07 Keyhole.txt
 08  originals/08 Iris Out.txt
 09  originals/09 Bonus End.txt
-
-
 Locals:
 0A  originals/10 Piano.txt
 0B  originals/11 Here We Go.txt
@@ -81,6 +79,7 @@ Locals:
 55  upanddown.txt
 57  MKW-Maple_Treeway.txt
 5A  Star Ocean - Tense Atmosphere.txt
+5B  mitotic.txt
 5C  442.txt
 5F  harvest.txt
 60  kraid.txt
@@ -91,4 +90,11 @@ Locals:
 69  Il Maniero Spettrale - Forest.txt
 6A  synth2.txt
 6B  13month_dancre.txt
+6C  ButterBuilding.txt
 6D  Unknown Song 1.txt
+6E  NSMB - MainTheme.txt
+6F  NSMBWii Volcano.txt
+70  rambirumble.txt
+73  Opus 13.txt
+74  Title Bells.txt
+76  seascape.txt

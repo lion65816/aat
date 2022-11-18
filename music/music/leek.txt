@@ -1,0 +1,66 @@
+;leek thing for raocow idea thing
+;prsnth1111
+
+$EF $80 $6D $2B 
+$F1 $0D $7D $00 
+
+#0 w255 t73
+
+
+#0   @6   q7f v250 y10
+#1   @8   q7f v222 y10
+#2   @1   q7f v166 y5
+#3        q7f v166 
+#5   @16  q7f v222 y10
+
+
+;melody
+#0
+o4
+a+8a+8g+8f+16f+16    f8c+16c+16c+8f8
+g+8g+8f+8f8   f+8d+8d+8f+8
+a+16a+16a+16a+16 g+8f+8   f8c+16c+16c+16c+16f8
+g+16g+16g+8 f+8 f16f16 f+16f+16 d+8d+4
+
+<a+8>d+8d+8^16f16 f+8d+16d+16 d+8d+16f+16
+f8c+8c+8f8 f+8d+8d+8d+16d+16
+<a+8>d+16d+16^8^16f16 f+8d+16d+16^16d+8d+16
+a+16a+16a+16g+16 f+8f8 f+8d+16d+16^8^16d+16
+
+;bass
+#1
+o2
+(8)[d+16r=36d+8r8] a+16r=36a+8r8
+c+16r=36c+8r8 (8)2
+f+16r=36a+8r8
+g+16r=36c+8r8 (8)3
+a+16r=36<a+8>r8 (8)3
+a+16r=36<a+8>r8 (8)
+
+;polka strings pattern
+#2
+o4
+(4)[r8f+16f+16r8f+8]
+(5)[r8f16f16r8f8]2
+(4)2
+r8<a+16a+16r8a+8>
+r8d+16d+16r8d+8 (6)[f+4f+8r8]
+(4)2(5)(4)3(5)(6)
+
+;polka strings pattern2
+#3
+(1)[@22y10c8@1y15d+16d+16@22y10c8@1y15d+8] 
+(2)[@22y10c8@1y15c+16c+16@22y10c8@1y15c+8]2
+(1)2(2)
+@22y10c8@1y15g+16g+16@22y10c8@1y15g+8
+(3)[d+4d+8r8]
+(1)2(2)(1)3(2)(3)
+
+;accompanying melodic line on guitar
+#5
+o4
+(7)[d+8r8<a+8r8>c+8r8<a+8r8 a+8r8>c+8r8d+8r8]<a+8r8>
+(7)d+8r8
+[d+8r8<a+8r8> d+8r8<a+8r8>  <a+8r8>  c+8r8  d+8r8d+8r8]2
+
+#amk 2

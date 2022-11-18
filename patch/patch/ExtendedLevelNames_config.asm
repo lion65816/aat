@@ -68,8 +68,8 @@ NameData:
  db " Warning!  It's a  "
  db "Red Radish Morning "
  ;Level 012
- db "STAR ROAD          "
- db "                   "
+ db "    A Dream Of     "
+ db "   Green Apples    "
  ;Level 013
  db "Special Boo as Boss"
  db "Level              "
@@ -191,8 +191,8 @@ NameData:
  db "Few Paths Forbidden"
  db "                   "
  ;Level 117
- db "Number of Yoshi    "
- db "coins - 1 (one)    "
+ db "pREsent(ing) gifts "
+ db " Day               "
  ;Level 118
  db " Hot Glue Garbage  "
  db "                   "
@@ -203,8 +203,8 @@ NameData:
  db "Complex turn block "
  db "maze - easy!       "
  ;Level 11B
- db "REAL RED SWITCH    "
- db "                   "
+ db "    FIGHT THE      "
+ db "RED SWITCH PALACE! "
  ;Level 11C
  db "Kamek was there    "
  db "                   "
@@ -212,8 +212,8 @@ NameData:
  db "The cake is lie    "
  db "                   "
  ;Level 11E
- db "DO WIGGLER GLITCH  "
- db "(or fix it)        "
+ db "Fungus Forest Flow "
+ db "                   "
  ;Level 11F
  db "  A Warm Welcome   "
  db "                   "
@@ -224,8 +224,8 @@ NameData:
  db "  SWITCH IS BLUE   "
  db "                   "
  ;Level 122
- db "This BG gives me   "
- db "DEJA VU?           "
+ db "   Life Goes On    "
+ db "                   "
  ;Level 123
  db " Coasting Redwoods "
  db "                   "
@@ -281,8 +281,8 @@ NameData:
  db "Cave with overworld"
  db "music              "
  ;Level 135
- db "Generic STAR ROAD  "
- db "Level              "
+ db " An Infinite Dream "
+ db "                   "
  ;Level 136
  db "Who put Touhou     "
  db "in my hack??       "

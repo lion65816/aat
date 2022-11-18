@@ -1,0 +1,173 @@
+{
+  "$1656": {
+    "Object Clipping": 0,
+    "Can be jumped on": true,
+    "Dies when jumped on": false,
+    "Hop in/kick shell": false,
+    "Disappears in cloud of smoke": false
+  },
+  "$1662": {
+    "Sprite Clipping": 0,
+    "Use shell as death frame": true,
+    "Fall straight down when killed": false
+  },
+  "$166E": {
+    "Use second graphics page": false,
+    "Palette": 3,
+    "Disable fireball killing": false,
+    "Disable cape killing": false,
+    "Disable water splash": false,
+    "Don't interact with Layer 2": false
+  },
+  "$167A": {
+    "Don't disable cliping when starkilled": false,
+    "Invincible to star/cape/fire/bounce blk.": false,
+    "Process when off screen": false,
+    "Don't change into shell when stunned": false,
+    "Can't be kicked like shell": false,
+    "Process interaction with Mario every frame": true,
+    "Gives power-up when eaten by yoshi": false,
+    "Don't use default interaction with Mario": false
+  },
+  "$1686": {
+    "Inedible": false,
+    "Stay in Yoshi's mouth": true,
+    "Weird ground behaviour": false,
+    "Don't interact with other sprites": false,
+    "Don't change direction if touched": false,
+    "Don't turn into coin when goal passed": false,
+    "Spawn a new sprite": false,
+    "Don't interact with objects": false
+  },
+  "$190F": {
+    "Make platform passable from below": false,
+    "Don't erase when goal passed": false,
+    "Can't be killed by sliding": false,
+    "Takes 5 fireballs to kill": false,
+    "Can be jumped on with upwards Y speed": false,
+    "Death frame two tiles high": true,
+    "Don't turn into a coin with silver POW": false,
+    "Don't get stuck in walls (carryable sprites)": true
+  },
+  "AsmFile": "MultiBounceShell.asm",
+  "ActLike": 4,
+  "Type": 1,
+  "Extra Property Byte 1": 0,
+  "Extra Property Byte 2": 0,
+  "Additional Byte Count (extra bit clear)": 1,
+  "Additional Byte Count (extra bit set)": 2,
+  "Map16": "",
+  "Displays": [
+    {
+      "Description": "A Blue Multi Bounce Shell.\\nThe first extra byte determines the number of bounces before it disappears (0A = infinite bounces).",
+      "ExtraBit": false,
+      "Tiles": [
+        {
+          "X offset": 0,
+          "Y offset": 0,
+          "map16 tile": 50
+        },
+        {
+          "X offset": 0,
+          "Y offset": 0,
+          "map16 tile": 266
+        }
+      ],
+      "X": 0,
+      "Y": 0,
+      "DisplayText": "",
+      "UseText": false
+    },
+    {
+      "Description": "A Blue Multi Bounce Shell which spawns kicked towards Mario.\\nThe first extra byte determines the number of bounces before it disappears (0A = infinite bounces).\\nThe second extra byte determines the spawn X speed.",
+      "ExtraBit": true,
+      "Tiles": [
+        {
+          "X offset": 0,
+          "Y offset": 0,
+          "map16 tile": 50
+        },
+        {
+          "X offset": 0,
+          "Y offset": 0,
+          "map16 tile": 266
+        },
+        {
+          "X offset": 8,
+          "Y offset": 0,
+          "map16 tile": 266
+        }
+      ],
+      "X": 0,
+      "Y": 0,
+      "DisplayText": "",
+      "UseText": false
+    }
+  ],
+  "Collection": [
+    {
+      "Name": "Blue Multi Bounce Shell",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 4,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "Blue Multi Bounce Shell (infinite bounces)",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 10,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "Blue Multi Bounce Shell (spawn kicked)",
+      "ExtraBit": true,
+      "Extra Property Byte 1": 4,
+      "Extra Property Byte 2": 48,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "Blue Multi Bounce Shell (spawn kicked, infinite bounce)",
+      "ExtraBit": true,
+      "Extra Property Byte 1": 10,
+      "Extra Property Byte 2": 48,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    }
+  ]
+}

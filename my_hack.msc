@@ -2,14 +2,14 @@
 01	1	Miss!
 02	0	Game Over
 02	1	Game Over
-03	0	Sub Castle Clear Fanfare
-03	1	Sub Castle Clear Fanfare
-04	0	Course Clear Fanfare
-04	1	Course Clear Fanfare
-05	0	05 Starman.txt
-05	1	05 Starman.txt
-06	0	06 P-switch.txt
-06	1	06 P-switch.txt
+03	0	marisagoal
+03	1	marisagoal
+04	0	marisagoal
+04	1	marisagoal
+05	0	leek
+05	1	leek
+06	0	06 P-Switch.txt
+06	1	06 P-Switch.txt
 07	0	07 Keyhole.txt
 07	1	07 Keyhole.txt
 08	0	08 Iris Out.txt
@@ -156,6 +156,8 @@
 57	1	Maple Treeway
 5A	0	Tense Atmosphere
 5A	1	Tense Atmosphere
+5B	0	mitotic dance (looped)
+5B	1	mitotic dance (looped)
 5C	0	On Cloud 9
 5C	1	On Cloud 9
 5F	0	Harvest November
@@ -176,5 +178,19 @@
 6A	1	synth2
 6B	0	”é‹«‚Ì‘º ` ƒMƒ‡ƒ‹Œk’J BGM
 6B	1	”é‹«‚Ì‘º ` ƒMƒ‡ƒ‹Œk’J BGM
+6C	0	Butter Building
+6C	1	Butter Building
 6D	0	???
 6D	1	???
+6E	0	NSMB - MainTheme
+6E	1	NSMB - MainTheme
+6F	0	Volcano
+6F	1	Volcano
+70	0	rambirumble
+70	1	rambirumble
+73	0	Opus 13
+73	1	Opus 13
+74	0	Title Bells
+74	1	Title Bells
+76	0	Seascape
+76	1	Seascape

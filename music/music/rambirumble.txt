@@ -1,0 +1,91 @@
+#am4
+
+;-- HEADER AUTOMATICALLY GENERATED --
+$ED $80 $6D $2B 
+$ED $80 $7D $00 
+$F0
+;-- END OF HEADER -------------------
+
+;Donkey Kong Country 2 - Rambi Rumble, (MidiGuy)
+#0  	w250 t53
+$EF $F6 $00 $00
+$F1 $04 $6C $00
+$F2 $DC $16 $16
+
+#0	@8	q7F v255 y10
+#1	@17	q7F v200 y10
+#2	@15	q7F v220 y10
+#3	@9	q7F v150 y14
+#4	@14	q7F v210 y10
+#5	@21	q7F v250 y10
+#6	@15	q7F v220 y10
+#7	@9	q7F v150 y6
+
+
+#0 v0c8.
+/
+v255 o1l16
+[gggg8rggggg8ggg8g+g+g+g+8rg+g+g+g+g+8g+g+g+8]4>[c^8rc8rc8rc8c^8r]4
+;
+#1 r8.
+/
+o3l16
+[g4g8g8ggg8g4g+4g+8g+8g+g+g+8g+4]4>[ccccc^8c8cc8c8cc]4
+;
+
+#2 r8.
+/
+o4l16
+[@15v210y10ggggg8ggggg8ggg8]1
+@4y13v150<g+4>d8d+4^8f8d+8
+*@4y13v150<g+4>d8d+4g8g+8g8
+*@4y13v150<g+4>d8d+4^8f8d+8
+*@4y13v150<g+4>d8d+4g8g+8a+8
+c^8f32f+32g2r4
+c^8f+32g32g+4c^8g32g+32a4
+c^8g+32a32a+2r4
+c^8a32a+32b4c^8a+32b32>c4
+;
+
+#3 r8.
+/
+o4l8 @9	q7F v150 y14
+[a+g>d+dgdd+c<g+>cd+dg+dd+f<]4@15y10v210l16>[ccccc^8c8cc8c8cc]4
+;
+
+#4 r8.
+/
+o3l16
+[g<ggg>g<gg>g<g>gg<g>g<ggg>g+<g+g+g+>g+<g+g+>g+<g+>g+g+<g+>g+<g+g+g+]4[o4c<ccc>c<cc>c<c>cc<c>c<ccc>]4
+;
+
+#5 r8.
+/
+o4l16
+[eee8v220@29c8v250@21eeeee@10cv220@29c<a>v250@21e8]8
+[v220@29cv250@21eeev220@29cv250@21eev220@29cv140<av220aav250@21ev220@29cv250@21ev220@29ca>]4
+;
+
+#6 r8.
+/
+o4l16
+r^32[@15v150y10ggggg8ggggg8ggg8]1
+@4y7v135<g+4>d8d+4^8f8d+8
+*@4y7v135<g+4>d8d+4g8g+8g8
+*@4y7v135<g+4>d8d+4^8f8d+8
+*@4y7v135<g+4>d8d+4g8g+8a+8
+c^8f32f+32g2r4
+c^8f+32g32g+4c^8g32g+32a4
+c^8g+32a32a+2r4
+c^8a32a+32b4c^8a+32b32>c8^32
+;
+
+
+#7 r8.
+/
+o4l8 @9	q7F v150 y6
+rr16[a+g>d+dgdd+c<g+>cd+dg+dd+f<]3
+a+g>d+dgdd+c<g+>cd+dg+dd+f32<
+@15y10v150l16>[ccccc^8c8cc8c8cc]3
+ccccc^8c8cc8c8c32
+;

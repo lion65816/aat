@@ -19,6 +19,7 @@ level:
 053	PressuredWater.asm
 054	PressuredWater.asm
 055	PressuredWater.asm
+080	LV135.asm
 090	Gradient110.asm
 0A0	DisableLR.asm
 0B0	DisableLR.asm
@@ -32,15 +33,29 @@ level:
 112	lvlfilter.asm
 118     GradientSky.asm
 119 	HDMAGradient119.asm
+11B	lvlfilter.asm
 121	BabaBlocks_RetryButton.asm
+135	LV135.asm
 136	lvlfilter.asm
+1B0	redswitch.asm
+1B1	redswitch.asm
+1B2	redswitch.asm
+1B3	redswitch.asm
+1B4	redswitch.asm
+1B5	redswitch.asm
+1B6	redswitch.asm
+1B7	redswitch.asm
+1B8	redswitch.asm
+1B9	redswitch.asm
 1CE	BabaBlocks_RetryButton.asm
 1CF	BabaBlocks_RetryButton.asm
+1D0	DeathWarp.asm
 1D1	BabaBlocks_RetryButton.asm
 1D2	BabaBlocks_RetryButton.asm
 1D3	BabaBlocks_RetryButton.asm
 1D4	BabaBlocks_RetryButton.asm
 1D5	BabaBlocks_RetryButton.asm
+1D6	DeathWarp_1D6.asm
 1D7	BabaBlocks_RetryButton.asm
 
 ; OW list. Valid values: 0 = Main map; 1 = Yoshi's Island; 2 = Vanilla Dome;

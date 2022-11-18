@@ -1,5 +1,8 @@
 00 ClassicGoomba.json
 01 piranha_venus.json
+03 mad_thwomp.cfg
+04 catnip.json
+05 ColorYoshi.json
 08 BoomerangBro.json
 09 HammerBro.json
 0A IceBro.json
@@ -110,6 +113,9 @@
 79 Disco_shell.json
 7A chasing_ninji.cfg
 7C shy_bird.cfg
+7D MultiBounceShellBlue.json
+7E MultiBounceShellGreen.json
+7F MultiBounceShellRed.json
 80 BooBlah.cfg
 81 Blargg2.cfg
 82 Thwomp2.cfg
@@ -119,6 +125,9 @@
 8A fire_snake.json
 8B falling_fireball.cfg
 8C clusterspawn.json
+8D superfast_spiny.cfg
+8E ParaSpiny.cfg
+8F ghost-shell.json
 90 banzai_bill_invincible.json
 91 AngrySun101.json
 92 volcano_lotus101.json

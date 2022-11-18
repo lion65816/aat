@@ -1,5 +1,10 @@
 00	Classic Goomba
 01	Piranha Plant/Venus Fire Trap
+04	Baby Yoshi
+05	Green Yoshi
+	Yellow Yoshi
+	Red Yoshi
+	Blue Yoshi
 08	Boomerang Bro
 09	Hammer Bro
 0A	Ice Bro
@@ -107,11 +112,25 @@
 	Green Shell (stationary, Koopa inside)
 	Green Shell (kicked)
 	Disco Shell
+7D	Blue Multi Bounce Shell
+	Blue Multi Bounce Shell (infinite bounces)
+	Blue Multi Bounce Shell (spawn kicked)
+	Blue Multi Bounce Shell (spawn kicked, infinite bounce)
+7E	Green Multi Bounce Shell
+	Green Multi Bounce Shell (infinite bounces)
+	Green Multi Bounce Shell (spawn kicked)
+	Green Multi Bounce Shell (spawn kicked, infinite bounce)
+7F	Red Multi Bounce Shell
+	Red Multi Bounce Shell (infinite bounces)
+	Red Multi Bounce Shell (spawn kicked)
+	Red Multi Bounce Shell (spawn kicked, infinite bounce)
 85	Kun (Walks Back and Forth)
 	Kun (Wall Following, Slow)
 	Kun (Wall Following, Fast)
 8A	Fire Snake
 8C	Cluster Fish Spawner
+8F	Ghost Shell (Stunned)
+	Ghost Shell (Kicked)
 90	Banzai Bill, faces left.
 	Banzai Bill, faces right.
 91	Angry Sun

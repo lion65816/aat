@@ -1,0 +1,447 @@
+#amk 2
+
+#spc
+{
+    #title   "Opus 13"
+    #game    "Castlevania: Dracula X"
+    #author  "Tomita, Iwata, Ueko, Kimura"
+    #comment "Ported by KevinM"
+}
+
+#path "opus13"
+
+#samples
+{
+    "../default/00 SMW @0.brr"
+    "../default/01 SMW @1.brr"
+    "../default/02 SMW @2.brr"
+    "../default/03 SMW @3.brr"
+    "../default/04 SMW @4.brr"
+    "../default/05 SMW @8.brr"
+    "../default/06 SMW @22.brr"
+    "../default/07 SMW @5.brr"
+    "../default/08 SMW @6.brr"
+    "../optimized/09 SMW @7.brr"
+    "../optimized/0A SMW @9.brr"
+    "../default/0B SMW @10.brr"
+    "../default/0C SMW @13.brr"
+    "../optimized/0D SMW @14.brr"
+    "../optimized/0E SMW @29.brr"
+    "../optimized/0F SMW @21.brr"
+    "../default/10 SMW @12.brr"
+    "../optimized/11 SMW @17.brr"
+    "../default/12 SMW @15.brr"
+    "../optimized/13 SMW Thunder.brr"
+
+    "07.brr"
+    "08.brr"
+    "14.brr"
+    "15.brr"
+    "51.brr"
+    "52.brr"
+    "53.brr"
+    "54.brr"
+    "55.brr"
+    "56.brr"
+    "57.brr"
+    "58.brr"
+    "59.brr"
+    "5a.brr"
+    "5b.brr"
+    "5c.brr"
+}
+
+#instruments
+{
+    "56.brr" $88 $E0 $B8 $07 $90 ; @30 voice
+    "56.brr" $89 $E2 $B8 $07 $90 ; @31 voice
+    "07.brr" $8F $E0 $B8 $04 $02 ; @32 sine
+    "07.brr" $8F $E0 $B8 $03 $FB ; @33 sine (detuned)
+    "55.brr" $8F $E0 $B8 $0D $7E ; @34 synth bass
+    "57.brr" $8F $E0 $B8 $0B $72 ; @35 brass
+    "15.brr" $DB $A4 $B8 $03 $D0 ; @36 strings
+    "15.brr" $BC $C2 $B8 $03 $C9 ; @37 strings (detuned)
+    "58.brr" $DF $02 $B8 $0C $05 ; @38 xylophone
+    "59.brr" $CF $96 $B8 $07 $90 ; @39
+    "5a.brr" $FF $73 $B8 $07 $90 ; @40
+    "5b.brr" $FF $91 $B8 $07 $90 ; @41
+    "5c.brr" $CF $75 $B8 $07 $90 ; @42
+    "08.brr" $8F $FE $B8 $0B $54 ; @43 closed hi-hat (o4c)
+    "51.brr" $AF $F3 $B8 $02 $86 ; @44 kick (o4c)
+    "52.brr" $8F $F4 $B8 $07 $90 ; @45 snare (o4c)
+    "14.brr" $8F $F3 $B8 $07 $8E ; @46 open hi-hat (o4d+)
+    "53.brr" $8F $E0 $B8 $05 $AA ; @47 laser kick (o4d)
+    "54.brr" $8F $F5 $B8 $05 $AA ; @48 cowbell (o4c)
+}
+
+;==================;
+; Volume  /  Tempo ;
+;==================;
+   w150       t49
+
+; Original volumes: w176
+
+;==================;
+;      Macros      ;
+;==================;
+"Voice     = @30"
+"Voice2    = @31"
+"Sine      = @32"
+"Sine2     = @33"
+"Bass      = @34 o2"
+"Brass     = @35"
+"Strings   = @36"
+"Strings2  = @37"
+"Xylophone = @38"
+"I59       = @39"
+"I5a       = @40"
+"I5b       = @41"
+"I5c       = @42"
+"CHat      = @43 y9 o4"
+"Kick      = @44 v180 y10 o4"
+"Kick2     = @44 o4"
+"Snare     = @45 v170 y10 o4"
+"Snare2    = @45 o4"
+"OHat      = @46 o4"
+"LKick     = @47 v130 y10 o4"
+"Cow       = @48 v145 o4"
+
+"Legato    = $F4 $01"
+"Gain      = $ED $80 $"
+"SineVibr  = $DE $0C $18 $58"
+
+;==================;
+;     Commands     ;
+;==================;
+ "reset = 900"
+"gainB2 = 901"
+ (!reset)[$f4$09]
+(!gainB2)[GainB2]
+
+;==================;
+;    Channel #0    ;
+;==================;
+#0 $F0
+v185 y11 l16
+[[
+I5b o4 [q5F c q59 c]3 q5F c
+I5c o4 * q5F c c q59 c *2
+]]3
+
+I5b o4 *4
+I5c o4 q5F c c
+
+Brass v150 o2 q7F
+e48 a24 > d24 g48 a8 q76 a8 q7F
+
+/
+
+Sine v160 y10 o3
+(00)[q7F d+ q79 d+ q75 d+ q74 d+ q73 d+ r
+q7F Legato d8 $DD $0C $06 d+ ^8. $DD $00 $08 d
+c8. d8 SineVibr c=35 Legato ^=1 $DF < a q79 a q75 a]
+
+(04)[I5b v233 y11 o4 [[q7F c q78 c]]3]
+
+Sine v160 y10 o2
+(01)[q7F a q79 a > q7F c q79 c q7F d+ q79 d+ q75 d+ q74 d+ q72 d+ r
+q7F Legato d8 $DD $0C $06 d+ SineVibr d+8. $DD $00 $08 d $DF c8. < a8
+> c32 Legato ^32 q79 c q7F c < $ED $0F $82 a12 GainB4 ^=20 $DD $08 $0C c+]
+
+(04)
+
+Strings y10 o4 q7F (!reset,-1) (!gainB2,3)
+v195 e12 r24 g12 r24 a8. r8. g v180 a v195 g8. d8. g12 r24 f8. < b8. > f12 r24 e8. c8. d12 r24 e2. v180 d4 v195 e2 r4
+
+Sine v160 o2 (!0,0)
+q7F a q79 a > q7F c q79 c (02)[q7F d+ q79 d+ q75 d+ q74 d+ q72 d+ r
+q7F d8 $DD $0C $06 d+ ^8. $DD $00 $08 d c8. < a8 > SineVibr c8. $DF
+< a q79 a q75 a]
+
+(04)
+
+Sine v160 y10 o2
+(03)[q7F a q79 a > q7F c q79 c q7F d+ q79 d+ q75 d+ q74 d+ q72 d+ r
+q7F d8 $DD $0C $06 d+ ^8. $DD $00 $08 d
+c8. < a8 > c q77 c q7F c < a q79 a q75 a]
+
+(04)
+
+Strings y10 o4 q7F (!reset,-1) (!gainB2,3)
+v195 e12 r24 g12 r24 a8. r8. g v180 a v195 g8. d8. g12 r24 f8. e8. c8 <
+a12 r24 v140 a v195 a8 b > c d e8. g8. e8 a8. d8. g8 a2.. r8
+
+Voice2 v82 y9 o3 (!0,0)
+b2...
+
+Strings v140 y11 (05)[$ED $0F $E0 o3
+q7F a4. q78 a q7F a b > c8 < b q78 b q7F a q78 a q7F > e
+d4. q78 d q7F d e g8. q78 g q7F f8. e8 q78 e q76 e q74 e q72 e] q72 o4 e e8
+
+v118 o2
+q7F d q79 d q7F d+ q79 d+ q7F Legato e32 f48 e48 d+48 e32 f32 Legato ^32
+
+Voice2 v82 y9 o3
+b1
+
+Strings v140 y11 (05) q72 o4 e
+
+v150 y12 q7F (06)[$ED $0F $E9 o3
+g8 a8 b8 > c e8 g2^=60 f e8 f2^=60 f e8 f=60 d+4 d4 c8. d+2^16] o4 d2^16
+
+Brass v155 y10 o3
+q7F d+8 q77 d+ q7F d+ q77 d+ q7F d+ q77 d+
+q7F Legato d6 q7D < b24 q7C g24 q7B e24 q7A c24 q79 < a48 Legato ^48 q7F
+
+CHat v185 c v155 c
+
+;==================;
+;    Channel #1    ;
+;==================;
+#1
+Voice v60 y10 o3 l16
+Legato [[g4.. f+2^16]]3 g4.. f+8 Legato ^16
+
+Brass v150 y11 o2
+Legato d96 g48 Legato ^48 > c24 f32 e8
+
+I5c v185 o4 q5F c c q6F
+
+/
+
+Sine2 v95 y14 q7F o3
+r=10 (00) q75 o2 a r=60 q7F (01) ^=62
+
+Brass v100 y10 o2
+q7F e q7C e
+
+Strings2 $ED $3C $C2 v80 y13 o4 q7F
+Legato b24 > c24 d48 Legato ^48
+v110 y12 e2 d2.. c < b > c4 < b4 a1^3 r24 g+ f+ g+3 GainB4 ^8..
+
+Sine2 v95 y14 o3
+(02) q75 a r=60 (03) q75 a r=50
+
+Brass v100 y10 o2
+q7F e q7C e
+
+Strings2 $ED $5B $C2 v70 y12 o4 q7F
+Legato b24 > c24 d48 Legato ^48
+v105 e2 d2.. c < b > c4 < b4 a2 e2
+v120 d4. c+ < b > c+4.. GainB4 ^16
+
+Voice2 v90 y11 o4
+e1
+
+Strings2 v105 y6 (05) q72 o4 e e r4..
+
+Voice2 v90 y11 o4 q7F
+e1^16
+
+Strings2 v105 y6 (05) q72 o4 e12 q7F (06) o4 d4..^24
+
+Brass v150 y10 o2
+q7F g8 q78 g q7F g q78 g q7F g q78 g q7F g8 r8.
+
+Sine2 v95 y14 o2
+q7F a q78 a > q7F c
+
+;==================;
+;    Channel #2    ;
+;==================;
+#2
+Voice v90 y15 o4 l16
+e1^1^1^=120
+
+Brass v136 y9 o2
+f24 b24 > e24 d8 q76 d8 q7F
+
+/
+
+(20)[
+I59 y11 o4 q5F
+v210 c c [[v210 c v145 c]]3
+
+I5a o4
+[[v255 c v170 c]]3 v255 c
+
+I5b v233 o4
+q5F c q58 c q5F c c q58 c
+
+Brass v160 y10 o2
+q7F a q78 a q7F e q78 e] q7F o2 g8. (21)[a q78 a q76 a q7F
+
+I5b v233 y11 o4
+q5F c q58 c]
+
+(20) (22)[q7F o2 g q78 g q7F a e
+
+Strings $ED $5E $C2 y9 o2
+v140 a8 > c8 d2] o2 b4. v145 g8 g+2 a2 v140 b1^2 e3 GainB4 ^6
+
+(20) q7F o2 g q78 g q7F g (21)
+
+(20) (22) q7F o3 g2 > c8. < g8. e8 f4 e4 d2 e2 < a1
+
+[Voice2 v80 y10 o4
+c2...
+
+Brass v125 o2
+c4. q78 c q7F c d e8 d q78 d q7F c q78 c q7F a g4. q78 g q7F g
+a > e8. q78 e q7F] o3 d8. c8 q78 c q77 c q75 c c c c q72 c
+v136 y9 q7F d q78 d q7F d+ q78 d+ q7F Legato e32 f48 e48 d+48 e32 f e32 Legato ^32
+* o3 c8. < a8 q78 a q77 a q76 a q75 a a q7F
+
+Xylophone v140 y12 o2 (!reset,-1) (!gainB2,1,$02)
+g8 a8 b8 > c e8 g8
+
+Sine v100 y11 o2 (!0,0)
+Legato f > f e f c < a+ f < a+ > f > f e f c << f a8 > f > f e f c < g f < a > f > f e f c < f < g+8 > f > f d+ f c < g f < g+ > f > f d+ f c < f32 Legato ^32
+
+Strings $ED $3F $C2 y9 o4
+c2^16 v115 < b2^16
+
+Brass y10 o3
+v140 c8 q78 c q7F c q78 c q7F c q78 c q7F < b8
+v160 Legato > c q7D < a24 q7C f24 q7B d24 q7A < b24 g48 Legato ^48 q77 g=10 q75 g=10
+
+;==================;
+;    Channel #3    ;
+;==================;
+#3
+Voice v85 y9 o4 l16
+c1^1^1^2^4
+
+(30)[Sine v160 y10 o2
+q5F a q57 a > q5F c q57 c]
+
+/
+
+Bass q7F [v175
+[[Legato f=40 $DD $22 $06 a ^6 $DD $1A $06 f ^8. $DD $12 $06 e g+8. b8 g+ Legato ^16
+Legato a $DD $06 $06 b ^8 $DD $12 $06 a ^8. $DD $20 $04 >c ^=38 $DD $24 $02 <b ^=34 a8 > c Legato ^16 <]]2
+Legato > d8. < a8. g8. a8. b8 g Legato ^16
+]
+Legato g+8. e8. g+ Legato ^16
+Legato a8. e8. a Legato ^16
+Legato b8. a8. b8. > d8. f+8 a8 > d8 $DD $08 $06 e ^16 $DD $00 $06 d < b a g+ < v195 e v140 ^16 v100 Legato ^16 v180 > e < v200 e8 f8 e8
+*
+Legato > c8. < g8. e8 f8. $DD $18 $0C d f8 Legato ^16 e8
+Legato > c8. $DD $02 $02 d < a8. > d8 d+8 $DD $06 $06 e d c < b > c d e $ED $0F $22 < a2.. GainB3 Legato ^8
+
+Bass v175
+[[q6F g8 $DD $06 $06 a q67 a]]2
+[q7F Legato g8 a32 Legato ^32 q67 a q6F > c q67 c <
+q7F Legato a > c32 Legato ^32 q67 c q6F d q67 d q65 d q64 d q62 d r8 q6F c q67 c q6F d q67 d q65 d q64 d
+q7F Legato c d32 Legato ^32 q67 d < q6F a q67 a q65 a q64 a q62 a r8 q6F g q67 g q6F a q67 a q65 a q64 a
+q7F Legato a > c32 Legato ^32 q67 c q6F d q67 d <]
+q7F Legato > d $DD $06 $06 d+ ^16 $DD $06 $06 d ^16 c32 Legato ^32 q67 c q6F d q67 d q6F d q67 d q6F d+ q67 d+
+q7F Legato e24 f24 e24 d+32 e64 Legato ^64 < q6F a q69 a q67 a q65 a
+q7F Legato g a32 Legato ^32 q67 a
+*
+q7F Legato > d $DD $06 $06 e ^16 $DD $06 $06 d ^16 c8 d Legato ^16 q6F f8 v195 < f8 v175
+q7F Legato g a Legato ^16 a+ v155 ^16 v175 q77 a+ q76 a+ q74 a+ r8
+
+v180
+q6F f q67 f q6F a+ q67 a+ q66 a+ q64 a+ q6F a+ f q67 f q6F a q67 a q66 a q64 a q63 a r8
+q6F f q67 f q6F a q67 a q66 a q64 a q6F a f q67 f q6F g+ q67 g+ q66 g+ q64 g+ q63 g+ r8
+q6F > d+ q67 d+ q6F g+ q67 g+ q66 g+ q64 g+ q6F g+ d+ q67 d+
+q6F < g=60 g q67 g q6F > d q67 d q6F g q67 g q66 g q64 g q6F g d q67 d
+
+v200
+q6F < g q68 g >
+
+v180
+q7F Legato g $DD $06 $06 f ^32 $DD $02 $04 g f8.. $DD $16 $04 d ^16 Legato ^16 q6F < g q67 g q66 g q64 g
+
+v200
+q7F $ED $0F $42 f+8 GainB1 ^8
+
+;==================;
+;    Channel #4    ;
+;==================;
+#4
+Voice $ED $09 $E0 v85 y7 o3 l16
+a1^1^1^=120
+
+I5c v233 y11 o4
+q58 c q5F c c q78 c48
+
+Sine v85 y7 o2
+q5F a q59 a q7F > c24
+
+/
+
+(40)[Kick c CHat v115 c q7D c q7F]
+(41)[Kick c Snare c8. CHat v140 c8. Kick c8 Snare c8. Kick c c8 r c Snare c8. CHat v140 c8. Snare c8. c8. Kick c8 r]3
+(42)[c Snare c8. CHat v140 c8. Kick c8 Snare c8. Kick c c8 r c Snare c8. CHat v140 c8] Snare c8. c8. c
+
+(40)
+(41)3
+(42) r Snare c8. c8 c
+
+(40)
+Kick c Snare c8. CHat v140 c8. Kick c8 Snare c8. Kick c
+[CHat v185 c v115 c v105 c v140 c v185 c] v115 c Kick c8
+* Kick c CHat v105 c OHat v145 d+12 r=20
+Kick c8 Snare c8. CHat v140 c8. Kick c8 Snare c8. Kick c r c8 r Snare c8.
+CHat v140 c Snare c8. CHat v140 c Snare c8. Snare c6 r48
+
+CHat v100 c Kick c Snare c8. CHat v140 c8. Kick c8 Snare c8. Kick c r8 c8 Snare c8. CHat v140 c=60 Snare c8. Kick c
+CHat v185 c v115 c v100 c v140 c Snare c8. CHat v140 c Snare c8. CHat v140 c Snare c8. Kick c8 c8. Snare c8. CHat v140 c Kick > c+ q76 c+ q7F < f q76 f q7F c
+Snare2 c8 Kick2 c8. CHat v115 c Kick c Snare2 c8.
+
+[[ [CHat v140 c Kick c8 r8 Snare2 c8. Kick2 c r] r8 c Snare2 c8. ]]3
+* Snare2 c8 c8. c8 c4
+
+(30)
+
+;==================;
+;    Channel #5    ;
+;==================;
+#5 l16
+[[LKick d8 Cow y14 c LKick d Cow y6 f8 LKick d Cow y14 c LKick c8 Cow y14 c LKick c Cow y6 f LKick c Cow y14 c8]]3
+LKick c8 Cow y14 c LKick c Cow y6 f8 LKick c Cow y14 c Snare2 v205 y10 c c Kick2 c8 Snare2 c4
+
+/
+
+v180 (50)[OHat y11 e=60 CHat v115 c Kick c8 CHat v185 c v115 c v100 c v140 c v185 c Kick c]
+(51)[
+CHat [[v100 c v140 c v185 c v115 c]]2 Kick c8
+CHat v185 c v115 c [[v100 c v140 c v185 c v115 c]]3 Kick c8
+CHat v185 c v115 c v100 c v140 c v185 c Kick c
+]3
+(52)[
+CHat [[v100 c v140 c v185 c v115 c]]2 Kick c8
+CHat v185 c v115 c
+] Kick c CHat v140 c v185 c v115 c Snare2 v180 y10 c8
+
+v180 (50) (51)3 (52) v100 c v140 c Snare2 v180 y10 c8 c8
+
+v197 (50)
+
+(55)[CHat v100 c OHat v145 d+] r8 Kick c8 Snare c8. CHat v140 c r4 Snare c8. Kick c
+CHat v185 c v115 c (56)[v100 c v140 c v185 c v115 c] Kick c8
+(54)[CHat v185 c v115 c v100 c v140 c v185 c] Kick c
+CHat (56)2 Kick c8
+CHat v185 c v115 c Snare c8
+CHat v185 c Snare c8
+
+OHat v197 y11 e=60 (53)[CHat v185 c v115 c Kick c8]
+(54) Kick c
+(55) (54) v115 c Kick c8
+(54) Kick c
+(55) r4
+(53)2
+CHat v185 c Kick c
+CHat v100 c v140 c v185 c v115 c v100 c v140 c v185 c Kick c
+CHat v100 c v140 c8 v185 c8 c Snare2 v180 y10 c8.
+OHat v197 y11 e=60 (53)
+(54)
+
+[[
+Kick c CHat v100 c OHat v150 d+
+(54) v115 c Kick c8
+(54)
+]]3
+Kick > c v100 c v145 < e r8. v180 c Snare2 c8. r Kick2 c8 r8 c8 c8

@@ -1,0 +1,293 @@
+#spc
+{
+	#author "Pinciiiiiiiiii"
+	#game	"Knuckles' Chaotix"
+	#comment "son bromis :))"
+	#title	"Seascape"
+}
+#amk 2
+#path "seascape"
+#samples 
+{ 
+		#optimized3
+		"synthbass.brr"
+		"elecpiano3.brr"
+		"chordglock.brr"
+		"squ2.brr"
+		"squ4.brr"
+		"squ5.brr"
+		"squ6.brr"
+		"squ7.brr"
+		"squ8.brr"
+		"squ9.brr"
+		"tom.brr"
+		"snare2.brr"
+		"chinese.brr"
+		"crash.brr"
+		"hihat.brr"
+		"kick.brr"
+}
+#instruments 
+{
+		"synthbass.brr" $FF $F0 $B8 $07 $7A	
+		"hihat.brr" $FF $F2 $B8 $06 $00
+		"elecpiano3.brr" $FF $EF $B8 $03 $D4
+		"kick.brr" $FF $E0 $B8 $08 $00
+		"chordglock.brr" $FF $EF $B8 $04 $88
+		"chordglock.brr" $FF $F6 $B8 $04 $88
+		"squ2.brr" $FF $F0 $B8 $02 $A0
+		"squ4.brr" $FF $F0 $B8 $02 $A0
+		"squ5.brr" $FF $F0 $B8 $02 $A0
+		"squ6.brr" $FF $F0 $B8 $02 $A0
+		"squ7.brr" $FF $F0 $B8 $02 $A0
+		"squ8.brr" $FF $F0 $B8 $02 $A0
+		"squ9.brr" $FF $F0 $B8 $02 $A0
+		"snare2.brr" $FF $F4 $B8 $09 $20
+		"tom.brr" $FF $F0 $B8 $03 $A0
+		"hihat.brr" $FF $F9 $B8 $06 $70
+		"chinese.brr" $FF $F4 $B8 $04 $A0
+		"crash.brr" $FF $F3 $B8 $03 $26
+}
+(!100)[@30]
+(!101)[$FA $01 $B9]
+(!102)[@32]
+(!103)[@33]
+(!104)[@34]
+(!105)[@35]
+(!106)[@36]
+(!107)[@37]
+(!108)[@38]
+(!109)[@39]
+(!110)[@40]
+(!111)[@41]
+(!112)[@42]
+"bass=(!100, -1)(!101, 3) "
+"piano=(!102, -1)(!101, 3) "
+"glock=(!104, -1)(!101, 3)"
+"squ2=(!106, -1)"
+"squ4=(!107, -1)"
+"squ5=(!108, -1)"
+"squ6=(!109, -1)"
+"squ7=(!110, -1)"
+"squ8=(!111, -1)"
+"squ9=(!112, -1)"
+t50
+$EF $7E $24 $DC
+$F1 $03 $70 $00
+$F5 $7F $00 $00 $00 $00 $00 $00 $00 
+#0 w120 $F4 $02 v250 bass
+r2/
+o3[d+8.d+16r16>d+16r8<d2
+<g8.g16r16>g16r8<f4a+4
+>d+8.d+16r16>d+16r8<<f4f4
+a+8.a+16r16>a+16r8<a+4>c8d8
+d+8.d+16r16>d+16r8<d2
+<g8.g16r16>g16r8<f4a+4
+>d+8.d+16r16>d+16r8<<f4f4
+a+4>c4d4<a4]2
+[g4.r16>g16<g4f4
+d+4.r16>d+16<d+4>d+4
+d4.r16>d16<d4<a4
+g4.r16>g16<g4>c+4
+c4.r16>c16<c4<g4
+f4.r16>f16<f4>c4
+<a+4.r16>a+16<a+4>c4]1
+d4.r16>d16<d4<a4
+*1
+d+4.r16>d+16<d+4f4
+g1^8
+g8a8a+8>c8.d8.<f8
+g2..r16g16
+r16f16r16g16r16a16r16a+16r4.g8
+r192
+#1
+r2/ q7f piano y09 v220 
+o5[c64c+64d8..d+16r16c4<a+8>c8f16d+8.
+d16r16c16d16r16d+8.f16r16<a+8>c16r16
+<a+8.g8.a+8>c4r8<a+16b16
+>c8.<b64>c6^192c+64d4..r32.g16r16
+e64f8r32.e64f8r32.e64f8r16..e64f6^192r16d+8
+d8.c8.f8d4c4]1
+<a+4.>f2^6
+r12<f8g8a8a+8a8a+8>c8
+*1
+<a+4.>f4d+16r16d16c16r16c+64d2
+r8...d16r16c16r16<a+16
+f8.>f8r4.d16r16c16r16<a+16
+f8.>e64f8r2..
+r32.
+d+8.r16f8.r16c8r16d+16
+r16f16r16d3r6d16r16c16r16<a+16
+g8.>g8r4.d16r16c16r16<a+16
+>c8.a8r4r16a8a+8>c8
+d8.r16c8.e64f8r32.d+16r16d16r16c4
+<f+8a8d4r16d16r16c16r16<a+16
+f8.>f8r4.d16r16c16r16<a+16
+f8.>e64f8r2r8...
+c+64d16..<a16g16g+16a16r16b16>c16e16g16f+16f16d24c+24c24
+<b16a+16a16g8c16c+16d16f16f+16g16a+16a16g16a+24b24>c24
+g8f8d8f16g16a16a+16r16f16r16f16r16f16
+d+16d16c16f8g16r16f8r16a16r16a16r8.
+<a16a+16>d16f8a16b64>c32.<a+16a8g8f8g16r16
+f16d16c+16c8<a+16f24f+24g24a+16g16a+16>c16d16c16f16f+16
+g4r192< glock q7b a2.
+r8...r96a2.
+r4 q79 g2^8. q7b a16
+r4..b16r2
+r192
+#2 y10 piano v200
+r2/
+r8
+o4
+[d8r16d16r8c4r4.
+d8r16d16r8c4d4
+d8r16d16r16d8r16c4c8f8
+d4.d4d4d8
+r8d8r16d16r8c4r4.
+d8r16d16r8c4d4
+d8r16d16r16d8r16c4c8f8
+d4c4f8d+8d8c8]1
+r8 *1
+[r8f8r16f8r16f8r4f8
+r8f8r16f16r16f16f4f4
+r8f8r16f8r16f8r4f8
+r8f8r16f16r16f16f4e4
+d+8.d+16r16d+8r16d+16d+8r8.d+8
+r8d+8r16d+8r16d+4d+4
+r8f8r16f8r16f16f8r8.f8]1
+r8f+8r16f+8r16f+4f+4
+*1
+r8g8r16g8r16g4f4
+f8.r16f8.f1.^16
+d+8.r16d+8.d+4..d+16f16
+r16f16r16f16r16f16r16g16r2
+r192
+#3 y05 piano v200
+r2/
+r8
+o3
+[a+8r16a+16r8a4r8a8
+r8a+8r16a+16r8g+4a+4
+a+8r16a+16r8a+8a4r4
+a+4.a+4a+4a+8
+r8a+8r16a+16r8a4r8a8
+r8a+8r16a+16r8g+4a+4
+a+8r16a+16r8a+8a4r4
+a+2>d4r4.]2
+[d8r16d8r16d8r4d8
+r8d8r16d16r16d16d4d4
+r8c8r16c8r16c8r4c8
+r8d8r16d8r16d4<b4
+a+8.a+16r16a+8r16a+16a+8r8.a+8
+r8>c8r16c8r16c4c4
+r8c8r16c8r16c16c8r8.c8]1
+r8c8r16c8r16c4c4
+r8 *1 
+r8d8r16d8r16d4c4
+c8.r16c8.c1.^16
+<a+8.r16a+8.a+4..a+16>c16
+r16c16r16c16r16c16r16d16r2
+r192
+#4 y15 piano v200
+r2/
+r8
+o3
+[g8r16g16r8f+4f+8r4
+f8r16f16r8f4f4
+g8r16g16r16g8r16g8f8f8r8
+f4.f4f4f8
+r8g8r16g16r8f+4f+8r4
+f8r16f16r8f4f4
+g8r16g16r16g8r16g8f8f8r8
+f2a+2]1
+r8 *1 
+[a+8a+8a+16a+8a+16a+16a+8a+16a+8a+8
+a+8a+8a+16a+8a+16a+4a+4
+a8a8a16a8a16a16a8a16a8a8
+b8b8b16b8b16b4a4
+g8.g16g16g8g16g16g8g16g8g8
+a8.a16a16a8a16a4a4
+a8a8a16a8a16a16a8a16a8a8]1
+a8a8a16a8a16a4a4
+*1
+a+8a+8a+16a+8a+16a+4a4
+a8.r16a8.a1.^16
+g8.r16g8.g4..g16a16
+r16a16r16a16r16a16r16a16r2
+r192
+#5 y10 v250
+r2/(!101, 3)
+r8
+o5
+ [squ4 g32r32g32r8r32g32r32g32r8r32 squ5 f+32r32f+32r8r32f+32r32f+32r8
+r32
+ squ6 f32r32f32r8r32f32r32f32r8r32 squ4 f32r32f32r8r32 squ2 f32r32f32r8
+r32
+ squ4 g32r32g32r8r32g32r32g32r8r32 squ6 g32r32g32r8r32g32r32g32r8
+r32
+a32r32a32r8r32a32r32a32r8r32 squ7 a+32r32a+32r8r32a+32r32a+32r8
+r32]4
+[a+32r32a+32r8r32a+32r32a+32r8r32a+32r32a+32r8r32a+32r32a+32r8
+r32]2
+ [squ8 a32r32a32r8r32a32r32a32r8r32a32r32a32r8r32a32r32a32r8
+r32
+ squ4 a32r32a32r8r32a32r32a32r8r32a32r32a32r8r32a32r32a32r8
+r32
+ squ8 g32r32g32r8r32g32r32g32r8r32g32r32g32r8r32g32r32g32r8
+r32
+a32r32a32r8r32a32r32a32r8r32a32r32a32r8r32a32r32a32r8
+r32
+ squ6 a32r32a32r8r32a32r32a32r8r32a32r32a32r8r32a32r32a32r8
+r32]1
+ squ8 a32r32a32r8r32a32r32a32r8r32a32r32a32r8r32a32r32a32r8
+r32
+ squ7 a+32r32a+32r8r32a+32r32a+32r8r32a+32r32a+32r8r32a+32r32a+32r8
+r32
+a+32r32a+32r8r32a+32r32a+32r8r32a+32r32a+32r8r32a+32r32a+32r8
+r32
+*1
+ squ8 g32r32g32r8r32g32r32g32r8r32g32r32g32r8r32a32r32a32r8
+r32
+ squ4 f32r32f32r8r32f32r32f32r8r32f32r32f32r8r32f32r32f32r8
+r32
+f32r32f32r8r32f32r32f32r8r32f32r32f32r8r32f32r32f32r8
+r32
+d+32r32d+32r8r32d+32r32d+32r8r32d+32r32d+32r8r32d+32r32f32r16.
+f32r16.f32r16.f32r16. squ9 g32r2r48r64
+#6 v255 y10
+r8o3 @43 d8d16d16< $F4 $03 @33 b8> $F4 $03 /
+ [$E6 $00 < $F4 $03 @33 b8.b8> $F4 $03 @43 d8< $F4 $03 @33 b16b4> $F4 $03 @43 d4 $E6 $06 
+ < $F4 $03 @33 b8.b16> $F4 $03 @43 d8.< $F4 $03 @33 b16b8> $F4 $03 @43 d16d16d16d8.]2
+[< $F4 $03 @33 b4> $F4 $03 @43 d8.< $F4 $03 @33 b16b4> $F4 $03 @43 d4]7
+< $F4 $03 @33 b4> $F4 $03 @43 d8.< $F4 $03 @33 b16> $F4 $03 @43 d8. q7d @44 y10 >d16d8< y05 b8 y10 q7f
+[< $F4 $03 @33 b4> $F4 $03 @43 d8.< $F4 $03 @33 b16b4> $F4 $03 @43 d4]7
+< $F4 $03 @33 b4> $F4 $03 @43 d8.< $F4 $03 @33 b16> $F4 $03 @43 d8. q7d @44 >d16< q7f @43 d16d16 q7d @44 y05 b4. q7f y10 
+< $F4 $03 @33 b2b2
+b2b2
+b2b8.>> $F4 $03 @44 q7d y15 g8
+ y10 d8 y05 <b8b8 q7f @43 y10 d4 q7d @44 >d16d8< y10 q7f @43 d8
+#7 v200 y06 
+r4.o4 y15 @46 $F4 $03 c+8
+ /y05 @47a4 y06 $F4 $03 <
+[@45g+8@45g+16@45g+16]15
+>@47 y05 $F4 $03 a4 $F4 $03 y06 < *13
+@45g+32^8..@45g+32^8..
+>@47 y05 $F4 $03 a4 y06 $F4 $03 <*15
+>@47 y05 $F4 $03 a4 $F4 $03 y06 <*13
+@45g+32^8..@45g+32^8..
+@45g+8.@45g+16@31a+4@45g+8@45g+8@45g+8@45g+8
+@45g+8@45g+8@45g+16@45g+16@45g+8@31a+8@45g+8@45g+32^8..
+(1)[@45g+8@45g+16@45g+16@31a+8@45g+16@45g+16@45g+16@45g+16@45g+8@45g+8@45g+16@45g+16
+@45g+8@45g+8@45g+16@45g+16@45g+8>@47 y05 $F4 $03 a4 @46 y15 c+4
+ y05 @47a4 y06 < $F4 $03 @31a+4@45g+8@45g+8@45g+8@45g+8
+@45g+8@45g+8@45g+16@45g+16@45g+8@31a+8@45g+8@45g+32^8..]1
+(2)[@45g+8@45g+16@45g+16@31a+8@45g+16@45g+16@45g+16@45g+16@45g+8@45g+8@45g+16@45g+16
+@45g+8@31a+8@45g+8@31a+8@45g+32^4...]1
+@45g+8.@45g+16@31a+4@45g+8@45g+8@45g+8@45g+8
+@45g+8@45g+8@45g+16@45g+16@45g+8@31a+8@45g+8@45g+32^8..
+(1)1
+(2)1
+>@47 y05 $F4 $03 a4 y06 $F4 $03 <[@45g+16]10@31a+8
+*14@31a+8
+*15>@46 y15 $F4 $03 c+2..
+r16@46c+8

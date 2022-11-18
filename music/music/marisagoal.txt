@@ -1,0 +1,70 @@
+    ?0   ;Won't loop
+
+    tuning[2]=0
+    tuning[4]=0
+    tuning[6]=0
+    tuning[15]=8
+    tuning[27]=0
+
+    #0
+    ?1   ;disable intro part
+    /
+    @4 t67 y11
+    o4c8g8>c8r16d+32e32f8e8c8<g8
+    >e8f8f+8g4^8^16r16g16g+16
+    a8b8>c8^16r16<b8>c8d8e1^2^8
+    [r1]16
+
+    #1
+    @4 y10
+    r8o4g8r8g8r8g8r8e4
+    f8f+8g4>c+4<g16g+16
+    a8b8>c8^16r16<b8>c8d8e1^2^8[r1]16
+
+
+
+    #2
+    @4 y10
+    r1^1o4c8d8e8^16r16d8e8f8g1^2^8[r1]16
+
+
+
+    #3
+    ?1   ;disable intro part
+    /
+    @4 y9
+    r8o3c8r8c8r8c8r8c8
+    >c8<b8a+8a4a8a8r8
+    a4b8>c8<b8>c8d8c1^2^8[r1]16
+
+
+
+    #4
+    ?1   ;disable intro part
+    /
+    @15 y9
+    o3g8>c4c4c4c4
+    c4<g4>c+4r8
+    <a2b4^8>c1^2^8[r1]16
+
+
+
+    #5
+    ?1   ;disable intro part
+    /
+    @6 y8
+    o4c8g8>c8r16d+32e32f8e8c8<g8
+    >e8f8f+8g4^8^16r16g16g+16
+    a8b8>c8^16r16<b8>c8d8e1^2^8[r1]16
+
+
+
+    #7
+    ?1   ;disable intro part
+    /
+    @27 y10
+    o1g+8g+8r8g+8r8g+8r8g+8
+    r8g+8r8g+8r8g+8g+8r8
+    g+8r4^8g+8r4g+8[r1]16
+
+#amk 2

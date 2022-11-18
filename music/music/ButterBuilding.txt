@@ -1,0 +1,106 @@
+;insert size 0x0661
+;duration 0:43
+
+#amk 2
+
+#spc
+{
+#title "Butter Building"
+#game "Kirby - Nightmare in Dreamland"
+#author "Nintendo"
+#comment "Port Made by DMB"
+}
+
+#path "KDL3"
+#samples
+{
+#default
+"square 50%.brr"
+"synth bass 1.brr"
+"triangle wave.brr"
+"bell pad 1.brr"
+"wasp synth.brr"
+
+"kick.brr"
+"closed hi-hat.brr"
+"snare 2.brr"
+"open hi-hat.brr"
+"bongo.brr"
+}
+
+#instruments
+{
+"square 50%.brr" $8F $E0 $B8 $02 $00 ;@30
+"synth bass 1.brr" $8E $F0 $B8 $04 $00 ;@31
+"triangle wave.brr" $FF $E0 $B8 $02 $00 ;@32
+"bell pad 1.brr" $FD $A0 $B8 $07 $B0 ;@33
+"wasp synth.brr" $FF $E0 $B8 $04 $00 ;@34
+
+"kick.brr" $FF $E0 $B8 $07 $40 ;@35
+"closed hi-hat.brr" $FD $E0 $B8 $07 $A0 ;@36
+"snare 2.brr" $FF $E0 $B8 $07 $A0 ;@37
+"open hi-hat.brr" $FD $E0 $B8 $05 $B0 ;@38
+"bongo.brr" $FF $E0 $B8 $07 $A0 ;@39
+}
+
+#option smwvtable
+
+$EF $1F $23 $23 
+$F1 $04 $32 $01 
+$F5 $7F $00 $00 $00 
+$00 $00 $00 $00
+
+#0 @30 v120 w200 y10 t63 l16 $DE $18 $0F $30
+o5[r2]8r4/(1)[d+d+rc+d+rc+r<brg+rd+rerg+2]r2
+(8)[aarg+arg+rf+rg+rar>c+r<b2]r2(1)r2
+(9)[aarg+arg+rf+rg+rar>c+rd+4e8^ff+]r4^8^
+c+2^rd+8e8f+8g+4e4c+4d+8e8f+2^rd+8<b8g+8b2r2
+a2^rb8>c+8d+8e4c+4<a4f+4g+4^rgg+a8f+8>c+4<b4r4
+rg+ab>c+d+ef+g+2^rf+8e8d+8c+4d+4e4g+4f+2^rd+8<b8g+8b2r2
+a2^rb8>c+8d+8e4<a4>c+4f+4e2^rc+8d+8e8b2r2
+
+#1 [r2]8r4/@30 $DE $18 $0F $30 v90 y10 o5r(1)
+@33r8g+abg+ec-@30(8)@33rd+eff+c-br@30(1)@33r8g+abg+ec-@30(9)
+r8^@32 v140 o4d+d+r8^[r2]7
+@33 >f+f+d+d+c-c-*6v90r4^8^bb<b>*8r8v140d+<f+b>d+*7@34 <<raraa8r8
+
+#2 @31 v135 y10 $DE $18 $0F $30
+o2r8c-8(2)[e8>ee<c-8>ee<]2(3)[f+8>f+f+<c+8>f+f+<]2
+(2)2(3)c-r8^c+c-b8/
+(2)4(3)2f+8>f+f+<c-8>f+f+<c+8>f+f+<d+8>f+f+<
+(2)4(3)2f+8>f+f+<f+8>f+f+<c-
+r4c-c-r[a8rae8rararae8b8a8rae8rarara
+e8<a8>g+8rg+d+8rg+rg+rg+d+8a+8g+8rg+d+8rg+rg+rg+
+d+8<g+8>f+8rf+c+8rf+rf+rf+c+8g+8f+8rf+c+8rf+rf+rf+]
+c+8f+8e8rec-8rererec-8f+c-e8rec-8rerererf+gg+*
+c+8f+8c-8rc-f+8rc-rc-rc-f+8>c+c<b8rbf+8rbrc-rc-c-8r8
+
+#3 @32 v125 y10 $DE $18 $0F $30 q3F
+r4o4(4)[>d+<g+]4(5)[>c+<g+]4(6)[>e<a]4(7)[>d+<a]2>f+<b>b<b
+(4)4(5)4(6)4>d+r4bf+<b/
+(4)4(5)4(4)4(5)4(6)4(7)4(6)4(7)4(4)4(5)4(4)4(5)4(6)4(7)4(6)4>d+r4<<
+aar[eg+>c+<g+>e<g+>c+<g+]4[d+g+bg+>d+<d+bg+]2
+b>c+d+<b>f+<b>c+d+<br4^8^
+[f+a>c+<a>e<a>c+<a]4[g+b>d+c-f+c-d+c-]3e>r4^8^
+[c+<g+>e<g+]8[bf+>d+<f+]7r4[af+>c+<f+]8[ae>c+<e]4
+d+ef+ab>c+eg+f+r4^8^
+
+#4 v140 y10
+o5 [r2]8r4/*3@33 $DE $18 $0F $30 r8g+abg+ec-*3rd+eff+c-br*3r8g+abg+ec-r2^4
+*9r4^8bbg+g+d+d+*6r4^8bb<b>r8^*8f+c-d+f+*7@34 <rd+rd+d+8r8
+
+#5 v125 y10
+
+"j=@35e"
+"k=@36d"
+"m=@38<b8>"
+"s=@37c+"
+"u=@39e8"
+
+o4kkm
+jrk[jjrkkjrk]3
+jjrs8jrk*2jjrkkjrmur8/
+[jrkjjrkkjrkjjrkkjrkjjrkkjrkjjrs8]3
+jrkjjrkkjrkjjrkkjrkjjrkr8jrjrjs8
+[jkkjskkjkjkjskm]7jkkjskkjkskjssm*7
+jkmskmkskssru
