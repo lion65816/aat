@@ -15,7 +15,7 @@ TILEMAP:
 db $80,$82		;frame 1, frame 2
 
 X_SPEED:
-db $08,$F8,$0C,$F4	;right (slow), left (slow), right (fast), left (fast)
+db $32,$CD,$32,$CD	;right (slow), left (slow), right (fast), left (fast)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; sprite initialization JSL

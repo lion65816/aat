@@ -13,10 +13,33 @@
 
 !dist = !botEdge-!topEdge
 
-Main:
-LDA #$00
-STA $140D|!addr
 
+init:
+
+LDA #$00
+STA $14AF|!addr
+
+	LDA $19
+	BEQ +
+	LDA #$01
+	STA $19
++	LDA $0DC2|!addr
+	BEQ +
+	LDA #$01
+	STA $0DC2|!addr
++	RTL
+
+
+load:
+    lda #$01 : sta $1B9B|!addr
+    rtl
+    
+Main:
+STZ $140D|!addr
+
+LDA #$00
+STA $1697|!addr
+.go
 	LDA !InputByte1		; Load input
 	AND #%10110000		; Bitmask of which bits not to run through $15
 	BEQ +				; If none of these bits are set, branch
@@ -99,23 +122,3 @@ WrapSprites:
 	BPL .loop
 	RTS
 
-init:
-
-LDA #$00
-STA $14AF|!addr
-
-	LDA $19
-	BEQ +
-	LDA #$01
-	STA $19
-+	LDA $0DC2|!addr
-	BEQ +
-	LDA #$01
-	STA $0DC2|!addr
-+	RTL
-
-
-load:
-    lda #$01 : sta $1B9B|!addr
-    rtl
-    

@@ -1,0 +1,151 @@
+{
+    "$1656": {
+        "Can be jumped on": false,
+        "Dies when jumped on": false,
+        "Disappears in cloud of smoke": false,
+        "Hop in/kick shell": false,
+        "Object Clipping": 0
+    },
+    "$1662": {
+        "Fall straight down when killed": false,
+        "Sprite Clipping": 12,
+        "Use shell as death frame": false
+    },
+    "$166E": {
+        "Disable cape killing": true,
+        "Disable fireball killing": true,
+        "Disable water splash": false,
+        "Don't interact with Layer 2": false,
+        "Palette": 1,
+        "Use second graphics page": true
+    },
+    "$167A": {
+        "Can't be kicked like shell": false,
+        "Don't change into shell when stunned": false,
+        "Don't disable cliping when starkilled": false,
+        "Don't use default interaction with Mario": true,
+        "Gives power-up when eaten by yoshi": false,
+        "Invincible to star/cape/fire/bounce blk.": false,
+        "Process interaction with Mario every frame": true,
+        "Process when off screen": false
+    },
+    "$1686": {
+        "Don't change direction if touched": true,
+        "Don't interact with objects": false,
+        "Don't interact with other sprites": true,
+        "Don't turn into coin when goal passed": false,
+        "Inedible": true,
+        "Spawn a new sprite": false,
+        "Stay in Yoshi's mouth": false,
+        "Weird ground behaviour": false
+    },
+    "$190F": {
+        "Can be jumped on with upwards Y speed": false,
+        "Can't be killed by sliding": false,
+        "Death frame two tiles high": false,
+        "Don't erase when goal passed": false,
+        "Don't get stuck in walls (carryable sprites)": false,
+        "Don't turn into a coin with silver POW": false,
+        "Make platform passable from below": false,
+        "Takes 5 fireballs to kill": false
+    },
+    "ActLike": 157,
+    "Additional Byte Count (extra bit clear)": 4,
+    "Additional Byte Count (extra bit set)": 4,
+    "AsmFile": "BowserStatue.asm",
+    "Collection": [
+        {
+            "Extra Property Byte 1": 17,
+            "Extra Property Byte 10": 0,
+            "Extra Property Byte 11": 0,
+            "Extra Property Byte 12": 0,
+            "Extra Property Byte 2": 0,
+            "Extra Property Byte 3": 0,
+            "Extra Property Byte 4": 0,
+            "Extra Property Byte 5": 0,
+            "Extra Property Byte 6": 0,
+            "Extra Property Byte 7": 0,
+            "Extra Property Byte 8": 0,
+            "Extra Property Byte 9": 0,
+            "ExtraBit": false,
+            "Name": "Bowser Statue (Stationary)"
+        },
+        {
+            "Extra Property Byte 1": 81,
+            "Extra Property Byte 10": 0,
+            "Extra Property Byte 11": 0,
+            "Extra Property Byte 12": 0,
+            "Extra Property Byte 2": 0,
+            "Extra Property Byte 3": 16,
+            "Extra Property Byte 4": 128,
+            "Extra Property Byte 5": 0,
+            "Extra Property Byte 6": 0,
+            "Extra Property Byte 7": 0,
+            "Extra Property Byte 8": 0,
+            "Extra Property Byte 9": 0,
+            "ExtraBit": false,
+            "Name": "Bowser Statue (Shoots Fire)"
+        },
+        {
+            "Extra Property Byte 1": 168,
+            "Extra Property Byte 10": 0,
+            "Extra Property Byte 11": 0,
+            "Extra Property Byte 12": 0,
+            "Extra Property Byte 2": 130,
+            "Extra Property Byte 3": 0,
+            "Extra Property Byte 4": 0,
+            "Extra Property Byte 5": 0,
+            "Extra Property Byte 6": 0,
+            "Extra Property Byte 7": 0,
+            "Extra Property Byte 8": 0,
+            "Extra Property Byte 9": 0,
+            "ExtraBit": false,
+            "Name": "Bowser Statue (Jumps)"
+        },
+        {
+            "Extra Property Byte 1": 232,
+            "Extra Property Byte 10": 0,
+            "Extra Property Byte 11": 0,
+            "Extra Property Byte 12": 0,
+            "Extra Property Byte 2": 130,
+            "Extra Property Byte 3": 16,
+            "Extra Property Byte 4": 128,
+            "Extra Property Byte 5": 0,
+            "Extra Property Byte 6": 0,
+            "Extra Property Byte 7": 0,
+            "Extra Property Byte 8": 0,
+            "Extra Property Byte 9": 0,
+            "ExtraBit": false,
+            "Name": "Bowser Statue (Jumps, Shoots Fire)"
+        }
+    ],
+    "DisplayType": "XY",
+    "Displays": [
+        {
+            "Description": "A Bowser Statue that shoots cluster sprite fireballs.",
+            "DisplayText": "",
+            "ExtraBit": false,
+            "Tiles": [
+                {
+                    "X offset": 0,
+                    "Y offset": 0,
+                    "map16 tile": 769
+                },
+                {
+                    "X offset": -8,
+                    "Y offset": -8,
+                    "map16 tile": 768
+                }
+            ],
+            "UseText": false,
+            "X": 0,
+            "Y": 0
+        }
+    ],
+    "Extra Property Byte 1": 0,
+    "Extra Property Byte 2": 0,
+    "GFXInfo": [
+    ],
+    "Map16": "MAVABTEFQQVBBVEFQgVSBQ==",
+    "Type": 1
+}

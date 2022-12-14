@@ -1,0 +1,151 @@
+#amk 2
+
+#SPC	{
+	#title "Wind Fortress (kaze)"
+	#game "Cave Story+"
+	#author "Daisuke Amaya"
+	#comment "yoshibyoshibyoshib"	}
+
+#instruments	{
+@0 $8F $95 $FF $03 $00
+@4 $8F $F2 $B8 $03 $00 
+@1 $AA $A0 $B8 $03 $00 
+@0 $AF $39 $7F $03 $00 
+@1 $AF $80 $B8 $03 $00 }
+
+"x=@33c8 $dd $00 $0f $80"
+"x16=@33c16 $dd $00 $0f $80"
+
+$EF $06 $AA $AA
+$F1 $01 $33 $00
+
+#0 @30 t55 o4  q7f w132 v255 $fa $03 $7F
+l16 
+(0)[<f>ec<f>ec<f>ec<f>ec<f>ecg<]4
+(1)[e>d<be>d<be>d<be>d<be>d<b>g]4/
+[[ (0)2 (1)2 ]]6
+[[ <a>[aec]4aea
+<g>[gec]4geg
+<f+>[f+d<a>]4f+df+
+<f>[fc<f>]3 fcfgfg ]]2
+[[ (0)2 (1)2 ]]2
+
+#1 o4  q7f v255
+@34(0)4
+(1)4
+/ o3@31 v195
+[[ l8 [<f>ece]2 [cafa]2
+l16 [<br>g8erg8]2 [erb8grb8]2	]]6
+[<a8^16>a8^16a8^16a8^16a8a8]8
+[[ l8 [<f>ece]2 [cafa]2
+l16 [<br>g8erg8]2 [erb8grb8]2	]]6
+
+#2 @31 o2 l4 v200
+[r1]7
+o2[g]4/
+[[ [f]8
+[g]8 ]]4
+[[ [f]8 [g]6
+g8r8g8r8 ]]2
+l1@4
+[agf+f]2
+l4@31
+[[ [f]8
+[g]8 ]]2
+
+#3 @34 o4 v230
+[r2]5
+a4^8g1^8
+[r2]5
+e4^8g1^8/y8@32 l1
+(4)[a^b>d<]4
+[a^b>d2d8r8d8r8]2
+l4
+(3)[c^8<a^8>ce^8g^8e]1
+d^8<a^8a>c2<b2>
+(3)1 a^8>c^8<a>c2<b2> l1
+(4)2
+
+#4 @32 o5 v230
+[r1]8/y12l1r
+(6)[cdg^]4
+(5)[cdg2g8r8g8r8]1
+r1 (5)1 l4
+<c^8<a^8>c
+e^8g^8e
+d^8<a^8a
+>c2<b2
+>a^8e^8a
+b^8>c^8d
+e^8e^8e
+d2e2r1
+l1
+(6)2
+
+#5
+@34 o5
+[r1]7r2 v255
+e4g4/o5
+l8
+araragab
+>crcc<b4a4 l16
+<brbb>g<b>gg<b>gr<gr8gr
+gr>grfrerdrdereer l8
+araragab
+>crccd16r16d16c16r16c16<b l16
+<brbb>g<b>ggdgd<brbbr
+>breb8^b8>crc<brbgr
+l8
+<aa16a16aa16a16ab>cd
+c4r4ee16dd16c
+<br16b16rb16r16bgrg
+g>e16dd16<bgrb4
+>cc16c16cc16c16cdcd
+cr2ede
+gr16gr16ggg16ee16g
+>dr16dr16ddr<b[r1]3r
+d^16d^16ddrdr
+e2^4^d16e16
+c1
+d^16d^16ddrdr
+grgrgrgr
+
+;; Swapped drums to this channel so they don't get cut out by sound effects
+[[@29c8
+[@29c16]2r16
+[@29c8]3
+[@29c16]4r16]]8
+
+@34
+>crcrcdcd		
+cr<a>cee16dd16c
+d4^d16c16<b4^b16a16
+g4^>d16f+16g2
+rcrcc<aa>c
+e16r16e16d16r16d16c<b4a4
+g1l16
+br<b>br<b>b<b>>
+c<c>c<b<b>bg<g
+
+#6o4 $fa $03 $60 v255
+[xxxr8
+xr16xr16x]7
+v130 
+$e8 $C0 $FF
+[@29c8@29c16@29c16]3
+[@29c16]4
+/v255
+(7)[xx@29c8r8xr16x16@29c8x]3
+xx[@29c4]3 (7)3
+xx@29c4xx@29c8[@29c16]2 (7)3
+xx[@29c4]3 (7)3
+xx@29c4xx[@29c16]3r16 (7)3
+xx[@29c4]3 (7)3
+xx[@29c4]3 [r1]8 (7)3
+xx[@29c4]3 (7)4
+
+#7 o3
+(8)[@23c8@23c16@23c16]32/
+(8)96
+[r1]8
+(8)32

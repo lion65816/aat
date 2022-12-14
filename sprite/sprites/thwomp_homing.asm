@@ -38,7 +38,8 @@ X_SPEED:		db !X_SPEED_LEFT,!X_SPEED_RIGHT
 X_OFFSET:		db $FC,$04,$FC,$04,$00
 Y_OFFSET:		db $00,$00,$10,$10,$08
 TILE_MAP:		db $8E,$8E,$AE,$AE,!ANGRY_TILE
-PROPERTIES:		db $03,$43,$03,$43,$03
+;PROPERTIES:		db $03,$43,$03,$43,$03		;> PSI Ninja edit: Gray palette.
+PROPERTIES:		db $07,$47,$07,$47,$07		;> PSI Ninja edit: Blue palette.
 						          
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; sprite init JSL

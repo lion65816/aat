@@ -46,6 +46,7 @@ Locals:
 2C  117 Fight Against a Stronger Monster.txt
 2D  Sparkster - Lakeside.txt
 2E  voile, the magic library.txt
+30  StillOfTheNight.txt
 31  FFMQ - Battle 1.txt
 32  Storm Eagle Sampled.txt
 33  Still, the Road is Full of Dangers.txt
@@ -98,3 +99,8 @@ Locals:
 73  Opus 13.txt
 74  Title Bells.txt
 76  seascape.txt
+77  Nightmares of the Past.txt
+78  Kaze.txt
+79  midnight greenhouse.txt
+7B  Kirby's Dream Land 3 - Ripple Field 2.txt
+82  spaf-05.txt

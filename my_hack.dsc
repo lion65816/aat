@@ -255,6 +255,7 @@ ed0	0	Solid if anything goes left
 ed1	0	Solid if anything goes right
 ee0	0	Solid if anything goes up
 ee1	0	Solid if anything goes down
+eeb	0	Block that kills the player (even on yoshi), is passable for sprites and kills on wall running.
 117d	0	A Donut Lift, which will fall shortly after being stepped on.
 11d7	0	A block that bounces sprites and mario! Doesn't bounce mario when ON.
 11d8	0	A block that bounces sprites and mario! Doesn't bounce mario when OFF.
@@ -278,6 +279,10 @@ ee1	0	Solid if anything goes down
 17a0	0	
 17a1	0	
 1840	0	A simple brick block.
+1b90	0	Acts as 25 if a specific switch is active.
+1b91	0	Acts as 25 if a specific switch isn't active.
+1b92	0	Displays level message 1.
+1b93	0	Displays level message 2.
 1d0e	0	weak_break_block.asm
 1d0f	0	A Donut Lift, which will fall shortly after being stepped on.
 3300	0	BlkMus1.asm

@@ -18,7 +18,7 @@ NameData:
  db "                   "
  ;Level 001
  db " baby catnips get  "
- db "tragic concussions "
+ db "tragic concussions*"
  ;Level 002
  db "                   "
  db "                   "
@@ -56,7 +56,7 @@ NameData:
  db "Random platforms   "
  db "everywhere         "
  ;Level 00E
- db "Ludwig?            "
+ db "    Moon Palace    "
  db "                   "
  ;Level 00F
  db "Take a Yoshi to    "
@@ -66,7 +66,7 @@ NameData:
  db "          of Spring"
  ;Level 011
  db " Warning!  It's a  "
- db "Red Radish Morning "
+ db "Red Radish Morning*"
  ;Level 012
  db "    A Dream Of     "
  db "   Green Apples    "
@@ -78,7 +78,7 @@ NameData:
  db "                   "
  ;Level 015
  db "Demo in            "
- db " thornbush scrumble"
+ db "thornbush scrumble*"
  ;Level 016
  db "STAR ROAD          "
  db "                   "
@@ -93,7 +93,7 @@ NameData:
  db "                   "
  ;Level 01A
  db "     Love Frog     "
- db "    Hangout Spot   "
+ db "    Hangout Spot  *"
  ;Level 01B
  db "     BRAINY OR     "
  db "     WORRIED?      "
@@ -105,7 +105,7 @@ NameData:
  db "glitches there     "
  ;Level 01E
  db "Aileron Moonbounce "
- db "                   "
+ db "                  *"
  ;Level 01F
  db "    PREHISTORIC    "
  db "    DOOM CASTLE    "
@@ -114,7 +114,7 @@ NameData:
  db "                   "
  ;Level 021
  db "how eerie, an eerie"
- db "                   "
+ db "                  *"
  ;Level 022
  db "   THE OBSTACLE    "
  db "                   "
@@ -129,7 +129,7 @@ NameData:
  db "        (sometimes)"
  ;Level 102
  db "Chrystal Caves     "
- db "                   "
+ db "                  *"
  ;Level 103
  db "James Turner (temp "
  db "name, may keep it) "
@@ -156,7 +156,7 @@ NameData:
  db "                   "
  ;Level 10B
  db "    Bad Day At     "
- db "    the Garden     "
+ db "    the Garden    *"
  ;Level 10C
  db "Go right and defeat"
  db "that idiot         "
@@ -164,14 +164,14 @@ NameData:
  db "FINAL CHALLENGE    "
  db "Choose 2 and 5     "
  ;Level 10E
- db "Anticlimatic short-"
- db "cut and final boss "
+ db "  Arial Airships   "
+ db "                  *"
  ;Level 10F
  db "     Sui Glide     "
  db "                   "
  ;Level 110
  db "My Green Garden    "
- db "in Green Forest    "
+ db "in Green Forest   *"
  ;Level 111
  db "Fortress of 1      "
  db "FAST SMASH ACTION!!"
@@ -200,8 +200,8 @@ NameData:
  db "  Jumpers Are      "
  db "  All Winners!     "
  ;Level 11A
- db "Complex turn block "
- db "maze - easy!       "
+ db "       PUNT        "
+ db "      RETURN       "
  ;Level 11B
  db "    FIGHT THE      "
  db "RED SWITCH PALACE! "
@@ -213,7 +213,7 @@ NameData:
  db "                   "
  ;Level 11E
  db "Fungus Forest Flow "
- db "                   "
+ db "                  *"
  ;Level 11F
  db "  A Warm Welcome   "
  db "                   "
@@ -225,7 +225,7 @@ NameData:
  db "                   "
  ;Level 122
  db "   Life Goes On    "
- db "                   "
+ db "                  *"
  ;Level 123
  db " Coasting Redwoods "
  db "                   "
@@ -236,11 +236,11 @@ NameData:
  db "This was a triuphm!"
  db "                   "
  ;Level 126
- db "The fire is on the "
- db "random way of this "
+ db "  Switching        "
+ db "    Difficulties  *"
  ;Level 127
- db "Tides make nice    "
- db "gimmicks           "
+ db "     Greenhouse    "
+ db "     Gambling      "
  ;Level 128
  db "Nearly like title  "
  db "screen             "
@@ -257,8 +257,8 @@ NameData:
  db "Take Yoshi to make "
  db "it easy            "
  ;Level 12D
- db "Awesome Island 1?  "
- db "                   "
+ db "watch out!         "
+ db "     bad word ahead"
  ;Level 12E
  db "STAR ROAD          "
  db "                   "
@@ -278,8 +278,8 @@ NameData:
  db "STAR ROAD          "
  db "                   "
  ;Level 134
- db "Cave with overworld"
- db "music              "
+ db "  Sweet Paradise   "
+ db "                   "
  ;Level 135
  db " An Infinite Dream "
  db "                   "
@@ -297,7 +297,7 @@ NameData:
  db "     the Sushi     "
  ;Level 13A
  db "Use Of A Goal Posts"
- db "                   "
+ db "                  *"
  ;Level 13B
  db "                   "
  db "                   "

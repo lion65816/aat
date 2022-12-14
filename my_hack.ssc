@@ -6,22 +6,24 @@
 04 0022 0,0,80
 05 0020 Yoshi
 05 0022 -10,1,93 0,17,A3
+07 0020 A Bowser Statue that shoots cluster sprite fireballs.
+07 0022 0,0,401 -8,-8,400
 08 0020 A Boomerang Bro from Super Mario Bros. 3. It walks back and forth, occasionally hopping and periodically throwing two boomerangs, which it will later try to catch.
-08 0022 0,-16,400 0,0,401 8,-16,402
+08 0022 0,-16,402 0,0,403 8,-16,404
 09 0020 A Hammer Bro from Super Mario Bros. 3. It walks back and forth and sometimes jumps high between blocks. It frequently throws hammers in Mario's direction.
-09 0022 0,-16,403 0,0,404 8,-16,405
+09 0022 0,-16,405 0,0,406 8,-16,407
 0A 0020 A Ice Bro. It walks back and forth, occasionally hopping and periodically throwing ice balls.
-0A 0022 0,-16,406 0,0,407 10,-10,408
+0A 0022 0,-16,408 0,0,409 10,-10,40A
 0B 0020 The Fire Bro from Super Mario Bros. 3. It walks around and occasionally hops. It periodically spits 2 fireballs at Mario.
-0B 0022 0,0,40A 0,-16,409 -8,0,40B
+0B 0022 0,0,40C 0,-16,40B -8,0,40D
 0C 0020 A Sledge Bro from Super Mario Bros. 3. It walks back and forth. It occasionally jumps and creates an earthquake when it lands. It periodically throws two hammers.
-0C 0022 12,0,40F 4,0,40E 12,-16,40D 4,-16,40C 20,-22,410
+0C 0022 12,0,411 4,0,410 12,-16,40F 4,-16,40E 20,-22,412
 0D 0020 This sprite will pick up block 12E or any block set to act like 12E (by default)
 0D 0022 0,0,C7
 0F 0020 A giant goomba that can be squashed.
-0F 0022 0,0,411 0,-8,413 8,0,412 8,-8,414
+0F 0022 0,0,413 0,-8,415 8,0,414 8,-8,416
 10 0020 A giant parakoopa. Stomping it makes it become a giant green koopa.
-10 0022 0,0,415 16,0,416 0,-16,417 16,-16,418 14,-11,7
+10 0022 0,0,417 16,0,418 0,-16,419 16,-16,41A 14,-11,7
 11 0020 Undefined Sprite
 11 0022 0,0,0
 12 0020 Undefined Sprite
@@ -33,13 +35,13 @@
 15 0020 Undefined Sprite
 15 0022 0,0,0
 16 0020 A giant green koopa from SMB3.
-16 0022 0,0,419 16,0,41A 0,-16,41B 16,-16,41C
+16 0022 0,0,41B 16,0,41C 0,-16,41D 16,-16,41E
 17 0020 A giant red koopa that stays on ledges.
-17 0022 0,0,41D 16,0,41E 0,-16,41F 16,-16,420
+17 0022 0,0,41F 16,0,420 0,-16,421 16,-16,422
 18 0020 A giant blue koopa from SMB3 that stays on ledges and walks faster.
-18 0022 0,0,421 16,0,422 0,-16,423 16,-16,424
+18 0022 0,0,423 16,0,424 0,-16,425 16,-16,426
 19 0020 A giant yellow koopa from SMB3 that walks faster, falls off ledges and occasionally follows Mario.
-19 0022 0,0,425 16,0,426 0,-16,427 16,-16,428
+19 0022 0,0,427 16,0,428 0,-16,429 16,-16,42A
 1A 0020 Undefined Sprite
 1A 0022 0,0,0
 1B 0020 Undefined Sprite
@@ -71,7 +73,7 @@
 28 0020 Undefined Sprite
 28 0022 0,0,0
 29 0020 This is a fire snake from SMB3 that jumps towards the player slowly. Weapons or a star can defeat it.
-29 0022 0,0,429
+29 0022 0,0,42B
 2A 0020 Undefined Sprite
 2A 0022 0,0,0
 2B 0020 Undefined Sprite
@@ -81,13 +83,13 @@
 2D 0020 Undefined Sprite
 2D 0022 0,0,0
 2E 0020 A horizontal burner from Super Mario 3, facing right.
-2E 0022 0,0,42A 16,0,42B 32,0,42C
+2E 0022 0,0,42C 16,0,42D 32,0,42E
 2E 0030 A horizontal burner from Super Mario 3, facing left.
-2E 0032 -32,0,42D -16,0,42E 0,0,42F
+2E 0032 -32,0,42F -16,0,430 0,0,431
 2F 0020 A vertical burner from Super Mario 3, facing down.
-2F 0022 0,0,433 0,16,434 0,32,435
+2F 0022 0,0,435 0,16,436 0,32,437
 2F 0030 A vertical burner from Super Mario 3, facing up.
-2F 0032 0,0,432 0,-16,431 0,-32,430
+2F 0032 0,0,434 0,-16,433 0,-32,432
 30 0020 A large fish sprite that will lunge at Mario and attempt to eat him. SP4=83
 30 0022 0,-16,F5 0,0,209
 30 0030 A small fish sprite that will lunge at Mario and attempt to eat him. SP3=13
@@ -97,9 +99,9 @@
 31 0030 Happy Moon. SP4=98. Waits a while until Mario gets in a certain screen, and starts spinning in circles and swinging downwards at Mario while locked on the screen horizontally. Touching it will cause it to instantly kill all sprites that are not set to "Invincible to star/cape/fire/bouncing blk". Extra Property Byte 1 indicates what screen it starts diving from.
 31 0032 0,0,1D6 -16,0,1B0 0,-16,209
 32 0020 A Bro throwing stunned Bob-Ombs that will explode after a while.
-32 0022 8,-16,1BC 0,0,437 0,-8,436
+32 0022 8,-16,1BC 0,0,439 0,-8,438
 33 0020 A Bro throwing green shells while jumping.
-33 0022 8,-16,30 0,0,439 0,-8,438
+33 0022 8,-16,30 0,0,43B 0,-8,43A
 34 0020 Undefined Sprite
 34 0022 0,0,0
 35 0020 Undefined Sprite
@@ -113,9 +115,9 @@
 39 0020 Undefined Sprite
 39 0022 0,0,0
 3A 0020 A roto-disc that goes clockwise. The star indicates the center point.
-3A 0022 -56,0,43A -4,-4,216
+3A 0022 -56,0,43C -4,-4,216
 3A 0030 A roto-disc that goes counter clockwise. The star indicates the center point.
-3A 0032 56,0,43A -4,-4,216
+3A 0032 56,0,43C -4,-4,216
 3B 0020 Undefined Sprite
 3B 0022 0,0,0
 3C 0020 Undefined Sprite
@@ -177,23 +179,23 @@
 59 0020 Undefined Sprite
 59 0022 0,0,0
 5A 0020 A Hammer Bro from Super Mario Bros. 3. It walks back and forth and sometimes jumps high between blocks. It frequently throws hammers in Mario's direction.
-5A 0022 0,-16,43B 0,0,43C 8,-16,43D
+5A 0022 0,-16,43D 0,0,43E 8,-16,43F
 61 0020 A numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
-61 0022 0,0,43E 16,0,43F 0,16,440 16,16,441 8,8,444
+61 0022 0,0,440 16,0,441 0,16,442 16,16,443 8,8,446
 61 0030 A small numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
-61 0032 0,0,448
+61 0032 0,0,44A
 62 0020 A numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
-62 0022 0,0,44C 16,0,44D 0,16,44E 16,16,44F 8,8,452
+62 0022 0,0,44E 16,0,44F 0,16,450 16,16,451 8,8,454
 62 0030 A small numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
-62 0032 0,0,456
+62 0032 0,0,458
 63 0020 A numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
-63 0022 0,0,45A 16,0,45B 0,16,45C 16,16,45D 8,8,460
+63 0022 0,0,45C 16,0,45D 0,16,45E 16,16,45F 8,8,462
 63 0030 A small numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
-63 0032 0,0,464
+63 0032 0,0,466
 64 0020 A numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
-64 0022 0,0,468 16,0,469 0,16,46A 16,16,46B 8,8,46E
+64 0022 0,0,46A 16,0,46B 0,16,46C 16,16,46D 8,8,470
 64 0030 A small numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
-64 0032 0,0,472
+64 0032 0,0,474
 6A 0020 A cluster bullet sprite shooter with lots of customization options. A summary of each extra byte is included here, but check the asm file for more detailed descriptions and examples.\nExtra Bit: Aim at player if set. Clear now.\nExtra Byte 1: Reserved for future expansion.\nExtra Byte 2: Rate at which bullets are shot.\nExtra Byte 3: Speed at which bullets are shot.\nExtra Byte 4: Angle of shot (irrelevant if aiming).\nExtra Byte 5: Offset from global timer.\nExtra Byte 6: Parameter, ASM file has details.\nExtra Byte 7: Time for bullet to stay on screen.\nExtra Byte 8: How many bullets can be shot.\nExtra Byte 9: Sprite number to attach to.\nExtra Byte 10: Y/X offset from host sprite.\nExtra Byte 11: Reserved for future expansion.\nExtra Byte 12: Reserved for future expansion.
 6A 0022 0,0,0
 6A 0030 A cluster bullet sprite shooter with lots of customization options. A summary of each extra byte is included here, but check the asm file for more detailed descriptions and examples.\nExtra Bit: Aim at player if set. Set now.\nExtra Byte 1: Reserved for future expansion.\nExtra Byte 2: Rate at which bullets are shot.\nExtra Byte 3: Speed at which bullets are shot.\nExtra Byte 4: Angle of shot (irrelevant if aiming).\nExtra Byte 5: Offset from global timer.\nExtra Byte 6: Parameter, ASM file has details.\nExtra Byte 7: Time for bullet to stay on screen.\nExtra Byte 8: How many bullets can be shot.\nExtra Byte 9: Sprite number to attach to.\nExtra Byte 10: Y/X offset from host sprite.\nExtra Byte 11: Reserved for future expansion.\nExtra Byte 12: Reserved for future expansion.
@@ -201,7 +203,7 @@
 71 0020 Undefined Sprite
 71 0022 0,0,0
 72 0020 This egg bounced on predetermined angles based on steepness.
-72 0022 0,0,476
+72 0022 0,0,478
 74 0020 This is a POW/P-switch, which will be blue or silver depending on the extra bit. It's currently set to be blue. Without a patch, custom sprites are not preserved across sublevels, so if you take this through a pipe/door it will become a vanilla P-switch.
 74 0022 0,1,55
 74 0030 This is a POW/P-switch, which will be blue or silver depending on the extra bit. It's currently set to be silver. As of this writing, PIXI does not preserve custom sprite status across sublevels, so if you take this through a pipe/door it will become a vanilla P-switch.
@@ -227,24 +229,32 @@
 7F 0030 A Red Multi Bounce Shell which spawns kicked towards Mario.\nThe first extra byte determines the number of bounces before it disappears (0A = infinite bounces).\nThe second extra byte determines the spawn X speed.
 7F 0032 0,0,31 0,0,10A 8,0,10A
 85 0020 A "Kun" beta sprite that can follow walls, and disappear in a puff of smoke when touched. This one will walk back and forth.
-85 0022 4,0,477
+85 0022 4,0,479
 85 0030 A "Kun" beta sprite that can follow walls, and disappear in a puff of smoke when touched. This one will follow walls.
-85 0032 4,0,478
+85 0032 4,0,47A
 8A 0020 This is a fire snake from SMB3 that jumps towards the player slowly. Weapons or a star can defeat it.
-8A 0022 0,0,479
+8A 0022 0,0,47B
 8C 0020 Once on screen, it will cause custom cluster sprites to appear, which is set via extra byte (purely decorative)
 8C 0022 0,0,*Cluster Spawner*
 8F 0020 A shell that won't interact with other sprites.\nExtra Byte 1: Palette number.\nExtra Byte 2: Base kick speed.
-8F 0022 0,1,47A
+8F 0022 0,1,47C
 90 0020 A SMW Banzai Bill that faces left.
 90 0022 0,0,180 16,0,181 32,0,182 48,0,183 0,16,190 16,16,191 0,32,1A0 16,32,1A1 32,16,192 32,32,1A2 0,48,1B0 16,48,1B1 32,48,1B2 48,16,193 48,32,1A3 48,48,1B3
 90 0030 A SMW Banzai Bill that faces right.
-90 0032 0,0,47B 16,0,47D 0,48,47E 16,48,480 16,16,47F 16,32,47F 0,16,47C 0,32,47C 32,0,481 48,0,482 32,32,485 48,32,486 32,16,483 48,16,484 32,48,487 48,48,488
+90 0032 0,0,47D 16,0,47F 0,48,480 16,48,482 16,16,481 16,32,481 0,16,47E 0,32,47E 32,0,483 48,0,484 32,32,487 48,32,488 32,16,485 48,16,486 32,48,489 48,48,48A
 91 0020 Angry Sun. SP4=98. Waits a while until Mario gets in a certain screen, and starts spinning in circles and swinging downwards at Mario while locked on the screen horizontally. Extra Property Byte 1 indicates what screen it starts attacking from.
 91 0022 0,-16,1D1 0,0,1E1
 91 0030 Happy Moon. SP4=98. Waits a while until Mario gets in a certain screen, and starts spinning in circles and swinging downwards at Mario while locked on the screen horizontally. Touching it will cause it to instantly kill all sprites that are not set to "Invincible to star/cape/fire/bouncing blk". Extra Property Byte 1 indicates what screen it starts diving from.
 91 0032 0,0,1D6 -16,0,1B0 0,-16,209
 92 0020 Undefined Sprite
 92 0022 0,0,0
+B2 0020 Undefined Sprite
+B2 0022 0,0,0
+B3 0020 Undefined Sprite
+B3 0022 0,0,0
 B7 0020 Disassembly of Sprite 54
 B7 0022 8,8,128 24,8,129 40,8,12A 8,24,138 8,40,148 24,40,149 40,40,14A 40,24,13A 24,24,139
+BA 0020 P-Balloon that will make mario float.
+BA 0022 4,-1,BA
+BA 0030 P-Balloon that will make mario float. This setting floats to the left on init.
+BA 0032 4,-1,BA

@@ -289,8 +289,10 @@ tile_table:
 	db $E0,$E1,$E3,$E4
 
 prop_table:
-	db $03,$43,$03,$43
-	db $03,$03,$03,$03
+;	db $03,$43,$03,$43	;> PSI Ninja edit: Gray palette.
+;	db $03,$03,$03,$03	;> PSI Ninja edit: Gray palette.
+	db $09,$49,$09,$49	;> PSI Ninja edit: Red palette.
+	db $09,$09,$09,$09	;> PSI Ninja edit: Red palette.
 
 GFX:
 	%GetDrawInfo()

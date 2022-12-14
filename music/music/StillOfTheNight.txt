@@ -1,0 +1,241 @@
+#amk 2
+;************************
+
+; SPC Generator Info
+#SPC
+{
+    #author  "Hiroki Kikuta"
+    #title   "Still of the Night"
+    #game    "Secret of Mana"
+    #comment "Ported by Ahrion"
+}
+
+#path "StillOfTheNight"
+
+#samples
+{
+	#optimized
+	"Pad.brr"
+	"Choir.brr"
+}
+
+#instruments
+{
+	"Pad.brr"	$F8 $EC $A0 $03 $FB	; @30
+	"Choir.brr"	$F6 $EE $A0 $02 $02	; @31
+}
+
+w192
+t33
+
+"Choir1 =  y8 v154 $FA $03 $0E"
+"Choir2 = y12 v154 $FA $03 $0E"
+
+"Pad1 = v140 y10"
+"PAN11 = $DC $60 $05"
+"PAN12 = $DC $60 $0A"
+"PAN13 = $DC $60 $0F"
+
+"Pad2 = v129 y10"
+
+$F4 $02
+
+$EF $FF $40 $40
+$F1 $0B $5C $01
+
+
+
+; +---------------------+
+; |     Channel #0	|
+; |     Pad		|
+; +---------------------+
+
+#0
+o5   ; +0 / -1
+r1^1^1^1 /
+@30 $EE $05 Pad1
+
+$DE $0D $1C $15
+
+(11)[
+
+PAN11 e8 g8 f+8 a8
+PAN12 b4 g8 f+8
+PAN13 d4 e8 f+8
+PAN12 c4. d8 <
+PAN11 b4 a4
+PAN12 ^2
+PAN13 ^2
+PAN12 ^2
+>
+
+PAN11 e8 g8 f+8 a8
+PAN12 b4 g8 f+8
+PAN13 d4 e8 f+8
+PAN12 c4. d8 <
+PAN11 b4 a4
+PAN12 ^2
+PAN13 ^2
+PAN12 ^2
+
+PAN11 a8 a+8 a+8 > d8
+PAN12 d8 f8 f8 a8
+PAN13 a2
+PAN12 ^2 <
+PAN11 a8 a+8 a+8 > d8
+PAN12 d8 f8 f8 a8
+PAN13 a2
+PAN12 ^4 g8 e8
+PAN11 c4. < b8
+PAN12 ^2
+PAN13 ^2
+PAN12 ^2
+PAN11 a4. g8
+PAN12 ^2
+PAN13 ^2
+PAN12 ^2 >]2
+
+(12)[
+PAN11 g4 f8 a+8
+PAN12 g4 c4
+PAN13 d4 d+4
+PAN12 f4 c4
+PAN11 g4 f8 a+8
+PAN12 g4 c4
+PAN13 d2
+PAN12 d+2
+
+PAN11 d2
+PAN12 ^2
+PAN13 ^4 < a+4
+PAN12 a4. a+8
+PAN11 g2
+PAN12 ^2
+PAN13 ^2
+PAN12 ^2
+>
+
+PAN11 g4 f8 a+8
+PAN12 g4 c4
+PAN13 d4 d+4
+PAN12 f4 c4
+PAN11 g4 f8 a+8
+PAN12 g4 c4
+PAN13 d2
+PAN12 d+2
+
+PAN11 d2
+PAN12 ^2
+PAN13 ^4 d+4
+PAN12 f4. < a+8
+PAN11 > g2
+PAN12 ^2
+PAN13 ^2
+PAN12 e2
+]
+
+
+
+; +---------------------+
+; |     Channel #1	|
+; |     Choir		|
+; +---------------------+
+
+#1
+o5
+@31 Choir1
+e2 e2 e2 g2 e2 e2 e2 g2 /
+
+(21)[e2 e2 f+2 e2 e2 e2 e2 g2 e2 e2 f+2 e2 e2 e2 e2 g2 f2 f2 a2 f2 f2 f2 a2 f2 e2 e2 f+2 e2 e2 e2 e2 e2]2
+(22)[d+2 d+2 d+2 d2 d+2 d+2 d+2 d+2 d2 d2 d2 f2 d2 d2 d2 d2 d+2 d+2 d+2 d2 d+2 d+2 d+2 d+2 f2 f2 f2 f2 g2 g2 g2 g2] 
+
+
+
+; +---------------------+
+; |     Channel #2	|
+; |     Choir		|
+; +---------------------+
+
+#2
+o5
+@31 Choir2
+c2 d2 < b2 > e2 c2 d2 < b2 > e2 /
+
+(31)[c2 d2 e2 d2 c2 d2 < b2 > e2 c2 d2 e2 d2 c2 d2 < b2 > e2 d2 c2 f2 d+2 d2 c2 f2 d2 c2 d2 e2 d2 c2 d2 < b2 > d2]2
+(32)[c2 d2 < a+2 a+2 > c2 d2 < a+2 > c2 < a+2 > c2 < a2 > d2 c2 < a+2 a2 a+2 > c2 d2 < a+2 a+2 > c2 d2 < a+2 > c2 c2 d2 d+2 d2 e2 e2 e2 d2]
+
+
+
+; +---------------------+
+; |     Channel #3	|
+; |     Choir		|
+; +---------------------+
+
+#3
+o5
+@31 Choir1
+a2 a2 a2 a2 a2 a2 a2 a2 /
+
+(41)[a2 a2 a2 a2 a2 a2 a2 a2 a2 a2 a2 a2 a2 a2 a2 a2 a+2 a+2 a+2 a+2 a+2 a+2 a+2 a+2 a2 a2 a2 a2 a2 a2 a2 a2]2
+(42)[g+2 g+2 g+2 g+2 g+2 g+2 g+2 g+2 g2 g2 g2 g2 g2 g2 g2 g2 g+2 g+2 g+2 g+2 g+2 g+2 g+2 g+2 a+2 a+2 a+2 a+2 > c2 d2 c2 < b2] 
+
+
+
+; +---------------------+
+; |     Channel #4	|
+; |     Pad		|
+; +---------------------+
+
+#4
+o5
+r1^1^1^1 /
+@30 $EE $18 Pad2
+$DE $0D $1C $15
+
+(11)2
+(12)
+
+
+
+; +---------------------+
+; |     Channel #5	|
+; |     Choir		|
+; +---------------------+
+
+#5
+o5
+@31 Choir2 $EE $15
+e2 e2 e2 g2 e2 e2 e2 g2 /
+
+(21)2
+(22) 
+
+
+
+; +---------------------+
+; |     Channel #6	|
+; |     Choir		|
+; +---------------------+
+
+#6
+o5
+@31 Choir1 $EE $15
+c2 d2 < b2 > e2 c2 d2 < b2 > e2 /
+
+(31)2
+(32)
+
+
+
+; +---------------------+
+; |     Channel #7	|
+; |     Choir		|
+; +---------------------+
+
+#7
+o5
+@31 Choir2 $EE $15
+a2 a2 a2 a2 a2 a2 a2 a2 /
+
+(41)2
+(42)

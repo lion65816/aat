@@ -1,0 +1,277 @@
+#amk 2
+
+#SPC
+{
+#title "Midnight Greenhouse"
+#author "Junko Shiratsu"
+#game "Knuckles' Chaotix"
+#comment "what about botanic acid?"
+}
+
+#samples
+{
+#default
+}
+
+#instruments
+{
+@1 $CE $D0 $00 $03 $00		;@30
+@2 $BE $EF $00 $03 $00		;@31
+@14 $BC $C4 $00 $07 $00		;@32 @1 $FF $E3 $00 $03 $00
+@21 $EE $E0 $00 $04 $00		;@33
+@10 $AF $17 $00 $09 $00		;@34
+@10 $DE $E3 $00 $05 $00		;@35
+@10 $CF $F1 $00 $03 $00		;@36
+@23 $EF $E4 $00 $04 $00		;@37
+@23 $EF $F4 $00 $04 $00		;@38
+@13 $C8 $E6 $00 $03 $00		;@39
+@0  $C8 $E6 $00 $03 $00		;@40
+n1D $EE $34 $00 $00 $00		;@41
+n1F $aF $19 $00 $00 $00		;@42
+@13 $EE $E8 $00 $06 $00		;@43
+@6 $BC $B0 $00 $03 $00		;@44
+@0  $CF $E9 $00 $03 $00		;@45
+@12 $DE $F3 $00 $06 $00		;@46
+@13 $EE $F0 $00 $06 $00		;@47
+}
+
+"M=@33"
+"T=@34"
+"S=@35"
+"Tom=@36"
+"K=@38"
+"J=@37"
+"Cym=@41"
+"Spl=@42"
+"U=@46"
+
+;(!900)[$F4 $09]
+;(!901)[$ED $7E $CC]
+
+$EF $43 $32 $CD
+$F1 $0A $C3 $01
+$F4 $02
+
+#0 w180 t44
+v200 y12 @30 o3 l24
+(2)[r12gg+12a> c12<a>c12d ed+dc12<g a12>cd12e	;2
+gf+fd8 r12dr12e r12gr12g+ r12g+a12b]	;3
+/ $DF v200 @30 y12
+(0)[r4.cr12<b6^24>c	;3.75
+r2^8<br12>e6^24d	;4.75
+r4.cr12<b12>cr4 cr12<b12>cr4	;6-ish superloop
+<br12>e12dr12e r12er12d4^24	;7
+]2
+
+@44 v170 o3 y11
+r2^12ga12>c12rd12rd12	;12
+r2^24gf12e12r<b12rb12	;13
+r2^3^12>c+4<b6a4^8^24rf+6^24	;15
+r12a8 r12a12r12g6^24a12r6^8^24	;16
+b8r12b12ra6b8r4.	;17
+>c8r12c12rd4^8^24c8	;18
+e6^24d4^12r12d8r12d6	;19
+
+[[@30 v200 y12 (0)
+o3 a4b4>c6^24d r8g6^24	;24
+rg12rf12er12d2^24	;25
+(2) ]]2
+
+p12,12,28 @47 v210 o3
+y13a6^24>y7a2^4^24< y13g6^24>y7g2^4^24< y13a6^24>y7a2^4^24< y13g6^24>y7g4^12 r4^6^24	;39
+
+;[[r2]]255
+
+#1
+v200 y8 @30 o3 l24
+(100)[r12dd+12e g12eg12a> c<ba+a12c d12eg12a	;2
+>c<ba+g8 r12gr12a r12>cr12d r12ef12g]	;3
+/ $DF @30 y8 v200
+;remove < after this and it sounds nice :)
+(1)[<r4.ar12g6^24a	;3.75
+r2^8gr12>c6^24<b	;4.75
+r4.ar12g12ar4ar12g12ar4	;6-ish superloop
+gr12>c12<br12br12br12g+4^24	;7
+]2
+
+@44 v170 o3 y9
+r2^12cd12f12rg12rg12		;12
+r2^24>dc12<b12rg12rg12		;13
+r2^3^12	a4a6g4^8^24rd+6^24	;15
+r12d8r12d12r12 e6^24d12r6^8^24	;16
+e8r12e12re6e8r4.	;17
+e8r12e12re4^8^24e8	;18
+a6^24b4^12r12b8 r12b6	;19
+
+[[@30 v200 y8 (1)
+e4g4a6^24a r8>d6^24	;24
+rd12rc12<br12g+2^24
+(100) ]]2
+
+p12,12,28 @47 y11 v210 o4
+r12 c1<b1>c1<b4^8^12 r4^6^24	;39
+
+;[[r2]]255
+
+#2 ;(!900,-1) (!901,1,8)
+
+r1 o4 v150
+Cymc4^6^24 v100 Splc2^24
+$F4 $03
+/
+v220 p12,12,28
+@31 o3 l4 (200)[ab>cg6^24 e12r24d2^4^8^24	;5
+<r]ga>c6^24e12r24f12r24d2^4^24	;7
+(200)gae6^24d8c+24c12g2^8^24	;11
+@43 v210 l24 <g8>d6^24cd12rg4.r8<g8	;12
+>d6^24 c48c+48d12rg4.<r8g8	;13
+>d6^24cd12rf+48g6^24.a8e12d8d+48	;14 almost
+e48^6^24d6c+4.r4	;15
+^8 c4<a12r b48>c8^24.d r8d+48	;16 almost
+e6^24.f12re12dr12<b48>c8^48d8r8<g4a4>c4d4e12r	;18
+f+48g6^48f6e8c8r8d8r12	;19
+[@31 v220 o4 [[b12rb>c12<g2.]]2
+r4^24 g4f4e6^24f12	;22
+ref12r g12rg+12r a12rg+r12 a12br12	;23
+c6g8f8e12f8ec4r12	;24
+d6g8f12gr12g+8ab8>c8<e8	;25
+d6^24e2^4^24 r2^4^8^12]2	;26
+
+@47 v210 y9 o4
+
+r24 r8 e1d1e1d4^8^24 r4^6^24	;39
+
+
+;[[r2]]255
+
+#3  v200 @32  l24 o2
+r1^4^8^12 e8e>e12<e g12>g<g+12>g+	;3
+/
+[[ (300)[<r12ar12g a8g8f8r4f12f+	;4
+r12gr12f g8f8e8r12e] f12g8g+	;5
+(300)g+12>g+8<e24 ]]2	;7-11
+
+>d4r8d4c8r12<f6	;12
+g4r8g4f8r12a6	;13
+e4r8e4g8r12b8e	;14
+a4r8a4.>r12d+6	;15
+d4r8d4c8r12<f6	;16
+e4r8e4d8r12g6	;17
+f4r8f4e8r12f8>f	;18
+<g6^24g4.g>g8<g+12>g+8<g+	;19
+
+o2 [[ (300) f12g8g+	;5
+(300)g+12>g+8<e24 ]]5
+
+;[[r2]]255
+
+#4
+ v130 o4 l24
+Kc12cJc12 Kc8cJc12Kc12 ccJc12Kc c12cc12c
+[[c8]]8	;3
+
+$F4 $03 / @39 v160 p14,6,29
+(420)[e1d1]4
+@45 (400)[<a4 q7caq7f r12>c4r4 q7ccq7fr12]	;12
+(401)[<b4 q7cbq7f r12>d4r4 q7cdq7fr12]2	;14
+c+4r2c+<rf+6	;15
+(400)
+(401)
+(400)		;18
+a8 q7caq7f r g4 r2^24	;19
+
+@39 (420)9
+o4 e1d2^24 r6^24^4	;39
+
+;[[r2]]255
+
+#5  v180 l24 o4
+Mc4^8^12c2^24	;1
+c12Scc8 c12cTc12Sc8cc12 c8cTom>c<ae	;3
+/
+v150 Cymc12 v180 (500)[McTc12Mc Sc8Tc8 Mc8Tc8] Sc8Tc8
+^12 (500) Sc8TccSc24	;5
+^12 (500) Sc8Tc8	;6
+^12 (500) Sc8TccSc24
+
+;can't superloop because of the cymbal, can't put the cymbal on another channel since it'll inevitably break apart some loop
+^12 (500) Sc8Tc8
+^12 (500) Sc8TccSc24
+^12 (500) Sc8Tc8
+^12 (500) Sc8TccSc24	;11
+
+v150 Cymc8 v180 (501)[Tc12Mc Sc8Tc8 ^12McTc8 Sc8]Tc8	;12
+Mc8 (501) Tccc	;13
+Mc8 (501) Tc8	;14
+Mc8Tc12Mc Sc8Tc8 ^12 Tom>c<a8 Sc12 v100 Splc v200 Tccc	;15
+v150 Cymc8 v180 (501) Tc8	;16
+Mc8 (501) Tccc	;17
+v100 Splc8 v180 (501) Tc8	;18
+v150 Cymc8T v180 c12 v100Splcv200 Sc8Tc8 ^12 Tom>c< Tc12 Tom>c<a12e Sccc	;19
+
+[[(502)[r12McTc12Mc Sc8Tc8 Mc8Ug12g Sc12Uc8g]	;20
+(503)[r12McTc12Mc Sc8Tc8 Mc12Ugg12Mc Sc8Ug12Sc]	;21
+(502)
+(504)[r12McTc12Mc Sc8Tc8] Mc12Ugg12Mc Sc12cTom<g12>Ug ]]4	;35
+
+(502)(503)(502)
+(504)Mc4Sc12cTom<g8>	;39
+
+;Cym
+
+;[[r2]]255
+
+#6
+r1^1 /
+p10,8,26  @40 v140 o3 l2
+(620)[gafg+]4
+
+l24 @45 (600)[f4 q7cfq7f r12a4r4 q7caq7fr12]
+f4 q7cfq7f r12b4r4 q7cbq7fr12
+(601)[g4 q7cgq7f r12b4r4 q7cbq7fr12]	;14
+a4r2grc+6	;15
+(600)
+(601)
+e4 q7ceq7f r12a4r4 q7caq7fr12	;18
+e8 q7ceq7f rd4 r2^24
+
+@40 (620)9 o3 g+2a2f2g+24 r6^4^24
+
+;[[r2]]255
+
+#7
+r1^1 / o4 l24 v130
+[[Kc8(701)[Kc8c8c8c12cJc8Kc12cc8]	;4
+c8(702)[Kc8c8c8c8c8c12cc12c] ]]4	;5-11
+
+(700)[r8Kc4c4Jc8Kc8ccc]3	;12
+r8c4c4Jc8Kc8c8	;15
+(700)3	;18
+r8c4c8c8Jc8Kc8c8	;19
+
+v150Cymc8v130(701)
+c8(702)
+c8(701)	;22
+c8(702)	;23
+v150Cymc8v130(701)	;24
+c8(702)	;25
+v150Cymc8v130(701)	;26
+v100Splc8v130(702)	;27
+v150Cymc8v130(701)	;28
+c8(702)	;29
+
+c8(701)	;30
+c8(702)	;31
+v150Cymc8v130(701)	;32
+c8(702)	;33
+
+v150Cymc8v130(701)	;34
+v100Splc8v130(702)	;35
+v150Cymc8v130(701)	;36
+c8(702)				;37
+
+c8(701)	;38
+c8c8c8c8c2	;39
+
+;[[r2]]255
+

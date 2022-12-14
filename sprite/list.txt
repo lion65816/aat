@@ -4,6 +4,8 @@
 04 catnip.json
 05 ColorYoshi.json
 08 BoomerangBro.json
+06 fast_grinder.cfg
+07 BowserStatue.json
 09 HammerBro.json
 0A IceBro.json
 0B FireBro.json
@@ -134,9 +136,13 @@
 97 panser_green.cfg
 98 panser_blue.cfg
 9B VenusVerticalShortSpitTwo.cfg
+B2 silius_shooter.json
+B3 projectile.json
 B7 climbing_net_door.json
 B8 InfoBox.cfg
 B9 baba_block.cfg
+BA Balloon_dis.json
+BB Carryable_Football.cfg
 
 C0 balloon_shooter.cfg
 C1 lasershooter.cfg
@@ -152,6 +158,7 @@ D0 gusty_generator.cfg
 CLUSTER:
 00 cluster_sparkle.asm
 01 laser.asm
+02 BowserFire.asm
 10 bullet.asm
 11 flowers.asm
 12 sandstorm.asm

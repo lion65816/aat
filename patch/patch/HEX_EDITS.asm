@@ -10,8 +10,6 @@ endif
 ; NOP #3				;Disable STZ $0D9F
 ; ORG $05B296			;Don't disable HDMA after hitting message boxes
 ; db $0C				;STA $0D9F to TSB $0D9F
-ORG $00F878|!bank 			;Free Vertical Scrolling Camera
-db $80				;Free Vertical Scrolling Camera
 ORG $0090D9|!bank			;DEMO START
 db $15,$4E,$04,$4B,$5E,$FF	;DEMO START
 ORG $00910D|!bank			;DEMO START

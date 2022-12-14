@@ -5,6 +5,10 @@
 	Yellow Yoshi
 	Red Yoshi
 	Blue Yoshi
+07	Bowser Statue (Stationary)
+	Bowser Statue (Shoots Fire)
+	Bowser Statue (Jumps)
+	Bowser Statue (Jumps, Shoots Fire)
 08	Boomerang Bro
 09	Hammer Bro
 0A	Ice Bro
@@ -136,4 +140,8 @@
 91	Angry Sun
 	Happy Moon
 92	Volcano Lotus
+B2	Silius Shooter
+B3	Projectile
 B7	Rotating Net
+BA	Balloon, flies right
+	Balloon, flies left

@@ -45,6 +45,13 @@ patches
 	patch\patch\simpleHP.asm
 	patch\patch\easy_mode7.asm
 	patch\patch\timeupfix.asm
+	patch\patch\ticking.asm
+	patch\patch\bg_candle_flames_fix.asm
+	patch\patch\SpriteScrollFix.asm
+	patch\patch\walljumpnoteblockglitchfix.asm
+	patch\patch\flagfreescroll.asm
+	patch\patch\bg.asm
+	patch\patch\InlineLayer3Message.asm
 ]
 
  -- rom paths

@@ -2,7 +2,7 @@
 ;
 ; Cluster sprite number is set in the CFG file as extra property byte 1.
 
-!SpikeCount       = $09   ; Amount of sprites to fall down, -1. Values outside of 00-13 are not recommended.
+!SpikeCount       = $02   ; Amount of sprites to fall down, -1. Values outside of 00-13 are not recommended.
 
 print "INIT ",pc
 

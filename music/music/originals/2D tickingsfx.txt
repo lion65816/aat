@@ -1,0 +1,7 @@
+;POW Patch SFX insert with Romi's addmusic 1DF9 or 1DFC? (See POW_CODE in ASMT.ASM)
+
+@2 v96 
+
+o5e16 r4
+o4c16 r4
+

@@ -10,7 +10,7 @@
 !Direction2     = 1     ;> 1 = up/left, 0 = down/right.
 !Teleport       = 0     ;> 1 = when the scroll stops, Mario will teleport based on the current screen exit.
 !StartScreen    = $1B   ;> Screen number where to start scrolling.
-!StopScreen     = $04   ;> Screen number where to stop scrolling.
+!StopScreen     = $08   ;> Screen number where to stop scrolling.
 !Speed          = $02   ;> How many pixels to move each frame.
 !FractionSpeed  = $40   ;\ Fractional speed, used if you want more fine-tuned speed (e.g. 1.5 speed, 0.5, etc.)
                         ;| Goes from $00 to $FF, where $FF is almost equal to !Speed = $01
