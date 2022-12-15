@@ -79,6 +79,10 @@ init:
 
 		LDA #$18
 		TSB $0D9F|!addr
+        
+        LDA #$01
+        STA $140B|!addr
+        RTL
 
 		RTL
 

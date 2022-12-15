@@ -70,7 +70,9 @@ init:
 	BEQ +
 	LDA #$01
 	STA $0DC2|!addr
-+	RTL
++	LDA #$01
+    STA $140B|!addr
+    RTL
 
 .Table1
 db $12,$29,$9D

@@ -66,7 +66,10 @@ STZ $0F48|!addr
 	BEQ +
 	LDA #$01
 	STA $0DC2|!addr
-+	RTL
++	LDA #$01
+    STA $140B|!addr
+    RTL
+
 
 load:
     lda #$01 : sta $1B9B|!addr

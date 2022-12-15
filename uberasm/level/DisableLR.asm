@@ -33,6 +33,10 @@
 
 !InputByte2 = #%00110000
 
+init:
+    INC $140B
+    RTL
+
 main:
 	LDA !InputByte1		; Load input
 	AND #%10110000		; Bitmask of which bits not to run through $15

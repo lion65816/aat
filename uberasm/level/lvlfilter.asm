@@ -64,7 +64,12 @@ init:
 	BEQ +
 	LDA #$01
 	STA $0DC2|!addr
-+	RTL
++   LDA $010B|!addr           ; reminder to ask nitrogen if he wants free scrolling on his red switch stage
+    CMP #$1B
+    BEQ +
+    LDA #$01
+    STA $140B|!addr
++   RTL
 
 load:
     lda #$01 : sta $1B9B|!addr

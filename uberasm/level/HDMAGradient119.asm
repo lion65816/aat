@@ -96,7 +96,9 @@ STA $14AF|!addr
 	BEQ +
 	LDA #$01
 	STA $0DC2|!addr
-+	RTL
++	LDA #$01
+    STA $140B|!addr
+    RTL
 
 .Table1
 db $03,$2A,$40

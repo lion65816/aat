@@ -27,12 +27,10 @@ STA $14AF|!addr
 	BEQ +
 	LDA #$01
 	STA $0DC2|!addr
+    
+    LDA #$01
+    STA $140B|!addr
 +	RTL
-
-
-load:
-    lda #$01 : sta $1B9B|!addr
-    rtl
     
 Main:
 STZ $140D|!addr
@@ -122,3 +120,6 @@ WrapSprites:
 	BPL .loop
 	RTS
 
+load:
+    lda #$01 : sta $1B9B|!addr
+    rtl

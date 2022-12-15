@@ -110,6 +110,12 @@ They can all be inserted by simply building or packaging your hack in Lunar Help
 - Blocks are inserted from the **16x16 Tile Map Editor** window (Question block). Scroll down to the respective page and pick as though you were inserting a normal block.
 - To **Insert** new Map16, press the **Import Map16 tiles from file(s)** button (yellow Question block with red arrow, on *16x16 Tile Map Editor*) and select the Map16 file, **make sure to move it to the proper Map16 page you claimed in the spreadsheet page though!!!!**
 
+### Adding Free Scroll Camera (VIP-style camera, if you will)
+
+To add the vertical free scroll camera (VIP-style camera, scrolls up as the protag jumps) to your level, assign the asm file `freescrollbabey.asm` to your level and any sublevels that it may apply to. Should you wish to add more levelASM to said level, feel free to include the code in it, `RTL` excised, in a part of the init label (under `init:`) where it can always be reached by the code's routine.
+
+If you have any trouble please ask on the AAT talkhaus subforum or on the romhack shack discord and I, Koba (lion), will try to reach you <3 (yes homo... maybe)
+
 #### Further Questions?
 
 Please reach us at our Discord server or on Talkhaus.

@@ -154,6 +154,7 @@ C6 vertical_bill_ud.cfg
 C7 falling_fireball_shooter.cfg
 
 D0 gusty_generator.cfg
+D1 no_spin_sfx.cfg
 
 CLUSTER:
 00 cluster_sparkle.asm

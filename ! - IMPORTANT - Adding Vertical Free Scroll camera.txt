@@ -1,0 +1,7 @@
+!Best read with word wrap!
+
+To add the vertical free scroll camera (VIP-style camera, scrolls up as the protag jumps) to your level, assign the asm file "freescrollbabey.asm" to your level and any sublevels that it may apply to. Should you wish to add more levelASM to said level, feel free to include the code in it, RTL excised, in a part of the init label (under "init:") where it can always be reached by the code's routine.
+
+If you have any trouble please ask on the AAT talkhaus subforum* or on the romhack shack discord and I, Koba (lion), will try to reach you <3 (yes homo... maybe)
+
+* - (it's under "A3MT" there, don't want to use that name tho, different expectations come with it)

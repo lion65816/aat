@@ -164,7 +164,7 @@ NameData:
  db "FINAL CHALLENGE    "
  db "Choose 2 and 5     "
  ;Level 10E
- db "  Arial Airships   "
+ db "  Aerial Airships  "
  db "                  *"
  ;Level 10F
  db "     Sui Glide     "

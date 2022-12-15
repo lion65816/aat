@@ -6,6 +6,7 @@ verbose: on
 ; Level list. Valid values: 000-1FF.
 level:
 009	disableflight.asm
+00E     freescrollbabey.asm
 010	lvlfilter.asm
 015	lv15.asm
 01A	PressuredWater.asm
@@ -27,6 +28,8 @@ level:
 0D0	HDMAGradient.asm
 0E0	HDMAGradient.asm
 0F0	F0_scroll.asm
+0F2     freescrollbabey.asm
+0F7     freescrollbabey.asm
 0F8	BG_AutoScroll.asm
 0FE	statusbarremove.asm
 0FF	statusbarremove.asm

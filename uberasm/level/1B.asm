@@ -4,6 +4,8 @@ init:
 	BEQ +		; intro
 	STZ $1692|!addr
 +
+    LDA #$01
+    STA $140B
 	RTL
 
 main:
