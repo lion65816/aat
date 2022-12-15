@@ -76,6 +76,7 @@ EEB:25 instant_death.asm
 1B93:130 4season_msg02.asm
 1D0E:130 weak_break_block.asm
 1D0F:130 donutblk_solid.asm
+2093:130 question_block.asm
 3300:25 BlkMus1.asm
 3301:25 no_yoshi.asm
 60DD:130 StickyBlock.asm

@@ -285,6 +285,7 @@ eeb	0	Block that kills the player (even on yoshi), is passable for sprites and k
 1b93	0	Displays level message 2.
 1d0e	0	weak_break_block.asm
 1d0f	0	A Donut Lift, which will fall shortly after being stepped on.
+2093	0	Spawns sprite $BA.
 3300	0	BlkMus1.asm
 3301	0	A block which destroys (Baby) Yoshi if touched.
 60dd	0	StickyBlock.asm
