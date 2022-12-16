@@ -17,7 +17,6 @@ patches
 	patch\patch\HEX_EDITS.asm
 	patch\patch\deathcounter.asm
 	patch\patch\dcsave.asm
-	patch\patch\bwram_plus.asm
 	patch\patch\PIR.asm
 	patch\patch\100exits.asm
 	patch\patch\auto.asm
@@ -38,7 +37,6 @@ patches
 	patch\patch\slopepassfix.asm
 	patch\patch\yourfatface.asm
 	patch\patch\BounceBlocks\CustBounceBlocks.asm
-	patch\patch\midway\multi_midway_1.7.asm
 	patch\patch\ExtendedLevelNames.asm
 	patch\patch\extendmario.asm
 	patch\patch\remove_statusbar_toggled.asm
@@ -52,7 +50,10 @@ patches
 	patch\patch\flagfreescroll.asm
 	patch\patch\bg.asm
 	patch\patch\InlineLayer3Message.asm
+	patch\patch\tidefix.asm
 ]
+-- patch\patch\bwram_plus.asm
+-- patch\patch\midway\multi_midway_1.7.asm
 
  -- rom paths
 clean = SMW_clean.smc

@@ -46,6 +46,9 @@ else
 endif
 
 init:
+ LDA #$01
+    STA $140B|!addr
+
     stz !FractionBits
     rtl
 

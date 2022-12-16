@@ -1,0 +1,103 @@
+#amk 2
+
+#spc
+{
+	#title "Theatrical Shenanigans"
+	#game "Pizza Tower"
+	#author "Mr. Sauceman"
+	#comment "Ported by Dippy"
+}
+
+#instruments
+{
+	@0 	$FE $E7 $B8 $06 $00		;@30 Soft
+	@14	$AE $26 $B8 $07 $00		;@31 Bass
+	@4  $FF $EA $B8 $03 $00		;@32 Brass
+	@6  $FF $E0 $00 $03 $00		;@33 Sax
+	@0  $FE $E0 $00 $03 $00		;@34 Square
+	@2  $FF $7C $00 $07 $00 	;@35 Triangle (Muted)
+	n1f $FE $F9 $00 $03 $00		;@36 Shaker
+	@0  $BA $AA $00 $06 $00		;@37 Flute
+	@22 $0E $67 $40 $07 $00		;@38 Hi-Hat
+}
+
+$EF$BF$26$26
+$F1$04$35$02
+
+w222 t50 $F4$02
+
+"K=@21 o4 v215 y11 c"
+"S=@29 o3 v215 y09 a"
+
+#0 / l4 ;Percussion
+(6)[KKS.KKK8Sr KKS.KKK8SS]6
+@35 v185 o6 y12 [c8.c4^16c8.c8.c8]15
+c8.c8. S24S24S24 S16S8S8S16S8
+(6)4
+
+#1 / @30 o2 v140 y12 p16,32 ;Bass 
+(990)[r2]6
+f+8.f+2.^16
+@31 o1 y10 v200 y11 l8 p0,0 q4f
+(1)[ [[f+f+ab>c<bae]]6 > f+f+ed+<b>eae<a>d+ef+e2]2
+(990)8 <
+[f+f+abr1f+f+r4f+f+abr1.f+f+abr2f+f+r4f+f+r4f+f+ab>c<br4f+f+r4f+f+r4]2
+(1)
+(990)16
+
+#2 / @30 o2 v135 p16,32
+(990)6
+r4. a+2^8
+@32 o5 v98 y12 p16,32
+(2)[c2..c+1^8c2..e2^8c+2c2..c+1^8c+2..>c+1^8<]2
+(990)8
+(2)4
+
+#3 / @30 o3 v135 y08 p16,32
+(990)6
+r2^16 c+4..
+@32 o4 v98 y10 p16,32
+(3)[ [[a2..a1^8]]3 a2..g+1^8]2
+(990)8
+(3)4
+
+#4 / @30 o3 v135 y10 p16,32
+(990)6
+r2. f+4
+@32 y07 v98 p16,32
+(4)[f+2..e1^8]8
+(990)8
+(4)16
+
+#5 / @33 o4 v135 y09 l8 p12,32 ;Lead
+(990)24
+(7)[f+f+abrab>cr1<f+f+abrab>c+r1<
+f+f+abrab>cr1<f+erd+rardref+rer4.]
+@34 o5 [ [[c+16r16c16r16]]3<f+16r16>e]4
+@12 o4 p0,0 v160 (5)[cffc16cffc16c]8
+@33 v145 
+[q5ff+q5af+q5fabq5ab>q7fc+q5ac+q57c+<q5ff+q5af+q5fabq5ab
+q5faq5aaq57aq5ff+q5af+q5fabq5ab>q7fc+q5ac+q57c+<q7ff+ab>c+<b>c+<af+]2
+q7f 
+(7)
+(990)16
+
+#6 / @38 o4 l16 y09 ;Hi-Hats 
+(990)8
+(8)[v190cv150cv100cv150c]64
+(990)8
+@36 [ [[v80cv60cv40cv60c]]2 [[v80cv60cv40c]]2 v80cv60c]16
+@38 (8)32
+(990)16
+
+#7 / @33 o4 v70 y11,0,1 l8 p12,32 $EE$0A ;Lead Echo
+(990)24
+r.
+f+f+abrab>cr1<f+f+abrab>c+r1<
+f+f+abrab>cr1<f+erd+rardref+rer4.
+@34 o5 [ [[c+16r16c16r16]]3<f+16r16>e]4
+(990)14 r2.^16
+@12 o4 v160 p0,0 $EE$00 y09 (5)8
+@37 o3 p16,16,32 y11
+f+1g+1b8.>c+4^16e4.e l16 d+rc+r<barg+rar>c+rf+g+1a2b2g+2f+1.^8
+(990)16

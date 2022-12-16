@@ -3,9 +3,9 @@
 03 mad_thwomp.cfg
 04 catnip.json
 05 ColorYoshi.json
-08 BoomerangBro.json
 06 fast_grinder.cfg
 07 BowserStatue.json
+08 BoomerangBro.json
 09 HammerBro.json
 0A IceBro.json
 0B FireBro.json
@@ -83,8 +83,10 @@
 54 homing_horizontal_thwomp.json
 55 thwomp_homing.cfg
 56 barrel.cfg
+58 bouncy_floating.json
 59 donut_lift_solid.json
 5A HammerBro2.json
+5B TimedOnOff.json
 5C venus_chuckthrow.cfg
 5D venus_koopathrow.cfg
 5E venus_mushthrow.cfg

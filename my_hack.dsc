@@ -20,8 +20,6 @@
 213	0	A right conveyor block.
 21d	0	A switch block that turns walkthrough if the on off switch is On, else it is solid.
 21e	0	A switchblock that turns solid if the on off switch is On, else it is walkthrough.
-220	0	MultiMidwayBlock1.asm
-221	0	MultiMidwayBlock2.asm
 222	0	A Donut Lift, which will fall shortly after being stepped on.
 300	0	SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_L.asm
 301	0	SSP_Tiles/caps/enterable/default/top_vertical_pipe_cap_R.asm

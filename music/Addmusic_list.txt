@@ -56,6 +56,7 @@ Locals:
 38  cog is push.txt
 39  mustnotlose.txt
 3A  Stilt Village.txt
+3B  Pizza Tower - Theatrical Shenanigans.txt
 3D  Return Of The Gohei.txt
 3E  remixhills.txt
 3F  At DooM's Gate.txt

@@ -22,8 +22,6 @@
 213:25 rightconveyor.asm
 21D:25 onwalkthrough.asm
 21E:25 onsolid.asm
-220:25 MultiMidwayBlock1.asm
-221:25 MultiMidwayBlock2.asm
 222:100 donutblk.asm
 560:25 boostdown.asm
 561:25 boostup.asm
