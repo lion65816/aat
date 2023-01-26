@@ -50,7 +50,6 @@ patches
 	patch\patch\flagfreescroll.asm
 	patch\patch\bg.asm
 	patch\patch\InlineLayer3Message.asm
-	patch\patch\tidefix.asm
 ]
 -- patch\patch\bwram_plus.asm
 -- patch\patch\midway\multi_midway_1.7.asm
@@ -62,10 +61,14 @@ temp = temp.smc
 package = my_hack_bps.bps
 
 -- tools
+lunar_monitor_loader_path = lm333\LunarMonitorLoader.exe
 asar_path = patch\asar.exe
-lm_path = lm331\Lunar Magic.exe
+lm_path = lm333\Lunar Magic.exe
 gps_path = block\gps.exe
 pixi_path = sprite\pixi.exe
+pixi_options = -l sprite\list.txt  -- NOTE: PIXI resolves the list path relative to the temporary ROM
+                                   --       so you may need to fiddle with this a bit if your 
+                                   --       temporary ROM is not in the project's root folder
 addmusick_path = music\AddMusicK.exe
 uberasm_path = uberasm\UberASMTool.exe
 flips_path = other-tools\flips\flips.exe
@@ -76,14 +79,36 @@ levels = Levels
 shared_palette = resource\shared.pal
 map16 = resource\temp\all.map16
 human_readable_map16_directory_path = resource\map16
+global_data = resource\global_data.bps
 
 -- global_data is a BPS patch file, to be created by Lunar Helper, 
 -- that will hold the overworld, ex global animations, credits, intro screen, and title moves.
 -- You will work on these things from the built output ROM in Lunar Magic, 
 -- then use the "S - Save" option in Lunar Helper to save your changes to this BPS file so that they appear in your next build.
-global_data = resource\global_data.bps
+-- title_moves = Other/title_moves.zst
 
--- test_level is a 3-digit hex value specifying the level number of a level that will be copied to the 3-digit level number
--- specified by test_level_dest *only* when Lunar Helper's "T - Test" option is run
-test_level = 0A7
-test_level_dest = 105
+build_order
+[
+    Graphics                -- Insert standard GFX
+    ExGraphics              -- Insert ExGFX
+    Map16                   -- Insert Map16
+
+--  TitleMoves              -- Uncomment this if you're inserting title moves
+
+    SharedPalettes          -- Insert Shared Palettes 
+    GlobalData              -- Insert Overworld, Title Screen and Credits 
+
+    Patches                 -- Insert all remaining patches from the patches list that 
+                            -- are not explicitly mentioned in this build order
+
+    PIXI                    -- Insert custom sprites
+    Levels                  -- Insert all levels
+
+    PIXI                    -- Uncomment this if you're using Lunar Magic 3.31 or higher
+
+    AddMusicK               -- Insert custom music
+    GPS                     -- Insert custom blocks
+    UberASM                 -- Insert UberASM code
+
+--  Patches/some_patch.asm  -- Example of inserting a specific patch at a different time
+]

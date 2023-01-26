@@ -1,6 +1,7 @@
 -- working directory (all paths are relative to this one)
 dir = C:\Users\user\aat
 
--- emulator and testing
-retroarch_path = C:\Users\user\AppData\Roaming\RetroArch\retroarch.exe
-retroarch_core = C:\Users\user\AppData\Roaming\RetroArch\cores\snes9x_libretro.dll
+-- emulator and testing (by default uses the lunar magic emulator, if possible)
+emulator_path = C:\Users\user\AppData\Roaming\RetroArch\retroarch.exe
+emulator_options = C:\Users\user\AppData\Roaming\RetroArch\cores\snes9x_libretro.dll (seems to be mostly for libretro cores)
+reload_emulator_after_build = yes

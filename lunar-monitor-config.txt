@@ -1,5 +1,4 @@
 level_directory: "Levels"
-mwl_file_format: "level #.mwl"
 flips_path: "other-tools\flips\flips.exe"
 map16_path: "resource\temp\all.map16"
 human_readable_map16_cli_path: other-tools\human-readable-map16-cli\human-readable-map16-cli.exe
@@ -7,5 +6,6 @@ human_readable_map16_directory_path: resource\map16
 clean_rom_path: "SMW_clean.smc"
 global_data_path: "resource\global_data.bps"
 shared_palettes_path: "resource\shared.pal"
+
 log_level: Log
 log_path: "lunar-monitor-log.txt"
