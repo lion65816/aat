@@ -1,4 +1,5 @@
-#tempoimmunity
+#option TempoImmunity
+#option NoLoop
 
     ?0   ;Won't loop
 

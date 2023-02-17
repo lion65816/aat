@@ -249,11 +249,15 @@ da1	0	A block that will act like tile 25 for sprites
 e70	0	Sprites touching this block will die.
 e71	0	Sprites touching this block will die.
 ec0	0	Solid if anything goes left
+ecf	0	SSP_Tiles/pass_if_in_pipe.asm
 ed0	0	Solid if anything goes left
 ed1	0	Solid if anything goes right
+edf	0	SSP_Tiles/pass_if_in_pipe.asm
 ee0	0	Solid if anything goes up
 ee1	0	Solid if anything goes down
 eeb	0	Block that kills the player (even on yoshi), is passable for sprites and kills on wall running.
+eef	0	SSP_Tiles/pass_if_in_pipe.asm
+eff	0	SSP_Tiles/pass_if_in_pipe.asm
 117d	0	A Donut Lift, which will fall shortly after being stepped on.
 11d7	0	A block that bounces sprites and mario! Doesn't bounce mario when ON.
 11d8	0	A block that bounces sprites and mario! Doesn't bounce mario when OFF.

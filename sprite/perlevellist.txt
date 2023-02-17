@@ -1,0 +1,230 @@
+00 ClassicGoomba.json
+01 piranha_venus.json
+03 
+05 
+06 fast_grinder.cfg
+07 BowserStatue.json
+08 BoomerangBro.json
+09 HammerBro.json
+0A IceBro.json
+0B FireBro.json
+0C SledgeBro.json
+0E buster_block.cfg
+0F giant_goomba.json
+10 giant_parakoopa.json
+11 giant_piranha_green.json
+12 giant_piranha_red.json
+13 giant_piranha_sideways_green.json
+14 giant_piranha_sideways_red.json
+15 giant_spiny.json
+16 giant_green_koopa.json
+17 giant_red_koopa.json
+18 giant_blue_koopa.json
+19 giant_yellow_koopa.json
+1A lava_lotus_smb3.json
+1B 
+1C para_beetle.json
+1D piledriver.json
+1E ptooie.json
+1F rocky.json
+20 spike_green.json
+21 spike_red.json
+22 spike_blue.json
+23 spike_yellow.json
+24 spikes_ball.json
+25 stretch.json
+26 missile_bill_horz.json
+27 missile_bill_vert.json
+28 hotfoot.json
+29 fire_snake_athletic.json
+2A DirectionalPlatform.json
+2B DirectionalPlatform2.json
+2C DirectionalPlatform3.json
+2D chainchomp.json
+2E burnerh.json
+2F burnerv.json
+30 BossBass.json
+31 AngrySun-SMM2.json
+32 bomb_bro.json
+33 shell_bro.json
+34 propeller_block.json
+35 thwomp_left.json
+36 thwomp_right.json
+37 thwomp_up.json
+38 rotating-gray-platform-pendulum.json
+39 phanto.json
+3A pendu_disc_good.json
+3B 
+3C gusty.json
+3D goonie.json
+3E bvz_needlenose.json
+3F green_needlenose.json
+40 baron_von_zeppelin.json
+41 birdo_smb2.json
+42 carryable_egg.json
+43 
+44 
+45 egg_plant.json
+46 rideable_balloon.json
+47 bumpty.json
+48 blooper.json
+49 FireBar_Shiftable.json
+4A bullet_bill.json
+4B donut_lift.json
+4C SMW_Hammer_Bro.json
+4D babyyoshi.json
+4F 
+52 
+53 
+54 
+55 
+56 
+58 
+59 donut_lift_solid.json
+5A HammerBro2.json
+5B TimedOnOff.json
+5C venus_chuckthrow.cfg
+5D venus_koopathrow.cfg
+5E venus_mushthrow.cfg
+5F venus_shower.cfg
+60 venus_spreadshot.cfg
+61 numbered_platform.json
+62 numbered_platform_2.json
+63 numbered_platform 3.json
+64 numbered_platform 4.json
+65 grey_plat_fast.cfg
+66 grey_plat_slow.cfg
+67 piranha_venus sfx.cfg
+68 ngrinder.cfg
+69 venus_grindthrow.cfg
+6A shooter.json
+6C venus_ninjithrow.cfg
+6D Wiggler_86_4.cfg
+6E 
+6F level_ender.cfg
+70 SeaPokey.cfg
+71 reverse_donut.json
+72 bouncing_spiny_egg.json
+73 Flyin_Disco_Shell.cfg
+74 POW_dis.json
+75 XYFollowSprite.json
+76 RotatingVine.cfg
+77 flowerspawn.json
+79 
+7A chasing_ninji.cfg
+7C shy_bird.cfg
+7D MultiBounceShellBlue.json
+7E MultiBounceShellGreen.json
+7F MultiBounceShellRed.json
+80 BooBlah.cfg
+81 Blargg2.cfg
+82 Thwomp2.cfg
+83 MosaicThwimp.cfg
+84 Ninji2.cfg
+85 Kun.json
+8A fire_snake.json
+8B falling_fireball.cfg
+8C clusterspawn.json
+8D superfast_spiny.cfg
+8E ParaSpiny.cfg
+8F 
+90 banzai_bill_invincible.json
+91 AngrySun101.json
+92 volcano_lotus101.json
+97 panser_green.cfg
+98 panser_blue.cfg
+9B VenusVerticalShortSpitTwo.cfg
+B2 silius_shooter.json
+B3 projectile.json
+B7 climbing_net_door.json
+B8 InfoBox.cfg
+B9 baba_block.cfg
+BA Balloon_dis.json
+BB Carryable_Football.cfg
+
+001:B0 catnip.json
+025:B0 catnip.json
+026:B0 catnip.json
+027:B0 catnip.json
+028:B0 catnip.json
+029:B0 catnip.json
+
+003:B0 buster.json
+
+009:B0 piranha_venus.json
+
+02A:B0 thwomp_up_large_range.cfg
+02B:B0 thwomp_up_large_range.cfg
+02B:B1 thwomp_up_small_range.cfg
+02C:B0 homing_horizontal_thwomp.json
+02D:B0 thwomp_homing_scroll.cfg
+052:B0 homing_horizontal_thwomp.json
+052:B1 thwomp_homing.cfg
+
+010:B0 upside_ninji.json
+010:B1 volcano_lotus.json
+
+015:B0 barrel.cfg
+015:B1 BlueParakoopa.json
+
+01A:B0 lotus_down.json
+053:B0 lotus_down.json
+054:B0 lotus_down.json
+055:B0 lotus_down.json
+
+023:B0 ChasinRex.cfg
+
+024:B0 nipper_smb3.json
+
+042:B0 bouncy_floating.json
+04D:B0 bouncy_floating.json
+05C:B0 bouncy_floating.json
+
+071:B0 piranha_venus.json
+072:B0 piranha_venus.json
+073:B0 piranha_venus.json
+
+080:B0 ghost-shell.json
+080:B1 mad_thwomp.cfg
+080:B2 Disco_shell.json
+080:B3 ball-n-chain-pendulum.json
+080:B4 thwomp_up.json
+080:B5 FireBar_Shiftable.json
+080:B6 catnip.json
+080:B7 ColorYoshi.json
+
+08B:B0 9B
+08B:B1 30
+08B:B2 piranha_venus.json
+
+090:B0 venus_ninjithrow.cfg
+090:B1 Wiggler_86_4.cfg
+
+C0 balloon_shooter.cfg
+C1 lasershooter.cfg
+C2 missile_bill_shooter.cfg
+C3 missile_bill_shooter_v.cfg
+C4 diag_bill_up.cfg
+C5 diag_bill_down.cfg
+C6 vertical_bill_ud.cfg
+C7 falling_fireball_shooter.cfg
+CA sideways_bill_lr.cfg
+
+D0 gusty_generator.cfg
+D1 no_spin_sfx.cfg
+
+CLUSTER:
+00 cluster_sparkle.asm
+01 laser.asm
+02 BowserFire.asm
+10 bullet.asm
+11 flowers.asm
+12 sandstorm.asm
+
+EXTENDED:
+00 boomerang.asm
+01 fireball.asm
+02 hammer.asm
+03 iceball.asm
+04 volcano_lotus_pollen.asm
+05 volcano_lotus_pollen101.asm

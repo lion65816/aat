@@ -50,6 +50,8 @@ patches
 	patch\patch\flagfreescroll.asm
 	patch\patch\bg.asm
 	patch\patch\InlineLayer3Message.asm
+  	patch\patch\luigi.asm
+	patch\patch\FixFeather.asm
 ]
 -- patch\patch\bwram_plus.asm
 -- patch\patch\midway\multi_midway_1.7.asm
@@ -66,9 +68,9 @@ asar_path = patch\asar.exe
 lm_path = lm333\Lunar Magic.exe
 gps_path = block\gps.exe
 pixi_path = sprite\pixi.exe
-pixi_options = -l sprite\list.txt  -- NOTE: PIXI resolves the list path relative to the temporary ROM
-                                   --       so you may need to fiddle with this a bit if your 
-                                   --       temporary ROM is not in the project's root folder
+pixi_options = -pl -l sprite\list.txt  -- NOTE: PIXI resolves the list path relative to the temporary ROM
+                                       --       so you may need to fiddle with this a bit if your 
+                                       --       temporary ROM is not in the project's root folder
 addmusick_path = music\AddMusicK.exe
 uberasm_path = uberasm\UberASMTool.exe
 flips_path = other-tools\flips\flips.exe

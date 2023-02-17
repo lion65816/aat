@@ -1,0 +1,30 @@
+[skip=END]
+
+[topic]- ASM Code -[/topic]
+[sprite=2](78,21,00,00,big)(78,31,02,00,big)[/sprite]
+It's totally possible to run custom ASM code in your scripts.[wait][br][sfx 1DF9=A]
+[asm=once]LDA #$01
+STA $19
+RTL[/asm]
+See?[wait] We just made Mario big with the following code:[pad left=16][font color=3][br]
+LDA #$01[br]
+STA $19[br]
+RTL[wait][/font color][pad left=8][erase]
+
+The previous code was executed exactly [font color=2]once[/font color], but what if you want to run code [font color=3]every frame[/font color]?[wait][br]
+Well...[asm=always]INC $19 : RTL[/asm] It's totally possible :P[wait][br]
+In this case we're incrementing $19 every single frame, in other words, it's INCio.[wait][br]
+We can make it stop too.[asm=stop][wait][erase][sprite=erase]
+[asm=once]STZ $19
+LDA #$26
+STA $13E0
+RTL[/asm]
+
+[sfx 1DF9=5]
+[sprite=2](78,21,00,00,big)(78,31,02,00,big)[/sprite]
+There's not much else I can show you about this, pretty much anything is possible with this command.[wait]
+I bet this will open even [font color=3]more possibilities[/font color] for dynamic cutscenes.[br]
+- lx5[wait][sfx 1DF9=5]
+
+[label=END]
+[end=exit]

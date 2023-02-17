@@ -1,0 +1,56 @@
+[skip=END]
+
+//ON/OFF Switch
+
+[label=Reset]
+[topic]- Check ON/OFF switch -[/topic]
+[compare=4014AF,equal,00,TrueLabel,FalseLabel]
+[label=TrueLabel]
+ON/OFF switch status is [font color=2]ON[/font color][wait][br]
+[jump=SkipCheck]
+
+[label=FalseLabel]
+ON/OFF switch status is [font color=2]OFF[/font color][wait][br]
+
+[label=SkipCheck]
+[erase][wait=16]Done![wait]
+[sfx 1DFC=29][erase][topic][/topic]
+
+
+Do you want to repeat the ON/OFF switch status test?[wait]
+[pad left=16][br]
+Yes.[br]
+Yes, but keep switch to ON.[br]
+Yes, but keep switch to OFF.[br]
+Yes, but toggle the switch status.[br]
+No, end the test.
+[pad left=8]
+[branch=Repeat,SwitchON,SwitchOFF,SwitchToggle,Finish]
+[label=Repeat]
+[sfx 1DFC=29][erase][jump=Reset]
+
+[label=SwitchON]
+[switch=on][sfx 1DF9=0B]
+Forced ON/OFF switch status to [font color=2]ON[/font color]
+[wait][erase][jump=Reset]
+
+[label=SwitchOFF]
+[switch=off][sfx 1DF9=0B]
+Forced ON/OFF switch status to [font color=2]OFF[/font color]
+[wait][erase][jump=Reset]
+
+[label=SwitchToggle]
+[switch=toggle][sfx 1DF9=0B]
+[font color=2]Toggled[/font color] ON/OFF switch status.
+[wait][erase][jump=Reset]
+
+[label=Finish]
+[sfx 1DF9=5][erase]
+This concludes the ON/OFF switch test! Thanks for testing[wait][br][br]
+[wait=24].[sfx 1DF9=13][wait=24].[sfx 1DF9=13][wait=24].[sfx 1DF9=13][wait=24][br][br]
+Oh, right. You can play SFXs whenever you want too.[wait][br]
+The ON/OFF switch status test was made with a new command to compare values, it's quite useful.[wait][erase]
+Now this is the [font color=2]REAL[/font color] end of the test, I hope you look forward to these changes![br][br]
+- lx5[wait][sfx 1DFC=5]
+
+[label=END][end=exit]

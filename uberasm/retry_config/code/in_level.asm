@@ -129,9 +129,15 @@ endif
 
     ; See what retry we have to use.
     jsr shared_get_prompt_type
+    cmp #$05 : beq ..check_select ; PSI Ninja edit: Special case for Level 1D0.
     cmp #$03 : bcc ..prompt
                beq ..instant
     rtl
+
+; PSI Ninja edit: For Level 1D0, show the prompt when the player presses select.
+; Note: May need to protect this FreeRAM address?
+..check_select:
+    lda $18CC|!addr : bne ..prompt : rtl
 
 ..prompt:
     ; If Mario is not dying because of selecting "Exit", skip.

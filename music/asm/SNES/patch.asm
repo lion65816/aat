@@ -124,10 +124,19 @@ db $00, $00, $00, $00		;
 
 MainLabel:
 	STZ $10
+	
+	JSL moved_main
+
+	JML $00806B		; Return.  TODO: Detect if the ROM is using the Wait Replace patch.
+
+moved_main:
+	PHY
+	PHX
 	PHP
 	PHB
 	PHK
 	PLB
+	SEP #$30
 	JSR HandleSpecialSongs
 	REP #$20
 	LDA !SFX1DF9Reg
@@ -154,6 +163,9 @@ End:
 	CLI
 	PLB
 	PLP
+	PLX
+	PLY
+	RTL
 
 
 	JML $00806B		; Return.  TODO: Detect if the ROM is using the Wait Replace patch.

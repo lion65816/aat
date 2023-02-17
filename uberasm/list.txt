@@ -5,6 +5,7 @@ verbose: on
 
 ; Level list. Valid values: 000-1FF.
 level:
+000     bonusmusicrng.asm
 009	disableflight.asm
 00E     freescrollbabey.asm
 010	lvlfilter.asm
@@ -34,6 +35,7 @@ level:
 0F8	BG_AutoScroll.asm
 0FE	statusbarremove.asm
 0FF	statusbarremove.asm
+100     bonusmusicrng.asm
 102	statusbarremove.asm
 10E	BG_AutoScroll.asm
 110	Gradient110.asm
@@ -64,7 +66,6 @@ level:
 1D3	BabaBlocks_RetryButton.asm
 1D4	BabaBlocks_RetryButton.asm
 1D5	BabaBlocks_RetryButton.asm
-1D6	DeathWarp_1D6.asm
 1D7	BabaBlocks_RetryButton.asm
 
 ; OW list. Valid values: 0 = Main map; 1 = Yoshi's Island; 2 = Vanilla Dome;

@@ -1,0 +1,38 @@
+#am4
+
+#option TempoImmunity
+#option NoLoop
+
+?0	;won't loop
+
+#0
+y1 (1)[
+r=48 @6
+o2 $ED$4C$3B v255 b+=24 $ED$4A$1B v235 d=24 c=12 $ED$5A$82 g=192]
+
+#1
+$F0 @3  y10 q6F o5
+e=4 d=4 e=4 r=36
+t52 @4 q6E
+o2 t45 $ED$4C$3B v120 b+=24 t40 $ED$4A$1B d=24 t36 v230 c=12 t30 $ED$1A$42 v150 g=192
+
+#2
+y19 (1)
+
+#3
+y10 q6E v255 r=96 r=12
+r=38
+o4 @6 $ED$4C$A8 $EB$42$42$FB d=132
+r1
+
+#4
+y10 q6E v255 r=96 r=12
+r=40
+o4 @6 $ED$4C$A8 $EB$32$4E$FD c=130
+r1
+
+#5
+y10 q6E v255 r=96 r=12
+r=42
+o4 @6 $ED$4C$A8 $EB$46$3C$F9 e=128
+r1

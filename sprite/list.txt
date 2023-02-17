@@ -154,6 +154,7 @@ C4 diag_bill_up.cfg
 C5 diag_bill_down.cfg
 C6 vertical_bill_ud.cfg
 C7 falling_fireball_shooter.cfg
+CA sideways_bill_lr.cfg
 
 D0 gusty_generator.cfg
 D1 no_spin_sfx.cfg

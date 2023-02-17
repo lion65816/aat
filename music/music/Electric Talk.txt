@@ -1,0 +1,409 @@
+;Insert size: 0x0d65 (3429) bytes
+;Length: 2:41.
+
+#amk 2
+#path "Electric Talk"
+#spc
+{
+	#title "Electric Talk"
+	#game "Seiken Densetsu 3"
+	#author "Hiroki Kikuta"
+	#comment "Pan LFO when"
+}
+
+
+#samples
+{
+	"../optimized/00 SMW @0.brr"
+	"../optimized/01 SMW @1.brr"
+	"../optimized/02 SMW @2.brr"
+	"../optimized/03 SMW @3.brr"
+	"../optimized/04 SMW @4.brr"
+	"../optimized/05 SMW @8.brr"
+	"../optimized/06 SMW @22.brr"
+	"../optimized/07 SMW @5.brr"
+	"../optimized/08 SMW @6.brr"
+	"../optimized/09 SMW @7.brr"
+	"../optimized/0A SMW @9.brr"
+	"../optimized/0B SMW @10.brr"
+	"../optimized/0C SMW @13.brr"
+	"../EMPTY.brr"
+	"../optimized/0E SMW @29.brr"
+	"../EMPTY.brr"
+	"../EMPTY.brr"
+	"../EMPTY.brr"
+	"../optimized/12 SMW @15.brr"
+	"../EMPTY.brr"
+"March Snare.brr"
+"Piano.brr"
+"Ahh Choir.brr"
+"Kick.brr"
+"Picked Bass.brr"
+"Low Strings.brr"
+"Tremolo Strings.brr"
+}
+
+
+#instruments
+{
+"March Snare.brr" $ff $f4 $b8 $07 $a8
+"Piano.brr" $ff $ef $b8 $04 $8c
+"Ahh Choir.brr" $fc $ea $b8 $04 $89
+"Kick.brr" $ff $e0 $b8 $04 $8d
+"Picked Bass.brr" $ff $eb $b8 $08 $3e
+"Low Strings.brr" $ff $e7 $b8 $04 $8c
+"Tremolo Strings.brr" $fc $e8 $b8 $04 $8c
+}
+
+
+"Sn=@30"
+"Ki=@33"
+
+"Pia=@31"
+"Ahh=@32"
+"Bas=@34"
+"LSt=@35"
+"Str=@36"
+
+
+#0 $f4 $02 t53
+
+$ef $3e $47 $47 
+$f1 $05 $38 $01 
+$f5 $20 $0c $10 $0c $20 $0c $0c $0c
+
+;NESTED LOOPS WHEEEEEEEEEEEEEEEEEEEEN ASDFASDFASDFASDFASDFASDFASDF
+
+Sn
+o4 v59 c32 v66 c32 v84 c32 v97 c32 v110 c32 v123 c32 v131 c32 v143 c32 
+(1)[v149 c32 v159 c32 v170 c32 v177 c32 v186 c32 v196 c32 v204 c32 v214 c32]/
+v254
+[[
+(2)[$dc $60 $06 q7f c32 q7c c32 q7a c32 q77 c32 q7f c16 q78 c16
+q77 c16 q75 c16 q7f c16 q78 c16
+$dc $60 $0e q7a c16 q7f c16 q77 c16 q75 c16] (3)[q7f c16 q7c c16 q78 c16 q75 c16]
+(2) (4)[q7f c16 q7c c16 q7b c24 q78 c24 q77 c24]
+(2) (3)
+(2) (5)[q2f c8 q7b c24 q78 c24 q77 c24]
+(2) (3)
+(2) (4)
+(2) (3)
+(2) (4)
+(2) (3)
+(2) (4)
+(2) (3)
+(2) (5)
+(2) (3)
+(2) (4)
+(2) (3)
+$dc $60 $06 q7f c32 q7c c32 q7a c32 q77 c32 q7f c16 q78 c16
+q77 c16 q75 c16 q7f c16 q78 c16
+$dc $60 $0e q7a c16 q7f c16 q7e c16 q75 c16 (6)[q7f c24 q7b c24 q7a c24 q78 c24 q7b c24 q7e c24]
+(2) (3)
+(2) (4)
+(2) (3)
+(2) (5)
+(2) (3)
+(2) (4)
+(2) (3)
+(2) q7f c24 q7c c24 q7a c24 q77 c24 q73 c24 q72 c24
+(2) (3)
+(2) (4)
+(2) (3)
+(7)[$dc $60 $06 q7f c32 q7c c32 q7a c32 q77 c32 q7f c16 q78 c16
+q77 c16 q75 c16 q7f c16 q7d c16
+$dc $60 $0e q7b c16 q79 c16 q77 c16 q74 c16
+q73 c16 q72 c16c16c16]
+(2) (3)
+(2) (4)
+(2) (3)
+(7)
+]]2
+y12 v226
+[[ q79 c16 q78 c16 [q7f c16 q78 c16 q76 c16 q75 c16 q7f c16 q78 c16 q79 c16 q7f c16 q76 c16 q75 c16] 
+q7f c16 q7c c16 q78 c16 q75 c16
+q78 c16c16 * q7f c16 q7c c16 c24 q7b c24 q78 c24]]8
+[[ (8)[q7f c16 q76 c16c16c16c16c16c16c16]2
+(9)[q7f c16 q76 c16c16c16c16 q7f c16 q76 c16c16] (8)]]3
+(8)2
+(9) q7f c16 q76 c16c16c16
+(1)
+
+
+
+#1
+r2 /
+r8
+Pia y7 v173 q7e
+o4
+[a4b4a8g+4.]8
+$fa $02 $01 *8 $fa $02 $00
+*7
+a4b4a8g+4
+
+Ahh q7f
+(11)[e1.
+[[e32r32e32r8^32]]2
+e1.
+r2]2
+r8
+
+Pia
+(12)[q7e a16 q7b a16 q79 a16 q76 a16 q7e b16 q7b b16 q79 b16 q76 b16 
+q7e a16 q7b a16 q7e g+16 q7b g+16 q79 g+16 q76 g+16
+q73 g+16 q72 g+16]8
+$fa $02 $01 (12)8 $fa $02 $00
+(12)7
+q7e a16 q7b a16 q79 a16 q76 a16 q7e b16 q7b b16 q79 b16 q76 b16
+q7e a16 q7b a16 q7e g+16 q7b g+16 q79 g+16 q76 g+16
+
+Ahh
+(11)2
+
+Ki $f4 $03 y8 v211
+[[
+q79 a16 q78 a16 [q7f a16 q78 a16 q77 a16 q75 a16 q7f a16 q78 a16 q79 a16 
+q7f a16 q77 a16 q75 a16 q7f a16 q7c a16] q78 a16 q75 a16
+q78 a16a16 * q7b a24 q78 a24 q77 a24
+]]8
+q7f 
+[[ [f8r4.f8r4.
+f8r8.f8r16f8] r4.]]3
+* r8f8... $f4 $03 r64
+
+
+
+#2
+r2 /
+Pia y9 v183
+(20)[o4b4>d2e4
+<b4>d2e8<b8
+b4>d2e4
+<b4>d4.e8c+4]2
+[[ [<c4.<f8>g4d8<a+8
+>c4.<f8>g4] <d+8a+8
+* f8a+8]]2
+(20)2
+
+Ahh v189
+$fa $02 $fb (11)2 $fa $02 $00
+
+Pia v183
+[[o4 (21)[q7f b16 q7c b16 q79 b16 q77 b16> q7f d16 q7c d16 q79 d16 q77 d16 q73 d16 q72 d16 q71 d16d16
+q7f e16 q7c e16] q79 e16 q77 e16
+(21) q7f <b16 q7c b16
+(21) q79 >e16 q77 e16
+q7f <b16 q7c b16 q79 b16 q77 b16
+q7f >d16 q7c d16 q79 d16 q77 d16 q73 d16 q72 d16
+q7f e16 q7c e16 q7f c+16 q7c c+16 q77 c+16 q73 c+16]]2
+[[ [ q7f <c16 q7c c16 q79 c16 q77 c16 q73 c16 q72 c16
+q7f <f16 q7c f16> q7f g16 q7c g16 q79 g16 q77 g16] q7f d16 q7c d16 q7f <a+16 q7c a+16
+* q7f d+16 q7c d+16 q7f a+16 q7c a+16
+* q7f >d16 q7c d16 q7f <a+16 q7c a+16
+* q7f f16 q7c f16 q7f a+16 q7c a+16]]2
+[[(21) q79 o5e16 q77 e16
+(21) q7f <b16 q7c b16]]4
+
+Ahh v189
+$fa $02 $fb (11)2 $fa $02 $00
+
+Pia v183 q7f
+(22)[f+16g16>c+16d16f+16d16e16f+16g16d16e16g16f+16d16c+16<a16]
+(23)[f+16g16>c+16d16f+16d16e16f+16g16d16e16g16f+32g32f+32d32c+16<a16]
+(22)
+(24)[f+16g16>c+16d16f+16d16e16f+16g16d16e16g16f+24d24c+24<g24a24b24]
+(25)[g16g+16>d16d+16g16d+16f16g16g+16d+16f16g+16g16d+16d16<a+16]
+(26)[g16g+16>d16d+16g16d+16f16g16g+16d+16f16g+16g32g+32g32d+32d16<a+16]
+(25)
+(27)[g16g+16>d16d+16g16d+16f16g16g+16d+16f16g+16g24d+24d24<a+24a24] g24
+(22)
+(23)
+(22)
+(24)
+(25)
+(26)
+(25)
+(27) f24
+[[
+[<e24a24b24>d24<a24b24>d24e24a24b24e24g24a24b24>d24e24<a24b24>d24e24a24g24f+24d24
+<a24b24>e24d24c+24<a24e24f+24b24a24g+24e24c+24d24f+24d24c+24<a24] g+24a24>c+24<a24g+24d24
+]]3
+* e16r8.
+
+
+
+#3
+r2 /
+Pia y11 v183
+[[o3
+(30)[b4.e8>f+4c+8<a8
+b4.e8>f+4<d8a8
+b4.e8>f+4c+8<a8
+b4.e8>f+4] <e8a8 ]]2
+>
+[[ [f4.d+2d+8
+f4.] d+4.d8d+8
+* d+4<d+8>d8d+8]]2
+(30) o3e8a8
+(30) e4
+
+Bas v167 $f4 $03
+[[ (33)[o4e8 q2f e16e16e16e16 q7f e8 q2f e16e16 q7f e8 q2f e16e16e16e16
+q7f e8 q2f e16e16e16e16 q7f e8] (34)[q2f e16e16r8e16e16r8]
+(33) r2]]2
+
+Pia v183 $f4 $03
+o3[[
+(35)[q7f b16 q7c b16 q79 b16 q77 b16 q74 b16 q72 b16
+q7f e16 q7c e16 q7f >f+16 q7c f+16 q79 f+16 q77 f+16 q7f c+16 q7c c+16 q7f <a16 q7c a16]
+(36)[q7f b16 q7c b16 q79 b16 q77 b16 q74 b16 q72 b16
+q7f e16 q7c e16 q7f >f+16 q7c f+16 q79 f+16 q77 f+16 q7f <d16 q7c d16 q7f a16 q7c a16]
+(35)
+(37)[q7f b16 q7c b16 q79 b16 q77 b16 q74 b16 q72 b16
+q7f e16 q7c e16 q7f >f+16 q7c f+16 q79 f+16 q77 f+16 q7f <e16 q7c e16] q7f a16 q7c a16
+]]2
+[[>[ q7f f16 q7c f16 q79 f16 q77 f16 q74 f16 q72 f16
+q7f d+16 q7c d+16 q79 d+16 q77 d+16 q74 d+16 q72 d+16 q71 d+16d+16 q7f d+16 q7c d+16
+q7f f16 q7c f16 q79 f16 q77 f16 q74 f16 q72 f16
+q7f d+16 q7c d+16 q79 d+16 q77 d+16] q74 d+16 q72 d+16 q7f d16 q7c d16 q7f d+16 q7c d+16
+* q7f <d+16 q7c d+16> q7f d16 q7c d16 q7f d+16 q7c d+16]]2
+(35)
+(36)
+(35)
+(37) q7f <a16 q7c a16
+(35)
+(36)
+(35)
+(37) q79 e16 q77 e16
+
+Bas v167 $f4 $03 q7f
+[[ (33) (34)
+(33) r2]]2
+
+Pia v183 $f4 $03
+o4(38)[d16e16a16b16>d16<b16>c+16d16e16<b16>c+16e16d16<b16a16f+16]3
+(39)[d16e16a16b16>d16<b16>c+16d16e16<b16>c+16e16d24<b24a24e24f+24g24]
+(310)[d+16f16a+16>c16d+16c16d16d+16f16c16d16f16d+16c16<a+16g16]3
+(311)[d+16f16a+16>c16d+16c16d16d+16f16c16d16f16d+24c24<a+24g24f24] d+24
+(38)3
+(39)
+(310)3
+(311) d24
+[[ [<b24>e24f+24a24e24f+24a24b24>e24f+24<b24>d24e24f+24a24b24e24f+24a24b24>e24d24c+24<a24
+e24f+24b24a24g+24e24<b24>c+24f+24e24d+24<b24g+24a24>c+24<a24g+24e24] d+24e24g+24e24d+24<a24]]3
+* <b16r8.
+
+
+
+#4
+r2 /
+Pia y14 v164 $fa $03 $00
+[[ (40)[o4e4.d2d8
+e4.d4.c+8d8
+o4e4.d2d8
+e4.] d4<d8>c+8d8 ]]2
+>
+[[c4d+2f4
+c4d+2f8c8
+c4d+2f4
+c4d+4.f8d4]]2
+(40) <d4<d8>c+8d8
+(40) d2^8
+
+LSt v214 $f4 $03
+(45)[q7f o2e8.e16r8e16r2^16
+e8.e16r2.]4
+
+o4 Pia v164 $f4 $03
+[[ (41)[q7f e16 q7c e16 q79 e16 q77 e16 q74 e16 q72 e16 
+q7f d16 q7c d16 q79 d16 q77 d16 q74 d16 q72 d16 q71 d16d16 q7f d16 q7c d16]
+(42)[q7f q7f e16 q7c e16 q79 e16 q77 e16 q74 e16 q72 e16 
+q7f d16 q7c d16 q79 d16 q77 d16 q74 d16 q72 d16 q7f c+16 q7c c+16 q7f d16 q7c d16]
+(41)
+(43)[q7f e16 q7c e16 q79 e16 q77 e16 q74 e16 q72 e16
+q7f d16 q7c d16 q79 d16 q77 d16] (44)[q7f <d16 q7c d16> q7f c+16 q7c c+16 q7f d16 q7c d16] ]]2
+[[ [q7f >c16 q7c c16 q79 c16 q77 c16 q7f d+16 q7c d+16 q79 d+16 q77 d+16 q74 d+16 q72 d+16 q71 d+16d+16 
+q7f f16 q7c f16 q79 f16 q77 f16 q7f c16 q7c c16 q79 c16 q77 c16
+q7f d+16 q7c d+16 q79 d+16 q77 d+16 q74 d+16 q72 d+16] q71 d+16d+16
+q7f f16 q7c f16 q79 c16 q77 c16
+* q7f f16 q7c f16 q79 d16 q77 d16 q74 d16 q72 d16]]2
+(41)
+(42)
+(41)
+(43) (44)
+(41)
+(42)
+(41)
+(43) q74 d16 q72 d16 q71 d16d16r8
+
+LSt v214 $f4 $03
+(45)4
+[[o2 q7f
+[e4r16e16r8e8.e16r8e16r16
+e4r16e16r8e8.e16r4
+e4r16e16r8e8.e16r8e16r16
+e4r16e16r8e8.e16r8e16e16]
+$fa $02 $01
+*
+$fa $02 $00
+]]2
+
+Str y14 v179 $fa $03 $0a q7f $f4 $03
+o4[ [[e4.d16e16]]2
+e8d16e16g16a8f+16e4.d16r16
+[[e4.d16e16]]2
+e8d16e16g16a8f+16g16f+16e16d16e16] d16e16f+16
+* r8.
+
+
+
+#5
+r2/
+(50)[ Str y10 v217
+o4d1^4
+c+4d4c+4
+<a1^4
+a4b4>e4
+d1^4
+e4d4c+4
+<a1^4
+a4b4>e4
+f1^4
+d+4f4d+4
+d1^4
+<a+4>c4g4
+f1^4
+g4d+4d4
+<a+1^4
+>c4d4<a+4
+b1^4
+a4b4>e4
+d1^4
+c+4d4c+4
+<a1^4
+b4>c+4<a4
+b1^1]
+
+Ahh v202
+$fa $02 $f9 (11)2 $fa $02 $00
+
+(50)
+
+Ahh v202
+$fa $02 $f9 (11)2 $fa $02 $00
+
+Str y10 v217
+e2. [a8b8
+>d2.c+8d8
+c+4<b8a8b4>e4
+d2c+8.d8.e8
+f2.d+8f8
+g2.d+8g8
+d+4d8<a+8>c4<g+4
+a+2>c2]
+<b2. *
+[ [[b4.a16b16]]2
+b8a16b16>d16e8c+16<b4.a16r16
+[[b4.a16b16]]2
+b8a16b16>d16e8c+16d16c+16<b16a16b16] a16b16>c+16
+* r8.

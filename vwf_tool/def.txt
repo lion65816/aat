@@ -1,0 +1,11 @@
+ABCDEFGH
+IJKLMNOP
+QRSTUVWX
+YZabcdef
+ghijklmn
+opqrstuv
+wxyz0123
+456789!?
+["]":;&()'
+.,=-+/*%
+[...]$#

@@ -1,0 +1,103 @@
+[skip=END]
+
+[topic]- ExAnimations -[/topic]
+Lunar Magic's [font color=3]ExAnimations[/font color] also work with the VWF dialogues.
+[sprite=1](78,31,00,05,big)[/sprite][wait]
+
+[sprite=erase][erase]
+[topic]- Triggers -[/topic]
+You can also modify Lunar Magic's [font color=2]triggers[/font color] whenever you want.[wait][br]
+[erase]
+[exani custom=slot C,disable]
+
+
+
+// Custom Triggers
+[topic]- Custom Triggers -[/topic]
+[sprite=1](78,31,08,03,big)[/sprite]
+[br]
+[label=SPINQUESTION][pad left=16]
+Turn block test.[br]
+Make the turn block spin[br]
+Stop the turn block[br]
+Next trigger test
+[pad left=8]
+[branch=SpinCustom,StopCustom,EndCustom]
+
+[label=SpinCustom]
+[exani custom=slot C,enable]
+[sfx 1DF9=01]Turn block spinning [font color=2]enabled[/font color].[wait][erase]
+[jump=SPINQUESTION]
+
+[label=StopCustom]
+[exani custom=slot C,disable]
+[sfx 1DF9=02]Turn block spinning [font color=2]disabled[/font color].[wait][erase]
+[jump=SPINQUESTION]
+
+
+
+[label=EndCustom]
+// One Shot Triggers
+[erase][sprite=erase]
+[exani one shot=15, enable]
+[topic]- One Shot triggers -[/topic][sfx 1DFC=22]
+[sprite=1](78,31,06,07,big)[/sprite]
+[label=InfoBox]
+Info box test.[wait][pad left=16][br]
+Run again[br]
+Stop[br]
+Next trigger test
+[pad left=8]
+[branch=RunOne,StopOne,EndOne]
+
+[label=RunOne]
+[exani one shot=15, enable]
+[sfx 1DFC=22]An info box![wait][erase]
+[jump=InfoBox]
+
+[label=StopOne]
+[exani one shot=15, disable]
+[sfx 1DF9=01]You can stop one shot triggers, maybe this animation was a little too fast.[wait][erase]
+[jump=InfoBox]
+
+
+
+// Manual Triggers
+[label=EndOne]
+[erase][sprite=erase]
+[exani manual=1,0]
+[topic]- Manual triggers -[/topic]
+[sprite=2](78,21,02,0B,big)(78,31,04,0B,big)[/sprite]
+[label=Koopa]
+Koopa test.[wait][pad left=16][br]
+Show Frame 0[br]
+Show Frame 1[br]
+Show Frame 2[br]
+Finalize test
+[pad left=8]
+[branch=ManualFrame0,ManualFrame1,ManualFrame2,EndTests]
+[label=ManualFrame0]
+[exani manual=slot 1, frame 0]
+Showing frame [font color=3]0[/font color][wait][erase]
+[jump=Koopa]
+
+[label=ManualFrame1]
+[exani manual=slot 1, frame 1]
+Showing frame [font color=3]1[/font color][wait][erase]
+[jump=Koopa]
+
+[label=ManualFrame2]
+[exani manual=slot 1, frame 2]
+Showing frame [font color=3]2[/font color][wait][erase]
+[jump=Koopa]
+
+
+
+
+[label=EndTests]
+[erase][sprite=erase]
+[topic][/topic]
+This concludes the ExAnimation test, I hope you can create nice and clever animations with this![br]
+- lx5[wait][sfx 1DF9=05]
+
+[label=END][end=exit]

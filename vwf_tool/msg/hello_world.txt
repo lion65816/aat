@@ -1,0 +1,107 @@
+[skip=END]
+
+//comment test. this part will be ignored
+//greetings
+Hello people![wait=16][br]
+I am here to present you something that was forgotten by everyone in the community because it has been broken for YEARS.[br]
+
+This is called Variable Width Font which is generally used in computers nowadays.[wait]
+Also, this is even used in RPG games of SNES to make sentences more readable than fixed ones.[wait]
+(Well, yes, this font is taken from Chrono Trigger.)[wait][br]
+
+//advantage
+The advantages of using this are,[wait=32] as written right above,[wait=32] sentences can be more readable (no, huh?),[wait]
+the code automatically calculates the width of terms and automatically breaks a line depending on them,[wait]
+and it's easy to create sentences because the tool can convert a text file contaning messages to a binary file.[wait][br]
+
+//disadvantage
+On the other hand, the disadvantages are, people might be irritated because sentences won't be appeared at once
+[wait=32]and[wait=32] because of sentences scrolling up even before they finish reading through them.[wait][br]
+
+//stupid message, eh.
+So.[wait=16].[wait=16].[wait=16] Um.[wait=16].[wait=16].[wait=16] I think I said what I wanted to, so now,
+I'm going to show examples of this sprite which it can do.[wait][br]
+
+//wait (input)
+This[wait] sprite[wait] can[wait] wait[wait] for[wait] the[wait] player's[wait] inputs.[wait] (well, actually, this is annoying.)[wait][br]
+
+//wait (timer)
+This[wait=32] sprite[wait=32] can[wait=32] stop[wait=32] outputting[wait=32] texts[wait=32] for[wait=32] the specified[wait=32] amount[wait=32] of[wait=32] time.[wait=32]
+(But well, it's also annoying if it was too long.)[wait][br]
+
+//font color
+Changing the font color[br]
+[font colour=2]IMPORTANT MESSAGE![wait=64] (Not really.)[br]
+[font colour=3]Another change...[/font color][wait][br]
+(As character's width is all different and therefore the boundary between each character won't be always per 8 pixels,
+each 8x8 tile must share the tile attributes with all others, so only 3 palettes for the font are presented.)[wait][br]
+
+//padding
+[font color=3]Setting the padding width up[/font colour][wait][pad right=128][br]
+This is really nothing but an option. So you might not even use this command at all.[wait][pad=128,8][br]
+But I'm going to still show examples of this command anyway.[wait][pad=64,64][br]
+And since I have nothing to say here, so...[wait=32] Next.[wait][pad=8,8][br]
+
+//music
+[font color=3]Changing music[/font color][music=0C][wait=64][br]
+This command can also change music into a completely different one![wait][br]
+It works together with AddMusicK in order to play songs. No more weird limitations from older AddMusic programs.[wait][br]
+Keep in mind that there will always be a significant delay when switching local songs compared to switching to global songs.[wait][br]
+
+//erase
+[font color=3]Erasing sentences[/font color][wait][erase]
+You may think,[wait=32] ["]Is this really necessary?" [wait]Well, yeah, see the next feature.
+This command is intended to be used with the next one.[wait][br]
+
+//topic
+[font color=3]Changing the topic[/font colour]
+[topic]-Romi-[/topic]
+[br]So yeah...[wait][br]
+By the way, the topic is always centered, and uses palettes 5-7 in the first row.
+Since the topic area is separated from the main message window, this could be possible.[wait]
+*erases*[wait=64][erase]
+
+//sprite
+[topic]Showing sprites[/topic]
+[sprite=4]
+(70,20,C6,01,big)(80,20,C8,01,big) //upper 2
+(70,30,E6,01,big)(80,30,E8,01,big) //lower 2
+[/sprite]
+Like this, you can show sprites as well. By using this and the topic change,
+you could perhaps let characters make some conversations.[wait][sprite=erase][erase]
+
+//branch
+[topic]Branching function[/topic]
+This is ["]the" command which could give you a bit of flexibility in the conversations.[wait][br]
+Here, I ask a random question. Have you played Super Mario World 2: Yoshi's Island?
+[pad left=16][br] //for the cursor, reserves a (slightly) larger space
+Yes I have! :D[br]
+No I haven't. :/[pad left=8] //makes it back before [branch]
+[branch=YesIHave,NoIHavent]
+[label=YesIHave]
+Yeah, kind of obviously. It was one of the best games! :D[wait][jump=EndOfQuestion]
+[label=NoIHavent]
+Wait, what!?[wait] //here, we don't need [jump] because it just follows.
+[label=EndOfQuestion]
+[br][br]Either way, thank you for answering. :P[wait][erase]
+
+//lx5' message
+[topic]- lx5 -[/topic]
+This conversion was very special and brings once again a world of possibilities.[wait][br]
+By the way, it isn't just a simple conversion...[wait][br]
+An attempt was made to make the whole package work with the latests tools, including:[wait][pad left=16][br]
+Lunar Magic 3.00+[wait=48][br]
+PIXI 1.2.15+[wait=48][br]
+AddMusicK 1.0.6[wait=48][br]
+SA-1 Pack 1.32[wait=48][pad=8,8][br]
+Yup, it works perfectly fine with the latest SA-1 Pack, in fact, this presentation is [font color=3]fully working[/font color] on a SA-1 enhanced ROM :P[wait][br]
+Also the tool itself no longer needs [font color=2]ActivePerl[/font color] to convert messages![wait][br]
+It now requires [font color=3]Python 3[/font color] in order to convert them, however, the original tool is still present if someone REALLY wants to use Perl to convert their texts[wait][br]
+One last bit, this package of resources will be available on my GitHub, just like everything else I make or convert.[wait][erase]
+
+//lastly...
+[topic]Lastly...[/topic]
+Thank you very much for taking your time to read this! Let's end this by teleporting to Level106.[wait]
+[label=END][end=00]
+
+

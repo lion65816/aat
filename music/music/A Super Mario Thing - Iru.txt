@@ -1,0 +1,169 @@
+#amk 2
+#path "Iru"
+#define "Use_Older_@2" 0
+#samples
+{
+	#default
+	"RS3 String Ensemble.brr"
+	"Old AMK 02 SMW @2.brr"
+}
+#instruments
+{
+	"RS3 String Ensemble.brr"	$E7 $C6 $B8 $02 $7F
+#if "Use_Older_@2" == 0
+		@2			$E7 $C6 $B8 $04 $00
+#endif
+#if "Use_Older_@2" != 0
+	"Old AMK 02 SMW @2.brr"		$E7 $C6 $B8 $04 $00
+#endif
+}
+#spc
+{
+	#author		"Kil"
+	#game		"A Super Mario Thing"
+	#title		"Iru"
+	#length		"2:11"
+}
+
+; ------------------------------------- ;
+;	     Global Commands		;
+; ------------------------------------- ;
+
+;	Master Volume		Tempo (70 bpm)		Less Staccato
+	w164			t29			$F4$02
+
+;	Default Lenght		Loop to Start
+	l4			/
+
+
+; ------------------------------------- ;
+;	      Echo Settings		;
+; ------------------------------------- ;
+
+$EF $FF $40 $40
+$F1 $03 $60 $00
+$F2 $60 $16 $16
+
+
+; ------------------------------------- ;
+;		  Macros		;
+; ------------------------------------- ;
+
+; - Instruments -
+"String		= @30 h0"
+"Glock		= @31 h-29"
+
+; - Commands -
+"!Detune	= $FA$02"
+"Off		= $00"
+"!Vibrato	= $DE$10$1B$30 $EA$18"
+
+
+; ------------------------------------- ;
+;		Channel 1		;
+; ------------------------------------- ;
+
+#0
+!Detune Off
+(1)[ String
+c+ g+ > c+ < f+ g+ > e d+ < b
+> c+ g+ c+ < b b > f+ < b a
+a > c < b g a > e a g
+e g d e a g e d
+< a > d < b > e a1 !Detune $FF ]2
+
+; ------------------------------------- ;
+;		Channel 2		;
+; ------------------------------------- ;
+
+#1
+; First Section
+y9
+(2)[ String q7D o3
+f+2 > d+2 c+ g+ f+ d+
+g+2 f+2 f+2 e2
+e a g d c e > c < b
+> c2 < b2 > d c c < b
+e a g b > d ] c < b a
+
+; Second Section
+!Detune $FF *
+!Detune Off a+ a+ g+
+
+; ------------------------------------- ;
+;		Channel 3		;
+; ------------------------------------- ;
+
+#2
+v252
+!Detune Off
+[[ String q7E o3
+d+2 g+2 e2 f+2
+f2 e2 d+2 d2
+f2 g2 f+2 f2
+f2 g2 a2 f+2
+f2 g2 a1 !Detune $FF ]]2
+
+; ------------------------------------- ;
+;		Channel 4		;
+; ------------------------------------- ;
+
+#3
+y11
+!Detune Off
+[[ String q7D o4
+(4)[r2]8
+c2 < b2 a2 > e2
+f2 g2 e2 c2
+< a2 > d2 d2 e2 !Detune $FF ]]2
+
+; ------------------------------------- ;
+;		Channel 5		;
+; ------------------------------------- ;
+
+#4
+; First Section
+*20
+
+; Second Section
+v248 y9
+(3)[ Glock q7A o6
+!Vibrato
+r8 c8 g4. g8 > c4. < f8 > d+8 d8 d8 < a+8 a+8 g
+g8 > g4. < d+8 a+4. f8 > f4. < d+8 g+4.
+< b8 > b8 a+8 a+8 g+8 g+8 f+8 d+8 g+16 b32 > c+32 d+8 c+8 < b8 a+8 a+8 g+8 e8
+b8 > d+8 g+8 f+8 e8 d+8 c+8 c+8 < b8 > f+8 a+8 b8 a+8 f+8 d+4
+< b8 > d+8 g+8 f+8 e8 d+8 c+8 c+2 c2 ]
+
+; ------------------------------------- ;
+;		Channel 6		;
+; ------------------------------------- ;
+
+#5
+v208 y8
+!Detune Off r32 (1)2
+
+; ------------------------------------- ;
+;		Channel 7		;
+; ------------------------------------- ;
+
+#6
+; First Section
+(4)20
+
+; Second Section
+v224 y13
+r32. (3)
+
+; ------------------------------------- ;
+;		Channel 8		;
+; ------------------------------------- ;
+
+#7
+; First Section
+v196 y11
+r=4 (2) o5 c < b a
+
+; Second Section
+!Detune $FF (2)
+!Detune Off a+ a+ g+

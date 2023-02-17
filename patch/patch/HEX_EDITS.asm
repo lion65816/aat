@@ -18,6 +18,14 @@ ORG $009141|!bank			;DEMO START
 db $34,$34,$34,$34,$B4,$34	;DEMO START
 ORG $009172|!bank			;DEMO START
 db $B4,$B4,$34,$B4,$34,$34	;DEMO START
+
+ORG $0090DF|!bank			;IRIS START
+db $5D,$00,$4C,$00,$FF,$FF	;IRIS START
+ORG $009113|!bank			;IRIS START
+db $5D,$00,$5C,$00,$FF,$FF	;IRIS START
+ORG $009178|!bank			;IRIS START
+db $F4,$B4,$34,$B4,$34,$00	;IRIS START
+
 db $09				;Fix the palette for Mega Moles
 ORG $02FBBF|!bank			;Fix GFX for Boo rings and generators
 db $88,$88,$a8,$8e,$aa,$ae,$88	;Fix GFX for Boo rings and generators

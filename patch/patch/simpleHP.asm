@@ -25,8 +25,6 @@ sa1rom
 ;Custom death code pointer. Indirectly long-jumped to, so needs three free bytes of space. 
 !DeathPointer = $6DDB   ;(0DDB)
 ;;Values:
-;Death music. Because this patch ruins AddmusicK's hex edit to prevent it from playing with custom death code.
-!DeathMusic = #$01
 ;Hurt and heal sound effects. 
 !HitSFXA = $0C
 !HitSFXB = $00
@@ -34,6 +32,9 @@ sa1rom
 !HealSFXB = $0B
 ;Stun time. 
 !StunTime = $11
+
+!MarioMusic = $01		;\ Change these.
+!LuigiMusic = $8E		;/
 
 ;;;Hijacks
 ;Hurt
@@ -77,8 +78,15 @@ JML $00F5D9
     LDA #$90 : STA $7D              ;Set Demo Y speed, as the hijack is just after this
     BVS Death_custom           ;i: v;Bit 6 of settings set, custom death behavior
     .deathrestore:                  ;(Putting one of these here saves a BRA)
-    LDA !DeathMusic : STA $7DFB     ;Set death music. Note: Overwrites AddmusicK's hex edit. 
-    LDA #$FF                        ;Some music thing
+    LDA $6DB3                ; Alternate Death Music for Luigi code.
+    BEQ .mario                       ; please excuse this trash -The Kobbs
+    LDA #!LuigiMusic
+    STA $7DFB
+    BRA +
+    .mario:
+    LDA #!MarioMusic
+    STA $7DFB
++   LDA #$FF                        ;Some music thing
 JML $00F611
     
 .cape:

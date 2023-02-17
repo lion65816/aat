@@ -1,7 +1,7 @@
-01	0	Miss!
-01	1	Miss!
-02	0	Game Over
-02	1	Game Over
+01	0	md
+01	1	md
+02	0	go
+02	1	go
 03	0	marisagoal
 03	1	marisagoal
 04	0	marisagoal
@@ -208,3 +208,15 @@
 7B	1	Kirby's Dream Land 3 - Ripple Field 2
 82	0	spaf-05
 82	1	spaf-05
+83	0	Iru
+83	1	Iru
+84	0	Electric Talk
+84	1	Electric Talk
+8A	0	The Kanji Factory
+8A	1	The Kanji Factory
+8C	0	Go Red Team! Go White Team! Rah 
+8C	1	Go Red Team! Go White Team! Rah 
+8D	0	Bonus Stage
+8D	1	Bonus Stage
+8E	0	fail
+8E	1	fail

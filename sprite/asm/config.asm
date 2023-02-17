@@ -1,2 +1,2 @@
-!PerLevel = 0
+!PerLevel = 1
 !Disable255SpritesPerLevel = 0
