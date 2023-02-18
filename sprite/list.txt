@@ -148,6 +148,8 @@ B0 TeleportOrb.cfg
 B1 BigSteely.json
 B2 silius_shooter.json
 B3 projectile.json
+B4 jumping_piranha_4F+50.cfg
+B5 PipeLakitu.json
 B7 climbing_net_door.json
 B8 InfoBox.cfg
 B9 baba_block.cfg

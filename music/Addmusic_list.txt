@@ -51,6 +51,7 @@ Locals:
 31  FFMQ - Battle 1.txt
 32  Storm Eagle Sampled.txt
 33  Still, the Road is Full of Dangers.txt
+34  forbidden forest.txt
 35  Donkey_Kong_Country_2_-_Stickerbush_Symphony.txt
 36  another mansion theme.txt
 37  Monster Boy and the Cursed Kingdom - Crystal Cave.txt
@@ -58,6 +59,7 @@ Locals:
 39  mustnotlose.txt
 3A  Stilt Village.txt
 3B  Pizza Tower - Theatrical Shenanigans.txt
+3C  s.txt
 3D  Return Of The Gohei.txt
 3E  remixhills.txt
 3F  At DooM's Gate.txt

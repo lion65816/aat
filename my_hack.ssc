@@ -266,6 +266,10 @@ B2 0020 Undefined Sprite
 B2 0022 0,0,0
 B3 0020 Undefined Sprite
 B3 0022 0,0,0
+B5 0020 A pipe dwelling Lakitu that throws a vanilla sprite.\nExtra byte 1: sprite number that is thrown.\nExtra byte 2: state that the sprite is spawned in. 0 acts the same as 1 (init).\nExtra byte 3: X speed to throw the sprite at.\nExtra byte 4: Y speed to throw the sprite at.
+B5 0022 8,-16,2D 8,0,68
+B5 0030 A pipe dwelling Lakitu that throws a custom sprite.\nExtra byte 1: sprite number that is thrown.\nExtra byte 2: state that the sprite is spawned in. 0 acts the same as 1 (init).\nExtra byte 3: X speed to throw the sprite at.\nExtra byte 4: Y speed to throw the sprite at.
+B5 0032 8,-16,2D 8,0,68
 B7 0020 Disassembly of Sprite 54
 B7 0022 8,8,128 24,8,129 40,8,12A 8,24,138 8,40,148 24,40,149 40,40,14A 40,24,13A 24,24,139
 BA 0020 P-Balloon that will make mario float.

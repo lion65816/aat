@@ -1,0 +1,344 @@
+#amk 2
+
+#spc
+{
+	#title "Forbidden Forest"
+	#game "Etrian Odyssey II"
+	#length "4:84"
+	#author "Yuzo Koshiro"
+	#comment "ported by maxodex"
+}
+
+#samples
+{
+	"default/00 SMW @0.brr"
+	"default/01 SMW @1.brr"
+	"default/02 SMW @2.brr"
+	"default/03 SMW @3.brr"
+	"default/04 SMW @4.brr"
+	"default/05 SMW @8.brr"
+	"default/06 SMW @22.brr"
+	"default/07 SMW @5.brr"
+	"default/08 SMW @6.brr"
+	"default/09 SMW @7.brr"
+	"default/0A SMW @9.brr"
+	"default/0B SMW @10.brr"
+	"optimized/0C SMW @13.brr"
+	"default/0D SMW @14.brr"
+	"default/0E SMW @29.brr"
+	"default/0F SMW @21.brr"
+	"default/10 SMW @12.brr"
+	"default/11 SMW @17.brr"
+	"default/12 SMW @15.brr"
+	"default/13 SMW Thunder.brr"
+}
+
+#instruments
+{
+ @13 $ad $8e $b1 $06 $00
+ @13 $ad $8e $b1 $03 $00
+ @1  $fa $e0 $b1 $03 $00
+ @2  $ff $f8 $b1 $06 $00
+ n1e $f2 $e0 $b1 $00 $00 ;@34
+ @29 $fe $e0 $00 $02 $00
+ n1e $00 $00 $7f $00 $00 ;@36
+ n1e $fe $e0 $b8 $00 $00 ;@37
+ @2  $ff $f4 $b1 $06 $00 ;@38
+ @13 $9d $21 $b1 $06 $00 ;@39
+}
+
+$ef $ff $28 $d8
+$f1 $08 $b0 $01
+
+(!100)[ $f4 $09 ]
+(!500)[ $fa $01 $89 ]
+(!501)[ $fa $01 $b4 ]
+(!502)[ $fa $01 $af ]
+
+w175 t37 $f4$02
+
+"ROFF = (!100,0)"
+"pianorel = (!100,-1) (!500,3)"
+"stringrel = (!100,-1) (!501,3) q5f vir v165"
+
+"vir = $de $06 $0e $28"
+"vir_vol = vir v110"
+"fadein = @1 $ed $70 $e0 vir_vol"
+
+"@strings = @32"
+"bell = ROFF $df @33 v125"
+"bell2= ROFF $df @38 v125"
+
+"@piano = @30 pianorel v240"
+"@pianonr = @30 v240"
+
+"@crash = ^8 v60 @34 c2^8 v75 (!502,4) ^2."
+
+
+;;;;;;;;;;;;
+;;; sorry mods this song really has very little patterns i mean just listen to it sorry :(
+;;;;;;;;;;;;
+
+
+#0 r1. / q7f
+
+@pianonr ROFF
+o2 d+2.d+2.d+2.d+2.
+< b2.b2.b2.b8.
+v60 @34 c2^16^=1
+@strings vir_vol
+o5 f1^1^=191 d+1^1^1
+f1^1^1 g1^1^1
+@piano q4f $df
+o3 d+4d4f4d+2^8r8
+d+4c+4c+4c+2^8r8
+d+4g4>c4g4f4.r8
+c4<a+4>d+4<a+4a4.r8
+a4g4d8.r16d4.r4.
+a4g4d8.r16d4g4>d4
+f4d+4d8.r16c2.
+f4d+4d8.r16c2>c4.
+<<[a8.r16g8.r16>c4r8< f2^8
+a8.r16g8.r16>d8.r16 f4.r4.
+<a8.r16g8.r16] >c4r8< f2^8
+o3 f8.r16d+8.r16g4r8c2^8
+* a+8.r16a+8.r16a+4f8.r16>
+c8.r16c8.r16g4 d8.r16d8.r16a+8
+q6f
+a4e4f4 d4.r8 d8c8
+c8<a+8a+4.a8 a4g4.r8
+f2.f+2a4 a+2>d4c+4.d8e4
+g4.f8f8e8 e4d4.r8
+<f2^8g8 e2^8r8
+[[ q6e <a+2^8g8^96 q6d >>d2^8.r=10
+<c4 q6e c4 c4^96 q6d >g2^8.r=10]]2
+o3 q6e d+4d+4d+4^96> q79 @39 a+1^=190 (!501,4) ^4
+
+
+#1
+
+fadein o4 a+1. / ROFF vir
+@strings v110
+[[a+1^1^1]]4
+>c1^1^1c1^1^1^8
+@piano q4f $df
+o3 f4d+4d4r2.
+c+8.r16<b4>g+4r2.
+d4>c8.r16d+4f8.r2^16
+<a+8.r16>d+8.r16<a+8.r16a8.r16r2
+g8.r16d8.r16c8.r8.>d2^8<
+g8.r16d8.r16c8.r16g8.r16>d8.r4^16
+[d+8.r16d8.r16c8.r8.] r2^8
+* g2
+[o3 a+4a4g8.r16 a2.
+a+4a4g8.r16>c4c2<
+a+4a4] o3 g8.r16 a2.
+g4f4d+8.r16 d4.r4.
+* o3 a8.r16 >c4<a4>c8.r16
+d4<a+4>d8.r16 e4c+4e4
+;;;
+q6a d4<g4a4 q6c f2f4
+f4.r4. q6f <a+2.
+q6d >c2.c2c4 d2g4e2a4
+a2a4 q6c a+2^8r8
+c2.c2^8r8 ;;; */
+q6d <f4 [f4f4 >a+2^8.r16
+<g4.g4>d+8 >d+2^8.r16]
+r4 *
+o2 a+4.a+4>f8> q79 @39 f1^1 (!501,4) ^4
+
+
+
+#2 r1. /
+
+@piano o3 ^4 f4.> q6e a+8r4 q6f <f2.
+f4. >q6e a+8r4<q6f g+2.
+o3 c+4. > q6e g+8r4< q6f c+2.
+c+4. > q6e g+8r4< q6f c+2
+o1 v255 d+4
+o2 [f4. o4 v240 q6e v255 a+8r4 q6f ] o2 f2.
+* o2 g+2.
+v240 o3 c+4. > q6e g+8r4< q6f c+2.
+o3 c+4. > q6e g+8r4<< q6f b2r4
+[[o3 c4.>q6e f8r4<q6f d+2.]]2
+o2 g2 q69 >f4< q6f g2.
+o2 g2 q69 >f4< q6f g2
+(80)[ROFF v75
+@36 c=1 (!502,4) ^=95^4]
+@piano
+q6f o2 g+2. g+1.
+g+2. o4 q69 c2. q6f <d+2. q6a d+4d2
+q6f v250 <g2.f+2.f2.e2.
+o4 q6b c2. q6e<g2. q6b b2. q6e a2.
+q7f
+[ o1 g4>a+4a+4<g4>a4a4
+<g4>a+4a+4<g4>a4>c4
+<<g4>a+4a+4] o1 g4>a4a4
+o1 d+4>f4g4< f4>f4a4<
+* f4>a4a4
+<a+4>>d4<a+4 <a4>>c+4<a4
+o1 d4>e4a4 <a+4>>d4<a+4
+g2<a+4 d4>d+4g4
+<f4>a4a4 <d4>f+4f+4
+<g4>a+4a+4 <a4>>c+4c+4
+<d4>e4e4 <<g4>a+4>d4
+<<c4>c4f4 <c4>c4g8^32r16.
+< [[ q7f d=142>>q7b d2.^96 <<q7f g+=142>>q7b g2.^96]]2
+o1 q7f b=142>>@39 q79 b1^1^96 (!501,4) ^4
+
+
+#3 r1. /
+
+@piano [ q69 o4 c+4..r16 q6e d+8r8 q69 c+2^=46
+c+4..r=14 q6e d+8r8 q69 f4 q6e > c+4 r4
+q69 o3 a+4..r16 q6e >c+8r8< q69 a+2.
+q69 o3 a+4..r16 q6e >c+8r8]
+o3 q69 a+4 q6e >c+4r4
+* q69 o3 a+4>q6e d+4r4
+o3 q69 a+4.r8 q6e a+8r8 q69 a+2.
+a+4.r8 q6e a+8r8 q69 >f4 q6e >c4r4
+o4 q69 c4^16r16 q6e f8r4 q69 < g2.
+> c4^16r16 q6e f8r4 q69 < g4 q6e >f4r4
+ROFF @strings stringrel
+o3 g+1. g+1. g+1. a+2.a2.
+>q7c a4g2a2.a4g2a2.
+q5d g2. > q7b g1^1r4.
+ROFF q7f $DF
+@30 pianorel v250
+[ o2 [[d4d4r4
+f4f4r4]]2 d4d4r4 ]
+f4f4r4
+<a+4a+4r4>c4g4r4
+* c4c4r4
+f4f4r4 e4e4r4
+<a4>f4>c4 <f4>c4<a4.
+d2^8 <a+4>f2
+c4g4c4 <a4>e4d4
+d4a4g4 e4b4a8
+$fa $03 $40 bell2 o4 y17 g8 y10 $fa $03 $00
+@30 pianorel v250
+o2 a4>d4f4 <d4>c4r4
+<<g4g4r8>q7a g8<q7f g4g4r4
+[[ o1 q7f a+4a+4.>> q7b g2^8.r8. q7f <d+2^8 q7b >>c2^8.r8.]]2
+o2 q7f f+2^8 q79 >> @39 d+1^1 (!501,4) ^4
+
+
+#4 r2. ^8 v60 @34 c2^8 / $df
+
+@piano [ q6e o4 ^96 f2 r=46 f2^4
+f2r4 g+4r4f4
+o4 ^96 d+2r=46 d+2r4^96 d+2r=46]
+d+4r4d+4
+* o4 f4r4c+4
+c2r4c2r4 c2r4 a+4r4 g+4
+g4.r8 g4 c2. g4.r8 g4 c4r4d4
+ROFF @strings stringrel
+o3 c1.<b1.>c1. f+1.
+a2.a2.a2.a2.
+o5 q7b c1^1^2.r4
+q7c
+[o5 d2.c4f2d2.c4f2
+d2.] c4<a2a+2.>c2.
+* c2. f2.e2.
+a1.g1f4d+4 f2.f+2.g2.a2.
+a2.a4g4.r8 g1^4.r8
+q7a o3 a+1^4.r8 > d+1^4.r8
+< a+1^4.r8 > d+1^4.r8
+< a+1^1..r4
+
+
+#5
+
+fadein o5 f1. / q7f y10
+@strings v110
+f1^1^1 d+1^1^1
+o2 v185 d+1^1^1 b1^1^1
+a+1^1^1 f1^1^4
+^8 v60 @34 c2^8^=1
+@strings
+stringrel
+o2 f=191^2e1.f1.>c1.
+<a+2.a+2.a+2.a+2.
+o3 d+2.d+2.d+2.d+2.
+q7c
+o4 g1.g1. g1 f2f2.g2.
+g1.g1.g2.g2f4>c2
+<a+4a4>d4a4
+e2.d2. d1<a+2a2.
+a2.>d2.e2. e2.
+e4d4.r8 c1^4.r8
+q7a o4 f1^4.r8 g1^4.r8
+f1^4.r8 g1^4.r8
+d+1^1..r4
+
+
+#6 r1. / ROFF $df
+
+@pianonr q7f
+[ o2 y10 ^8 a+4.>f+4.<a+2.
+a+4.>f+4.c+4.<a+4.
+@30 v240 o2 f+4.>d+4.<f+2.
+f+4.>d+4.] o2 f+2^8
+@31 v255 * o2 f+4.>c+4.
+o2 f4.>c+4.<f+2.
+f+4.>c+4.<f4.>c4r8
+o2 c4.g+4.c2.
+c4.g+4.c4.a+4.
+bell r2^8
+o5 q7f y14 d+8 y6 q76 d+8. q73 d+4.. r2.
+q7f y14 c+8 y6 q76 c+8. q73 c+4.. r2.
+q7f y14 g8 y6 q76 g8 q7f y14 f16 y6 q73 g16 q76 f8. q73 f8. r2. <
+q7f y14 a+8 y6 q76 a+8 q7f y14 a16 y6 q73 a+16 q76 a8. q73 a8. r2. >
+q7f y14 a8 y6 q76 a8 q7f y14 d16 y6 q73 a16
+q76 d8 q7f y14 <a16 y6 >q73 d16 q76< a8
+q7f y14 d16 y6 q73 a16 q76 d8. q73 d4..
+o5 q7f y14 g8 y6 q76 g8 q7f y14 d16 y6 q72
+g16 q76 d8 q7f y14 <g16 y6 >q73 d16 q76< g8.
+q73 g2^8.
+q7f y14 g8 y6 q76 g8 q7f y14 > c16 y6 q72
+<g16 q76 >c8 q7f y14 g16 y6 q73 c16 q76 g8.
+q73 g2^8.
+q7f y14 c8 y6 q76 c8 q7f y14 g16 y6 q73 c16
+q76 g8 q7f y14 >c16 y6 q73 <g16 > q76 c8
+y10 q7f
+@35 v255 o2 b2.
+@pianonr q7c o3 c2.d2.f2.
+d2.c2.<a+2.a2.>
+v75 @37 c=1 (!502,4) ^=95^4 @pianonr q7c
+c2.d2.f2.
+d2.f2.f2. q7f
+[ @crash ]
+[[r2]]9 *
+r2r2r2r2.
+@strings stringrel
+v150 q7b o2 d1^4.r8 g+1^4.r8
+d1^4.r8 g+1^4.r8
+b1^1..r4
+
+
+#7 r1. / y10
+
+ROFF (80)
+[[r2]]10 r4
+(80)
+@pianonr
+o1 v255 d+2.d+2.d+2.
+v240 b2.b2.b2.b2.
+v250 a+2.a+2.a+2.a+2.
+f2.f2.f2.f2.
+[[r2]]22 r4
+@crash
+[[r2]]10 r4
+@pianonr q7c o3 d2.
+[[r2]]9
+$fa $03 $40
+[q7f @35 v230 o2
+$e8 $0c $64 b32b32 $e8 $84 $ff [[b32]]22 ]
+b2.
+[[r2]]9 * b4.
+$fa $03 $60
+bell y17 o4
+f8f8e8 e16 y5 q74 f16 q76 e8 y17 q7f d16 y5 q74 e16 q76 d8. q74 d8.
+r1.r2.  @38 q7d y17 $fa $03 $00
+[[ o4 g4 >d2 ^2. c4g2 ^2.]]2
+d+4a2 q7f r2. ^8 y10 v60 @34 c2^8

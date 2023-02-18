@@ -33,6 +33,7 @@ level:
 0B3     HDMAGradient125.asm
 0B4     statusbarremove.asm
 0C0	DisableLR.asm
+0C5	hide_sb_uber.asm
 0D0	HDMAGradient.asm
 0E0	HDMAGradient.asm
 0F0	F0_scroll.asm
@@ -82,6 +83,16 @@ level:
 1D7	FilterYoshi_BabaBlocks.asm
 1D8	FilterYoshi_BabaBlocks.asm
 1DA	FilterYoshi_BabaBlocks.asm
+1F6	hdmatest.asm
+1F7	hdmatest.asm
+1F8	hdmatest.asm
+1F9	hdmatest.asm
+1FA	hdmatest.asm
+1FB	hdmatest.asm
+1FC	hdmatest.asm
+1FD	hdmatest.asm
+1FE	hdmatest.asm
+1FF	hdmatest.asm
 
 ; OW list. Valid values: 0 = Main map; 1 = Yoshi's Island; 2 = Vanilla Dome;
 ; 3 = Forest of Illusion; 4 = Valley of Bowser; 5 = Special World; and

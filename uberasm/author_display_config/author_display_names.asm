@@ -1,4 +1,4 @@
-db "                     " ; 000
+db "(Dev Level)          " ; 000
 db "Nao                  " ; 001
 db "                     " ; 002
 db "KobaBeach            " ; 003
@@ -30,7 +30,7 @@ db "DJ Buckley           " ; 01C
 db "                     " ; 01D
 db "DJ Buckley           " ; 01E
 db "Nao                  " ; 01F
-db "                     " ; 020
+db "HatKid and SAJewers  " ; 020
 db "Scarfley             " ; 021
 db "EllenHouraisan       " ; 022
 db "4season              " ; 023
@@ -39,7 +39,7 @@ db "Scarfley             " ; 101
 db "SAJewers             " ; 102
 db "SAJewers             " ; 103
 db "                     " ; 104
-db "                     " ; 105
+db "(Dev Level)          " ; 105
 db "Lord Ruby            " ; 106
 db "raekuul              " ; 107
 db "SAJewers             " ; 108
@@ -72,7 +72,7 @@ db "PSI Ninja            " ; 122
 db "PSI Ninja            " ; 123
 db "                     " ; 124
 db "Bumpty               " ; 125
-db "                     " ; 126
+db "4season              " ; 126
 db "Scarfley             " ; 127
 db "                     " ; 128
 db "4season              " ; 129
@@ -93,4 +93,4 @@ db "Big Brawler          " ; 137
 db "Gbreezesunset        " ; 138
 db "Big Brawler          " ; 139
 db "Gbreezesunset        " ; 13A
-db "                     " ; 13B
+db "(Dev Level)          " ; 13B

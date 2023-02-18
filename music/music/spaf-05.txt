@@ -4,6 +4,7 @@
 
 #samples
 {
+	#optimized
 	"sample_00.brr"
 	"sample_01.brr"
 	"sample_02.brr"

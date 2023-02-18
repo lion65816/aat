@@ -110,8 +110,8 @@ NameData:
  db "    PREHISTORIC    "
  db "    DOOM CASTLE    "
  ;Level 020
- db "#4 NOT ROY'S CASTLE"
- db "                   "
+ db "   Silent Flower   "
+ db "      Forest      *"
  ;Level 021
  db "how eerie, an eerie"
  db "                  *"
@@ -137,7 +137,7 @@ NameData:
  db "                   "
  db "yoshis house       "
  ;Level 105
- db "YOSHI'S ISLAND 1   "
+ db "example level      "
  db "                   "
  ;Level 106
  db "  Horse Adventure  "
@@ -294,10 +294,10 @@ NameData:
  db "                   "
  ;Level 139
  db "    Revenge of     "
- db "     the Sushi     "
+ db "     the Sushi    *"
  ;Level 13A
  db "Use Of A Goal Posts"
  db "                  *"
  ;Level 13B
- db "                   "
- db "                   "
+ db "the land of        "
+ db "          sweetches"
