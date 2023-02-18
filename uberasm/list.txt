@@ -53,7 +53,6 @@ level:
 11B	lvlfilter.asm
 11C	FilterYoshi.asm
 11E     PitCode.asm
-121	FilterYoshi.asm
 122	FilterYoshi.asm
 125     HDMAGradient125.asm
 126	onoff.asm
@@ -73,14 +72,14 @@ level:
 1B8	redswitch.asm
 1B9	redswitch.asm
 1C8	PaletteShift.asm
-1CE	FilterYoshi_BabaBlocks.asm
-1CF	FilterYoshi_BabaBlocks.asm
+1CE	BabaBlocks.asm
+1CF	BabaBlocks.asm
 1D0	FilterYoshi_DeathWarp.asm
-1D1	FilterYoshi_BabaBlocks.asm
+1D1	BabaBlocks.asm
 1D3	BabaBlocks.asm
 1D4	BabaBlocks.asm
 1D5	BabaBlocks.asm
-1D7	FilterYoshi_BabaBlocks.asm
+1D7	BabaBlocks.asm
 1D8	BabaBlocks.asm
 1DA	BabaBlocks.asm
 1F6	hdmatest.asm
