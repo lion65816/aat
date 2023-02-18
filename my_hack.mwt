@@ -101,8 +101,6 @@
 5A	Hammer Bro
 5B	Timed ON/OFF Switch
 61	Firefly
-62	Firefly
-63	Firefly
 64	Firefly
 6A	Cluster Bullet Shooter (Angle)
 	Cluster Bullet Shooter (Aim)
@@ -142,6 +140,11 @@
 91	Angry Sun
 	Happy Moon
 92	Volcano Lotus
+A7	Spike
+	Spike+Wing
+A8	Spike Ball
+B1	Bowser Bowling Ball/Big Steely
+	Bowser Bowling Ball/Big Steely-gd
 B2	Silius Shooter
 B3	Projectile
 B7	Rotating Net

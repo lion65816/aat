@@ -1,0 +1,334 @@
+#amk 2
+
+#spc
+{
+#title "Setting Off ~ Departures Dream"
+#game "Mrs. Estacion"
+#length "3:20"
+#author "Misora"
+#comment "departures as in bus, yes?"
+}
+
+#samples
+{
+#default
+}
+
+#instruments
+{
+@1 $CE $F3 $00 $06 $00	;@30
+@9 $EE $E0 $DF $05 $5C	;@31
+@1 $E5 $E9 $00 $06 $00	;@32
+@2 $D9 $EC $00 $03 $00	;@33
+@23 $CB $A2 $00 $05 $00	;@34
+@21	$FF	$E0	$00	$04	$00	;@35
+@8 $FE $E0 $00 $1E $00	;@36
+@29 $EF $F2 $00 $04 $00	;@37
+@4 $FC $E5 $00 $06 $00	;@38
+@1 $AF $EC $00 $06 $00	;@39
+n1F $FF $33 $7F $00 $00	;@40
+@5 $D8 $E5 $00 $07 $00	;@41 
+n1C $FC $33 $7F $00 $00	;@42
+@10 $EF $C5 $00 $05 $00	;@43
+} 
+
+"K=@34"
+"M=@35"
+"S=@37"
+"U=@43"
+"Cym=@40"
+"Spl=@42"
+
+"VPiano=v170"
+"VIntroPiano=v160"
+"VIntroPianoEc=v100"
+"V@1Intro=v200"
+"VStr=v150"
+"VHihat=v120"
+"VPerc=v255"
+"VBass=v255"
+"VTrumpet=v160"
+"VReedRomance=v255"
+
+$EF $FF $2D $D3
+$F1 $09 $C2 $00
+
+
+
+#0 $F4 $02 w150 t50 V@1Intro
+@30 l8 o4 $E3 $60 $2F
+f+c+g+a16g+8.ab>c+	;2
+$E3 $60 $2B
+<f+8.>c+8.c+4<b>c+e	;3
+$E3 $80 $31
+<f+8.g+8.ag+8.e8.c+	;4
+/
+t57 @31 VPiano y10
+(67)[<f+c+ag+16f+ l16 f+g+ag+e<b>d8.	;5
+<a8>d8f+e8eg+8b8e8	;6
+f+8c+8a8g+f+8f+g+ag+ab>c+<	;7
+d8f+8a8de8eg+8b8g+8]	;8
+
+y12 o3
+(0)[f+8c+8a8g+f+8f+g+ag+ab>c+	;9
+<d8f+8a8de8<b>eg+b8g+8	;10
+f+8c+8a8g+>f+8ec+<ba8g+a]	;11
+(6)[def+8af+dg+8eg+e bg+b>e]	;12
+
+;v180
+
+(0)(6)	;16
+(1)[<f+8d8 aq7af+q7fg+f+ q7af+q7f f+g+a c+f+g+a]	;17
+(2)[g+8e8 b8ab g+eb>e< bag+e]	;18
+(3)[f8c+g+ >c+8c+<g+ f8.f> f8g+f]	;19
+(9)[<f+8c+8 aq7af+q7fg+f+ q7af+q7f f+g+a c+bag+]
+(1)
+(2)	;22
+
+[[ (0)(6) ]]3	;26
+
+(1)(2)(3)(9)(1)(2)
+
+(0)(6)(1)(2)(3)(9)(1)(2)
+
+y10 (67)
+y12
+(0) o3def+8a8 dg+8eg+8 b8g+>e	;58
+
+;[[r2]]255
+
+#1 VIntroPiano @31 o3 y12 l4
+(100)[f+2g+2	;2
+ag+gf+
+f+2g+2]
+/
+@32 VStr
+[[ (103)[f+1d2e2]6
+
+l1 (104)[f+g+c+c+f+g+] ]]2	;22
+
+(103)2 (104)
+
+(103)4
+
+;[[r2]]255
+
+#2 VIntroPiano @31 o3 l4 ;y10
+(200)[d2e2	;2
+f+fed+
+d2e2]
+/
+@32 VStr
+(203)[c+1<a2b2]6
+
+> l1 (206)[c+e<g+a>c+]e	;22
+
+(203)6
+(206) e2.
+
+VReedRomance @41 $FA $03 $7F p12,12,52 o5
+e8c+8 f+1.. l32 q7cfed+dc+c<ba+q7f	;42
+$DF $FA $03 $00
+
+@32 VStr (203) (206) o3e1
+
+(203)4
+
+;[[r2]]255
+
+
+
+#4 v80 @33 p12,52,45 o4
+f+1 $DF 
+
+@39 VIntroPianoEc y13 l4
+o3 c+<bba+
+a2b2
+y10
+$F4 $03 / l16 VHihat o4
+Kc8.c8.c8.c8.c8ccccc8 c8.c8.c8ccccc8.	;6+
+c8.c8.c8.c8ccccc8 c8cc8 cc8 
+
+@36 o2 VBass l16 ;$F4 $03
+b4 $DD $00 $30 f+	;8
+(400)[f+8c+a>c+8<c+ef+c+ag+f+g+ac+	;9
+d<a>df+af+de8<b>eg+bag+e	;10
+f+g+ab>c+r<c+ef+c+ag+f+ef+g+	;11
+df+df+af+deree>c+<beag+]2	;12-16
+(401)[f+daf+ arf+a >dc+<ba g+rf+g+	;17
+eg+b8 c+ef+g+ erg+e e8c+e	;18
+frc+r g+rf>c+8<bag+ frc+f	;19
+f+g+a>c+< c+f+g+a >c+<ag+a g+f+c+8	;20
+def+a >c+<af+>c+< ag+f+a f+edf+	;21
+eg+b>e e<eg+b e<b>ag+ er<b>g+]	;22
+(400)3	;30
+(401)
+
+(400)
+(401)
+
+r1^1 o4
+v255 Mc1...c8 	;54
+c1^1	;56
+c1...c8
+
+
+;[[r2]]255
+
+#5  l16 VIntroPianoEc
+@39 (100) v255 o4
+/ $F4 $03 
+Mc1...c8
+c2..c8c2. 
+v200 Scccc $F4 $03
+@31 o3 l16 y8 VPiano
+(500)[c+8<a8>f+8ec+8c+ef+ef+g+a	;9
+<a8>d8f+8<ab8>e<g+>eg+8e8	;10
+c+8<a8>f+8e>c+8<bag+f+8ef+]	;11
+(506)[<a>c+d8f+d<a>e8<b>e<b]	;12
+ @38  l8 y10 p12,8,48 VTrumpet o3 c+4	;12
+(504)[f+8.g+8.a4g+ab>c+8.<f+8.>c+<b8.a8.g+	;14
+a8.g+8.e4 c+ef+	;15
+ab>c+<ab>c+eg+	;16
+f+4^16 r16 f+ f+8.g+8.a	;17
+g+4.e4.<b4	;18
+>c+4.f4.c+4	;19
+f+4c+g+4.a4	;20
+f+8.g+8.a4f+g+a	;21
+g+8.e8.g+bag+e	;22
+f+1..q7af32e32d+32d32c+32c32<b32b-32q7f]	;24
+
+r1^1
+@30 $DF v150 o4 f+4
+r1^1^1.
+
+@41 VReedRomance $FA $03 $7F o4 p12,12,52 l8
+c+4 f+q7ac+q7f g+q7ac+q7f a4 b>c+<	;31
+f+8.>c+8.<f+ b8.>c+8.e	;32
+f+4.e16f+16 ec+<b>c+4^16	;33
+<f+8.>c+16r16<b8.a8.g+		;34
+a8.g+8.f+ r4 c+f+	;35
+a8.g+8.e c+8.e8.c+	;36
+ff+ g+f c+d+ff+	;37
+l16 g+f+g+b> c+<b>c+e l8 f+rc+e	;38
+f+4.f+f+8.g+8.a	;39
+g+4.b4g+8 $FA $03 $00
+
+@38 l8 y10 o3 p12,8,48 VTrumpet
+q7c e8c+8 q7f
+(504)
+
+r1^1
+@32 VStr o2 y8 $DF
+(300)[a1f+2g+2]2
+;[[r2]]255
+
+#3 VStr @31 y8 o2 l4
+a2b2	;2
+>c+<bba+
+a2b2
+/
+@32 VStr
+(300)2
+
+l16 o4 $F4 $03 y10
+Mc8cc Sc8 Mc4c8Sc8Mc8	;9
+(390)[Mc8.c Sc8 Mc4c8 Sc8Mc8]2	;11
+Mc8.c Sc8 Mc4c8 Sc8cc	;12
+
+@31 $F4 $03 VPiano o3 l16 y8 (500)(506) g+eg+b	;16
+
+(301)[c+8<a8> f+q7ac+q7fec+ q7ac+q7f c+ef+< a>c+ef+]	;17
+(302)[e8<b8> g+8f+g+ e<b>g+b g+f+ec+]	;18
+(303)[c+8<g+>f g+8g+f c+8.c+ g+8>fc+]			;19
+(309)[<c+8<a8> f+q7ac+q7fec+ q7ac+q7f c+ef+< a>g+f+e]
+(301)
+(302)
+
+[[ (500)(506)o3g+eg+b ]]3
+
+(301)(302)(303)(309)(301)(302)
+
+(500)(506)g+eg+b(301)(302)(303)(309)(301)(302)
+
+VStr y8 @32 (300)2 ;(500)(506)g+eg+b
+@31 VPiano (500) o2a>c+d8f+8 <a>e8<b>e8 g+8eb	;58
+
+
+
+;[[r2]]255
+
+#6 v140 @39
+y7 (200)
+o4 v200 $F4 $03 / $F4 $03
+
+y10 @30 f+4
+[r2]7  o4 l16 VHihat
+$F4 $03 Kcccc $F4 $03
+@32 y8 VStr
+(300)2
+$F4 $03 y10
+(664)[Cym v90 c4 o4 v200 Sc8Mc4c8Sc8Mc8]	;13
+
+(390)6	;19
+(391)[Mc8.c Sc8 Mc4 Sc8c8cc]	;20
+(390)
+(391)	;22
+
+(390)8	;30
+
+(664)
+(390)6
+(391)
+
+v90Splc8.v200Mc Sc8v90Splc4v200Mc8 v90Splc8v200Mc8	;39
+v90Splc8.v200Mc Sc8v90Splc4v200Sc8 v90Splc8v200Scc	;40
+
+v90Cymc8v200Sc8 (680)[Mc8Sc8]2 Mc8Scc	;41
+(678)[ [[Mc8Sc8]]3 Mc8Scc]	;42
+(680)2 Mc8Ucc Mc8Scc	;43
+Uccc8 c8Sc8 (680) Mc8Scc	;44
+v90Splc8v200Sc8 (680) (679)[Mc8Scc]2	;45
+(680) (679)3	;46
+(680)2 Mc8Uc8 cccc	;47
+(680)3 (679)	;48
+v90Splc8v200Sc8Mc8 v90Splc8v200McUcc8 v90Splc8v200Scc	;49
+v90Splcv200Ucc8c8 v90Splc8v200Mc8Sc8 v90Splc8v200Scc	;50 to get rid of the f+ when looping
+
+[r2]15 r4
+
+VHihat K o4 c32c16.c=23 v0 ^=1	;58
+
+;[[r2]]255
+
+#7
+VIntroPianoEc @39
+o2 l4 y13
+a2b2
+
+r1^1
+/
+[r2]8
+l16
+K y10 o4 VHihat $F4 $03
+c8cc c8cc cccc32c32 c8cc	;9
+ccc4 c32c32c32c32 ^8cc <g8>[[c]]9	;10+
+c32c16. c8c c8cc	;11
+c32c32ccc c8cc c8cc
+@31 y10 v180 $F4 $03
+o3 g+beb
+
+v200 @32 y8
+(300)2
+
+o2 l1 (703)[abff+ab]	;22
+
+(300)6
+(703)
+
+(300)2
+(703)
+
+r=1536
+;[[r2]]255
+

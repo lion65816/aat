@@ -46,6 +46,7 @@ Locals:
 2C  117 Fight Against a Stronger Monster.txt
 2D  Sparkster - Lakeside.txt
 2E  voile, the magic library.txt
+2F  Journey to Silius - Stage 2 (SMW).txt
 30  StillOfTheNight.txt
 31  FFMQ - Battle 1.txt
 32  Storm Eagle Sampled.txt
@@ -72,7 +73,7 @@ Locals:
 4A  London (SMW).txt
 4B  Zombies Ate My Neighbours - Level 2.txt
 4C  CUSTOM - Badlands.txt
-4D  Homestuck - 'Showtime'.txt
+4D  Bonk's Adventure - Boss 1.txt
 4E  Mario Forever - Apoplexy Tanks (Better Panning + Looped).txt
 4F  07 The Girl Who Stole the Star.txt
 50  Yukari Space.txt
@@ -99,11 +100,17 @@ Locals:
 70  rambirumble.txt
 73  Opus 13.txt
 74  Title Bells.txt
+75  Infinite Possibilities.txt
 76  seascape.txt
 77  Nightmares of the Past.txt
 78  Kaze.txt
 79  midnight greenhouse.txt
+7A  Peanut Butter Plain.txt
+
 7B  Kirby's Dream Land 3 - Ripple Field 2.txt
+7F  depanneur dream.txt
+80  Mysterious Silence.txt
+81  White Noiz.txt
 82  spaf-05.txt
 83  A Super Mario Thing - Iru.txt
 84  Electric Talk.txt

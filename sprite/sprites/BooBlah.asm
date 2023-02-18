@@ -23,7 +23,7 @@
     !GrowSFXNum = $14
     !SFXBank = $1DFC
     
-    !TimeToAttack = $D0                     ;Timer before stretching
+    !TimeToAttack = $40                     ;Timer before stretching
     !EndAttack = $40                        ;Timer before boo blah goes back to normal
 	
 	!dp = $0000

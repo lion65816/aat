@@ -158,8 +158,8 @@ NameData:
  db "    Bad Day At     "
  db "    the Garden    *"
  ;Level 10C
- db "Go right and defeat"
- db "that idiot         "
+ db "yeah! get down!    "
+ db "   ONE MORE TIME! *"
  ;Level 10D
  db "FINAL CHALLENGE    "
  db "Choose 2 and 5     "
@@ -233,8 +233,8 @@ NameData:
  db "Welcome to new     "
  db "world              "
  ;Level 125
- db "This was a triuphm!"
- db "                   "
+ db " The Purkinje Tree "
+ db "      Ruins       *"
  ;Level 126
  db "  Switching        "
  db "    Difficulties  *"
@@ -245,7 +245,7 @@ NameData:
  db "Nearly like title  "
  db "screen             "
  ;Level 129
- db "GO BACK            "
+ db "Super Easy Going   "
  db "                   "
  ;Level 12A
  db "Simple vine level  "
@@ -269,13 +269,13 @@ NameData:
  db "Blue Yoshi Lake    "
  db "                   "
  ;Level 131
- db "TO THE SPECIAL TOWN"
- db "                   "
+ db "   Killy Killer    "
+ db "     Volcano      *"
  ;Level 132
  db "Short level but    "
  db "long level name    "
  ;Level 133
- db "STAR ROAD          "
+ db "Idiom Factory II   "
  db "                   "
  ;Level 134
  db "  Sweet Paradise   "
@@ -287,7 +287,7 @@ NameData:
  db "Who put Touhou     "
  db "in my hack??       "
  ;Level 137
- db "STAR ROAD          "
+ db "Rift Collapse      "
  db "                   "
  ;Level 138
  db "Weird Teal House   "

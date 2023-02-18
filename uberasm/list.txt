@@ -23,10 +23,15 @@ level:
 054	PressuredWater.asm
 055	PressuredWater.asm
 05E	FilterYoshi_ConstantAutoscroll5E.asm
+060	DisableLR.asm
 080	LV135.asm
 090	Gradient110.asm
 0A0	DisableLR.asm
 0B0	DisableLR.asm
+0B1     HDMAGradientCamB1.asm
+0B2     DisableADownStatusB.asm
+0B3     HDMAGradient125.asm
+0B4     statusbarremove.asm
 0C0	DisableLR.asm
 0D0	HDMAGradient.asm
 0E0	HDMAGradient.asm
@@ -49,7 +54,11 @@ level:
 11E     PitCode.asm
 121	FilterYoshi.asm
 122	FilterYoshi.asm
+125     HDMAGradient125.asm
 126	onoff.asm
+129	LV129.asm
+131	LV131.asm
+
 135	LV135.asm
 136	lvlfilter.asm
 1B0	redswitch.asm

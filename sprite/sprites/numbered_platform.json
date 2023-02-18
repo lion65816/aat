@@ -52,8 +52,8 @@
   "AsmFile": "numbered_platform.asm",
   "ActLike": 54,
   "Type": 1,
-  "Extra Property Byte 1": 2,
-  "Extra Property Byte 2": 2,
+  "Extra Property Byte 1": 0,
+  "Extra Property Byte 2": 0,
   "Additional Byte Count (extra bit clear)": 1,
   "Additional Byte Count (extra bit set)": 1,
   "Map16": "gBmQGYEZkRmCGZIZgxmTGaAZsBmhGbEZohmyGaMZsxmEGZQZhRmRGYYZkhmHGZcZiBmYGYkZmRmKGZoZixmbGYwZnBmNGZ0ZjhmeGY8ZnxnAGdAZwRnRGcIZ0hnDGdMZxBnUGcUZ1RnGGdYZxxnXGQ==",
@@ -116,15 +116,7 @@
       "Extra Property Byte 1": 0,
       "Extra Property Byte 2": 0,
       "Extra Property Byte 3": 0,
-      "Extra Property Byte 4": 0,
-      "Extra Property Byte 5": 0,
-      "Extra Property Byte 6": 0,
-      "Extra Property Byte 7": 0,
-      "Extra Property Byte 8": 0,
-      "Extra Property Byte 9": 0,
-      "Extra Property Byte 10": 0,
-      "Extra Property Byte 11": 0,
-      "Extra Property Byte 12": 0
+      "Extra Property Byte 4": 0
     }
   ]
 }

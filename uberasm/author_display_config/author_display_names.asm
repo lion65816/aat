@@ -46,7 +46,7 @@ db "SAJewers             " ; 108
 db "SAJewers             " ; 109
 db "DJBuckley            " ; 10A
 db "levelengine          " ; 10B
-db "                     " ; 10C
+db "Catabo               " ; 10C
 db "                     " ; 10D
 db "SAJewers             " ; 10E
 db "Big Brawler          " ; 10F
@@ -71,11 +71,11 @@ db "PSI Ninja            " ; 121
 db "PSI Ninja            " ; 122
 db "PSI Ninja            " ; 123
 db "                     " ; 124
-db "                     " ; 125
+db "Bumpty               " ; 125
 db "                     " ; 126
 db "Scarfley             " ; 127
 db "                     " ; 128
-db "                     " ; 129
+db "4season              " ; 129
 db "                     " ; 12A
 db "                     " ; 12B
 db "                     " ; 12C
@@ -83,13 +83,13 @@ db "tangy                " ; 12D
 db "                     " ; 12E
 db "                     " ; 12F
 db "                     " ; 130
-db "                     " ; 131
+db "4season              " ; 131
 db "                     " ; 132
-db "                     " ; 133
+db "Big Brawler          " ; 133
 db "levelengine          " ; 134
 db "4season              " ; 135
 db "4season              " ; 136
-db "                     " ; 137
+db "Big Brawler          " ; 137
 db "Gbreezesunset        " ; 138
 db "Big Brawler          " ; 139
 db "Gbreezesunset        " ; 13A

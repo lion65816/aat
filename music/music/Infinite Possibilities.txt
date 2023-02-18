@@ -1,0 +1,581 @@
+;==========================================;
+;	SPC Generator
+;==========================================;
+
+#SPC
+{
+	#title "Infinite Possibilities" ; ~ Infinity Mijinion (SNES Remix)
+	#game "Mega Final Countdown X6"
+	#author "Akemi Kimura"
+	#comment "arr. Hooded Edge"
+	#length "auto"
+}
+
+;==========================================;
+;	Song Pitch
+;==========================================;
+
+	#define PITCH 1 ; Choose between 1 - 2
+	#define VOICE 2 ; Choose between 1 - 2
+
+;=================| Pitch |==================;
+
+;	1 = Pitch will be on the f# minor (Original)
+;	2 = Pitch will be on the g minor (Custom)
+
+;=================| Voice |==================;
+
+;	1	=	Enables the voice clip, but disables Thunder & P-Switch (Voice Enabled)
+;	2	=	Disables the voice clip (Voice Disabled)
+
+;==========================================;
+;	Samples
+;==========================================;
+
+#path "WTF-IS-A-MIJINION"
+
+;==========================================;
+
+#if VOICE == 1
+#SAMPLES
+{
+	"../default/00 SMW @0.brr"
+	"../optimized/01 SMW @1.brr"
+	"../optimized/02 SMW @2.brr"
+	"../optimized/03 SMW @3.brr"
+	"../optimized/04 SMW @4.brr"
+	"../optimized/05 SMW @8.brr"
+	"../optimized/06 SMW @22.brr"
+	"../optimized/07 SMW @5.brr"
+	"../optimized/08 SMW @6.brr"
+	"../EMPTY.brr"
+	"../optimized/0A SMW @9.brr"
+	"../optimized/0B SMW @10.brr"
+	"../optimized/0C SMW @13.brr"
+	"../optimized/0D SMW @14.brr"
+	"../optimized/0E SMW @29.brr"
+	"../optimized/0F SMW @21.brr"
+	"../EMPTY.brr"
+	"../optimized/11 SMW @17.brr"
+	"../optimized/12 SMW @15.brr"
+	"../EMPTY.brr"
+}
+#endif
+
+
+#if VOICE == 2
+#SAMPLES
+{
+	"../default/00 SMW @0.brr"
+	"../optimized/01 SMW @1.brr"
+	"../optimized/02 SMW @2.brr"
+	"../optimized/03 SMW @3.brr"
+	"../optimized/04 SMW @4.brr"
+	"../optimized/05 SMW @8.brr"
+	"../optimized/06 SMW @22.brr"
+	"../optimized/07 SMW @5.brr"
+	"../optimized/08 SMW @6.brr"
+	"../EMPTY.brr"
+	"../optimized/0A SMW @9.brr"
+	"../optimized/0B SMW @10.brr"
+	"../optimized/0C SMW @13.brr"
+	"../optimized/0D SMW @14.brr"
+	"../optimized/0E SMW @29.brr"
+	"../optimized/0F SMW @21.brr"
+	"../optimized/10 SMW @12.brr"
+	"../optimized/11 SMW @17.brr"
+	"../optimized/12 SMW @15.brr"
+	"../optimized/13 SMW Thunder.brr"
+}
+#endif
+
+#SAMPLES
+{
+	"DKNI4 Synth Brass.brr"
+	"Chrono Elec Piano 2.brr"
+	"Plok Overdrive.brr"
+	"KDL3 Trumpet.brr"
+
+	"R&RR Overdrive.brr"
+	"Wind String Ens.brr"
+	"RM&F Finger Bass.brr"
+
+	"Yasui Snare.brr"
+	"TMKD Inferno Kick.brr"
+	"S-550 LA Tom.brr"
+	"TR-909 Hi-Hat.brr"
+	"R-8 Ride Cym.brr"
+	"R-8 Crash Cym.brr"
+}
+
+;==========================================;
+;	Instruments
+;==========================================;
+
+#INSTRUMENTS
+{
+	"Yasui Snare.brr" $9F $F5 $B8 $15 $00 ; @30 snare
+	"TMKD Inferno Kick.brr" $CF $FA $B8 $14 $00 ; @31 bass drum
+	"S-550 LA Tom.brr" $FF $F4 $B8 $10 $00 ; @32 tom
+	"TR-909 Hi-Hat.brr" $FF $FC $B8 $0B $00 ; @33 closed hi-hat
+	"TR-909 Hi-Hat.brr" $FF $F4 $B8 $0B $00 ; @34 open hi-hat
+	"R-8 Ride Cym.brr" $9F $F2 $B8 $0A $00 ; @35 ride cymbal
+	"R-8 Crash Cym.brr" $9F $F2 $B8 $0A $00 ; @36 crash cymbal (c+1)
+	"R-8 Crash Cym.brr" $9F $F3 $B8 $0A $00 ; @37 crash cymbal (c+4)
+
+	"DKNI4 Synth Brass.brr" $AF $AA $B8 $03 $00 ; @38 synth brass
+	"../default/00 SMW @0.brr" $FF $E0 $B8 $03 $00 ; @39 square
+	"Chrono Elec Piano 2.brr" $FF $EE $B8 $08 $04 ; @40 electric piano
+	"Plok Overdrive.brr" $FF $EA $B8 $04 $00 ; @41 overdrive
+	"KDL3 Trumpet.brr" $FA $EA $B8 $04 $00 ; @42 trumpet
+
+	"R&RR Overdrive.brr" $FC $E0 $B8 $03 $50 ; @43 dist guitar
+		"R&RR Overdrive.brr" $FF $E4 $B8 $03 $50 ; @44 dist guitar (2)
+	"Wind String Ens.brr" $FA $E0 $B8 $01 $E8 ; @45 string chord
+	"RM&F Finger Bass.brr" $FE $E0 $B8 $03 $7D ; @46 fingered bass
+		"RM&F Finger Bass.brr" $FE $E4 $B8 $03 $7D ; @47 fingered bass (2)
+}
+
+;==========================================;
+;	Main Macros
+;==========================================;
+
+	"@e = $F4 $03"
+	"%l = $F4 $01"
+
+	"($EE-X) = $EE $00"
+	"($FA-3X) = $FA $03 $00"
+	"$XR-X = $FA $02 $00"
+		"$XR- = $FA $02 $"
+	"($E8-X) = $E8 $00 $00"
+		"($E8-0) = $E8 $FF $1A" ; fade out
+
+	"@rest = r1"
+
+;==========================================;
+;	Note Commands
+;==========================================;
+
+	"u = < @p c ($FA-3X) >"
+	"u16 = < @p c16 ($FA-3X) >"
+	"u8 = < @p c8 ($FA-3X) >"
+
+	"n+ = ($FA-3X) b+ @p"
+		"n+ n+ = ($FA-3X) b+ b+ @p"
+	"n+16 = ($FA-3X) b+16 @p"
+		"n+16 n+16 = ($FA-3X) b+16 b+16 @p"
+	"n+8 = ($FA-3X) b+8 @p"
+		"n+8 n+8 = ($FA-3X) b+8 b+8 @p"
+	"n+4 = ($FA-3X) b+4 @p"
+		"n+4 n+4 = ($FA-3X) b+4 b+4 @p"
+	
+	"k = @e c+ ($FA-3X) @e"
+	"k8 = @e c+8 ($FA-3X) @e"
+		"k8^ = @e c+8^ ($FA-3X) @e"
+		"k8^32 = @e c+8^32 ($FA-3X) @e"
+		"k8. = @e c+8. ($FA-3X) @e"
+	"k4 = @e c+4 ($FA-3X) @e"
+		"k4^ = @e c+4^ ($FA-3X) @e"
+		"k4^16 = @e c+4^16 ($FA-3X) @e"
+			"k4^16. = @e c+4^16. ($FA-3X) @e "
+		"k4. = @e c+4. ($FA-3X) @e"
+	"k2 = @e c+2 ($FA-3X) @e"
+		"k2. = @e c+2. ($FA-3X) @e"
+	"k1 = @e c+1 ($FA-3X) @e"
+		"k1. = @e c+1. ($FA-3X) @e"
+	
+	"kx = c+ ($FA-3X)"
+	"kx8 = c+8 ($FA-3X)"
+		"kx8^ = c+8^ ($FA-3X)"
+		"kx8^32 = c+8^32 ($FA-3X)"
+		"kx8. = c+8. ($FA-3X)"
+	"kx4 = c+4 ($FA-3X)"
+		"kx4^ = c+4^ ($FA-3X)"
+		"kx4^32 = c+4^32 ($FA-3X)"
+		"kx4^16 = c+4^16 ($FA-3X)"
+			"kx4^16. = c+4^16. ($FA-3X)"
+		"kx4. = c+4. ($FA-3X)"
+		"kx4.. = c+4.. ($FA-3X)"
+	"kx2 = c+2 ($FA-3X)"
+		"kx2. = c+2. ($FA-3X)"
+	"kx1 = c+1 ($FA-3X)"
+		"kx1. = c+1. ($FA-3X)"
+
+;==========================================;
+;	Remote Commands
+;==========================================;
+
+	(!800)[ $F4 $09 ]
+	(!810)[ $ED $7F $F8 ]
+	(!820)[ $ED $7F $F9 ]
+
+	"@cmd_main = (!800, -1) (!810, 3)"
+	"@cmd_dist = (!800, -1) (!820, 3)"
+	
+	"@cmd_main_off = (!800, 0) (!810, 0)"
+	"@cmd_dist_off = (!800, 0) (!820, 0)"
+
+;==========================================;
+;	Instrument Macros
+;==========================================;
+
+		"(F00) = $ED $7F $F4 ^8"
+		"(F10) = $ED $7F $F2 ^4"
+		"(F20) = $ED $7F $F1 ^2"
+		"(F30) = $ED $7F $EF ^1"
+
+	"@synbrass = @38 v255 | $DE $16 $0A $2F"
+		"(V00) = v160"
+	"@square = @39 v230 | $DF"
+	"@epiano = @40 v244 | $DE $16 $0A $2F"
+	"@overdrive = @41 v238 | $DE $20 $07 $42"
+	"@trumpet = @42 v240 | $DE $20 $07 $28"
+
+	"@distgtr = @43 o4 v155 | $E8 $BF $E4"
+		"(A00) = @44"
+	"@strchd = @45 v185 | $DF"
+	"@bass = @46 o4 v215"
+		"(A10) = @47"
+
+;==========================================;
+;	Percussion Macros
+;==========================================;
+
+	"@p = $FA $03 $3F"
+
+	"@snare = @30 v255 y10"
+	"@kick = @31 v230 y10"
+	"@tom = @32 v250"
+
+	"@closed = @33 v181 y9"
+	"@open = @34 v179 y10"
+	"@ride = @35 v215 y10"
+	"@crash = v255 y10 | $FA $03 $DF"
+		"@crash+ = @36 | @crash"
+		"@crash- = @37 | @crash"
+
+;==========================================;
+;	Echo Values
+;==========================================;
+
+	$EF $FD $40 $C5 ; OFF - #1
+	$F1 $06 $A0 $01
+	$F4 $02
+
+;==========================================;
+;	DON'T MESS WITH THIS
+;	IF YOU DON'T KNOW WHAT YOU'RE DOING!!!
+;==========================================;
+
+#if PITCH == 1 ; Original
+;	$E4 $00 ; f# minor
+	"@zero = $DF"
+	"@mijinion = "
+#endif
+
+#if PITCH == 2 ; Custom
+	$E4 $01 ; g minor
+	"@zero = h-1 | $DF"
+	"@mijinion = h0"
+#endif
+
+;==========================================;
+;==========================================;
+
+#if VOICE == 1
+
+#SAMPLES
+{
+	"Chip Voice 9 VL.brr"
+}
+
+#INSTRUMENTS
+{
+	"Chip Voice 9 VL.brr" $FF $EA $FF $03 $50 ; @48 sfx
+}
+
+	"@sfx = @48 o4 v255 y10 | $FA $03 $FF | c8.^64 $ED $7F $F8 ^32. ($FA-3X)"
+
+#endif
+
+;==========================================;
+;	Extras
+;==========================================;
+
+	"CHANNEL # = #"
+
+;==========================================;
+;	Global Volume / Tempo
+;==========================================;
+	w125 t59
+;==========================================;
+
+;==========================================;
+	CHANNEL #0 | @rest
+;==========================================;
+
+@strchd o4 y7 | l1
+c+^ d^ ^^ e f
+
+@kick o3 | @e | @zero | @p | l8
+(005)[ c16 @closed q7D n+16 q7F @kick c16 @closed q7D n+16 q7F @snare c @kick 
+c16 @snare c c16 @kick c @snare c4 @kick ]
+[[ (000)[ c c @snare c @kick c16 @snare c c16 @kick c @snare ] c4 @kick ]]2
+(000) c c16 c16 @kick
+(005) [[ (000) c4 @kick ]]2 (001)[ c @snare c c @kick c16 @snare c c16 c c32 c32 c16 c16 c16 ] / @kick
+
+(005) [[ (000) c4 @kick ]]2 (000) c c16 c16 @kick
+(005) [[ (000) c4 @kick ]]2 (001) @kick
+
+[[ c r @snare c4. @kick c @snare c4 @kick
+(020)[ c r @snare c @kick c r16 c r16 @snare ] c4 @kick
+(021)[ c r @snare c @kick c r c @snare c4 @kick ]
+(020) c c16 c16 @kick ]]2
+
+c r c r c r @snare c c16 c16 @kick
+
+(005) (030)[ c r @snare c4 @kick c16 @snare c. c4 @kick ]
+(000) (031)[ c4 @kick c r @snare c4 @kick c16 @snare ] c. c c16 c16 @kick 
+(005) (030) (000) (031) c @kick c16 @snare c24 c24 c24 c16 c16 @kick
+
+(021) (020) c4 @kick (021) (020) c c16 c16 @kick 
+(021) [[ (020) c4 @kick ]]2 c r @snare c4 c24 c24 c24 [[ c16 ]]6
+
+;==========================================;
+	CHANNEL #6 | @cmd_main @rest
+;==========================================;
+
+@synbrass o4 y12 | l16
+q7D c+ r c+ r c+ r a4 f+ r f+ r > c+ r < a1 
+> d4. d e f+4 d4 < a1 
+a r g+ r a r > d4 c- r c+ r f+ f+ d1 
+e4. e f+ g+2 g+2^ < 
+@cmd_main_off
+
+@zero | @e
+q7F @tom y13 d y12 d y11 d y10 d < y9 b y8 g+ y7 f >
+
+@crash- k4 @closed (600)[ c q7D c q7F ]5  (601)[ @kick u @closed q7D c q7F ] (600)7 @open c8 @closed
+ (600)7 (601) (600)7 @open c8 @closed
+@crash- k4 @closed (600)5 (601) (600)7 @open c8 @closed
+ (600)7 (601) (600)5 @tom y13 d d y12 d < y11 b y9 g+ y7 f > /
+
+@crash- k4 (610)[ @open c8 @closed c q7D c q7F ]2 (611)[ @open c8 @kick u @closed q7D c q7F ] 
+[[ (610)3 (611) ]]3
+@crash- k4 (610)2 (611)
+[[ (610)3 (611) ]]2
+(610)3 @tom y7 d < y9 b y11 g+ y13 f >
+
+[[ @crash- k4 @ride [ c4 ]15 ]]2
+
+@tom y13 d d y12 d8 < y11 b8 y10 ^8 y9 g+ g+ y8 g+8 y7 f f y6 f8 >
+
+ @crash- k4 (630)[ @open c @closed q7D c q7F c q7D c q7F ]2 (610) 
+ (630)2 (631)[ @open c @closed q7D c q7F q7D c q7F @kick u ] (611)
+(630)3 (610) (630)2 (631) (611)
+@crash- k4 (630)2 (610) (630)2 (631) (611)
+(630)3 (610) (630) (611) @tom y7 d y8 d < y9 b y10 b y11 g+ y12 g+ y13 f y14 f >
+
+@crash- k4 @ride [[ c4 ]]15
+@crash- k4 @ride [[ c4 ]]13 @tom y13 d y12 d < y11 b y10 b y9 g+ y8 g+ y7 f y7 f >
+
+;==========================================;
+	CHANNEL #1
+;==========================================;
+
+@bass | l4
+c+2 $DD $20 $48 f+ ^2
+
+(A10) ^1. f+ e 
+d1. d c+ c-1. c- c- 
+e1 c+1 < 
+
+l8
+[[ [ f+ ]16 [ b ]8 [ > c+ < ]8 ]]2 /
+
+[[ [ f+ ]8 [ a ]8 [ b ]8 [ > c+ ]8 ]]2
+
+[[ d ]]8 (120)[ d d d [[ e ]]5 ]3
+[[ d ]]8 (120)2
+[[ c+ ]]8 d d d d e e e e < 
+
+[[ (130)[ a a r a r4. a ] ; a
+$XR-FE (130) ; g
+$XR-FC (130) ; f
+$XR-FE (130) ; g
+$XR-X ]]2
+
+[[ d ]]5 $XR-F4 (120) $XR-X [[ e ]]3 [[ f ]]8 [[ e ]]8
+[[ d ]]5 $XR-F4 (120) $XR-X [[ e ]]19
+
+;==========================================;
+	CHANNEL #2 | @cmd_main @rest
+;==========================================;
+
+@synbrass o4 y9 | l16
+(269)[ f+ r e r f+ r > c+4 < a r b r > e r c+1
+f+4. f+ g+ a4 f+4 c+1
+c+ r c- r c+ r f+4 d r e r a b f+1
+g+4. g+ a b2 ] > c+1 <
+
+@square y10 | @cmd_main_off
+q3F [[ [ f+ f+ c+ e f+ f+ e f+ f+ f+ c+ e f+ f+ c+ c+ ]2
+f+ f+ d e f+ f+ e f+ f+ f+ d e f+ f+ d d
+f+ f+ c+ e f+ f+ g+ a b a f+ e g+ f+ e c+ ]]2 / 
+
+@epiano o5 y10 | @cmd_main | l8
+q7F (210)[ c-2 c-. c+. e c+2 f+4 e4 ] < a2^16 r16 f+16 g+16 a16 r16 b16 > c+16 e < b4 e2 e16 f+16 >
+(210) a2^16 r16 < f+16 g+16 a16 r16 b16 > c+16 e1
+
+< (220)[ f+2.. e a b > c+ c-2^ c+4. ] < b2 e a b a e2 c+16 e16 >
+(220) c-4 e4. e4 ($E8-0) < b8 g+4 < b8 g+8 e8
+
+#if VOICE == 1
+r2. ($E8-X)
+
+@zero | @cmd_main_off
+@sfx @mijinion
+#endif
+
+#if VOICE == 2
+r1 ($E8-X)
+
+@cmd_main_off
+#endif
+
+@overdrive o3 y9 | l16
+(230)[ a b > c e a4. g a b ] a g d c- b d c- a d c- g d c- a d c- b g d
+(230) > c d e d c- < (231)[ d b+ g d b g d b+ g d > d < ] b g d
+c d e a > c4. c- c d c < b g d > d < g (231) g d
+f g a > c f4. < a b > c d e f g d c- a d c- b d c- a d c- g d < b g
+
+< a8 g8 a8 > c2 c- c d8 g2 < g a b > c d e 
+f8 e8 f8 a2 g a g8 d2^8 c- c d c- 
+c4. c d e8 < a8 > c8 e8 
+a4. g+2^8 b+4. b1. (F00)
+
+;==========================================;
+	CHANNEL #3 | @cmd_dist
+;==========================================;
+
+@distgtr | l4
+c+2 $DD $20 $48 f+ ^2
+
+(A00) ^1. f+ e 
+d1. d c+ c-1. c- c- 
+e1 c+2 $DD $10 $8F f+ ^2 <
+
+l16
+(300)[ f+ r f+ r f+8^32 r32 f+ r f+ f+ r f+ r f+ r ]2 ; f+
+$XR-05 (300) ; b
+$XR-07 (300) ; > c+ <
+$XR-X (300)2 ; f+
+$XR-05 (300) ; b
+$XR-07 (300) ; > c+ <
+$XR-X /
+
+q7F [[ (310)[ f+ r f+ r f+8 f+ r f+ r f+ r f+ r f+ r ]
+$XR-03 (310) ; a
+$XR-05 (310) ; b
+$XR-07 (310) ; > c+ <
+$XR-X ]]2
+
+l2
+> d1 (320)[ d4. e^8 ]3 
+d1 (320)2 c+1 
+d e < 
+
+l8
+[[ (330)[ a a r a r4. a ] ; a
+$XR-FE (330) ; g
+$XR-FC (330) ; f
+$XR-FE (330) ; g
+$XR-X ]]2
+
+q5F [[ d ]]8 [[ e ]]8 [[ f ]]8 [[ e ]]8
+[[ d ]]8 [[ e ]]24
+
+;==========================================;
+	CHANNEL #4 | @rest
+;==========================================;
+
+@strchd o4 y13 | l1
+f+^^^^^ g+^
+
+f+^^ g+ 
+f+^^ g+2.. 
+
+@epiano y10
+q7F e16 f+16 /
+
+@strchd y13
+f+ e f+ g+ 
+f+ a^ g+ 
+
+(410)[ f+^4. g+2^8 f+4. ] g+2^8 f+4. g+2^8 
+(410) g+2^8 ^ 
+d2 e2 
+
+[[ e g f g ]]2
+
+@trumpet o4 y11 | @cmd_main | l16
+q7D d r c r d r f2 e f g r b2.. 
+a r g r a r b+2 b b+ b r g2.. 
+@cmd_main_off
+f4. f g a2 > c4. c-2^8 e4. d1.
+
+@epiano o4 y10
+q7F e f+
+
+
+;==========================================;
+	CHANNEL #7 | @cmd_main @rest
+;==========================================;
+
+@synbrass o5 (V00) | l16
+r8^32 (269) c+4^.
+@cmd_main_off
+
+o3 | @zero | @p | @e
+@snare c24 c24 c24 [[ c ]]6 ($FA-3X) @e
+
+@strchd o4 y7 | @mijinion | l1
+(700)[ c+^ d e ]2 /
+
+(700) c+ e f+ e 
+
+(720)[ d^4. e2^8 d4. ] e2^8 d4. e2^8 
+(720) e2^8 ^ 
+c- 
+
+[[ c d ]]4
+
+d e f e 
+f2 f+2 g+^^
+
+;==========================================;
+	CHANNEL #5 | @rest
+;==========================================;
+
+@strchd o3 y11 | l1
+a^^^ b^^ > c+ <
+
+[[ a^ b > c+ < ]]2 /
+
+a^^ b 
+a > c+ d < b 
+
+(620)[ a ^4. b2^8 a4. b2^8 ] a4. b2^8 
+(620) > c+ < 
+f+2 g+2 
+
+[[ a b ]]5
+
+ b+ b 
+ > d e^^ 
+
+;==========================================;
+;	MML by Hooded Edge
+;==========================================;
+
+#amk 2

@@ -97,6 +97,24 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 61DD:130 conveyer move right fast.asm
 61DE:130 conveyer move right fast.asm
 61DF:130 conveyer move right fast.asm
+703D:25 ScreenExitTeleport.asm
+71F0:25 TeleportBlockB3.asm
+7203:25 SwimSE.asm
+7204:25 SwimSE.asm
+7213:25 QuicksandPit.asm
+7214:25 QuicksandPit.asm
+7223:25 QuicksandPit.asm
+7224:25 QuicksandPit.asm
+7233:25 QuicksandPit.asm
+7234:25 QuicksandPit.asm
+7243:25 QuicksandPit.asm
+7244:25 QuicksandPit.asm
+7253:25 QuicksandPit.asm
+7254:25 QuicksandPit.asm
+7263:25 QuicksandPit.asm
+7264:25 QuicksandPit.asm
+7273:130 TeleportB2.asm
+7274:130 TeleportB2.asm
 
 
 

@@ -1,0 +1,138 @@
+#amk 2
+#path "RFR-Mysterious_Silence"
+#define "Louder_Version" 0
+#samples
+{
+	#default
+	"Wind Noise.brr"
+	"Cyber Space.brr"
+}
+#instruments
+{
+	"Wind Noise.brr"		$F8 $EB $B8 $03 $90
+	"Cyber Space.brr"		$F6 $EA $B8 $02 $00
+}
+#spc
+{
+	#author		"Milon Luxy"
+	#game		"Rockfish Remake"
+#if "Louder_Version" == 0
+	#title		"Mysterious Silence"
+#endif
+#if "Louder_Version" != 0
+	#title		"Mysterious Silence (Louder)"
+#endif
+	#length		"0:25"
+}
+
+
+; ------------------------------------- ;
+;	     Global Commands		;
+; ------------------------------------- ;
+
+;	Master Volume		Tempo (37 bpm)
+	w166			t15
+
+;	Default Length		Loop to Start
+	l64			/
+
+
+; ------------------------------------- ;
+;		 Macros 		;
+; ------------------------------------- ;
+
+; - Instruments -
+"Wind		= @33"
+"Cyber		= @30"
+
+; - Commands -
+"!Detune	= $FA$02"
+"Off		= $00"
+"!Vibrato1	= $DE$0C$12$40"
+"!Vibrato2	= $DE$0C$12$60"
+"!Legato	= $F4$01"
+"!L1		= $DC$30$10"
+"!C1		= $DC$30$0A"
+"!R1		= $DC$30$04"
+
+
+; ------------------------------------- ;
+;		Channel 1		;
+; ------------------------------------- ;
+
+#0
+
+#if "Louder_Version" == 0	q78	#endif
+#if "Louder_Version" != 0	q7F	#endif
+
+@30
+!Detune Off
+[[ y20 o2 c y0 ^64 y20 ^64 y0 ^64 y18 ^64 y2 ^64 y18 ^64 y2 ^64
+y16 ^64 y4 ^64 y16 ^64 y4 ^64 y15 ^64 y5 ^64 y15 ^64 y5 ^64
+y14 ^64 y6 ^64 y14 ^64 y6 ^64 y12 ^64 y8 ^64 y12 ^64 y8 ^64
+y11 ^64 y9 ^64 y11 ^64 y9 ^64 y10 ^=11 !Detune $F4 ^=1 ]]2
+!Detune Off
+[[ y0 o2 c y20 ^64 y0 ^64 y20 ^64 y2 ^64 y18 ^64 y2 ^64 y18 ^64
+y4 ^64 y16 ^64 y4 ^64 y16 ^64 y5 ^64 y15 ^64 y5 ^64 y15 ^64
+y6 ^64 y14 ^64 y6 ^64 y14 ^64 y8 ^64 y12 ^64 y8 ^64 y12 ^64
+y9 ^64 y11 ^64 y9 ^64 y11 ^64 y10 ^=11 !Detune $F4 ^=1 ]]2
+
+; ------------------------------------- ;
+;		Channel 2		;
+; ------------------------------------- ;
+
+#1
+
+#if "Louder_Version" == 0	q73	#endif
+#if "Louder_Version" != 0	q7A	#endif
+
+@31 v240
+!Vibrato1
+o3 !L1 c4 !C1 ^4 !R1 ^4 !C1 ^4
+o2 !L1 b4 !C1 ^4 !R1 ^4 !C1 ^4
+
+; ------------------------------------- ;
+;		Channel 3		;
+; ------------------------------------- ;
+
+#2
+
+#if "Louder_Version" == 0	q73	#endif
+#if "Louder_Version" != 0	q7A	#endif
+
+@31 v240
+!Vibrato2
+o2 !L1 g4 !C1 ^4 !R1 ^4 !C1 ^4
+o2 !L1 f+4 !C1 ^4 !R1 ^4 !C1 ^4
+
+; ------------------------------------- ;
+;		Channel 4		;
+; ------------------------------------- ;
+
+#3
+
+#if "Louder_Version" == 0	q73	#endif
+#if "Louder_Version" != 0	q7A	#endif
+
+@31 v240
+!Vibrato1
+!Legato
+/
+!L1 ^4 !C1 !Legato ^4 o2 !R1 c4 !C1 ^4
+!L1 ^4 !C1 ^4 o1 !R1 !Legato b4 !C1 ^4
+
+; ------------------------------------- ;
+;		Channel 5		;
+; ------------------------------------- ;
+
+#4
+
+#if "Louder_Version" == 0	q73	#endif
+#if "Louder_Version" != 0	q7A	#endif
+
+@31 v240
+!Vibrato2
+!Legato
+/
+!L1 ^4 !C1 !Legato ^4 o1 !R1 g4 !C1 ^4
+!L1 ^4 !C1 ^4 o1 !R1 !Legato f+4 !C1 ^4

@@ -1,0 +1,236 @@
+{
+  "$1656": {
+    "Object Clipping": 0,
+    "Can be jumped on": false,
+    "Dies when jumped on": false,
+    "Hop in/kick shell": false,
+    "Disappears in cloud of smoke": false
+  },
+  "$1662": {
+    "Sprite Clipping": 35,
+    "Use shell as death frame": false,
+    "Fall straight down when killed": false
+  },
+  "$166E": {
+    "Use second graphics page": true,
+    "Palette": 6,
+    "Disable fireball killing": true,
+    "Disable cape killing": true,
+    "Disable water splash": true,
+    "Don't interact with Layer 2": true
+  },
+  "$167A": {
+    "Don't disable cliping when starkilled": false,
+    "Invincible to star/cape/fire/bounce blk.": false,
+    "Process when off screen": false,
+    "Don't change into shell when stunned": false,
+    "Can't be kicked like shell": false,
+    "Process interaction with Mario every frame": false,
+    "Gives power-up when eaten by yoshi": false,
+    "Don't use default interaction with Mario": false
+  },
+  "$1686": {
+    "Inedible": true,
+    "Stay in Yoshi's mouth": false,
+    "Weird ground behaviour": false,
+    "Don't interact with other sprites": true,
+    "Don't change direction if touched": true,
+    "Don't turn into coin when goal passed": false,
+    "Spawn a new sprite": false,
+    "Don't interact with objects": false
+  },
+  "$190F": {
+    "Make platform passable from below": false,
+    "Don't erase when goal passed": false,
+    "Can't be killed by sliding": false,
+    "Takes 5 fireballs to kill": false,
+    "Can be jumped on with upwards Y speed": false,
+    "Death frame two tiles high": false,
+    "Don't turn into a coin with silver POW": true,
+    "Don't get stuck in walls (carryable sprites)": false
+  },
+  "AsmFile": "BigSteely.asm",
+  "ActLike": 54,
+  "Type": 1,
+  "Extra Property Byte 1": 0,
+  "Extra Property Byte 2": 0,
+  "Additional Byte Count (extra bit clear)": 0,
+  "Additional Byte Count (extra bit set)": 0,
+  "Map16": "kJ2AnZGdgZ2SnYKdk52DnZHdgd2Q3YDd4h3yHeMd8x3kHfQd5B30HeNd813iXfJdgB2QHYEdkR2CHZIdgx2THYFdkV2AXZBd4B3wHeEd8R3lHRkcGRwZHPUdGRwZHBkc",
+  "Displays": [
+    {
+      "Description": "Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and that's it. It's the freezy type.",
+      "ExtraBit": false,
+      "Tiles": [
+        {
+          "X offset": 0,
+          "Y offset": 0,
+          "map16 tile": 769
+        },
+        {
+          "X offset": -16,
+          "Y offset": 0,
+          "map16 tile": 768
+        },
+        {
+          "X offset": 16,
+          "Y offset": 0,
+          "map16 tile": 770
+        },
+        {
+          "X offset": 16,
+          "Y offset": -16,
+          "map16 tile": 773
+        },
+        {
+          "X offset": 0,
+          "Y offset": -16,
+          "map16 tile": 772
+        },
+        {
+          "X offset": -16,
+          "Y offset": -16,
+          "map16 tile": 771
+        },
+        {
+          "X offset": 16,
+          "Y offset": -32,
+          "map16 tile": 776
+        },
+        {
+          "X offset": 0,
+          "Y offset": -32,
+          "map16 tile": 775
+        },
+        {
+          "X offset": -16,
+          "Y offset": -32,
+          "map16 tile": 774
+        },
+        {
+          "X offset": -8,
+          "Y offset": -24,
+          "map16 tile": 777
+        },
+        {
+          "X offset": 16,
+          "Y offset": -20,
+          "map16 tile": 779
+        },
+        {
+          "X offset": 16,
+          "Y offset": -4,
+          "map16 tile": 778
+        }
+      ],
+      "X": 0,
+      "Y": 0,
+      "DisplayText": "",
+      "UseText": false
+    },
+    {
+      "Description": "Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and this one is a ground detector also. It's the freezy type.",
+      "ExtraBit": true,
+      "Tiles": [
+        {
+          "X offset": -16,
+          "Y offset": 0,
+          "map16 tile": 768
+        },
+        {
+          "X offset": 0,
+          "Y offset": 0,
+          "map16 tile": 769
+        },
+        {
+          "X offset": 16,
+          "Y offset": 0,
+          "map16 tile": 770
+        },
+        {
+          "X offset": -16,
+          "Y offset": -16,
+          "map16 tile": 771
+        },
+        {
+          "X offset": 0,
+          "Y offset": -16,
+          "map16 tile": 772
+        },
+        {
+          "X offset": 16,
+          "Y offset": -16,
+          "map16 tile": 773
+        },
+        {
+          "X offset": -16,
+          "Y offset": -32,
+          "map16 tile": 774
+        },
+        {
+          "X offset": 0,
+          "Y offset": -32,
+          "map16 tile": 775
+        },
+        {
+          "X offset": 16,
+          "Y offset": -32,
+          "map16 tile": 776
+        },
+        {
+          "X offset": -8,
+          "Y offset": -24,
+          "map16 tile": 777
+        },
+        {
+          "X offset": 12,
+          "Y offset": 0,
+          "map16 tile": 779
+        },
+        {
+          "X offset": -4,
+          "Y offset": 0,
+          "map16 tile": 778
+        }
+      ],
+      "X": 0,
+      "Y": 0,
+      "DisplayText": "",
+      "UseText": false
+    }
+  ],
+  "Collection": [
+    {
+      "Name": "Bowser Bowling Ball/Big Steely",
+      "ExtraBit": false,
+      "Extra Property Byte 1": 0,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    },
+    {
+      "Name": "Bowser Bowling Ball/Big Steely-gd",
+      "ExtraBit": true,
+      "Extra Property Byte 1": 0,
+      "Extra Property Byte 2": 0,
+      "Extra Property Byte 3": 0,
+      "Extra Property Byte 4": 0,
+      "Extra Property Byte 5": 0,
+      "Extra Property Byte 6": 0,
+      "Extra Property Byte 7": 0,
+      "Extra Property Byte 8": 0,
+      "Extra Property Byte 9": 0,
+      "Extra Property Byte 10": 0,
+      "Extra Property Byte 11": 0,
+      "Extra Property Byte 12": 0
+    }
+  ]
+}

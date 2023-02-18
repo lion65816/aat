@@ -93,8 +93,8 @@
 5F venus_shower.cfg
 60 venus_spreadshot.cfg
 61 numbered_platform.json
-62 numbered_platform_2.json
-63 numbered_platform 3.json
+62 rotatinggrayplatform_super_fast.cfg
+63 checkerboard_platforms_super_fast.cfg
 64 numbered_platform 4.json
 65 grey_plat_fast.cfg
 66 grey_plat_slow.cfg
@@ -138,6 +138,14 @@
 97 panser_green.cfg
 98 panser_blue.cfg
 9B VenusVerticalShortSpitTwo.cfg
+A2 CastleBlock.cfg
+A3 grrrol.cfg
+A4 NPC.cfg
+A7 SMM2_Spike.json
+A8 SpikeBall.json
+A9 Suu.cfg
+B0 TeleportOrb.cfg
+B1 BigSteely.json
 B2 silius_shooter.json
 B3 projectile.json
 B7 climbing_net_door.json
@@ -156,6 +164,8 @@ C4 diag_bill_up.cfg
 C5 diag_bill_down.cfg
 C6 vertical_bill_ud.cfg
 C7 falling_fireball_shooter.cfg
+C8 CustomShooter.cfg
+C9 BigSteelyShooter.cfg
 CA sideways_bill_lr.cfg
 
 D0 gusty_generator.cfg

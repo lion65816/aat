@@ -1,0 +1,633 @@
+#amk 2
+
+#spc
+{
+    #title   "Peanut Plain"
+    #game    "Kirby Super Star"
+    #author  "Jun Ishikawa"
+    #comment "Ported by KevinM"
+}
+
+#path "peanut-plain"
+
+#samples
+{
+    #default
+    "03.brr"
+    "06.brr"
+    "07.brr"
+    "0b.brr"
+    "1c.brr"
+    "1d.brr"
+    "22.brr"
+    "23.brr"
+    "27.brr"
+    "2c.brr"
+    "2d.brr"
+    "2e.brr"
+    "2f.brr"
+    "30.brr"
+}
+
+#instruments
+{
+    "03.brr" $fc $e0 $00 $03 $80 ; PATCH003
+    "06.brr" $bf $d4 $00 $0f $00 ; PATCH006 \
+    "07.brr" $ff $ee $00 $0f $00 ; PATCH007 /
+    "0b.brr" $bf $b3 $00 $03 $00 ; PATCH011
+    "1c.brr" $af $a1 $00 $03 $c0 ; PATCH028 \
+    "1d.brr" $bf $d3 $00 $03 $c0 ; PATCH029 /
+    "22.brr" $ff $e0 $00 $03 $00 ; PATCH034
+    "23.brr" $fd $e0 $00 $04 $00 ; PATCH035
+    "27.brr" $8f $e0 $00 $03 $00 ; PATCH039
+    "2c.brr" $ff $e0 $00 $03 $c0 ; PATCH044 / PERC000
+    "2d.brr" $ff $e0 $00 $07 $a0 ; PATCH045 / PERC001
+    "2e.brr" $ff $e0 $00 $07 $a0 ; PATCH046 / PERC002
+    "2f.brr" $ff $e0 $00 $05 $50 ; PATCH047 / PERC003
+    "30.brr" $ff $e0 $00 $07 $a0 ; PATCH048 / PERC004
+}
+
+;==================;
+; Volume  /  Tempo ;
+;==================;
+   w255       t50
+
+;==================;
+;       Echo       ;
+;==================;
+$ef $fe $30 $30
+$f1 $06 $32 $01
+
+;==================;
+;      Macros      ;
+;==================;
+"VCMD_PATCH=$da"
+"VCMD_PANPOT=$db"
+"VCMD_PAN_FADE=$dc"
+"VCMD_VIBRATO_ON=$de"
+"VCMD_VIBRATO_OFF=$df"
+"VCMD_MASTER_VOL_FADE=$e1"
+"VCMD_MASTER_VOLUME=$e6"
+"VCMD_SET_TEMPO=$e2"
+"VCMD_TEMPO_FADE=$e3"
+"VCMD_GLOBAL_TRANSPOSE=$e4"
+"VCMD_PERVOICE_TRANSPOSE=$fa $02"
+"VCMD_TREMOLO_ON=$e5"
+"VCMD_TREMOLO_OFF=$e5 $00 $00 $00"
+"VCMD_VOLUME=$e7"
+"VCMD_VOL_FADE=$e8"
+"VCMD_SUBROUTINE=$e9"
+"VCMD_VIBRATO_FADE=$ea"
+"VCMD_PITCHENV_TO=$eb"
+"VCMD_PITCHENV_FROM=$ec"
+"VCMD_PITCHENV_OFF=$eb $00 $00 $00"
+"VCMD_TUNING=$ee"
+"VCMD_ECHO_ON=$ef"
+"VCMD_ECHO_OFF=$f0"
+"VCMD_ECHO_PARAM=$f1"
+"VCMD_ECHO_VOL_FADE=$f2"
+"VCMD_PITCH_SLIDE=$dd"
+
+"PATCH003=@30"
+"PATCH006=@31"
+"PATCH007=@32"
+"PATCH011=@33"
+"PATCH028=@34"
+"PATCH029=@35"
+"PATCH034=@36"
+"PATCH035=@37"
+"PATCH039=@38"
+"PATCH044=@39"
+"PATCH045=@40"
+"PATCH046=@41"
+"PATCH047=@42"
+"PATCH048=@43"
+"PERC000N=@39o4c"
+"PERC001N=@40o4c"
+"PERC002N=@41o4c"
+"PERC003N=@42o4c"
+"PERC004N=@43o4c"
+"PERC000X=o4c"
+"PERC001X=o4c"
+"PERC002X=o4c"
+"PERC003X=o4c"
+"PERC004X=o4c"
+
+;==================;
+;    Channel #0    ;
+;==================;
+#0
+v255
+y10 q43 PERC004N32. q45 PERC004X32. 
+
+(00)[
+y10 q77 PERC000N16.
+y12 q73 PERC001N32. q72 PERC001X32.
+y10 q77 PERC004N16.
+y12 q73 PERC001N32. q72 PERC001X32.
+]3
+
+y10 q77 PERC000N16.
+y12 q73 PERC001N32. q72 PERC001X32.
+y10 q77 PERC004N16.
+y12 q73 PERC001N32.
+y10 PERC004N32.
+
+(03)[
+y10 q77 PERC000N32.
+y12 q72 PERC001N32. q73 PERC001X32. q72 PERC001X32.
+y10 q77 PERC004N32.
+y12 q72 PERC001N32. q73 PERC001X32. q72 PERC001X32.
+]2
+
+(04)[
+y10 q77 PERC004N16. PERC004X32. q74 PERC004X32.
+y9 PATCH046 q78 o4 d+32. y11 d+32. y8 < b32. y12 f32. y10 q78 d8.
+]
+
+q18 PERC004N16.
+y8 PATCH046 q73 o4 d+32. q74 d+32. 
+
+/
+
+(00)3
+
+(01)[
+y10 q77 PERC000N8.
+PATCH047 y8 q57 o4 d+32. y12 d+32. y9 q17 d+16.
+]
+
+(00)3
+
+(02)[
+y10 q77 PERC000N16. PATCH047 q48 o5 d+16.
+y12 PATCH046 q78 < e32. y8 < b32. y11 f16.
+]
+
+(00)7
+(02)
+(00)3
+(01)
+(00)3
+(02)
+(03)7
+
+y10 q77 PERC000N32.
+y12 q72 PERC001N32.
+y10 q77 PERC004N32.
+y12 q72 PERC001N32.
+PATCH046 y9 q78 o4 d+32. y11 < b32. y8 f32. y12 q78 d32.
+
+[[
+(05)[
+y10 q77 PERC000N16.
+y12 q73 PERC001N16.
+y8 PATCH046
+]
+q76 o2 a16.
+(06)[
+y12 q73 PERC001N32. q72 PERC001X32.
+y10 q78 PERC004N16.
+y12 q73 PERC001N16.
+y8 PATCH046
+]
+q76 o2 a16.
+y12 PATCH047 q77 >>>> c32. d+32.
+]]4
+
+[[
+(05)
+q75 o2 a16.
+(06)
+q75 o2 a16.
+y12 PATCH047 q77 >>>> c32. d+32.
+]]2
+
+[[
+y10 q77 PERC000N16.
+y12 q74 PERC001N16.
+[
+y8 PATCH046 q75 o2 a16.
+y12 q73 PERC001N32. q72 PERC001X32.
+]
+]]4
+
+[[
+y10 q77 PERC000N16.
+y12 q73 PERC001N32. q72 PERC001X32.
+*
+]]2
+
+(04)
+
+PERC004N16.
+PATCH046 q76 o4 y8 d+32. y12 < b32.
+
+;==================;
+;    Channel #1    ;
+;==================;
+#1
+r16.
+
+PATCH006 v254 y10 o2
+[[q17 < g+16. q57 > g+32. g+32.]]3
+[q27 < g+16. q57 > g+32. g+32.]
+[[q17 < a+16. q56 > a+32. a+32.]]3
+q27 < a+16. q56 > a+32. q57 f32.
+*4
+q5b < d16. >
+[[q5b < d32. q57 > d32.]]3
+q3b < d16. r16.
+PATCH007 q27 g8.
+
+/
+
+(10)[
+>> [[q17 < c16. q36 > c16.]]4
+< [[q17 < g16. q37 > g16.]]2
+q18 < g16. r=54 a16.
+[[q36 > a16. q17 < a16.]]3
+q36 > a16.
+[[q29 < e16. q37 > e16.]]2
+q29 < e16. r=54
+
+q1b d16. q37 > d16. <]
+q17 d16. q37 > d16. <
+(13)[
+[[q18 g16. q37 > g16. <]]2
+> [[q17 c16. q36 > c16. <]]3
+q37 c16. q77 c32. < a+32.
+[[q18 g+16. q37 > g+16. <]]2
+]
+
+[[q18 g+16. q37 > g+16. <]]2
+[[q18 g16. q37 > g16. <]]2
+q18 g16. r=54
+
+(10)
+q1b d16. q37 > d16. <
+(13)
+q19 f16. q38 > f16. <
+q18 a+16. q36 > a+16.
+[[q17 c16. q36 > c16. <]]4
+
+(11)[
+[[q19 < f16. q37 > f16.]]2
+q17 < a+16. q36 > a+16.
+q77 < a+32. q76 > a+32. q67 < a+16. >
+]
+[[q17 d+16. q35 > d+16. <]]3
+q77 d+32. q75 > d+32. q67 < d+16.
+
+(11)
+(12)[q1b < d+16. q37 > d+16.]3
+[[q6b < d+32. q67 > d+32.]]2
+(11)
+(12)2
+q1b < d+16. q47 > d+16.
+q7b < d+32. d+32. q67 > d+16.
+[[q17 < g+16. q67 g+32. > g+32.]]7
+q67 < g+32. > g+32. < g+32. > g+32.
+[[q1b < d16. q6b d32. q67 > d32.]]4
+[[q17 < g16. q67 g32. > g32.]]2
+q17 < g8. q37 g8.
+
+;==================;
+;    Channel #2    ;
+;==================;
+#2
+r16.
+
+y10
+v160
+PATCH011
+r16. q56 o4 d+32. < g+32. r16.
+[[q56 > d+32. q57 < g+32. r16.]]3
+[[q56 > f32. q57 < a+32. r16.]]3
+q56 > f32. q57 < a+32. g+32.
+q55 c32. q56 > g32. q57 < c32. >
+[[q57 < g+32. q55 c32. q56 > g32. q57 c32.]]3
+q67 < f32. q65 d32. q66 > g32. q67 c32. <
+f32. d32. q66 > g32. q67 c32. q37 e16. r16.
+
+VCMD_TUNING $3a
+PATCH029
+v170
+q47
+e8.
+
+/
+
+>>
+[VCMD_TUNING $3a
+VCMD_PITCHENV_OFF
+VCMD_VIBRATO_OFF
+PATCH028
+v195
+q58
+c32. q53
+< g32. q58
+> c32 q58
+c32 q57
+c32 q58
+c32. q53
+< g32. q58
+> d32. q53
+< g32. q58
+> e32. q53
+< g32. q58
+> e32. q53
+< g32. q58
+> d32. q53
+< g32. q58
+> c32. q53
+< g32. q58
+b32. q53
+f32. q58
+b32. b32. b32. q53
+f32. q58
+> c32. q53
+< f32. q18
+b16. r=54 q58
+a32. q53
+e32. q58
+a32. a32. a32. q53
+e32. q58
+b32. q53
+e32.
+[[q58 > c32. q53 < e32.]]2
+q58
+b32. q53
+e32. q58
+a32. q53
+e32. q59
+g32. q53
+d32. q58
+g32 q58
+g32 q57
+g32 q59
+g32. q53
+d32. q59
+a32. q53
+d32. q18
+b16. r=54 >
+VCMD_TUNING $00]
+
+VCMD_VIBRATO_ON $12 $0e $14
+PATCH035
+v170
+q18
+< f16. q58
+f32. q57
+f32. q18
+f16. g16. a16. a16. g16. f16. e16. q58
+e32. g32. q18
+> c16. d16. q78
+c8. < g8. q18
+> c16. q58
+c32 c32 c32 q18
+c16. d16. d+16. d+16. q17
+f16. q18
+d+16. q78
+d4. r4.
+
+*
+
+PATCH039
+v205
+VCMD_VIBRATO_ON $18 $11 $1e
+q17
+< f16. q57
+f32 f32 q56
+f32 q17
+f16. g16. a16. a16. g16. f16. e16. q57
+e32. g32. q17
+> c16. d16. q77
+c8. < g8. q17
+> c16. q57
+c32 c32 q56
+c32 q17
+c16. d16. d+16. d+16. d16. < a+16. q77
+> c4. ^4.
+
+PATCH003
+v160
+VCMD_VIBRATO_ON $24 $0c $28
+[q77 c=51 r=3 q78 c32 q77 d32 q78 d+32]
+q76
+f=34 r=2 q77
+d+=26 r=1 q77
+d32. q77
+< g=26 r=1 q77
+> d32. q77
+d=102 r=6 < f=54 q78
+f32 q77
+g32 q78
+g+32 q77
+a+=34 r=2 q77
+g+=27 a+32. q67
+g3..... q78
+g32 q77
+g+32 q78
+a+32 >
+
+*
+VCMD_PITCHENV_FROM $00 $09 $01
+q76
+g=34 r=2 VCMD_PITCHENV_OFF
+f=27 q77
+d+32. q77
+d=26 r=1 q77
+c32. q77
+d=68 r=4 q76
+< g=26 r=1 q75
+> c32. q65
+c6..... q75
+< g32. q66
+> c=27 q75
+< a+32. > c8. q75
+^=26 r=1 q75
+< g32. q65
+> c=27 q76
+< a+32. q78
+> c=51 r=3 q77
+< a+32. g+32.
+[q77 g=51 r=3 q77 f32. q78 e32.]
+q78 d=51 r=3 q77 e32. f32.
+*
+q18 d8.
+
+VCMD_TUNING $3a
+PATCH029
+v170
+q57
+< g8. 
+
+;==================;
+;    Channel #3    ;
+;==================;
+#3
+r16.
+
+y8
+v155
+PATCH011
+o2
+[[q17 d+16. q56 > g+32. q57 c32. <]]4
+[[q17 f16. q56 > a+32. q57 d32. <]]4
+[[q57 g+32. q55 d+32. q56 > > c32. q57 < d+32. <]]4
+q67 a32. q65 d32. q66 > > c32. q67 < f32. <
+    a32. q66 d32. > > c32. q67 < f32.
+q37 f16. r16.
+
+VCMD_TUNING $3a
+PATCH029
+v170
+q47
+a8.
+
+/
+
+>
+
+[VCMD_TUNING $00
+VCMD_PITCHENV_OFF
+y8
+v160
+PATCH011
+[[q17 < g16. q57 > c32. e32.]]4
+[[q17 < g16. q57 b32. > d32.]]2
+q17 < g16. r=54 >
+[[q17 < e16. q57 a32. > c32.]]4
+q17 < e16. q57 g32. >
+[[q57 < b32. q56 > d32.]]2
+q56 g32. q15 > d16. r=54 <
+
+PATCH039]
+v160
+q77
+[[d32. f32. a32. f32.]]4
+[[c32. e32. g32. e32.]]4
+[[c32. d+32. g+32. d+32.]]4
+< b32. > d32. f32. d32. < b32. > d32. f32. d32. f32. r6..... 
+
+*
+v180
+q57 d32. f32. a32. f32. d32. f32. > c32. < f32. d32. f32. > c32. < f32. > c32. < f32. a32. f32. c32. e32. g32. > c32. e32. c32. e32. c32. c32. < g32. e32. d32. > c32. < g32. e32. d32. d+32. g+32. > d+32. c32. < g+32. > c32. g+32. d+32. < f32. g+32. > f32. g+32. f32. d32. < a+32. > d32. c32. e32. c32. e32. c32. e32.
+q77 c32 e32 d32
+q57 [[< g32. > c32.]]4
+
+VCMD_VIBRATO_OFF
+PATCH034
+v160
+q47
+<
+[ [[c32. d+32.]]4 [[d32. f32.]]4 [[< a+32. > d32.]]6]
+< a+32. > d32. < a+32. > d32.
+[[< g+32. > c32.]]4
+< a+32. > d32. < a+32. > d32. < g+32. > d32. < g+32. > d32.
+< [[g32. a+32.]]8 >
+*
+< g32. a+32. g32. a+32.
+q46 [[g32. > c32. <]]16
+q47 [[f32. a32.]]8
+q48 [[g32. a32.]]4
+q18 > f8.
+
+VCMD_TUNING $3a
+PATCH029
+v170
+q57
+< b8. 
+
+;==================;
+;    Channel #4    ;
+;==================;
+#4
+r16.
+
+y12
+v155
+PATCH011
+o2
+[[q17 g+16. q56 > > c32. q57 < d+32. <]]4
+[[q17 a+16. q56 > > d32. q57 < f32. <]]4
+> [[q57 d+32. q55 < g+32. q56 > > d+32. q57 < g+32.]]4
+q67 d32. q65 < a32. q66 > > e32. q67 < a32.
+    d32. q66 < a32. > > e32. q67 < a32.
+q37 a16. r16.
+
+VCMD_TUNING $3a
+PATCH029
+v170
+q47
+b8.
+
+/
+
+>
+
+[VCMD_TUNING $00
+VCMD_PITCHENV_OFF
+y12
+v160
+PATCH011
+[[q17 c16. q57 e32. g32.]]4
+[[q17 < b16. q57 > d32. g32.]]2
+q17 < b16. r=54 >
+[[q17 < a16. q57 > c32. e32.]]4
+q17 < g16. q57 b32. >
+[[q57 d32. q56 g32.]]2
+q56 b32. q15 > g16. r=54 <
+
+PATCH039]
+v160
+q77
+[[f32. a32. > c32. < a32.]]4
+[[e32. g32. > c32. < g32.]]4
+[[d+32. g+32. > c32. < g+32.]]4
+d32. f32. > c32. < f32. d32. f32. > c32. < f32. b32. r6..... 
+
+*
+v180
+VCMD_VIBRATO_ON $18 $11 $1e
+q17
+> c16. q57
+c32 c32 q56
+c32 q17
+c16. e16. f16. f16. e16. d16. c16. q57
+c32. e32. q17
+g16. g16. q77
+e8. e8. q17
+g+16. q57
+g+32 g+32 q56
+g+32 q17
+g+16. a+16. > c16. c16. < a+16. f16. q67
+g=54 q77
+f32 g32 f32 e4.
+
+VCMD_VIBRATO_OFF
+PATCH034
+v160
+q47
+<
+(40)[ [[f32. g+32.]]4 [[g+32. a+32.]]4 ]
+d32. f32. d32. f32.
+(41)[d32. g32.]6
+[[c32. d+32.]]4
+[[d32. f32.]]4
+[[< a+32. > d32.]]8
+(40)
+(41)6
+< a+32. > d32. < a+32. > d32.
+
+q46 [[c32. d+32.]]16
+q47 [[c32. e32.]]8
+q48 [[c32. e32.]]4
+q18 a8.
+
+VCMD_TUNING $3a
+PATCH029
+v170
+q57
+d8. 

@@ -1,0 +1,42 @@
+#amk 2
+
+#spc
+{
+  #author "Retr0Cat"
+}
+
+#path "White Noiz"
+#samples
+{
+#optimized
+"daybreak.brr"
+"pizzin round.brr"
+}
+#instruments
+{
+"daybreak.brr" $ff $e0 $7F $01 $BE; @30
+"pizzin round.brr" $ff $e0 $7F $03 $00; @31
+}
+
+w255 t27 $F4$02
+
+$EF $FF $20 $D0 
+$F1 $06 $5A $01 
+
+$F5 $00 $03 $FF $FE $FD $E6 $D9 $CB
+
+; pizzin round
+#0
+@31 v200 o3
+
+c4 [o4 c2c2g1]4 o0  [[r1]]16 
+
+; daybreak
+#1
+@30 v255 o0
+ [[r1]]8r4 [o4 f1g+1c1d+1]2 [o3 a+1>c1<g+1]2 a+1 g+1 
+
+; daybreak
+#2
+@30 v255 o0
+ [[r1]]8r4 o3 f1^1 o0  [[r1]]2 o3 f1^1 o0  [[r1]]10 

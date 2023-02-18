@@ -34,6 +34,9 @@
 !InputByte2 = #%00110000
 
 init:
+    LDA #$01
+    STA $140B|!addr
+
     INC $140B
     RTL
 

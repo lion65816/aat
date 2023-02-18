@@ -306,3 +306,21 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 61dd	0	conveyer move right fast
 61de	0	conveyer move right fast
 61df	0	conveyer move right fast
+703d	0	
+71f0	0	
+7203	0	
+7204	0	
+7213	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+7214	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+7223	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+7224	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+7233	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+7234	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+7243	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+7244	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+7253	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+7254	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+7263	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+7264	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+7273	0	
+7274	0	
