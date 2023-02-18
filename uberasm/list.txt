@@ -77,12 +77,12 @@ level:
 1CF	FilterYoshi_BabaBlocks.asm
 1D0	FilterYoshi_DeathWarp.asm
 1D1	FilterYoshi_BabaBlocks.asm
-1D3	FilterYoshi_BabaBlocks.asm
-1D4	FilterYoshi_BabaBlocks.asm
-1D5	FilterYoshi_BabaBlocks.asm
+1D3	BabaBlocks.asm
+1D4	BabaBlocks.asm
+1D5	BabaBlocks.asm
 1D7	FilterYoshi_BabaBlocks.asm
-1D8	FilterYoshi_BabaBlocks.asm
-1DA	FilterYoshi_BabaBlocks.asm
+1D8	BabaBlocks.asm
+1DA	BabaBlocks.asm
 1F6	hdmatest.asm
 1F7	hdmatest.asm
 1F8	hdmatest.asm
