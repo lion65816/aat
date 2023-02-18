@@ -145,6 +145,8 @@ B8 InfoBox.cfg
 B9 baba_block.cfg
 BA Balloon_dis.json
 BB Carryable_Football.cfg
+BE mechakoopa_but_awesome.json
+BF custom_bowser_statue.cfg
 
 C0 balloon_shooter.cfg
 C1 lasershooter.cfg

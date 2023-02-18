@@ -142,3 +142,16 @@
 91	Angry Sun
 	Happy Moon
 92	Volcano Lotus
+B2	Silius Shooter
+B3	Projectile
+B7	Rotating Net
+BA	Balloon, flies right
+	Balloon, flies left
+BE	Awesome Mechakoopa (normal)
+	Awesome Mechakoopa (projectile)
+	Awesome Mechakoopa (lightning)
+	Awesome Mechakoopa (exploding)
+	Awesome Mechakoopa (flying, normal)
+	Awesome Mechakoopa (flying, projectile)
+	Awesome Mechakoopa (flying, lightning)
+	Awesome Mechakoopa (flying, exploding)

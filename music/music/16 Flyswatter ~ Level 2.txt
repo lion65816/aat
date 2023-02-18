@@ -1,0 +1,159 @@
+#amk 2
+
+#spc
+{
+    #title   "Flyswatter ~ Level 2"
+    #game    "Mario Paint"
+    #author  "Hirokazu Tanaka, Ryoji Yoshitomi"
+    #comment "Ported by KevinM"
+}
+
+#path "flyswatter2"
+
+#samples
+{
+    #default
+    "09.brr"
+    "0a.brr"
+    "0c.brr"
+    "0d.brr"
+
+}
+
+#instruments
+{
+    "09.brr" $ff $e0 $00 $07 $a0 ; @30
+    "0a.brr" $ff $e0 $00 $07 $a0 ; @31
+    "0c.brr" $ff $e7 $00 $04 $f0 ; @32
+    "0d.brr" $ff $e0 $00 $01 $00 ; @33
+}
+
+;==================;
+; Volume  /  Tempo ;
+;==================;
+   w210       t26
+
+;==================;
+;    Channel #0    ;
+;==================;
+#0 $f0
+v250 y10 o3 l16
+r2
+
+[@30 q7f d8
+@31 d
+@30 q7b d]13
+
+q7f d4 r4.
+@31 d
+@30 d
+
+/
+
+*32
+
+[[
+*3
+q7f d8
+@31 d
+@30 q7b d=7
+@31 q79 d=5
+]]4
+
+;==================;
+;    Channel #1    ;
+;==================;
+#1
+@33 v255 y10 o2 q7b
+f2 $dd$00$12$9b $dd$1e$30$8f
+
+(99)[r2]4
+
+o5 l32
+q22 [[c c > c c <]]7
+q23 [[c c > c c <]]2
+q24 c c > c q25 c <
+q26 c q17 c q19 > c q1d c <
+
+o3
+q7f c8 $dd$00$5a$8c ^4. a8 $dd$00$18$8c
+
+/
+
+l16
+[[q7f o3 r c < a+ a g r8 f r > c < a+ a g a q6f f8]]8
+[[q7f o2 r a+ g+ g f r8 d+ r a+ g+ g q6f f8 f8]]4
+
+;==================;
+;    Channel #2    ;
+;==================;
+#2
+(99)9
+
+/
+
+@32 v90 y10 o5 l16 q7f $de$02$32$a0
+[[
+c8 d c f8 g f g+8 $dd$00$0c$b9
+g f r4 r c d c f8 g f g+8 $dd$0a$04$b9
+g f r c d f 
+(99)4
+]]2
+
+[[r64 q77 c2 $dd$00$06$bc ^4. q73 > c.. $dd$00$06$b0 <]]4
+
+;==================;
+;    Channel #3    ;
+;==================;
+#3
+@32 v160 y9 o3 q7b
+g2 $dd$00$12$a9 $dd$1e$30$9d
+
+o5 q15 l16
+[[f r8 f r8 f r r f r8 g r g r]]3
+f r8 f r4 r2
+
+/
+
+q35 o4
+[[a r8 a r8 a r r a r8 g r e r]]8
+[[f r8 f r8 f r r f r8 g r g r]]4
+
+;==================;
+;    Channel #4    ;
+;==================;
+#4
+@32 v140 y10 o3 q7b
+d+2 $dd$00$12$a5 $dd$1e$30$99
+
+o5 q15 l16
+[[d r8 d r8 d r r d r8 e r e r]]3
+d r8 d r4 r2
+
+/
+
+q35 o4
+[[d r8 d r8 d r r d r8 e r c r]]8
+[[c+ r8 c+ r8 c+ r r c+ r8 d+ r d+ r]]4
+
+;==================;
+;    Channel #5    ;
+;==================;
+#5
+@32 v160 y11 o2 q7b
+a+2 $dd$00$12$a0 $dd$1e$30$94
+
+q15 o4 l16
+[[a+ r8 a+ r8 a+ r r a+ r8 > c r c r <]]3
+a+ r8 a+ r4 r2
+
+/
+
+q35 o3
+[[a+ r8 a+ r8 a+ r r a+ r8 > c r < a r]]8
+
+[[
+q75 o5 c2 $dd$00$06$bc ^8
+q43 > c32 c32 c32 c32 q42 c32 c32 c32 c32
+q73 c8 $dd$00$06$b0
+]]4

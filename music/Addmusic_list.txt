@@ -107,7 +107,11 @@ Locals:
 82  spaf-05.txt
 83  A Super Mario Thing - Iru.txt
 84  Electric Talk.txt
+85  FF6 - Quiet Beach.txt
+86  pinkbeard.txt
+87  Final Fantasy V - Pirates Ahoy!.txt
 8A  kanji.txt
+8B  16 Flyswatter ~ Level 2.txt
 8C  froge.txt
 8D  bonk2.txt
 8E  fail.txt

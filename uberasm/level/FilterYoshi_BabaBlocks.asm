@@ -4,5 +4,8 @@ init:
 
 main:
 	JSL BabaBlocks_main
-	JSL RetryButton_main
+	RTL
+
+load:
+	JSL FilterYoshi_load
 	RTL

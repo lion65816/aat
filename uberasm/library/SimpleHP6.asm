@@ -1,6 +1,7 @@
 ;Example implementation of SimpleHP
 ;Lord Ruby
 ;Level-specific adjustments for Thwompire State Building by PSI Ninja.
+;Since the UberASM Retry System is being used, we no longer need the Primitive Retry pointers.
 
 ;Depends on SA-1 (MaxTile)
 
@@ -23,12 +24,13 @@
 
 ;;;Code
 init:
-    LDA #$C0 : STA !HPSettings  ;Activate HP system. Remember to do this in every sublevel!
+    LDA #$80 : STA !HPSettings  ;Activate HP system. Remember to do this in every sublevel!
+    ;LDA #$C0 : STA !HPSettings  ;Activate HP system. Remember to do this in every sublevel!
 
     ;Set up death pointer
-    LDA.b #Retry     : STA !DeathPointer
-    LDA.b #Retry>>8  : STA !DeathPointer+1
-    LDA.b #Retry>>16 : STA !DeathPointer+2
+    ;LDA.b #Retry     : STA !DeathPointer
+    ;LDA.b #Retry>>8  : STA !DeathPointer+1
+    ;LDA.b #Retry>>16 : STA !DeathPointer+2
 
     LDA $19                     ;\
     BNE init_hp                 ;| At the start of the level, retain Demo's powerup.

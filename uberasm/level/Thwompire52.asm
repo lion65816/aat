@@ -4,5 +4,4 @@ init:
 
 main:
 	JSL SimpleHP6_main
-	;JSL RetryButton52_main
 	RTL

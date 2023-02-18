@@ -252,3 +252,17 @@
 91 0032 0,0,1D6 -16,0,1B0 0,-16,209
 92 0020 Undefined Sprite
 92 0022 0,0,0
+B2 0020 Undefined Sprite
+B2 0022 0,0,0
+B3 0020 Undefined Sprite
+B3 0022 0,0,0
+B7 0020 Disassembly of Sprite 54
+B7 0022 8,8,128 24,8,129 40,8,12A 8,24,138 8,40,148 24,40,149 40,40,14A 40,24,13A 24,24,139
+BA 0020 P-Balloon that will make mario float.
+BA 0022 4,-1,BA
+BA 0030 P-Balloon that will make mario float. This setting floats to the left on init.
+BA 0032 4,-1,BA
+BE 0020 An awesome Mechakoopa that behaves like the original, shoots a projectile, shoots lightning, or explodes when stunned.
+BE 0022 0,0,48C 0,-16,48D 16,-16,48E 16,0,48F 14,0,490
+BE 0030 An awesome Mechakoopa that behaves like the original, shoots a projectile, shoots lightning, or explodes when stunned. This version flies too!
+BE 0032 0,0,48C 0,-16,48D 16,-16,48E 16,0,48F 14,0,490 8,16,491 16,16,491

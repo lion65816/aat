@@ -14,7 +14,7 @@ NameData:
 ; db "                   "
 
  ;Level 000
- db "                   "
+ db "    BONUS GAME     "
  db "                   "
  ;Level 001
  db " baby catnips get  "
@@ -173,8 +173,8 @@ NameData:
  db "My Green Garden    "
  db "in Green Forest   *"
  ;Level 111
- db "Fortress of 1      "
- db "FAST SMASH ACTION!!"
+ db "    Tim Hortons    "
+ db "                   "
  ;Level 112
  db "Good Ol' Days      "
  db "                   "
@@ -206,7 +206,7 @@ NameData:
  db "    FIGHT THE      "
  db "RED SWITCH PALACE! "
  ;Level 11C
- db "Kamek was there    "
+ db "  Lady Crithania   "
  db "                   "
  ;Level 11D
  db "The cake is lie    "

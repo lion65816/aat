@@ -51,7 +51,7 @@ db "                     " ; 10D
 db "SAJewers             " ; 10E
 db "Big Brawler          " ; 10F
 db "4season              " ; 110
-db "                     " ; 111
+db "PSI Ninja            " ; 111
 db "4season              " ; 112
 db "MexicanCradily       " ; 113
 db "Big Brawler          " ; 114
@@ -62,7 +62,7 @@ db "Bumpty               " ; 118
 db "4season              " ; 119
 db "SAJewers             " ; 11A
 db "Nitrogen             " ; 11B
-db "                     " ; 11C
+db "PSI Ninja            " ; 11C
 db "                     " ; 11D
 db "Scarfley             " ; 11E
 db "EllenHouraisan       " ; 11F

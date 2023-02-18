@@ -290,6 +290,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 2093	0	Spawns sprite $BA.
 3300	0	BlkMus1.asm
 3301	0	A block which destroys (Baby) Yoshi if touched.
+5440	0	Teleports the player to level 1CB.
 60dd	0	StickyBlock.asm
 60de	0	StickyBlock.asm
 60df	0	StickyBlock.asm
