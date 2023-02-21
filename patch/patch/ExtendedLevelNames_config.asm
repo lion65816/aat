@@ -74,7 +74,7 @@ NameData:
  db "Special Boo as Boss"
  db "Level              "
  ;Level 014
- db "sttlimimvdkm-lmwiw9"
+ db " Pipe Town, There  "
  db "                   "
  ;Level 015
  db "Demo in            "
@@ -188,8 +188,8 @@ NameData:
  db "Up and down is     "
  db "solution           "
  ;Level 116
- db "time to take a     "
- db "  (working title)  "
+ db "  time to take a   "
+ db "                   "
  ;Level 117
  db "pREsent(ing) gifts "
  db " Day               "
