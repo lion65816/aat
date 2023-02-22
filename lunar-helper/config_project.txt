@@ -52,6 +52,7 @@ patches
 	patch\patch\InlineLayer3Message.asm
   	patch\patch\luigi.asm
 	patch\patch\FixFeather.asm
+	patch\patch\owcount.asm
 ]
 -- patch\patch\bwram_plus.asm
 -- patch\patch\midway\multi_midway_1.7.asm

@@ -20,3 +20,4 @@ lunar-helper/config_user.txt
 lunar-monitor-log.txt
 resource/temp/all.map16
 *.extmod
+*.lnk
