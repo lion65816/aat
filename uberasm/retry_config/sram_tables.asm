@@ -21,8 +21,8 @@
 save:
     dl !ram_checkpoint    : dw 192
     ; Feel free to add your own stuff here.
-    dl $401F2F            : dw 12 ; 5 Dragon Coins collected flags.
-    ;dl $40A660            : dw 768
+    dl $401F2F            : dw 12  ; "All 5 Dragon Coins collected" flags.
+    dl $40A660            : dw 768 ; "Individual Dragon Coins Save" RAM.
     
     
 
@@ -56,8 +56,8 @@ sram_defaults:
     dw $012C,$012D,$012E,$012F,$0130,$0131,$0132,$0133
     dw $0134,$0135,$0136,$0137,$0138,$0139,$013A,$013B
     ; Feel free to add your own stuff here.
-    rep 12 : db $00 ; Default values for 5 Dragon Coins collected flags.
-    ;rep 768 : db $00
+    rep 12 : db $00    ; Default values for "All 5 Dragon Coins collected" flags.
+    rep 384 : dw $00C0 ; Default values for "Individual Dragon Coins Save" RAM.
     
     
 
