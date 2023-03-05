@@ -3,8 +3,6 @@
 #option TempoImmunity
 #option NoLoop
 
-?0	;won't loop
-
 #0
 y1 (1)[
 r=48 @6

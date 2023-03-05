@@ -51,11 +51,17 @@ endif
 +   rts
 endif
 
+
 ..common:
 if !exit_animation == 0
     lda !ram_hurry_up : beq .skip
 endif
-    lda.l death_song : sta $1DFB|!addr
+    lda $0DB3|!addr
+    beq +
+    lda.b #$8E
+    bra ++
++   lda.b #$01
+++  sta $1DFB|!addr
     rts
 
 .retry:

@@ -1,7 +1,9 @@
 #am4
-?0	;won't loop
 
-#1
+#option TempoImmunity
+#option NoLoop
+
+#0
 $F0 @3 t48 y10 q6F o5
 e=4 d=4 e=4 r=42
 t51 @9 q6E
@@ -10,13 +12,13 @@ b+ca+cacgc
 f+=36gadef+
 g=24 r=24 < g=48
 
-#2
+#1
 @9 y10 q4E r=102 o4
 d+=24 r=24 d+=24
 r=24 f+=24 r=24 f+=24 
 a+=24 r=24 o3 d=48
 
-#3
+#2
 @9 y10 q6E r=78 o3
 [c=24 g=24]2
 [d=24 a=24]2
