@@ -1,0 +1,103 @@
+#amk 2
+#spc
+{
+	#title "Slow Moon"
+	#game "Streets of Rage 2"
+	#author "Yuzo Koshiro"
+	#comment "antagonistic alley"
+}
+
+#samples
+{ 
+#default
+}
+
+#instruments
+{
+	@21 $8F $E0 $00 $04 $20
+	@10 $8F $E0 $00 $07 $00
+	n1d $CF $1B $00 $04 $20
+	n1e $BF $32 $00 $04 $20
+
+}
+
+(!900)[@0 $ED $0B $C0]
+(!901)[@4 $ED $7F $F1]
+
+
+$EF $FF $1F $1F
+$F1 $07 $2F $01
+$F4 $02 /
+
+#0 w140 t19 @0 $ED $0F $EF l32 v200
+[r16o3g8^f4^16. e16.c16<a+4^]2 
+>> $ED $0B $C0 $EE $0C q7a d1^2 $EE $00 r16< $ED $0F $EF  q7d e16.c16<a+4^
+[v135 o5 $ED $0F $F2 d16d16>d<d16>drd<d>d<dd>d16]20
+
+#1 l32 v255
+[o2  r32 o2 q4a @4 $ED $1F $F1 dd q4c @6 $ED $1F $F3 o4 cdf16 <a>cc+d<a>cf o2 @4 $ED $1F $F1 q4a cd>  d8..o2a>cc+d<a16acc+]4
+@13 q7b $ED $1F $E0 o4 $E5 $00 $16 $48
+f2e2f2e2 l32 $E5 $00 $00 $00
+q7c e32 q77 ^32 [[ [q7c y10 a q77 y2 e q7c > y18 e y10c y2e y18d y10c < y2g y18a y10g y2d] y18a q77 ^ q7c y2 a q77 ^ r ]]2 
+* y10
+
+@1 $ED $1F $E8 q5d defg8g+8a8a8 @0 $ED $1F $C0 q7e  
+r1...o2 $F4 $01 l64 ab>cdef+ga 
+o4 q7c d4^=23 r=1	 $F4 $01  c8< a+4a4 g16d32g16.d32g32a16d32a16.d32a4^32 a+8 a8 $DD $15 $06 $AD v200 
+^1^4 o4  g8 v230 c8 $ED $1B $EE d2	
+
+
+
+#2 @4 $ED $3F $4D o4 q7a
+r16 a+8^32 a4^16.  g16.e16d4^16. a+8^32 a4^16.  g16.e16d8.. o6 q7d @6 $ED $7C $F3 c32c+32
+d16 @4 $ED $3F $4F o4 q7a o4 a+8^32 a4^16.  g16.e16d4^16. a+8^32 a4^16.  g16.e16d4^32
+@1 $ED $1C $E8
+(2)[ v205 $DE $0C $10 $12 q7f o5  a4^16 q7a ^16 q5f f32d32a32 q6f g4^32 q5f >c16 q7a ^16 q7f d16. <a4^16. q7a ^16 q5f f32d32a32 g8^32 q7a ^16 q7f c8 q7a ^16 q5f e32f32g32c32   
+
+a4^16 q7a ^16 q5f f32d32a32 q6f g4^32 q5f >  c16 q7a ^16 q7f d16. <a4^16. q7a ^16 q5f f32g32a32 > c8 <e32a+16.a8^32g32a32e32c32 $DF ]
+
+@4 $ED $7F $F1 o4 q7a  
+[[ [f16 d32 <a16 > d32a32g8^32 e8 f16 e32d16 d32f32e8^32 e8 f16 d32 <a16 > d32a32g8^32 >c8]< f8 e8 g8 a8 ]]2
+*  $ED $7F $EF d2
+
+#3 @4 $ED $3F $4F o4 q7a
+o2 d16 o4 d8 d32c4^16.  c16.<a16g4^16.> d8 d32c4^16.  c16.<a16g8..> q7d @6 $ED $7B $F3 c32c+32
+d16 @4 $ED $3F $4F q7a d8 d32c4^16.  c16.<a16g4^16.> d8 d32c4^16.  c16.<a16g4^32
+$FA $02 $E8 
+@6 $ED $1C $E8
+(2) $FA $02 $00 
+
+[[ [@4 q7a o4 $ED $7F $F1 d16q77 ^8^32 q7a e8^32 c8d8.d32c8^32 c8  d16 q77 ^8^32 q7a e8^32 g8] d8c8e8e8]]2 
+*  $ED $7F $EF a+2
+
+#4 @8 $ED $1F $C0 l32 q6f $FA $03 $FF  
+(3)[o1d16ra>d16r<a>c16 $DD $06 $02 $8E r<a>c16 $DD $06 $02 $8E rc<]8 
+[[ (3) (4)[d16ra>d16r<a>c16 $DD $06 $02 $8E rfc16 $DD $06 $02 $8E < g16 $DD $06 $02 $89] ]]3 (3) o1 e16reg16ega16rgaga16
+r1r2.^32a>d<a>c<afd
+(3) (4)
+o1 (5)[g16rg>g<g16ga16rar>a<raa+16ra+r>a+<ra+]>c+16rc+rc+rc+
+(3) (4) (5) r32 o1a+>a+r gae< a
+
+#7 
+r1r1 (!900,-1)
+v155 o4d1^2r2
+[<e1^2d4e4]2 
+q7a o3  v255
+(!901,-1)
+[[ [  a16 q77 ^8^32 q7a > c8^32< a8 a+8. a32g8^32 > g8< a16q77 ^8^32 q7a > c8^32 e8] <a+8g8>c8c+8]]2 
+* $ED $7F $EF  f=95 t50 r=1
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#6 @30 $FA $03 $FF l16 o3
+(1)[c.c8c.c.c.]7 c.c32c8c8cc32c32
+(1)8 
+[c8]16
+(1)7  c8c8c8c8
+
+#5 l32  $FA $03 $8F
+(9)[ [[v200 @32 q73 c q72 c]]2 q7f v255 @31 c [[v200 @32 q72 c q73 c]]2 v255 @31 q7f c v200 @33 q73 c16  v255 @31 q7f c v200 @32 q72 c q73 c q72 c]7 [[v200 @32 q73 c q72 cc]]3 v255 @31 q7f cc v200 @32 q73 c v255 @31 q7f c v200 @32 q73 c v255 @31 q7f cc 
+(9)8
+[[@32 v200 q73 c q72 ccc]]14 q73 c v255 q7f @31 cc16c16cc
+(9)7 [[@32 v200 q73 c q72 cc]]3 @31 v255 q7f cc @32 v200 q73 c v255 q7f @31 c @32 v200 q73 c @31 v255 q7f cc

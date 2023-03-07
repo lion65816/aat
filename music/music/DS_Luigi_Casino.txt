@@ -1,0 +1,108 @@
+#amk 2
+
+#path "luigi_casino_samples"
+#spc
+{
+  #comment "Generated with smw2midi"
+  #title "Luigi's Casino"
+  #game "Super Mario 64 DS"
+  #author "Koji Kondo, Kenta Nagata"
+}
+
+#samples
+{
+#default
+"piano.brr"
+"dbass.brr"
+"organ.brr"
+"kick.brr"
+"snare_2.brr"
+"high_hat_open.brr"
+"ride_cymbal_cut.brr"
+}
+#instruments
+{
+"piano.brr" $9F $11 $00 $01 $58; @30
+"dbass.brr" $8F $F0 $00 $10 $D0; @31
+"organ.brr" $8F $E9 $00 $08 $A5; @32
+"kick.brr" $8F $C0 $00 $08 $00; @33
+"snare_2.brr" $8F $E0 $00 $0C $80; @34
+"high_hat_open.brr" $8F $F1 $00 $08 $A0; @35
+"ride_cymbal_cut.brr" $8F $F0 $00 $04 $80; @36
+@22 $8f $ef $00 $0d $e0 ;@37
+"piano.brr" $8F $F2 $00 $01 $58; @38
+"organ.brr" $8F $F5 $00 $08 $A5; @39
+"organ.brr" $8F $F5 $00 $08 $A5; @40
+}
+
+w255
+
+; Piano & Organ 1
+#0 t57
+@38 y11 v110 o3
+a+8^16 o4 g+4^16 g+4 g8^16 @30 g+4^16 o2 a+4 o0 r64 o3 a+16 o0 r64 o4 d16 o0 r64 o4 f16 o0 r64 o4 a+4
+/
+@39 y9 v120 r8^16 [o5 d4]2 [o5 c+4]2 [o5 c4]2 [o5 c+4]2 [o5 d4]2 [o5 c+4]2 o5 c4 o0 o5 c+4 o0 o5 d+4 o0 o4 a+16 o5
+@30 y11 v110 f4 a+4 f4 e4 d+4 d+8^16 f4^16 d+4
+@40 y9 v120 [d4]2 [d+4]2 e4 e8^16 @32 f4 o0 r16 o3 a+8 o0 r2^4^16 o5
+@30 y11 v110 c+4 d16 [d4]2 [o4 a+4]2 o0 r8^16 [o5 c+4]2 [c4]2 c+4 d+4 f4 d+16 [o4 a4]2 [g+4]2 [g4]2 [f+4]2 [a+4]2 o5 d8^16 f4 o0 r1^4
+@39 y9 v120 [o5 d4]2 [d+4]2 [f4]2 [d+4]2 [d4]2 d+4 [f4]3 d+16 d+8^16 o0 r4 [o5 d4]2 [d+4]2 [f4]2 [d+4]2 [d4]2 d+4 f4 [d4]2 d+16 d+8^16 o0 r4
+@30 y11 v110 [o5 d4]2 [d+4]2 [f4]2 [d+4]2 [d4]2 d+4 [f4]3 d+16 d+4 o0 r8^16 [o5 d4]2 [d+4]2 [f4]2 [d+4]2 [d4]2 d+4 [f4]3 d+16 d+4 
+
+; Piano & Organ 2
+#1 t57
+@38 y11 v110 o2
+a+8^16 o4 f4^16 f4 e8^16 @30 f4 o0 r4^8^32 o3 d+16 o0 r64 o3 f16 o0 r64 o4 a4
+/
+@39 y9 v120 r8^16 [o4 a+4]13 o4 a+16 o0 r2 o5
+@30 y11 v110 d4 f4 d4 c+4 c4 c8^16 d4^16 c4
+@40 y9 v120 [o4 a+4]4 b4 b8^16 @32 o5 c4 o0 r1 o4
+@30 v110 y11 a4 a+16 [a+4]2 [g4]2 o0 r8^16 [o4 a+4]7 g16 [f4]2 [e4]2 [d+4]2 [d4]2 [f4]2 f8^16 a+4 o0 r1^4
+@39 y9 v120 [o4 a+4]4 [o5 c4]2 [o4 a+4]5 [o5 c4]3 o4 a+16 a+8^16 o0 r4 [o4 a+4]4 [o5 c4]2 [o4 a+4]5 o5 c4 [o4 a+4]2 o4 a+16 a+8^16 o0 r4
+@30 y11 v110 [o4 a+4]4 [o5 c4]2 [o4 a+4]5 [o5 c4]3 o4 a+16 a+4 o0 r8^16 [o4 a+4]4 [o5 c4]2 [o4 a+4]5 [o5 c4]3 o4 a+16 a+4 
+
+; Piano & Organ 3
+#2 t57
+@38 y11 v110 o0
+r8^16 o4 d4^16 d4 d8^16 @30 d4 o0 r2^4^16
+/
+@39 y9 v120 r8^16 [o4 g4]13 o4 g16 o0 r2
+@40 [o5 a+4]2 a4 f4 d+4 d+8^16 f4 o0 r16 o5 d+4 [o4 f4]2 [g4]2 g+4 g+8^16 @32 a4 o0 r1^4 o4
+@30 y11 v110 g16 [g4]2 o0 r2^8^16 [o4 g4]2 o0 r2 [o4 g4]2 o0 r4 o4 g16 [d4]2 [c+4]2 [c4]2 [o3 b4]2 o0 
+[[r1]]10r8^16
+[o4 f4]2 [g4]2 [a4]2 [g4]2 [f4]2 g4 [g+4]3 g16 g4 o0 r8^16 [o4 f4]2 [g4]2 [a4]2 [g4]2 [f4]2 g4 [g+4]3 g16 g4 
+
+; Piano & Organ 4
+#3 t57
+@38 y11 v110 o0
+r8^16 o3 a+4 a+4^16 [a+8^16]2 o0 r2^4^8
+/
+@39 y9 v120 r4^8^16 [o4 d+4]6 o4 d+4 o0 r4 [o4 d+4]4 o4 d+16 o0 r2
+@40 [o5 f4]3 d4 c4 c8^16 d4 o0 r16 o5 c4 [o3 a+4]2 [o4 c4]2 c+4 c+8^16 @32 d4 o0 r1
+@30 y11 o4 d+4 d+16 [d+4]4 o0 r8^16 [o4 d+4]7 o0 r16 [o3 a+4]2 [a4]2 [g+4]2 [g4]2 o0 
+[[r1]]2
+@39 y9 v120 r8^16 [o4 f4]2 [g4]2 [a4]2 [g4]2 [f4]2 g4 [a4]3 g16 g8^16 o0 r4 [o4 f4]2 [g4]2 [a4]2 [g4]2 [f4]2 g4 a4 [f4]2 g4 o0 r16 o4 a+16 o0 r2^4^8
+@32 v140 o3 a+64 o4 d64 f64 a2^4^64 o0 r4 o3 a+64 o4 d64 f64 a+16^32^64 o0 r2^4^32 o2 a+64 o3 g+64 o4 d64 g+2^16^64 o0 r4^8^16 o4 a+16 o0 r2^4^8 o3 a+64 o4 d64 f64 a2^4^64 o0 r1^8^16 o3 a+64 o4 d64 f64 g+4^16^32^64 o0 r16^32 o3 a+64 o4 d64 f64 a4^64 o2 d32^64 e64 o0 r64 o2 f64 g64 a64 o0 r64 o2 b64 o3 c64 d64 e64 f64 g64 a64 
+
+; Bass
+#4 t57
+@31 y10 v180 o0
+r2^4^8^16 o1 a+4^8 o0 r4^8 o2 d16 d+16 o0 r8 o2 e16 /
+d+4 g4 g+4 a4 a+8^16 o3 c+16 o1 a+4 o2 c4 d4 d+4 g4 a+4 o3 d+4 c+4 c4 o2 a+4 d+4 o1 a+4 o2 d4 d+4 e4 g+4 o3 c8^16 o2 d+4 g+16 o1 g+4 o2 a+8^16 f16 e8^16 o1 a+2 o0 r4 o1 a+16 o2 c8^16 o1 a+4 o0 r4^16 o2 d+4 g4 g+4 a8^16 a+4 a+16 o1 a+4 o2 c4 d4 d+4 g4 a+4 o3 c+4 o2 a+4 d+4 g4 [a+4]2 o1 a+8^16 o2 a+16 a4 o1 a8^16 o2 a16 g+4 o1 g+8^16 o2 g+16 g4 o1 g8^16 o2 g16 f+4 o1 f+8^16 o2 f+16 f4 o1 f8^16 o2 f4 f16 f+4 g4 a4 a+4 o1 a+4 o2 c4 c+4 d4 f4 d4 o1 a+4 o2 d4 f4 a+4 o3 c4 o2 a+4 o3 d+4 o2 a+4 f4 a+4 d4 d+4 e4 f4 a+4 f4 o1 a+4 o2 a+4 o3 d+4 o2 a+4 f4 a+4 d4 d+4 f4 [a+4<a+4>c4c+4d4f4d4<a+4>d4f4a+4b4>c4c+4d4<a+4]2 
+
+; High Hats
+#5 t57
+@0 y8 v115 o2
+@35a+4 @35a+8 o0 r16 [o2 @35a+16]2 o0 r8^16 o2 @35a+8 o0 r16 o2 @35a+16 [@35a+4]2 @35a+8 o0 r16 o2 @37f+16 @35a+8 o0 r16 o2 @35a+16 / [@35a+4@37f+16r8@37f+16]6 @35a+4 @35a+8^16 @35a+8 o0 r8 o2 @35a+4 o0 r16 [o2 @35a+4@37f+16r8@37f+16]2 @35a+4 @37f+16 o0 r8 o2 @35a+16 @37f+16 o0 r8^16 [o2 @35a+8r16@35a+16@35a+4]3 @37f+8 o0 r16 o2 @35a+16 @37f+8 o0 r8 o2 @35a+8 o0 r16 o2 @35a+16 [@35a+4@37f+16r8@37f+16]2 @35a+4 [@37f+16r8@35a+16]2 [@35a+4]2 [@37f+16r8@37f+16@35a+4]7 @37f+16 o0 r8 o2 @37f+16 o3 @36d+4 [o2 @37f+16r8@37f+16@35a+4]2 [@37f+16r8@35a+16]2 @37f+16 o0 r8^16 [o2 @35a+4@37f+16r8@37f+16]6 @35a+8^16 o0 r16 o2 @35a+16 o0 r8 o2 @35a+8 o0 r8 o2 @35a+8^16 o0 r8 [o2 @35a+4@37f+16r8@37f+16]6 @35a+4 @37f+16 o0 r8 o2 @35a+16 @37f+8^16 @35a+16 @35a+8 o0 r8 [o2 @35a+4@37f+16r8@37f+16]6 @35a+8^16 o0 r16 o2 @35a+16 o0 r8 o2 @35a+8 o0 r8 o2 @35a+8^16 o0 r8 [o2 @35a+4@37f+16r8@37f+16]7 @35a+8 o0 r16 o2 @35a+16 o0 r8^16 o2 @35a+16 
+
+; Kick
+#6 t57
+@32 y9 v190 o0
+r1^2^8^16^32^64 o3 d32 e64 o0 r64 o3 f64 g64 a64 o0 r64 o3 b64 o4 c64 d64 e64 f64 g64 o0 r32^64 /
+@33 y10 [o1 b16r8^16]128 
+
+; Snare
+#7 t57
+@38 y11 v170 o0
+r8^16 o3 f8 o0 r8^16 o3 f16 o0 r8^16 o3 e16 o0 r8 o3 f4 o0 r16 @34 y10 o2 e4 r8^16 e4 r16 /
+r4 e4 r4 e4 r4 o2 e4 r8^16 e4 r4^16 e4 r4 e4 r4 o2 f+8^16 o2 f+4 o2 f+16 f+8^16 o2 g16 [o0 r4>>e4]3 o0 r8^16 o2 e4 [o0 r16>>f+8^16]4 o0 r4^16 o2 f+8^16 o2 f+4 o2 f+16 f+8^16 o2 g16 [o0 r4>>e4]3 o0 r8^16 o2 e4 o0 r4^16 [o2 e4r4]2 o2 e8 o0 r16 o2 e16 o0 r8^16 o2 e16 e8 o0 r16 o2 e16 [f+4]8 o0 r1^4 o2 f+8^16 o2 f+4 o2 f+16 f+8^16 o2 g16 [o0 r4>>e4]3 o0 r8^16 o2 e4 o0 r4^16 [o2 e4r4]2 o2 f+8^16 o2 f+4 o2 f+16 f+8^16 o2 g16 [o0 r4>>e4]7 o0 r8^16 o2 e4 o0 r4^16 [o2 e4r4]2 o2 e4 o0 r8^16 o2 e4 o0 r4^16 [o2 e4r4]2 o2 f+8^16 o2 f+4 o2 f+16 f+8^16 o2 g16 [o0 r4>>e4]5 o0 r8^16 o2 e4 o0 r4^16 o2 e4 o0 r2 

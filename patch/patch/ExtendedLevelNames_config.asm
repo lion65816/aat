@@ -29,8 +29,8 @@ NameData:
  db "                   "
  db "                   "
  ;Level 005
- db "                   "
- db "                   "
+ db "The Emerald Winston"
+ db "Bar and Restaurant "
  ;Level 006
  db "  Thwompire State  "
  db "     Building      "
@@ -230,8 +230,8 @@ NameData:
  db " Coasting Redwoods "
  db "                   "
  ;Level 124
- db "Welcome to new     "
- db "world              "
+ db " Accordion Depths  "
+ db "                   "
  ;Level 125
  db " The Purkinje Tree "
  db "      Ruins       *"
