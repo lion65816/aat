@@ -17063,7 +17063,7 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashFileNameVertex, LunarHelper",
       "file_name": "BabaBlocks.asm",
-      "hash": "aa6e2226e41097f08c1dedc6c27a77ef",
+      "hash": "7e85288f358a7b3324783175808533df",
       "dependencies": []
     },
     {
@@ -17099,7 +17099,7 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashFileNameVertex, LunarHelper",
       "file_name": "DeathWarp.asm",
-      "hash": "3a7224dd127c1b8add9c14a1746376d1",
+      "hash": "16116a5daa757d79afc78902abe24cc5",
       "dependencies": []
     },
     {
@@ -17123,7 +17123,7 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashFileNameVertex, LunarHelper",
       "file_name": "OffscreenIndicator.asm",
-      "hash": "59deb92ba084d4b5dd2b8a642bd8e98d",
+      "hash": "1f98f826d1aeed61120490eae9f2d449",
       "dependencies": []
     },
     {
@@ -17175,7 +17175,7 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashFileNameVertex, LunarHelper",
       "file_name": "SimpleHP6.asm",
-      "hash": "e66acd32dbea1ea5eefdf8aa1c2e9ad8",
+      "hash": "cae00240459d9941cd36f221fa6b1f08",
       "dependencies": []
     },
     {

@@ -174,6 +174,7 @@ demo_small:
 	BRA switch_null		;> Else, change the tiles to that of a Null Switch.
 
 switch_blue:
+	PHB : PHK : PLB
 	REP #$20		;> Reset A to 16-bit.
 	LDA SwitchY,X		;\ Load the y-coordinate of the Null Switch tile currently indicated by X.
 	STA $98			;/
@@ -182,6 +183,7 @@ switch_blue:
 	LDA SwitchBlue,X	;> Load the Map16 value of the Blue Switch tile currently indicated by X.
 	JSR change_map16	;> With the (x,y)-coordinates and the Map16 value set, we can now update the Map16 to a Blue Switch tile.
 	SEP #$20		;> Set A to 8-bit.
+	PLB
 
 	INX #2			;\ If we didn't reach the end of the data table yet, then continue to change the Map16 blocks to the Blue Switch.
 	CPX #$0008		;| Note that we need to increment the index register twice, since we are using "dw" instead of "db" for the tables.
@@ -190,6 +192,7 @@ switch_blue:
 	BRA +
 
 switch_null:
+	PHB : PHK : PLB
 	REP #$20		;> Reset A to 16-bit.
 	LDA SwitchY,X		;\ Load the y-coordinate of the Blue Switch tile currently indicated by X.
 	STA $98			;/
@@ -198,6 +201,7 @@ switch_null:
 	LDA SwitchNull,X	;> Load the Map16 value of the Null Switch tile currently indicated by X.
 	JSR change_map16	;> With the (x,y)-coordinates and the Map16 value set, we can now update the Map16 to a Null Switch tile.
 	SEP #$20		;> Set A to 8-bit.
+	PLB
 
 	INX #2			;\ If we didn't reach the end of the data table yet, then continue to change the Map16 blocks to the Blue Switch.
 	CPX #$0008		;| Note that we need to increment the index register twice, since we are using "dw" instead of "db" for the tables.

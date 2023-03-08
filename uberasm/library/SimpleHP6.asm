@@ -95,6 +95,7 @@ check_hurt:
 RTL
     
 Draw:
+    PHB : PHK : PLB
     ;;;Main table
     LDX $3100                           ;Main index
     LDY.w #$0000+((!MaxHP-1)*2)         ;Loop index
@@ -155,6 +156,7 @@ Draw:
     ;Bad idea
 ;    JSL $0084B4                         ;Maxtile draw
     ;_;
+    PLB
 RTL
 
 BaseCoord: 

@@ -38,6 +38,7 @@ main:
 	;> Wrapper code to iterate through all sprite slots.
 	;> Note: There are 12 (0xB) sprite slots in LoROM (for most sprite headers). For SA-1, there are 22 (0x16) sprite slots.
 	;> Source: https://www.smwcentral.net/?p=viewthread&t=30203&page=1&pid=445658#p445658
+	PHB : PHK : PLB
 	;LDX #$0B
 	LDX #$16				;> Set up loop counter (number of sprite slots). This is the initial sprite slot index to check.
 
@@ -107,6 +108,7 @@ skip:
 
 	BRA next_slot				;> Finished processing this offscreen sprite. Need to check the other sprite slots, too.
 exit:
+	PLB
 	RTL
 
 Tiles:
