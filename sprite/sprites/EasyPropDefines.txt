@@ -1,0 +1,15 @@
+;don't edit these k thx
+!Palette8 = %00000000
+!Palette9 = %00000010
+!PaletteA = %00000100
+!PaletteB = %00000110
+!PaletteC = %00001000
+!PaletteD = %00001010
+!PaletteE = %00001100
+!PaletteF = %00001110
+
+!SP1SP2 = %00000000
+!SP3SP4 = %00000001
+
+!PropXFlip = %01000000
+!PropYFlip = %10000000

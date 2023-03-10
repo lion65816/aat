@@ -41,6 +41,12 @@ level:
 0B2	DisableADownStatusB.asm
 0B3	HDMAGradient125.asm
 0B4	statusbarremove.asm
+0B5	Gradient12F.asm
+0B6	Gradient12F.asm
+0B8	HDMAGradientB8.asm
+0B9	FlashlightStatusReScrollEcho.asm
+0BA	FlashlightStatusReScrollEcho.asm
+0BB	FlashlightStatusReScrollEcho.asm
 0C0	DisableLR.asm
 0C5	hide_sb_uber.asm
 0D0	HDMAGradient.asm
@@ -67,6 +73,7 @@ level:
 125	HDMAGradient125.asm
 126	onoff.asm
 129	LV129.asm
+12F	Gradient12F.asm
 131	LV131.asm
 
 135	LV135.asm

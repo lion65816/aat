@@ -292,6 +292,25 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 2093	0	Spawns sprite $BA.
 3300	0	BlkMus1.asm
 3301	0	A block which destroys (Baby) Yoshi if touched.
+4103	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+4104	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+4106	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+4107	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+4108	0	
+4129	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+412a	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+4140	0	Shatters if a fireball touches it.
+41ba	0	
+4285	0	
+42b2	0	
+42b4	0	
+42b9	0	
+432d	0	
+4352	0	
+4358	0	
+4372	0	
+438a	0	
+438b	0	
 5440	0	Teleports the player to level 1CB.
 60dd	0	StickyBlock.asm
 60de	0	StickyBlock.asm

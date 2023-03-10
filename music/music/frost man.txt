@@ -1,0 +1,216 @@
+#amk 2
+
+#option smwvtable
+
+#spc
+{
+	#title "Frost Man"
+	#game "Mega Man 8"
+	#author "Shusaku Uchiyama"
+	#comment "ported by maxodex"
+}
+
+#samples
+{
+	"optimized/00 SMW @0.brr"
+	"optimized/01 SMW @1.brr"
+	"optimized/02 SMW @2.brr"
+	"optimized/03 SMW @3.brr"
+	"optimized/04 SMW @4.brr"
+	"optimized/05 SMW @8.brr"
+	"optimized/06 SMW @22.brr"
+	"optimized/07 SMW @5.brr"
+	"optimized/08 SMW @6.brr"
+	"optimized/09 SMW @7.brr"
+	"optimized/0A SMW @9.brr"
+	"optimized/0B SMW @10.brr"
+	"optimized/0C SMW @13.brr"
+	"EMPTY.brr"
+	"optimized/0E SMW @29.brr"
+	"EMPTY.brr"
+	"optimized/10 SMW @12.brr"
+	"EMPTY.brr"
+	"optimized/12 SMW @15.brr"
+	"EMPTY.brr"
+	"frost man/slapbass.brr"
+	"frost man/voice.brr"
+	"frost man/tambourine.brr"
+	"frost man/kick.brr"
+	"frost man/snare.brr"
+	"frost man/hat.brr"
+	"frost man/trumpet.brr"
+	"frost man/ride.brr"
+	"frost man/flute2.brr"
+}
+
+#instruments
+{
+	"frost man/slapbass.brr" $FF $E0 $B8 $03 $FA				;@30
+	"frost man/voice.brr" $FF $EC $B8 $03 $F0					;@31
+	"frost man/tambourine.brr" $FF $EE $B8 $09 $FA				;@32
+	"frost man/kick.brr" $FF $E0 $00 $06 $00					;@33
+	"frost man/snare.brr" $FF $E0 $00 $04 $30					;@34
+	"frost man/hat.brr" $FD $E0 $00 $04 $00						;@35
+	"frost man/trumpet.brr" $FF $EC $B8 $03 $F0					;@36
+	"frost man/ride.brr" $FF $EE $B8 $04 $00					;@37
+	"frost man/flute2.brr" $FF $EC $B8 $02 $A0					;@38
+}
+
+;https://www.youtube.com/watch?v=p6T9TN-bCO4
+
+(!100)[@30]
+(!106)[@36]
+(!108)[@38]
+(!500)[$FA $01 $BD]
+
+t61 w255
+
+;$EF $40 $CE $32
+;$F1 $05 $6C $01
+;$F5 $7F $0A $01 $01 $01 $01 $01 $01
+
+
+#0 (!100,-1) (!500,3) v255 $FA $03 $40 $F4 $02
+
+o3c+4c+16r16c+24r48c+24r12<g+8b24r12>c+4^16
+<b32r16.b8.g+8r16g+8b24r12>c+8
+<f+4f+24r12f+24r12f+24r48f+8f+24r12f+4^16
+f+24r12f+24r12g+8.g+24r48a8b24r12>e8
+c+4c+24r12c+24r12c+24r48<g+8b24r12>c+4^16
+<b24r6r24g+4g+16b64r16..>c+8.
+<f+4f+24r12f+8f+24r48f+8f+64r32.f+8.f+64r32.
+g+16g+24r12b8.g+8b24r48g+32r16.g+16>e24r48<b16r16g+16
+/
+[o2 g+16>c+16c+32r16.e8e32r32c+8c+32r32g+8f+24r12<b8
+a8a32r32>e8e32r32<a8a32r32a32r16.>f+8e16r16c+16
+<b8b32r32>d+8d+32r32<b8b32r32b32r32g+8>f+8<b16r16
+g+8g+24r48g+16g+8b24r12>d+8d+24r48<g+8>f+16d+6
+r48<a8.a8>c+24r48c+24r12c+8<a24r48>e8<a8
+b8b24r48>d+8d+24r48<b16r16>f+16r16<b8>g+16r16<b4
+b24r48>c+2^6r48<g+24r12
+>e16d+16r16c+16r16<b16>c+8<b16a16g+16f+16g+16b16>e16e16]2
+o2 a8.a24r48a16a24r12a8.>e24r12e8<b24r12
+a8.a24r8r48a8>e24r8r48f+8.d+24r12
+<g+8.g+24r8r48g+24r12g+8.b24r12g+24r48>d+4
+<g+32r16.g+8g+24r12g+16g+16r16f+8.>d+24r12
+<a8a24r6r24a8r8>e24r12g+8<a8
+r8a4>e16r8.f+4<a8
+g+8.g+24r48b8.b24r48g+8b64r16..>c8d+4
+g+24r12g+4g+24r48g+24r12f+24r48e8.<g+8
+
+
+
+#1 l16 o4 $FA $03 $80
+
+v240 @33 (10)[q7f c4c4c4 c8 q7c c8]3
+v255 q7f c4. v240 c4 q7d c4 q7f c8
+(10)3 v255 c2r16
+v240 @34 q7c c16c8 q7f v255 c8 v240 q7e c16 q7f c16 /
+v255 $FA $03 $30
+(11)[q7e @33 c8. q7c c16 q7f @34 c8 q7b @33 c16 q7c @34 c16 q7e @33 c8 q7c @34 c16 @33 c16 q7f @34 c8 q7e @33 c16 @34 c16]3
+q7e @33 c8. q7c c16 q7f @34 c8 q7b @33 c16 q7c @34 c16 q7e @33 c8 q7c @34 c16 @33 c16 q7f @34 c8 q7e c16c16
+(11)2
+@33 c16 q7c @34 c8 q7e c16 q7f c8 q7c c16 q7e c16 @33 c16 @34 q7c c16 q7e c16 @33 c16 q7f @34 c16 q7e @33 c16 @34 c16c16
+@33 c2 c16^48 @34 q7d c24 q7e c16 q7c c16 q7e c8 q7f c8
+(12)[q7e @33 c8. q7c c16 q7f @34 c8 @33 q7b c16 q7c c16 q7e c8 q7b c16 q7c c16 q7f @34 c8 @33 q7e c16 q7c c16]3
+(13)[q7e @33 c8. q7c c16 q7f @34 c8 @33 q7b c16 q7c c16 q7e c8 q7b c16 q7c c16 q7f @34 c8 c16 @33 q7b c16]
+(12)3
+q7e @33 c8. q7c c16 q7e c8 @33 q7b c16 q7c c16 @34 q7b c16 q7c c16 @33 q7b c16 q7c c16 @34 c8 q7f c16 @33 c16
+(12)
+q7e @33 c8. q7c c16 q7f @34 c8 @33 q7b c16 q7c c16 q7e c8 q7b c16 q7c c16 q7f @34 c8 q7b c16 q7e c16
+(12) (13)
+(12) (13)
+@34 q7f c8. q7c c16 q7f c8 q7e c16 q7c c16 q7e c16 q7c c16 q7e c16 @33 q7d c16 q7f @34 c8 c16 q7c c16
+q7e c8. c16 @33 c8 @34 q7f c16 q7d @33 c16 q7e c16 @34 q7c c32 q7d c32 q7b c16 q7c c16 q7d c8 q7f c16 q7d @33 c16
+
+
+#2 v200 @31 o4
+
+[d+1^1<g+1^1>]2 /
+v190 o4
+(20)[d+1e1 q7d f+1f+1 q7f
+c+1 q7d f+1 q7f c+1.]
+d+4. $ED $7F $F8 ^8
+@31 (20) q7a c+4 q7f <b4>
+v200
+c+1^1c+1^1e1^1c+1d+1
+
+
+#3 v180 @31 o3 q7f
+
+[e1^1<a1^1>]2 /
+v190 o3
+(30)[e1g+1>d+1<f+1
+g+1b1e1.>]
+q7d c+4. e8 q7f
+(30) o3 q7a e2 q7f
+v200
+g+1^1f+1^1g+1^1f+1g+1
+
+
+#4 v190 @31 o2 q7f
+
+b1^1e1^1>
+c+1 v180 <b1 v190 e1^1 /
+v190 o2
+(40)[b1>c+1g+1<b1
+q7d a1 q7f >d+1c+1.]
+q7c b4. $ED $7F $F8 ^8 q7f
+@31 (40) q7a o3 c+2 q7f
+v200
+o2 a1^1g+1^1f+1^1 g+1>c1
+
+
+#5 (!100,0)
+
+@37 o4 v240
+q7c c4 q78 c8 q7e c2. q78 c8 q7e c4. q7b c4c8c1
+[q7e c2^8 q7b c4 q78 c8 q7c c1]2 q7e c2. q7f $FA $03 $F0 c4 $FA $03 $00
+;v190 @31 o2
+;c+1^1<f+1^1>
+;c+1^1 [r2]4
+/
+r4. v200
+(50)[(!106,-1) (!500,3) h5
+o4
+c+4.g+12r6
+b4a24r12g+4f+24r6r24g+2^6
+r12f+8e8f+8
+e4d+8c+8r8<b16r8.>c+2
+r8e16r8.f+8r8
+g+4f+16r16d+8r8<b8g+32r16.b8
+r8>c+16r16c+1^4
+r2..
+c+4.g+16r8.
+b4a16r16g+4f+32r8..g+2^6
+r12f+8e8f+8
+e4d+8c+8r8<b16r8.>c+2
+r8e16.r8r32f+16r8.
+g+4f+16r16d+8r8<b8g+32r16.b8
+r8>c+32r16.c+1^8 r4]
+v240
+(51)[ (!108,-1) h0 o4
+c48c+12^48e16r16f+8
+g+4f+16r8c+2r6
+r96
+g96g+8r48f+24r16r96c+16r16r96e6^16f+4
+d+4c+16r16c+8r8<b16r16>c+2^6
+r8.c48c+12^48e16r16f+8
+g+4f+24r8r48c+2r8.
+c48c+12^48e24r12f+24r12g+4f+24r6r24
+b4a16r8.g+8 q7b a32.r64g+32.r64 q7f f+16r16f+4
+g+24r12g+2r4.]
+
+
+#7 v245 @32 o3
+
+r4. f1^1c1^1
+f1^1c1.^8 /
+(!100,0)
+v145 r2^16 $EE $0D
+(50) v180 (51)
+
+
+#6 v205 @35 o4 l16
+
+[q7b c q7f c q7b c q7a c q7f c q7b c q7a c q7f c q7b c q7f c q7b cc q7f c q7b c q7a c q7f c]8 / *100

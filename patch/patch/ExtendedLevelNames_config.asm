@@ -161,8 +161,8 @@ NameData:
  db "yeah! get down!    "
  db "   ONE MORE TIME! *"
  ;Level 10D
- db "FINAL CHALLENGE    "
- db "Choose 2 and 5     "
+ db " The Palace Color  "
+ db "     is Yellow     "
  ;Level 10E
  db "  Aerial Airships  "
  db "                  *"
@@ -263,8 +263,8 @@ NameData:
  db "STAR ROAD          "
  db "                   "
  ;Level 12F
- db "STAR ROAD          "
- db "                   "
+ db " Where The Whales  "
+ db "  Come To Rest    *"
  ;Level 130
  db "Blue Yoshi Lake    "
  db "                   "

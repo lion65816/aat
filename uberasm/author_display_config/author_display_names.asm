@@ -47,7 +47,7 @@ db "SAJewers             " ; 109
 db "DJBuckley            " ; 10A
 db "levelengine          " ; 10B
 db "Catabo               " ; 10C
-db "                     " ; 10D
+db "Big Brawler          " ; 10D
 db "SAJewers             " ; 10E
 db "Big Brawler          " ; 10F
 db "4season              " ; 110
@@ -81,7 +81,7 @@ db "                     " ; 12B
 db "                     " ; 12C
 db "tangy                " ; 12D
 db "                     " ; 12E
-db "                     " ; 12F
+db "Bumpty               " ; 12F
 db "                     " ; 130
 db "4season              " ; 131
 db "                     " ; 132

@@ -1,0 +1,29 @@
+#am4
+	$ED $80 $6D $2B
+	$ED $80 $7D $00
+	$F0
+
+$EF $07 $17 $17 $F1 $04 $68 $01 t25
+#0
+l8@3o5
+aa>ddc<a+a^16r16
+gffga^16r16r4
+dda>dc<a+af
+gffga^16rr16a
+aa>ddcccc
+cded<a^16r16r4
+ra>ddc<a+ae
+gf^16r16rr2
+#1v235
+o4(1)[@3da>dr
+o3a+>fb+r
+<g>da+r
+<a>ega]2
+(2)[f>cfr
+<cg>er
+o3a+>f>dr
+o3a>ae<a
+a+>fa+r
+cgb+r
+<da>dedrr4]
+#2r16v135(1)2(2)

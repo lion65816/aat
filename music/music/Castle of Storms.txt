@@ -1,0 +1,186 @@
+﻿;*******************************************************************
+;Title = Castle
+;Ported by tu puta madre xd
+;*******************************************************************
+; Insert size: 1468 bytes
+; Number of channels: 6 (Channels 7, 8 unused)
+; Total song length: 1:03
+; Version: AddmusicK 2
+; Samples: Yes (brr)
+;*******************************************************************
+; SPC Generator Info
+#SPC
+{
+	#author "Koji Kondo"
+	#title "Castle of Storms"
+	#game "Yoshi's Island"
+	#comment "Ported by tu puta madre xd"
+}
+;*******************************************************************
+;Commands In Song
+
+;VCMD_ECHO_ON=$ef
+;VCMD_ECHO_PARAM=$f1
+;VCMD_ECHO_VOL_FADE=$f2
+;VCMD_VOL_FADE=$e8
+;VCMD_VIBRATO_ON=$de
+;VCMD_MASTER_VOL_FADE=$e1
+;*******************************************************************
+;Samples and Info
+#samples
+{
+	#optimized
+	"YI/yi-1C.brr"
+	"YI/yi-1D.brr"
+	"YI/yi-1B.brr"
+	"YI/rain.brr"
+}
+#instruments
+{
+	"YI/yi-1C.brr" $ff $e0 $00 $07 $a8	;@30 bongos
+	@2	       $8f $19 $00 $06 $04	;@31 glockenspiel
+	@0	       $8d $e0 $00 $03 $00	;@32 recorder
+	"YI/yi-1D.brr" $ff $f6 $00 $03 $05	;@33 strings
+	"YI/yi-1B.brr" $ff $e0 $00 $05 $3d	;@34 violin
+"YI/rain.brr" $ff $e0 $00 $06 $20
+}
+
+"Rain=@35"
+
+;*******************************************************************
+;Channel 1
+
+#0
+w175 t24 @34 v80 y6 
+$ef $ff $00 $00 
+$f1 $02 $1e $01
+$f2 $28 $0e $0e 
+$f5 $0c $21 $2b $2b $13 $fe $f3 $f9
+$de $00 $50 $5a 
+$e8 $96 $e6 
+q7e o2 c2 ^2 ^2 $e8 $96 $64 ^2 ^2 
+w120 $e1 $90 $be t35 
+$f2 $60 $36 $36
+@34 v240 $de $18 $1c $18 y6
+[q7e o2 c4. q6e d4. $e1 $90 $8c q7e d+4. q6e d4.]2/
+v240 $de $18 $1c $18 y6
+[q7e o2 c4. q6e d4. $e1 $90 $84 q7e d+4. q6e d4. $e1 $90 $c8 
+q7e f4. q6e g4. $e1 $90 $8c q7e g+4. q6e g4.]2
+q7e o2 g+4. q6e g4. $e1 $90 $8c q7e g+4. q6e g4. $e1 $90 $c8
+q7e g+4. q6e g4. $e1 $90 $8c q7e g+4. g4. ^4. r4. r4. r6... q7e o1 b16 ^4. 
+[w120 $e1 $90 $be v200 $de $18 $1c $18 y6 q7e o2 c4. q6e g4. $e1 $90 $c8
+q7e c4. q6e g4. $e1 $90 $c8 q7e c4. q6e g4. $e1 $90 $8c q7e c4. q6e g4.]2
+
+;*******************************************************************
+;Channel 2
+
+#1
+@34 v80 $e8 $96 $e6 $de $14 $28 $32 y14
+q7e o2 c2 ^2 ^2 $e8 $96 $64 ^2 ^2 v240 $de $15 $1c $18 y12 
+(3)[r=23 q1d o3 g=26 g=23 r=23 q5e a=49 r=23 q1d a+=26 a+=23] 
+r=23 q5d o3 a=49 (3) r=23 q5d o3 a=49/
+(3) r=23 q5d o3 a=49 r=23 q1d > c=26 c=23 
+(4)[r=23 q5e o4 d=49 r=23 q1d d+=26 d+=23] 
+r=23 q5d o4 f=49 (3) r=23 q5d 
+o3 a=49 r=23 q1d > c=26 c=23 
+(4) r=23 q5d o4 f=49 r=23 q1d d+=26 d+=23 
+(4) r=23 q5d o4 d=49 r=23 q1d d+=26 d+=23 
+(4) r=23 q7d o4 d=49 ^4. r4. r4. r6... q7e < < < b16 ^4. 
+[r=23 q1d o3 a=26 a=23 r=23 q7e a+=49 r=23 q1d b=26 b=23 r=23 q7d a+=49]4
+
+;*******************************************************************
+;Channel 3
+
+#2
+r=480/
+@34 v240 $de $14 $1e $1b y14
+(6)[r=23 q1d o3 d+=26 d+=23 r=23 q5e f+=49 r=23 q1d g=26 g=23 r=23 q5e f+=49]2/
+(6) r=23 q1d o3 g+=26 g+=23 r=23 q5e b=49 r=23 q1d > c=26 c=23 r=23 q5e o3 b=49 
+(6) r=23 q1d o3 g+=26 g+=23 r=23 q5e b=49 r=23 q1d > c=26 c=23 r=23 q5e o3 b=49 
+@33 v200 y10 r4. q5e o2 g16 > d16 d16 g16 g16 > d16 ^4. < < g16 
+> d16 d16 g16 g16 > d16 ^4. < < b16 > f16 f16 b16 b16 > f16 ^4. < 
+d16 b16 b16 b16 > c16 q7e c16 q4e > b8 < g+16. f24... d24...
+q4e f16 d16 < b=11 g+=11 > d32. < b32. g+24 f24 b24 g+24 f32 d32 g+32 f32 d32 
+< b32 > f32 d32 < b32 g+32 > d32 < b32 g+32 f32 b32 g+32 f32 d32 q7e < b16 ^4. 
+@34 v240 $de $14 $1e $1b y14
+(7)[r=23 q1d o3 d+=26 d+=23 r=23 q7e e=49 r=23 q1d f=26 f=23 r=23 q7d e=49]4
+
+;*******************************************************************
+;Channel 4
+
+#3
+@32 y10 v240 $de $14 $18 $1e
+r=20 q6c o4 c12... q7c c+=5 q3c d+32. q5b 
+c32. q3b c+=10 q3c e32. q79 g48 q25 ^32 
+(8)[q35 o4 a+32. q6b > c8... q4a c+=5 q79 d+96 q78 c32. q5c < b48.. q7c 
+> c=13 ^=57 q7c e24 q7c g48.. q7b e96 q6c c+48.. q4a c48.. q45 < a+24 
+r192 q4b > c48.. q6a c+48.. q5b c=10 q65 < a+=10 q68 g=11 q79 e24.. 
+q5b c+=13 q6a < a+24.. q7b > c96 q4c c+48..] 
+q6c o4 c2 r=288 r=288/
+@34 v240 $de $12 $1e $18 y10
+
+[q7e c16d+16b+4c16d+16b+4>d8. q5e d+16d16d+16d16<a+16 q6e g4
+q7e g8c8 q5e d+16f16] q7e g4^16r16 g8 c8 q5f d+16f16 q7e d4^16r16
+* q7e g4 q5e g8 q7e c2^8 r8
+
+
+;q7e c=23 q1e d+=26 g=23 
+;(9)[q7e o4 f+=23 q1e a=26 r=23 q7e a+8. q5e > c16 < a+16 a16 q7e g=23 q1e 
+;d=25 r8 q7e f=23 q1e g+=26 > c=23 q7e < b=23 q1e > d=26 r=23 q7e d+8. q5e 
+;f16 d+16 d16] 
+;q7e o5 c=23 q1e < b=25 r8 q7e c=23 q1e d+=26 g=23 
+;(9) q7e o5 c=23 q1e < b=25 r8 
+
+
+@32 y9
+(10)[q7e o5 c8. q6e < g+16 q7e f+16 q1e g+16 q7e g4.]2
+o5 f8. q6e d16 q7e c16 q1e d16 q7e < b4. > g+8. q6e 
+f16 q7e d+16 q1e f16 q7e d8 b4 ^4. r=288 r=576
+@31 q7e o3 f+8 g8 a+8 a8 g+8 a+8 a4. f+4 a8 g+4 f8 e4 > c+8 c4. < g+4. 
+
+;*******************************************************************
+;Channel 5
+
+#4
+@32 y17 v170 $de $0f $18 $1e
+r=26 q6c o4 c12... q7c c+=5 q3c d+32. q5b 
+c32. q3b c+=10 q3c e32. q79 g48 q25 ^32 
+(8) q6c o4 c4... 
+@34 $de $15 $1c $18 y8
+r=33 q1d < g=26 g=23 r=23 q5e a=49 r=23 q1d a+=26 a+=23 
+r=23 q5d o3 a=39 r=33 q1d g=26 g=23 
+r=23 q5e a=49 r=23 q1d a+=26 a+=23 r=23 q5d o3 a=39/
+
+@34 $de $0e $1f $18 >
+r16 [q7e c16d+16b+4c16d+16b+4>d8. q5e d+16d16d+16d16<a+16 q6e g4
+q7e g8c8 q5e d+16f16] q7e g4^16r16 g8 c8 q5f d+16f16 q7e d4^16r16
+* q7e g4 q5e g8 q7e c2^16r8
+
+;r=10 q7e > c=23 q1e d+=26 g=23
+;(9) q7e o5 c=23 q1e < b=25 r24.. 
+;r=10 q7e c=23 q1e d+=26 g=23 
+;(9) q7e o5 c=23 q1e < b=25 r24.. 
+
+
+@32 y5 r=10 q7e 
+(10) > c8. q6e < g+16 q7e f+16 q1e g+16 q7e g6.... 
+(10) o5 c8. q6e < g+16 q7e f+16 q1e g+16 q7e g8 > f4 
+@33 v160 y4 o4
+r48 q4e > b8 < g+16. f16. d24 r48 q4e f16 d16 < b=11 g+=11 > d32. < b32. g+24 
+f24 b24 g+24 f32 d32 g+32 f32 d32 < b32 > f32 d32 < b32 g+32 > d32 < b32 g+32 
+f32 b32 g+32 f32 d32 q7e < b24 ^4. r=576 r=576
+
+;*******************************************************************
+;Channel 6
+
+#6
+@30 y14 v60 $e8 $78 $c8
+r=40 q3e o4 g64 g64 g64 q5e g32 d32 g32 d24 g=10 g=11 g24.. d16. g=20 g8 d24 
+g48 g24 r2 r16. d24 q5fg24 q5e d32 q5f g32 g32 g32 q5e d32 q5f g32 g32 g32 q5e 
+d32 q5f g24 g24 g12 r4. r=288 r=288/
+r=576 r=576 @34 v240 $de $14 $1e $1b
+r=23 q1d c=26 c=23 
+[r=23 q5e o3 b=49 r=23 q1d > c=26 c=23]3
+r=23 q7e o3 b=49 ^4. r=288 r=576 r=576
+
+#amk 2

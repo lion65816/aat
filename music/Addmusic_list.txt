@@ -126,3 +126,8 @@ Locals:
 8C  froge.txt
 8D  bonk2.txt
 8E  fail.txt
+8F  frost man.txt
+90  Mizuno.txt
+91  The Ground's Color is Yellow.txt
+92  Castle of Storms.txt
+93  a2mtlul3.txt
