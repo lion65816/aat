@@ -74,10 +74,20 @@ level:
 126	onoff.asm
 129	LV129.asm
 12F	Gradient12F.asm
-131	LV131.asm
-
-135	LV135.asm
-136	lvlfilter.asm
+131	LevelIntro.asm
+135	LevelIntro.asm
+136	LevelIntro.asm
+137	LevelIntro.asm
+138	LevelIntro.asm
+139	LevelIntro.asm
+13A	LevelIntro.asm
+15D	Gradient15D.asm
+17A	LV131.asm
+17B	LV135.asm
+17C	lvlfilter.asm
+17D	FilterYoshi.asm
+17E	FilterYoshi.asm
+1A0	FilterYoshi.asm
 1B0	redswitch.asm
 1B1	redswitch.asm
 1B2	redswitch.asm

@@ -5,6 +5,8 @@ main:
     jsl retry_in_level_main
 	JSL ScreenScrollingPipes_SSPMaincode
 	;...or codes here before the RTL.
+;	LDA #$7F		;\ Make the player invincible.
+;	STA $1497|!addr		;/ (Testing purposes.)
 	RTL
     
 nmi:

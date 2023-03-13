@@ -290,6 +290,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1ffb	0	A door that uses 1 of 15 screens randomly.
 1ffc	0	A door that uses a specific screen exit.
 2093	0	Spawns sprite $BA.
+2300	0	noyoshiintro.asm
 3300	0	BlkMus1.asm
 3301	0	A block which destroys (Baby) Yoshi if touched.
 4103	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi

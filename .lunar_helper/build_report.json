@@ -170,21 +170,29 @@
     "Levels/level 127.mwl": "acbfdf82b2877358d43e5f3ac593b8e2",
     "Levels/level 129.mwl": "479efd3727b9c026cd4f857a58a8c4a9",
     "Levels/level 12D.mwl": "b3b9aa371638dea18ce83863760fc613",
-    "Levels/level 12F.mwl": "0f2f38f050184e4e208be28b0bf89fe0",
-    "Levels/level 131.mwl": "8ed712ed869645e192419fae9e594356",
+    "Levels/level 12F.mwl": "a443e8d6f2cbeb41e6d738faa3c32ec8",
+    "Levels/level 131.mwl": "320785ab1585b49ea35bba9da86352bd",
     "Levels/level 133.mwl": "28921b41b9f89a7c33c2b5a99feae8e7",
     "Levels/level 134.mwl": "9c98bb1da7322ca560c633a2151bd656",
-    "Levels/level 135.mwl": "fe441807eb49992f159fac0c7d6caf1f",
-    "Levels/level 136.mwl": "1598fbb64b6108cfa70b3eca9f7635f7",
-    "Levels/level 137.mwl": "51bc43fba6f59d46fe78cbe9d8a0bed0",
-    "Levels/level 138.mwl": "9b8a94d9ef4f774e6c73ed5e10ab4a62",
-    "Levels/level 139.mwl": "b6f8f26628f00fe68c5d70dad424ccdd",
-    "Levels/level 13A.mwl": "bb44cdcdb1f7fcc05af6673e0899d2da",
+    "Levels/level 135.mwl": "041d32ebc25644b7ca4fa3c34c3a2756",
+    "Levels/level 136.mwl": "b5fc6b1a322e65fecd19552477533c80",
+    "Levels/level 137.mwl": "f9f0939b4a22612f4f68ec2bb4215e5e",
+    "Levels/level 138.mwl": "2a818837ccab1ccc6851ba448233e605",
+    "Levels/level 139.mwl": "1277619dd32c3b98796adc6fc46bbedb",
+    "Levels/level 13A.mwl": "cc76c4018cc4157284048c6dccfc326b",
     "Levels/level 13B.mwl": "1be057718fcee44bb5ccec7f5cfabb63",
     "Levels/level 13C.mwl": "cdb68c7caac107031cd8e761e93eabac",
+    "Levels/level 15D.mwl": "92eca86e131e58bb10b0145abe09ee65",
+    "Levels/level 17A.mwl": "3ae97cd5d7ec930d9c9093eb7734694b",
+    "Levels/level 17B.mwl": "94994eaf65f60a37a7f8ee6a7a494136",
+    "Levels/level 17C.mwl": "6bfcd96c144df8130a0e1bd384ad6f54",
+    "Levels/level 17D.mwl": "5b9cd2b7644b68d9580065d1d0100d42",
+    "Levels/level 17E.mwl": "17c8e9694e3ea6b6d8c3bb0571cd20cc",
+    "Levels/level 17F.mwl": "4428ad6ebaaa0920d35a56aae7c5a9e8",
     "Levels/level 190.mwl": "e913c1fad42558d0ba6ed918c6f34cd1",
     "Levels/level 19D.mwl": "8b09971faedba340a3c5a078e9a9ffb3",
     "Levels/level 19F.mwl": "b19b63454772f63c5a80416a18209b91",
+    "Levels/level 1A0.mwl": "572f880d727db9ca7f4d32180821d33d",
     "Levels/level 1B0.mwl": "7d9660830c9d3d1edc3bb354f639596c",
     "Levels/level 1B1.mwl": "9fd0742b1d9798f09a6da53b1807f614",
     "Levels/level 1B2.mwl": "11353c519f9b656578c3c427fd7f0515",
@@ -388,7 +396,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_0",
-          "idx": 1489
+          "idx": 1493
         }
       ]
     },
@@ -525,12 +533,12 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "table_0",
-          "idx": 1490
+          "idx": 1494
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1491
+          "idx": 1495
         }
       ]
     },
@@ -583,7 +591,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_0",
-          "idx": 1492
+          "idx": 1496
         }
       ]
     },
@@ -684,7 +692,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_0",
-          "idx": 1493
+          "idx": 1497
         }
       ]
     },
@@ -701,12 +709,12 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "binary_0",
-          "idx": 1494
+          "idx": 1498
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "binary_1",
-          "idx": 1495
+          "idx": 1499
         }
       ]
     },
@@ -725,7 +733,7 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonPatchRootVertex, LunarHelper",
       "path": "patch/patch/owcount.asm",
-      "hash": "7c1046e31072a8aa7324d0b178258e9b",
+      "hash": "38772916476a6581e903a8ec6b298dd0",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -14948,7 +14956,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "b56ca93d8603847275757d227a6ce2ef",
+      "hash": "35a7f0968670169e64c8e9b01fbb6523",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -16072,273 +16080,278 @@
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_3300:25",
+          "tag": "block_2300:25",
           "idx": 1381
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_3301:25",
+          "tag": "block_3300:25",
           "idx": 1382
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_4103:130",
+          "tag": "block_3301:25",
           "idx": 1383
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "block_4103:130",
+          "idx": 1384
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_4104:130",
-          "idx": 1383
+          "idx": 1384
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_4106:137",
-          "idx": 1383
+          "idx": 1384
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_4107:138",
-          "idx": 1383
+          "idx": 1384
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_4129:1E2",
-          "idx": 1384
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_412A:1E4",
-          "idx": 1384
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_41BA:25",
           "idx": 1385
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_4108:25",
+          "tag": "block_412A:1E4",
+          "idx": 1385
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "block_41BA:25",
           "idx": 1386
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "block_4108:25",
+          "idx": 1387
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_703D:25",
-          "idx": 1386
+          "idx": 1387
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_438A:25",
-          "idx": 1387
+          "idx": 1388
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_438B:25",
-          "idx": 1387
+          "idx": 1388
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_4358:25",
-          "idx": 1388
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_432D:25",
-          "idx": 1388
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_4285:25",
-          "idx": 1388
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_42B2:25",
-          "idx": 1388
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_42B4:25",
-          "idx": 1388
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_42B9:25",
-          "idx": 1388
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_4352:25",
           "idx": 1389
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_4372:25",
+          "tag": "block_432D:25",
+          "idx": 1389
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "block_4285:25",
+          "idx": 1389
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "block_42B2:25",
+          "idx": 1389
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "block_42B4:25",
+          "idx": 1389
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "block_42B9:25",
+          "idx": 1389
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "block_4352:25",
           "idx": 1390
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_5440:25",
+          "tag": "block_4372:25",
           "idx": 1391
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_60DD:130",
+          "tag": "block_5440:25",
           "idx": 1392
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "block_60DD:130",
+          "idx": 1393
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_60DE:130",
-          "idx": 1392
+          "idx": 1393
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_60DF:130",
-          "idx": 1392
+          "idx": 1393
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_60ED:130",
-          "idx": 1392
+          "idx": 1393
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_60EE:130",
-          "idx": 1392
+          "idx": 1393
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_60EF:130",
-          "idx": 1392
+          "idx": 1393
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_60FD:130",
-          "idx": 1392
+          "idx": 1393
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_60FE:130",
-          "idx": 1392
+          "idx": 1393
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_60FF:130",
-          "idx": 1392
+          "idx": 1393
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_61CD:130",
-          "idx": 1393
+          "idx": 1394
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_61CE:130",
-          "idx": 1393
+          "idx": 1394
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_61CF:130",
-          "idx": 1393
+          "idx": 1394
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_61DD:130",
-          "idx": 1394
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_61DE:130",
-          "idx": 1394
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_61DF:130",
-          "idx": 1394
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_71F0:25",
           "idx": 1395
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_7203:25",
+          "tag": "block_61DE:130",
+          "idx": 1395
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "block_61DF:130",
+          "idx": 1395
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "block_71F0:25",
           "idx": 1396
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "block_7203:25",
+          "idx": 1397
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_7204:25",
-          "idx": 1396
+          "idx": 1397
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_7213:25",
-          "idx": 1397
+          "idx": 1398
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_7214:25",
-          "idx": 1397
+          "idx": 1398
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_7223:25",
-          "idx": 1397
+          "idx": 1398
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_7224:25",
-          "idx": 1397
+          "idx": 1398
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_7233:25",
-          "idx": 1397
+          "idx": 1398
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_7234:25",
-          "idx": 1397
+          "idx": 1398
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_7243:25",
-          "idx": 1397
+          "idx": 1398
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_7244:25",
-          "idx": 1397
+          "idx": 1398
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_7253:25",
-          "idx": 1397
+          "idx": 1398
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_7254:25",
-          "idx": 1397
+          "idx": 1398
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_7263:25",
-          "idx": 1397
+          "idx": 1398
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_7264:25",
-          "idx": 1397
+          "idx": 1398
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_7273:130",
-          "idx": 1398
+          "idx": 1399
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "block_7274:130",
-          "idx": 1398
+          "idx": 1399
         }
       ]
     },
@@ -16354,7 +16367,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1399
+          "idx": 1400
         }
       ]
     },
@@ -16370,7 +16383,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1399
+          "idx": 1400
         }
       ]
     },
@@ -16386,7 +16399,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1399
+          "idx": 1400
         }
       ]
     },
@@ -16402,7 +16415,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1399
+          "idx": 1400
         }
       ]
     },
@@ -16418,7 +16431,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1399
+          "idx": 1400
         }
       ]
     },
@@ -16434,7 +16447,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1399
+          "idx": 1400
         }
       ]
     },
@@ -16450,7 +16463,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1399
+          "idx": 1400
         }
       ]
     },
@@ -16466,7 +16479,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1399
+          "idx": 1400
         }
       ]
     },
@@ -16482,7 +16495,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1399
+          "idx": 1400
         }
       ]
     },
@@ -16498,7 +16511,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1399
+          "idx": 1400
         }
       ]
     },
@@ -16723,7 +16736,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1400
+          "idx": 1401
         }
       ]
     },
@@ -16739,7 +16752,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1400
+          "idx": 1401
         }
       ]
     },
@@ -16755,7 +16768,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1400
+          "idx": 1401
         }
       ]
     },
@@ -16771,7 +16784,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1400
+          "idx": 1401
         }
       ]
     },
@@ -16787,7 +16800,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1400
+          "idx": 1401
         }
       ]
     },
@@ -16803,7 +16816,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1400
+          "idx": 1401
         }
       ]
     },
@@ -16819,7 +16832,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1400
+          "idx": 1401
         }
       ]
     },
@@ -16835,7 +16848,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1400
+          "idx": 1401
         }
       ]
     },
@@ -16851,7 +16864,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1400
+          "idx": 1401
         }
       ]
     },
@@ -16867,7 +16880,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1400
+          "idx": 1401
         }
       ]
     },
@@ -16883,7 +16896,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1401
+          "idx": 1402
         }
       ]
     },
@@ -16899,7 +16912,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1401
+          "idx": 1402
         }
       ]
     },
@@ -16915,7 +16928,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1401
+          "idx": 1402
         }
       ]
     },
@@ -16931,7 +16944,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1401
+          "idx": 1402
         }
       ]
     },
@@ -17364,6 +17377,11 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
+      "hash": "44c279f73cc756199cf1ecb64e0835e4",
+      "dependencies": []
+    },
+    {
+      "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
       "hash": "1ee82aee673f91b5287e91f63165925e",
       "dependencies": []
     },
@@ -17479,27 +17497,22 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "exe",
-          "idx": 1402
+          "idx": 1403
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "asar",
-          "idx": 1404
+          "idx": 1405
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "main",
-          "idx": 1406
+          "idx": 1407
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "library",
-          "idx": 1413
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "library",
-          "idx": 1415
+          "idx": 1414
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -17569,12 +17582,12 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "library",
-          "idx": 1430
+          "idx": 1429
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "library",
-          "idx": 1431
+          "idx": 1430
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -17583,8 +17596,18 @@
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "list",
+          "tag": "library",
+          "idx": 1433
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "library",
           "idx": 1434
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "list",
+          "idx": 1436
         }
       ]
     },
@@ -17605,32 +17628,32 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_0",
-          "idx": 1405
+          "idx": 1406
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1407
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "source_2",
           "idx": 1408
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "source_3",
+          "tag": "source_2",
           "idx": 1409
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "source_4",
+          "tag": "source_3",
           "idx": 1410
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "source_5",
+          "tag": "source_4",
           "idx": 1411
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "source_5",
+          "idx": 1412
         }
       ]
     },
@@ -17672,12 +17695,12 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "table_0",
-          "idx": 1412
+          "idx": 1413
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1414
+          "idx": 1415
         }
       ]
     },
@@ -17732,6 +17755,12 @@
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashFileNameVertex, LunarHelper",
       "file_name": "FilterYoshi.asm",
       "hash": "bed9bc8b76d7103eae9ad6fe4a5b8ab9",
+      "dependencies": []
+    },
+    {
+      "$type": "LunarHelper.DependencyGraphSerializer+JsonHashFileNameVertex, LunarHelper",
+      "file_name": "freezetimer.asm",
+      "hash": "7ae8730c2e1b21ecd9af1d481c76a9ea",
       "dependencies": []
     },
     {
@@ -17794,7 +17823,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_0",
-          "idx": 1429
+          "idx": 1431
         }
       ]
     },
@@ -17817,587 +17846,642 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "db3d058c13275096f861c294a71d03b9",
+      "hash": "8c50c39af00e8f54a6bcebf7be20e064",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_0",
-          "idx": 1433
+          "idx": 1435
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_256",
-          "idx": 1433
+          "idx": 1435
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_5",
-          "idx": 1435
+          "idx": 1437
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_106",
-          "idx": 1435
+          "idx": 1437
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_107",
-          "idx": 1435
+          "idx": 1437
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_108",
-          "idx": 1435
+          "idx": 1437
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_109",
-          "idx": 1435
+          "idx": 1437
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_110",
-          "idx": 1435
+          "idx": 1437
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_111",
-          "idx": 1435
+          "idx": 1437
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_180",
-          "idx": 1435
+          "idx": 1437
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_255",
-          "idx": 1435
+          "idx": 1437
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_258",
-          "idx": 1435
+          "idx": 1437
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_9",
-          "idx": 1436
+          "idx": 1438
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_14",
-          "idx": 1437
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_47",
-          "idx": 1437
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_242",
-          "idx": 1437
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_247",
-          "idx": 1437
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_291",
-          "idx": 1437
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_16",
-          "idx": 1438
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_35",
-          "idx": 1438
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_274",
-          "idx": 1438
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_283",
-          "idx": 1438
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_310",
-          "idx": 1438
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_21",
           "idx": 1439
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_26",
+          "tag": "level_47",
+          "idx": 1439
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_242",
+          "idx": 1439
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_247",
+          "idx": 1439
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_291",
+          "idx": 1439
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_16",
           "idx": 1440
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_83",
+          "tag": "level_35",
           "idx": 1440
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_84",
+          "tag": "level_274",
           "idx": 1440
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_85",
+          "tag": "level_283",
           "idx": 1440
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_27",
+          "tag": "level_380",
+          "idx": 1440
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_21",
           "idx": 1441
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_42",
+          "tag": "level_26",
           "idx": 1442
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_43",
+          "tag": "level_83",
+          "idx": 1442
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_84",
+          "idx": 1442
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_85",
+          "idx": 1442
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_27",
           "idx": 1443
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_44",
+          "tag": "level_42",
           "idx": 1444
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_45",
+          "tag": "level_43",
           "idx": 1445
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_66",
+          "tag": "level_44",
           "idx": 1446
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_82",
+          "tag": "level_45",
           "idx": 1447
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_94",
+          "tag": "level_66",
           "idx": 1448
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_96",
+          "tag": "level_82",
           "idx": 1449
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_160",
-          "idx": 1449
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_176",
-          "idx": 1449
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_192",
-          "idx": 1449
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_116",
+          "tag": "level_94",
           "idx": 1450
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_96",
+          "idx": 1451
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_160",
+          "idx": 1451
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_176",
+          "idx": 1451
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_192",
+          "idx": 1451
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_116",
+          "idx": 1452
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_128",
-          "idx": 1451
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_309",
-          "idx": 1451
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_144",
-          "idx": 1452
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_272",
-          "idx": 1452
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_177",
           "idx": 1453
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_178",
+          "tag": "level_379",
+          "idx": 1453
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_144",
           "idx": 1454
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_272",
+          "idx": 1454
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_177",
+          "idx": 1455
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_178",
+          "idx": 1456
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_179",
-          "idx": 1455
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_293",
-          "idx": 1455
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_181",
-          "idx": 1456
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_182",
-          "idx": 1456
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_303",
-          "idx": 1456
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_184",
           "idx": 1457
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_185",
+          "tag": "level_293",
+          "idx": 1457
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_181",
           "idx": 1458
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_186",
+          "tag": "level_182",
           "idx": 1458
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_187",
+          "tag": "level_303",
           "idx": 1458
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_197",
+          "tag": "level_184",
           "idx": 1459
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_208",
+          "tag": "level_185",
           "idx": 1460
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_224",
+          "tag": "level_186",
           "idx": 1460
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_240",
+          "tag": "level_187",
+          "idx": 1460
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_197",
           "idx": 1461
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_248",
+          "tag": "level_208",
           "idx": 1462
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_270",
+          "tag": "level_224",
           "idx": 1462
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_254",
+          "tag": "level_240",
           "idx": 1463
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_259",
+          "tag": "level_248",
           "idx": 1464
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_284",
+          "tag": "level_270",
           "idx": 1464
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_290",
-          "idx": 1464
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_280",
+          "tag": "level_254",
           "idx": 1465
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_281",
+          "tag": "level_259",
           "idx": 1466
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_286",
+          "tag": "level_284",
+          "idx": 1466
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_290",
+          "idx": 1466
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_381",
+          "idx": 1466
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_382",
+          "idx": 1466
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_416",
+          "idx": 1466
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_280",
           "idx": 1467
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_294",
+          "tag": "level_281",
           "idx": 1468
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_297",
+          "tag": "level_286",
           "idx": 1469
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_305",
+          "tag": "level_294",
           "idx": 1470
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_432",
+          "tag": "level_297",
           "idx": 1471
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_433",
-          "idx": 1471
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_434",
-          "idx": 1471
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_435",
-          "idx": 1471
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_436",
-          "idx": 1471
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_437",
-          "idx": 1471
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_438",
-          "idx": 1471
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_439",
-          "idx": 1471
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_440",
-          "idx": 1471
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_441",
-          "idx": 1471
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_456",
+          "tag": "level_305",
           "idx": 1472
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_462",
+          "tag": "level_309",
+          "idx": 1472
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_310",
+          "idx": 1472
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_311",
+          "idx": 1472
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_312",
+          "idx": 1472
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_313",
+          "idx": 1472
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_314",
+          "idx": 1472
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_349",
           "idx": 1473
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_463",
-          "idx": 1473
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_465",
-          "idx": 1473
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_467",
-          "idx": 1473
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_468",
-          "idx": 1473
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_469",
-          "idx": 1473
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_471",
-          "idx": 1473
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_472",
-          "idx": 1473
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_474",
-          "idx": 1473
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_464",
+          "tag": "level_378",
           "idx": 1474
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_502",
+          "tag": "level_432",
           "idx": 1475
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_503",
+          "tag": "level_433",
           "idx": 1475
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_504",
+          "tag": "level_434",
           "idx": 1475
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_505",
+          "tag": "level_435",
           "idx": 1475
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_506",
+          "tag": "level_436",
           "idx": 1475
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_507",
+          "tag": "level_437",
           "idx": 1475
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_508",
+          "tag": "level_438",
           "idx": 1475
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_509",
+          "tag": "level_439",
           "idx": 1475
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_510",
+          "tag": "level_440",
           "idx": 1475
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_511",
+          "tag": "level_441",
           "idx": 1475
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_3",
+          "tag": "level_456",
           "idx": 1476
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_12",
+          "tag": "level_462",
           "idx": 1477
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_13",
+          "tag": "level_463",
+          "idx": 1477
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_465",
+          "idx": 1477
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_467",
+          "idx": 1477
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_468",
+          "idx": 1477
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_469",
+          "idx": 1477
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_471",
+          "idx": 1477
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_472",
+          "idx": 1477
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_474",
+          "idx": 1477
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_464",
           "idx": 1478
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_14",
+          "tag": "level_502",
           "idx": 1479
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_15",
+          "tag": "level_503",
+          "idx": 1479
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_504",
+          "idx": 1479
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_505",
+          "idx": 1479
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_506",
+          "idx": 1479
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_507",
+          "idx": 1479
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_508",
+          "idx": 1479
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_509",
+          "idx": 1479
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_510",
+          "idx": 1479
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_511",
+          "idx": 1479
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "gamemode_3",
           "idx": 1480
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_16",
+          "tag": "gamemode_12",
           "idx": 1481
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_17",
+          "tag": "gamemode_13",
           "idx": 1482
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_18",
+          "tag": "gamemode_14",
           "idx": 1483
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_19",
+          "tag": "gamemode_15",
           "idx": 1484
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_20",
+          "tag": "gamemode_16",
           "idx": 1485
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_21",
+          "tag": "gamemode_17",
           "idx": 1486
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_22",
+          "tag": "gamemode_18",
           "idx": 1487
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_25",
+          "tag": "gamemode_19",
           "idx": 1488
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "gamemode_20",
+          "idx": 1489
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "gamemode_21",
+          "idx": 1490
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "gamemode_22",
+          "idx": 1491
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "gamemode_25",
+          "idx": 1492
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -18523,7 +18607,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "1eedf7ae32306844f985a7e9c761462f",
+      "hash": "23f97d52bd7bcfba3889ea424c84a454",
       "dependencies": []
     },
     {
@@ -18589,6 +18673,16 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
       "hash": "4f95cb99def4e68b64bc09a63a375d4f",
+      "dependencies": []
+    },
+    {
+      "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
+      "hash": "2250a3bb6a409c62fde0f95c5f8f4a85",
+      "dependencies": []
+    },
+    {
+      "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
+      "hash": "1eedf7ae32306844f985a7e9c761462f",
       "dependencies": []
     },
     {
@@ -18668,7 +18762,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "aabb8aa7d88475e82c9e86146a27b8b0",
+      "hash": "ac45c76d38225341771e965e37841ec5",
       "dependencies": []
     },
     {
@@ -18723,12 +18817,12 @@
     }
   ],
   "graphics": "009e144663829da251f890ea7aa97789",
-  "exgraphics": "f9f0d1fbaa4975aad4b053e9625e036c",
+  "exgraphics": "5e969453be7a68d8583deca1cad495e7",
   "init_bps": "526c0cf08f7e960f3474da7c19222bc9",
-  "global_data": "cdfd1699063c23965eb763dc3da2a791",
+  "global_data": "f7c30f26b4a18e79e1a3a4946e3ef184",
   "title_moves": null,
   "shared_palettes": "f7cda3026e92cd4db1573a335f8e2878",
-  "map16": "1a1f6704804c5383c62da994b84256bd",
+  "map16": "b3249a22b6deec45bc4ed2a3351b8e98",
   "gps_options": null,
   "pixi_options": "-l sprite/list.txt",
   "uberasm_options": null,

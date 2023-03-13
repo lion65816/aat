@@ -82,7 +82,3 @@ db $05,$8F
 db $0B,$90
 db $5D,$91
 db $00
-
-main:
-	JSL freezetimer_main
-	RTL

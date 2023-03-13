@@ -81,6 +81,7 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 1FFB:25 screentele_door_rand.asm
 1FFC:25 screentele_door.asm
 2093:130 question_block.asm
+2300:25 noyoshiintro.asm
 3300:25 BlkMus1.asm
 3301:25 no_yoshi.asm
 4103:130 SolidWater.asm
