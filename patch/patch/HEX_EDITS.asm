@@ -183,3 +183,5 @@ db $4B,$0B  ; palette D | originally db $47,$07
 
 org $02AC18|!bank
 db $80				; fix the carry sprite into pipe glitch
+org $00EEB2|!bank
+db $04				; re-play switch palaces

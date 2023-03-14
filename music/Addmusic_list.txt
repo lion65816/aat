@@ -112,6 +112,7 @@ Locals:
 7A  Peanut Butter Plain.txt
 
 7B  Kirby's Dream Land 3 - Ripple Field 2.txt
+7C  amnf-s04.txt
 7F  depanneur dream.txt
 80  Mysterious Silence.txt
 81  White Noiz.txt
