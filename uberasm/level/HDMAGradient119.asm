@@ -34,7 +34,7 @@
 !InputByte2 = #%00110000
 
 main:
-
+	JSL freezetimer_main
 LDA #$00
 STA $1697|!addr
 
@@ -177,8 +177,3 @@ db $05,$8D
 db $05,$8E
 db $60,$8F
 db $00
-
-load:
-    lda #$01 : sta $1B9B|!addr
-    rtl
-    

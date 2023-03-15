@@ -34,6 +34,10 @@
 !InputByte2 = #%00110000
 
 main:
+
+LDA #$00
+STA $1697|!addr
+
 	LDA !InputByte1		; Load input
 	AND #%10110000		; Bitmask of which bits not to run through $15
 	BEQ +				; If none of these bits are set, branch
@@ -54,6 +58,7 @@ main:
 	TSB $0DAC|!addr		;/
 	TSB $0DAD|!addr		; Same for controller 2
 	RTL					; Return 
+
 init:
 		LDA #$00
 		STA $4330
@@ -79,12 +84,21 @@ init:
 
 		LDA #$18
 		TSB $0D9F|!addr
-        
-        LDA #$01
-        STA $140B|!addr
-        RTL
 
-		RTL
+LDA #$00
+STA $14AF|!addr
+
+	LDA $19
+	BEQ +
+	LDA #$01
+	STA $19
++	LDA $0DC2|!addr
+	BEQ +
+	LDA #$01
+	STA $0DC2|!addr
++	LDA #$01
+    STA $140B|!addr
+    RTL
 
 .Table1
 db $03,$2A,$40
@@ -165,5 +179,6 @@ db $60,$8F
 db $00
 
 load:
-	lda #$01 : sta $1B9B|!addr	;\ Filter Yoshi.
-	rtl				;/
+    lda #$01 : sta $1B9B|!addr
+    rtl
+    

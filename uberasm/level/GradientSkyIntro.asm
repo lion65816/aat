@@ -42,6 +42,10 @@ init:
     
         RTL ; <-- Can also be RTL.
 
+main:
+	JSL freezetimer_main
+	RTL
+
 ; --- HDMA Tables below this line ---
 Gradient1_RedGreenTable:
 db $01,$2E,$46
@@ -89,7 +93,3 @@ db $0A,$95
 db $80,$96
 db $18,$96
 db $00
-
-load:
-	lda #$01 : sta $1B9B|!addr	;\ Filter Yoshi.
-	rtl				;/

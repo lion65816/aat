@@ -1,5 +1,4 @@
 main:
-	JSL freezetimer_main
 	JSL Gradient110_main
 	RTL
 
