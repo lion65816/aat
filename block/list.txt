@@ -69,6 +69,7 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 1652:25 teleport_to_1d6.asm
 1653:25 respawn_point_1_1d0.asm
 1654:25 respawn_point_2_1d0.asm
+1690:25 yesyoshiintro.asm
 17A0:2 hurt.asm
 17A1:2 hurt.asm
 1840:25 SMB3Brick.asm

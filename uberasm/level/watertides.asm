@@ -23,4 +23,8 @@ main:
 	CMP HeightTable,y
 	BEQ +
 	STA $24
-+	RTL;
++	RTL
+
+load:
+	JSL FilterYoshi_load
+	RTL

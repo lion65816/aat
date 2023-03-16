@@ -3,7 +3,7 @@ db "Nao                  " ; 001
 db "                     " ; 002
 db "KobaBeach            " ; 003
 db "                     " ; 004
-db "                     " ; 005
+db "SAJewers             " ; 005
 db "PSI Ninja            " ; 006
 db "                     " ; 007
 db "                     " ; 008
@@ -56,7 +56,7 @@ db "4season              " ; 112
 db "MexicanCradily       " ; 113
 db "Big Brawler          " ; 114
 db "                     " ; 115
-db "Sam Deluxe (WIP)     " ; 116
+db "Sam Deluxe           " ; 116
 db "Scarfley             " ; 117
 db "Bumpty               " ; 118
 db "4season              " ; 119

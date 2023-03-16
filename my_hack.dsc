@@ -278,6 +278,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1652	0	Teleports the player to level 1D6.
 1653	0	Sets a new respawn point at the first midway in level 1D0.
 1654	0	Sets a new respawn point at the second midway in level 1D0.
+1690	0	yesyoshiintro.asm
 17a0	0	
 17a1	0	
 1840	0	A simple brick block.
