@@ -32,6 +32,8 @@ level:
 055	PressuredWater.asm
 05E	FilterYoshi_ConstantAutoscroll5E.asm
 060	DisableLR.asm
+068	statusbarremove_CustomBar.asm
+069	statusbarremove_CustomBar.asm
 06A	statusbarremove.asm
 06B	statusbarremove.asm
 06C	statusbarremove.asm
@@ -39,6 +41,7 @@ level:
 06E	statusbarremove.asm
 06F	statusbarremove.asm
 074	Autoscroll74.asm
+07D	statusbarremove_CustomBar.asm
 080	LV135.asm
 090	Gradient90.asm
 0A0	DisableLR.asm
@@ -86,6 +89,7 @@ level:
 123	freescrollbabey.asm
 125	HDMAGradient125.asm
 126	LevelIntro.asm
+128	statusbarremove_CustomBar.asm
 129	LV129.asm
 12F	Gradient12F.asm
 131	LevelIntro.asm

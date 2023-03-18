@@ -172,10 +172,16 @@
 5B	1	mitotic dance (looped)
 5C	0	On Cloud 9
 5C	1	On Cloud 9
+5E	0	real final (unsampled)
+5E	1	real final (unsampled)
 5F	0	Harvest November
 5F	1	Harvest November
 60	0	kraid
 60	1	kraid
+61	0	Irwin on Reflection
+61	1	Irwin on Reflection
+62	0	Legend of Mana - Irwin on Reflection (Brutal Mario)
+62	1	Legend of Mana - Irwin on Reflection (Brutal Mario)
 65	0	Approaching the Castle
 65	1	Approaching the Castle
 66	0	HJ Demo 2 (Bouncy)
@@ -222,6 +228,8 @@
 7B	1	Kirby's Dream Land 3 - Ripple Field 2
 7C	0	amnf-s04
 7C	1	amnf-s04
+7D	0	Left-handed Wolf
+7D	1	Left-handed Wolf
 7F	0	Setting Off ~ Departures Dream
 7F	1	Setting Off ~ Departures Dream
 80	0	Mysterious Silence

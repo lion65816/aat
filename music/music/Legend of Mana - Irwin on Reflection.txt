@@ -1,0 +1,320 @@
+#amk 2
+
+#spc
+{
+;	#author ""
+	#title "Irwin on Reflection"
+	#game "Legend of Mana"
+	#comment "BATTLE AGAINST A FORTRESS"
+	#length "2:32"
+}
+
+#path "IRWIN"
+#samples
+{
+	"../optimized/00 SMW @0.brr" ; sfx
+	"../optimized/01 SMW @1.brr" ; sfx
+	"../optimized/02 SMW @2.brr" ; sfx
+	"../optimized/03 SMW @3.brr" ; death
+	"../optimized/04 SMW @4.brr" ; sfx
+	"../optimized/05 SMW @8.brr" ; star
+	"../optimized/06 SMW @22.brr" ; sfx
+	"../optimized/07 SMW @5.brr" ; level clear
+	"../optimized/08 SMW @6.brr" ; sfx
+	"../EMPTY.brr"	; "../default/09 SMW @7.brr" ; steel drum
+	"../optimized/0A SMW @9.brr" ; death
+	"../optimized/0B SMW @10.brr" ; sfx
+	"../optimized/0C SMW @13.brr" ; gameover
+	"../EMPTY.brr"	; "optimized/0D SMW @14.brr" ; slap bass
+	"../optimized/0E SMW @29.brr" ; sfx
+	"../EMPTY.brr"	; "default/0F SMW @21.brr" ; bass drum
+	"../optimized/10 SMW @12.brr" ; (p-switch)
+	"../EMPTY.brr"	; "optimized/11 SMW @17.brr" ; distortion guitar
+	"../optimized/12 SMW @15.brr" ; sfx (yoshi), as if you want Yoshi but I can't add thunder so w/e
+	"../EMPTY.brr"	; "../optimized/13 SMW Thunder.brr"
+	"CT Trumpet.brr"
+	;"FFVI Pipe Organ.brr"
+	"pipe1.brr"
+	;"FFV Fingered Bass.brr"
+	"pick bass 5.brr"
+	;"FFV String.brr"
+	;"RS3 String Ensemble 1.brr"
+	"med strings 2.brr"
+	"KSSU French Horn.brr"
+	"KSSU Distortion Guitar.brr"
+	"M3 Electric Guitar.brr"
+	;"M3 Distortion Guitar.brr"
+	"power chord 1 sus.brr"
+
+	"RS3 Acoustic Snare.brr"
+	;"RS Closed Hihat.brr"
+	"ride bell 3.brr"
+	;"FFV Kick.brr"
+	"kick 6.brr"
+	;"FFV Crash Symbol.brr"
+	"acoustic cymb 1 alt.brr"
+}
+	
+
+#instruments
+{
+	"CT Trumpet.brr"		$FF $E7 $7F $04 $00
+	;"FFVI Pipe Organ.brr"		$8F $E0 $00 $05 $ee
+	"pipe1.brr"		$8F $E0 $00 $0C $00
+	;"FFV Fingered Bass.brr"		$FF $EC $7F $02 $3E
+	"pick bass 5.brr"		$FF $EE $00 $01 $00
+	;"FFV String.brr"		$FE $E0 $7F $04 $90
+	;"RS3 String Ensemble 1.brr"	$FE $E0 $7F $02 $7D
+	"med strings 2.brr"	$F3 $EB $00 $03 $00
+	"KSSU French Horn.brr"		$00 $00 $7F $03 $D8
+	"KSSU Distortion Guitar.brr" 	$FF $E0 $B8 $04 $90
+	"M3 Electric Guitar.brr"	$FF $E7 $7F $04 $00
+	;"M3 Distortion Guitar.brr"	$FF $E9 $00 $05 $E8
+	"power chord 1 sus.brr"		$FF $E9 $00 $06 $00
+
+	"RS3 Acoustic Snare.brr"	$ff $e0 $00 $07 $3a
+	;"FFV Kick.brr"			$00 $00 $7F $05 $A8
+	"kick 6.brr" $00 $00 $7F $04 $00
+	;"RS Closed Hihat.brr"		$FF $EE $00 $07 $A8
+	"ride bell 3.brr"		$FF $EE $00 $05 $C0
+	;"FFV Crash Symbol.brr"		$FF $F0 $7F $07 $A8
+	;"FFV Crash Symbol.brr"		$F3 $F1 $00 $07 $A8
+	"acoustic cymb 1 alt.brr"	$8F $11 $00 $05 $00
+	"acoustic cymb 1 alt.brr"	$F3 $F1 $00 $05 $00
+}
+
+$EF $CF $28 $28
+$F1 $03 $A0 $01
+
+"TRUMPET=@30 y8"
+"ORGAN=@31"
+"BASS=@32"
+"STRING=@33"
+"HORN=@34"
+"DIST=@35"
+"EL=@36 "
+"DIS2=@37 y7 q5f"
+
+"SNARE=@38 y11"
+"KICK=@39 y9"
+"HIHAT=@40 y9"
+"CRASH=@41 y11"
+"RCRASH=@42 y11"
+
+$F4 $02
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CHANNEL #0
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#0 w110 TRUMPET t82 l16 o3 v220
+(0)[ b4arbrb+4brar
+b4argra4.r8
+b4arbrb+4>drcr<
+b4argrg-4.r8]2 /
+[DIST v238 y10
+b1.a2b+1^1>
+d1.^8c8d8c8c-1<a1]2
+
+TRUMPET o4 l2 v220
+e-gg-e-g-ec-1
+cgag-b1a1
+
+*2
+
+(1)[ORGAN v170 q7c y11 o4 l12 ;$F4$01
+[[bgebgeb+ag-ag-e-]]2
+bgebgeb+ag->d<bg
+b+ag-bgeag-e-bge-];24 $F4$01 ^24]
+ v220 TRUMPET (0)2
+r1r1r1r1
+(0)
+
+[[ (99)[r2]128 ]]128
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CHANNEL #1
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#1 y8 TRUMPET l16 o3 v220
+(10)[
+g4g-rgra4grg-r
+g4g-rerg-4.r8
+g4g-rgra4brar
+g4g-rere-4.r8
+]2 / <
+
+[ v170 EL q5f y13
+g4g12g12g12
+g4g12g12g12
+g4g12g12g12g12g12g12g4
+
+h2
+g4g12g12g12
+g4g12g12g12
+g4g12g12g12g12g12g12g4
+
+h4
+g4g12g12g12
+g4g12g12g12
+g4g12g12g12g12g12g12g4
+g4g12g12g12
+g4g12g12g12
+
+h2
+g4g12g12g12g12g12g12g4 h0]2
+
+TRUMPET v220 q7f l2 >>
+ce-e-ce-c-<g1>
+reg-dg1g-1
+
+*2
+
+(11)[ v170 ORGAN q7c y11 o4 l12 ;$F4$01
+[[gec-gec-ag-e-g-e-c-]]2
+gec-gec-ag-e-bgeag-e-
+gec-g-e-c-ge-c-];24 $F4$01 ^24]
+ v220 TRUMPET (10)2
+r1r1r1r1
+(10)
+
+
+[[ (99)128 ]]128
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CHANNEL #2
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#2 DIST y12 v170 (0) o3
+ORGAN
+b4a8b8b+4b8a8
+b4a8g8a2
+b4a8b8b+4>d8c8<
+b4a8g8g-2 / <
+
+[DIS2
+e4e12e12e12
+e4e12e12e12
+e4e12e12e12e12e12e12e4
+
+h2
+e4e12e12e12
+e4e12e12e12
+e4e12e12e12e12e12e12e4
+
+h3
+e4e12e12e12
+e4e12e12e12
+e4e12e12e12e12e12e12e4
+
+h5
+e4e12e12e12
+e4e12e12e12
+e4e12e12e12e12e12e12e4 h0]2
+
+HORN q7f y12 o4
+e-1^1e1^1e1^1g-1^1
+*2
+o2 DIS2
+e4r1. e4 e16^24 r24 e16^24 r1.^4 
+(1)99
+
+
+
+[[ (99)128 ]]128
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CHANNEL #3
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#3 DIST y12 v170 (10) o3
+ORGAN
+g4g-8g8a4g8g-8
+g4g-8e8g-2> y10
+RCRASH c1 y12
+;g4g-8g8a4b8a8
+ORGAN <g4g-8e8e-2/ >
+
+ 
+(30)[STRING y10 v210 e1^1 g-1^1 g1^1 g1^1]2 >
+c1^1 e1^1 g1^1 a1^1
+* q7f y10
+EL o4 c-1. q7e g2 q7d a1.g-2b1.a2g1g-1
+q7e g1^1^1^1 q7f
+
+(11)99
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CHANNEL #5 - bass
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#5/ BASS l8 o5 v255 $FA$03$F0
+(50)[e1.^4 e8e1.^4. ee]
+(51)[e]32 /
+[ [[e]]16 [[g-]]16 [[g]]16 [[a]]16 ]2
+[[e-]]16 [[e]]16 [[c]]16 [[d]]16
+*2
+r1.^4 e8..r32 e16^24 r24 e16^24 r1.^4 
+(50)
+e-1^1e-1^1
+(51)64
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; CHANNEL #4 - percussion
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#4 v255 y10 o4 l8 ;$FA$03$40
+
+[RCRASH c1.. KICK $F4$03 c8c8 $F4$03]2
+;CRASH c4 SNARE c KICK c
+$F4$03 [KICK cc SNARE c KICK c]8 /
+(40)[KICK c4 SNARE c4]80
+
+KICK c2 SNARE y15e12 y12c+12 y8 <a-12 y5 g1^4 y10
+
+KICK >cc1.^4^24 SNARE c12
+
+KICK c2 SNARE c1c4  y12c+2c+8. y8 <a-16>y10c8 <y5 g8.y8 a-8.>y12c+2 y10c4 <y5 g4> y10
+KICK c2 SNARE y12c+8 y8<a-8> y10c2 [c8.]4 c2.c2. c8c8c8c8
+(40)99
+
+#6 v190
+HORN o3 c-1^1c-1^1 
+(60)[v255 CRASH o4 c2 v170 $E8$40$FF] (61)[HIHAT c4]14
+/
+[[ (60)(61)30 ]]2
+[[ (60)(61)14 ]]2
+[[ (60)(61)30 ]]2
+v255 CRASH o4 c1^1r1r1
+ [v255 CRASH o4 c2 v100 $E8$C0$BE HORN] <c-2^1c-1^1 * c-2^1c-1.^4 CRASH v255>c4
+[[ (60)(61)14 ]]99
+
+#7 v190
+HORN o3 [e1^1]4/
+(99)32
+DIS2 o2 v170
+h-1
+e4e12e12e12
+e4e12e12e12
+e4e12e12e12e12e12e12e4
+
+h0
+e4e12e12e12
+e4e12e12e12
+e4e12e12e12e12e12e12e4
+
+h-4
+e4e12e12e12
+e4e12e12e12
+e4e12e12e12e12e12e12e4
+
+h-2
+e4e12e12e12
+e4e12e12e12
+e4e12e12e12e12e12e12e4 h0
+(99)16
+(30)
+o2 y10 q7F
+v255 e1^1e1^1> HORN y10v190
+e1^1e1^1
+e-1^1e-1^1
+(99)99

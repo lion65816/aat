@@ -96,6 +96,7 @@
 51	Volcano Lotus
 54	Homing Horizontal Thwomp (Left)
 	Homing Horizontal Thwomp (Right)
+57	Fortress Boss
 58	Bouncy Floating
 59	Donut Lift
 5A	Hammer Bro
@@ -140,6 +141,9 @@
 91	Angry Sun
 	Happy Moon
 92	Volcano Lotus
+93	Not-Homing Thwomp
+	Not-Homing Thwomp (Fast)
+95	Vibranium Breaker
 A7	Spike
 	Spike+Wing
 A8	Spike Ball

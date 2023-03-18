@@ -155,7 +155,7 @@ NameData:
  db "Lucifer's Lava Lamp"
  db "                   "
  ;Level 10B
- db "    Bad Day At     "
+ db "    Bad Day at     "
  db "    the Garden    *"
  ;Level 10C
  db "yeah! get down!    "
@@ -182,7 +182,7 @@ NameData:
  db "   Quirky Quarry   "
  db "                   "
  ;Level 114
- db "   Moving Above    "
+ db "  Moving Ahead at  "
  db "   Great Lengths   "
  ;Level 115
  db "Up and down is     "
@@ -242,8 +242,8 @@ NameData:
  db "     Greenhouse    "
  db "     Gambling      "
  ;Level 128
- db "Nearly like title  "
- db "screen             "
+ db "The Crash at       "
+ db "Craigdarroch Castle"
  ;Level 129
  db "Super Easy Going   "
  db "                   "

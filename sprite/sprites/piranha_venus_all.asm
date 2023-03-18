@@ -84,7 +84,7 @@ StemPalette:			; the palette of the stem tiles
 db $0A,$08,$0A,$08
 
 HeadPalette:			; the palette of the head tiles
-db $08,$08,$0A,$08
+db $08,$08,$08,$08		; PSI Ninja edit: Changed third byte from $0A to $08, to make it use palette row C instead of D.
 
 ; This tile will be invisible because it has sprite priority setting 0,
 ; but it will go in front of the plant tiles to cover it up when it is in a pipe.
