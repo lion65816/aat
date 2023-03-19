@@ -185,8 +185,8 @@ NameData:
  db "  Moving Ahead at  "
  db "   Great Lengths   "
  ;Level 115
- db "Up and down is     "
- db "solution           "
+ db "     Homeworld     "
+ db "       Chunk       "
  ;Level 116
  db "  time to take a   "
  db "                   "

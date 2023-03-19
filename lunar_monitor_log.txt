@@ -50,3 +50,15 @@
 [Message] - [ 2023-03-05 22:01:21 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\a3mt\my_hack.smc"
 [Message] - [ 2023-03-05 23:16:02 ] - Attempting to switch to new ROM
 [Message] - [ 2023-03-05 23:16:02 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\a3mt\my_hack.smc"
+[Message] - [ 2023-03-19 21:17:27 ] - Attempting to switch to new ROM
+[Message] - [ 2023-03-19 21:17:28 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\a3mt\my_hack.smc"
+[Message] - [ 2023-03-19 21:21:34 ] - Attempting to switch to new ROM
+[Message] - [ 2023-03-19 21:21:34 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\a3mt\my_hack.smc"
+[Message] - [ 2023-03-19 21:27:32 ] - Attempting to switch to new ROM
+[Message] - [ 2023-03-19 21:27:32 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\a3mt\my_hack.smc"
+[Message] - [ 2023-03-19 21:28:33 ] - Attempting to switch to new ROM
+[Message] - [ 2023-03-19 21:28:33 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\a3mt\my_hack.smc"
+[Message] - [ 2023-03-19 21:31:44 ] - Attempting to switch to new ROM
+[Message] - [ 2023-03-19 21:31:44 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\a3mt\my_hack.smc"
+[Message] - [ 2023-03-19 21:33:49 ] - ------- START OF LOG -------
+[Error] - [ 2023-03-19 21:33:49 ] - Failed to setup configuration file, error was "Non existing config var tried to be defined: "

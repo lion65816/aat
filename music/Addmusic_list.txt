@@ -82,6 +82,7 @@ Locals:
 51  BombRushBlush(MMX).txt
 54  Sticker.txt
 55  upanddown.txt
+56  Harmony of Gensokyo.txt
 57  MKW-Maple_Treeway.txt
 58  slow moon.txt
 5A  Star Ocean - Tense Atmosphere.txt

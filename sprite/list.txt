@@ -75,6 +75,7 @@
 4B donut_lift.json
 4C SMW_Hammer_Bro.json
 4D babyyoshi.json
+4E CustomReznor.cfg
 4F thwomp_up_large_range.cfg
 50 upside_ninji.json
 51 volcano_lotus.json
