@@ -55,7 +55,7 @@ db "PSI Ninja            " ; 111
 db "4season              " ; 112
 db "MexicanCradily       " ; 113
 db "Big Brawler          " ; 114
-db "                     " ; 115
+db "EllenHouraisan       " ; 115
 db "Sam Deluxe           " ; 116
 db "Scarfley             " ; 117
 db "Bumpty               " ; 118
@@ -70,11 +70,11 @@ db "Nitrogen             " ; 120
 db "PSI Ninja            " ; 121
 db "PSI Ninja            " ; 122
 db "PSI Ninja            " ; 123
-db "                     " ; 124
+db "eltiolavara9         " ; 124
 db "Bumpty               " ; 125
 db "4season              " ; 126
 db "Scarfley             " ; 127
-db "                     " ; 128
+db "Daizo                " ; 128
 db "4season              " ; 129
 db "                     " ; 12A
 db "                     " ; 12B

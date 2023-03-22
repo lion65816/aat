@@ -99,6 +99,7 @@ level:
 138	LevelIntro.asm
 139	LevelIntro.asm
 13A	LevelIntro.asm
+15B	statusbarremove_CustomBar.asm
 15D	Gradient15D.asm
 15E	FilterYoshi.asm
 15F	statusbarremove.asm

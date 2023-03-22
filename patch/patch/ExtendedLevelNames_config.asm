@@ -186,7 +186,7 @@ NameData:
  db "   Great Lengths   "
  ;Level 115
  db "     Homeworld     "
- db "       Chunk       "
+ db "       Chunk      *"
  ;Level 116
  db "  time to take a   "
  db "                   "

@@ -130,7 +130,7 @@ db $15,$16,$18,$1C,$1D,$1F
 ;db $13,$14,$16,$18,$1A,$1B,$1E,$1F
 ;db $21
 ;levels $101-$13B (values listed are levelnum-$DC)
-db $101-$DC,$104-$DC,$105-$DC,$108-$DC,$10D-$DC,$115-$DC,$117-$DC,$11A-$DC,$11B-$DC,$11D-$DC
+db $101-$DC,$104-$DC,$105-$DC,$108-$DC,$10D-$DC,$117-$DC,$11A-$DC,$11B-$DC,$11D-$DC
 db $122-$DC,$127-$DC,$12A-$DC,$12B-$DC,$12C-$DC,$12D-$DC,$12E-$DC
 db $130-$DC,$132-$DC,$13B-$DC
 ;db $101-$DC,$104-$DC,$108-$DC,$10C-$DC,$10D-$DC,$10E-$DC,$10F-$DC,$111-$DC
