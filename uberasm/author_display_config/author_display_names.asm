@@ -1,8 +1,8 @@
 db "(Dev Level)          " ; 000
 db "Nao                  " ; 001
-db "                     " ; 002
+db "DiskPoppy, SAJewers  " ; 002
 db "KobaBeach            " ; 003
-db "                     " ; 004
+db "Jolpengammler        " ; 004
 db "SAJewers             " ; 005
 db "PSI Ninja            " ; 006
 db "                     " ; 007
@@ -17,7 +17,7 @@ db "                     " ; 00F
 db "4season              " ; 010
 db "Catabo               " ; 011
 db "Catabo               " ; 012
-db "                     " ; 013
+db "4season              " ; 013
 db "Sam Deluxe           " ; 014
 db "4season              " ; 015
 db "                     " ; 016

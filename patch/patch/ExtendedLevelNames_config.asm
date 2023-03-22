@@ -20,7 +20,7 @@ NameData:
  db " baby catnips get  "
  db "tragic concussions*"
  ;Level 002
- db "                   "
+ db " City of Gulp Gulp "
  db "                   "
  ;Level 003
  db "  Demo in the Sky  "
@@ -71,8 +71,8 @@ NameData:
  db "    A Dream Of     "
  db "   Green Apples    "
  ;Level 013
- db "Special Boo as Boss"
- db "Level              "
+ db " Normal Mode Tank  "
+ db "  Tank ga Warui    "
  ;Level 014
  db " Pipe Town, There  "
  db "                   "

@@ -1,0 +1,102 @@
+#amk 2
+
+#samples
+{
+#optimized
+"DKC2/dkc2-16.brr"
+"DooMooD/Sans Undertale.brr"
+"Treetop Tumble/Flute.brr"
+"C-R-E-A-T-E-!/FF6 Synth Bass.brr"
+"CityOfGulpGulp/Doukyuusei 2 - epiano.brr"
+"CityOfGulpGulp/Chrono Trigger - Celesta.brr"
+}
+
+#instruments
+{
+"DooMooD/Sans Undertale.brr" $85 $25 $00 $06 $10 ;@30 
+"DKC2/dkc2-16.brr" $8f $fa $00 $02 $ff ;@31 marimba
+"Treetop Tumble/Flute.brr" $FA $E0 $FF $03 $DB ;@32
+"DKC2/dkc2-16.brr" $cf $f0 $00 $02 $ff ;@33 bass marimba
+"C-R-E-A-T-E-!/FF6 Synth Bass.brr" $FF $E2 $B8 $09 $00 ;@34
+"CityOfGulpGulp/Doukyuusei 2 - epiano.brr" $ff $ed $00 $03 $00
+"CityOfGulpGulp/Chrono Trigger - Celesta.brr" $FF $E0 $B8 $04 $02 ;@36
+}
+
+"c~=$EE$00 c"
+"d~=$EE$2F d"    ;218.18182
+"d+m~=$EE$BA d"  ;272.72727
+"d+p~=$EE$46 d+" ;327.27273
+"e~=$EE$D1 d+"   ;381.81818
+"f~=$EE$E9 e"    ;490.90909
+"fp~=$EE$74 f"   ;545.45455
+"gm~=$EE$8C f+"  ;654.54545
+"g~=$EE$17 g"    ;709.09091
+"g+m~=$EE$A3 g"  ;763.63636
+"g+~=$EE$2F g+"  ;818.18182
+"am~=$EE$BA g+"  ;872.72727
+"ap~=$EE$46 a"   ;927.27273
+"b-~=$EE$D1 a"   ;981.81818
+"b~=$EE$E9 a+"   ;1090.90909
+"bp~=$EE$74 b"   ;1145.45455
+
+t40
+$EF$FF$20$20 $F1$08$A0$01
+
+#0 o5
+@31 v210 d+p~8 [gm~16 d+p~16 f~8]3 fp~8 gm~16 d+p~16 am~8 r4 <
+[fp~8 gm~8 am~8 b-~8 r2 r1]4
+@36 v160 [[ fp~8 gm~8 am~8 b-~8 r2 (1)[gm~8 g~8 g+~8 b-~8] r2 ]]2 r1^1^1^1
+@31 v210 [[ (0)[fp~8 gm~8 am~8 b-~8 > d~8 d+p~8 f~8 fp~8 <] (1) r8 ap~8 r4 ]]2
+(0) (1) gm~8 b-~8 r4
+(0) (1) >fp~8< b-~8 >fp~8< r8
+@32
+[e~8 fp~8 gm~4 @31 > d~8 e~8 d~8 c~8 < @32 c8 d~8 r2^4]2
+[e~8 fp~8 g~8 am~8 g~8 r16 d~8 r8^16 c~8 d~8 r4 @31 > d8 e~8 d~8 c~8 < @32]2
+;e~8 fp~8 g~8 am~8 g+~8 r16 fp~8 r8^16 c~8 d~8 r2^4
+
+#1 @35 o4
+r1^2
+v128 r1^1^1^1 fp~8 gm~8 am~8 b-~8 am~2 v70 g+2 $DD$18$18$A6 v128 r2 r1^1
+r1^1^1^1 [fp~8 gm~8 b-~16 am~16 b-~8 r2 gm~8 g~8 am~16 g+~16 b-~8 r2]2
+r1^1^1^1 [fp~8 gm~8 am~8 b-~8 > d~8 d+p~8 f~8 fp~8 d~2 v70 d2 $DD$18$18$AC v128 <]2
+
+[r1^1^1^1]4
+
+
+#2 @30 o1
+> v115 f~4 v75 e4 r1 <
+[v115 fp~4 v75 f4 > v115 c~4 v75 c4 v115 f~4 v75 e4 r2 <]2
+[v115 g+~4 v75 g+4 > v115 d+m~4 v75 d4 v115 f~4 v75 e4 r2 <]2
+[[ [v230 fp~4 v150 f4 > v115 c~4 v75 c4 < v115 gm~4 v75 f+4 v115 bp~4 v75 b4]2
+[v115 g+~4 v75 g+4 > v115 d+m~4 v75 d4 < v115 b~4 v75 a+4 > v115 d+m~4 v75 d4 v115 <]2 ]]2
+
+[r1^1^1^1]4
+
+
+#3 @33 o3 v220
+b-~2 r2 ap~2
+[am~2 r1^2 am~2 r1^2 > d+m~2 r1^2 d+m~2 r1^2 <]3
+
+[r1^1^1^1]4
+
+
+#4 o4 v210
+r1
+r4 @21 c8 @21 c8
+[@21 c8 r4 @24 c8 @29 c8 r4^8 r4^8 @24 c8 @23 c8 r4^8]4
+[@21 c8 r4 @24 c8 @29 c8 r4^8]8
+[@21 c8 r4 @24 c8 @29 c8 r4^8 @21 c8 r4 @24 c8 @29 c8 r8 c8 r8]4
+
+[r1^1^1^1]4
+
+
+#5 @34 o2 y3
+v140 f~8 e8 e8 e8 v100 e8 e8 e8 e8
+r2
+[v140 fp~8 f8 f8 f8 > c~8 c8 c8 c8 f~8 e8 e8 e8 v100 e8 e8 e8 e8 <]2
+[v140 g+~8 g+8 g+8 g+8 > d+m~8 d8 d8 d8 f~8 e8 e8 e8 v100 e8 e8 e8 e8 <]2
+v140
+[[ [fp~8 f8 f8 f8 > c~8 c8 c8 c8 < gm~8 f+8 f+8 f+8 bp~8 b8 b8 b8]2
+[g+~8 g+8 g+8 g+8 > d+m~8 d8 d8 d8 < b~8 a+8 a+8 a+8 > d+m~8 d8 d8 d8 <]2 ]]2
+
+[r1^1^1^1]4

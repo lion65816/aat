@@ -102,7 +102,6 @@
 5A	Hammer Bro
 5B	Timed ON/OFF Switch
 61	Firefly
-64	Firefly
 6A	Cluster Bullet Shooter (Angle)
 	Cluster Bullet Shooter (Aim)
 71	Reverse Donut
@@ -132,6 +131,7 @@
 85	Kun (Walks Back and Forth)
 	Kun (Wall Following, Slow)
 	Kun (Wall Following, Fast)
+86	Water Activator
 8A	Fire Snake
 8C	Cluster Fish Spawner
 8F	Ghost Shell (Stunned)
@@ -145,6 +145,8 @@
 	Not-Homing Thwomp (Fast)
 95	Vibranium Breaker
 96	Enemy Stack V2
+9E	Fire Magikoopa
+	Fire Magikoopa, 3 Fireballs
 A7	Spike
 	Spike+Wing
 A8	Spike Ball

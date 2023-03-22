@@ -1,0 +1,208 @@
+#amk 2
+
+#path "3tank"
+
+#samples
+{
+	#optimized
+	"sample_00.brr"
+	"sample_08.brr"
+	"sample_01.brr"
+	"sample_02.brr"
+	"sample_04.brr"
+	"sample_05.brr"
+	"sample_07.brr"
+	"sample_09.brr"
+	"sample_06.brr"
+	"motor.brr"
+}
+
+#instruments
+{
+	"sample_00.brr"	$FF $E0 $A0 $05 $09	; @30
+	"sample_08.brr"	$FF $E0 $A0 $05 $09	; @31
+	"sample_01.brr"	$FF $E0 $A0 $02 $8D	; @32
+	"sample_02.brr"	$FF $E0 $A0 $02 $06	; @33
+	"sample_04.brr"	$FF $F6 $A0 $09 $1A	; @34
+	"sample_05.brr"	$FF $EF $A0 $05 $4F	; @35
+	"sample_07.brr"	$FA $E0 $A0 $01 $91	; @36
+	"sample_09.brr"	$FF $E0 $A0 $02 $62	; @37
+	"sample_06.brr"	$FF $F0 $A0 $0C $E0	; @38 h-6
+	"motor.brr"		$00 $00 $7F $09 $22
+}
+
+"snare=@32 v159 h8"
+"kick=@33 v123 h18"
+
+$EF $E7 $22 $22 
+$F1 $04 $4B $01
+
+ w255 t66
+
+#0 [r1]12 / @31 h-4 v113 y10,1,1 l8 $f4 $01 $ee $06 q7f $DE $25 $0f $62
+
+e a b >c^8 <b4 >d^8 c <b e^8 d c e^1  r2..
+
+e^8 a b >c^8 <b4 >d^8 c <b >c^8 d4 e^8 d g e^8 d g e^2 r4. 
+
+d^4. e^8 f4 g^8 f e d^8 <b >c d^8 c4 e^8 <g+ a b^8 a4 >c^4. r4.	 	; 24번 마디까지
+
+<f4 g4 a b^8 >c4 d^8 g4 e^1^1 [r1]5 r2^4^8 l16 a8. g e c [a g e c]7
+
+[a g a >c]3 <a g >c d e2. r4 [r1]4 < [g a g e c <a]4 >>c2 	; 44번 마디까지
+
+d8 c d <a8 g a f8 g8 a8 b8^8 >c8 d8 <b4. r4 f4. g8^8 a4 b8^8 a8 b8 g8^4. r8 l8
+
+a4. b^8 >c4 d^8 c d <b^8 >c d e^1^1 $f4 $01
+
+[r1]2  
+
+#1 @39 h8 v96 o3 y3 $DE $01 $30 $90 r1^8 $f4 $01 < e16 f16 f+16 g16 g+16 a16 a+16 b16 >c16 / c+1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1 $f4 $01
+
+#2 @30 v105 y11 h-4 o4 l16
+
+q1f [ [[a >a <a a ]]3 a >a e <a ]11 a >a <a a >a <a a >a r2 / 
+
+@31 v113 y10 l8 q7f o4 $f4 $01 $DE $25 $0f $62
+
+ e a b >c^8 <b4 >d^8 c <b e^8 d c e^1  r2..
+
+e^8 a b >c^8 <b4 >d^8 c <b >c^8 d4 e^8 d g e^8 d g e^2 r4. 
+
+d^4. e^8 f4 g^8 f e d^8 <b >c d^8 c4 e^8 <g+ a b^8 a4 >c^4. r4. 	; 24번 마디까지
+
+<f4 g4 a b^8 >c4 d^8 g4 e^1^1 [r1]5 r2.. l16 a8. g e c [a g e c]7
+
+[a g a >c]3 <a g >c d e2. r4 [r1]4 < [g a g e c <a]4 >>c2 	; 44번 마디까지
+
+d8 c d <a8 g a f8 g8 a8 b8^8 >c8 d8 <b4. r4 f4. g8^8 a4 b8^8 a8 b8 g8^4. r8 l8
+
+a4. b^8 >c4 d^8 c d <b^8 >c d e^1^1 $f4 $01
+
+[r1]2 
+
+#3 l4 o4
+
+(1)[ [[kick e snare b]]3 ] (2)[kick [[e8]]2 snare b ]
+(1) kick e8 snare b8 b 
+(1) kick e8 snare b8 b8 kick e 
+(3)[ kick e8 [[snare b kick e]]2 snare b ] kick e8 g8 f8 e8 
+r8 (3) kick e8 snare b8 b8 kick e 
+
+e8 
+[snare b kick e]2 snare b8. [b8 b16 b16]2 b16 / 
+(1) (2) 
+(1) (4)[kick e8 snare b b ]
+(3) (2) 
+(1) snare b8 kick [e]2 
+(3) (4) 
+(2)3 snare b8 b 
+
+(1) kick e8 snare b b. 
+
+kick [e]13
+
+snare b8 [b]2 
+(3) (4) 
+(3) (4) 
+(3) 
+snare b kick e8 snare b 
+kick e8 [snare b kick e]2 snare b2^8 b 
+
+(3) kick e8 snare b8 r8 b 
+(3) snare b8 b b 
+(3) 
+(2) 
+[[kick e snare b]]2 
+
+b [kick e8 snare b8]2 snare b 
+
+(1) (4) 
+(3)
+snare b2 
+kick [e]12 
+
+snare b kick e8 snare b b8 [b16]4 
+[kick e snare b]2
+
+
+#4 @35 v167 h-6 y10 o4 l8 [r1]4 
+
+[a]13 g >c <a4 [a]12 f g a4 [a]12 g >c <a4 
+
+[a]11 f q1f >f q7f <g q1f >g q7f /
+
+<[a]13 g a f4 [f]11 g a b a4 
+
+[a]12 g a f4 [f]11 >e d c d4
+
+[d]7 [e]5 d <b a4 >d e <a4 g+ a b4 >d e <a4 b >c <f4
+
+[f]4 g f g4 [g]3 >d c <b a4 [a]11 g a b a4 [a]11 >f g r <a4 [a]12 g a f4
+
+[f]7 [g]4 [g+]3 a4 [a]12 g a f4 [f]7
+
+[g]4 f+ >d e <a4 [a]12 g a f4 [f]7 
+
+[e]4 >d c <b a4 [a]12 b >c d4
+
+[d]6 e4 d <b >e4 q1f <b4. q7f [f]8 [g]5 a g f4 [f]7 [g]4 >d c d <e4 [e]23
+
+>e d <b >e d <b >d e <[a]8
+
+
+#5 [r1]11 r2 @36 v133 h8 y11 o4
+
+c4 d4 / @36 v133 h8 y11 o4 e1. d4. c8^1. d4. e8^1. d4. c8^1. <b4. a8^1 b2 >d4. <b8^4. >c8^4. d8^4. e4. r8
+
+<a8^1 b2 >d2 
+
+@30 v105 y9 h-4 o4 l16
+
+q1f [ [[a >a <a a ]]3 a >a e <a ]3 a >a <a a >a <a a >a q7f r4. 
+
+@37 v107 y9 o4 l8 h-2
+
+a4 g a >c4 <a >c d4 e4.^4 r8 e4 d e g4 e d16 c16 e2.. r4 [r1]3
+
+r2.. c4 <b >c d4 c d e4 g4 e4 d c d^4. <a4 >d4 e4 g4 e^4. r [r1]4
+
+@36 v133 h8 y11 o4
+
+<a1 b1 >c1 d1 e2 f+2 g+2 a2
+
+b2 >c2 d2 e2 <e1 
+
+#6 [r1]11 r2 @36 v133 h8 y9 o4
+
+<a4 b4 / >c1. <b4. a8^1. b4. >c8^1. <b4. a8^1. g4. f8^1 g2 g+4. g8^4. a8^4. b8^4. >c4. r8 
+
+<f8^1 g2 g+2 [r1]3 r2.. 
+
+@37 v107 h-2 l8 o4
+
+e^4. g^4. a4 a4.^4. a^4. >c^4. <a^2. r4 [r1]3 r2..
+
+a^4. g^4. a4 >c4 <a^4. f^2.. g+^1 [r1]4
+
+@36 v133 h8 y9 o4
+
+<f1 g1 a1 b1 g+1 b1 >e1 g+1 c1
+
+#7 [r1]3 r2.^16 l16 @34 v150 y12 o3 b y10 g y6 v157 f
+
+@38 h-6 v135 y12 b1^2 [ y8 b-4. y12 b8^1.]2 y8 b-4. y12 b8^1 r4^16
+
+@34 v150 y10 g y6 v157 f8 
+
+@38 h-6 v135 y8 b-4 y12 b4 / r1^1 r1...
+
+b8^1^1 r1. y8 b4. y12 b8^1. r4. [ y12 b8^4. y8 b-8^4. ]2 y12 b8^1
+
+r2 [ y8 b-4. y12 b8^1^1 r1. ] * y8 b-4. y12 b8^1^1 r1^4. @34 v150 b v157 y6 f
+
+v149 y10 g8 v157 y6 f8 f8 @38 h-6 v135 y12 [b8^1.] r4^8 * r4. b8^1^1
+
+r1 y8 b4. y12 b-8^2 b1.^8 y8 b-4 y12 b1.. @34 v150 g8 f8 
+
+@38 h-6 v135 y12 b8^1^1 [r1]2 b1

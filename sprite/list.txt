@@ -97,7 +97,7 @@
 61 numbered_platform.json
 62 rotatinggrayplatform_super_fast.cfg
 63 checkerboard_platforms_super_fast.cfg
-64 numbered_platform 4.json
+64 GoombaTower.cfg
 65 grey_plat_fast.cfg
 66 grey_plat_slow.cfg
 67 piranha_venus sfx.cfg
@@ -129,6 +129,7 @@
 83 MosaicThwimp.cfg
 84 Ninji2.cfg
 85 Kun.json
+86 water_activator.json
 8A fire_snake.json
 8B falling_fireball.cfg
 8C clusterspawn.json
@@ -145,6 +146,8 @@
 97 panser_green.cfg
 98 panser_blue.cfg
 9B VenusVerticalShortSpitTwo.cfg
+9E FireMagikoopa.json
+9F superfast_chain.cfg
 A1 Geyser.cfg
 A2 CastleBlock.cfg
 A3 grrrol.cfg
@@ -182,6 +185,7 @@ C7 falling_fireball_shooter.cfg
 C8 CustomShooter.cfg
 C9 BigSteelyShooter.cfg
 CA sideways_bill_lr.cfg
+CB custom_bbshooter.cfg
 
 D0 gusty_generator.cfg
 D1 no_spin_sfx.cfg

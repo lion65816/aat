@@ -6,6 +6,7 @@ verbose: on
 ; Level list. Valid values: 000-1FF.
 level:
 000	bonusmusicrng.asm
+002	cityofgulpgulp.asm
 004	BG_AutoScroll4.asm
 005	LevelIntro.asm
 006	LevelIntro.asm
@@ -14,6 +15,7 @@ level:
 00C	LevelIntro.asm
 00E	LevelIntro.asm
 010	LevelIntro.asm
+013	LV13.asm
 015	LevelIntro.asm
 01A	PressuredWater.asm
 01B	1B.asm

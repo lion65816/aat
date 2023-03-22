@@ -85,6 +85,7 @@ Locals:
 56  Harmony of Gensokyo.txt
 57  MKW-Maple_Treeway.txt
 58  slow moon.txt
+59  sc.txt
 5A  Star Ocean - Tense Atmosphere.txt
 5B  mitotic.txt
 5C  442.txt
@@ -105,6 +106,7 @@ Locals:
 6E  NSMB - MainTheme.txt
 6F  NSMBWii Volcano.txt
 70  rambirumble.txt
+71  3tank.txt
 72  DS_Luigi_Casino.txt
 73  Opus 13.txt
 74  Title Bells.txt
