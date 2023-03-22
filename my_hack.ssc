@@ -252,6 +252,8 @@
 93 0032 -4,0,479 12,0,47A -4,16,47B 12,16,47C
 95 0020 A lone suit that belonged to someone from long ago.
 95 0022 -12,-8,47D 4,-8,47E -12,0,47F 4,0,480
+96 0020 Uses 8 extra bytes which determine the sprites in the stack from bottom to top (FF for an empty slot).  Use the Lunar Magic numbers for shells (DA-DE).\nThe 9th extra byte marks each sprite in the stack as a custom sprite. The bits are in order from left to right with left being the bottom of the stack (so 80 would make just the bottom a custom sprite).\nThe 10th extra byte is the same, but for the extra bit.
+96 0022 0,0,0
 A7 0020 spike(smm2 style)
 Extra Bits - wing flag
 Extra Byte1 - throw speed

@@ -1,0 +1,385 @@
+#amk 2
+;************************
+
+; SPC Generator Info
+#SPC
+{
+    #author  "Hajime Hirasawa"
+    #title   "Out Of This Dimension"
+    #game    "Star Fox"
+    #comment "Ported by Ahrion"
+}
+
+#path "OutOfThisDimension"
+
+#samples
+{
+	#default
+	"Hit.brr"
+	"IncomingEnemy.brr"
+	"Kick.brr"
+	"Laugh.brr"
+	"Noise.brr"
+	"Saw.brr"
+	"Sine.brr"
+	"Sine2.brr"
+	"Sine3.brr"
+	"Snare.brr"
+	"Synth.brr"
+	"Tom.brr"
+	"Tri.brr"
+	"TwinBlasters.brr"
+	"Wing.brr"
+}
+
+#instruments
+{
+	"Hit.brr"		$FF $E0 $00 $01 $07 ; @30
+	"IncomingEnemy.brr"	$FF $E0 $00 $07 $A0 ; @31
+	"Kick.brr"		$FF $E0 $00 $01 $20 ; @32
+	"Laugh.brr"		$FF $EC $00 $04 $F6 ; @33
+	"Noise.brr"		$FF $E0 $00 $01 $09 ; @34
+	"Saw.brr"		$FF $E0 $00 $02 $FA ; @35
+	"Sine.brr"		$FF $E0 $00 $01 $00 ; @36
+	"Sine2.brr"		$FF $F8 $00 $01 $50 ; @37
+	"Sine3.brr"		$FF $E0 $00 $01 $9D ; @38
+	"Snare.brr"		$FF $E0 $00 $01 $42 ; @39
+	"Synth.brr"		$FF $E0 $00 $03 $00 ; @40
+	"Tom.brr"		$FF $F2 $00 $06 $F0 ; @41
+	"Tri.brr"		$FF $EF $00 $01 $00 ; @42
+	"TwinBlasters.brr"	$FF $E0 $00 $02 $04 ; @43
+	"Wing.brr"		$FF $E0 $00 $03 $D0 ; @44
+}
+
+
+w182
+t30
+
+"Saw11 = v251"
+"Saw12 = v202"
+"Saw13 = v231"
+"Sine11 = v156"
+"Sine12 = v102"
+"Sine13 = v140"
+"Sine14 = v95"
+"Laugh11 = v231"
+"Synth11 = v180"
+"Noise11 = v231"
+"Hit11 = v255"
+"Hit12 = v129"
+"Hit13 = v102"
+
+"Synth21 = v170"
+"Synth22 = v202"
+"Synth23 = v123"
+"Synth24 = v102"
+"Synth25 = v87"
+"Synth26 = v60"
+"Synth27 = v181"
+"Synth28 = v113"
+"Synth29 = v96"
+"Synth2A = v73"
+"Synth2B = v163"
+"Laugh21 = v231"
+"Sine21 = v153"
+"Sine22 = v102"
+"Twin21 = v202"
+"Hit21 = v255"
+"Hit22 = v129"
+"Hit23 = v102"
+"Hit24 = v130"
+"Hit25 = v102"
+"Tom21 = v251"
+
+"KSV31 = v251"
+"KSV32 = v255"
+"Enemy31 = v176"
+"Sine231 = v251"
+"Sine232 = v156"
+"Sine234 = v255"
+"Sine331 = v202"
+"Sine332 = v206"
+"Sine333 = v179"
+"Tom31 = v251"
+"Hit31 = v129"
+"Hit32 = v102"
+"Noise31 = v251"
+"Noise32 = v156"
+
+"Sine41 = v143"
+"Sine42 = v96"
+"Synth41 = v135"
+"Tom41 = v230"
+"Tom42 = v230"
+"Tri41 = v143"
+"Tri42 = v102"
+"Wing41 = v251"
+"Synth51 = v131"
+"Synth52 = v162"
+"Synth53 = v98"
+"Synth54 = v82"
+"Synth55 = v68"
+"Synth56 = v49"
+"Synth57 = v148"
+
+"Hit51 = v222"
+"Tri51 = v98"
+"Tri52 = v124"
+"Tri53 = v90"
+"Tri54 = v75"
+"Tri55 = v68"
+"Tri56 = v49"
+"Tri57 = v45"
+"Tri58 = v161"
+
+
+"VIB = $DE $05 $0D $30"
+
+$EF $3F $42 $42
+$F1 $02 $32 $01
+$F5 $0C $21 $2B $2B $13 $FE $F3 $F9
+
+$F4 $02
+
+
+
+; +---------------------+
+; |     Channel #0	|
+; |     Channel 1	|
+; +---------------------+
+
+#0
+o1
+r8.. @35 Saw11 g32^96 g32^96 >>>> @36 Sine11 d32^96 Sine12 d32^96 Sine11 d32^96 <<< @35 Sine12 g32^96 < Saw11 f+32^96 d32^96 >>>> @36 Sine11 d32^96 Sine12 d32^96 Sine11 d32^96 <<< @35 Saw11 d64^192 < d64^192 g32^96 g32^96 >>>> @36 Sine11 d32^96 Sine12 d32^96 Sine11 d32^96 Sine12 d32^96
+<< @33 Laugh11 y15 f4 <<
+
+/
+
+@35 Saw11
+g16^64^192 >>>> @36 Sine11 d32^96 Sine12 d32^96 Sine11 d32^96 <<<< @35 Saw12 d32^96 Saw11 f+16^64^192 >>>> @36 Sine11 c+32^96 Sine12 c+32^96 Sine11 e32^96 Sine12 e32^96 <<<< @35 Saw11 g16^64^192 >>>> @36 Sine11 d32^96 Sine12 d32^96 Sine11 d32^96 <<<< @35 Saw12 g32^96 Saw11 d16^64^192 >>>> @36 Sine11 f32^96 Sine12 f32^96 Sine11 f32^96 Sine12 f32^96 <<<< @35 Saw11 g16^64^192 >>>> @36 Sine11 d32^96 Sine12 d32^96 Sine11 d32^96 <<<< @35 Saw12 d32^96 Saw11 f+16^64^192 >>>> @36 Sine11 c+32^96 Sine12 c+32^96 Sine11 e32^96 Sine12 e32^96 <<<< @35 Saw11 g16^64^192 >>>> @36 Sine11 c32^96 Sine12 d32^96 < Sine11 a+32^96 Sine12 a+32^96 <<< @35 Saw11 g16^64^192 r16^64^192 >>> 
+
+@40 Synth11 c+32^96 d32^96
+
+<<< @35 Saw13 g32^96 g32^96 >>>> @36 Sine13 d32^96 Sine14 d32^96 Sine13 d32^96 <<<< @35 Saw13 g32^96 d16^64^192 >>>> @36 Sine13 c+32^96 Sine14 c+32^96 Sine13 e32^96 <<<< @35 Saw13 d32^96 g16^64^192 >>>> @36 Sine13 d32^96 Sine14 d32^96 Sine13 d32^96 <<< @35 Saw13 g32^96 < d16^64^192 >>>> @36 Sine13 f32^96 Sine14 f32^96 Sine13 f32^96 <<<< @35 Saw13 d32^96 g32^96 g32^96 >>>> @36 Sine13 d32^96 Sine14 d32^96 Sine13 d32^96 <<<< @35 Saw13 g32^96 d16^64^192 >>>> @36 Sine13 c+32^96 Sine14 c+32^96 Sine13 e32^96 <<<< @35 Saw13 d64^192 > d64^192 < f+32^96 f+32^96 >>>> @36 Sine13 d32^96 Sine14 d32^96 Sine13 d32^96 Sine14 d32^96 r4 <<<< @35 Saw13 f+32^96 f+32^96 >>>> @36 Sine13 d32^96 Sine14 d32^96 Sine13 d32^96 <<<< @35 Saw13 f+32^96 d16^64^192 >>>>
+@36 Sine13 a32^96 f+32^96 d32^96 <<< @35 Saw13 d32^96 < d32^96 d32^96 >>>> @36 Sine13 d32^96 Sine14 d32^96 Sine13 d32^96 <<<< @35 Saw13 d32^96 f+16^64^192 >>>>
+@36 Sine13 d32^96 c32^96 < a32^96 << @35 Saw13 d32^96 < d32^96 d32^96 >>>> @36 Sine13 d32^96 Sine14 d32^96 Sine13 d32^96 <<<< @35 Saw13 d64^192 > d64^192 < d32^96 d32^96 e16^64^192 f+16^64^192 g32^96 >>>> @36 Sine13 e32^96 d32^96 e32^96 d32^96 e32^96 <<
+
+@34 Noise11 g+64 r16^192 @37 g8^32^96
+
+<< @35 g32^96 g32^96 >>>> @36 Sine13 d32^96 Sine14 d32^96 Sine13 d32^96 Sine14 d32^96 <<<< @35 Saw13 d16^64^192 >>>> @36 Sine13 c+32^96 Sine14 c+32^96 Sine13 e32^96 Sine14 e32^96 <<<< @35 Saw13g16^64^192 >>>> @36 Sine13 d32^96 Sine14 d32^96 Sine13 d32^96 Sine14 d32^96 <<<< @35 Saw13 d16^64^192 >>>> @36 Sine13 f32^96 Sine14 f32^96 Sine13 f32^96 Sine14 f32^96 <<<<
+
+@35 Saw11 g32^96 g32^96 >>>> @36 Sine11 f32^96 Sine12 f32^96 Sine11 f32^96 <<< @35 Sine12 f32^96 < Saw11 d16^64^192 >>>> @36 Sine11 f32^96 Sine12 f32^96 Sine11 f32^96 <<< @35 Saw11 d64^192 < d64^192 > c16^64^192 >>> @36 Sine11 g32^96 Sine12 g32^96 Sine11 g32^96 Sine12 g32^96 Sine11 g32^96 Sine12 g32^96 Sine11 d32^96 c+32^96 c32^96 < b32^96 <<< @35 Saw11 g32^96 g32^96 >>>> @36 Sine11 d32^96 Sine12 d32^96 Sine11 d32^96 <<< @35 Sine12 g32^96 < Saw11 f+32^96 d32^96 >>>> @36 Sine11 d32^96 Sine12 d32^96 Sine11 d32^96 <<< @35 Saw11 d64^192 < d64^192 g32^96 g32^96 >>>> @36 Sine11 d32^96 Sine12 d32^96 Sine11 d32^96 Sine12 d32^96
+
+
+@30 Hit11f+16^64^192 Hit12 f+16^64^192 Hit13 f+16^64^192 
+
+
+
+; +---------------------+
+; |     Channel #1	|
+; |     Channel 2	|
+; +---------------------+
+
+#1
+o5
+r8.. 
+
+@40 Synth21 d32^96 g32^96 f+32^96 f32^96 e32^96 d+32^96 d32^96 c+32^96 c32^96 < b32^96 a+32^96 a32^96
+@30 Hit21 f+32^96 f32^96 f+32^96 a+32^96 > c+32^96 f32^96 <<
+@33 Laugh21 y5 $EE $18 f4 $EE $00
+
+/
+
+@36 y5
+r16^64^192 > Sine21 b32^96 Sine22 b32^96 Sine21 b32^96 Sine22 b32^96 r16^64^192 Sine21 a+32^96 Sine22 a+32^96 > Sine21 c+32^96 Sine22 c+32^96 r16^64^192 < Sine21 b32^96 Sine22 b32^96 Sine21 b32^96 Sine22 b32^96 r16^64^192 > Sine21 c32^96 Sine22 c32^96 Sine21 c32^96 Sine22 c32^96 <
+
+@43 Twin21 f+32^96 f+32^96
+
+@36 Sine21 b32^96 Sine22 b32^96 Sine21 b32^96 Sine22 b32^96
+
+@43 Twin21 f32^96 f32^96
+
+@36 Sine21 a+32^96 Sine22 a+32^96 > Sine21 c+32^96 Sine22 c+32^96 <
+
+@43 Twin21 f+16^64^192
+
+@36 Sine21 a32^96 Sine22 a32^96 Sine21 f+32^96 Sine22 f+32^96
+
+@30 Hit21 f+16^64^192 Hit22 y15 f+16^64^192 Hit23 y5 f+16^64^192
+
+@40 Synth22 y10 e32^96 d32^96 c+32^96 d32^96 a32^96 g32^96 f+32^96 g32^96 > c32^96 < b32^96 a+32^96 b32^96 >
+e32^96 Synth23 e32^96 Synth24 e32^96 Synth25 e32^96 Synth26 e32^96 Synth22
+d+32^96 d32^96 Synth23 d32^96 Synth24 d32^96 Synth25 d32^96 Synth26 d32^96 Synth22
+c+32^96 c32^96 Synth23 c32^96 Synth24 c32^96 Synth25 c32^96 Synth26 c32^96 Synth22 <
+a+32^96 b32^96 Synth23 b32^96 Synth24 b32^96 Synth25 b32^96 Synth26 b32^96 Synth22
+g+32^96 VIB a4 $DD $10 $20 e $DF
+
+@41 Tom21 y15 < c8^32^96 >
+
+@40 y10 Synth27
+c+32^96 d32^96 e32^96 d32^96 c+32^96 d32^96 g32^96 f+32^96 f32^96 f+32^96 b32^96 a32^96 g+32^96 a32^96 >
+f+32^96 Synth28 f+32^96 Synth29 f+32^96 Synth2A f+32^96 Synth26 f+32^96 Synth27
+e32^96 d+32^96 Synth28 d+32^96 Synth29 d+32^96 Synth2A d+32^96 Synth26 d+32^96 Synth27
+d32^96 c+32^96 Synth28 c+32^96 Synth29 c+32^96 Synth2A c+32^96 Synth26 c+32^96 Synth27
+c32^96 < b32^96 Synth28 b32^96 Synth29 b32^96 Synth2A b32^96 Synth26 b32^96 Synth27
+a+32^96 VIB b4 $DD $10 $20 f+ $DF
+
+r8^32^96 c+32^96 d32^96 e32^96 d32^96 c+32^96 d32^96 a32^96 g32^96 f+32^96 g32^96 > c32^96 < b32^96 a+32^96 b32^96 >
+e32^96 Synth28 e32^96 Synth29 e32^96 Synth2A e32^96 Synth26 e32^96 Synth27
+d+32^96 d32^96 Synth28 d32^96 Synth29 d32^96 Synth2A d32^96 Synth26 d32^96 < Synth27
+b32^96 > a32^96 Synth28 a32^96 Synth29 a32^96 Synth2A a32^96 Synth26 a32^96 Synth27
+g+32^96 g32^96 Synth28 g32^96 Synth29 g32^96 Synth2A g32^96 Synth26 g32^96 Synth27
+f+32^96 VIB Synth2B g4 $DD $10 $20 d $DF
+
+< Synth27 f+32^96 g32^96 a32^96 g32^96 > e32^96 d+32^96 d32^96 g32^96 f+32^96 f32^96 e32^96 d+32^96 d32^96 c+32^96 c32^96 < b32^96 a+32^96 a32^96
+
+@30 Hit21 f+32^96 f32^96 f+32^96 a+32^96 > c+32^96 f32^96 < f+16^64^192 Hit24 f+16^64^192 Hit25 f+16^64^192 
+
+
+
+; +---------------------+
+; |     Channel #2	|
+; |     Channel 3	|
+; +---------------------+
+
+#2
+o4
+@32 KSV31 g32^96 > @39 f+32^96 f+32^96 << @41 y5 e32^96 y10 c32^64^192 > @32 g16^64^192
+<<< @37 e32^96 b32^96 >>> c32^96 c32^96 @39 d+16^64^192
+@31 Enemy31 y5 c64^192 r64^192 @37 Sine231 c64^192 r64^192 < @31 g64^192 Enemy31 r64^192 @37 Sine231 g64^192 r64^192 > @32 y10 g32^96 g32^96 > @39 f+32^96 f+32^96 << @41 y5 e32^96 y10 c32^96 y15 < g16^64^192 > @34 y10 g+96 r64^96^192 Noise32 g+96 r64^96^192 >> @38 Sine331 y5 d16^64^192 <
+
+/
+
+KSV32
+(31)[ y10 @32 g16^64^192 <<< @37 e32^96 b32^96 >>> c64^192 r64^192 c64^192 r64^192 @39 d+16^64^192]
+< @37 y5 g64^192 r16 >> @38 Sine332 y15 d16^64^192 < 
+KSV32
+(31)
+< @37 y15 g64^192 r16 >> @38 Sine332 y5 d16^64^192 <
+KSV32
+(31)
+< @37 y5 g64^192 r16 >> @38 Sine332 y15 d16^64^192 <
+
+@32 KSV32 y10 g16^64^192 > @39 f+16^64^192 << @41 d16^64^192 >> @30 f+16^64^192 Hit31 y5 f+16^64^192 Hit32 y14 f+16^64^192 <
+
+KSV31
+(31)
+(32)[
+< @37 g64^192 r16 > y15 c64^192 r64^192 y5 c64^192 r64^192 @32 g16^64^192 > @39 y10 f+16^64^192 < @37 y15 c64^192 r64^192 y5 c64^192 r64^192 @39 y10 d+16^64^192 < @37 g16^64^192 @31 Enemy31 y15 g64^192 r64^192 > y5 c64^192 r64^192]
+
+KSV31
+(31)
+(33)[
+@31 Enemy31 y5 c64^192 r64^192 @37 Sine231 y15 c64^192 r64^192 < @31 Enemy31 g64^192 r64^192 @37 Sine231 y5 g64^192 r64^192 > @32 KSV31 y10 g16^64^192 > @39 f+16^64^192 < @37 y5 c64^192 r64^192 y15 c64^192 r64^192]
+< @41 y5 c16^64^192 @37 y10 g16^64^192 >> @38 Sine333 d16^64^192 <
+
+(31)
+(32)
+
+(31)
+(33)
+< @34 Noise31 y10 g+96 r64^96^192 Noise32 g+96 r64^96^192 @37 Sine231 y15 g16^64^192 >> @38 Sine331 y5 d16^64^192 <
+
+[[
+(31)
+(32)
+]]2
+
+(31)
+@31 Enemy31 y5 c64^192 r64^192 @37 Sine231 y15 c64^192 r64^192 < @31 Enemy31 g64^192 r64^192 @37 Sine231 y5 g64^192 r64^192 > @32 y10 g32^96 g32^96 > @39 f+32^96 f+32^96 << @41 y5 e32^96 y10 c32^96 < y15 g16^64^192 > @34 y10 g+96 r64^96^192 Noise32 g+96 r64^96^192 >> @38 Sine331 y5 d16^64^192 
+
+
+
+; +---------------------+
+; |     Channel #3	|
+; |     Channel 4	|
+; +---------------------+
+
+#3
+o4
+r4^32^64^192
+@36 Sine41 b32^96 Sine42 b32^96 Sine41 b32^96 Sine42 b32^96 r16^64^192 >
+Sine41 c32^96 Sine42 c32^96 Sine41 c32^96 Sine42 c32^96 <
+@40 Synth41 g32^96 f+32^96 g32^96 b32^96 > d32^96 f+32^96
+<<<< @41 Tom41 b16^64^192 >> @34 g+96 r8^32 >>
+
+/
+
+@42 Tri41 y10 
+(41)[d32^96 e32^96]21
+< g32^96 Tri42 g32^96 <
+
+@44 Wing41
+g16^64^192 c64^192 >
+
+@40 Synth41 c+32^96 d64^192 r16^64^192
+
+@36 y11 
+Sine41 b32^96 Sine42 b32^96 Sine41 b32^96 Sine42 b32^96 r16^64^192 Sine41 a+32^96 Sine42 a+32^96 > Sine41 c+32^96 Sine42 c+32^96 r16^64^192 < Sine41 b32^96 Sine42 b32^96 Sine41 b32^96 Sine42 b32^96 r16^64^192 > Sine41 c32^96 Sine42 c32^96 Sine41 c32^96 Sine42 c32^96 r16^64^192 < Sine41 b32^96 Sine42 b32^96 Sine41 b32^96 Sine42 b32^96 r16^64^192 Sine41 a+32^96 Sine42 a+32^96 > Sine41 c+32^96 Sine42 c+32^96 r16^64^192 Sine41 c32^96 Sine42 c32^96 Sine41 c32^96 Sine42 c32^96 r4^16^64^192 < Sine41 a32^96 Sine42 a32^96 Sine41 a32^96 Sine42 a32^96 r16^64^192 >
+
+Sine41 f+32^96 d32^96 c32^96 Sine42 c32^96 r16^64^192 < Sine41 a32^96 Sine42 a32^96 Sine41 a32^96 Sine42 a32^96 r16^64^192
+Sine41 > c32^96 < a32^96 f+32^96 Sine42 f+32^96 r16^64^192
+
+Sine41 a32^96 Sine42 a32^96 Sine41 a32^96 Sine42 a32^96 >
+Sine41 d+32^96 d32^96 c+32^96 c32^96 < b32^96 a+32^96 r32^96 > c32^96 < b32^96 > c32^96 < b32^96 > c32^96 r4^16^64^192 <
+
+Sine41 b32^96 Sine42 b32^96 Sine41 b32^96 Sine42 b32^96 r16^64^192 Sine41 a+32^96 Sine42 a+32^96 > Sine41 c+32^96 Sine42 c+32^96 r16^64^192 < Sine41 b32^96 Sine42 b32^96 Sine41 b32^96 Sine42 b32^96 r16^64^192 > Sine41 c32^96 Sine42 c32^96 Sine41 c32^96 Sine42 c32^96 r16^64^192 < Sine41 b32^96 Sine42 b32^96 Sine41 b32^96 Sine42 b32^96 r16^64^192 Sine41 b32^96 Sine42 b32^96 Sine41 b32^96 Sine42 b32^96 r16^64^192 > Sine41 e32^96 Sine42 e32^96 Sine41 e32^96 Sine42 e32^96 Sine41 e32^96 Sine42 e32^96 <
+
+Sine41 b32^96 a+32^96 a32^96 g+32^96 r16^64^192
+b32^96 Sine42 b32^96 Sine41 b32^96 Sine42 b32^96 r16^64^192 > Sine41 c32^96 Sine42 c32^96 Sine41 c32^96 Sine42 c32^96 <
+
+@40 Synth41 y11 g32^96 f+32^96 g32^96 b32^96 > d32^96 f+32^96
+
+<<<< @41 Tom42 b16^64^192 >>
+
+@34 g+96 r8^32
+
+
+
+; +---------------------+
+; |     Channel #4	|
+; |     Channel 5	|
+; +---------------------+
+
+
+
+#4
+o5
+r4^96
+@40 Synth51 y9 d32^96 g32^96 f+32^96 f32^96 e32^96 d+32^96 d32^96 c+32^96 c32^96 < b32^96 a+32^96 a32^96
+@30 Hit51 f+32^96 f32^96 f+32^96 a+32^96 > c+32^96 r4
+
+/
+
+@42 y11
+Tri51 e32^96 Tri52 (41)21
+< Tri53 g32^96 Tri54 g32^96 Tri55 g32^96 Tri56 g32^96 Tri57 g32^96
+
+r32.
+
+@40 Synth52 y9
+e32^96 d32^96 c+32^96 d32^96 a32^96 g32^96 f+32^96 g32^96 > c32^96 < b32^96 a+32^96
+b32^96 > e32^96 Synth53 e32^96 Synth54 e32^96 Synth55 e32^96 Synth56 e32^96
+Synth52 d+32^96 d32^96 Synth53 d32^96 Synth54 d32^96 Synth55 d32^96 Synth56 d32^96
+Synth52 c+32^96 c32^96 Synth53 c32^96 Synth54 c32^96 Synth55 c32^96 Synth56 c32^96 <
+Synth52 a+32^96 b32^96 Synth53 b32^96 Synth54 b32^96 Synth55 b32^96 Synth56 b32^96
+Synth52 g+32^96 VIB a8.. $DD $10 $1A f+ r32 $DF
+
+r8^32^96 c+32^96 d32^96 e32^96 d32^96 c+32^96 d32^96 g32^96 f+32^96 f32^96 f+32^96 b32^96 a32^96 g+32^96 a32^96 >
+f+32^96 Synth53 f+32^96 Synth54 f+32^96 Synth55 f+32^96 Synth56 f+32^96 Synth52
+e32^96 d+32^96 Synth53 d+32^96 Synth54 d+32^96 Synth55 d+32^96 Synth56 d+32^96 Synth52
+d32^96 c+32^96 Synth53 c+32^96 Synth54 c+32^96 Synth55 c+32^96 Synth56 c+32^96 Synth52 c32^96 < b32^96 Synth53 b32^96 Synth54 b32^96 Synth55 b32^96 Synth56 b32^96 Synth52
+a+32^96 VIB b8.. $DD $10 $1A g+ r32 $DF
+
+r8^32^96 c+32^96 d32^96 e32^96 d32^96 c+32^96 d32^96 a32^96 g32^96 f+32^96 g32^96 > c32^96 < b32^96 a+32^96 b32^96 >
+e32^96 Synth53 e32^96 Synth54 e32^96 Synth55 e32^96 Synth56 e32^96 Synth52
+d+32^96 d32^96 Synth53 d32^96 Synth54 d32^96 Synth55 d32^96 Synth56 d32^96 r32^96 Synth52
+a32^96 Synth53 a32^96 Synth54 a32^96 Synth55 a32^96 Synth56 a32^96 Synth52
+g+32^96 g32^96 Synth53 g32^96 Synth54 g32^96 Synth55 g32^96 Synth56 g32^96 Synth52
+f+32^96 Synth57 VIB g8.. $DD $10 $1A f r32
+
+Synth52 < f+32^96 g32^96 a32^96 g32^96 > e32^96 d+32^96 d32^96 g32^96 f+32^96 f32^96 e32^96 d+32^96 d32^96 c+32^96 c32^96 < b32^96 a+32^96 a32^96
+
+@30 Hit51 f+32^96 f32^96 f+32^96 a+32^96 > c+32^96 f32^96 r32^192
+
+@42 Tri58 y15 a+=4 $DD $00 $04 g r16 y5 f+=8 $DD $00 $08 < f r32^96 

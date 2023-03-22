@@ -116,6 +116,7 @@
 75 XYFollowSprite.json
 76 RotatingVine.cfg
 77 flowerspawn.json
+78 himari_wrapper.cfg
 79 Disco_shell.json
 7A chasing_ninji.cfg
 7C shy_bird.cfg
@@ -140,6 +141,7 @@
 93 NotHomingThwomp.json
 94 portableTNT_FortressBossExplosion.cfg
 95 VibraniumBreaker.json
+96 EnemyStackV2_NoSway.json
 97 panser_green.cfg
 98 panser_blue.cfg
 9B VenusVerticalShortSpitTwo.cfg

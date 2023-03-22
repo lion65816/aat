@@ -114,7 +114,6 @@ Locals:
 78  Kaze.txt
 79  midnight greenhouse.txt
 7A  Peanut Butter Plain.txt
-
 7B  Kirby's Dream Land 3 - Ripple Field 2.txt
 7C  amnf-s04.txt
 7D  tom_left_handed_wolf_0_1.txt
@@ -127,6 +126,8 @@ Locals:
 85  FF6 - Quiet Beach.txt
 86  pinkbeard.txt
 87  Final Fantasy V - Pirates Ahoy!.txt
+88  OutOfThisDimension.txt
+89  DrawciaSoul.txt
 8A  kanji.txt
 8B  16 Flyswatter ~ Level 2.txt
 8C  froge.txt

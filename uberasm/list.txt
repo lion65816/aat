@@ -6,6 +6,7 @@ verbose: on
 ; Level list. Valid values: 000-1FF.
 level:
 000	bonusmusicrng.asm
+004	BG_AutoScroll4.asm
 005	LevelIntro.asm
 006	LevelIntro.asm
 009	disableflight.asm
@@ -41,6 +42,8 @@ level:
 06E	statusbarremove.asm
 06F	statusbarremove.asm
 074	Autoscroll74.asm
+07A	BG_AutoScroll7A.asm
+07B	BG_AutoScroll7B.asm
 07D	statusbarremove_CustomBar.asm
 080	LV135.asm
 090	Gradient90.asm
