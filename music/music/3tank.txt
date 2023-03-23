@@ -39,45 +39,45 @@ $F1 $04 $4B $01
 
  w255 t66
 
-#0 [r1]12 / @31 h-4 v113 y10,1,1 l8 $f4 $01 $ee $06 q7f $DE $25 $0f $62
+#0 [r1]12 / @31 h-4 v113 y9,1,1 l8 $f4 $01 $ee $06 q7f
 
-e a b >c^8 <b4 >d^8 c <b e^8 d c e^1  r2..
+e a b >c^8 <b4 >d^8 c <b e^8 d c $DE $1D $14 $24 e^1  r2.. $DF
 
-e^8 a b >c^8 <b4 >d^8 c <b >c^8 d4 e^8 d g e^8 d g e^2 r4. 
+e^8 a b >c^8 <b4 >d^8 c <b >c^8 d4 e^8 d g e^8 d g $DE $1E $17 $27 e^2 r4. $DF
 
 d^4. e^8 f4 g^8 f e d^8 <b >c d^8 c4 e^8 <g+ a b^8 a4 >c^4. r4.	 	; 24번 마디까지
 
-<f4 g4 a b^8 >c4 d^8 g4 e^1^1 [r1]5 r2^4^8 l16 a8. g e c [a g e c]7
+<f4 g4 a b^8 >c4 d^8 g4 $DE $1D $14 $27 e^1^1 [r1]5 r2.. l16 a8. g e c [a g e c]7
 
 [a g a >c]3 <a g >c d e2. r4 [r1]4 < [g a g e c <a]4 >>c2 	; 44번 마디까지
 
-d8 c d <a8 g a f8 g8 a8 b8^8 >c8 d8 <b4. r4 f4. g8^8 a4 b8^8 a8 b8 g8^4. r8 l8
+d8 c d <a8 g a f8 g8 a8 b4 >c8 d8 <b4. r4 f4. g4 a4 b4 a8 b8 g8^4. r8 l8
 
-a4. b^8 >c4 d^8 c d <b^8 >c d e^1^1 $f4 $01
+a4. b4 >c4 d4 c d <b4 >c d e^1^1 $f4 $01
 
 [r1]2  
 
-#1 @39 h8 v96 o3 y3 $DE $01 $30 $90 r1^8 $f4 $01 < e16 f16 f+16 g16 g+16 a16 a+16 b16 >c16 / c+1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1 $f4 $01
+#1 @39 h8 v96 o3 y5 $DE $01 $30 $90 r1^8 $f4 $01 < e16 f16 f+16 g16 g+16 a16 a+16 b16 >c16 / c+1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1^1 $f4 $01
 
 #2 @30 v105 y11 h-4 o4 l16
 
-q1f [ [[a >a <a a ]]3 a >a e <a ]11 a >a <a a >a <a a >a r2 / 
+q1f [ [[a y9 >a y11 <a y9 a ]]3 y11 a y9 >a y11 e y9 <a ]11 y9 a y11 >a y9 <a y11 a y9 >a y11 <a y9 a y11 >a r2 / 
 
-@31 v113 y10 l8 q7f o4 $f4 $01 $DE $25 $0f $62
+@31 v113 y9 l8 q7f o4 $f4 $01 
 
- e a b >c^8 <b4 >d^8 c <b e^8 d c e^1  r2..
+e a b >c^8 <b4 >d^8 c <b e^8 d c $DE $1D $14 $24 e^1  r2.. $DF
 
-e^8 a b >c^8 <b4 >d^8 c <b >c^8 d4 e^8 d g e^8 d g e^2 r4. 
+e^8 a b >c^8 <b4 >d^8 c <b >c^8 d4 e^8 d g e^8 d g $DE $1E $17 $27 e^2 r4. $DF
 
-d^4. e^8 f4 g^8 f e d^8 <b >c d^8 c4 e^8 <g+ a b^8 a4 >c^4. r4. 	; 24번 마디까지
+d^4. e^8 f4 g^8 f e d^8 <b >c d^8 c4 e^8 <g+ a b^8 a4 >c^4. r4.	 	; 24번 마디까지
 
-<f4 g4 a b^8 >c4 d^8 g4 e^1^1 [r1]5 r2.. l16 a8. g e c [a g e c]7
+<f4 g4 a b^8 >c4 d^8 g4 $DE $1D $14 $27 e^1^1 [r1]5 r2.. l16 a8. g e c [a g e c]7
 
 [a g a >c]3 <a g >c d e2. r4 [r1]4 < [g a g e c <a]4 >>c2 	; 44번 마디까지
 
-d8 c d <a8 g a f8 g8 a8 b8^8 >c8 d8 <b4. r4 f4. g8^8 a4 b8^8 a8 b8 g8^4. r8 l8
+d8 c d <a8 g a f8 g8 a8 b4 >c8 d8 <b4. r4 f4. g4 a4 b4 a8 b8 g8^4. r8 l8
 
-a4. b^8 >c4 d^8 c d <b^8 >c d e^1^1 $f4 $01
+a4. b4 >c4 d4 c d <b4 >c d e^1^1 $f4 $01
 
 [r1]2 
 

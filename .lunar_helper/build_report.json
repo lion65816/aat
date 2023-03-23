@@ -8122,7 +8122,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "daa8d911c629fdbdc7cb8538e92be58f",
+      "hash": "25e4002111aa06c143a2ae7e57a576a7",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -20401,7 +20401,7 @@
   "global_data": "dc45a61583beb48851e246e8e3e38d5d",
   "title_moves": null,
   "shared_palettes": "f7cda3026e92cd4db1573a335f8e2878",
-  "map16": "35c2b3e83928b924945b72f658927eb7",
+  "map16": "308b4d838ccef87e13a890079b5b097f",
   "gps_options": null,
   "pixi_options": "-l sprite/list.txt",
   "uberasm_options": null,
