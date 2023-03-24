@@ -27,6 +27,8 @@ level:
 02C	Thwompire2C.asm
 02D	Thwompire2D.asm
 02F	freescrollbabey.asm
+030	cityofgulpgulp.asm
+031	cityofgulpgulp.asm
 042	watertides.asm
 044	FilterYoshi.asm
 052	Thwompire52.asm

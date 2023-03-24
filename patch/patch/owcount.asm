@@ -124,7 +124,7 @@ RTS
 
 .table			;these are translevels that don't have yoshi coins
 ;levels $00-$24
-db $00,$01,$02,$03,$04,$05,$07,$0A,$0C,$0D,$0E,$0F
+db $00,$01,$03,$04,$05,$07,$0A,$0C,$0D,$0E,$0F
 db $15,$16,$18,$1C,$1D,$1F
 ;db $00,$03,$04,$07,$08,$0B,$0E,$12
 ;db $13,$14,$16,$18,$1A,$1B,$1E,$1F
