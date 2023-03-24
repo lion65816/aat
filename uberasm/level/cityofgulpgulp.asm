@@ -9,18 +9,30 @@ STA $2122
 LDA $0702|!addr  ;bg color
 STA $2122
 
+
 LDA #%10110101
 STA $40  ;CGADSUB mirror
 RTL
 
 
 main:
+LDA $010B|!addr
+CMP #$02
+BEQ +
+LDA #%00010111
+STA $212C  ;TM
+STA $212E  ;TMW
+STZ $212D  ;TS
+STZ $212F  ;TSW
+BRA ++
++
 LDA #%00010101
 STA $212C  ;TM
 STA $212E  ;TMW
 LDA #%00000010
 STA $212D  ;TS
 STA $212F  ;TSW
+++
 
 LDA $9D  ;lock sprites
 ORA $13D4|!addr  ;pause

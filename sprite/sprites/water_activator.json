@@ -13,7 +13,7 @@
   },
   "$166E": {
     "Use second graphics page": true,
-    "Palette": 0,
+    "Palette": 3,
     "Disable fireball killing": false,
     "Disable cape killing": true,
     "Disable water splash": false,
