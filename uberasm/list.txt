@@ -85,6 +85,7 @@ level:
 10F	LevelIntro.asm
 110	Gradient110.asm
 112	LevelIntro.asm
+116	LevelIntro.asm
 117	LevelIntro.asm
 118	GradientSkyIntro.asm
 119	HDMAGradient119.asm
@@ -100,6 +101,7 @@ level:
 129	LV129.asm
 12F	Gradient12F.asm
 131	LevelIntro.asm
+133	LevelIntro.asm
 135	LevelIntro.asm
 136	LevelIntro.asm
 137	LevelIntro.asm
