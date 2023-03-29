@@ -1,0 +1,14 @@
+;This is a definition file so you can edit the defines to applies multiple blocks.
+
+!ManuelNumb	=	$02
+;^manuel number (in hex), corrosponds to the manuel numbers on the LM
+;exanimation's "Edit Trigger Initalizations (in hex)" window.
+
+!SprActivate =	0
+;^0 = no activate by sprite, 1 = activate by sprite. This only applies to
+;upsidedown button switches.
+
+;;;;;;;;;;;;;;;;;;;;;;;do not edit anything below here.;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+!ManuelTrigger = $7FC070+!ManuelNumb	;>convert number seen on LM to which ram
+					;of each manuel number.

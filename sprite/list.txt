@@ -130,6 +130,7 @@
 84 Ninji2.cfg
 85 Kun.json
 86 water_activator.json
+87 volcano_lotus008.json
 8A fire_snake.json
 8B falling_fireball.cfg
 8C clusterspawn.json
@@ -171,6 +172,7 @@ B8 InfoBox.cfg
 B9 baba_block.cfg
 BA Balloon_dis.json
 BB Carryable_Football.cfg
+BD thunderlakitu.cfg
 BE mechakoopa_but_awesome.json
 BF custom_bowser_statue.cfg
 
@@ -194,6 +196,7 @@ CLUSTER:
 00 cluster_sparkle.asm
 01 laser.asm
 02 BowserFire.asm
+03 lightning.asm
 10 bullet.asm
 11 flowers.asm
 12 sandstorm.asm

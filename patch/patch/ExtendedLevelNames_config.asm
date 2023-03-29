@@ -38,7 +38,7 @@ NameData:
  db "                   "
  db "                   "
  ;Level 008
- db "                   "
+ db " Locus of Control  "
  db "                   "
  ;Level 009
  db "   NO VEGETABLES,  "
@@ -80,8 +80,8 @@ NameData:
  db "Demo in            "
  db "thornbush scrumble*"
  ;Level 016
- db "STAR ROAD          "
- db "                   "
+ db "  Cryotranquility  "
+ db "                  *"
  ;Level 017
  db " matcha ampersand  "
  db "      avocado      "
@@ -209,8 +209,8 @@ NameData:
  db "  Lady Crithania   "
  db "                   "
  ;Level 11D
- db "The cake is lie    "
- db "                   "
+ db "   The Castle of   "
+ db " SERIOUS BUSINESS *"
  ;Level 11E
  db "Fungus Forest Flow "
  db "                  *"
@@ -254,8 +254,8 @@ NameData:
  db "Baloonside Race    "
  db "(boring joke)      "
  ;Level 12C
- db "Take Yoshi to make "
- db "it easy            "
+ db "   Can't Go Back   "
+ db "                   "
  ;Level 12D
  db "watch out!         "
  db "     bad word ahead"
@@ -272,8 +272,8 @@ NameData:
  db "   Killy Killer    "
  db "     Volcano      *"
  ;Level 132
- db "Short level but    "
- db "long level name    "
+ db "     The Cave      "
+ db "    of Monsters   *"
  ;Level 133
  db "Idiom Factory II   "
  db "                   "
@@ -297,7 +297,7 @@ NameData:
  db "     the Sushi    *"
  ;Level 13A
  db "Use Of A Goal Posts"
- db "                  *"
+ db "                 **"
  ;Level 13B
  db "the land of        "
  db "          sweetches"

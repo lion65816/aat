@@ -313,6 +313,15 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 4372	0	
 438a	0	
 438b	0	
+4a10	0	This button sets a manuel frame value to #$00.
+4a11	0	This button sets a manuel frame value to #$01.
+4a12	0	This Button sets a manuel frame value to #$02.
+4a13	0	This button sets a manuel frame value to #$00.
+4a14	0	This button sets a manuel frame value to #$01.
+4a15	0	This button sets a manuel frame value to #$02.
+4a20	0	Solid if the corresponding switch is activated.
+4a21	0	Solid if the corresponding switch is activated.
+4a22	0	Solid if the corresponding switch is activated.
 5440	0	Teleports the player to level 1CB.
 60dd	0	StickyBlock.asm
 60de	0	StickyBlock.asm

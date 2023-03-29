@@ -1,0 +1,321 @@
+#amk 2
+
+; SPC Generator Info
+#SPC
+{
+    #author  "Yoshiaki Kubotera, Masanori Hikichi, Miyoko Takaoka, Tomohiro Endo, Hiroo Tengenji, I. Naoyuki"
+    #title   "The Heat Inside the Fire"
+    #game    "Ys IV: Mask of the Sun"
+    #comment "Ported by Ahrion"
+}
+
+#path "HeatInsideTheFire"
+
+#samples
+{
+	#optimized
+	"DistGuitar.brr"
+	"Kick.brr"
+	"OGuitar.brr"
+	"Organ.brr"
+	"Saw.brr"
+	"Saw2.brr"
+	"Snare.brr"
+	"Tom.brr"
+}
+
+#instruments
+{
+	"DistGuitar.brr" $FF $E1 $00 $05 $00 ; @30
+	"Kick.brr"	 $8F $E0 $00 $03 $C0 ; @31
+	"OGuitar.brr"	 $FF $E0 $00 $04 $02 ; @32
+	"Organ.brr"	 $FF $E0 $00 $03 $8C ; @33
+	"Saw.brr"	 $8F $E0 $00 $03 $BC ; @34
+	"Saw2.brr"	 $8F $F0 $00 $05 $F8 ; @35
+	"Snare.brr"	 $8F $E0 $00 $03 $C0 ; @36
+	"Tom.brr"	 $8F $E0 $00 $03 $D0 ; @37
+}
+
+
+w150
+t91
+
+"Kick1 = v180"
+"Kick2 = v158"
+"Snare1 = v205"
+"Snare2 = v180"
+"Snare3 = v158"
+"Snare4 = v83"
+"Snare5 = v111"
+"Snare6 = v142"
+"Tom1 = v239"
+"Tom2 = y8 v210"
+
+"Saw21 = v200"
+"Saw22 = v187"
+"Saw23 = v151"
+"Saw24 = v165"
+
+"Dist31 = v158"
+"Dist32 = v142"
+"OGuitar31 = v158"
+
+"Dist41 = y17 v170"
+"Organ41 = v134"
+
+"Saw251 = v190"
+"Saw252 = v151"
+"Saw253 = v170"
+"Organ51 = v134"
+
+"OGuitar61 = v118"
+"OGuitar62 = v104"
+"OGuitar63 = v165"
+
+"Fade1 = $E8 $C0 $6F"
+"Fade2 = $E8 $C0 $40"
+
+"VIB1 = $DE $30 $06 $10"
+"VIB2 = $DE $C0 $06 $30"
+
+; Echo
+$EF $3C $39 $39
+$F1 $04 $32 $01
+$F5 $0C $21 $2B $2B $13 $FE $F3 $F9
+
+
+
+; +---------------------+
+; |     Channel #0	|
+; |     Drums		|
+; +---------------------+
+
+#0
+o4
+
+@31 Kick1 c8 @36 Snare1 c8 @31 Kick1 c8
+[[c4 Kick2 c4 Kick1]]7
+c4
+
+(10)[@36 Snare1 c8 @31 Kick1 c8]13
+(11)[@36 Snare1 c8 Snare2 c8 Snare3 c8 @37 y17 Tom1 d+16 d+16 < Tom2 a+16 a+16 Tom1 y3 f16 f16 > y10 @36 Snare1 c8 Snare3 c16 Snare2 c16]
+
+/
+
+[[
+(12)[@31 Kick1 c4 @36 Snare1 c8 @31 Kick1 c8 c4 @36 Snare1 c4 @31 Kick1 c4 @36 Snare1 c4 @31 Kick1 c8 c8 @36 Snare1 c4 @31 Kick1 c4 @36 Snare1 c8 @31 Kick1 c8 c4 @36 Snare1 c4]
+(13)[@31 Kick1 c4 @36 Snare1 c4 @31 Kick1 c8 c8 @36 c16 c16 c16 c16]
+(12)
+(14)[@31 Kick1 c4 @36 Snare1 c4 @31 Kick1 c8 @36 Snare4 c16 Snare5 c16 Snare6 c16 Snare3 c16 Snare2 c16 Snare1 c16]
+]]2
+
+[[
+(12)
+(13)
+]]3
+
+(12)
+(14)
+
+(12)
+Snare2 @36 c16 @31 c8 Kick2 c16 @36 Snare2 c16 @31 c8 Kick2 c16 @36 Snare2 c16 @31 c8 c16 @36 Snare1 c16 Snare3 c16 Snare2 c16 Snare3 c16
+
+[[@31 [Kick1 c4 Kick2 c4]3 Kick1 c8 @36 c8 Snare1 c8 @31 Kick2 c8]]2
+
+(10)12
+(11)
+
+
+
+; +---------------------+
+; |     Channel #1	|
+; |     Saw		|
+; +---------------------+
+
+#1
+o3
+
+@34
+r4. Saw21 d1^1^1^1^1^1^1^1 >
+
+/
+
+
+[[q4F
+(21)[Saw22 d8 Saw23 d8 d8 d8 d8 Saw22 d8 Saw23 d8 d8 d8 Saw22 d8 Saw23 d8 d8 Saw24 < a+8 > Saw23 a+8 Saw22 c8 Saw24 > c8 <]3
+(22)[Saw22 d8 Saw23 d8 Saw22 > d8 < Saw23 d8 d8 > Saw22 d8 Saw23 < d8 > Saw22 d8 d8 c8 < a8 > Saw24 c8 < Saw22 a8 g8 Saw24 < a+8 > Saw22 c8]
+(23)[Saw22 d8 Saw23 d8 d8 d8 d8 Saw22 d8 Saw23 d8 d8 d8 Saw22 d8 Saw23 d8 d8 Saw24 d8 Saw23 d8 e8 Saw22 q7F f4 q4F Saw23 f8 f8 f8 f8 Saw22 f8 Saw23 f8 Saw22 q7F e4 q4F Saw24 e8 Saw23 e8 e8]
+Saw24 e8 Saw23 e8 Saw22 e8 Saw24 e8
+(23)
+Saw24 d+8 Saw23 d+8 Saw22 d+8 Saw24 d+8
+]]2
+
+(21)2
+q7F
+Saw24
+[[d4]]24
+q4F
+(22)
+
+
+
+; +---------------------+
+; |     Channel #2	|
+; |     DistGuitar	|
+; |     OGuitar		|
+; +---------------------+
+
+#2
+o5
+
+[[r8]]65
+
+@30 Dist31 d4 $DD $00 $30 <g+ <
+
+/
+
+[[
+(31)[@30 Dist31 d8 d8 a8 d8 > d4 < d8 > d8 < d8 a8 > d8 < d8 a+4 > c4 <]
+d8 d8 a8 d8 > d4 < d8 > d8 < d8 a8 > d8 < a8 > Dist32 g4 $DD $00 $18 a g4 <
+]]2
+
+OGuitar31 
+(32)[@32 VIB1
+e4. $DD $00 $18 a e4 $F4 $01 f8 g8 f8 $F4 $01 ^8
+$F4 $01 d8 e8 d16 $F4 $01 ^16
+
+f8 d8 g8 a8 r4 a8 r8 f8 a4 f8 g+4 e8 g+4 b4 a4.. r16 e4 $F4 $01 f8 g8 f8 $F4 $01 ^8 $F4 $01 d8 e8 d8 $F4 $01 f8 d8 g8 a8 r4 a8 r8 f8 a4 f8 g+4 e8 g+4 $F4 $01 b8 > d+16 $F4 $01 ^16 <]
+> VIB2 d1^8 Fade1 ^2 ^2 $DD $00 $60 <d  $DF
+
+(31)3
+
+OGuitar31
+(32)
+> d4 r16 c16 r16 c16 r16 < g16 r16 g16 r16 a16 r16 f16 r16 f16 r16 f16 r16 d16 r16 d16 r16 d16 r16 g16 r16 g16 r16 g16 r16 > c16 r16 c16 r16 f16 r16 d16 r16 g16 r16 g16 r16 d16 r16 d16 r16 e16
+$DF
+
+[[r2]]10
+<
+
+(31)2
+
+
+
+; +---------------------+
+; |     Channel #3	|
+; |     DistGuitar	|
+; |     Organ		|
+; +---------------------+
+
+#3
+o3
+
+r4.
+
+@30 Dist41
+[[d8 d8 > d8 < d8 > d4 < d8 > d8 < d8 > d8 < d8 d8 a+4 > c4 <]]3
+d8 d8 > d8 < d8 > d4 < d8 > d8 < d8 > d8 < d8 d8 > a8 g8 < a+8 > c8
+
+/
+
+@33 Organ41
+[[
+(41)[a8 a8 > d8 < a8 > d4 < a8 > d8 < a8 > d8 < a8 a8 a+4 > c4 <]
+(42)[a8 a8 > d8 < a8 > d4 < a8 > d8 < a8 > d8 < a8 a8 > f4 e4 <]
+(41)
+(42)
+>
+(43)[r4 d8 r8 c8 r8 c8 d8 r4 d8 r8 c8 d8 e8]
+f4 r8 f8 r8 e8 f8 r4 e8 r4 e8 r4 d8 e8
+(43)
+f8 f8 r8 f8 r8 e8 f8 r4 e8 r4 e8 r4 d8 d+8 <
+]]2
+
+[[
+(41)
+(42)
+]]2
+
+(41)2
+
+
+
+; +---------------------+
+; |     Channel #4	|
+; |     Saw2		|
+; |     Organ		|
+; +---------------------+
+
+#4
+o3
+
+r4.
+
+y0
+
+@35 Saw251
+[[d4]]24
+
+d8 Saw252 d8 Saw251 > d8 < Saw252 d8 d8 Saw251 > d8 < Saw252 d8 Saw251 > d8 d8 Saw253 c8 < a8 > Saw252 c8 < Saw251 a8 Saw253 g8 < Saw252 a+8 > Saw253 c8 >
+
+/
+
+@33 Organ51
+[[
+(51)[d8 d8 a8 d8 a4 d8 a8 d8 a8 d8 d8 f4 g4]
+(52)[d8 d8 a8 d8 a4 d8 a8 d8 a8 d8 d8 a+4 > c4 <]
+(51)
+(52)
+
+(53)[d8 d8 f8 d8 f8 d8 f8 f8 d8 d8 f8 d8 a8 a+8 > c8 <]
+> d4 < f8 > d8 < f8 > c8 d8 < f8 f8 g+8 e8 e8 g+4 e8 f8 g+8
+(53)
+> d8 d8 < f8 > d8 < f8 > c8 d8 < f8 f8 g+8 e8 e8 g+4 d8 e8 f+8
+]]2
+
+[[
+(51)
+(52)
+]]2
+
+(51)2
+
+
+
+; +---------------------+
+; |     Channel #5	|
+; |     OGuitar		|
+; +---------------------+
+
+#5
+o3
+
+[[r8]]67
+
+/
+
+[[r16]]131
+
+$EE $08 y8
+
+OGuitar61
+(32)
+VIB2
+> d1^8 Fade2 ^2^2 $DD $00 $60 <d 
+[[r2]]12
+
+OGuitar62
+(32)
+> d32 r32
+
+OGuitar63
+$F4 $02
+c+16 r16 < a16 r16 a16 r16 a16 r16 f16 r16 g16 r16 g16 r16 d16 r16 e16 r16 e16 r16 c16 r16 e16 r16 e16 r16 a16 r16 a16 r16 a16 r16 > d16 r16 g16 r16 f16 r16 a16 r16 f16 r16 f16 r16 c16 r16
+$F4 $02
+
+VIB2
+d1^1^4^8 ^2 $DD $00 $78 <d ^1^2^8
+
+d2 $DD $18 $48 <f
+
+[[r2]]8 

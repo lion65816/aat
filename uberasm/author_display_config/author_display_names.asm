@@ -6,7 +6,7 @@ db "Jolpengammler        " ; 004
 db "SAJewers             " ; 005
 db "PSI Ninja            " ; 006
 db "                     " ; 007
-db "                     " ; 008
+db "Lord Ruby            " ; 008
 db "Nao                  " ; 009
 db "                     " ; 00A
 db "KobaBeach            " ; 00B
@@ -63,7 +63,7 @@ db "4season              " ; 119
 db "SAJewers             " ; 11A
 db "Nitrogen             " ; 11B
 db "PSI Ninja            " ; 11C
-db "                     " ; 11D
+db "Catabo               " ; 11D
 db "Scarfley             " ; 11E
 db "EllenHouraisan       " ; 11F
 db "Nitrogen             " ; 120
@@ -78,13 +78,13 @@ db "Daizo                " ; 128
 db "4season              " ; 129
 db "                     " ; 12A
 db "                     " ; 12B
-db "                     " ; 12C
+db "levelengine          " ; 12C
 db "tangy                " ; 12D
 db "                     " ; 12E
 db "Bumpty               " ; 12F
 db "                     " ; 130
 db "4season              " ; 131
-db "                     " ; 132
+db "Catabo               " ; 132
 db "Big Brawler          " ; 133
 db "levelengine          " ; 134
 db "4season              " ; 135

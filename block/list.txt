@@ -104,6 +104,15 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 42B9:25 TeleportB9.asm
 4352:25 Slippery.asm
 4372:25 NonSlippery.asm
+4A10:25 ButtonSwitch_Blue.asm
+4A11:25 ButtonSwitch_Red.asm
+4A12:25 ButtonSwitch_Yellow.asm
+4A13:25 UdButtonSwitch_Blue.asm
+4A14:25 UdButtonSwitch_Red.asm
+4A15:25 UdButtonSwitch_Yellow.asm
+4A20:25 BlockBlue.asm
+4A21:25 BlockRed.asm
+4A22:25 BlockYellow.asm
 5440:25 teleport_to_1cb.asm
 60DD:130 StickyBlock.asm
 60DE:130 StickyBlock.asm

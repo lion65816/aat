@@ -228,6 +228,8 @@
 85 0032 4,0,456
 86 0020 Undefined Sprite
 86 0022 0,0,0
+87 0020 Extra bit: Homing
+87 0022 0,0,0
 8A 0020 This is a fire snake from SMB3 that jumps towards the player slowly. Weapons or a star can defeat it.
 8A 0022 0,0,457
 8C 0020 Once on screen, it will cause custom cluster sprites to appear, which is set via extra byte (purely decorative)

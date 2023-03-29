@@ -17,6 +17,7 @@ level:
 010	LevelIntro.asm
 013	LV13.asm
 015	LevelIntro.asm
+016	FilterYoshi_freescrollbabey.asm
 01A	PressuredWater.asm
 01B	1B.asm
 01F	LevelIntro.asm
@@ -37,6 +38,7 @@ level:
 055	PressuredWater.asm
 05E	FilterYoshi_ConstantAutoscroll5E.asm
 060	DisableLR.asm
+066     Gradient66.asm
 068	statusbarremove_CustomBar.asm
 069	statusbarremove_CustomBar.asm
 06A	statusbarremove.asm
@@ -49,7 +51,10 @@ level:
 07A	BG_AutoScroll7A.asm
 07B	BG_AutoScroll7B.asm
 07D	statusbarremove_CustomBar.asm
+07E	FilterYoshi.asm
+07F	FilterYoshi.asm
 080	LV135.asm
+082	FilterYoshi_freescrollbabey.asm
 090	Gradient90.asm
 0A0	DisableLR.asm
 0AA	freescrollbabey.asm
@@ -92,6 +97,7 @@ level:
 11A	LevelIntro.asm
 11B	LevelIntro.asm
 11C	LevelIntro.asm
+11D     Gradient11D.asm
 11E	LevelIntro.asm
 122	LevelIntro.asm
 123	freescrollbabey.asm

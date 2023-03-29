@@ -90,3 +90,15 @@
 [Message] - [ 2023-03-22 22:53:11 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\a3mt\my_hack.smc"
 [Message] - [ 2023-03-23 15:35:44 ] - Attempting to switch to new ROM
 [Message] - [ 2023-03-23 15:35:45 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\a3mt\my_hack.smc"
+[Message] - [ 2023-03-29 14:37:27 ] - Attempting to switch to new ROM
+[Message] - [ 2023-03-29 14:37:27 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\a3mt\my_hack.smc"
+[Message] - [ 2023-03-29 15:00:33 ] - Attempting to switch to new ROM
+[Message] - [ 2023-03-29 15:00:33 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\a3mt\my_hack.smc"
+[Message] - [ 2023-03-29 15:34:41 ] - Attempting to switch to new ROM
+[Message] - [ 2023-03-29 15:34:41 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\a3mt\my_hack.smc"
+[Message] - [ 2023-03-29 15:40:31 ] - Attempting to switch to new ROM
+[Message] - [ 2023-03-29 15:40:31 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\a3mt\my_hack.smc"
+[Message] - [ 2023-03-29 15:41:01 ] - Attempting to switch to new ROM
+[Message] - [ 2023-03-29 15:41:01 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\a3mt\my_hack.smc"
+[Message] - [ 2023-03-29 17:33:57 ] - Attempting to switch to new ROM
+[Message] - [ 2023-03-29 17:33:57 ] - Successfully loaded ROM: "C:\Users\David\Documents\GitHub\a3mt\my_hack.smc"
