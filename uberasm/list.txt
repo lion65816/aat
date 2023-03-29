@@ -10,6 +10,7 @@ level:
 004	BG_AutoScroll4.asm
 005	LevelIntro.asm
 006	LevelIntro.asm
+008     008.asm
 009	disableflight.asm
 00B	LevelIntro.asm
 00C	LevelIntro.asm
@@ -55,6 +56,7 @@ level:
 07F	FilterYoshi.asm
 080	LV135.asm
 082	FilterYoshi_freescrollbabey.asm
+087     008.asm
 090	Gradient90.asm
 0A0	DisableLR.asm
 0AA	freescrollbabey.asm
