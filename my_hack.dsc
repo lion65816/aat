@@ -294,6 +294,20 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 2300	0	noyoshiintro.asm
 3300	0	BlkMus1.asm
 3301	0	A block which destroys (Baby) Yoshi if touched.
+3578	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+3579	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+357c	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+357d	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+357e	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+3598	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+3599	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+359a	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+359b	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+359c	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+3697	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+36b4	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+36b5	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+36d0	0	Shatters if any sprite touches it.
 4103	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
 4104	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
 4106	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi

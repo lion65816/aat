@@ -11,7 +11,7 @@ db "Nao                  " ; 009
 db "                     " ; 00A
 db "KobaBeach            " ; 00B
 db "Nao                  " ; 00C
-db "                     " ; 00D
+db "PSI Ninja            " ; 00D
 db "EllenHouraisan       " ; 00E
 db "                     " ; 00F
 db "4season              " ; 010
@@ -20,7 +20,7 @@ db "Catabo               " ; 012
 db "4season              " ; 013
 db "Sam Deluxe           " ; 014
 db "4season              " ; 015
-db "                     " ; 016
+db "Luckwaive            " ; 016
 db "camwoodstock and Tori" ; 017
 db "                     " ; 018
 db "PSI Ninja            " ; 019
@@ -38,8 +38,8 @@ db "levelengine          " ; 024
 db "Scarfley             " ; 101
 db "SAJewers             " ; 102
 db "SAJewers             " ; 103
-db "                     " ; 104
-db "(Dev Level)          " ; 105
+db "davidvama21          " ; 104
+db "SAJewers             " ; 105
 db "Lord Ruby            " ; 106
 db "raekuul              " ; 107
 db "SAJewers             " ; 108
@@ -77,7 +77,7 @@ db "Scarfley             " ; 127
 db "Daizo                " ; 128
 db "4season              " ; 129
 db "                     " ; 12A
-db "                     " ; 12B
+db "Bumpty               " ; 12B
 db "levelengine          " ; 12C
 db "tangy                " ; 12D
 db "                     " ; 12E

@@ -141,5 +141,7 @@ Locals:
 92  Castle of Storms.txt
 93  a2mtlul3.txt
 94  Nitroid World 5.txt
+96  Ballet Of The Ghost Girl's Ship.txt
+97  Calamari Inkantation.txt
 98  Tomboyish Girl in Love.txt
 99  Super Marisa World Boss.txt

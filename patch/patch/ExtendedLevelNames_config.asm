@@ -44,8 +44,8 @@ NameData:
  db "   NO VEGETABLES,  "
  db "    ONLY TREES     "
  ;Level 00A
- db "You're near the    "
- db "Castle! Seriously! "
+ db "                   "
+ db "                   "
  ;Level 00B
  db "  Siege at Castle  "
  db "    Wolfenstein    "
@@ -53,14 +53,14 @@ NameData:
  db " What the House?!  "
  db "                   "
  ;Level 00D
- db "Random platforms   "
- db "everywhere         "
+ db "(WIP)              "
+ db "                   "
  ;Level 00E
  db "    Moon Palace    "
  db "                   "
  ;Level 00F
- db "Take a Yoshi to    "
- db "skip this level    "
+ db "                   "
+ db "                   "
  ;Level 010
  db "The Beginning      "
  db "          of Spring"
@@ -86,8 +86,8 @@ NameData:
  db " matcha ampersand  "
  db "      avocado      "
  ;Level 018
- db "You can take Yoshi "
- db "there... Weird.    "
+ db "                   "
+ db "                   "
  ;Level 019
  db "  Fishing Grounds  "
  db "                   "
@@ -101,8 +101,8 @@ NameData:
  db "   DUCKMOUNTAIN    "
  db "                   "
  ;Level 01D
- db "Feel free to try   "
- db "glitches there     "
+ db "                   "
+ db "                   "
  ;Level 01E
  db "Aileron Moonbounce "
  db "                  *"
@@ -134,11 +134,11 @@ NameData:
  db "James Turner (temp "
  db "name, may keep it) "
  ;Level 104
+ db "(WIP)              "
  db "                   "
- db "yoshis house       "
  ;Level 105
- db "example level      "
- db "                   "
+ db "Rachel's Rebate    "
+ db "Rotorcrafts        "
  ;Level 106
  db "  Horse Adventure  "
  db "                   "
@@ -248,11 +248,11 @@ NameData:
  db "Super Easy Going   "
  db "                   "
  ;Level 12A
- db "Simple vine level  "
+ db "                   "
  db "                   "
  ;Level 12B
- db "Baloonside Race    "
- db "(boring joke)      "
+ db "(WIP) Tap-Tapping  "
+ db " In The Warehouse  "
  ;Level 12C
  db "   Can't Go Back   "
  db "                   "
@@ -260,13 +260,13 @@ NameData:
  db "watch out!         "
  db "     bad word ahead"
  ;Level 12E
- db "STAR ROAD          "
+ db "                   "
  db "                   "
  ;Level 12F
  db " Where The Whales  "
  db "  Come To Rest    *"
  ;Level 130
- db "Blue Yoshi Lake    "
+ db "                   "
  db "                   "
  ;Level 131
  db "   Killy Killer    "
