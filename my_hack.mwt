@@ -16,8 +16,6 @@
 0C	Sledge Bro
 0D	Buster Beetle
 0F	Giant Goomba
-10	Giant Parakoopa
-11	Giant Piranha Green
 12	Giant Piranha Red
 13	Giant Piranha Sideways Green
 14	Giant Piranha Sideways Red
@@ -157,8 +155,6 @@ B2	Silius Shooter
 B3	Projectile
 B5	Pipe Dwelling Lakitu (vanilla)
 B7	Rotating Net
-BA	Balloon, flies right
-	Balloon, flies left
 BE	Awesome Mechakoopa (normal)
 	Awesome Mechakoopa (projectile)
 	Awesome Mechakoopa (lightning)

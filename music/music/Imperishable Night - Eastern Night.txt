@@ -1,0 +1,62 @@
+#am4
+;-- HEADER AUTOMATICALLY GENERATED --
+$ED $80 $6D $1D 
+$ED $80 $7D $00 
+$F0
+;-- END OF HEADER -------------------
+
+;Touhou 8: Imperishable Night - Eastern Night
+;Inserts at 343 (835) bytes
+;Ported by Red Chameleon
+$F1 $06 $4A $01
+$EF $FD $40 $45
+
+#0 w235 t56 r4/ q7f y10
+
+l4o5@16 $ED $7E $E0 p19,16v210[r1]5^f+r1^1^^16
+v100g+^8^16r16f+^8^16r8^16e2^r1^^16>@9o4
+$ED $5F $AC v195e2^d+2^c+2^<d+8e8d+8<b8o5c+2^<
+g+2^f+g+bd+2c+2^g+2^d+2^ef+g+2^>l16e2^d+^32e32
+d+2^c+^32d+32c+8o4[@22cc@23c@22ccc@23cr32@22c
+r32c@23c@22ccc@23cr32@22cr32c@23c@22crc@23c@22c
+cc@23cr32@22cr32c@23c@22crc@23c@22ccc@23cr32@22
+cr32c@23c@22c]4@22cc@23c@22ccc@23cr32@22c
+r1^1^8^^32l8o5@16 $ED $7E $E0 p19,16v210b>c+<b
+g+>ed+<b>c+2<g+bf+g+ef+d+ec+d+<b>c+<g+4^;
+
+#1 v0c4/ y15
+
+l8o5[r1]5@16 $ED $7E $E0 p19,16v210d+2g+1^4r4
+c+4^^16r4^>v100e4^^16r16d+4^^16r^16c+2^4r2^4^16
+o4@9 $ED $5F $00 v195[d+ed+<b16r16>c+f+g+f+g+4
+c+f+g+f+g+4c+f+g+f+g+r]8d+ed+<b16[r1]100;
+
+#2 r4/ @2 $ED $6F $00 v197 y5
+
+l8o5[c+f+g+bg+f+c+f+g+bg+f+c+f+g+bg+f+d+ed+<b
+>]100;
+
+#3 r4/ y10
+
+l4o5[r1]11@16 $ED $7E $E0 p19,16v210g+2^f+2^
+e2^^16[r2]17^8@4 $ED $57 $A9 p22,26v190
+c+1^1^^16d+8e8d+8<b8>c+2^<g+2^f+g+bd+2c+2^g+2^
+d+2^ef+g+2^>e2^d+2^c+1^1^1^[r1]100;
+
+#4 r4/ v233 y10
+
+l16o4[r2]43[@27c@21cc8@27c@21cc8c8@27c@21cc8c8
+@27c@21c8c8^@27c8@21c8c8@27c8^c@21c8c8^c@27c8c8
+@21c8]4@27c@21cc8@27ccc8[r1]100;
+
+#5 r4/ @1 $ED $79 $E0 v230 y10
+
+l1o3[g+^^4b2g+^^4<b2>a^^4b2g+^^2^4]3[r1]100;
+
+#6 r4/ @1 $ED $79 $E0 v230 y10
+
+l1o3[e^^4f+2e^^4f+2e^^4f+2e^^2^4]3[r1]100;
+
+#7 r4/ @1 $ED $79 $E0 v230 y10
+
+l1o3[c+^^4d+2c+^^4d+2c+^^4d+2c+^^2^4]3[r1]100;

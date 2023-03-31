@@ -1,0 +1,325 @@
+#amk 2
+
+#samples {
+    #default
+}
+
+
+#instruments {
+    @1              $00 $00 $df $02 $fd ;@30 I01 / I14
+    @4              $00 $00 $df $03 $00 ;@31 I02
+    @5              $af $30 $df $07 $00 ;@32 I03
+    @6              $9f $c9 $df $03 $00 ;@33 I04
+    @7              $00 $00 $df $03 $00 ;@34 I05
+    @9              $00 $00 $df $02 $fe ;@35 I06
+    @10             $00 $00 $5f $04 $00 ;@36 I07
+    @12             $af $9b $df $07 $00 ;@37 I08
+    @14             $af $88 $df $07 $00 ;@38 I09
+    @17             $00 $00 $df $05 $00 ;@39 I10
+    @21             $00 $00 $4f $04 $00 ;@40 I11
+    @23             $00 $00 $4f $03 $00 ;@41 I12
+    n1e             $bf $10 $df $03 $00 ;@42 I13
+}
+
+tuning[35]=2
+
+#spc {
+    #title "Mexico City"
+    #game "Human Grand Prix"
+    #author "Team Help, Sinc-X"
+}
+
+
+; base octaves (Octave 5 relative)
+"O01 = o4" ;@30 I01
+"O02 = o4" ;@31 I02
+"O03 = o4" ;@32 I03
+"O04 = o4" ;@33 I04
+"O05 = o3" ;@34 I05
+"O06 = o4" ;@35 I06
+"O07 = o4" ;@36 I07
+"O08 = o6" ;@37 I08
+"O09 = o4" ;@38 I09
+"O10 = o5" ;@39 I10
+"O11 = o4" ;@40 I11
+"O12 = o5" ;@41 I12
+"O13 = o4" ;@42 I13
+
+"o1! = <<<<"
+"o2! = <<<"
+"o3! = <<"
+"o4! = <"
+"o5! = "
+"o6! = >"
+"o7! = >>"
+"o8! = >>>"
+
+; instruments
+"I01 = @30 O01"
+"I02 = @31 O02"
+"I03 = @32 O03"
+"I04 = @33 O04"
+"I05 = @34 O05"
+"I06 = @35 O06"
+"I07 = @36 O07"
+"I08 = @37 O08"
+"I09 = @38 O09"
+"I10 = @39 O10"
+"I11 = @40 O11"
+"I12 = @41 O12"
+"I13 = @30 @42 O13"
+
+; reset commands
+(!1)[ @30 ]
+(!2)[ @31 ]
+(!4)[ @33 ]
+(!5)[ @34 ]
+(!9)[ @38 ]
+(!10)[ @39 ]
+
+; gain commands
+(!100)[ $ed$80$bc ]
+(!101)[ $ed$80$ba ]
+(!102)[ $ed$80$af ]
+
+; volumes
+"VDRUM = v255"
+"VBASS = v245"
+"V01 = v150"
+"V14 = v165"
+"V02 = v110"
+"V03 = v120"
+"V03_40 = v128"
+"V03_28 = v101"
+"V03x = 6c"
+"V04 = v185"
+"V05 = v158"
+"V06 = v160"
+"V06_40 = v140"
+"V06_28 = v110"
+"V08 = v170"
+"V10 = v120"
+"V12_64 = v210"
+"V12_16 = v135"
+"V12_32 = v170"
+"V13 = v80"
+
+
+; misc
+"VIB88 = $de$00$0f$5f"
+"VIB66 = $de$00$0d$42"
+"VOFF = $df"
+"TOM_ON = $eb$00$07$ec"
+"TOM_OFF = $eb$00$00$00"
+
+
+#5 t56 w200
+
+l16
+VDRUM I07 cc I11 c I07 cc I11 c I07 cc /
+
+(!9,-1)(!100,3)
+VBASS I09 [[ O09 o2! g8ggg8gga+4>c4 ]]4
+[[ O09 o2! g8ggg8gga+4>c4 <g8ggg8ggf4e4 ]]2
+(250)[ O09 o2! g8ggg8gga+4>c4 <g8ggg8ggf4f+4 ]3
+O09 o2! g8ggg8gga+4>c4 <g8ggg8ggg4g4
+
+[ O09 o3! c8b>cr<f+gc8ccrg8c8<b8.b8>f+8<b8>abf+aef+<b ]
+O09 o2! a8>garde<a8aar >d $dd$06$04 e^ <g4>gr<a8>ar<b8>br<g+4
+*
+O09 o2! a8>ar<a8>ar<b8>br<b8>brc8>cr<c8>cr<<f8>fr<f8>fr
+(250)2
+
+
+#0
+
+
+$f4$02 r2/
+(!4,-1)(!101,3)
+$ef$0f$1d$1d$f1$08$10$01
+y11 I04 V04 [[ O04 o6! dc<bagab>c e8 $dd$06$06 f^8e8 VIB88 ^8 VOFF
+dc<bagab>c f8 $dd$06$06 g^8f8 VIB88 ^8 VOFF ]]2
+O04 o6! abrdgr<b>drdcdedc<b8g32r32gfg4^ VIB88 ^4r VOFF
+fg>abrdgr<b>drdcdefgb8>cd4^. VIB88 ^4^16 $dd$0c$09 <g $ed$80$bb ^32  ^8. VOFF 
+
+(!0,0)
+y7 I06 V06 o7! $dc$c0$0a r16fededcdc<a+>c<a+aa+ag
+$dc$c0$0d agfgfefededcdc<a+a
+^2. y12 aa+>c<a+a2^8 v40 $e8$48$b0 O06 o6! g>g<<g>g>g<<g
+
+>> V06 d<gg>f<gg>e<gg>d<gg>c<g>d<g
+a+gg>d<gg>c<gga+ggaga+g
+V06_40 O06 o5! g>g>g<<g>g>g<<gg>g>g<<g>g>g<<gg>g
+V06_28 <g>g>g<g<g>>g<<gg
+
+(!2,-1)(!101,3)
+I02 V02 y11 o6! d4e4
+f+8gf+rdr<b8 VIB66 ^8. VOFF >e8<b4^16a4^32 VIB66 ^8^32 VOFF
+>d8e8<g8..r32grg8e8g8.ra8b8r8>c8r8d4.e8 VIB66 ^8 VOFF
+<b8>c<br>crd8.c8<b8d8b8.a4^16 VIB66 ^4 VOFF b4
+g8.f+8.g8a8.g8.a8a+8.a8.a+8>c4f4
+
+g2 VIB66 ^2. $ed$80$ad ^2 $ed$80$b2 ^4 VOFF
+
+(!0,0)
+I06 V06_40 y11 
+O06 o5! g>g>g<<g>g>g<<gg>g>g<<g>g>g<<gg>g
+O06 o5! g>g>g<<g>g>g<<gg V06_28 >g>g<<g>g>g<<gg>g
+
+
+
+#1
+
+r2/
+(!1,-1)(!101,3)
+y9 I01 V01 o6! [[r2f4e4r2g4f4 ]]2
+g4fr8f4^e8re8dr8d2^rf8
+g4fr8f4^g8rb8>cd4.<g4a+8 VIB88 ^8 VOFF r8 
+[[ gr8gr8f4e4 r8 gr8gr8f4f+4 r8  ]]3
+gr8gr8f4e4 r8 gr8gr8g4g4
+
+(!5,-1)(!102,1,$0b)
+I05 V05 y11 o6! 
+f+8gf+ (!101,4) ^d (!101,4) ^<b8 VIB66 ^8. VOFF >e8<b4^16a4^32 VIB66 ^8^32 VOFF
+>d8e8<g8.. (!101,4) ^32g (!101,4) ^g8e8g8. (!101,4) ^a8b8 (!101,4) ^8>c8 (!101,4) ^8d4.e8 VIB66 ^8 VOFF
+<b8>c<b (!101,4) ^>c (!101,4) ^d8.c8<b8d8b8.a4^16 VIB66 ^4 VOFF b4
+g8.f+8.g8a8.g8.a8a+8.a8.a+8>c4f4
+g2
+
+(!0,0)
+(!1,-1)(!101,3) y9 I01 V01 o6! f4e4 r8 gr8gr8f4f+4 r8 gr8gr8f4e4 r8 gr8gr8f4f+4
+
+
+#2
+
+r2/
+(!1,-1)(!101,3)
+y9 I01 V01 o6! [[r2c4c4r2d4c4 ]]2
+[ d4cr8c4^c8r ] c8<br8b2^r^8
+* O01 o6! g8.b4.d4e8 VIB88 ^8 VOFF 
+(1024)[ r8 dr8dr8c4c4 r8 dr8dr8c4c+4 ]3 r8  
+dr8dr8c4c4 r8 dr8dr8d4e4
+
+V14 O01 o5! r8
+[ gr8gr8f+32 $dd$06$09 g^8r32gr4.
+f+r8f+r8f32 $dd$06$09 f+^8r32f+r4 ] r8
+er8er8d+32 $dd$06$09 e^8r32er8d8r8b8r8b4.g+4
+r8 * e2f+2g2a+2>d4 $ed$80$af ^4
+
+V01 O01 o6! c4c4 r8 dr8dr8c4c+4 (1024)
+
+
+#3
+
+r4 I12 V12_64 c V12_16 c V12_32 c V12_64 c /
+(!1,-1)(!101,3)
+y10 I01 V01 o5! [[r2a+4g4r2a+4a4 ]]2
+[ b4ar8a+4^g8r ] g8gr8g2^r^8
+* >f8.g4.<a+4>d8 VIB88 ^8 VOFF 
+(1124)[ O01 o6! r8 cr8cr8<a+4g4 r8 >cr8cr8<a+4b4 ]3 r8
+O01 o6! cr8cr8<a+4g4 r8 >cr8cr8c4d4
+
+y9 V14 O01 o6! r8
+[ er8er8d+32 $dd$06$09 e^8r32er4.
+dr8dr8c+32 $dd$06$09 d^8r32dr4 ] r8
+cr8cr8<b32 $dd$06$09 >c^8r32 O01 o6! cr8<b8r8>c8r8d4.e4
+r8 * c2d2d+2f2g4 $ed$80$af ^4
+
+V01 O01 o5! a+4g4 r8 >cr8cr8<a+4b4 (1124)
+
+
+#4
+
+r4 I13 V13 y9 c4 /
+(!10,-1)(!100,3)
+y10 I10 V10 (1010)[ O10 o3! grg8^32r32gg.r32a+8.r>c8.r ]4
+[[ (1010) O10 o3! grg8^32r32gg.r32f8.re8.r ]]2
+(!0,0) I03 V03 $f4$03 o6! rfededcdc<a+>c<a+aa+ag
+agfgfefededcdc<a+a8.
+(!10,-1)(!100,3) $f4$03 I10 V10 O10 o3! [ g8^32r32gg.r32 ] a+8.r
+(!0,0) I03 $f4$03 V03 o4! aa+>c<a+a8
+(!10,-1)(!100,3) I10 $f4$03 V10 O10 o3! * r8
+(!0,0) I03 $f4$03 v40 o5! $e8$48$V03x g>g<<g>g>g<<g
+V03 O03 o6! d<gg>f<gg>e<gg>d<gg>c<g>d<g
+a+gg>d<gg>c<gga+ggaga+g
+V03_40 (1881)[ O03 o4! g>g>g<<g>g>g<<gg>g>g<<g>g>g<<gg>g ]
+V03_28 <g>g>g<g<g>>g<<gg
+I05 V05 y11 o6! d4e4
+
+(!1,-1)(!101,3) V14 y9 O01 o5! r8
+[ br8br8a+32 $dd$06$09 b^8r32br4.
+ar8ar8g+32 $dd$06$09 a^8r32ar4 ] r8
+gr8gr8f+32 $dd$06$09 g^8r32gr8f8r8f8r8g4.a+4
+r8 * g2a2a+2>c2<b4 $ed$80$af ^4
+
+(!10,-1)(!100,3) $f4$03
+y10 I10 V10 o3! a+8.r>c8.r (2010)[ O10 o3! grg8^32r32gg.r32f8.rf+8.r ]
+(!0,0) y8 I03 $f4$03 V03_40 o4! 
+(1881) O03 o4! g>g>g<<g>g>g<<gg V03_28 >g>g<<g>g>g<<gg>g
+
+
+#6
+r2/ (!0,0)
+I12 [[ V12_64 c V12_16 c V12_32 c V12_64 c ]]32
+(!10,-1)(!100,3)
+y10 I10 V10 (1010)(2010) O10 o3! gr
+(!0,0)
+(12121)[ I12 V12_64 c VDRUM I11 c I07 cc I12 V12_64 c VDRUM I07 c ]
+VDRUM I11 c I12 V12_64 c VDRUM I11 c I12 V12_64 c
+(!10,-1)(!100,3)
+I10 V10 o4! c8.r<gr
+(!0,0) (12121)
+(!10,-1)(!100,3)
+I10 V10 o3! f8.rf+8.r
+(1010)(2010)(1010) O10 o3! grg8^32r32gg.r32g8.rg8.r
+
+(!1,-1)(!101,3) V14 $f4$03 O01 o5! r8
+[ cr8cr8<b32 $dd$06$09 >c^8 O01 o5! r32cr4.
+<br8br8a+32 $dd$06$09 b^8r32br4 ] r8
+O01 o4! ar8ar8g+32 $dd$06$09 a^8r32ar8g8r8g8r8a8a8a8>c8c8
+r8 * O01 o4! a8a8a8a8b8b8b8b8>c8c8c8c8<f8f8f8f8
+
+(!10,-1)(!100,3) $f4$03
+I10 V10 o3! grg8^32r32gg.r32
+(!0,0)
+VDRUM I11 c8c8 TOM_ON I08 V08 o3! y7 ee< y10 b y13 g+ TOM_OFF 
+y10 I11 VDRUM c8.c I07 cc8c I13 V13 y9 c4
+VDRUM I07 y10 c I11 cc I07 c
+(!10,-1)(!100,3)
+I10 V10 (1010)(2010)
+
+
+#7
+r2/
+[[ (3131)[ y10 VDRUM I11 c8.c I07 cc8c ]
+I13 V13 y9 c4 (3232)[ TOM_ON I08 V08 o3! y7 ee< y10 b y13 g+ TOM_OFF ] ]]4
+
+(3131) I11 VDRUM y10 c8c8 (3232)
+(3131)
+(3333)[ I13 V13 y9 c4 I07 VDRUM y10 c I11 cc I07 c ]
+(3131) I11 VDRUM y10 c8c8 (3232)
+(3131) I11 VDRUM y10 c8 I07 c I11 cc I07 c8c
+
+(3141)[ y10 I11 VDRUM c I12 V12_32 c V12_64 c VDRUM I11 c 
+I07 cc I12 V12_64 c VDRUM I07 c ]
+(3142)[ I11 VDRUM c I12 V12_64 c I11 VDRUM c I12 V12_64 c ]
+(3232)
+(3141)
+(3143)[ I13 V13 y9 c8 I12 V12_32 y10 c V12_64 c I07 VDRUM c I11 cc I07 c ]
+I11 c I12 V12_32 c2^8. (3232)
+I11 VDRUM y10 c I12 V12_32 c4..
+(3144)[ I13 V13 y9 c8 I12 V12_32 y10 c V12_64 c ] (3232)
+(3141)(3142)(3232)(3141)(3143)
+(3141)(3142)(3232)(3141)(3144)(3232)
+
+[[ (1169)[ VDRUM y10 I11 c I12 V12_32 c V12_64 c I11 VDRUM c 
+I07 c I12 V12_64 c I11 VDRUM cc
+I12 V12_64 c I11 VDRUM cc I12 V12_64 c ]
+(1170)[ I07 VDRUM c I12 V12_32 c V12_64 c V12_32 c ] ]]2
+(1169) I07 VDRUM c I12 V12_32 c I11 VDRUM c8
+I12 V12_32 c V12_64 c I11 VDRUM c I12 V12_64 c
+[[ I07 VDRUM c I12 V12_32 c I11 VDRUM c I12 V12_64 c ]]3
+[[ (1169)(1170) ]]2
+(1169) I07 VDRUM c I12 V12_32 c I11 VDRUM c I12 V12_32 c
+(1169) I07 VDRUM c I12 V12_64 c I07 VDRUM cc
+(3131) r1. (3131) I11 VDRUM y10 c8c8 (3232)(3131)(3333)

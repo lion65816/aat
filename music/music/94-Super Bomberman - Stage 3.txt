@@ -1,0 +1,162 @@
+﻿#amk 2
+
+#instruments
+{
+@10 $00 $00 $7F $01 $55
+@9  $8F $C0 $7F $02 $A8
+@22 $8C $F0 $00 $02 $00
+@0  $8C $a6 $00 $06 $00
+}
+
+
+#SPC 
+{
+	#title "Level 3"
+	#game "Super Bomberman"
+	
+}
+
+#1 q78
+#2 q78
+#3 q78
+
+
+
+
+#0 @14 v200 y10 w200 t55  
+
+l16 (10)[o3cc>cc<cc>cc<cc>cc<cc>cc]2
+(20)[o2aa>aa<aa>aa<aa>aa<aa>aa]2
+
+
+(10)2
+
+(20)
+<aa>aa<aa>aa<aa>aaggee
+
+l8 v200 y10 $DE $40 $0A $50 @13
+d
+(11)[d>d<df4ab
+>cc<cb4b<bb
+>dd>d<df4ab
+>cc<cb4b<bb
+>ee>e<eg4b>c+
+dd<d>c+4c+<c+c+
+ee>e<eg4b>c+]
+
+dd<d>c+4<bge4
+
+(11)
+
+dd<d>c+r2
+;
+
+
+#1 @31 v200 y10
+
+[o4e4.b4.a4.
+e8g8e8<b8a8g8a8
+b4>e8<b4a8b1^4]2
+
+[r1]15 r2.
+>g+32a32a+32b32>c32c+32d32d+32
+;
+
+
+#2 @31 v200 y10
+
+l4 o4
+(16)[e.f+.g.
+a.gf+
+ed8ed8e.]
+
+>e8d32e32d16<b8a8g8e8d8
+
+(16)
+
+>e8d16e16d8g8e8d16<b16>e8
+r8
+
+(17)[e.dd
+ee8ddr
+e.dd
+ee8ddr
+f+.ee
+f+f+8eer
+f+.ee]
+f+f+8eer
+(17)
+
+f+f+8e8b16e16g16e16<a16g16e16r16
+;
+
+
+
+#3 @31 v200 y10
+o4
+l4 (18)[c.d.e.
+f+.ed
+c<b8>c<b8>c.]
+
+b8a32b32a16f+8e8d8<b8a8
+
+(18)
+
+b8a16b16a8>d8<b8a16f+16b8
+r8
+
+(19)[>c.<aa
+>cc8<bbr
+>c.<aa
+>cc8<bbr
+>d.c+c+
+dd8c+c+r
+d.c+c+]
+dd8c+c+r
+(19)
+dd8c+8r2
+;
+
+
+#4  v180 y10 $DE $40 $0A $50 $ED $0B $A0
+
+l16 r1^1^1^8
+(0)[
+o5er16d32e32d<br16ar16gr16er16dr1^1^1^8^16
+>er16dedr16gr16er16d<b>er1^2^8^16
+<eedd<bb
+a1
+r1^1^2^8
+>f+f+eec+c+
+<b1
+r1^8
+>dd>dd<ddff8^16aabb
+>ccr8<ccbb8^16<bbr4
+>dddd>dd<ddff8^16aabb
+>ccr8<ccbb8^16<bbr4
+>eeee>ee<eegg8^16bb>c+c+
+ddr8<dd>c+c+8^16<c+c+r4
+eeee>ee<eegg8^16bb>c+c+
+ddr8<dd>c+c+<bege<ager1^1^1^8^16];
+
+
+#5 v200 y10
+
+[o4@21b8>@32g+16g+16@30a8@32g+16g+16<@21b8>@32g+16g+16@30a8@32g+16g+16]7
+<@21b8>@32g+16g+16@30a8@32g+16g+16<@21b8>@32g+16g+16@30a16@30a16@30a8
+(1)[<@21b8>@32g+8@30a8@32g+8<@21b8>@32g+8@30a8@32g+8]
+(2)[<@21b8>@32g+8@30a8<@21b8>@32g+8@30a8@32g+8@32g+8]
+(1)(2)(1)(2)(1)
+<@21b8>@32g+8@30a8<@21b8>@32g+8<@21b8>@30a8<@21b8
+@21b8>@32g+8@30a8@32g+8<@21b8>@32g+8@30a8@32g+8
+(2)(1)(2)(1)(2)(1)
+<@21b8>@32g+8@30a8<@21b16r2^16
+;
+
+#6 @13 v90 y10 $DE $40 $0A $50 $ED $0B $A0 q75
+
+l16 r1^1^1^8^16
+(0)
+;
+
+

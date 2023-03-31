@@ -53,8 +53,8 @@ NameData:
  db " What the House?!  "
  db "                   "
  ;Level 00D
- db "(WIP)              "
- db "                   "
+ db "(WIP) Puella Magi  "
+ db "   Demoka Magica   "
  ;Level 00E
  db "    Moon Palace    "
  db "                   "
@@ -138,7 +138,7 @@ NameData:
  db "                   "
  ;Level 105
  db "Rachel's Rebate    "
- db "Rotorcrafts        "
+ db "Rotorcraft         "
  ;Level 106
  db "  Horse Adventure  "
  db "                   "

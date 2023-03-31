@@ -13,8 +13,8 @@
 0D buster.json
 0E buster_block.cfg
 0F giant_goomba.json
-10 giant_parakoopa.json
-11 giant_piranha_green.json
+10 stationary_magikoopa.cfg
+11 PipeSpawner.cfg
 12 giant_piranha_red.json
 13 giant_piranha_sideways_green.json
 14 giant_piranha_sideways_red.json
@@ -174,7 +174,6 @@ B6 nut.cfg
 B7 climbing_net_door.json
 B8 InfoBox.cfg
 B9 baba_block.cfg
-BA Balloon_dis.json
 BB Carryable_Football.cfg
 BD thunderlakitu.cfg
 BE mechakoopa_but_awesome.json

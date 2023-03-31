@@ -77,6 +77,8 @@ level:
 0C0	DisableLR.asm
 0C5	hide_sb_uber.asm
 0D0	HDMAGradient.asm
+0DD	freescrollbabey.asm
+0DE	statusbarremove.asm
 0E0	HDMAGradient.asm
 0F0	F0_scroll.asm
 0F2	freescrollbabey.asm
@@ -88,6 +90,7 @@ level:
 101	LevelIntro.asm
 102	statusbarremove.asm
 103	LevelIntro.asm
+105	statusbarremove.asm
 106	freescrollbabey.asm
 108	LevelIntro.asm
 10D	LevelIntro.asm
@@ -102,7 +105,6 @@ level:
 11A	LevelIntro.asm
 11B	LevelIntro.asm
 11C	LevelIntro.asm
-11D     Gradient11D.asm
 11E	LevelIntro.asm
 122	LevelIntro.asm
 123	freescrollbabey.asm
@@ -120,6 +122,8 @@ level:
 138	LevelIntro.asm
 139	LevelIntro.asm
 13A	LevelIntro.asm
+13D	statusbarremove.asm
+13E	levelwarp.asm
 15B	statusbarremove_CustomBar.asm
 15D	Gradient15D.asm
 15E	FilterYoshi.asm

@@ -80,6 +80,7 @@ Locals:
 4F  07 The Girl Who Stole the Star.txt
 50  Yukari Space.txt
 51  BombRushBlush(MMX).txt
+53  Imperishable Night - Eastern Night.txt
 54  Sticker.txt
 55  upanddown.txt
 56  Harmony of Gensokyo.txt
@@ -119,6 +120,7 @@ Locals:
 7B  Kirby's Dream Land 3 - Ripple Field 2.txt
 7C  amnf-s04.txt
 7D  tom_left_handed_wolf_0_1.txt
+7E  mexicocity.txt
 7F  depanneur dream.txt
 80  Mysterious Silence.txt
 81  White Noiz.txt
@@ -141,7 +143,9 @@ Locals:
 92  Castle of Storms.txt
 93  a2mtlul3.txt
 94  Nitroid World 5.txt
+95  94-Super Bomberman - Stage 3.txt
 96  Ballet Of The Ghost Girl's Ship.txt
 97  Calamari Inkantation.txt
 98  Tomboyish Girl in Love.txt
 99  Super Marisa World Boss.txt
+9A  HeatInsideTheFire.txt
