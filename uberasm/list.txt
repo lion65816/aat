@@ -42,12 +42,12 @@ level:
 066     Gradient66.asm
 068	statusbarremove_CustomBar.asm
 069	statusbarremove_CustomBar.asm
-06A	statusbarremove.asm
-06B	statusbarremove.asm
-06C	statusbarremove.asm
-06D	statusbarremove.asm
-06E	statusbarremove.asm
-06F	statusbarremove.asm
+06A	statusbarremove_Level5.asm
+06B	statusbarremove_Level5.asm
+06C	statusbarremove_Level5.asm
+06D	statusbarremove_Level5.asm
+06E	statusbarremove_Level5.asm
+06F	statusbarremove_Level5.asm
 074	Autoscroll74.asm
 07A	BG_AutoScroll7A.asm
 07B	BG_AutoScroll7B.asm
@@ -127,7 +127,7 @@ level:
 15B	statusbarremove_CustomBar.asm
 15D	Gradient15D.asm
 15E	FilterYoshi.asm
-15F	statusbarremove.asm
+15F	statusbarremove_Level5.asm
 160	FilterYoshi.asm
 161	FilterYoshi.asm
 162	FilterYoshi.asm

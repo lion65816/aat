@@ -82,7 +82,7 @@ db "levelengine          " ; 12C
 db "tangy                " ; 12D
 db "                     " ; 12E
 db "Bumpty               " ; 12F
-db "                     " ; 130
+db "WitherSnow           " ; 130
 db "4season              " ; 131
 db "Catabo               " ; 132
 db "Big Brawler          " ; 133

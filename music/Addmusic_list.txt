@@ -8,6 +8,7 @@ Globals:
 07  originals/07 Keyhole.txt
 08  originals/08 Iris Out.txt
 09  originals/09 Bonus End.txt
+
 Locals:
 0A  originals/10 Piano.txt
 0B  originals/11 Here We Go.txt
@@ -149,3 +150,5 @@ Locals:
 98  Tomboyish Girl in Love.txt
 99  Super Marisa World Boss.txt
 9A  HeatInsideTheFire.txt
+9B  amnf-v04.txt
+9E  dissolution.txt

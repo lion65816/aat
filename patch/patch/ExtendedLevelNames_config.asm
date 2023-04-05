@@ -266,8 +266,8 @@ NameData:
  db " Where The Whales  "
  db "  Come To Rest    *"
  ;Level 130
- db "                   "
- db "                   "
+ db "Assault on Snake   "
+ db "Block Fortress     "
  ;Level 131
  db "   Killy Killer    "
  db "     Volcano      *"

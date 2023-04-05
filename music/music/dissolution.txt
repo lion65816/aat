@@ -1,0 +1,447 @@
+#amk 2
+
+#spc
+{
+#author "Cencho Shoji"
+#title "Dissolution (CS-O-023)"
+}
+
+#path "dissolution"
+
+#samples
+{       
+#optimized
+"sweep/wave1.brr"
+"sweep/wave2.brr"
+"sweep/wave3.brr"
+"sweep/wave4.brr"
+"sweep/wave5.brr"
+"sweep/wave6.brr"
+"sweep/wave7.brr"
+"sweep/wave8.brr"
+"sweep/wave9.brr"
+"sweep/wave10.brr"
+"sweep/wave11.brr"
+"sweep/wave12.brr"
+"sweep/wave13.brr"
+"sweep/wave14.brr"
+"sweep/wave15.brr"
+"sweep/wave16.brr"
+"sweep/wave17.brr"
+"sweep/wave18.brr"
+"sweep/wave19.brr"
+"sweep/wave20.brr"
+"sweep/wave21.brr"
+"sweep/wave22.brr"
+"sweep/wave23.brr"
+"sweep/wave24.brr"
+"sweep/wave25.brr"
+"sweep/wave26.brr"
+"sweep/wave27.brr"
+"sweep/wave28.brr"
+"sweep/wave29.brr"
+"sweep/wave30.brr"
+"sweep/wave31.brr"
+"sweep/wave32.brr"
+"sweep/wave33.brr"
+"sweep/wave34.brr"
+"sweep/wave35.brr"
+"sweep/wave36.brr"
+"sweep/wave37.brr"
+"sweep/wave38.brr"
+"sweep/wave39.brr"
+"sweep/wave40.brr"
+"sweep/wave41.brr"
+"sweep/wave42.brr"
+"sweep/wave43.brr"
+"sweep/wave44.brr"
+"sweep/wave45.brr"
+"sweep/wave46.brr"
+"sweep/wave47.brr"
+"sweep/wave48.brr"
+"sweep/wave49.brr"
+"sweep/wave50.brr"
+"sweep/wave51.brr"
+"sweep/wave52.brr"
+"sweep/wave53.brr"
+"sweep/wave54.brr"
+"sweep/wave55.brr"
+"sweep/wave56.brr"
+"sweep/wave57.brr"
+"sweep/wave58.brr"
+"sweep/wave59.brr"
+"sweep/wave60.brr"
+"sweep/wave61.brr"
+"sweep/wave62.brr"
+"sweep/wave63.brr"
+"sweep/wave64.brr"
+"bass.brr"
+"harpsichord.brr"
+"organ.brr"
+"leadgt1.brr"
+"leadgt2.brr"
+"leadgt3.brr"
+"leadgt4.brr"
+"harsh1.brr"
+"harsh2.brr"
+"harsh3.brr"
+"hit.brr"
+"stringsoct.brr"
+"stringsm3rd.brr"
+"strings3rd.brr"
+"vocalpad1.brr"
+"vocalpad2.brr"
+"vocalpad3.brr"
+"vocalpad4.brr"
+"kick.brr"
+"snare.brr"
+"hat.brr"
+"cymb.brr"
+"tamb.brr"
+}
+
+#instruments
+{     
+"sweep/wave1.brr"$00 $00 $7f $04 $00
+"sweep/wave2.brr"$00 $00 $7f $04 $00
+"sweep/wave3.brr"$00 $00 $7f $04 $00
+"sweep/wave4.brr"$00 $00 $7f $04 $00
+"sweep/wave5.brr"$00 $00 $7f $04 $00
+"sweep/wave6.brr"$00 $00 $7f $04 $00
+"sweep/wave7.brr"$00 $00 $7f $04 $00
+"sweep/wave8.brr"$00 $00 $7f $04 $00
+"sweep/wave9.brr"$00 $00 $7f $04 $00
+"sweep/wave10.brr"$00 $00 $7f $04 $00
+"sweep/wave11.brr"$00 $00 $7f $04 $00
+"sweep/wave12.brr"$00 $00 $7f $04 $00
+"sweep/wave13.brr"$00 $00 $7f $04 $00
+"sweep/wave14.brr"$00 $00 $7f $04 $00
+"sweep/wave15.brr"$00 $00 $7f $04 $00
+"sweep/wave16.brr"$00 $00 $7f $04 $00
+"sweep/wave17.brr"$00 $00 $7f $04 $00
+"sweep/wave18.brr"$00 $00 $7f $04 $00
+"sweep/wave19.brr"$00 $00 $7f $04 $00
+"sweep/wave20.brr"$00 $00 $7f $04 $00
+"sweep/wave21.brr"$00 $00 $7f $04 $00
+"sweep/wave22.brr"$00 $00 $7f $04 $00
+"sweep/wave23.brr"$00 $00 $7f $04 $00
+"sweep/wave24.brr"$00 $00 $7f $04 $00
+"sweep/wave25.brr"$00 $00 $7f $04 $00
+"sweep/wave26.brr"$00 $00 $7f $04 $00
+"sweep/wave27.brr"$00 $00 $7f $04 $00
+"sweep/wave28.brr"$00 $00 $7f $04 $00
+"sweep/wave29.brr"$00 $00 $7f $04 $00
+"sweep/wave30.brr"$00 $00 $7f $04 $00
+"sweep/wave31.brr"$00 $00 $7f $04 $00
+"sweep/wave32.brr"$00 $00 $7f $04 $00
+"sweep/wave33.brr"$00 $00 $7f $04 $00
+"sweep/wave34.brr"$00 $00 $7f $04 $00
+"sweep/wave35.brr"$00 $00 $7f $04 $00
+"sweep/wave36.brr"$00 $00 $7f $04 $00
+"sweep/wave37.brr"$00 $00 $7f $04 $00
+"sweep/wave38.brr"$00 $00 $7f $04 $00
+"sweep/wave39.brr"$00 $00 $7f $04 $00
+"sweep/wave40.brr"$00 $00 $7f $04 $00
+"sweep/wave41.brr"$00 $00 $7f $04 $00
+"sweep/wave42.brr"$00 $00 $7f $04 $00
+"sweep/wave43.brr"$00 $00 $7f $04 $00
+"sweep/wave44.brr"$00 $00 $7f $04 $00
+"sweep/wave45.brr"$00 $00 $7f $04 $00
+"sweep/wave46.brr"$00 $00 $7f $04 $00
+"sweep/wave47.brr"$00 $00 $7f $04 $00
+"sweep/wave48.brr"$00 $00 $7f $04 $00
+"sweep/wave49.brr"$00 $00 $7f $04 $00
+"sweep/wave50.brr"$00 $00 $7f $04 $00
+"sweep/wave51.brr"$00 $00 $7f $04 $00
+"sweep/wave52.brr"$00 $00 $7f $04 $00
+"sweep/wave53.brr"$00 $00 $7f $04 $00
+"sweep/wave54.brr"$00 $00 $7f $04 $00
+"sweep/wave55.brr"$00 $00 $7f $04 $00
+"sweep/wave56.brr"$00 $00 $7f $04 $00
+"sweep/wave57.brr"$00 $00 $7f $04 $00
+"sweep/wave58.brr"$00 $00 $7f $04 $00
+"sweep/wave59.brr"$00 $00 $7f $04 $00
+"sweep/wave60.brr"$00 $00 $7f $04 $00
+"sweep/wave61.brr"$00 $00 $7f $04 $00
+"sweep/wave62.brr"$00 $00 $7f $04 $00
+"sweep/wave63.brr"$00 $00 $7f $04 $00
+"sweep/wave64.brr"$00 $00 $7f $04 $00
+"bass.brr"$cf $85 $00 $03 $c0
+"harpsichord.brr"$00 $00 $10 $04 $00
+"organ.brr"$00 $00 $1b $02 $80
+"leadgt1.brr"$fd $e8 $00 $06 $00
+"leadgt2.brr"$fd $e8 $00 $04 $00
+"leadgt3.brr"$fd $e8 $00 $02 $00
+"leadgt4.brr"$fd $e8 $00 $02 $00
+"harsh1.brr"$ef $49 $00 $06 $00
+"harsh2.brr"$ef $49 $00 $06 $59
+"harsh3.brr"$ef $49 $00 $04 $00
+"hit.brr"$8e $b2 $00 $03 $3e
+"stringsoct.brr"$fa $e6 $00 $03 $f2
+"stringsm3rd.brr"$fa $e6 $00 $03 $ed
+"strings3rd.brr"$fa $e6 $00 $03 $ed
+"vocalpad1.brr"$fb $e5 $00 $01 $d3
+"vocalpad2.brr"$fb $e5 $00 $01 $b9
+"vocalpad3.brr"$fc $e5 $00 $01 $87
+"vocalpad4.brr"$fc $e5 $00 $02 $25
+"kick.brr"$8f $d8 $00 $03 $00
+"snare.brr"$af $b5 $00 $04 $e0
+"snare.brr"$ff $f8 $00 $05 $00
+"hat.brr"$ef $7b $00 $05 $90
+"hat.brr"$cf $51 $00 $05 $90
+"cymb.brr"$8f $d4 $00 $03 $b0
+"tamb.brr"$ff $ef $00 $01 $69
+}
+
+;Instrument Name aliases
+"bass = @94"
+"harpsichord = @95"
+"organ = @96"
+"leadgt1 = @97"
+"leadgt2 = @98"
+"leadgt3 = @99"
+"leadgt4 = @100"
+"harsh1 = @101"
+"harsh2 = @102"
+"harsh3 = @103"
+"hit = @104"
+"lowgt = @17"
+"stringsoct = @105"
+"stringsm3rd = @106"
+"strings3rd = @107"
+"pad1 = @108"
+"pad2 = @109"
+"pad3 = @110"
+"pad4 = @111"
+"K = @112"
+"S = @113"
+"TM = @114"
+"HC = @115"
+"HO = @116"
+"C = @117"
+"T = @118"
+
+;volume fades
+"sfade1 = w80 $e1 $bf $67"
+"sfade2 = $e1 $bf $7f"
+"sfade3 = $e1 $bf $9f"
+"sfade4 = $e1 $bf $b4"
+
+;remote  codes
+;recall instrument
+(!101)[$f4 $09]
+;low gain
+(!102)[$ed $80 $09]
+;slow gain release 1
+(!103)[$ed $80 $bc]
+
+$ef $fc $d5 $2a
+$f1 $03 $65 $01
+
+;$ef $fc $c0 $3f
+;$f1 $06 $4f $01
+
+t68
+$f4 $02
+
+#0 o4 v240
+;intro
+harpsichord l12 y18 o4 q7f 
+l12 (01)[q5f a q5b >e q59 d q5f e q5b d q59 g q5f a q59 e q5f d q59 e q5f <b q59 g]2
+[[ (02)[q5f a+ q5b >e q59 d q5f e q5b d q59 g q5f a q59 e] (03)[q5f d q59 e q5f <a+ q59 g] ]]2
+
+;section 1
+/$df $ef $fc $d5 $2a
+v255 harpsichord y18 [[(01)2 (02) (03) (02) (03)]]2
+
+;section 2
+[[(01)2 (02) (03) (02) (04)[q5f >>c q59 <g q5f <a+ q59 g] ]]8
+
+;section 3
+v145 $ed $7f $e9 l6 $f4 $03 y15,1,0 p12,9,35 $ea $20
+q7f r <a b >c <b a b a g d g d e1^1
+(05)[r a b >c <b a b a b >d <g >d] e1^1
+(05)(06)[e3 f+3 g+3 g+3 a3 b3
+>c1. l12 c <f b f a f g2 ^3 a6 b2 e2]
+
+;section 4
+v160 pad3 $ea $00 p5,25 y10 [o4 l1 r r q7c c] q7a <b * q7a >d
+
+#1 o4 v240
+;	intro
+(!101,-1)(!103,3)
+organ l12 y2 o4 q7f 
+(01)2
+[[ (02)(03) ]]2
+
+;section 1
+/$df v170 q7f (!101,0) bass l6 y10 [<a1. ^ a+ >c <a+1 >d2] c2 $dd $28 $18 <b $dd $00 $20 a
+v200 * >e2 $dd $28 $18 d $dd $00 $20 <a
+
+;section 2
+v255 $f4 $03 organ (!101,-1)(!103,3) $ed $0f $db y2
+l12 [[(01)2 (02) (03) (02) (04)]]8
+
+;section 3
+v145 (!101,0) $ed $7f $e9 o4l6 y5,1,0 $fa $02 $0c p7,40 $ea $20
+q7f r <a b >c <b a b a g d g d e1^1
+(05) >e1^1
+(05)(06)
+
+;section 4
+$fa $02 $00 pad4 v130 $ea $00 p5,20 y10 [o4 l1 r r q78 d] q77 d * q77 e
+
+#2 o4 v160
+;intro
+harpsichord l12 y10 r=45
+(01)2
+(02)(03) (02) q7f >d q79 e=3
+
+;section 1
+/y11 q7f o4
+v80 $f4 $01 $fa $02 $00 (21)[@93 a=6 @92 a=7 @91 a=7 @90 a=7 @89 a=7 @88 a=7 @87 a=7 @86 a=6] (22)[@85 a=7 @84 a=7 @83 a=7 @82 a=7 @81 a=7 @80 a=7 @79 a=6 @78 a=7 @77 a=7 @76 a=7 @75 a=7 @74 a=7 @73 a=7 @72 a=6 @71 a=7 @70 a=7 @69 a=7 @68 a=7 @67 a=7 @66 a=7 @65 a=6 @64 a=7 @63 a=7 @62 a=7 @61 a=7 @60 a=7 @59 a=7 @58 a=6 @57 a=7 @56 a=7 @55 a=7 @54 a=7 @53 a=7 @52 a=7 @51 a=6 @50 a=7 @49 a=7 @48 a=7 @47 a=7 @46 a=7 @45 a=7 @44 a=6 @43 a=7 @42 a=7 @41 a=7 @40 a=7 @39 a=7 @38 a=7]
+$fa $02 $01 (23)[@38 a=6 @39 a=7 @40 a=7 @41 a=7 @42 a=7 @43 a=7 @44 a=7 @45 a=6 @46 a=7 @47 a=7 @48 a=7 @49 a=7 @50 a=7 @51 a=7 @52 a=6 @53 a=7 @54 a=7 @55 a=7 @56 a=7 @57 a=7 @58 a=7 @59 a=6 @60 a=7 @61 a=7 @62 a=7 @63 a=7 @64 a=7 @65 a=7 @66 a=6 @67 a=7 @68 a=7 @69 a=7 @70 a=7 @71 a=7 @72 a=7 @73 a=6 @74 a=7 @75 a=7 @76 a=7 @77 a=7 @78 a=7 @79 a=7 @80 a=6 @81 a=7 @82 a=7 @83 a=7 @84 a=7 @85 a=7] (24)[@86 a=7 @87 a=6 @88 a=7 @89 a=7 @90 a=7 @91 a=7 @92 a=7 @93 a=7]
+v95 $fa $02 $00 (21)(22) $fa $02 $01 (23)(24) $fa $02 $00 $f4 $01 y10
+
+;section 2
+$f4 $03 bass v255 l6 [[ [q7f <a q7a >e12 q7c a q7a d12 q7c e] <g >e * b <b
+[q7f a+ q7a >e12 q7c a+ q7a d12 q7c e] <g >e * >c <<a+]]8
+
+;section 3
+(25)[q7f f q7a >c12 q7c f q7a <a12 q7c >c <f >c q7f <g q7a >c12 q7c g q7a <g12 q7c >d <g >d
+q7f <e q7a b12 q7c >e] (26)[q7a <g12 q7c b >e b q7f >c q7a <e12] q7c a q7a <a12 q7c >e a <a
+(25)(26) q7c >g q7a <a+12 q7c >e a+ c
+(25) q7a g+12 q7c b >e g+ q7f a q7a e12 q7c <a q7a e12 q7c a e <a
+q7f f q7a >c12 q7c f q7a <a12 q7c >>c <f c q7f <f q7a >c12 q7c f q7a <a12 q7c >c <f >c
+q7f c q7a d12 q7c e q7a f12 q7c g c g q7f <e q7a f+12 q7c g+ q7a a12 q7c b >e <b
+
+;section 4
+v210 l4 q7f a q7d >a g+ q7b <g+ q7f g [q7d >g f+ q7b <f+ l6 q7f f q7a f12 q7c f q7a f12 q7c >f <f f q7f e q7a e12 q7c e q7a e12 q7c >e <e e]
+l4 q7f a q7d >a g+ q7b >g+ q7f g *
+
+#3 o4 v160
+;intro
+(!101,-1)(!103,3)
+organ l12 y10 r=45
+(01)2
+(02)(03) (02) q7f >d q79 (!101,0) e=3
+
+;section 1
+/y10 q7f o4
+v80 $f4 $01 $fa $02 $05 (31)[@89 a=7 @88 a=7 @87 a=7 @86 a=7] (22) (32)[@37 a=7 @36 a=7 @35 a=6 @34 a=7
+@34 a=6 @35 a=7 @36 a=7 @37 a=7] (23) (33)[@86 a=7 @87 a=7 @88 a=6 @89 a=7]
+v95 (31) (22) (32)(23)(33) $f4 $01 $fa $02 $00
+
+;section 2
+v255 (34)[q7f hit o4 a1^1 a+1^1]2
+q7f hit a6 (35)[l12 leadgt3 o4 q78 d leadgt1 q76 <e leadgt2 q77 >c leadgt1 q75 <e leadgt2 q78 a+ leadgt1 q76 <a leadgt2 q77 >a leadgt1 q75 <a q78 >g q75 <a leadgt2 q78 >a leadgt1 q76 c q77 e q75 c q77 f q75 c q78 g q76 e leadgt2 q77 a+ leadgt1 q75 e leadgt3 q77 >d leadgt1 q75 <e leadgt3
+p64,8,90 $ea $40 q78 >d+2 $dd $00 $40 e ^2 f2 q77 g2
+q78 a=13 q76 g=14 a=21 ^1 q75 e q77 a+ q75 e leadgt4 q78 >c leadgt3 q75 <a leadgt4 q77 >d leadgt3 q75 <a leadgt4 q77 >f leadgt3 q75 <a
+leadgt4 q78 >e=13 q76 d=14 q78 e=21 ^2. f2 q77 g2
+q78 a=13 q76 g=14] q78 a=21 ^2. $ed $7f $ed ^1 $df hit q7f <a+1^1 (34)
+q7f hit a6 (35)
+
+;section 3
+q78 >a=21 ^1 ^4 $ed $7f $ed ^1. (37)[r6 leadgt4 q76 a q75 c q76 e leadgt3 q75 <a leadgt4 >c leadgt3 <e a leadgt2 c leadgt3 e leadgt2 q74 <a]
+q75 leadgt1 f1 g2^3 $ed $7f $f2 ^6 ^1 leadgt4 r6 q76 >>a+ q75 c q76 e leadgt3 q75 <a+ leadgt4 >c leadgt3 <e a+ leadgt2 c leadgt3 e leadgt2 q74 <a+
+q75 leadgt1 f1 g2^3 $ed $7f $f2 ^6 q74 g+1 (37)
+l1 leadgt1 q75 f <f c e
+
+;section 4
+pad4 v130 p5,15 y10 [o4 l1 r r q78 g] e * q7a g+
+
+#4 o4
+;intro
+sfade1 r1 sfade2 r1 sfade3 r1 sfade4 r1
+
+;section 1
+/y9 q7f o4
+v80 $f4 $01 $fa $02 $07 (22) (41)[@37 a=7 @36 a=7 @35 a=7 @34 a=6 @33 a=7 @32 a=7 @31 a=7 @30 a=6
+@30 a=7 @31 a=7 @32 a=7 @33 a=7 @34 a=6 @35 a=7 @36 a=7 @37 a=7] (23)
+v95 (22)(41)(23) $fa $02 $00
+
+;section 2
+$f4 $01 v150 l12 y10
+[[ [o3 harsh3 q7c a r harsh1 q7f >d harsh3 q7c <a r harsh1 q7f >d harsh3 q7c <a harsh1 q7f >d6 harsh3 q7c <a harsh1 q7f >d6]2
+[o3 harsh3 q7c a+ r harsh2 q7f >d harsh3 q7c <a+ r harsh2 q7f >d harsh3 q7c <a+ harsh2 q7f >d6 harsh3 q7c <a+ harsh2 q7f >d6]2 ]]8
+
+;section 3
+l1 p10,30 strings3rd <f g g stringsm3rd a a strings3rd g g stringsm3rd g
+strings3rd f g stringsm3rd g+ a a ^ e g+
+
+;section 4
+$df $f4 $03 v255 l12 y5 o4
+[HO $f4 $01 q7b c $f4 $01 HC [[q77 c q7a c]]5 q78 c]8
+
+#5 o3
+;intro
+[[r2]]8
+
+;section 1
+/p6,35
+pad1 y14,1,0 $dc $bf $0a v80 $e8 $bf $5a a1 $dc $bf $06 $e8 $bf $64 ^1 pad2 $dc $bf $0a $e8 $bf $6e a+1 $dc $bf $0e $e8 $bf $78 ^1
+pad1 $dc $bf $0a $e8 $bf $82 a1 $dc $bf $06 $e8 $bf $8c ^1 pad2 $dc $bf $0a $e8 $bf $96 a+1 $dc $bf $0e $e8 $bf $a0 ^1
+
+;sections 2 and 3
+$df $ec $00 $02 $fd v220 y10 o4
+[[y10 l6 $f4 $03 (51)[K q7f c q7b c12 S $f4 $03 q7f c q7b c12 K $f4 $03 q7d c] (52)[S $f4 $03 q7f c q7c c12 K $f4 $03 q7a c12]
+(51) (53)[S $f4 $03 q7f c12 q7c c12 q7b c12 K $f4 $03 q7a c12]
+(51)(52)
+(51) S $f4 $03 q7f c=11 q7c c=10 q7b c=11 q7d c12 K $f4 $03 q7a c12
+(51)(52)
+(51)(53)
+(51)(52)
+K q7f c q7b c12 S $f4 $03 q7f c=11 q7c c=10 q7b c=11  K $f4 $03 c12 q7d c=11 q7b c=10 q7a c=11 S $f4 $03 q7f c=11 q7c c=10 q7b c=11 TM y13 q7f <a12 y15 e12
+]]6
+
+;section4
+[[o4 l4 y10 [K $f4 $03 q7d c S $f4 $03 q7b c K $f4 $03 q7d c q7b c12] S $f4 $03 c6
+* S $f4 $03 q78 c6
+l12 K $f4 $03 q7d c6 q7a c S $f4 $03 q7b c6 q77 c K $f4 $03 q7d c6 S $f4 $03 q7b c6 q79 c6
+K $f4 $03 q7d c6 q7a c S $f4 $03 q7b c6 q78 c K $f4 $03 q7d c q79 c S $f4 $03 q7b c q76 c q79 c q76 c]]2
+
+#6 o4
+;intro
+[[r2]]8
+
+;section 1
+/v255 l2 T [q7f y10 c q79 y20 c q75 y0 c q72 y10,1,0 c1.] r1
+* q7f C $ed $73 $e0 y13 c2 C >c6 TM $ec $00 $02 $fd q7d y7 <d=11 d=10 d=11 y10 <b=11 y12 g+=10 y14 f=11 $ec $00 $00 $00
+
+;section 2
+o4 l12
+[[C y8 q7f c4 y5 $f4 $03 (61)[HO q7c $f4 $01 c $f4 $01 HC q7a c q79 c HO q7c $f4 $01 c $f4 $01 HC q79 c q7c c HO q79 $f4 $01 c $f4 $01 HC q7c c q79 c
+q7d c q7b c q79 c] (62)[HO q7c $f4 $01 c $f4 $01 HC q7a c q79 c HO q7c $f4 $01 c $f4 $01 HC q79 c HO q7c $f4 $01 c6 $f4 $01 HC q7c c q79 c]
+HO q7d $f4 $01 c $f4 $01 HC q7b c q79 c (61)
+(62)
+C $f4 $03 y8 q7f c4 y5 $f4 $03 (61)
+(62)
+HO q7d $f4 $01 c $f4 $01 HC q7b c q79 c (61)
+HO q7c $f4 $01 c6 $f4 $01 HC q7a c12 HO q7c $f4 $01 c=11 $f4 $01 HC q78 c=21 HO q7c $f4 $01 c6 $f4 $01 HC q7a c q79 c $f4 $03]]6
+
+;section 4
+l6 [[y15 v160 $f4 $03 HC [q7b g q79 g q77 g q7b g q79 g q77 g q7b g12 q78 g q79 g q76 g] q7b g q7a g q77 g12
+* q7b g12 C $f4 $03 y12 v190 q7f d+3]]2
+
+#7 o4
+;	intro
+[[r2]]8
+
+;section 1
+/(!101,-1)(!103,3)
+organ l12 y5 o4 v255 q7f
+[[(01)2 (02)(03)(02)(03)]]2
+
+;section 2
+(!101,0)
+[[r2]]16 y10
+p32,8,70 lowgt q78 o3 a1^1 (71)[hit q7f o4 a+6 lowgt q78 o3 a2 $dd $00 $20 a+ ^1^3 hit q7f o4 a6 lowgt q78 o3 a1^2^3]2
+[[r2]]12
+lowgt o3 a1^1 (71) hit q7f o4 a+6 lowgt q78 o3  a2 $dd $00 $20 a+ ^2^3 stringsoct q7d v150 p10,30 l12 <b >c d e f g
+
+;section 3
+l1 q7a c d e e f d e e
+c d e e f ^ >c <e
+
+;section 4
+pad4 v130 p5,15 y10 [[o3 r r q78 f e]]2
