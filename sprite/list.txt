@@ -9,10 +9,10 @@
 09 HammerBro.json
 0A IceBro.json
 0B FireBro.json
-0C SledgeBro.json
+0C goal_sphere_smw.cfg
 0D buster.json
 0E buster_block.cfg
-0F giant_goomba.json
+0F InfoBox2.cfg
 10 stationary_magikoopa.cfg
 11 PipeSpawner.cfg
 12 giant_piranha_red.json

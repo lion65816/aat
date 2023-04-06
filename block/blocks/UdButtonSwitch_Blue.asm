@@ -10,13 +10,20 @@ JMP SpriteV : JMP SpriteH : JMP MarioCape : JMP MarioFireball
 JMP TopCorner : JMP BodyInside : JMP HeadInside
 
 MarioBelow:
-	LDA !ManuelTrigger	;\if already pressed, then Return.
+	JSR ReadTrigger	;\if already pressed, then Return.
 	BEQ Return		;/as passable
 	LDA $7D			;\if player Y speed is going down
 	BPL Solid		;/then treat the block as a regular cement block.
 Activate:
-	LDA #$00		;\set flag.
-	STA !ManuelTrigger	;/
+	;Call WriteTrigger on SNES
+	LDA.b #WriteTrigger		: STA $0183	;Bank
+	LDA.b #WriteTrigger>>8	: STA $0184	;High byte
+	LDA.b #WriteTrigger>>16	: STA $0185	;Low byte
+	LDA #$D0				: STA $2209	;Invoke SNES
+	.wait
+	LDA $018A : BEQ .wait				;Wait until SNES sets this address
+	STZ $018A
+
 	LDA #$0B		;\on/off sfx.
 	STA $7DF9		;/
 	LDA #$20		;\earthquake effect
@@ -38,12 +45,12 @@ if !SprActivate == 0
 SpriteV:
 endif
 UnpressedSolid:
-	LDA !ManuelTrigger	;\Be solid when switch is unpressed
+	JSR ReadTrigger	;\Be solid when switch is unpressed
 	BNE Solid		;/
 	RTL
 if !SprActivate != 0
 SpriteV:
-	LDA !ManuelTrigger	;\If switch already pressed, then
+	JSR ReadTrigger	;\If switch already pressed, then
 	BEQ Return		;/Return as passable
 	LDA $9E,x		;\act cement if falling
 	BPL Solid		;/
@@ -55,5 +62,27 @@ endif
 Return:
 MarioCape:
 	RTL
+
+ReadTrigger:
+	;Invoke SNES
+	LDA.b #.snes		: STA $0183	;Bank
+	LDA.b #.snes>>8		: STA $0184	;High byte
+	LDA.b #.snes>>16	: STA $0185	;Low byte
+	LDA #$D0			: STA $2209	;Invoke SNES
+	.wait
+	LDA $018A : BEQ .wait			;Wait until SNES sets this address
+	STZ $018A
+
+	;Read trigger
+	LDA $00
+RTS
+
+.snes
+	LDA !ManuelTrigger : STA $00	;sic. Copies trigger to scratch (I) RAM.
+RTL
+
+WriteTrigger:
+	LDA #$00 : STA !ManuelTrigger	;sic. Writes color to trigger.
+RTL
 
 print "This button sets a manuel frame value to #$00."
