@@ -151,4 +151,6 @@ Locals:
 99  Super Marisa World Boss.txt
 9A  HeatInsideTheFire.txt
 9B  amnf-v04.txt
+9C  FactoryAmb.txt
+9D  TH_10_5_Reisen_X3.txt
 9E  dissolution.txt

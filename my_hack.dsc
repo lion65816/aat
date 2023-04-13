@@ -307,10 +307,18 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 359a	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
 359b	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
 359c	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+3681	0	Solid if anything goes left
 3697	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
 36b4	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
 36b5	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
 36d0	0	Shatters if any sprite touches it.
+36e0	0	A door that uses a specific screen exit.
+36f0	0	A door that uses a specific screen exit.
+3716	0	A block that will act like tile 25 for Mario
+374d	0	Solid if anything goes right
+37d7	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+37d8	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
+37e0	0	A numbered platform from Yoshi's Island. You can jump on them only for a limited amount. Number of activations before explosion depends on the last digit of the Map16 number.
 4103	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
 4104	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
 4106	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi

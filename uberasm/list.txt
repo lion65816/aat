@@ -73,9 +73,16 @@ level:
 0B9	FlashlightStatusReScrollEcho.asm
 0BA	FlashlightStatusReScrollEcho.asm
 0BB	FlashlightStatusReScrollEcho.asm
-0BC	freescrollbabey.asm
+0BC	FilterYoshi_Freescroll_Nostatus.asm
+0BD	statusbarremove.asm
+0BE	reloadRoom3.asm
 0C0	DisableLR.asm
+0C1	statusbarremove.asm
+0C2	reloadRoom3.asm
+0C3	statusbarremove.asm
+0C4	reloadRoom3.asm
 0C5	hide_sb_uber.asm
+0C6	reloadRoom3.asm
 0D0	HDMAGradient.asm
 0DD	freescrollbabey.asm
 0DE	statusbarremove.asm
@@ -112,6 +119,7 @@ level:
 126	LevelIntro.asm
 128	statusbarremove_CustomBar.asm
 129	LV129.asm
+12B	Gradient12B.asm
 12C	DisableLeft.asm
 12F	Gradient12F.asm
 131	LevelIntro.asm

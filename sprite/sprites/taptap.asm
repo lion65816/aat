@@ -857,7 +857,7 @@ STZ !SPRITESTATE,x
 LDA #$FF
 STA $1493|!Base2
 INC $13C6|!Base2
-LDA #$0B
+LDA #$03
 STA $1DFB|!Base2
 Roteb:
 RTS

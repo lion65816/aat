@@ -191,6 +191,7 @@ C8 CustomShooter.cfg
 C9 BigSteelyShooter.cfg
 CA sideways_bill_lr.cfg
 CB custom_bbshooter.cfg
+CC TapShooter.cfg
 
 D0 gusty_generator.cfg
 D1 no_spin_sfx.cfg

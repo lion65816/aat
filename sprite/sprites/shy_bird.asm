@@ -19,7 +19,8 @@
 palette:
         db $04,$06,$08,$0A
 bird_tilemap:
-        db $2F,$7F,$6A,$7A,$76
+        db $2F,$7F,$6A,$7A,$79
+;       db $2F,$7F,$6A,$7A,$76
 bird_x_speed_adds:
         db $02,-$02
 bird_max_x_speeds:

@@ -251,8 +251,8 @@ NameData:
  db "                   "
  db "                   "
  ;Level 12B
- db "(WIP) Tap-Tapping  "
- db " In The Warehouse  "
+ db "Tap Dancing Lessons"
+ db "  In The Workshop  "
  ;Level 12C
  db "   Can't Go Back   "
  db "                   "

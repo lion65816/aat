@@ -1,0 +1,57 @@
+#amk 2
+
+#spc
+{
+#title		"Noises of the Factory"
+#game 		"HASTE BRANCH PLATFORM COMPANY"
+#comment	"Ported by Daizo"
+#length		"0:28"
+}
+
+#samples
+{
+	"optimized/00 SMW @0.brr"
+	"optimized/01 SMW @1.brr"
+	"optimized/02 SMW @2.brr"
+	"optimized/03 SMW @3.brr"
+	"optimized/04 SMW @4.brr"
+	"EMPTY.brr"
+	"optimized/06 SMW @22.brr"
+	"optimized/07 SMW @5.brr"
+	"optimized/08 SMW @6.brr"
+	"EMPTY.brr"
+	"optimized/0A SMW @9.brr"
+	"optimized/0B SMW @10.brr"
+	"EMPTY.brr"
+	"optimized/0D SMW @14.brr"
+	"optimized/0E SMW @29.brr"
+	"optimized/0F SMW @21.brr"
+	"EMPTY.brr"
+	"optimized/11 SMW @17.brr"
+	"optimized/12 SMW @15.brr"
+	"EMPTY.brr"
+
+"FactoryL.brr"
+"FactoryR.brr"
+}
+
+#instruments
+{
+"FactoryL.brr" 	$FD $E0 $00 $04 $00
+"FactoryR.brr" 	$FD $E0 $00 $04 $00
+"FactoryL.brr" 	$FD $E0 $00 $02 $00
+"FactoryR.brr" 	$FD $E0 $00 $02 $00
+"FactoryL.brr" 	$FD $E0 $00 $04 $00
+}
+
+
+#0 w255$F4$01@30 v120/ t30 y20
+o3f1
+#1$F4$01@31 v120/ y0
+o3f1
+#2$F4$01@33 v70/ t30 y20
+o3b1
+#3$F4$01@32 v70/ y0
+o3b1
+#5$F4$01@34 v150/y10 ; v255 for BLDC accuracy
+o1f1

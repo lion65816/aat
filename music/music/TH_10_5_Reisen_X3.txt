@@ -1,0 +1,614 @@
+#amk 2
+
+#path "TH_10_5_Reisen_X3"
+
+#SPC
+{
+	#game	"Touhou 10.5"
+	#title "Lunatic Eyes Invisible Full Moon"
+	#author "Remixer : JX"
+	#comment "MMX3 Style"
+}
+
+#samples
+{
+	#optimized
+	"13 Volt Catfish_24.brr"
+	"13 Volt Catfish_22.brr"
+	"13 Volt Catfish_2d.brr"
+	"13 Volt Catfish_2b.brr"
+	"13 Volt Catfish_2a.brr"
+	"13 Volt Catfish_26.brr"
+	"03 Opening_16.brr"
+	"2b_oc2.brr"
+}
+
+#instruments
+{
+	"13 Volt Catfish_24.brr"		$FF $E0 $B8 $07 $9F
+	"13 Volt Catfish_22.brr"		$FF $F1 $B8 $07 $5E
+	"13 Volt Catfish_2b.brr"		$FF $E0 $B8 $05 $00
+	"13 Volt Catfish_2d.brr"		$FF $E0 $B8 $1E $70
+	"13 Volt Catfish_2a.brr"		$FF $EC $B8 $1E $00
+	"13 Volt Catfish_26.brr"		$FF $E0 $B8 $07 $AB
+	"03 Opening_16.brr"				$FF $E0 $B8 $03 $CA
+	"13 Volt Catfish_22.brr"		$FF $F1 $B8 $06 $F2 ; p 08A0
+	"13 Volt Catfish_22.brr"		$FF $F1 $B8 $07 $5C ; p 09B0
+	"2b_oc2.brr"					$FF $E0 $B8 $04 $00
+} 
+
+(!1)[ $F4 $09 ]
+(!300)[ $ED $80 $AF ] ; 0F
+(!301)[ $ED $80 $B2 ] ; 12
+(!302)[ $ED $80 $AB ] ; 0B
+(!303)[ $ED $80 $B4 ] ; 14
+
+$EF $01 $B0 $50
+$F1 $02 $3C $01 
+$F5 $34 $33 $00 $D9 $E5 $01 $FC $EB
+
+;$F6 $0C $70
+;$F6 $1C $70
+
+w165 t74
+
+$F4 $02
+
+
+
+
+"I24V2626 = @30 v182"; COMP 4
+"NP0AA0 = o3 f"
+
+"I22V2626 = @38"; COMP 2
+"NP09B0 = e"
+
+#6	l8 (!1,-1) (!302,3) 
+
+	I24V2626 q5f [NP0AA04]4 ; 0AA0
+	
+	/ 
+	
+	I22V2626
+	
+	[ 
+		NP09B04.
+		NP09B02
+		q7f NP09B02. r4. q5f
+	]8
+	
+	(60)[ 
+		q7f NP09B02. r4 q5f
+		[[r2]]13 
+		NP09B04
+		NP09B04 
+	]3
+	
+	q7f NP09B02. r4 q5f 
+	[r2]11 
+	NP09B0.
+	NP09B0.
+	NP09B0
+	
+	(60)
+	
+	q7f NP09B02. r4 [r2]10 q5f
+	
+	NP09B02
+	NP09B04.
+	NP09B02^
+	NP09B04
+	NP09B04
+
+ 
+
+
+
+
+
+
+
+
+"I22V3E3E = @31 v231"; COMP 3
+"I22V3E3E_2 = @37 v231"; COMP 3
+"I26V3636 = @35 v216"; COMP 3
+
+"NP0AE0 = o3 f+"
+"NP08A0 = o3 d+"
+"NP1200 = o4 d"
+
+; drum sink comp 3
+
+#3	l8 (!1,-1) (!303,3) 
+	q1f I22V3E3E NP0AE04 NP0AE04 NP0AE04 NP0AE04 q5f
+
+	/
+	
+	q5f
+	
+	[
+		I22V3E3E_2 NP08A0 
+		[[
+			I24V2626 NP0AA0 
+			I26V3636 NP1200 
+			q1f I22V3E3E_2 NP08A04 q5f
+		]]2
+		I24V2626 NP0AA0 
+		I26V3636 NP1200 
+		I24V2626 NP0AA0 NP0AA0 NP0AA0 
+		I26V3636 NP1200 
+		I24V2626 NP0AA0
+	]8
+	
+	[[
+	
+		(90)[
+			I22V3E3E_2 NP08A0 
+			I24V2626 NP0AA0 
+			I26V3636 NP12004
+			I24V2626 NP0AA0 NP0AA0 
+			I26V3636 NP1200 
+			I24V2626 NP0AA04 NP0AA0 
+			I26V3636 NP12004
+			I24V2626 NP0AA0 NP0AA0 
+			I26V3636 NP1200 
+			I24V2626 NP0AA0 NP0AA0 NP0AA0 
+			
+			I26V3636 NP12004
+			I24V2626 NP0AA0 NP0AA0 
+			I26V3636 NP1200 
+			I24V2626 NP0AA04 NP0AA0 
+			I26V3636 NP12004
+			I24V2626 NP0AA0 NP0AA0 
+			I26V3636 NP1200 
+			I24V2626 NP0AA0 NP0AA0 NP0AA0 
+			
+			I26V3636 NP12004
+			I24V2626 NP0AA0 NP0AA0 
+			I26V3636 NP1200 
+			I24V2626 NP0AA04 NP0AA0 
+			I26V3636 NP12004
+			I24V2626 NP0AA0 NP0AA0 
+			I26V3636 NP1200 
+			I24V2626 NP0AA0 NP0AA0 NP0AA0 
+			I26V3636 NP12004
+		]
+		
+		(91)[
+			I24V2626 NP0AA0 NP0AA0 
+			I26V3636 NP1200 
+			I24V2626 NP0AA04 NP0AA0 
+			I26V3636 NP12004
+			q1f I22V3E3E_2 NP08A04 NP08A04 q5f
+		]
+	
+	]]3
+	
+	(90)
+	I22V3E3E_2 NP08A0.NP08A0.NP08A0
+	
+	(90) (91)
+	
+	I22V3E3E_2 NP08A0
+	(92)[
+		I24V2626 NP0AA0 
+		I26V3636 NP12004
+		I24V2626 NP0AA0 NP0AA0 
+		I26V3636 NP1200 
+		I24V2626 NP0AA04 NP0AA0 
+		I26V3636 NP12004
+		I24V2626 NP0AA0 NP0AA0 
+		I26V3636 NP1200 
+		I24V2626 NP0AA0
+	]
+	
+	[[ I24V2626 NP0AA0 (92) ]]2
+	
+	I22V3E3E_2 NP08A0 
+	I24V2626 NP0AA0 
+	I26V3636 NP12004
+	I22V3E3E_2 NP08A0 
+	I24V2626 NP0AA0 
+	I26V3636 NP1200 
+	q1f I22V3E3E_2 NP08A04 q5f
+	I24V2626 NP0AA0 
+	I26V3636 NP12004
+	q1f I22V3E3E_2 NP08A04 NP08A04
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+"I2A3636 = @34 y10 v216"
+
+#4 l8 I2A3636 q5f (!1,-1) (!301,3) r1 
+
+	/ 
+	
+	
+	o2 
+	dddd4ddd4dfd4 < a > cd
+	f+f+f+f+4f+f+f+4f+af+4c+ef+
+	d+d+d+d+4d+d+d+4d+f+d+4 < a+ > c+d+ < aaaa4aaa4
+	a > c+ < a4ega > ddfd4dfd4
+	dfd4 < a > cd f+f+af+4f+af+4
+	f+af+4c+ef+ d+d+f+d+4d+f+d+4
+	d+f+d+4 < a+ > c+d+ < aa > c+ < a4a > c+ < a4
+	a > c+ < a4ega
+	
+	[ o2 dddd ]6 dag+gfdc < a
+	[ o1 a+a+a+a+ ]7 a+a+ > cc
+	
+	o1 bb > b < bbb > b < b
+	o1 
+	[
+		gg > g < ggg > g < g
+		aa > a < aaa > a < a
+		a+a+ > a+ < a+a+a+ > a+ < a+ 
+	]2 > 
+	c+c+ > c+ < c+c+c+ > c+ < c+
+	
+	(80)[ o1 a+a+ > d < a+ > ccecddfddfga ]7
+	
+	o1 a+a+ > d < a+ > ccec
+	
+	(80)7
+	
+	o1 a+a+ > d < a+ > ccecddfdd < a > cd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"I2D = @33"
+"V1C08 = y14 v132"; => 1C07
+
+#1 l8 I2D (!1,-1) (!301,3) q5f V1C08 r1 
+
+	/ 
+	
+	
+	o1 
+	
+	aaaa4aaa4a > d < a4ega > 
+	c+c+c+c+4c+c+c+4c+f+c+4 < g+b > c+ < 
+	a+a+a+a+4a+a+a+4a+ > c+ < a+4fg+a+ > 
+	c+c+c+c+4c+c+c+4c+ec+4 < g+b > c+ < 
+	aa > d < a4a > d < a4a > d < a4ega > 
+	c+c+f+c+4c+f+c+4c+f+c+4 < g+b > c+ < 
+	a+a+ > c+ < a+4a+ > c+ < a+4a+ > c+ < a+4fg+a+ > 
+	c+c+ec+4c+ec+4c+ec+4 < g+b > c+
+	
+	
+	[ o1 [[a4a]]4 a4a4 ]2
+	
+	a+4a+a+4a+a+4a+a+4a+a+4a+4
+	a+4a+a+4a+a+4a+a > ag4d+4d
+	f+4f+f+4f+f+4dd4dd4d4
+	e4ee4ee4ff4ff4f4
+	d4dd4dd4ee4ee4e4
+	f4ff4ff4gg4gg4g4
+	
+	[
+		o2
+		ffffggggaaaa a4g4
+		ffffggggaaaa d4c4
+		ffffggggaaaa a4g4
+		ffff
+	]
+	o2 gggg aa > cdfdc < a
+	
+	*
+	
+	o2 c6 < a6f6
+	
+	(72)[ o2 ffffggggaaaaaagg ]3
+	
+	o2 ffffgggg aa > cd < aagg
+	
+	(72)3
+	
+	o2 ffffggggffaffcef
+
+
+
+
+
+
+
+
+"V081D = y6 v127 $FA $03 $25" ; comp 1
+
+#5 l8 I2D (!1,-1) (!301,3) q5f V081D r1 
+	
+	/ 
+	
+	
+	o2 
+	dddd4ddd4dfd4 < a > cd
+	f+f+f+f+4f+f+f+4f+af+4c+ef+
+	d+d+d+d+4d+d+d+4d+f+d+4 < a+ > c+d+ < 
+	aaaa4aaa4a > c+ < a4ega > 
+	ddfd4dfd4dfd4 < a > cd
+	f+f+af+4f+af+4f+af+4c+ef+
+	d+d+f+d+4d+f+d+4d+f+d+4 < a+ > c+d+ < 
+	aa > c+ < a4a > c+ < a4a > c+ < a4ega
+	
+	
+	
+	[ o2 d4dd4dd4dd4dd4d4 ]3
+	d4dd4dd4dd > dc4 < g+4g
+	b4bb4bb4gg4gg4g4
+	a4aa4aa4a+a+4a+a+4a+4
+	g4gg4gg4aa4aa4a4
+	a+4a+a+4a+a+4 > c+c+4c+c+4c+4
+	
+	[
+		o1 
+		[[ a+a+a+a+ > ccccdddd f4e4 < ]]3
+		a+a+a+a+
+	]
+	o2 ccccddfgg+gfd
+	
+	*
+	
+	o2 e6c6 < a6
+	
+	[
+		o1 
+		[[ a+a+a+a+ > ccccddddddcc < ]]3
+		a+a+a+a+ > cccc
+	]
+	
+	o2 ddfgddcc
+	
+	*
+	
+	o2 ddfdd < a > cd
+
+
+
+
+
+
+
+
+
+"I2BCH2 = @32 y11"
+
+"V1712 = v126 $FA $03 $23"; => 1711
+"V0C0A = v098 $FA $03 $00"; => 0C09
+
+"V1511 = v109 $FA $03 $75"; => 1510
+"V0A08 = v082 $FA $03 $56"
+
+
+; volume v1712 v0c0a note keep : comp 1
+
+#2 l8 I2BCH2 q5f (!1,-1) (!300,3) r1 
+
+	/ 
+	
+	
+	V1712
+	
+	[
+		o4
+		dfga4gfd4acg < a+ > f < a > e
+		f+ab > c+4 < baf+4 > c+ < ebdac+g+
+		d+f+g+a+4g+f+d+4a+c+g+< a+ > f+ < g+ > f
+		c+efg4fec+4 > c+ < c+a+c+a < a+ > g
+	]2
+	
+	o5
+	
+	V1712 d2^ V0C0A d 
+	V1712 d V0C0A d 
+	V1712 c2^ V0C0A c 
+	V1712 c V0C0A c
+	V1712 < a2^ V0C0A a 
+	V1712 a V0C0A a 
+	V1712 a2^ V0C0A a 
+	V1712 a V0C0A a
+	V1712 a1... V0C0A a
+	V1712 a+1^4. V0C0A a+ 
+	V1712 a+4 > c4
+	
+	V1712 < c+ V0C0A c+ 
+	V1712 < a V0C0A a 
+	V1712 b V0C0A b 
+	V1712 > c+ V0C0A c+ 
+	V1712 < b4 V0C0A b 
+	V1712 > c+4 V0C0A c+ 
+	V1712 e V0C0A e
+	V1712 < b4 V0C0A b 
+	V1712 > c+4 V0C0A c+ 
+	V1712 e V0C0A er4 
+	V1712 a V0C0A a 
+	V1712 g+ V0C0A g+r4
+	
+	V1712 f+2^ V0C0A f+ 
+	V1712 ef+
+	g+12a12b12
+	g+12a12b12
+	e12f+12g+12
+	a12b12a12 > 
+	d12c12 < a12
+	b12 > c12f12
+	e12 < b12 > c12
+	d12f12g12
+	g+12c12 < b12 > 
+	d12 < a12g+12
+	ag+d < g+
+	
+	
+	
+	
+	> a+4a+4 > c4 < a+ > cdc < agf4. V0C0A f
+	
+	V1712 dfgadc < a > d4c < aga4 > dea+4a+4 > c4 < a+ > cdefaf4. V0C0A f
+	V1712 < a+ > cdfc. < a.fa2.. V0C0A a
+	
+	V1712 a+4a+4 > c4 < a+ > cdc < agf4. V0C0A f
+	V1712 dfgadc < a > d4c < aga4 > dea+4a+4 > c4 < a+ > cdefg
+	
+	
+	
+	
+	
+	V1511 a4. V0A08 a 
+	V1511 a+ > cdfc. < a.f >
+	
+	d1^1
+	[r2]11 r <
+	dc < a >
+	d1^1
+
+	V1712 c < a V0C0A a 
+	V1712 a > d < a V0C0A a 
+	V1712 a > dd+dc < ageg
+	agedc < agedd+ega > cd < g
+	> a4a4 > c < aga4 > c < ged < b > dd+
+	
+
+
+
+
+
+
+"I2BCH6 = @32 y9"
+
+"V1317 = v126 $FA $03 $23"; => 1117
+"V0B0D = v098 $FA $03 $1D"; => 0A0D
+
+"V1216 = v098 $FA $03 $E4"; => 1116
+"V0A0C = v098 $FA $03 $00"; => 090C
+
+"I16 = @36 y10 $FA $03 $00"
+"V1C1C = v121 v157 "
+"V1212 = v164 v127"
+
+; volume V1317 V0B0D note keep : comp 1
+
+#0 l8 q5f (!1,-1) (!300,3) V1317 r1 
+
+	/ 
+	
+	I2BCH6
+	
+	[
+		o4
+		a > def4ed < a4 > f < g > e < f > d < e > c
+		c+f+g+a4g+f+c+4a < b > g+ < a > f+ < g+ > e
+		< a+ > d+ff+4fd+ < a+4 > f+ < g+ > f < f+ > d+ < f > c+
+		< a > c+de4dc+ < a4 > a < a+ > g < a > f < g > e
+	]2
+	
+	o5
+	
+	V1317 f2^ V0B0D f 
+	V1317 f V0B0D f 
+	V1317 e2^ V0B0D e 
+	V1317 e V0B0D e
+	V1317 d2^ V0B0D d 
+	V1317 d V0B0D d 
+	V1317 c2^ V0B0D c 
+	V1317 c V0B0D c
+	
+	V1317 c1... V0B0D c 
+	V1317 d1^4. V0B0D d 
+	V1317 d4e4 < f+ V0B0D f+ 
+	V1317 d V0B0D d 
+	V1317 e V0B0D e 
+	V1317 f+ V0B0D f+ 
+	V1317 e4 V0B0D e 
+	V1317 f+4 V0B0D f+ 
+	V1317 a V0B0D a
+	
+	V1317 e4 V0B0D e 
+	V1317 f+4 V0B0D f+ 
+	V1317 a V0B0D ar4 
+	V1317 > d V0B0D d 
+	V1317 c+ V0B0D c+r4 <
+	V1317 b2^ V0B0D b 
+	V1317 ab >
+	c+12d12e12
+	c+12d12e12 < 
+	a12b12 > c+12
+	d12e12d12
+	g12f12d12
+	e12f12a+12
+	a12e12f12
+	g12a+12 > c12
+	c+12 < f12e12
+	g12d12c+12
+	dc+ < gc+ >
+
+
+
+	d4d4e4defedc < a4. V0B0D a
+	
+	V1317 ga > cd < gfef4edcd4ga >
+	d4d4e4defga > c < a4. V0B0D a
+	
+	V1317 defae.c. < a > d2.. V0B0D d
+	
+	V1317 d4d4e4defedc < a4. V0B0D a
+	
+	V1317 ga > cd < gfef4edcd4ga >
+	d4d4e4defga > c
+	
+	
+	
+	V1216 d4. V0A0C d
+	
+	V1216 def @39 < a > @32 e.c. < a
+	
+	
+	
+	I16 
+	V1C1C d4 > d4c < agfdf V1212 f 
+	V1C1C e < d > d < c > c V1212 c 
+	V1C1C cdfgg+ad V1212 d 
+	V1C1C > dc < adfd4 V1212 d > 
+	V1C1C dc < agedagedc < a16g+16g16 V1212 g16 
+	V1C1C < c > cdfgg+a > cc+dc < a > dc < a 
+	
+	I2BCH6
+	V1216 age
+	
+	I16 >
+	V1C1C dc V1212 c 
+	V1C1C dcddc V1212 c 
+	V1C1C dfgg+age
+	
+	I2BCH6 
+	V1317 fd V0B0D d 
+	V1317 dgd V0B0D d 
+	V1317 dgg+gfdc < a > c
+	dc < agfdc < agg+a > cdfgc
+	> d4d4fdcd4fc < agegg+
+
+
+
+
+

@@ -127,9 +127,9 @@ RTS
 db $00,$01,$03,$04,$05,$07,$08,$0A,$0C,$0D,$0E,$0F
 db $15,$18,$1C,$1D,$1F
 ;levels $101-$13B (values listed are levelnum-$DC)
-db $101-$DC,$104-$DC,$105-$DC,$108-$DC,$10D-$DC,$117-$DC,$11A-$DC,$11B-$DC
-db $122-$DC,$127-$DC,$12A-$DC,$12B-$DC,$12D-$DC,$12E-$DC
-db $130-$DC,$132-$DC,$13B-$DC
+db $101-$DC,$104-$DC,$105-$DC,$108-$DC,$10D-$DC,$114-$DC,$117-$DC,$11A-$DC,$11B-$DC
+db $122-$DC,$127-$DC,$12A-$DC,$12D-$DC,$12E-$DC
+db $130-$DC,$13B-$DC
 .endtable
 endif
 
