@@ -178,7 +178,8 @@ level:
 1B7	redswitch.asm
 1B8	redswitch.asm
 1B9	redswitch.asm
-1C8	PaletteShift.asm
+1C8	DisableSideExit.asm
+;1C8	PaletteShift.asm
 1CE	BabaBlocks.asm
 1CF	BabaBlocks.asm
 1D0	FilterYoshi_DeathWarp.asm

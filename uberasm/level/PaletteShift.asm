@@ -94,6 +94,7 @@ main:
 ;;;;;;;;;;
 
 upload_palettes:
+	PHB : PHK : PLB
 	REP #$20
 	LDX !StartingColorCounter	;> Load the current index into the StartingColor table (we can also use it for the BackgroundColor table).
 	TXA				;\
@@ -126,5 +127,5 @@ upload_palettes:
 	SEP #$30
 	STZ $0690			;> 00 byte to mark the end of the color data
 	STZ $0680|!addr			;> $0680 = 0: upload from $0682
-
+	PLB
 	RTS

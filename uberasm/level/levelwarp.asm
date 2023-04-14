@@ -116,7 +116,6 @@ TableNames:
    db "WORLD 1         "
    db "THE FISHMARKET  "
    db "FOREST WORLD    "
-   db "CAVE WORLD      "
    db "SKY WORLD       "
    db "MOUNTAIN WORLD  "
    db "FINAL WORLD     "
@@ -140,7 +139,6 @@ TableLevels:
    %secen($0044, 0)
    %secen($0045, 0)
    %secen($0046, 0)
-   %secen($0047, 0)
    %secen($0047, 0)
 .end
 
