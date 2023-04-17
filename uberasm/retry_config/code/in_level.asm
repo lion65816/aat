@@ -421,9 +421,12 @@ if !counterbreak_score
 endif
 
     ; Reset timer to the original value.
-    lda !ram_timer+0 : sta $0F31|!addr
-    lda !ram_timer+1 : sta $0F32|!addr
-    lda !ram_timer+2 : sta $0F33|!addr
+    stz $0F31|!addr ;\
+    stz $0F32|!addr ;| PSI Ninja edit: Workaround for the bug where levels with no timer "reset" to 200.
+    stz $0F33|!addr ;/
+;    lda !ram_timer+0 : sta $0F31|!addr
+;    lda !ram_timer+1 : sta $0F32|!addr
+;    lda !ram_timer+2 : sta $0F33|!addr
     rts
 
 ;=====================================

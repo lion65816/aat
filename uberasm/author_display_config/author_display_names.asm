@@ -27,7 +27,7 @@ db "PSI Ninja            " ; 019
 db "WitherSnow           " ; 01A
 db "Heraga               " ; 01B
 db "DJ Buckley           " ; 01C
-db "                     " ; 01D
+db "Big Brawler          " ; 01D
 db "DJ Buckley           " ; 01E
 db "Nao                  " ; 01F
 db "HatKid and SAJewers  " ; 020

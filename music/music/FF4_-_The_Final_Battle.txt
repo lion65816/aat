@@ -1,0 +1,208 @@
+;http://www.youtube.com/watch?v=FncYFCrkF5c
+
+#SPC
+{
+	#title	"The Final Battle"
+	#game	"Final Fantasy 4"
+}
+
+#amk 2
+$F4 $02
+
+$EF $FF $35 $35         ;      
+$F1 $06 $C0 $01         ;
+
+#0 t35 w185
+;MAIN1
+$e5 $00 $12 $30
+@4 v170 o4 y11 l16
+d4<b4>c4d+4d4f4d+4g4
+af+ga+a>c<a+>dd+cdfegf+a
+$DE $20 $13 $50
+(001)[y11 @4 g1 g16.g16r32g16g16. v150 g16r32 v130 g16 y20 $DC $60 $01 @3 $ED $7B $F0 v150 o3g32a+32>c+32e32c+32e32g32a+32g32a+32>c+32e32c+32e32g32a+32 v170]2
+y11 @4 o4
+a4>d8c8<a+8a8g8a+8>c4f8d+8d4.d8d+4^16c16d16d+16g4a+4a1
+(001)2
+y11 @4 $ED $79 $85 v115
+o5 r4 c1..
+/
+o4 @4 v170 g4a+4>d4f4e1<a4>c4e4g4f+1<
+y11
+[ v140 f+4f+4f+4f+8 v170  g32a32b32>d32e32r32d32r32e32r32f+32  r32g8f+8e8d32r32c8c32r32d32r32e32r32<]2
+v140 g4g4g4g4> v170
+[gf+gab8a32r32g2^16]2
+r8b8a8g8f8e8d8c8
+
+[br8.<br8.>br<br]
+$FA $02 $01 * $FA $02 $00 >
+[ v170 y12 br < v100 y8 br v170 y12 br < v100 y8 br>> v170 y11 br<br]
+$FA $02 $01 * $FA $02 $00
+a+8 {c+f+a+} b8>c8<{agf} a+8g8<{a+>cd+} a8 {fd+c}
+r1r1
+
+#1
+;MAIN2
+$e5 $00 $12 $30
+@4 v170 o3 y9 l16
+b4g+4a4>c4<b4>d4c4d+4
+f+d+egf+aga+>c<aa+>dc+ed+f+
+$DE $20 $13 $50
+(100)[@4 y9 v170 d1 c+16.c+16r32c+16c+16. v150 c+16r32 v130 c+16 r2 v170]2
+y10 @3 $ED $7B $F0 v150 o4 y8
+[a32f+32d32f+32]4 [a+32g32d32g32]4
+>[c32<a32f32a32]4 >[d32<a+32f32a+32]4
+>[d+32c32<g32>c32]8 [d32<a32f+32a32]8
+(100)2
+@4 $ED $79 $85 v115
+>r2f1.
+/
+$DF
+@1 $ED $79 $85 o4 v155 y7
+d8dd4^16d8dd8<a+>cdc+1
+e8ee4^16e8ee8cded+1
+@4 v170 y9 o3
+[ v140 b4b4b4b8> v170 e32f+32g32a32>c32r32<b32r32>c32r32d32r32e8d8c8<b32r32a8a32r32b32r32>c32r32<]2
+v140
+e4e4e4e4> v170
+[edef+g8f+32r32e2^16]2
+r8f8e8d8c8<b8a8g8
+>
+[fr8.<fr8.>fr<fr]
+$FA $02 $01 * $FA $02 $00 >
+[ v170 y8 fr < v100 y12 fr v170 y8 fr < v100 y12 fr>> v170 y9 fr<fr]
+$FA $02 $01 * $FA $02 $00
+f+8r8g8g8r8f8d+8r8f8
+
+[r1]100
+
+#2
+$f4 $03
+;BASS
+@8 $ED $7C $F0 v255 o2 l16
+d4<b4>c4d+4d4f4d+4g4
+af+ga+a>c<a+>dd+cdfegf+a<
+(200)[ggf+g+g+gag+]8
+ddddddaaggggaaa+a+ffffggaaa+a+a+a+ffff>
+ccccccddd+d+d+d+ddccddddcccc<a+a+a+a+aaaa
+(200)8 (201)[g>dg<f>cfd+<a+]4
+/
+o1 (201)2 o2g8.f8.e8.d8.c+8<a8
+$FA $02 $02  (201)2 $FA $02 $00 o2 a8.g8.f+8.e8.d+8<b8
+[b>b]8 [c>c<]8 <
+[b>b]8 [c>c<]8 [e>e<]8 [c>c<]7 <b>b [ae]7 gd f1<
+[bbbbbbbbbbbb>cccccccccccc]2
+f+8r8g8>c8<f8a+8d+8r8f8c8 [d]16 (201)2
+
+
+
+[r1]100
+
+#3
+;STRING
+$DE $30 $13 $30
+@1 $ED $79 $85 o3 v180 l16 y8
+d4<b4>c4d+4d4f4d+4g4
+af+ga+a>c<a+>dd+cdfegf+a
+(300)[ v180 a+1 a+16.a+16r32a+16a+16. v150 a+16r32 v130 a+16 r2]2
+v210 <a2a+2>c2d2<g2a+2a1
+(300)2 v150
+r2. o5 a+1^4
+/
+o4 v190
+[a+1g8a+8>c+8e8g8a+8>c+8e8<]
+$FA $02 $02 *
+$FA $02 $00
+[e4d4c+4d4<g1>]2 f+4e4d4e4< g2..f+8e2..d8c1
+
+[br8.<br8.>br<br]
+$FA $02 $01 * $FA $02 $00 >
+[ v170 y13 br < v100 y7 br v170 y13 br < v100 y7 br>> v170 y12 br<br]
+$FA $02 $01 * $FA $02 $00
+o4
+c+8r8d8g8c8f8<a+8r8>c8r8d4g4>c4f4a+1
+
+
+[r1]100
+
+#5
+;STRING
+$DE $30 $13 $30
+@1 $ED $79 $85 o2 v180 l16 y12
+b4g+4a4>c4<b4>d4c4d+4
+f+d+egf+aga+>c<aa+>dc+ed+f+
+(500)[ v180 g1 g16.g16r32g16g16. v150 g16r32 v130 g16 r2]2
+v210 <f+2g2a2a+2d+2g2f+1
+(500)2 v150
+r1 o6 d+1
+/
+o4 v190
+[g1e8g8a+8>c+8e8g8a+8>c+8<<]
+$FA $02 $02 *
+$FA $02 $00
+
+[b4b4b4b4e1>]2 d4c+4<b4>c+4< e2..d8c2..<b8a1
+>
+[fr8.<fr8.>fr<fr]
+$FA $02 $01 * $FA $02 $00 >
+[ v170 y7 fr < v100 y13 fr v170 y7 fr < v100 y13 fr>> v170 y8 fr<fr]
+$FA $02 $01 * $FA $02 $00
+o3
+a+8r8b8>e8<a8>d8<g8r8a8r8a4>d4g4>c4f1
+
+[r1]100
+
+#4
+;PERCUSSIONS
+v255 o3 l16
+r1^1
+[@29c16]12 [@29c32]8
+(400)[@21c8@29c8@21c16@21c16@29c8 @21c8@29c@21c8@21c@29c8]12
+[@21c8]16
+/
+[@21c8@29c16@21c8@21c16@29c8@21c8@29c16@21c8@21c16@29c8
+@29c@21c@21c@29c@21c@21c@29c@21c@21c@29c@21c@21c@29c@21c@29c32@29c32@21c]2
+(400)7
+r1
+[@21c8@29c8@21c@21c@29c8@21c8@29c8@21c8@29c8@21c@21c@29c8@29c@21c@29c32@29c32@21c]2
+@29c8@29c32@29c32@29c@29c8@29c8@29c32@29c32@29c@29c8@29c8@29c32@29c32@29c@29c8@29c32@29c32@29c
+[@21c8]16
+
+[r1]100
+
+#6
+@3 $ED $7B $F0 v30 o5
+$E8 $70 $E8
+[d32d+32]8
+$E8 $70 $1E
+*8
+
+$E8 $70 $E8
+*8
+$E8 $70 $1E
+*8
+r1
+
+$DE $30 $13 $30
+@1 $ED $79 $85 o4 v180
+(600)[d1 c+16.c+16r32c+16c+16. v150 c+16r32 v130 c+16 r2 v170]2
+[r1]4
+(600)2
+r1r1 $DF
+/
+v230
+[@23c8@22c8@23c8@22c8@23c8@22c8@23c8@22c8
+@23c8.@22c8.@23c8.@22c8.@23c8@22c8]2
+[@23c8@22c8]28 v255 @23c1 v230
+
+[@23c8@22c8]5 r4 [@23c8@22c8]5 r4
+@23c4.@23c4.@23c4@23c4 @23c1@23c1
+
+[r1]100
+
+#7
+r1^1^1
+v230
+[@23c8@22c8]48
+ v255 @23c1^1
+/
+[r1]100

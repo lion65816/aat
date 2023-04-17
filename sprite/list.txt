@@ -1,5 +1,6 @@
 00 ClassicGoomba.json
 01 piranha_venus.json
+02 big_boo_boss.cfg
 03 mad_thwomp.cfg
 04 catnip.json
 05 ColorYoshi.json

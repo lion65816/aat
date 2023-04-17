@@ -1,0 +1,135 @@
+#spc
+{
+#title "Puzzle (SMW)"
+#game "Layton & the curious Village"
+#author ""
+#length "auto"
+#comment "ported by Sariel"
+}
+
+#amk 2
+
+
+
+#instruments
+{
+@3	$DE $CC $B8 $03 $00;30 MARMIMBA ;FE 6A
+@2	$AF $B0 $B8 $03 $00;31 GLOCKEN 9F AD
+;	AE $2F $B8 $04 $00 G / $EE $6A P
+@9	$8F $C7 $B8 $02 $AD;32 PIANO
+@0	$AE $CC $B8 $06 $00 ; FLUTE
+@13	$AE $CC $B8 $03 $00 ; ELEC PIANO
+@16	$AF $B0 $B8 $03 $00
+}
+
+"zbd= @34 o3"
+"zph= @32 o3"
+"zas= @33 o3"
+
+"LO= q7a"
+"HI= q7f"
+
+$f4$02 ;SOFT LEGATO
+$ef$FF$18$18
+$f1$04$A0$01
+
+
+
+
+w185 t49
+
+#0 ;MAIN o-1
+@33 v135 y9
+$E5$00$08$20 ;TREMOLO
+$DE$08$0A$18 ;VIBRATO 18 0c 50
+r4/
+[[o4
+g+4f+4f4f+4
+f2<a+2
+>f4f+4>c+4d+4
+c4LO^4HI<a+4LO^4HI
+a+4g+4a+4>c4
+c+2<a+2
+>d+4f4c+4c4
+<a+4LO^2.HI]]2
+[[g+8f+8f8f+8d+8LO^4.HI
+g+8f+8f8f+8f8LO^4.HI]]4
+
+
+
+
+
+
+
+
+
+#1 ;MAIN LOWER
+@33 v135 y11
+$E5$00$08$20 ;TREMOLO
+$DE$08$0A$18 ;VIBRATO
+r4/
+[[o4
+g+4f+4f4f+4
+f2<a+2
+>f4f+4>c+4d+4
+c4LO^4HI<a+4LO^4HI
+a+4g+4a+4>c4
+c+2<a+2
+>d+4f4c+4c4
+<a+4LO^2.HI]]2
+[[o3 g+8f+8f8f+8d+8LO^4.HI
+g+8f+8f8f+8f8LO^4.HI]]4
+
+
+
+
+
+
+
+#2 ;SECOND
+@31
+$E5$00$08$20 ;TREMOLO
+$DE$08$0B$20 ;VIBRATO
+r4/
+v90
+[[o4 a+8f8>a+8<f8]]32
+v140
+g+8f+8f8f+8d+8r4.
+>d+8r8d+8f8f+8g+8a+8r8
+b8a+8g+8a+8f+8r4.
+f8r8f8f+8d8r4.
+d+8f8f+8r8g+8r4.
+d+8r8a+8f+8g+8f8d8r8
+d+8r4f8f+8r4.
+<a+8r8>f+8r8f8r4.
+r4.
+
+
+
+
+
+
+#3 ;MARIMBA
+@30 v165
+r4/
+(30)[o3 d+2a+2
+>d+2f2
+f+2<a+2
+>f2<a+2]
+o3 d+2>d+2
+c+2<a+2
+>c2<a+2
+>d+2<a+2
+(30)
+o3 d+2>f2
+d+2<a+2>
+d+2c+2
+<a+2>c2
+<d+2a+2
+>d+2f2
+f+2d+2
+f2<a+2
+d+2a+2
+>d+2d2
+d+2c2
+<b2a+2

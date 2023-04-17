@@ -1,0 +1,249 @@
+#define SURROUND 1
+
+#amk 2
+
+#spc
+{
+    #title   "Another Winter"
+    #game    "Seiken Densetsu 3"
+    #author  "Hiroki Kikuta"
+    #comment "Ported by KevinM"
+}
+
+#path "another-winter"
+
+#samples
+{
+    #optimized
+    "08.brr"
+    "09.brr"
+    "0a.brr"
+    "0b.brr"
+    "0c.brr"
+    "0d.brr"
+    "0e.brr"
+}
+
+#instruments
+{
+    "09.brr" $ff $ed $a0 $18 $00 ; @30 xylophone ($06 $02)
+    "0a.brr" $ff $ea $a0 $09 $b0 ; @31 staccato strings
+    "0b.brr" $ff $f5 $a0 $09 $00 ; @32 marimba ($09 $04)
+    "08.brr" $fe $e6 $a0 $08 $50 ; @33 pan flute ($04 $2c)
+    "0d.brr" $fa $e5 $a0 $09 $26 ; @34 choir
+    "0e.brr" $ff $cb $a0 $05 $7c ; @35 bell ($05 $72)
+    "0c.brr" $ff $eb $a0 $08 $3e ; @36 finger bass ($10 $86)
+}
+
+;==================;
+; Volume  /  Tempo ;
+;==================;
+   w120       t31
+
+;==================;
+;       Echo       ;
+;==================;
+$ef $3f $47 $b9
+$f1 $04 $38 $01
+$f5 $20 $0c $10 $0c $20 $0c $0c $0c
+
+;==================;
+;      Macros      ;
+;==================;
+"I09 = @30"
+"I0A = @31"
+"I0B = @32"
+"I08 = @33"
+"I0D = @34"
+"I0E = @35"
+"I0C = @36"
+
+"FadeL = $e8$09$ac $dc$12$12"
+"FadeR = $e8$09$ac $dc$12$02"
+"FadeV = $e8$09$8c"
+
+"FadeReset = $e8$00$00 $dc$00$00"
+
+#if SURROUND == 0 "s = 0,0" #endif
+#if SURROUND != 0 "s = 1,0" #endif
+
+;==================;
+;    Channel #0    ;
+;==================;
+#0 $f4$02 /
+(00)[I09 v172 o3 q7f
+r4 y10,s FadeV $dc$09$02 d=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=6
+d=3 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 r=9 FadeL ^=9 FadeV ^=6
+d=3 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9
+FadeV < c=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=3 >
+r4 y10,s FadeV $dc$09$12 d=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=6
+d=3 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 r=9 FadeR ^=9 FadeV ^=6
+d=3 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9
+FadeV < c=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=3 >
+FadeReset]2
+
+(01)[I0B v234 y8,s o2 l16
+q7f a q7c > e q7a a q77 e q7f g q7c d q7a > c q77 < b q7f g q7c d q7a e q77 a q7f c q7c d q7a g q77 < g]4
+(02)[q7f a q7c > c q7a f q77 c q7f e q7c < f q7a > c q77 > c q7f < b q7a d q7c e q77 g q7f f q7c e q7a d <] q77 b+
+(02) q77 b
+(01)2
+
+(99)[r2]8
+
+o3 (00)2
+
+o2 (01)4
+(02) q77 b+
+(02) q77 b
+(01)2
+
+[[
+[q7f a q7b > c q77 f q72 g q7f < a q7b > c q77 f q72 g <]2
+$fa$02$02 *2 $fa$02$00 ; [q7f b q7b > d q77 g q72 a q7f < b q7b > d q77 g q72 a <]2
+[q7f a q7c > e q7a a q77 e q7f g q7c d q7a e q77 > c q7f < b q7c d q7a e q77 a q7f g q7c < b q7a > c q77 g <]2
+]]2
+
+;==================;
+;    Channel #1    ;
+;==================;
+#1 /
+(10)[I09 v172 o3
+r8. y10,s FadeV $dc$09$02 g=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=6
+g=3 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9
+FadeV < a=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=6
+g=3 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9
+FadeV < g=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=6 >>
+r8. y10,s FadeV $dc$09$12 g=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=6
+g=3 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9
+FadeV < a=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=6
+g=3 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9
+FadeV < g=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=6 >>
+FadeReset]2
+
+(11)[I08 v185 y13,s o3
+d64 e4.... f+4 d4
+d64 c32. d16 e2..
+d64 e4.... f+4 d4
+d64 c32. < b16 g2^8 g16 a16 > c16 e16 a4. 
+> c16 < a16 b4 g4 a16 
+g16 a2^8 a16 g16 e16 d16 e2 
+e64 f+8... d4 c16 
+d16 c16 < b16 g2. >]
+
+(99)8
+
+(10)2
+
+o3 (11)
+o2 [[a16 b16 > c4 c16 d16 e8. d16 e16 d16 c8 < b16
+> d16 g4 g16 a16 b8. a16 b16 g16 d16 g16 e1^1 <]]2
+
+;==================;
+;    Channel #2    ;
+;==================;
+#2 /
+(20)[I09 v172 o3
+r8 y10,s FadeV $dc$09$02 b=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=6
+b=3 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9
+FadeV < b=9 FadeL ^=9 FadeV ^=6
+b=3 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=6
+b=3 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9
+FadeV < b=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 >>
+r8 y10,s FadeV $dc$09$12 b=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=6
+b=3 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9
+FadeV < b=9 FadeR ^=9 FadeV ^=6
+b=3 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=6
+b=3 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9
+FadeV < b=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 >>
+FadeReset]2
+
+(21)[I08 v200 y11,s o2
+g32 a2....
+a2 b4 g8... g=7
+a24 b16 a2.. e2 
+f+4 c16 d16 g16 b16 > c2 
+d4 < b16 > c16 d16 e16 f16 
+e16 f4^16 e16 f8. e16 f16 e16 c16 < b16 > c2 
+c64 d8... < b4 a16 
+b16 a16 g16 e2 d4]
+
+(99)8
+
+(20)2
+
+o2 (21)
+[[f16 g16 a4 a16 b16 > c8. < b16 > c16 < b16 a8 g16
+b16 > d4 d16 e16 g8. e16 g16 d16 < b16 > d16 < a1^1]]2
+
+;==================;
+;    Channel #3    ;
+;==================;
+#3 /
+(30)[I09 v172 o3
+r2.^16 y10,s FadeV $dc$09$02 c=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV r=9 FadeL ^=3
+c=6 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=6
+< d=3 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=3 >
+r2.^16 y10,s FadeV $dc$09$12 c=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV r=9 FadeR ^=3
+c=6 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=6
+< d=3 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=9 FadeV ^=9 FadeL ^=9 FadeV ^=9 FadeR ^=3 >
+FadeReset]2
+
+(31)[I0D v255 y10,s o1 $fa$03$58
+a1^1 a1^1 f1^1 a1^1 $fa$03$00]
+
+(99)8
+
+(30)2
+
+(31)
+
+I0E v245 y9,s o2
+[[f1 g1 a1 a1]]2
+
+;==================;
+;    Channel #4    ;
+;==================;
+#4 /
+I0A v255 y10,s o1 l4
+(40)[a a a a a a a a8 g8]2
+(41)[f f f f f f f f8 g8]
+(42)[a]8
+(40)2
+(41)
+(40)5
+(41)
+(42)8
+(40)2
+(41)
+(40)
+[[
+> c8. f8. a8 > c < f8 v185 c8 v255
+d8. g8. b8 > d < g8 v185 d8 < v255
+[a a a a8 g8]2
+]]2
+
+;==================;
+;    Channel #5    ;
+;==================;
+#5 /
+I0A v255 y10,s o2
+(50)[e v185 e f+ f+ g g f+ v255 e8 d8]2
+(51)[c v185 c d d < b b > c v255 c8 d8]
+(52)[e v185 e f+ f+ d d e e v255]
+(50)2
+(51)
+(53)[e v185 e f+ f+ d d g v255 e8 d8] 
+(50)4
+(51)
+(52)
+(50)2
+(51)
+(53)
+
+[[
+I0C o3 $fa$03$30
+f1 g1
+
+I0A o2 $fa$03$00
+e v185 e e e e e e e
+]]2

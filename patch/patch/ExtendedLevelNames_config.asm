@@ -59,7 +59,7 @@ NameData:
  db "    Moon Palace    "
  db "                   "
  ;Level 00F
- db "                   "
+ db "(WIP) Postgame Boss"
  db "                   "
  ;Level 010
  db "The Beginning      "
@@ -101,7 +101,7 @@ NameData:
  db "   DUCKMOUNTAIN    "
  db "                   "
  ;Level 01D
- db "                   "
+ db "  Temporal House   "
  db "                   "
  ;Level 01E
  db "Aileron Moonbounce "
