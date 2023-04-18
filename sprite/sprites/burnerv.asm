@@ -13,11 +13,13 @@
 ;(Small config by Rykon-V73)Edit the GFX here:
 ;=================================================================
 
-!SmallFireTile1 	=	$2C
+!SmallFireTile1 	=	$4C
+;!SmallFireTile1 	=	$2C
 !SmallFireTile2	=	$2E
 !MedFireTile1	=	$26
 !MedFireTile2	=	$28
-!MedFireTile3	=	$2A
+!MedFireTile3	=	$4A
+;!MedFireTile3	=	$2A
 !BigFireTile3	=	$24
 !BigFireTile2	=	$22
 !BigFireTile1	=	$20

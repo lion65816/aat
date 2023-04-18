@@ -15,7 +15,8 @@
 
 !SmallFireTile1	=	$00
 !SmallFireTile2	=	$02
-!MedFireTile1	=	$04
+!MedFireTile1	=	$4E
+;!MedFireTile1	=	$04
 !MedFireTile2	=	$06
 !MedFireTile3	=	$08
 !BigFireTile1	=	$0A
