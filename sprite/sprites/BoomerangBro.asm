@@ -266,10 +266,14 @@ Y_Disp:
     db $F0,$00,$08,$F8
 
 Tilemap:
+    db $A0,$C0
+    db $A0,$E0
     db $A2,$C2
     db $A2,$E2
-    db $A2,$C0
-    db $A2,$E0
+;    db $A2,$C2
+;    db $A2,$E2
+;    db $A2,$C0
+;    db $A2,$E0
 
 BoomerangFlip:
     db $89,$C9

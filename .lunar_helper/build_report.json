@@ -8,7 +8,7 @@
     "Levels/level 001.mwl": "3015bf352d5e3effe81fbd715b0ed5b6",
     "Levels/level 002.mwl": "412d0aecd6a4921f0d8fadd2848abce7",
     "Levels/level 003.mwl": "4fa805799baed9a17d1a9b19f7a3aff9",
-    "Levels/level 004.mwl": "843940871d483ecdf2a08f7b69e408c6",
+    "Levels/level 004.mwl": "bbfef9bf468af21b0b97860a82c4f10b",
     "Levels/level 005.mwl": "d4bedc1c5d9d331a3fafc1a953fe15c1",
     "Levels/level 006.mwl": "c09f3cf19b30ede267e5199c1caee264",
     "Levels/level 008.mwl": "7f3f6dfcca0e9fd1df6667ddef3f8e3c",
@@ -48,7 +48,7 @@
     "Levels/level 02C.mwl": "ef787f3b652fc7d3a73b0fca7fb7fcd7",
     "Levels/level 02D.mwl": "2d7598a2ff465f79ccbc74b1c72c51d3",
     "Levels/level 02E.mwl": "e18ca390d29b64b4f3a7ea69e2ad192f",
-    "Levels/level 02F.mwl": "56de5e6ceb880c5fcc6e1bc48e3719b4",
+    "Levels/level 02F.mwl": "28f6b1004841a0899844b82ab4d6a7c3",
     "Levels/level 030.mwl": "496552d85cd13dcb87c1af77ca9608c3",
     "Levels/level 031.mwl": "a6e4adc5b1ae9bbbddad43b76604e3a8",
     "Levels/level 040.mwl": "847c45fdfdb32d792d6c60835b098ae3",
@@ -289,7 +289,7 @@
     "Levels/level 1B9.mwl": "78ade176beae3e47fcf51d3f333bd622",
     "Levels/level 1BA.mwl": "c5db2710408335fdd2828399f942b805",
     "Levels/level 1C3.mwl": "0a499ef482d5f883edc431365245efef",
-    "Levels/level 1C8.mwl": "350074d9132393f9ab4581a3316116fa",
+    "Levels/level 1C8.mwl": "32e7556a3b1195e14ac98f9e536b3b29",
     "Levels/level 1CB.mwl": "fbaa956e41a1e8e6b433903a801a1057",
     "Levels/level 1CD.mwl": "58dd126c7d0087d7e009c383fe650cbf",
     "Levels/level 1CE.mwl": "50655f0a206c882b9fd83c6993ee9105",
@@ -14754,7 +14754,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "b4bfbe4f10bc82dcd88f544c29d332f3",
+      "hash": "9d5437953f118cd24942645f593aa429",
       "dependencies": []
     },
     {
@@ -14770,7 +14770,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "53a3ad2f63e26142989943ee086f61c4",
+      "hash": "72c1484fd88185ef31e3090fa3911148",
       "dependencies": []
     },
     {
@@ -22947,7 +22947,7 @@
     }
   ],
   "graphics": "f86fa856cfe75087c01adc04ed595148",
-  "exgraphics": "36708dba37f40e6c6b04b8c0a4c8a90e",
+  "exgraphics": "8094c233019bc1bbae8a42c1d8ecd1d5",
   "init_bps": "61f20c0bf37c0e86a7f517113a3e117f",
   "global_data": "41ef6e1e655cfd66da0e2e0f57e12441",
   "title_moves": null,

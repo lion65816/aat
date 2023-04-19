@@ -229,7 +229,9 @@ Graphics:
     db $F0,$00,$08,$F8
 
 .tilemap
-    db $A2,$C2,$A2,$E2,$A2,$C0,$A2,$E0
+    db $A0,$C0,$A0,$E0,$A2,$C2,$A2,$E2
+;    db $20,$40,$22,$42,$24,$44,$2B,$4B
+;    db $A2,$C2,$A2,$E2,$A2,$C0,$A2,$E0
 
 .hammerFlip
     db $47,$07
