@@ -86,8 +86,8 @@ NameData:
  db " matcha ampersand  "
  db "      avocado      "
  ;Level 018
- db "                   "
- db "                   "
+ db "      TRIPLE       "
+ db "      THREAT       "
  ;Level 019
  db "  Fishing Grounds  "
  db "                   "

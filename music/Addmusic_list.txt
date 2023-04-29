@@ -157,3 +157,5 @@ Locals:
 9F  FF4_-_The_Final_Battle.txt
 A0  Professor Layton & the curious Village - Puzzles.txt
 A1  Another Winter.txt
+A2  MegaTurricanStage31.txt
+A3  Bonk 3 - Round 4.txt

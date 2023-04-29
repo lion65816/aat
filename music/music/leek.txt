@@ -3,9 +3,6 @@
 ;leek thing for raocow idea thing
 ;prsnth1111
 
-$EF $80 $6D $2B 
-$F1 $0D $7D $00 
-
 #0 w255 t73
 
 
