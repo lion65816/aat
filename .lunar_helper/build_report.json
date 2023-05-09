@@ -101,9 +101,9 @@
     "Levels/level 06E.mwl": "ee348a1a5dd44534c6cc90296fc1ba00",
     "Levels/level 06F.mwl": "21af26c15ee420fc54c5f3fd5e4d3b54",
     "Levels/level 070.mwl": "d68e518d53771b029a6c9968317b4bf5",
-    "Levels/level 071.mwl": "df24083678a8ac0bc2ea806af0a0ba17",
-    "Levels/level 072.mwl": "4339e5c2dcbee1be0a589ed001764e2a",
-    "Levels/level 073.mwl": "abf011284204030a58416edc4860f4fa",
+    "Levels/level 071.mwl": "6fe1a373826663d82b4334c4e73022d9",
+    "Levels/level 072.mwl": "9d5a1b6d50f25531914a774deb8ccec9",
+    "Levels/level 073.mwl": "c5195e36b0dcdc98473b19514850216f",
     "Levels/level 074.mwl": "0a6d45967a64e59caf85a2660a09d9b1",
     "Levels/level 075.mwl": "6f226d9cfbb9f2d0b2557bbff44b8a47",
     "Levels/level 077.mwl": "d4ebf3121b780ab389cdea3cc44cb3bc",
@@ -116,10 +116,10 @@
     "Levels/level 07F.mwl": "c686bf3fcfa8b42b591b424d9ed2d782",
     "Levels/level 080.mwl": "f233e7a033e82e883d1d152d13219b42",
     "Levels/level 081.mwl": "8785a10edb07ed6f26f7a7720ac802ab",
-    "Levels/level 082.mwl": "20356b020b66f2da4d21e3c2f1b16fb4",
+    "Levels/level 082.mwl": "720e33306eb5f59cfeff4ceb5be4e6a6",
     "Levels/level 083.mwl": "8e3af5bec10b197bfff6a39dfb8c5b22",
-    "Levels/level 084.mwl": "d99dec0dd1148723238e4c4fc5b69ec3",
-    "Levels/level 085.mwl": "6ea146dcc477987baad6d466b0c936ee",
+    "Levels/level 084.mwl": "d5a2c664a8ed3342fa2488d742858a29",
+    "Levels/level 085.mwl": "0d95144be6ade4ef13cdff436974c8d0",
     "Levels/level 087.mwl": "b9de663a1f4522d6ac72f4f2b5935426",
     "Levels/level 08A.mwl": "4d70f23df9f933ff619c553a82271232",
     "Levels/level 08B.mwl": "733bf8b28a74c60f49bc3826a0bacd13",
@@ -189,7 +189,7 @@
     "Levels/level 108.mwl": "01985724c85745712e7ebfbfbeacec9d",
     "Levels/level 109.mwl": "db406b2bbecb9a499565f95b9a6e0191",
     "Levels/level 10A.mwl": "552ffa4895f646aa4312ee43f635b4ca",
-    "Levels/level 10B.mwl": "4ab0e20adc0a364f0359c042220b975e",
+    "Levels/level 10B.mwl": "28f8ce074337a11f9c43e196b6e5fd25",
     "Levels/level 10C.mwl": "31b884ce2e41e04e906300f2887de055",
     "Levels/level 10D.mwl": "e3bbf991574a70a935cdbd905df33101",
     "Levels/level 10E.mwl": "bec610ba5fb6388718d5e62de02f79e4",
@@ -221,7 +221,7 @@
     "Levels/level 128.mwl": "91a214598c0adc897694e3f86f8a08a0",
     "Levels/level 129.mwl": "accd479d2d2a26b33ef14fe80dfcc0b7",
     "Levels/level 12B.mwl": "2fa941837e22c26a7a7bb981fe48104c",
-    "Levels/level 12C.mwl": "9aa47d3a11e6bdf704f369ed97fb3af0",
+    "Levels/level 12C.mwl": "478dc8e72bfc72669715d9a90862da6a",
     "Levels/level 12D.mwl": "2f8a8d2c062e3354036d9089bf01a48c",
     "Levels/level 12F.mwl": "a4949166854a028c985e4a9bc556a12a",
     "Levels/level 130.mwl": "5fb56443b58030ecbcdd50fc0a7eaa96",
@@ -15958,7 +15958,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "0ccf0e2ac90026ad713eb75901b1006c",
+      "hash": "06fef6cca472b7fb0eb6907c3f1f9fa9",
       "dependencies": []
     },
     {
@@ -16924,7 +16924,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "a61062de8cdce3ff6a798b018b7f95eb",
+      "hash": "b6a20e78f82168dcafdf47c2b2cef3f0",
       "dependencies": []
     },
     {
@@ -23042,7 +23042,7 @@
     }
   ],
   "graphics": "f86fa856cfe75087c01adc04ed595148",
-  "exgraphics": "eba0c3294ac120db57ef59594abe471c",
+  "exgraphics": "1274ef1fd3577a95e3cf56ec5df78236",
   "init_bps": "61f20c0bf37c0e86a7f517113a3e117f",
   "global_data": "931bb62c375649241f50f353a7f3566e",
   "title_moves": null,

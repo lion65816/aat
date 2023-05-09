@@ -139,7 +139,8 @@ draw_sprite:
         STA $030A|!Base2,y              ; | |
         INC                             ; |/
         STA $030E|!Base2,y              ;/
-        LDA !15F6,x                     ;\  properties
+        ;LDA !15F6,x                     ;\  properties
+        LDA #$39                        ;\ PSI Ninja edit: Change Homing Volcano Lotus palette to red.
         STA $0303|!Base2,y              ; |\
         ORA #$40                        ; | | stem
         STA $0307|!Base2,y              ; |/
