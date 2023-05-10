@@ -84,6 +84,7 @@ level:
 0C5	hide_sb_uber.asm
 0C6	reloadRoom3.asm
 0D0	HDMAGradient.asm
+0D2	statusbarremove.asm
 0DD	freescrollbabey.asm
 0DE	statusbarremove.asm
 0E0	HDMAGradient.asm
@@ -132,6 +133,7 @@ level:
 13A	LevelIntro.asm
 13D	statusbarremove.asm
 13E	levelwarp.asm
+142	lowjump.asm
 15B	statusbarremove_CustomBar.asm
 15D	Gradient15D.asm
 15E	FilterYoshi.asm

@@ -44,7 +44,7 @@ NameData:
  db "   NO VEGETABLES,  "
  db "    ONLY TREES     "
  ;Level 00A
- db "                   "
+ db "   (WIP) SPECIAL   "
  db "                   "
  ;Level 00B
  db "  Siege at Castle  "
@@ -59,7 +59,7 @@ NameData:
  db "    Moon Palace    "
  db "                   "
  ;Level 00F
- db "(WIP) Postgame Boss"
+ db "                   "
  db "                   "
  ;Level 010
  db "The Beginning      "

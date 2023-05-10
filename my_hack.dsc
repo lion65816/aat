@@ -319,6 +319,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 37d7	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
 37d8	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
 37e0	0	A numbered platform from Yoshi's Island. You can jump on them only for a limited amount. Number of activations before explosion depends on the last digit of the Map16 number.
+38ee	0	Sand block from ASPE Mario, by a random ASPE contributor, extracted for Big Brawler.
 4103	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
 4104	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
 4106	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi

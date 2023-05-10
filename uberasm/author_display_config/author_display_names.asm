@@ -8,7 +8,7 @@ db "PSI Ninja            " ; 006
 db "                     " ; 007
 db "Lord Ruby            " ; 008
 db "Nao                  " ; 009
-db "                     " ; 00A
+db "MULTIPERSON          " ; 00A
 db "KobaBeach            " ; 00B
 db "Nao                  " ; 00C
 db "PSI Ninja            " ; 00D
@@ -93,4 +93,4 @@ db "Big Brawler          " ; 137
 db "Gbreezesunset        " ; 138
 db "Big Brawler          " ; 139
 db "Gbreezesunset        " ; 13A
-db "(Dev Level)          " ; 13B
+db "MULTIPERSON          " ; 13B
