@@ -1,6 +1,4 @@
 ; FreeRAM addresses.
-!DeathPointer = $0DDB|!addr	;\ Needed for custom death code.
-!HPSettings = $188A|!addr	;/
 !BlockSet = $140C|!addr		;> FreeRAM flag to tell us once a block has been set by the player.
 !Index = $18C5|!addr		;> Index into the Map16 block tables (16 bits).
 !Subject = $18C7|!addr		;> Starting address for "DEMO" ($18C7), "CATNIP" ($18C8), and "SHELL" ($18C9) property bytes.
@@ -11,21 +9,8 @@
 !Map16TableLow = $40C800	;\ Low byte contains the block number on a given Map16 page.
 !Map16TableHigh = $41C800	;/ High byte contains the Map16 page number.
 
-; Defines needed for the retry button (pressing Select).
-; Source: teleport_button.asm (part of Teleport Pack by Alcaro and MarioE)
-!controller	= $16		; Up, Down, Left, Right, B, X or Y, Start, Select => $16
-				; A, X, L, R => $18
-!mask		= $20		; Up = $08,	Down = $04,	Left = $02,	Right = $01
-				; B = $80,	X or Y = $40,	Select = $20,	Start = $10
-				; A = $80,	X = $40,	L = $20,	R = $10
-
 init:
 	; Processor flags: A is 8-bit, X/Y are 8-bit.
-
-	; Set up death pointer to the "respawn" label/address.
-	LDA.b #Retry     : STA !DeathPointer
-	LDA.b #Retry>>8  : STA !DeathPointer+1
-	LDA.b #Retry>>16 : STA !DeathPointer+2
 
 	LDA #$01		;\ Check the initial configuration of the level for active rules.
 	STA !BlockSet		;/
@@ -34,18 +19,6 @@ init:
 
 main:
 	; Processor flags: A is 8-bit, X/Y are 8-bit.
-
-	LDA #$40		;\ Set bit 6 to activate custom death code (via the Simple HP system). Needs to be done every frame!
-	STA !HPSettings		;/
-
-	LDA $9D			;\
-	ORA $13D4|!addr		;| If the game is paused, then don't check if the player is requesting a retry (pressing Select).
-	BNE +			;/
-	LDA !controller		;\
-	AND #!mask		;| If the player presses Select, then take a death and retry the current room (if lives are greater than 5).
-	BEQ +			;|
-	JML Retry		;/
-+
 
 ;	LDA $1497|!addr		;\ If Demo's flashing animation is active, then do not process the rules.
 ;	BEQ +			;| Not sure if this is needed for the below code block to work.
@@ -590,77 +563,3 @@ SwitchBlue:
 	dw $00F4,$00F5,$00F6,$00F7	;> Map16 tiles for the Blue Switch (in order: top left, top right, bottom left, bottom right).
 SwitchNull:
 	dw $1620,$1621,$1622,$1623	;> Map16 tiles for the Null Switch (in order: top left, top right, bottom left, bottom right).
-
-;;;;;;;;;;
-; Custom death code implementation copied mostly from SimpleHP6.asm.
-;;;;;;;;;;
-
-Retry:
-	LDA #$01 : STA $1DFB|!addr	;> Restore, set death music
-	LDA #$FF			;> Restore, some music thing
-	JML $00F611			;> Go back to regular death code. Let player farm lives/handle game over.
-;    REP #$20                        ;\
-;    LDA $010B|!addr                 ;| Load the level/sublevel number.
-;    CMP #$0121                      ;| If the current level number is 121, then don't actually kill the player (in case Select is pressed).
-;    BEQ cancel_death                ;|
-;    CMP #$01D2                      ;| Same for the midpoint room.
-;    BEQ cancel_death                ;|
-;    SEP #$20                        ;/ Else, check if the player has more than five lives or not.
-
-;    ;Note: Bank isn't set automatically. But this code can use any bank with RAM access.
-;    LDA $6DBE : CMP #$05 : BCS +    ;Only run custom death code when the player has more than five lives.
-    
-;regular_death:
-;    SEP #$20
-;    LDA #$01 : STA $7DFB            ;Restore, set death music 
-;    LDA #$FF                        ;Restore, some music thing
-;    JML $00F611                     ;Go back to regular death code. Let player farm lives/handle game over. 
-;+   DEC $6DBE                       ;Decrease lives
-;    SEP #$20
-    
-;    ;Death counter
-;    PHX
-;    LDA $610A                       ;Current save slot
-;    ASL : CLC : ADC $610A           ;Triple
-;    TAX                             ;Use as index
-;    LDA $41C7ED,x                   ;Load death counter (lowest byte)
-;    INC                         ;o:z
-;    STA $41C7ED,x                   ;Store incremented counter
-;    BNE +                       ;i:z;If the result was zero, we've wrapped around, and should increment the high bytes too
-;    REP #$20
-;    LDA $41C7EE,x                   ;Load death counter (high bytes)
-;    INC 
-;    STA $41C7EE,x                   ;Store incremented counter
-;    SEP #$20
-;+   PLX
-    
-;    ; Most of the following is copied from the %teleport GPS macro.
-;    REP #$20
-;    LDA $010B|!addr                 ;> Load the level/sublevel number.
-
-;    PHX
-;    PHY
-;    PHA
-
-;    STZ $88
-;    SEP #$30
-
-;    JSL $03BCDC|!bank
-
-;    PLA
-;    STA $19B8|!addr,x
-;    PLA
-;    ORA #$04
-;    STA $19D8|!addr,x
-
-;    LDA #$06
-;    STA $71
-
-;    LDA #$20                        ;\ Play the conventional "Quick Retry" death SFX.
-;    STA $1DF9|!addr                 ;/
-
-;    PLY
-;    PLX
-;cancel_death:
-;    SEP #$20
-RTL

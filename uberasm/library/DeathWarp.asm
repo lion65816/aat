@@ -65,11 +65,11 @@ PaletteTable:
 	dw $0040,$1CE5,$2569,$25CD,$1E53,$3318, $0000,$20C6,$294A,$2DAE,$2654,$4319, $0000,$0433,$0458,$095B,$0E1C,$0EFD
 	dw $0000,$24C5,$2D49,$2DAD,$2253,$3F18, $0000,$24C5,$2D49,$2DAD,$2253,$3F18, $0000,$0016,$001B,$015F,$021F,$031F
 
-; Defines needed for the retry button (pressing Select).
+; Defines needed for the retry button (pressing L+R).
 ; Source: teleport_button.asm (part of Teleport Pack by Alcaro and MarioE)
-!controller	= $16		; Up, Down, Left, Right, B, X or Y, Start, Select => $16
+!controller	= $17		; Up, Down, Left, Right, B, X or Y, Start, Select => $16
 				; A, X, L, R => $18
-!mask		= $20		; Up = $08,	Down = $04,	Left = $02,	Right = $01
+!mask		= $30		; Up = $08,	Down = $04,	Left = $02,	Right = $01
 				; B = $80,	X or Y = $40,	Select = $20,	Start = $10
 				; A = $80,	X = $40,	L = $20,	R = $10
 
@@ -111,7 +111,8 @@ main:
 	BNE +				;/
 	LDA !controller			;\
 	AND #!mask			;| If the player presses Select, then take a death and exit to the overworld.
-	BEQ +				;|
+	CMP #!mask			;|
+	BNE +				;|
 	LDA #$01			;|
 	STA !RetryRequested		;|
 	JML respawn			;|

@@ -194,7 +194,8 @@
 ; It could be handy if you disabled the exit option, but still want a quick way of exiting the level.
 ; By default it's "Select", set !exit_button = $00 to disable this.
 ; For more information on these values, see $7E0016 on the SMWCentral RAM Map.
-    !exit_button = %00100000
+    ;!exit_button = %00100000
+    !exit_button = $00
     !exit_button_address = $16
 
 ; X/Y position of the first tile in the prompt (the cursor on the first line).

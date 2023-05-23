@@ -1,9 +1,9 @@
 init:
+	LDA #$01
+	STA $140B|!addr
 	JSL RequestRetry_init
-	JSL BabaBlocks_init
 	RTL
 
 main:
 	JSL RequestRetry_main
-	JSL BabaBlocks_main
 	RTL

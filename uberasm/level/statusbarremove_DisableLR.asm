@@ -5,3 +5,7 @@ init:
 main:
 	JSL DisableLR_main
 	RTL
+
+load:
+	JSL statusbarremove_load
+	RTL
