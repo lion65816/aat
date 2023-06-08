@@ -111,6 +111,11 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 37D8:130 spin-jump-bounce-damage.asm
 37E0:130 numbered_platform_small.asm
 38EE:130 sandblock.asm
+390C:25  spinyblock14B.asm
+391C:25  spinyblock14B.asm
+390B:25  spinyblock14B.asm
+391B:25  spinyblock14B.asm
+393F:25  1up.asm
 4103:130 SolidWater.asm
 4104:130 SolidWater.asm
 4129:1E2 SlopeWater.asm
