@@ -364,6 +364,41 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 61dd	0	conveyer move right fast
 61de	0	conveyer move right fast
 61df	0	conveyer move right fast
+6262	0	A door that uses a specific screen exit.
+6263	0	A door that uses a specific screen exit.
+6272	0	A door that uses a specific screen exit.
+6273	0	A door that uses a specific screen exit.
+6282	0	A door that uses a specific screen exit.
+6283	0	A door that uses a specific screen exit.
+6292	0	A door that uses a specific screen exit.
+6293	0	A door that uses a specific screen exit.
+62a1	0	A block that acts like a stationary Swooper.
+62a4	0	A block that is passable only when the player has all (5) dragon (yoshi) coins.
+62b1	0	A block that acts like a stationary Swooper.
+62c0	0	A block that acts like a mid-air suspended Spiny.
+62c1	0	A block that acts like a mid-air suspended Spiny.
+62c2	0	A block that acts like a mid-air suspended Spiny.
+62d0	0	A block that acts like a mid-air suspended Spiny.
+62d1	0	A block that acts like a stationary Swooper.
+62d2	0	A block that acts like a mid-air suspended Spiny.
+62e0	0	A blue P-Switch which can be activated from above/below and switches to the next tile.
+62e2	0	A block that acts like a stationary Swooper.
+62f0	0	same as the mushroom sprite.
+62f1	0	Same as the flower sprite.
+62f2	0	Same as the feather sprite.
+62f7	0	A block that will act like tile 25 for Mario
+6333	0	Spawns enemy sprite $15.
+63ce	0	Changes Yoshi's palette to C
+63df	0	Changes Yoshi's palette to D
+63ef	0	Changes Yoshi's palette to B
+63ff	0	Changes Yoshi's palette to A
+6406	0	Teleport when sprite $A4 touches the block
+6426	0	A solid mushroom block that can be picked up. Requires the sprite portion.
+6433	0	
+643b	0	
+644d	0	
+644e	0	
+644f	0	
 703d	0	
 71f0	0	
 7203	0	

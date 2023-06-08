@@ -1,0 +1,45 @@
+#amk 2
+#instruments
+{
+	@13 $FE $6D $B8 $03 $00 ; @30
+	@13 $FE $71 $B8 $03 $00 ; @31
+	@0 $F6 $EC $B8 $03 $00 ; @32
+}
+#spc
+{
+	#author    "Milon Luxy"
+	#title     "Lone Moments"
+	#length    "0:50"
+}
+
+$EF$0F$20$20
+$F1$07$43$00
+
+#0 w224 t64
+o3 v224 l4 y11
+@30 g1
+/@31 a>def2def<
+a>def2gfe
+@30 c1r2@31 <a+2
+@30 a1r@31 gaf
+g>de@30 f1r
+@31 <g>def2ef2
+@30 e1^4r2^4
+@31 g2f2g2e2
+
+#1
+o2 v224 l2 y9 r1
+/@31 a>agfdefe
+@30 c1^1c1^2@31 <f
+@30 g1^2@31 a@30 a+1^2@31 >d
+@30 c1^2re1c1
+
+#2
+o4 v104 r1
+/@32 f1^1f1^1e1^1e1^1
+d1^1d1^1g1^1c1^1
+
+#3
+o3 v104 r1
+/@32 a1^1a1^1g1^1g1^1
+f1^1f1^1g1^1e1^1

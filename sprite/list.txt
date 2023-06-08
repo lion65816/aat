@@ -175,6 +175,7 @@ B6 nut.cfg
 B7 climbing_net_door.json
 B8 InfoBox.cfg
 B9 baba_block.cfg
+BA mushroom_block.cfg
 BB Carryable_Football.cfg
 BD thunderlakitu.cfg
 BE mechakoopa_but_awesome.json

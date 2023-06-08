@@ -13,7 +13,7 @@ db "KobaBeach            " ; 00B
 db "Nao                  " ; 00C
 db "PSI Ninja            " ; 00D
 db "EllenHouraisan       " ; 00E
-db "                     " ; 00F
+db "Bumpty               " ; 00F
 db "4season              " ; 010
 db "Catabo               " ; 011
 db "Catabo               " ; 012
@@ -76,7 +76,7 @@ db "4season              " ; 126
 db "Scarfley             " ; 127
 db "Daizo                " ; 128
 db "4season              " ; 129
-db "                     " ; 12A
+db "RoyKirbs             " ; 12A
 db "Bumpty               " ; 12B
 db "levelengine          " ; 12C
 db "tangy                " ; 12D

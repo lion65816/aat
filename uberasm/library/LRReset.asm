@@ -8,7 +8,7 @@
 
 ; Flags for how to reset:
 !resetLR        =   1   ; Set to 0 to not reset on L+R
-!resetDeath     =   1   ; Set to 0 to not reset on death
+!resetDeath     =   0   ; Set to 0 to not reset on death
 
 ; How long to play play the death animation for before reloading. Max #$30
 !timeToPlayDeathSFX     =   $1B

@@ -155,6 +155,41 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 61DD:130 conveyer move right fast.asm
 61DE:130 conveyer move right fast.asm
 61DF:130 conveyer move right fast.asm
+6262:25 screentele_door34.asm
+6263:25 screentele_door34.asm
+6272:25 screentele_door34.asm
+6273:25 screentele_door34.asm
+6282:25 screentele_door35.asm
+6283:25 screentele_door35.asm
+6292:25 screentele_door35.asm
+6293:25 screentele_door35.asm
+62A1:25 swooperblock.asm
+62A4:25 PassableOnAllDragonCoins.asm
+62B1:25 swooperblock.asm
+62C0:25 spinyblock.asm
+62C1:25 spinyblock.asm
+62C2:25 spinyblock.asm
+62D0:25 spinyblock.asm
+62D1:25 swooperblock.asm
+62D2:25 spinyblock.asm
+62E0:130 p_switch_blue.asm
+62E2:25 swooperblock.asm
+62F0:25 Mushroom.asm
+62F1:25 Flower.asm
+62F2:25 Feather.asm
+62F7:130 sprite_solid.asm
+6333:129 FishBlock.asm
+63CE:25 yoshi_color_red.asm
+63DF:25 yoshi_color_green.asm
+63EF:25 yoshi_color_blue.asm
+63FF:25 yoshi_color_yellow.asm
+6406:25 spriteteleport.asm
+6426:130 MushBlk.asm
+6433:25 Teleport35.asm
+643B:106 Teleport39.asm
+644D:25 ClapSE.asm
+644E:25 ClapSE.asm
+644F:25 ClapSE.asm
 703D:25 ScreenExitTeleport.asm
 71F0:25 TeleportBlockB3.asm
 7203:25 SwimSE.asm

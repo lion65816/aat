@@ -159,3 +159,5 @@ A0  Professor Layton & the curious Village - Puzzles.txt
 A1  Another Winter.txt
 A2  MegaTurricanStage31.txt
 A3  Bonk 3 - Round 4.txt
+A4  Town Where the West Wind Blows.txt
+A5  Lone_Moments.txt

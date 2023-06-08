@@ -59,7 +59,7 @@ NameData:
  db "    Moon Palace    "
  db "                   "
  ;Level 00F
- db "                   "
+ db " Lost Souls Dorms  "
  db "                   "
  ;Level 010
  db "The Beginning      "
@@ -248,7 +248,7 @@ NameData:
  db "Super Easy Going   "
  db "                   "
  ;Level 12A
- db "                   "
+ db "   Twilight Tofu   "
  db "                   "
  ;Level 12B
  db "Tap Dancing Lessons"
