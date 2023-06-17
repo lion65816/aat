@@ -129,7 +129,7 @@ Locals:
 83  A Super Mario Thing - Iru.txt
 84  Electric Talk.txt
 85  FF6 - Quiet Beach.txt
-86  pinkbeard.txt
+86  sinking_ship.txt
 87  Final Fantasy V - Pirates Ahoy!.txt
 88  OutOfThisDimension.txt
 89  DrawciaSoul.txt
