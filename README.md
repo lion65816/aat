@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-Extract Lunar Magic from lm331.zip into lm331 directory (so it can be used with [Lunar Monitor](#export-resources-lunar-monitor) and [Lunar Helper](#import-resources-lunar-helper)).
+Extract Lunar Magic from lm333.zip into lm331 directory (so it can be used with [Lunar Monitor](#export-resources-lunar-monitor) and [Lunar Helper](#import-resources-lunar-helper)).
 
 - **Type in the path to the main project directory in `lunar-helper\config_user.txt`** as follows `dir = C:\path\to\aat` (see `example_config_user.txt`).
 - Have a clean SMW ROM in the main project directory and name it ``SMW_clean.smc``.
@@ -39,7 +39,7 @@ The following steps assume you have downloaded the new base ROM in a separate di
 #### Export resources (Lunar Monitor)
 
 Lunar Monitor lets you export resources automatically upon saving.
-To inject Lunar Magic with Lunar Monitor, simply move Lunar Magic to the lm331 directory (where lunar-monitor.dll, lunar-monitor-injector.exe and usertoolbar.txt are located - they have to be in the same directory).
+To inject Lunar Magic with Lunar Monitor, simply move Lunar Magic to the lm333 directory (where lunar-monitor.dll, lunar-monitor-injector.exe and usertoolbar.txt are located - they have to be in the same directory).
 
 #### Import resources (Lunar Helper)
 

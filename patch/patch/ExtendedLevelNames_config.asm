@@ -299,5 +299,5 @@ NameData:
  db "Use Of A Goal Posts"
  db "                 **"
  ;Level 13B
- db "the land of        "
- db "          sweetches"
+ db "Final Castle       "
+ db "          Test Room"
