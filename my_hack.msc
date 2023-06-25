@@ -38,8 +38,8 @@
 13	1	Welcome
 14	0	Egg is rescued
 14	1	Egg is rescued
-15	0	Title
-15	1	Title
+15	0	Menu
+15	1	Menu
 16	0	Valley of Bowser Appears
 16	1	Valley of Bowser Appears
 17	0	Overworld
@@ -318,3 +318,5 @@ A4	0	Town Where the West Wind Blows
 A4	1	Town Where the West Wind Blows
 A5	0	Lone Moments
 A5	1	Lone Moments
+A6	0	Great Battleship (Stage 4)
+A6	1	Great Battleship (Stage 4)
