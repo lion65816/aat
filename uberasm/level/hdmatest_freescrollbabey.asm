@@ -1,6 +1,8 @@
 init:
 	JSL Layer2Horz_init
 	JSL Layer1Vert_init
+	LDA #$01		;\ Set flag for free vertical scroll.
+	STA $140B|!addr		;/
 	RTL
 	
 
