@@ -333,8 +333,8 @@
     "Levels/level 1DC.mwl": "506c17726a3344fe4d897f19b0a0b806",
     "Levels/level 1F4.mwl": "6161f029e5e4baf7d00f615968ef60d0",
     "Levels/level 1F5.mwl": "d58ecc8358ac4fe44985490b0f7404d7",
-    "Levels/level 1F6.mwl": "df076f5623c4a8604a548057230b143b",
-    "Levels/level 1F7.mwl": "d5cae4eaabea98ddf97d50f2da818372",
+    "Levels/level 1F6.mwl": "b5222cf410656b53a30810ae25447923",
+    "Levels/level 1F7.mwl": "a9537ae25fa71db232b40cdc9cea1ce9",
     "Levels/level 1F8.mwl": "f075ccc9b72541905ce057013d9702f2",
     "Levels/level 1F9.mwl": "842974f766353e7cfb2a8ee80dcf35e9",
     "Levels/level 1FA.mwl": "82e637c8a28c57adff0df3a1dc2ad796",
@@ -342,7 +342,7 @@
     "Levels/level 1FC.mwl": "7409ee01db140e18e0ef08b38aa96cc3",
     "Levels/level 1FD.mwl": "43d3937165597aaeed3351fd49cd3776",
     "Levels/level 1FE.mwl": "3e55ede3222b9f5fbb6d0675f615ed1a",
-    "Levels/level 1FF.mwl": "6d15de14550d69b0b62b2430ff723162"
+    "Levels/level 1FF.mwl": "a42e61c9f10c0d453a70b27618dc1549"
   },
   "dependency_graph": [
     {
@@ -23791,12 +23791,12 @@
     }
   ],
   "graphics": "00eb89f8b61b818e0e0e117f6c4e0253",
-  "exgraphics": "8ee344aefc3d216444513795e7757803",
+  "exgraphics": "1c7b7b50316a342444813554964cbde2",
   "init_bps": "61f20c0bf37c0e86a7f517113a3e117f",
   "global_data": "f29eb5e86bd0640c50947154154146de",
   "title_moves": "406bb767fcbba3726d3c6b29d7133924",
   "shared_palettes": "f7cda3026e92cd4db1573a335f8e2878",
-  "map16": "b460a9d9dd5cfef91af2b92e8554551c",
+  "map16": "68265f3f9feb4c31f80612ca821faaa0",
   "gps_options": null,
   "pixi_options": "-l sprite/list.txt",
   "uberasm_options": null,
