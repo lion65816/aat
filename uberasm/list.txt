@@ -143,6 +143,7 @@ level:
 140	RequestRetry_freescrollbabey.asm
 141	statusbarremove.asm
 142	lowjump.asm
+14B	DisableLR.asm
 15B	statusbarremove_CustomBar.asm
 15D	Gradient15D.asm
 15E	FilterYoshi.asm
