@@ -7,7 +7,7 @@ verbose: on
 level:
 000	bonusmusicrng.asm
 002	cityofgulpgulp.asm
-004	BG_AutoScroll4.asm
+004	LevelIntro.asm
 005	LevelIntro.asm
 006	LevelIntro.asm
 008     008.asm
@@ -17,9 +17,9 @@ level:
 00E	LevelIntro.asm
 00F	ReverseBG.asm
 010	LevelIntro.asm
-013	LV13.asm
+013	LevelIntro.asm
 015	statusbarremove_LevelIntro.asm
-016	FilterYoshi_freescrollbabey.asm
+016  LevelIntro.asm
 01A	PressuredWater.asm
 01B	1B.asm
 01F	LevelIntro.asm
@@ -39,7 +39,9 @@ level:
 038	BG_AutoScroll4.asm
 039	BG_AutoScroll4.asm
 042	watertides.asm
+043  LevelIntro.asm
 044	FilterYoshi.asm
+051  PitCode.asm
 052	Thwompire52.asm
 053	PressuredWater.asm
 054	PressuredWater.asm
@@ -120,6 +122,7 @@ level:
 11A	LevelIntro.asm
 11B	LevelIntro.asm
 11C	LevelIntro.asm
+11D  LevelIntro.asm
 11E	LevelIntro.asm
 122	LevelIntro.asm
 123	freescrollbabey.asm
@@ -127,6 +130,7 @@ level:
 126	LevelIntro.asm
 128	statusbarremove_CustomBar.asm
 129	LV129.asm
+130  LevelIntro.asm
 12B	Gradient12B.asm
 12C	DisableLeft.asm
 12F	Gradient12F.asm
@@ -144,6 +148,9 @@ level:
 141	statusbarremove.asm
 142	lowjump.asm
 14B	DisableLR.asm
+155  BG_AutoScroll4.asm
+156	LV13.asm
+157	FilterYoshi_freescrollbabey.asm
 15B	statusbarremove_CustomBar.asm
 15D	Gradient15D.asm
 15E	FilterYoshi.asm
@@ -157,7 +164,7 @@ level:
 166	FilterYoshi.asm
 167	FilterYoshi.asm
 168	lvlfilter.asm
-169	FilterYoshi.asm
+169	DisableLR.asm
 16A	FilterYoshi.asm
 16B	FilterYoshi.asm
 16C	FilterYoshi.asm

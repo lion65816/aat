@@ -1,4 +1,9 @@
 ;gamemode 14 (level).
+
+init:
+	STZ $1B96|!addr
+	RTL
+
 main:
 	;You can have codes (including JSL to library codes, just like the one below here) between the main label (above) and the code below here, if you want
 	;third-party stuff here.
