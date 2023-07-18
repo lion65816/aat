@@ -87,6 +87,8 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 1FFC:25 screentele_door.asm
 2093:130 question_block.asm
 2300:25 noyoshiintro.asm
+2D8F:130 boost_up.asm
+2D8C:130 SpinJumpPass.asm
 3300:25 BlkMus1.asm
 3301:25 no_yoshi.asm
 3578:130 spin-jump-bounce-damage.asm

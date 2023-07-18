@@ -69,6 +69,7 @@ level:
 085	DisableRight.asm
 087     008.asm
 090	Gradient90.asm
+097  freescrollbabey.asm
 0A0	DisableLR.asm
 0AA	freescrollbabey.asm
 0B0	DisableLR.asm
@@ -147,7 +148,10 @@ level:
 140	RequestRetry_freescrollbabey.asm
 141	statusbarremove.asm
 142	lowjump.asm
+143	aquarium.asm
+14C	solved.asm
 14B	DisableLR.asm
+151  151.asm
 155  BG_AutoScroll4.asm
 156	LV13.asm
 157	FilterYoshi_freescrollbabey.asm

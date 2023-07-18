@@ -296,6 +296,8 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1ffc	0	A door that uses a specific screen exit.
 2093	0	Spawns sprite $BA.
 2300	0	noyoshiintro.asm
+2d8c	0	Can't pass unless spinjumping
+2d8f	0	This block boosts the player upwards.
 3300	0	BlkMus1.asm
 3301	0	A block which destroys (Baby) Yoshi if touched.
 3578	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
