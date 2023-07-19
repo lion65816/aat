@@ -90,7 +90,7 @@ global_data = resource\global_data.bps
 -- that will hold the overworld, ex global animations, credits, intro screen, and title moves.
 -- You will work on these things from the built output ROM in Lunar Magic, 
 -- then use the "S - Save" option in Lunar Helper to save your changes to this BPS file so that they appear in your next build.
- title_moves = resource\smwtitledemo.zst
+ title_moves = resource\smwtitledemo.000
 
 build_order
 [
