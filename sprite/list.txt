@@ -56,7 +56,7 @@
 37 thwomp_up.json
 38 rotating-gray-platform-pendulum.json
 39 phanto.json
-3A pendu_disc_good.json
+3A roto_disc_vanilla.cfg
 3B lotus_down.json
 3C gusty.json
 3D goonie.json

@@ -357,6 +357,31 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 4a21	0	Solid if the corresponding switch is activated.
 4a22	0	Solid if the corresponding switch is activated.
 5440	0	Teleports the player to level 1CB.
+55d0	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55d1	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55d2	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55d3	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55d4	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55d5	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55d6	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55d7	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55e0	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55e1	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55e2	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55e3	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55e4	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55e5	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55e6	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55e7	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55f0	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55f1	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55f2	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55f3	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55f4	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55f5	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55f6	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55f7	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+55f8	0	A block that will act like tile 25 for Mario
 60dd	0	StickyBlock.asm
 60de	0	StickyBlock.asm
 60df	0	StickyBlock.asm
