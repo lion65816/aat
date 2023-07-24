@@ -1,0 +1,105 @@
+#amk 2
+
+#spc
+{
+    #title   "Ratchet Ambience"
+    #game    "Radical Dreamers"
+    #author  "Yasunori Mitsuda"
+    #comment "Ported by KevinM"
+    #length  "0:14"
+}
+
+#path "radical-dreamers"
+
+#samples
+{
+    #default
+    "Electricity.brr"
+    "Open Hi-Hat.brr"
+    "Sine-like Synth.brr"
+    "Tambourine.brr"
+    "Kick.brr"
+}
+
+#instruments
+{
+    "Electricity.brr"     $ff $e0 $b8 $02 $46 ; @30
+    "Open Hi-Hat.brr"     $ff $e0 $b8 $04 $8c ; @31
+    "Sine-like Synth.brr" $ff $e0 $b8 $08 $00 ; @32
+    "Tambourine.brr"      $f8 $e0 $b8 $04 $8c ; @33
+    "Kick.brr"            $ff $fe $b8 $0b $78 ; @34
+    "Electricity.brr"     $ff $e0 $b8 $01 $23 ; @35
+}
+
+;==================;
+; Volume  /  Tempo ;
+;==================;
+   w190       t53
+
+; Original volumes: w200
+
+;==================;
+;       Echo       ;
+;==================;
+$ef $2a $3c $3c
+$f1 $04 $28 $01
+$f5 $7e $00 $00 $00 $00 $00 $00 $00
+
+;==================;
+;      Macros      ;
+;==================;
+"I00_1 = @30"
+"I20   = @31"
+"I02   = @32"
+"I21   = @33"
+"I22   = @34"
+"I00_2 = @35"
+
+;==================;
+;    Channel #0    ;
+;==================;
+#0 $fa$00$2a
+I00_2 v110 o2
+[[ [
+$f4$01 q79 y9 g=21 $dd$00$60 a+ ^=21 q7f y10 ^=42 q79 y9 ^=12
+a+=15 $dd$00$30 >c+ ^=15 q7f y10 ^=18
+c+=12 $dd$00$30 <a+ ^=12 q79 y9 ^=24
+a+=9 $dd$00$c0 a ^=9 q7f y10 ^=42 q79 y9 ^=42 q7f y10 ^=42 q79 y9 ^=42 q7a ^=6
+a=2 $dd$00$c0 g+ ^=2 q7f y10 ^=10 q7a y9 ^=10 q7f y10 ^=10 q7a y9 ^=10 q7f y10 ^=10 q7a y9 ^=10 q7f y10 ^=10 q7a y9 ^=10 q7f y10 ^=10 q7a y9 ^=10 q7f y10 ^=10 q7a y9 ^=10 q7f y10 ^=10 q7a y9 ^=10 q7f y10 ^=10 q7a y9 ^=10 q7f y10 ^=10 q7a y9 ^=10 q7f y10 ^=8
+g+=2 $dd$00$c0 g q7a y9 ^=190 $f4$01
+]105 ]]43
+
+;==================;
+;    Channel #1    ;
+;==================;
+#1
+I20 v125 y10 o1
+[[ [d=85 q7f ^=1]210 ]]192
+
+;==================;
+;    Channel #2    ;
+;==================;
+#2
+I02 v0 o4
+[ [[$f4$01 $f4$09 c48 $ed$7f$e0 a64 $f4$01 ^64 $f4$01 $f4$09 < f48 > $ed$7f$e0 d=35 $f4$01 ^=35]]172 ]240
+
+;==================;
+;    Channel #3    ;
+;==================;
+#3
+I21 v205 y10 o5
+$fa$02$0c *240
+
+;==================;
+;    Channel #4    ;
+;==================;
+#4
+I00_1 v85 y9 o6
+[[ [$e5$00$ff$f8 d+8. $e5$00$80$f8 ^=35 q7f ^=1]215 ]]224
+
+;==================;
+;    Channel #5    ;
+;==================;
+#5
+I22 v125 y10 o4 h-4
+[[ [c16 c16 c24 c24 c24 c24 c24 c32 c32 c32 c32 c32 c32 c48 c48 c48 c48 c48 c48 c48 c48 c48 c64 c64 c64 c64 c64 c64 c64 c64 c64 c48 c48 c48 c48 c48 c32 c32 c32 c32 c32 c32 c32 c24 c24 c24 c24 c24 c16 c16 c16 c16 c16 c16 c16 c12 c8 c8 c6 c8 c=11]168 ]]43

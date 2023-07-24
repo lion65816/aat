@@ -11,13 +11,20 @@ main:
 	JSL Layer1Vert_main
 	;JSL RetryButtonIntro_main	;> Using Retry System instead.
 	STZ $0DC2|!addr		;> Remove item reserve.
-	LDA #$01		;\ Always keep Demo big.
-	STA $19			;/
-	LDA #$7F		;\ Make Demo invincible (no power down animation).
-	STA $1497|!addr		;/
+	LDA $71  ; \ Dying
+	CMP #$09 ; /
+	BNE .return
+	LDA #$06		; \ 
+	STA $71			; | Teleport Mario
+	STZ $89			; | Change if you want (Because it uses the current screen exit dunno if you want that)
+	STZ $88			; /
+.return
 	RTL
 
 load:
 	LDA #$01		;\ Set flag to remove status bar.
 	STA $13E6|!addr		;/
+	LDA #$01		;\ Always keep Demo big.
+	STA $19			;/
+
 	RTL

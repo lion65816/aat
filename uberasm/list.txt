@@ -213,15 +213,15 @@ level:
 1D8	BabaBlocks.asm
 1DA	BabaBlocks.asm
 1DC	killyoshi.asm
-1F6	hdmatest.asm
-1F7	hdmatest.asm
-1F8	hdmatest.asm
-1F9	hdmatest.asm
-1FA	hdmatest.asm
-1FB	hdmatest.asm
+1F6	hdmatest_freescrollbabey.asm
+1F7	hdmatest_freescrollbabey.asm
+1F8	hdmatest_freescrollbabey.asm
+1F9	hdmatest_freescrollbabey.asm
+1FA	hdmatest_freescrollbabey.asm
+1FB	hdmatest_freescrollbabey.asm
 1FC	hdmatest.asm
 1FD	hdmatest.asm
-1FE	hdmatest_freescrollbabey.asm
+1FE	hdmatest.asm
 1FF	hdmatest.asm
 
 ; OW list. Valid values: 0 = Main map; 1 = Yoshi's Island; 2 = Vanilla Dome;
