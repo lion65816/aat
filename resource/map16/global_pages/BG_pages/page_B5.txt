@@ -245,8 +245,8 @@ B5F3:      { 1FF 0 x--  1FA 0 ---  1FE 0 xy-  1FA 0 --- }
 B5F4:      { 208 2 xyp  208 2 xyp  208 2 xyp  208 2 xyp }
 B5F5:      { 208 2 xy-  208 2 xy-  208 2 xy-  208 2 xy- }
 B5F6:      { 208 2 ---  20B 2 ---  208 2 ---  20B 2 --- }
-B5F7:      { 3FF 7 xyp  3FF 7 xyp  3FF 7 xyp  3FF 7 xyp }
-B5F8:      { 3FF 7 xyp  3FF 7 xyp  3FF 7 xyp  3FF 7 xyp }
+B5F7:      { 2C3 2 ---  2A7 2 ---  2C3 2 ---  2A7 2 --- }
+B5F8:      { 2A7 2 ---  2A7 2 ---  2A7 2 ---  2A7 2 --- }
 B5F9:      { 3FF 7 xyp  3FF 7 xyp  3FF 7 xyp  3FF 7 xyp }
 B5FA:      { 3FF 7 xyp  3FF 7 xyp  3FF 7 xyp  3FF 7 xyp }
 B5FB:      { 3FF 7 xyp  3FF 7 xyp  3FF 7 xyp  3FF 7 xyp }
