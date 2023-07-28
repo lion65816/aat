@@ -366,7 +366,7 @@ endif
     stz $1B9F|!addr
     
     ; Remove Yoshi.
-    stz $0DC1|!addr
+    ;stz $0DC1|!addr
     stz $187A|!addr
     lda #$03 : sta $1DFA|!addr
 

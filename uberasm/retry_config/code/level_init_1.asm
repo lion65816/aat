@@ -52,6 +52,6 @@ init:
 if not(!counterbreak_yoshi)
     lda $1B9B|!addr : bne +
 endif
-    stz $0DC1|!addr
+   ; stz $0DC1|!addr
 +
     rtl
