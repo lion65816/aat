@@ -342,6 +342,8 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1939	0	Print the room/author names for sublevel 150.
 193a	0	Print the room/author names for sublevel 151.
 193b	0	Print the room/author names for sublevel 151.
+193c	0	Print the room/author names for sublevel 0A4.
+193d	0	Print the room/author names for sublevel 0A4.
 1940	0	Print the room/author names for sublevel 14B.
 1941	0	Print the room/author names for sublevel 14B.
 1942	0	Print the room/author names for sublevel 14C.
@@ -354,6 +356,8 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1949	0	Print the room/author names for sublevel 150.
 194a	0	Print the room/author names for sublevel 151.
 194b	0	Print the room/author names for sublevel 151.
+194c	0	Print the room/author names for sublevel 0A4.
+194d	0	Print the room/author names for sublevel 0A4.
 1950	0	Print the room/author names for sublevel 14B.
 1951	0	Print the room/author names for sublevel 14B.
 1952	0	Print the room/author names for sublevel 14C.
@@ -366,6 +370,8 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1959	0	Print the room/author names for sublevel 150.
 195a	0	Print the room/author names for sublevel 151.
 195b	0	Print the room/author names for sublevel 151.
+195c	0	Print the room/author names for sublevel 0A4.
+195d	0	Print the room/author names for sublevel 0A4.
 19ff	0	Erase the room/author names.
 1b90	0	Acts as 25 if a specific switch is active.
 1b91	0	Acts as 25 if a specific switch isn't active.

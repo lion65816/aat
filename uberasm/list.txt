@@ -71,6 +71,7 @@ level:
 090	Gradient90.asm
 097	freescrollbabey.asm
 0A0	DisableLR.asm
+0A4	BG_AutoScroll7B.asm
 0AA	freescrollbabey.asm
 0B0	DisableLR.asm
 0B1	HDMAGradientCamB1.asm

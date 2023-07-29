@@ -163,3 +163,5 @@ A4  Town Where the West Wind Blows.txt
 A5  Lone_Moments.txt
 A6  greatbattleship.txt
 A8  21 Ratchet Ambience.txt
+
+A9  Kirby's Dream Land 3 - Iceberg.txt

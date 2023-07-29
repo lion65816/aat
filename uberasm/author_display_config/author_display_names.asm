@@ -44,7 +44,7 @@ db "Lord Ruby            " ; 106
 db "raekuul              " ; 107
 db "SAJewers             " ; 108
 db "SAJewers             " ; 109
-db "DJBuckley            " ; 10A
+db "DJ Buckley           " ; 10A
 db "levelengine          " ; 10B
 db "Catabo               " ; 10C
 db "Big Brawler          " ; 10D
