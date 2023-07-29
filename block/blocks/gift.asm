@@ -1,6 +1,6 @@
 print "A block that, when touched by the player, will change the background music to a new value and then destroy itself."
 
-!SFXFade = $2E			;the number of the VolumeFade sound effect
+!SFXFade = $80			;the number of the VolumeFade sound effect
 !SFXPort = $1DF9		;the port that the above sound effect is available at
 
 db $42

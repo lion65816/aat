@@ -3,6 +3,10 @@ load:
     sta $13E6|!addr
 	
     ;rtl
+    
+init:
+	STZ $1B96|!addr
+	RTL
 	
 main:
 	LDA $0DBE|!addr

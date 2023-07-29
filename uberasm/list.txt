@@ -144,7 +144,7 @@ level:
 139	LevelIntro.asm
 13A	LevelIntro.asm
 13B	author_room_names.asm
-13D	statusbarremove.asm
+13D	statusbarremove13D.asm
 13E	levelwarp.asm
 140	RequestRetry_freescrollbabey.asm
 141	statusbarremove.asm
@@ -175,7 +175,7 @@ level:
 16C	FilterYoshi.asm
 16D	Gradient16D.asm
 16E	lvlfilterYoshi.asm
-16F	FilterYoshi.asm
+16F	NoSideExit.asm
 170	GradientSky.asm
 171	HDMAGradient171.asm
 172	FilterYoshi.asm
