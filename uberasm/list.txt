@@ -14,6 +14,7 @@ level:
 009	disableflight.asm
 00B	LevelIntro.asm
 00C	LevelIntro.asm
+00D	LevelIntro.asm
 00E	LevelIntro.asm
 00F	ReverseBG.asm
 010	LevelIntro.asm
@@ -96,7 +97,8 @@ level:
 0C6	reloadRoom3.asm
 0D0	HDMAGradient.asm
 0D2	statusbarremove.asm
-0DD	freescrollbabey.asm
+;0DD	freescrollbabey.asm
+0DE	shmup.asm
 0E0	HDMAGradient.asm
 0F0	F0_scroll.asm
 0F2	freescrollbabey.asm

@@ -3,8 +3,10 @@
 load:
 	rts
 init:
+	jsl mario_exgfx_init
 	rts
 main:
+	jsl mario_exgfx_main
 	rts
 ;nmi:
 ;	rts
