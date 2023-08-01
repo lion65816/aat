@@ -23,6 +23,7 @@ main:
 	CMP #$0D : BEQ .print150
 	CMP #$0E : BEQ .print151
 	CMP #$0F : BEQ .print0A4
+	CMP #$10 : BEQ .print146
 	BRA .exit
 .erase
 	LDA blank,y		; copy one byte
@@ -72,6 +73,10 @@ main:
 .print0A4
 	LDA text0A4,y		; copy one byte
 	BRA .next
+.print146
+	LDA text146,y		; copy one byte
+	BRA .next
+
 .next
 	STA $7F837D,x
 	INX			; increment indices
@@ -251,6 +256,13 @@ text0A4:
 	db !C_,!h_,!o_,!o_,!s_,!e_,!__,!Y_,!o_,!u_,!r_,!__,!F_,!l_,!a_,!v_,!o_,!r_,!EX,!__,!__,!__,!__,!__,!__,!__,!__
 	db $5A,$A0,$00,$35
 	db !b_,!y_,!__,!L_,!u_,!c_,!k_,!w_,!a_,!i_,!v_,!e_,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+	
+text146:
+	db $5A,$80,$00,$35
+	db !T_,!h_,!e_,!__,!M_,!a_,!g_,!i_,!c_,!__,!S_,!t_,!a_,!i_,!r_,!w_,!e_,!l_,!l_,!__,!__,!__,!__,!__,!__,!__,!__
+	db $5A,$A0,$00,$35
+	db !b_,!y_,!__,!D_,!J_,!__,!B_,!u_,!c_,!k_,!l_,!e_,!y_,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+
 
 ;template:
 ;	db $5A,$80,$00,$35

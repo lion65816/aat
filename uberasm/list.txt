@@ -180,7 +180,7 @@ level:
 16F	NoSideExit.asm
 170	GradientSky.asm
 171	HDMAGradient171.asm
-172	FilterYoshi.asm
+172	Stickyhands.asm
 173	lvlfilterYoshi.asm
 174	FilterYoshi.asm
 175	PitCode.asm
