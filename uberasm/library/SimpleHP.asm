@@ -7,8 +7,8 @@
 
 ;;;Defines
 ;;Sprite tiles, 000-1FF. Yes, full tile number, not low byte and high bit separately.
-!EyeOpenUpperLeftTile = $1A0
-!EyeClosedLeftTile = $1C0
+!EyeOpenUpperLeftTile = $1CC	;$1A0
+!EyeClosedLeftTile = $1EC	;$1C0
 ;;Origin for the HP eyes, YYXX. Note that the top left corner of the screen is 0000.
 !EyeOrigin = $2808
 ;;Level-specific HP settings

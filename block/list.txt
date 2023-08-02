@@ -163,6 +163,12 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 194D:20 final_castle_door_0A4.asm
 195C:20 final_castle_door_0A4.asm
 195D:20 final_castle_door_0A4.asm
+193E:20 final_castle_door_146.asm
+193F:20 final_castle_door_146.asm
+194E:20 final_castle_door_146.asm
+194F:20 final_castle_door_146.asm
+195E:20 final_castle_door_146.asm
+195F:20 final_castle_door_146.asm
 19FF:25 final_castle_door_erase.asm
 1B90:130 switch_act - OFF.asm
 1B91:130 switch_act.asm
@@ -264,6 +270,10 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 55F6:25  25Water.asm
 55F7:25  25Water.asm
 55F8:130 sprite_solid.asm
+57B1:02  Waterfall.asm
+57C1:02  Waterfall.asm
+57C2:02  Waterfall.asm
+57C3:02  Waterfall.asm
 60DD:130 StickyBlock.asm
 60DE:130 StickyBlock.asm
 60DF:130 StickyBlock.asm
