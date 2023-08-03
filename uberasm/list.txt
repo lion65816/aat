@@ -24,6 +24,7 @@ level:
 01A	PressuredWater.asm
 01B	1B.asm
 01F	LevelIntro.asm
+020  leafspawn_uberASM.asm
 021	LevelIntro.asm
 023	LevelIntro.asm
 02A	Thwompire2A.asm
@@ -95,6 +96,7 @@ level:
 0C4	reloadRoom3.asm
 0C5	hide_sb_uber.asm
 0C6	reloadRoom3.asm
+0C8  PitCode2.asm
 0D0	HDMAGradient.asm
 0D2	statusbarremove.asm
 ;0DD	freescrollbabey.asm
@@ -105,6 +107,7 @@ level:
 0F2	freescrollbabey.asm
 0F7	freescrollbabey.asm
 0F8	BG_AutoScroll.asm
+0F9  leafspawn_uberASM.asm
 0FB	SimpleHP.asm
 0FE	levelFE.asm
 0FF	statusbarremove.asm
@@ -115,6 +118,7 @@ level:
 105	statusbarremove.asm
 106	freescrollbabey.asm
 108	LevelIntro.asm
+109  leafspawn_uberASM.asm
 10D	LevelIntro.asm
 10E	balloon.asm
 10F	LevelIntro.asm

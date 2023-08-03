@@ -206,6 +206,7 @@ CLUSTER:
 10 bullet.asm
 11 flowers.asm
 12 sandstorm.asm
+13 leaf.asm
 
 EXTENDED:
 00 boomerang.asm
