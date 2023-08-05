@@ -27,7 +27,7 @@
     "Levels/level 015.mwl": "dc9d1c42914a2ad055102a7be60c7ab2",
     "Levels/level 016.mwl": "27ee16ce4d83fbdb30c2ca9dc467eda4",
     "Levels/level 017.mwl": "997ad67602fe36625d7f428b25de27c5",
-    "Levels/level 018.mwl": "a9bccca4f09a0a5e6edc88233015a75f",
+    "Levels/level 018.mwl": "ca58cc86bc413200e992f1b1d100f0b5",
     "Levels/level 019.mwl": "1eda04ea663bc7a8345994792ec859ef",
     "Levels/level 01A.mwl": "07990e2d7de9368cee6d851bf0ae1b50",
     "Levels/level 01B.mwl": "05cc538cec68f7b6d7e347fc21026b9d",
@@ -35,7 +35,7 @@
     "Levels/level 01D.mwl": "45a41faee32f2545e3173d03ff1ccdfa",
     "Levels/level 01E.mwl": "3e3945d79534fb20cf82ccdb45c1015f",
     "Levels/level 01F.mwl": "bbf2ced59f7810eb4ff867632b1ffa60",
-    "Levels/level 020.mwl": "d2e8765108aab59aeae5e5309823b442",
+    "Levels/level 020.mwl": "9d131350fd1e3dddc0e92dbfd809f2f7",
     "Levels/level 021.mwl": "eca9343b5127c54b75fd78c49fd95379",
     "Levels/level 022.mwl": "ae5a4690232a7008e37557e8d0b7d8fe",
     "Levels/level 023.mwl": "a88fa5f2249e32084e9a5974870e0716",
@@ -175,10 +175,10 @@
     "Levels/level 0C5.mwl": "69d5a8187d212921e39b378148cba29b",
     "Levels/level 0C6.mwl": "5ec50cc0b36f701f2818953d74f3dafc",
     "Levels/level 0C7.mwl": "67d31e55ef7e1841592e01867d5f5f68",
-    "Levels/level 0C8.mwl": "b04f85cdb8db0a9cbe34df00b31033a0",
+    "Levels/level 0C8.mwl": "bb337dac65d00936405712c595410af2",
     "Levels/level 0D0.mwl": "5869099d021b6fc7ba474f9758fd8ab5",
     "Levels/level 0D1.mwl": "e597b57ee83a11482564589038700f97",
-    "Levels/level 0D2.mwl": "aead68c8347b130ee024b4c7fde91b00",
+    "Levels/level 0D2.mwl": "5c37480d8c38de4b1edf6f3efe6f3642",
     "Levels/level 0DD.mwl": "eda2e84f796916c52dc7a337bd4589dd",
     "Levels/level 0DE.mwl": "e130d6ea5cef55d06eeb6a65b39407a7",
     "Levels/level 0E0.mwl": "b42de2c2cbeee22f1314ae2164781641",
@@ -188,12 +188,12 @@
     "Levels/level 0F7.mwl": "ad4184b9ef5029e3ea8cb1227ff6be2b",
     "Levels/level 0F8.mwl": "b31e9f962d9c4143495a062eb7c80f0f",
     "Levels/level 0F9.mwl": "5facf999d66ec6907c59ca2fde87b91f",
-    "Levels/level 0FA.mwl": "eaea9b4023c36775ecdebcbe8835874c",
+    "Levels/level 0FA.mwl": "136ba9c475889f479ffa4e518bb201d0",
     "Levels/level 0FB.mwl": "2a4207add1e692f82ddec4df09845b4d",
     "Levels/level 0FC.mwl": "ec1f590ae997e14168273b8138224c4d",
     "Levels/level 0FD.mwl": "559669f9d1ef55fb608b60af751d76fd",
     "Levels/level 0FE.mwl": "53495709f158e5c5c414cf91d89c5a9a",
-    "Levels/level 0FF.mwl": "57457b27c7d06281f4e0580f74d4db03",
+    "Levels/level 0FF.mwl": "f9f45de72f838eec17f5126ec1660d9d",
     "Levels/level 100.mwl": "ac614eeb9c1d377632bb52788f42cc14",
     "Levels/level 101.mwl": "7114a1aca47495eb061332d9baba6cda",
     "Levels/level 102.mwl": "c11dee23c29dd264713c94db507b63af",
@@ -241,7 +241,7 @@
     "Levels/level 12C.mwl": "623a107f609ce8de6885634f351fe812",
     "Levels/level 12D.mwl": "35bc20b507cb727cd3d8bd8172155a9a",
     "Levels/level 12F.mwl": "7266e36f6e5c1339e37bb9a556c6eefd",
-    "Levels/level 130.mwl": "cb49574d0d8c46a521773c4e7bae9116",
+    "Levels/level 130.mwl": "55f7b36e5e7aa168b76d3f5aacfa1c6f",
     "Levels/level 131.mwl": "798d0f478fbc79d67f83567913bad62b",
     "Levels/level 132.mwl": "ee3e7e16a09933c90c87b9981f9e7952",
     "Levels/level 133.mwl": "4db5d8e2e80fe314ae5f6badd7e879d6",
@@ -298,7 +298,7 @@
     "Levels/level 16C.mwl": "a6df4c96ce28da95068108f992084d96",
     "Levels/level 16D.mwl": "0b1a0e5c7294e6b62edc19dfa996ca3c",
     "Levels/level 16E.mwl": "8b8080a9a474e25e4359a9eef287b61f",
-    "Levels/level 16F.mwl": "06e3e9f3de606619a600831d08834ce6",
+    "Levels/level 16F.mwl": "5a01a0cd7649ec0bde5e15005d3e2122",
     "Levels/level 170.mwl": "a92d42a24fba5e3341c797c67b67cc76",
     "Levels/level 171.mwl": "0e179c2780bcc5baac1769334a2a9cce",
     "Levels/level 172.mwl": "af8e5f103d06de331109b1837c603ce2",
@@ -525,7 +525,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_0",
-          "idx": 1945
+          "idx": 1946
         }
       ]
     },
@@ -662,12 +662,12 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "table_0",
-          "idx": 1946
+          "idx": 1947
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_1",
-          "idx": 1947
+          "idx": 1948
         }
       ]
     },
@@ -720,7 +720,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_0",
-          "idx": 1948
+          "idx": 1949
         }
       ]
     },
@@ -821,7 +821,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "source_0",
-          "idx": 1949
+          "idx": 1950
         }
       ]
     },
@@ -838,12 +838,12 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "binary_0",
-          "idx": 1950
+          "idx": 1951
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "binary_1",
-          "idx": 1951
+          "idx": 1952
         }
       ]
     },
@@ -10894,7 +10894,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "a0d828ddb5989d000686d9650870de0f",
+      "hash": "dfb7df4c4201195d78fe77a06586edec",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -12159,7 +12159,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "a5e1dd70707640b7da89c184347ccf48",
+      "hash": "ee275a7727054936625f5ed0bcc2b65c",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -18293,12 +18293,12 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "d46bba83498e518e63ac92abf50fa6d6",
+      "hash": "75473503d48f62099df69075350cdb41",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "82ac5ab472428053cdeada89094b59ef",
+      "hash": "d45055a5d493357eebf3c27fe3bcaa22",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -18717,7 +18717,7 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashFileNameVertex, LunarHelper",
       "file_name": "hundred_points.asm",
-      "hash": "4cb1ea8e2e7ba855bc7b5f0058187b9a",
+      "hash": "fb4144a7e2651d4f85e3847b0d322282",
       "dependencies": []
     },
     {
@@ -18789,7 +18789,7 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashFileNameVertex, LunarHelper",
       "file_name": "row_points.asm",
-      "hash": "c473dfc8f9bd27f0ffb6b90780f5a028",
+      "hash": "2152572bcd3bb6b1879e1cbd4ac6aa9b",
       "dependencies": []
     },
     {
@@ -18876,7 +18876,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "b1694e48dd79794d67954018c9c4f8c6",
+      "hash": "9b10ace2fa3fbdebb30ee74a9c92a55f",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -20510,7 +20510,7 @@
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "block_1F1B:25",
+          "tag": "block_1F1B:130",
           "idx": 1735
         },
         {
@@ -21951,13 +21951,13 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashFileNameVertex, LunarHelper",
       "file_name": "star_points.asm",
-      "hash": "7a90cda310d1e81341248fa0bb449676",
+      "hash": "4bb57763e7d5f50de83d71e89201ce6b",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashFileNameVertex, LunarHelper",
       "file_name": "stomped_points.asm",
-      "hash": "15c9842516a61697bebabb5eb0cb6d7b",
+      "hash": "9f1455fdb75c6f1cdee40d190e198bb1",
       "dependencies": []
     },
     {
@@ -22414,7 +22414,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "006ffa2acab3feb4bd6bdca96d75c81d",
+      "hash": "bea58f2be9afc6992db6afdd4375c90e",
       "dependencies": []
     },
     {
@@ -22469,7 +22469,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "fe6631492ba243411f16b82fe8d5c730",
+      "hash": "16274e1f7e2137dd5e2faf1ae5a93e19",
       "dependencies": []
     },
     {
@@ -22648,7 +22648,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "ed4b5da5a016ff4b92a061573f0a5539",
+      "hash": "3ed9dc9fcf2f28b9140b99c553c68090",
       "dependencies": []
     },
     {
@@ -22673,17 +22673,17 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "3f393ccc1e38028bb92251a65424c873",
+      "hash": "7656d7deafe41a4ac9ed8cc2322be96c",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "24044bc7fed32c5748b7f326e04ea021",
+      "hash": "7f561213286ff044634dbbe306167ca7",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "6c34c07d3a0284811eddb278984b0b2f",
+      "hash": "5e0957a91f93ba92ff364e66c8c307c7",
       "dependencies": []
     },
     {
@@ -22693,7 +22693,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "3110c0025da15bc087c7eea5bc4bfaf6",
+      "hash": "b32c376d527a4d6ae49388fea08555a8",
       "dependencies": []
     },
     {
@@ -22753,17 +22753,17 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "3110c671dabd5b66c1287edb7fc63078",
+      "hash": "55cfaca5cfdf2b094ec03ea2504433c8",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "8df88ad851ef6464e8f98b220a55d2ea",
+      "hash": "8a77784675f2ddd4ad409bb25a5eec54",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "aa38ddc9c0cbd9d9c2086a94d0eaf9b5",
+      "hash": "9ae8a5a9953661d7f0fdf7f849d56c82",
       "dependencies": []
     },
     {
@@ -23266,7 +23266,7 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashFileNameVertex, LunarHelper",
       "file_name": "statusbarremove.asm",
-      "hash": "6866a955d85ebb240f7e6a1a967fbcb5",
+      "hash": "3ffd494328820e85103383f0805fa258",
       "dependencies": []
     },
     {
@@ -23282,7 +23282,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "4afdadb0e2cdebba5a5e662caaba92e2",
+      "hash": "5a99ec1583db287c89fc3e379a0a71ad",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -24076,403 +24076,413 @@
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_222",
+          "tag": "level_209",
           "idx": 1892
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_240",
+          "tag": "level_222",
           "idx": 1893
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_248",
+          "tag": "level_240",
           "idx": 1894
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_251",
+          "tag": "level_248",
           "idx": 1895
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_254",
+          "tag": "level_251",
           "idx": 1896
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_270",
+          "tag": "level_254",
           "idx": 1897
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_272",
+          "tag": "level_270",
           "idx": 1898
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_280",
+          "tag": "level_272",
           "idx": 1899
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_281",
+          "tag": "level_280",
           "idx": 1900
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_297",
+          "tag": "level_281",
           "idx": 1901
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_299",
+          "tag": "level_297",
           "idx": 1902
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_315",
+          "tag": "level_299",
           "idx": 1903
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_317",
+          "tag": "level_315",
           "idx": 1904
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_318",
-          "idx": 1906
+          "tag": "level_317",
+          "idx": 1905
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_320",
+          "tag": "level_318",
           "idx": 1907
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_321",
+          "tag": "level_320",
           "idx": 1908
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_322",
+          "tag": "level_321",
           "idx": 1909
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_323",
+          "tag": "level_322",
           "idx": 1910
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_332",
+          "tag": "level_323",
           "idx": 1911
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_337",
+          "tag": "level_332",
           "idx": 1912
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_342",
+          "tag": "level_337",
           "idx": 1913
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_349",
+          "tag": "level_342",
           "idx": 1914
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_356",
+          "tag": "level_345",
           "idx": 1915
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_360",
-          "idx": 1915
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_380",
-          "idx": 1915
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_357",
-          "idx": 1916
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_365",
-          "idx": 1917
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_366",
-          "idx": 1918
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_371",
-          "idx": 1918
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_367",
-          "idx": 1919
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_368",
-          "idx": 1920
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_369",
-          "idx": 1921
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_370",
-          "idx": 1922
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_376",
-          "idx": 1923
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_378",
-          "idx": 1924
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_432",
-          "idx": 1925
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_433",
-          "idx": 1925
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_434",
-          "idx": 1925
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_435",
-          "idx": 1925
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_436",
-          "idx": 1925
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_437",
-          "idx": 1925
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_438",
-          "idx": 1925
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_439",
-          "idx": 1925
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_440",
-          "idx": 1925
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_441",
-          "idx": 1925
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_456",
-          "idx": 1926
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_462",
-          "idx": 1927
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_463",
-          "idx": 1927
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_465",
-          "idx": 1927
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_467",
-          "idx": 1927
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_468",
-          "idx": 1927
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_469",
-          "idx": 1927
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_471",
-          "idx": 1927
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_472",
-          "idx": 1927
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_474",
-          "idx": 1927
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_464",
-          "idx": 1928
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_476",
+          "idx": 1915
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_349",
+          "idx": 1916
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_356",
+          "idx": 1917
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_360",
+          "idx": 1917
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_380",
+          "idx": 1917
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_357",
+          "idx": 1918
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_365",
+          "idx": 1919
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_366",
+          "idx": 1920
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_371",
+          "idx": 1920
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_367",
+          "idx": 1921
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_368",
+          "idx": 1922
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_369",
+          "idx": 1923
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_370",
+          "idx": 1924
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_376",
+          "idx": 1925
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_378",
+          "idx": 1926
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_432",
+          "idx": 1927
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_433",
+          "idx": 1927
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_434",
+          "idx": 1927
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_435",
+          "idx": 1927
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_436",
+          "idx": 1927
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_437",
+          "idx": 1927
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_438",
+          "idx": 1927
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_439",
+          "idx": 1927
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_440",
+          "idx": 1927
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_441",
+          "idx": 1927
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_456",
+          "idx": 1928
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_462",
           "idx": 1929
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_502",
+          "tag": "level_463",
+          "idx": 1929
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_465",
+          "idx": 1929
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_467",
+          "idx": 1929
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_468",
+          "idx": 1929
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_469",
+          "idx": 1929
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_471",
+          "idx": 1929
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_472",
+          "idx": 1929
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_474",
+          "idx": 1929
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_464",
           "idx": 1930
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_502",
+          "idx": 1931
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_503",
-          "idx": 1930
+          "idx": 1931
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_504",
-          "idx": 1930
+          "idx": 1931
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_505",
-          "idx": 1930
+          "idx": 1931
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_506",
-          "idx": 1930
+          "idx": 1931
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_507",
-          "idx": 1930
+          "idx": 1931
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "level_508",
-          "idx": 1931
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_509",
-          "idx": 1931
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_510",
-          "idx": 1931
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "level_511",
-          "idx": 1931
-        },
-        {
-          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_3",
           "idx": 1932
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_12",
+          "tag": "level_509",
+          "idx": 1932
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_510",
+          "idx": 1932
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "level_511",
+          "idx": 1932
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "gamemode_3",
           "idx": 1933
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_13",
+          "tag": "gamemode_12",
           "idx": 1934
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_14",
+          "tag": "gamemode_13",
           "idx": 1935
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_15",
+          "tag": "gamemode_14",
           "idx": 1936
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_16",
+          "tag": "gamemode_15",
           "idx": 1937
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_17",
+          "tag": "gamemode_16",
           "idx": 1938
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_18",
+          "tag": "gamemode_17",
           "idx": 1939
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_19",
+          "tag": "gamemode_18",
           "idx": 1940
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_20",
+          "tag": "gamemode_19",
           "idx": 1941
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_21",
+          "tag": "gamemode_20",
           "idx": 1942
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_22",
+          "tag": "gamemode_21",
           "idx": 1943
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
-          "tag": "gamemode_25",
+          "tag": "gamemode_22",
           "idx": 1944
+        },
+        {
+          "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
+          "tag": "gamemode_25",
+          "idx": 1945
         },
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -24518,7 +24528,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "9efbbde9af7f40ef63bbdf78a9f4e40d",
+      "hash": "40fd32534a0549d44008f6a00807bae9",
       "dependencies": []
     },
     {
@@ -24608,7 +24618,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "5b2748291052ac82a3dd013ba79954b6",
+      "hash": "8d341dfbdd7c0b60a60beb0f4b545e4b",
       "dependencies": []
     },
     {
@@ -24668,7 +24678,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "8c271c9ff1407b88f620698c6e9613dc",
+      "hash": "0238ab2579a84c541ad7769be9f5e516",
       "dependencies": []
     },
     {
@@ -24688,7 +24698,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "a2fa423203c73a00334eef954a19b4b7",
+      "hash": "ee40cf969eaa18989940d1dc01aae0c5",
       "dependencies": []
     },
     {
@@ -24698,12 +24708,12 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "2f27ee362b12bcc0d369be94dc010a46",
+      "hash": "a6ef245c410debb9375387c06a2ebece",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "5561987007e31822808b0f679a97f62b",
+      "hash": "950269d477f07e57206a3405eebe1a24",
       "dependencies": []
     },
     {
@@ -24714,6 +24724,11 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
       "hash": "247f5be7158c539efa5234d5b43aa5dc",
+      "dependencies": []
+    },
+    {
+      "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
+      "hash": "bd29f03aa436cb4d0f6d039945263361",
       "dependencies": []
     },
     {
@@ -24778,7 +24793,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "c09c5bcedb55371c81d33533f0c16f7b",
+      "hash": "fbfecbd1d0be51cbb51d2df15e928ff1",
       "dependencies": []
     },
     {
@@ -24793,7 +24808,7 @@
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
           "tag": "table_0",
-          "idx": 1905
+          "idx": 1906
         }
       ]
     },
@@ -24804,7 +24819,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "c061735a12b350b0fde31f27e73fe761",
+      "hash": "49062fd3b9175e829214620563b7b249",
       "dependencies": []
     },
     {
@@ -24830,6 +24845,11 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
       "hash": "1161a4f860111d8d355b56990db0fd62",
+      "dependencies": []
+    },
+    {
+      "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
+      "hash": "9272533ff1ff063f8ef91e54b9bc9bca",
       "dependencies": []
     },
     {
@@ -24905,11 +24925,6 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
       "hash": "7d730e4bc060af6229335deaa8cd331f",
-      "dependencies": []
-    },
-    {
-      "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "9272533ff1ff063f8ef91e54b9bc9bca",
       "dependencies": []
     },
     {
@@ -25024,12 +25039,12 @@
     }
   ],
   "graphics": "bdc03c4729b01f4d8c5f949ca22b098a",
-  "exgraphics": "02609f0dc3581afd2e12582a4fb598ea",
+  "exgraphics": "5062ab16e54362fb4919a03765a3685c",
   "init_bps": "61f20c0bf37c0e86a7f517113a3e117f",
   "global_data": "45a8d637eb14818ad9b55d69f9815384",
   "title_moves": "64c6e42b4ef3fae83a3d7f7e2ab4f655",
   "shared_palettes": "56859e723bae858ede72690921e5da59",
-  "map16": "129bacc24c84e98970bb22872f3cda14",
+  "map16": "fb4c07e79ed035b06d315908dada0cd9",
   "gps_options": null,
   "pixi_options": "-l sprite/list.txt",
   "uberasm_options": null,

@@ -2,6 +2,6 @@ main:
 	JSL freezetimer_main
 	RTL
 
-load:
-	JSL statusbarremove_load
+init:
+	JSL statusbarremove_init
 	RTL

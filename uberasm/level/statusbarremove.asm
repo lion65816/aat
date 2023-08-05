@@ -1,4 +1,4 @@
-load:
-	JSL statusbarremove_load
+init:
+	JSL statusbarremove_init
 	RTL
 

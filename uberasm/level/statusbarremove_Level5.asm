@@ -1,12 +1,8 @@
-load:
-    lda #$01
-    sta $13E6|!addr
-	
-    ;rtl
     
 init:
 	STZ $1B96|!addr
 	RTL
+	JSL statusbarremove_init
 	
 main:
 	LDA $0DBE|!addr

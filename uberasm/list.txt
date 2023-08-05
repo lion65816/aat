@@ -98,6 +98,7 @@ level:
 0C6	reloadRoom3.asm
 0C8	PitCode2.asm
 0D0	HDMAGradient.asm
+0D1  MWIVJS1.asm
 0D2	statusbarremove.asm
 0DE	shmup_with_hp.asm
 0E0	HDMAGradient.asm
@@ -162,6 +163,7 @@ level:
 155	BG_AutoScroll4.asm
 156	LV13.asm
 157	FilterYoshi_freescrollbabey.asm
+159  killyoshi.asm
 15B	statusbarremove_CustomBar.asm
 15D	Gradient15D.asm
 15E	FilterYoshi.asm
