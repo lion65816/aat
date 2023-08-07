@@ -16,7 +16,12 @@
 0B	Fire Bro
 0D	Buster Beetle
 12	Giant Piranha Red
-13	Giant Piranha Sideways Green
+13	+ Clock (Add 1)
+	+ Clock (Add 10)
+	+ Clock (Add 100)
+	- Clock (Subtract 1)
+	- Clock (Subtract 10)
+	- Clock (Subtract 100)
 14	Giant Piranha Sideways Red
 15	Giant Spiny
 16	Giant Green Koopa

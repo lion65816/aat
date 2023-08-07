@@ -387,7 +387,8 @@ AttachToSprite:
 	SEP #$20
 	DEY
 	BMI .noAvailableAttach
-	LDA !sprite_num,y
+	LDA !7FAB9E,y			;> PSI Ninja edit: Add support for custom sprites.
+	;LDA !sprite_num,y
 	CMP $09
 	BNE -
 

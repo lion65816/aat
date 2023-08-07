@@ -17,7 +17,7 @@
 10 stationary_magikoopa.cfg
 11 PipeSpawner.cfg
 12 giant_piranha_red.json
-13 giant_piranha_sideways_green.json
+13 PlusMinusClock.json
 14 giant_piranha_sideways_red.json
 15 giant_spiny.json
 16 giant_green_koopa.json
@@ -105,6 +105,7 @@
 68 ngrinder.cfg
 69 venus_grindthrow.cfg
 6A shooter.json
+6B demoka_boss.cfg
 6C venus_ninjithrow.cfg
 6D Wiggler_86_4.cfg
 6E thwomp_homing_scroll.cfg
