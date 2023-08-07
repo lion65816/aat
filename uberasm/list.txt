@@ -71,6 +71,7 @@ level:
 085	DisableRight.asm
 087	008.asm
 090	Gradient90.asm
+095	Layer2Smash.asm
 097	freescrollbabey.asm
 0A0	DisableLR.asm
 0A4	BG_AutoScroll7B.asm

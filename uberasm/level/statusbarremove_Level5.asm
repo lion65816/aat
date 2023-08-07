@@ -1,9 +1,9 @@
     
 init:
 	STZ $1B96|!addr
-	RTL
 	JSL statusbarremove_init
-	
+	RTL
+		
 main:
 	LDA $0DBE|!addr
 	INC A
