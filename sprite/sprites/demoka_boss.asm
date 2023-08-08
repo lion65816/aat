@@ -10,10 +10,11 @@
 ; 02 = Follow Mario
 ;=========================================================
 
-!BossStartHP = $09
+!BossStartHP = $0A
 !BossCurrentHP = $18C5|!addr	;> Free RAM address
 !Cooldown = $1E			;> Cooldown period in frames ($1E = 30 frames)
 !PhaseNumber = $18C6|!addr	;> Free RAM address
+!Animation = $18C7|!addr	;> Free RAM address
 
 !DirCheckTime = $3F		;\ How many frames before checking if the player and sprite are facing in the same direction.
 				;/ Allowed values: 01,03,07,0F,1F,3F,7F,FF
@@ -22,16 +23,6 @@ XSpeeds:
        db $18,$E8
 YSpeeds:
        db $18,$E8
-
-; Phase 1 tables for Phanto behavior.
-X_Accel:
-	db $02,$FE		;> The horizontal acceleration of the sprite.
-Y_Accel:
-	db $02,$FE		;> The vertical acceleration of the sprite.
-Max_X_Speed:
-	db $28,$D8		;> The maximum horizontal speed of the sprite.
-Max_Y_Speed:
-	db $18,$E8		;> The maximum vertical speed of the sprite.
 
 ;=================================
 ; INIT and MAIN Wrappers
@@ -42,6 +33,7 @@ print "INIT ",pc
 	STA !BossCurrentHP	;/
 	STA $0F48|!addr		;> [[[[[DEBUG]]]]]
 	STZ !PhaseNumber	;> Start at Phase 0.
+	STZ !Animation
 
 	LDA #$02		;\ Initialize the first extra property byte of this custom sprite.
 	STA !7FAB28,x		;/ #$02 = the sprite follows the player
@@ -81,10 +73,14 @@ Boss:
 
 	; [[[[[TBD]]]]]
 	LDA !BossCurrentHP
+	BEQ .kill
+	CMP #$05
 	BNE .no_damage
 	LDA #$01
 	STA !PhaseNumber
-;	%Star()
+	BNE .no_damage
+.kill
+	%Star()
 
 .no_damage
 	LDA !1540,x		;\ Draw the sprite graphics normally
@@ -176,51 +172,61 @@ Phase_0:
 ; Phase 1: Phanto behavior
 ;=============================================
 
+X_Accel:
+	db $02,$FE		;> The horizontal acceleration of the sprite.
+Y_Accel:
+	db $02,$FE		;> The vertical acceleration of the sprite.
+Max_X_Speed:
+	db $28,$D8		;> The maximum horizontal speed of the sprite.
+Max_Y_Speed:
+	db $18,$E8		;> The maximum vertical speed of the sprite.
+
 Phase_1:
 	JSL $01A7DC|!BankB	; interact with Mario
 
 	LDA $14			;\ only change speeds every fourth frame
 	AND #$03		;|
-	BNE ApplySpeed		;/
+	BNE .ApplySpeed		;/
 
-	%SubHorzPos()		;\ if max horizontal speed in the appropriate
-	LDA !sprite_speed_x,x	;| direction achieved,
-	CMP Max_X_Speed,y	;|
-	BEQ MaxXSpeedReached	;/ don't change horizontal speed
+	%SubHorzPos()		;\ 
+	TYA			;| Update the sprite's direction
+	STA !157C,x		;| facing the player.
+	LDA !sprite_speed_x,x	;| if max horizontal speed in the appropriate
+	CMP Max_X_Speed,y	;| direction achieved,
+	BEQ .MaxXSpeedReached	;/ don't change horizontal speed
 	CLC			;\ else,
 	ADC X_Accel,y		;| accelerate in appropriate direction
 	STA !sprite_speed_x,x	;/
-MaxXSpeedReached:
+.MaxXSpeedReached
 	%SubVertPos()		;\ if max vertical speed in the appropriate
 	LDA !sprite_speed_y,x	;| direction achieved,
 	CMP Max_Y_Speed,y	;|
-	BEQ ApplySpeed		;/ don't change vertical speed
+	BEQ .ApplySpeed		;/ don't change vertical speed
 	CLC			;\ else,
 	ADC Y_Accel,y		;| accelerate in appropriate direction
 	STA !sprite_speed_y,x	;/
-ApplySpeed:
-;	LDA !1588,x
-;	AND #$01
-;	BEQ .invert_x
-;	AND #$02
-;	BEQ .invert_x
-;	BRA .skip
-;.invert_x
-;	LDA !sprite_speed_x,x
-;	EOR #$FF
-;	STA !sprite_speed_x,x
-;.skip
-;	LDA !1588,x
-;	AND #$04
-;	BEQ .invert_y
-;	AND #$08
-;	BEQ .invert_y
-;	BRA .continue
-;.invert_y
-;	LDA !sprite_speed_y,x
-;	EOR #$FF
-;	STA !sprite_speed_y,x
-;.continue
+.ApplySpeed
+	JSL $019138|!bank	;> Interact with blocks (or $01802A)
+	LDA !1588,x
+	AND #$03
+	BNE .x_collision
+	BRA +
+.x_collision
+	;LDA !sprite_speed_x,x
+	;EOR #$FF
+	;STA !sprite_speed_x,x
+	STZ !sprite_speed_x,x
++
+	LDA !1588,x
+	AND #$0C
+	BNE .y_collision
+	BRA +
+.y_collision
+	;LDA !sprite_speed_y,x
+	;EOR #$FF
+	;STA !sprite_speed_y,x
+	STZ !sprite_speed_y,x
++
 	JSL $018022|!BankB	;> Update X position without gravity (apply X speed).
 	JSL $01801A|!BankB	;> Update Y position without gravity (apply Y speed).
 .return
@@ -231,20 +237,23 @@ ApplySpeed:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 XDisp:
-	db $00,$10,$00,$10	;> Facing left (to flip the tiles, use: EOR #$10)
+	db $F0,$00,$10,$F0,$00,$10,$F0,$00,$10	;> Facing left (to flip the non-zero tiles, use: EOR #$E0)
 YDisp:
-	db $00,$00,$10,$10
+	db $F0,$F0,$F0,$00,$00,$00,$10,$10,$10
 Tilemap:
-	db $C2,$C4,$E2,$E4
+	db $00,$02,$04,$20,$22,$24,$40,$42,$44	;> Animation frame 0
+	db $06,$08,$0A,$26,$28,$2A,$46,$48,$4A	;> Animation frame 1
+	db $0C,$0E,$60,$2C,$2E,$62,$4C,$4E,$64	;> Animation frame 2
+	db $06,$08,$0A,$26,$28,$2A,$46,$48,$4A	;> Animation frame 3
 Props:
-	db $00,$00,$00,$00	;> Facing left (to flip the tiles, use: EOR #$40)
+	db $0E,$0E,$0E,$0E,$0E,$0E,$0E,$0E,$0E	;> Facing left (to flip the tiles, use: EOR #$40)
 
 Graphics:
 	%GetDrawInfo()		;\ Returns sprite index in Y,
 				;| sprite X position (relative to the screen) in $00, and
 				;/ sprite Y position (relative to the screen) in $01.
 
-	LDX #$03		;> Need to run this loop four times (upload four sprite tiles).
+	LDX #$08		;> Need to run this loop 9 times (upload 9 sprite tiles).
 -	PHX
 
 	LDA $01			;\
@@ -262,9 +271,11 @@ Graphics:
 	BNE .no_flip		;/ then load the XDisp and Props bytes normally.
 
 	LDA $02			;\
-	EOR #$10		;| Otherwise, reverse the X direction
-	STA $02			;| draw order, and store sprite's X
-	LDA $00			;| position in OAM.
+	BEQ +			;|
+	EOR #$E0		;| Otherwise, reverse the X direction draw
++				;| order for non-zero tiles, and store
+	STA $02			;| sprite's X position in OAM.
+	LDA $00			;|
 	CLC			;|
 	ADC $02			;|
 	STA $0300|!Base2,y	;/
@@ -275,7 +286,7 @@ Graphics:
 	ORA $64			;|
 	STA $0303|!Base2,y	;/
 
-	BRA .store_tile
+	BRA .check_animation
 
 .no_flip
 	LDA $00			;\
@@ -288,17 +299,41 @@ Graphics:
 	ORA $64			;|
 	STA $0303|!Base2,y	;/
 
+.check_animation
+	PLX			;\ Restore the loop counter, but store it to scratch RAM
+	STX $02			;/ in case its value needs to be manipulated further below.
+	LDA !Animation
+	CMP #$20
+	BNE +
+	STZ !Animation
++
+	LDA !Animation
+	CMP #$08
+	BCC .store_tile
+	CMP #$10
+	BCC .frame1
+	CMP #$18
+	BCC .frame2
+	INX #27
+	BRA .store_tile
+.frame1
+	INX #9
+	BRA .store_tile
+.frame2
+	INX #18
 .store_tile
-	PLX
 	LDA Tilemap,x		;\ Store sprite's tile number in OAM.
 	STA $0302|!Base2,y	;/
 
 	INY #4			;> Offset by four bytes to get the next OAM slot.
-	DEX			;\ Repeat the loop.
-	BPL -			;/
-
+	LDX $02			;> Restore the loop counter, in case it had been offset to calculate animation frame tiles.
+	DEX			;\
+	BMI +			;| Repeat the loop.
+	JMP -			;/
++
 	LDX $15E9|!Base2	;> Load the boss' sprite index.
 	LDY #$02		;> Needed for the final JSL (#$02 = size of OAM tiles is 16x16).
-	LDA #$03		;> Needed for the final JSL (write to 4 OAM slots, minus 1).
+	LDA #$08		;> Needed for the final JSL (write to 9 OAM slots, minus 1).
 	JSL $01B7B3		;> Finish OAM write caller subroutine.
+	INC !Animation		;> Increment the animation frame counter.
 	RTS
