@@ -2,7 +2,7 @@
 ;; Configurable Thwomp, by Tattletale
 ;; This version contemplates thwompsprfix.asm
 ;;
-;; (PSI Ninja edits: enabled ascension glitch fix and greatly decreased the awareness/attack range)
+;; PSI Ninja edits: Enabled ascension glitch fix and made the Thwomp trigger when it's near the bottom of the screen.
 ;;
 ;; Base on smwedit stuff and mikeyk's stuff too + Davros & Lui37's thwompsprfix
 ;;   and also thanks to whoever all.log + Thomas + Alcaroni
@@ -757,41 +757,60 @@ StandardHorzGroundCheck:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Thwomp Proximity Range fix code
 ; code extracted from thwompsprfix.asm
+; PSI Ninja edit: Rewritten to have the Thwomp trigger when it's near the bottom of the screen.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 AwareRangeCheck:
-	LDA !160E,x
-	ASL
-	TAY
-
-	REP #$20
-	LDA AWARE_RANGE,y
-	BRA Store_Value         ; /
-
+	SEC
+	RTS
 AttackRangeCheck:
-	LDA !160E,x
-	ASL
-	TAY
+Store_Value:			;> If carry is set, don't trigger. If carry is clear, trigger.
+	%GetDrawInfo()		;\ Get the sprite's current Y position relative to the screen.
+	LDA $01			;/
+	CLC			;\ Add an offset to account for processing while offscreen.
+	ADC #$10		;/
+	CMP #$A0		;\ If the sprite is above this Y coordinate on the screen,
+	BCC +			;/ then don't trigger.
+	CLC			;> Otherwise, trigger.
+	BRA ++
++
+	SEC
+++
+	RTS
 
-	REP #$20
-	LDA ATTACK_RANGE,y
-Store_Value:
-	STA $0C
-	SEP #$20
+;AwareRangeCheck:
+;	LDA !160E,x
+;	ASL
+;	TAY
+;
+;	REP #$20
+;	LDA AWARE_RANGE,y
+;	BRA Store_Value         ; /
+;
+;AttackRangeCheck:
+;	LDA !160E,x
+;	ASL
+;	TAY
 
+;	REP #$20
+;	LDA ATTACK_RANGE,y
+;Store_Value:
+;	STA $0C
+;	SEP #$20
+;
 ; Horizontal proximity check
-	LDA !sprite_x_high,x            ; \ if Mario is near the sprite...
-	XBA                     		;  |
-	LDA !sprite_x_low,x				;  |
-	REP #$20						;  |
-	SEC								;  |
-	SBC $94							;  |
-	BPL +							;  |
-	EOR #$FFFF						;  |
-	INC								;  |
-+									;  |
-	CMP $0C							;  | compare value of temp ram
-	SEP #$20						;  |
-	RTS								; / return
+;	LDA !sprite_x_high,x            ; \ if Mario is near the sprite...
+;	XBA                     		;  |
+;	LDA !sprite_x_low,x				;  |
+;	REP #$20						;  |
+;	SEC								;  |
+;	SBC $94							;  |
+;	BPL +							;  |
+;	EOR #$FFFF						;  |
+;	INC								;  |
+;+									;  |
+;	CMP $0C							;  | compare value of temp ram
+;	SEP #$20						;  |
+;	RTS								; / return
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Helper routines
