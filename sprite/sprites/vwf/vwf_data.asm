@@ -31,17 +31,5 @@ print "MAIN ",pc
 BinPtr:
 	incbin "vwf_data.bin"
 DataPtr:
-	dw BinPtr+$0,  BinPtr+$F5F,  BinPtr+$12C8,  BinPtr+$15BD
+	dw BinPtr+$0
 RoutinePtr:
-	dw Routine00,  Routine01,  Routine02
-Routine00:
-LDA #$01
-STA $19
-RTL
-Routine01:
-INC $19 : RTL
-Routine02:
-STZ $19
-LDA #$26
-STA $13E0
-RTL

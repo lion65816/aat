@@ -7,6 +7,13 @@ if !sa1 == 1
     !VWF_DATA			= $40D000
     !VWF_GFX			= $40AD00
     !VWF_TOPIC_GFX		= $40B100
+    if read3($0084C0) == $05A123
+        !SA1_MaxTile = 1
+        !HDMA_Windowing_Channel = 1
+    else
+        !SA1_MaxTile = 0
+        !HDMA_Windowing_Channel = 7
+    endif 
 else
     !VWF_VARS			= $7EC800
     !VWF_HDMA			= $7EC900
@@ -14,6 +21,8 @@ else
     !VWF_DATA			= $7ED000
     !VWF_GFX			= $7EAD00
     !VWF_TOPIC_GFX		= $7EB100
+    !SA1_MaxTile = 0
+    !HDMA_Windowing_Channel = 7
 endif
 
 !RightArrowGFX		= $303C

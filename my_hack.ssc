@@ -26,10 +26,11 @@
 13 0022 0,0,419 4,-8,41B
 13 0030 A +/- Clock sprite that subtracts a customizable value from the timer when touched.
 13 0032 0,0,41A 4,-8,41C
-14 0020 Undefined Sprite
-14 0022 0,0,0
-15 0020 Undefined Sprite
-15 0022 0,0,0
+14 0020 Main sprite that loads the game loop for VWF Cutscene Tool.
+
+14 0022 0,0,*Game\nloop\nsprite*
+15 0020 Loads VWF Cutscene Message Based on X, Y position
+15 0022 0,0,10B
 16 0020 A giant green koopa from SMB3.
 16 0022 0,0,41D 16,0,41E 0,-16,41F 16,-16,420
 17 0020 A giant red koopa that stays on ledges.

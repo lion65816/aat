@@ -1,0 +1,81 @@
+/////////////
+// Scene 1 //
+/////////////
+
+17 days later...
+[wait]
+[erase]
+[wait=30]
+
+/////////////
+// Scene 2 //
+/////////////
+
+[sprite=53]
+// Iceberg
+(40,38,26,0F,big)
+// Ship
+(70,30,28,0B,big)(80,30,2A,0B,big)
+// Background
+(30,10,00,0F,big)(40,10,00,0F,big)(50,10,00,0F,big)(60,10,00,0F,big)(70,10,00,0F,big)(80,10,22,0D,big)(90,10,24,0D,big)(A0,10,0E,0D,big)(B0,10,00,0F,big)(C0,10,00,0F,big)
+(30,20,00,0F,big)(40,20,00,0F,big)(50,20,00,0F,big)(60,20,00,0F,big)(70,20,06,0D,big)(80,20,08,0D,big)(90,20,0A,0D,big)(A0,20,20,0D,big)(B0,20,0E,0D,big)(C0,20,00,0F,big)
+(30,30,00,0F,big)(40,30,00,0F,big)(50,30,00,0F,big)(60,30,06,0D,big)(70,30,08,0D,big)(80,30,0A,0D,big)(90,30,0A,0D,big)(A0,30,0A,0D,big)(B0,30,0C,0D,big)(C0,30,0E,0D,big)
+(30,40,02,0F,big)(40,40,02,0F,big)(50,40,02,0F,big)(60,40,02,0F,big)(70,40,02,0F,big)(80,40,02,0F,big)(90,40,02,0F,big)(A0,40,02,0F,big)(B0,40,02,0F,big)(C0,40,02,0F,big)
+(30,50,04,0F,big)(40,50,04,0F,big)(50,50,04,0F,big)(60,50,04,0F,big)(70,50,04,0F,big)(80,50,04,0F,big)(90,50,04,0F,big)(A0,50,04,0F,big)(B0,50,04,0F,big)(C0,50,04,0F,big)
+[/sprite]
+(Press A or B to continue.)
+[wait]
+[erase]
+[sprite=erase]
+[wait=30]
+
+/////////////
+// Scene 3 //
+/////////////
+
+[sprite=59]
+// Iceberg
+(40,38,26,0F,big)
+// Ship
+(48,30,28,0B,big)(58,30,2A,0B,big)
+// Explosion
+(40,10,40,05,big)(50,10,42,05,big)(60,10,44,05,big)
+(40,20,60,05,big)(50,20,62,05,big)(60,20,64,05,big)
+// Background
+(30,10,00,0F,big)(40,10,00,0F,big)(50,10,00,0F,big)(60,10,00,0F,big)(70,10,00,0F,big)(80,10,22,0D,big)(90,10,24,0D,big)(A0,10,0E,0D,big)(B0,10,00,0F,big)(C0,10,00,0F,big)
+(30,20,00,0F,big)(40,20,00,0F,big)(50,20,00,0F,big)(60,20,00,0F,big)(70,20,06,0D,big)(80,20,08,0D,big)(90,20,0A,0D,big)(A0,20,20,0D,big)(B0,20,0E,0D,big)(C0,20,00,0F,big)
+(30,30,00,0F,big)(40,30,00,0F,big)(50,30,00,0F,big)(60,30,06,0D,big)(70,30,08,0D,big)(80,30,0A,0D,big)(90,30,0A,0D,big)(A0,30,0A,0D,big)(B0,30,0C,0D,big)(C0,30,0E,0D,big)
+(30,40,02,0F,big)(40,40,02,0F,big)(50,40,02,0F,big)(60,40,02,0F,big)(70,40,02,0F,big)(80,40,02,0F,big)(90,40,02,0F,big)(A0,40,02,0F,big)(B0,40,02,0F,big)(C0,40,02,0F,big)
+(30,50,04,0F,big)(40,50,04,0F,big)(50,50,04,0F,big)(60,50,04,0F,big)(70,50,04,0F,big)(80,50,04,0F,big)(90,50,04,0F,big)(A0,50,04,0F,big)(B0,50,04,0F,big)(C0,50,04,0F,big)
+[/sprite]
+// Play castle explosion sound effect.
+[sfx 1DFC=1A]
+(Press A or B to continue.)
+[wait]
+[erase]
+[sprite=erase]
+[wait=30]
+
+/////////////
+// Scene 4 //
+/////////////
+
+[sprite=52]
+// Iceberg
+(40,38,26,0F,big)
+// Ship
+(50,38,2C,05,big)
+// Background
+(30,10,00,0F,big)(40,10,00,0F,big)(50,10,00,0F,big)(60,10,00,0F,big)(70,10,00,0F,big)(80,10,22,0D,big)(90,10,24,0D,big)(A0,10,0E,0D,big)(B0,10,00,0F,big)(C0,10,00,0F,big)
+(30,20,00,0F,big)(40,20,00,0F,big)(50,20,00,0F,big)(60,20,00,0F,big)(70,20,06,0D,big)(80,20,08,0D,big)(90,20,0A,0D,big)(A0,20,20,0D,big)(B0,20,0E,0D,big)(C0,20,00,0F,big)
+(30,30,00,0F,big)(40,30,00,0F,big)(50,30,00,0F,big)(60,30,06,0D,big)(70,30,08,0D,big)(80,30,0A,0D,big)(90,30,0A,0D,big)(A0,30,0A,0D,big)(B0,30,0C,0D,big)(C0,30,0E,0D,big)
+(30,40,02,0F,big)(40,40,02,0F,big)(50,40,02,0F,big)(60,40,02,0F,big)(70,40,02,0F,big)(80,40,02,0F,big)(90,40,02,0F,big)(A0,40,02,0F,big)(B0,40,02,0F,big)(C0,40,02,0F,big)
+(30,50,04,0F,big)(40,50,04,0F,big)(50,50,04,0F,big)(60,50,04,0F,big)(70,50,04,0F,big)(80,50,04,0F,big)(90,50,04,0F,big)(A0,50,04,0F,big)(B0,50,04,0F,big)(C0,50,04,0F,big)
+[/sprite]
+(Press A or B to continue.)
+[wait]
+[erase]
+[sprite=erase]
+[wait=30]
+
+[end=00]

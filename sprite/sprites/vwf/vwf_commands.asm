@@ -678,10 +678,37 @@ ShowOAM:
 
 HideOAM:
 	JSR TopFadeOut
-	SEP #$20
-	LDA #$F0
-	JSL $7F8005
-	REP #$20
+	if !SA1 == 1
+		if !SA1_MaxTile == 1
+			LDA $0200
+			PHA 
+			LDA $0202
+			PHA 
+			SEP #$20
+			PEA $4000
+			PLB 
+			JSL $7F8000					; Clear all OAM position
+			PLB 
+            REP #$20
+			PLA 
+			STA $0202
+			PLA 
+			STA $0200
+		else
+			SEP #$20
+			PEA $4000
+			PLB 
+			LDA #$F0
+			JSL $7F8005
+			PLB
+	        REP #$20
+		endif
+	else
+		SEP #$20
+		LDA #$F0
+		JSL $7F8005
+	    REP #$20
+	endif
 	INY
 .return
 	RTS
@@ -940,8 +967,10 @@ ExAniManual:
     AND #$000F
     TAX
     INY
+	REP #$20
     LDA [$D5],y             ; Load frame to show
     STA.l $7FC070,x
+	SEP #$20
     INY
     RTS
 

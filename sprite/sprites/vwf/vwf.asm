@@ -8,7 +8,8 @@ incsrc "vwf_defines.asm"
 
 print "INIT ",pc
 VWFInitCode_wrapper:
-if !sa1
+if !sa1 == 1
+    STX $3100
     LDA.B #VWFInitCode
     STA $0183
     LDA.B #VWFInitCode/256
@@ -25,6 +26,9 @@ if !sa1
 endif
 
 VWFInitCode:
+if !sa1 == 1
+    LDX $3100
+endif
     LDA !7FAB10,x			; Extra byte not supported!
     AND #$04
 -	
@@ -61,7 +65,7 @@ VWFInitCode:
     STA $4347
     PLX
 
-    LDA #$88
+    LDA.b #$08|(1<<!HDMA_Windowing_Channel)
     STA $420C				; Enable HDMA channels 3 and 7
     STA $0D9F|!addr
     LDA $0DAE|!addr
@@ -199,7 +203,16 @@ VWFMainCode:
     DEC A
     BPL -
 
-    JSL $7F8000					; Clear all OAM position
+    if !SA1_MaxTile == 1
+        PHB
+        LDA #$00
+        PHA 
+        PLB 
+        JSL $7F8000					; Clear all OAM position
+        PLB 
+    else
+        JSL $7F8000					; Clear all OAM position
+    endif 
 
     LDA.w !VWF_DATA+$02			; Setup indirect addressing for the VWF data
     STA $D7
@@ -263,7 +276,6 @@ VWFMainCode:
     DEX #2
     BPL -
     SEP #$20
-
 
     LDA #$81
     STA $004200					; Enable NMI and wait for V-Blank once
