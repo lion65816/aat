@@ -34,6 +34,8 @@ print "INIT ",pc
 	STA $0F48|!addr		;> [[[[[DEBUG]]]]]
 	STZ !PhaseNumber	;> Start at Phase 0.
 	STZ !Animation
+	LDA #$FF		;\ Initialize the frame counter.
+	STA !154C,x		;/
 
 	LDA #$02		;\ Initialize the first extra property byte of this custom sprite.
 	STA !7FAB28,x		;/ #$02 = the sprite follows the player
@@ -44,6 +46,8 @@ print "INIT ",pc
 	%SubVertPos()		;\
 	TYA			;| Determine the sprite's initial vertical direction.
 	STA $151C,x		;/
+	LDA #$01		;\ Force the sprite to face left, initially.
+	STA !157C,x		;/
 	RTL
 
 print "MAIN ",pc
@@ -59,8 +63,30 @@ print "MAIN ",pc
 ;========================
 
 Boss:
-	LDA !157C,x		;\ [[[[[DEBUG]]]]]
-	STA $0DBF|!addr		;/ [[[[[DEBUG]]]]]
+	JSR Intro_Sequence	;> Phases 0-2
+
+	LDA !154C,x		;\
+	BNE +			;|
+	LDA !PhaseNumber	;| Every 255 frames,
+	CMP #$03		;| change the sprite's
+	BEQ .change_to_phase4	;| movement pattern.
+	CMP #$04		;|
+	BEQ .change_to_phase3	;|
+	BRA +			;/
+.change_to_phase4
+	INC !PhaseNumber
+	LDA #$FF
+	STA !154C,x
+	BRA +
+.change_to_phase3
+	DEC !PhaseNumber
+	LDA #$FF
+	STA !154C,x
+	BRA +
++
+
+;	LDA !157C,x		;\ [[[[[DEBUG]]]]]
+;	STA $0DBF|!addr		;/ [[[[[DEBUG]]]]]
 
 	LDA !1540,x		;\ If the cooldown timer is not zero,
 	BNE .no_damage		;/ then the sprite cannot be damaged.
@@ -74,11 +100,11 @@ Boss:
 	; [[[[[TBD]]]]]
 	LDA !BossCurrentHP
 	BEQ .kill
-	CMP #$05
+;	CMP #$05
 	BNE .no_damage
-	LDA #$01
-	STA !PhaseNumber
-	BNE .no_damage
+;	LDA #$01
+;	STA !PhaseNumber
+;	BNE .no_damage
 .kill
 	%Star()
 
@@ -94,24 +120,134 @@ Boss:
 
 .check_phase
 	LDA !PhaseNumber
-	BEQ .phase0
-	CMP #$01
-	BEQ .phase1
+	CMP #$03
+	BEQ .phase3
+	CMP #$04
+	BEQ .phase4
 	BRA .return
-.phase0
-	JSR Phase_0
+.phase3
+	JSR Phase_3
 	BRA .return
-.phase1
-	JSR Phase_1
+.phase4
+	JSR Phase_4
 	BRA .return
 .return
 	RTS
 
 ;=============================================
-; Phase 0: Following Diagonal Podoboo behavior
+; Phases 0-2: Play intro sequence
 ;=============================================
 
-Phase_0:
+Intro_Sequence:
+	LDA !PhaseNumber
+	BEQ .phase0
+	CMP #$01
+	BEQ .phase1
+	CMP #$02
+	BEQ .phase2
+	BNE .return
+.phase0
+	LDA !154C,x		;\
+	CMP #$60		;| For 159 frames, the boss rises
+	BEQ .change_to_phase1	;| up one pixel at a time.
+	DEC !D8,x		;|
+	BRA .return		;/
+.change_to_phase1
+	LDA #$FF
+	STA !154C,x
+	INC !PhaseNumber
+.phase1
+	LDA !154C,x		;\
+	CMP #$80		;| For 127 frames, the boss
+	BEQ .change_to_phase2	;| waits in place.
+	BRA .return		;/
+.change_to_phase2
+	LDA #$FF
+	STA !154C,x
+	INC !PhaseNumber
+.phase2
+	LDA !154C,x		;\
+	CMP #$80		;| For 127 frames, the boss
+	BEQ .change_to_phase3	;| does the winking pose.
+	JMP .return		;/
+.change_to_phase3
+	LDA #$52		;\
+	STA $1DFB|!addr		;| Change the music and enter
+	LDA #$FF		;| the main AI loop.
+	STA !154C,x		;|
+	INC !PhaseNumber	;/
+.return
+	RTS
+
+;=============================================
+; Phase 3: Phanto behavior
+;=============================================
+
+X_Accel:
+	db $02,$FE		;> The horizontal acceleration of the sprite.
+Y_Accel:
+	db $02,$FE		;> The vertical acceleration of the sprite.
+Max_X_Speed:
+	db $28,$D8		;> The maximum horizontal speed of the sprite.
+Max_Y_Speed:
+	db $18,$E8		;> The maximum vertical speed of the sprite.
+
+Phase_3:
+	JSL $01A7DC|!BankB	; interact with Mario
+
+	LDA $14			;\ only change speeds every fourth frame
+	AND #$03		;|
+	BNE .ApplySpeed		;/
+
+	%SubHorzPos()		;\ 
+	TYA			;| Update the sprite's direction
+	STA !157C,x		;| facing the player.
+	LDA !sprite_speed_x,x	;| if max horizontal speed in the appropriate
+	CMP Max_X_Speed,y	;| direction achieved,
+	BEQ .MaxXSpeedReached	;/ don't change horizontal speed
+	CLC			;\ else,
+	ADC X_Accel,y		;| accelerate in appropriate direction
+	STA !sprite_speed_x,x	;/
+.MaxXSpeedReached
+	%SubVertPos()		;\ if max vertical speed in the appropriate
+	LDA !sprite_speed_y,x	;| direction achieved,
+	CMP Max_Y_Speed,y	;|
+	BEQ .ApplySpeed		;/ don't change vertical speed
+	CLC			;\ else,
+	ADC Y_Accel,y		;| accelerate in appropriate direction
+	STA !sprite_speed_y,x	;/
+.ApplySpeed
+	JSL $019138|!bank	;> Interact with blocks (or $01802A)
+	LDA !1588,x
+	AND #$03
+	BNE .x_collision
+	BRA +
+.x_collision
+	;LDA !sprite_speed_x,x
+	;EOR #$FF
+	;STA !sprite_speed_x,x
+	STZ !sprite_speed_x,x
++
+	LDA !1588,x
+	AND #$0C
+	BNE .y_collision
+	BRA +
+.y_collision
+	;LDA !sprite_speed_y,x
+	;EOR #$FF
+	;STA !sprite_speed_y,x
+	STZ !sprite_speed_y,x
++
+	JSL $018022|!BankB	;> Update X position without gravity (apply X speed).
+	JSL $01801A|!BankB	;> Update Y position without gravity (apply Y speed).
+.return
+	RTS
+
+;=============================================
+; Phase 4: Following Diagonal Podoboo behavior
+;=============================================
+
+Phase_4:
 	LDA !14C8,x
 	EOR #$08
 	ORA $9D
@@ -168,70 +304,6 @@ Phase_0:
 .return:
 	RTS
 
-;=============================================
-; Phase 1: Phanto behavior
-;=============================================
-
-X_Accel:
-	db $02,$FE		;> The horizontal acceleration of the sprite.
-Y_Accel:
-	db $02,$FE		;> The vertical acceleration of the sprite.
-Max_X_Speed:
-	db $28,$D8		;> The maximum horizontal speed of the sprite.
-Max_Y_Speed:
-	db $18,$E8		;> The maximum vertical speed of the sprite.
-
-Phase_1:
-	JSL $01A7DC|!BankB	; interact with Mario
-
-	LDA $14			;\ only change speeds every fourth frame
-	AND #$03		;|
-	BNE .ApplySpeed		;/
-
-	%SubHorzPos()		;\ 
-	TYA			;| Update the sprite's direction
-	STA !157C,x		;| facing the player.
-	LDA !sprite_speed_x,x	;| if max horizontal speed in the appropriate
-	CMP Max_X_Speed,y	;| direction achieved,
-	BEQ .MaxXSpeedReached	;/ don't change horizontal speed
-	CLC			;\ else,
-	ADC X_Accel,y		;| accelerate in appropriate direction
-	STA !sprite_speed_x,x	;/
-.MaxXSpeedReached
-	%SubVertPos()		;\ if max vertical speed in the appropriate
-	LDA !sprite_speed_y,x	;| direction achieved,
-	CMP Max_Y_Speed,y	;|
-	BEQ .ApplySpeed		;/ don't change vertical speed
-	CLC			;\ else,
-	ADC Y_Accel,y		;| accelerate in appropriate direction
-	STA !sprite_speed_y,x	;/
-.ApplySpeed
-	JSL $019138|!bank	;> Interact with blocks (or $01802A)
-	LDA !1588,x
-	AND #$03
-	BNE .x_collision
-	BRA +
-.x_collision
-	;LDA !sprite_speed_x,x
-	;EOR #$FF
-	;STA !sprite_speed_x,x
-	STZ !sprite_speed_x,x
-+
-	LDA !1588,x
-	AND #$0C
-	BNE .y_collision
-	BRA +
-.y_collision
-	;LDA !sprite_speed_y,x
-	;EOR #$FF
-	;STA !sprite_speed_y,x
-	STZ !sprite_speed_y,x
-+
-	JSL $018022|!BankB	;> Update X position without gravity (apply X speed).
-	JSL $01801A|!BankB	;> Update Y position without gravity (apply Y speed).
-.return
-	RTS
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Sprite graphics routine
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -243,8 +315,9 @@ YDisp:
 Tilemap:
 	db $00,$02,$04,$20,$22,$24,$40,$42,$44	;> Animation frame 0
 	db $06,$08,$0A,$26,$28,$2A,$46,$48,$4A	;> Animation frame 1
-	db $0C,$0E,$60,$2C,$2E,$62,$4C,$4E,$64	;> Animation frame 2
+	db $0C,$0E,$60,$2C,$2E,$62,$4C,$4E,$45	;> Animation frame 2
 	db $06,$08,$0A,$26,$28,$2A,$46,$48,$4A	;> Animation frame 3
+	db $64,$66,$68,$6A,$6C,$6E,$C6,$C8,$CA	;> Animation frame 4 (wink)
 Props:
 	db $0E,$0E,$0E,$0E,$0E,$0E,$0E,$0E,$0E	;> Facing left (to flip the tiles, use: EOR #$40)
 
@@ -306,6 +379,12 @@ Graphics:
 	CMP #$20
 	BNE +
 	STZ !Animation
++
+	LDA !PhaseNumber	;\
+	CMP #$02		;| Do the winking pose during
+	BNE +			;| the boss intro sequence.
+	INX #36			;|
+	BRA .store_tile		;/
 +
 	LDA !Animation
 	CMP #$08

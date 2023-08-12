@@ -200,6 +200,7 @@ level:
 17D	FilterYoshi.asm
 17E	FilterYoshi.asm
 1A0	FilterYoshi.asm
+1A2	Layer2Smash_1A2.asm
 1B0	redswitch.asm
 1B1	redswitch.asm
 1B2	redswitch.asm
@@ -211,6 +212,7 @@ level:
 1B8	redswitch.asm
 1B9	redswitch.asm
 1C8	DisableSideExit.asm
+1CC	shmup_with_hp.asm
 1CE	BabaBlocks.asm
 1CF	BabaBlocks.asm
 1D0	FilterYoshi_DeathWarp.asm

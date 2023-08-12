@@ -621,8 +621,8 @@ endif
         AND #$C0                                ;  | don't show a message if not set to
         BEQ .dontShowMessage                    ; /
 
-LDA #$01 ;> PSI Ninja edit: 
-STA !ShowIndicator ;> PSI Ninja edit: 
+        LDA #$01                                ;\ PSI Ninja edit.
+        STA !ShowIndicator                      ;/
         PHX : PHY                               ; \
         %load_extra_byte(7)                     ;  |
         AND #$0F                                ;  | show a message if the given button is pressed
@@ -732,7 +732,7 @@ Graphics:
         ORA $03
         STA $0303|!Base2,y
 
-        ;> PSI Ninja edit: Show the NPC message indicator when the player overlaps the NPC (use ExGFX18A).
+        ;> PSI Ninja edit: Show the NPC message indicator when the player overlaps the NPC (use ExGFX18A in SP2).
         LDA !ShowIndicator
         BEQ +++
         INY #4
@@ -744,7 +744,7 @@ Graphics:
         LDA $01
         SEC : SBC #$20
         STA $0301|!Base2,y
-        LDA #$0C
+        LDA #$80
         STA $0302|!Base2,y
         LDA $14
         AND #$04                                ;> Change the palette every four frames (flashing).
@@ -915,7 +915,7 @@ Graphics:
 
 +
 
-        ;> PSI Ninja edit: Show the NPC message indicator when the player overlaps the NPC (use ExGFX18A).
+        ;> PSI Ninja edit: Show the NPC message indicator when the player overlaps the NPC (use ExGFX18A in SP2).
         LDA !ShowIndicator
         BEQ +++
         INY #4
@@ -928,7 +928,7 @@ Graphics:
         LDA $01
         SEC : SBC #$20
         STA $0301|!Base2,y
-        LDA #$0C
+        LDA #$80
         STA $0302|!Base2,y
         LDA $14
         AND #$04                                ;> Change the palette every four frames (flashing).

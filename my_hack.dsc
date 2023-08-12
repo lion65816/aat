@@ -479,6 +479,17 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 55f6	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
 55f7	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
 55f8	0	A block that will act like tile 25 for Mario
+5638	0	A block that acts like a mid-air suspended Spiny.
+563b	0	A block that acts like a mid-air suspended Spiny.
+563c	0	
+5648	0	A block that acts like a mid-air suspended Spiny.
+5658	0	A block that acts like a mid-air suspended Spiny.
+5668	0	A block that acts like a mid-air suspended Spiny.
+5697	0	A block that acts like a mid-air suspended Spiny.
+56c0	0	A giant question mark block which spawns sprite $78.
+56c1	0	A giant question mark block which spawns sprite $78.
+56d0	0	A giant question mark block which spawns sprite $78.
+56d1	0	A giant question mark block which spawns sprite $78.
 57b1	0	Waterfall.asm
 57c1	0	Waterfall.asm
 57c2	0	Waterfall.asm

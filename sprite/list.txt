@@ -22,7 +22,7 @@
 15 vwf/vwf_data.json
 16 giant_green_koopa.json
 17 giant_red_koopa.json
-18 giant_blue_koopa.json
+18 flying_rope.json
 19 Ukiki.json
 1A lava_lotus_smb3.json
 1B nipper_smb3.json

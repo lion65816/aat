@@ -270,6 +270,14 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 55F6:25  25Water.asm
 55F7:25  25Water.asm
 55F8:130 sprite_solid.asm
+5638:25 spinyblock14B.asm
+563B:25 spinyblock14B.asm
+563C:130 L138Mes2.asm
+5648:25 spinyblock14B.asm
+5658:25 spinyblock14B.asm
+5668:25 spinyblock14B.asm
+5697:25 spinyblock14B.asm
+R56C0-56D1:130 question_mark/giant_question_block_single.asm
 57B1:02  Waterfall.asm
 57C1:02  Waterfall.asm
 57C2:02  Waterfall.asm
