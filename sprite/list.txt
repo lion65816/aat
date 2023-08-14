@@ -24,7 +24,7 @@
 17 giant_red_koopa.json
 18 flying_rope.json
 19 Ukiki.json
-1A lava_lotus_smb3.json
+1A RealHomingBill.cfg
 1B nipper_smb3.json
 1C para_beetle.json
 1D piledriver.json

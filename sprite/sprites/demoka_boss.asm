@@ -1,9 +1,8 @@
 ;=========================================================
-; Giant Reflecting Fireball
-; Original by ASM
-; Remoderated, recoded and made customizable by Erik557.
+; The Bunny Queen (Not Reisen)
+; by PSI Ninja
 ;
-; Uses first extra bit: NO
+; Does not use the first extra bit.
 ;
 ; Extra property byte 1:
 ; 01 = Flip graphically if hitting a wall
@@ -11,18 +10,14 @@
 ;=========================================================
 
 !BossStartHP = $0A
-!BossCurrentHP = $18C5|!addr	;> Free RAM address
-!Cooldown = $1E			;> Cooldown period in frames ($1E = 30 frames)
-!PhaseNumber = $18C6|!addr	;> Free RAM address
-!Animation = $18C7|!addr	;> Free RAM address
+!BossEnrageHP = $05
+!Cooldown = $1E			;> $1E = 30 frames
 
-!DirCheckTime = $3F		;\ How many frames before checking if the player and sprite are facing in the same direction.
-				;/ Allowed values: 01,03,07,0F,1F,3F,7F,FF
-
-XSpeeds:
-       db $18,$E8
-YSpeeds:
-       db $18,$E8
+!BossCurrentHP = $18C5|!addr	;\
+!PhaseNumber = $18C6|!addr	;| Free RAM addresses.
+!Animation = $18C7|!addr	;|
+!Enraged = $18C8|!addr		;/
+;!ButtonCounter = $18C9|!addr
 
 ;=================================
 ; INIT and MAIN Wrappers
@@ -32,8 +27,10 @@ print "INIT ",pc
 	LDA #!BossStartHP	;\ Initialize boss HP.
 	STA !BossCurrentHP	;/
 	STA $0F48|!addr		;> [[[[[DEBUG]]]]]
-	STZ !PhaseNumber	;> Start at Phase 0.
+	STZ !PhaseNumber
 	STZ !Animation
+	STZ !Enraged
+	;STZ !ButtonCounter
 	LDA #$FF		;\ Initialize the frame counter.
 	STA !154C,x		;/
 
@@ -65,6 +62,8 @@ print "MAIN ",pc
 Boss:
 	JSR Intro_Sequence	;> Phases 0-2
 
+	JSR Enrage		;> Phases 5-6
+
 	LDA !154C,x		;\
 	BNE +			;|
 	LDA !PhaseNumber	;| Every 255 frames,
@@ -85,8 +84,28 @@ Boss:
 	BRA +
 +
 
-;	LDA !157C,x		;\ [[[[[DEBUG]]]]]
-;	STA $0DBF|!addr		;/ [[[[[DEBUG]]]]]
+; [[[[[TBD: Logic for bullet summon.]]]]]
+;LDA $16
+;CMP #$40
+;BNE +
+;INC !ButtonCounter
+;+
+;LDA !ButtonCounter
+;AND #$0F
+;CMP #$0F
+;BNE +
+;INC $0DBF|!addr
+;+
+	;LDA !157C,x		;\ [[[[[DEBUG]]]]]
+	;STA $0DBF|!addr	;/ [[[[[DEBUG]]]]]
+
+	LDA !PhaseNumber	;\
+	CMP #$03		;| Don't damage the sprite during the intro sequence.
+	BCC .no_damage		;/
+	CMP #$05		;\
+	BEQ .no_damage		;| Nor during the enrage sequence.
+	CMP #$06		;|
+	BEQ .no_damage		;/
 
 	LDA !1540,x		;\ If the cooldown timer is not zero,
 	BNE .no_damage		;/ then the sprite cannot be damaged.
@@ -100,12 +119,11 @@ Boss:
 	; [[[[[TBD]]]]]
 	LDA !BossCurrentHP
 	BEQ .kill
-;	CMP #$05
 	BNE .no_damage
-;	LDA #$01
-;	STA !PhaseNumber
-;	BNE .no_damage
 .kill
+	;LDA #$02
+	;STA !14C8,x
+	;BRA .return
 	%Star()
 
 .no_damage
@@ -181,19 +199,46 @@ Intro_Sequence:
 
 ;=============================================
 ; Phase 3: Phanto behavior
+; Code mostly based on Phanto by yoshicookiezeus.
 ;=============================================
 
 X_Accel:
-	db $02,$FE		;> The horizontal acceleration of the sprite.
+	db $02,$FE,$06,$FA	;> The horizontal acceleration of the sprite.
 Y_Accel:
-	db $02,$FE		;> The vertical acceleration of the sprite.
+	db $02,$FE,$06,$FA	;> The vertical acceleration of the sprite.
 Max_X_Speed:
-	db $28,$D8		;> The maximum horizontal speed of the sprite.
+	db $28,$D8,$38,$C8	;> The maximum horizontal speed of the sprite.
 Max_Y_Speed:
-	db $18,$E8		;> The maximum vertical speed of the sprite.
+	db $18,$E8,$28,$D8	;> The maximum vertical speed of the sprite.
 
 Phase_3:
-	JSL $01A7DC|!BankB	; interact with Mario
+	LDA !14C8,x
+	EOR #$08
+	ORA $9D
+	BEQ +
+	JMP .return
+	;BNE .return
++
+
+	LDA $14			;\
+	CMP #$80		;|
+	BNE +			;|
+	LDA #$1A		;| Every 128 frames,
+	SEC			;| spawn a Homing Bullet.
+	STZ $00			;|
+	STZ $01			;|
+	STZ $02			;|
+	STZ $03			;|
+	%SpawnSprite()		;/
++
+
+	;STZ $0DBF|!addr	;> [[[[[DEBUG]]]]]
+	JSL $01A7DC|!BankB	;> Process contact with the player.
+	BCC +
+	JSL $00F5B7|!BankB
+	;LDA #$01		;\ [[[[[DEBUG]]]]]
+	;STA $0DBF|!addr	;/
++
 
 	LDA $14			;\ only change speeds every fourth frame
 	AND #$03		;|
@@ -201,17 +246,25 @@ Phase_3:
 
 	%SubHorzPos()		;\ 
 	TYA			;| Update the sprite's direction
-	STA !157C,x		;| facing the player.
-	LDA !sprite_speed_x,x	;| if max horizontal speed in the appropriate
+	STA !157C,x		;/ facing the player.
+	LDA !Enraged		;\
+	BEQ +			;| While enraged, increase the X speed.
+	INY #2			;/
++
+	LDA !sprite_speed_x,x	;\ if max horizontal speed in the appropriate
 	CMP Max_X_Speed,y	;| direction achieved,
 	BEQ .MaxXSpeedReached	;/ don't change horizontal speed
 	CLC			;\ else,
 	ADC X_Accel,y		;| accelerate in appropriate direction
 	STA !sprite_speed_x,x	;/
 .MaxXSpeedReached
-	%SubVertPos()		;\ if max vertical speed in the appropriate
-	LDA !sprite_speed_y,x	;| direction achieved,
-	CMP Max_Y_Speed,y	;|
+	%SubVertPos()
+	LDA !Enraged		;\
+	BEQ +			;| While enraged, increase the Y speed.
+	INY #2			;/
++
+	LDA !sprite_speed_y,x	;\ if max vertical speed in the appropriate
+	CMP Max_Y_Speed,y	;| direction achieved,
 	BEQ .ApplySpeed		;/ don't change vertical speed
 	CLC			;\ else,
 	ADC Y_Accel,y		;| accelerate in appropriate direction
@@ -223,9 +276,6 @@ Phase_3:
 	BNE .x_collision
 	BRA +
 .x_collision
-	;LDA !sprite_speed_x,x
-	;EOR #$FF
-	;STA !sprite_speed_x,x
 	STZ !sprite_speed_x,x
 +
 	LDA !1588,x
@@ -233,9 +283,6 @@ Phase_3:
 	BNE .y_collision
 	BRA +
 .y_collision
-	;LDA !sprite_speed_y,x
-	;EOR #$FF
-	;STA !sprite_speed_y,x
 	STZ !sprite_speed_y,x
 +
 	JSL $018022|!BankB	;> Update X position without gravity (apply X speed).
@@ -245,17 +292,48 @@ Phase_3:
 
 ;=============================================
 ; Phase 4: Following Diagonal Podoboo behavior
+; Code mostly based on Giant Reflecting Fireball
+; by ASM and Erik557.
 ;=============================================
+
+!DirCheckTime = $3F		;\ How many frames before checking if the player and sprite are facing in the same direction.
+				;/ Allowed values: 01,03,07,0F,1F,3F,7F,FF
+
+XSpeeds:
+	db $18,$E8,$28,$D8
+YSpeeds:
+	db $18,$E8,$28,$D8
 
 Phase_4:
 	LDA !14C8,x
 	EOR #$08
 	ORA $9D
-	BNE .return
+	BEQ +
+	JMP .return
+	;BNE .return
++
 	LDA #$00
 	%SubOffScreen()
 
-	JSL $01A7DC
+	LDA $14			;\
+	CMP #$80		;|
+	BNE +			;|
+	LDA #$1A		;| Every 128 frames,
+	SEC			;| spawn a Homing Bullet.
+	STZ $00			;|
+	STZ $01			;|
+	STZ $02			;|
+	STZ $03			;|
+	%SpawnSprite()		;/
++
+
+	;STZ $0DBF|!addr	;> [[[[[DEBUG]]]]]
+	JSL $01A7DC|!BankB	;\ Process contact with the player.
+	BCC +			;| If contact was made, then hurt the player.
+	JSL $00F5B7|!BankB	;/
+	;LDA #$01		;\ [[[[[DEBUG]]]]]
+	;STA $0DBF|!addr	;/
++
 	LDA !7FAB28,x
 	AND #$02
 	BEQ .DontFlipY
@@ -294,14 +372,67 @@ Phase_4:
 
 .NoYCont
 	LDY !157C,x
+	LDA !Enraged		;\
+	BEQ +			;| While enraged, increase the X speed.
+	INY #2			;/
++
 	LDA XSpeeds,y
 	STA !B6,x
 	LDY !151C,x
+	LDA !Enraged		;\
+	BEQ +			;| While enraged, increase the Y speed.
+	INY #2			;/
++
 	LDA YSpeeds,y
 	STA !AA,x
 
 	JSL $01802A		;> Update X/Y position, including gravity and block interaction.
 .return:
+	RTS
+
+;=============================================
+; Phases 5-6: Enrage
+;=============================================
+
+Enrage:
+	LDA !BossCurrentHP
+	CMP #!BossEnrageHP
+	BCS +
+	LDA !Enraged
+	BNE +
+	LDA #$05
+	STA !PhaseNumber
+	LDA #$FF
+	STA !154C,x
+	INC !Enraged		;> !Enraged = $01
++
+	LDA !PhaseNumber
+	CMP #$05
+	BEQ .phase5
+	CMP #$06
+	BEQ .phase6
+	BNE .return
+.phase5
+	LDA !154C,x
+	CMP #$80
+	BEQ .change_to_phase6
+	BRA .return
+.change_to_phase6
+	LDA #$FF
+	STA !154C,x
+	INC !PhaseNumber
+	INC !Enraged		;> !Enraged = $02
+.phase6
+	LDA !154C,x
+	CMP #$80
+	BEQ .change_to_phase3
+	BRA .return
+.change_to_phase3
+	LDA #$FF
+	STA !154C,x
+	LDA #$03
+	STA !PhaseNumber
+.return
 	RTS
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -327,7 +458,8 @@ Graphics:
 				;/ sprite Y position (relative to the screen) in $01.
 
 	LDX #$08		;> Need to run this loop 9 times (upload 9 sprite tiles).
--	PHX
+-
+	PHX
 
 	LDA $01			;\
 	CLC			;| Store sprite's Y position in OAM.
@@ -358,6 +490,30 @@ Graphics:
 	ORA !15F6,x		;| YXPPCCCT, and store it in OAM.
 	ORA $64			;|
 	STA $0303|!Base2,y	;/
+	LDA !Enraged		;\
+	CMP #$01		;| If the sprite is enraged (phase 5),
+	BEQ +			;| then skip to the palette flashing code.
+	CMP #$02		;| Otherwise, while enraged
+	BNE ++			;| (after reaching phase 6),
+	LDA $0303|!Base2,y	;| change the sprite's palette
+	DEC #$04		;| for the remainder of the
+	STA $0303|!Base2,y	;| fight.
+	BRA ++			;/
++
+	LDA $14			;\
+	AND #$02		;| Every two frames, switch the
+	BEQ ++			;| palette from normal to
+	LDA $0303|!Base2,y	;| enraged to make it flash.
+	EOR #$04		;|
+	STA $0303|!Base2,y	;/
+++
+;	LDA !Enraged		;\
+;	CMP #$02		;| While enraged (after reaching phase 6),
+;	BNE +			;| change the sprite's palette.
+;	LDA $0303|!Base2,y	;|
+;	DEC #$04		;|
+;	STA $0303|!Base2,y	;/
+;+
 
 	BRA .check_animation
 
@@ -371,35 +527,80 @@ Graphics:
 	ORA !15F6,x		;| Store sprite's YXPPCCCT in OAM.
 	ORA $64			;|
 	STA $0303|!Base2,y	;/
+	LDA !Enraged		;\
+	CMP #$01		;| If the sprite is enraged (phase 5),
+	BEQ +			;| then skip to the palette flashing code.
+	CMP #$02		;| Otherwise, while enraged
+	BNE ++			;| (after reaching phase 6),
+	LDA $0303|!Base2,y	;| change the sprite's palette
+	DEC #$04		;| for the remainder of the
+	STA $0303|!Base2,y	;| fight.
+	BRA ++			;/
++
+	LDA $14			;\
+	AND #$02		;| Every two frames, switch the
+	BEQ ++			;| palette from normal to
+	LDA $0303|!Base2,y	;| enraged to make it flash.
+	EOR #$04		;|
+	STA $0303|!Base2,y	;/
+++
+;	LDA !Enraged		;\
+;	CMP #$02		;| While enraged (after reaching phase 6),
+;	BNE +			;| change the sprite's palette.
+;	LDA $0303|!Base2,y	;|
+;	DEC #$04		;|
+;	STA $0303|!Base2,y	;/
+;+
 
 .check_animation
 	PLX			;\ Restore the loop counter, but store it to scratch RAM
 	STX $02			;/ in case its value needs to be manipulated further below.
-	LDA !Animation
-	CMP #$20
-	BNE +
-	STZ !Animation
+	LDA !Animation		;\ When frame 32 is reached,
+	CMP #$20		;| repeat the animation frame
+	BNE +			;| draw cycle.
+	STZ !Animation		;/
 +
 	LDA !PhaseNumber	;\
-	CMP #$02		;| Do the winking pose during
-	BNE +			;| the boss intro sequence.
-	INX #36			;|
-	BRA .store_tile		;/
+	CMP #$02		;|
+	BEQ +			;| Do the winking pose during
+	CMP #$05		;| the boss intro sequence
+	BEQ +			;| and also while enraging.
+	CMP #$06		;|
+	BNE ++			;|
 +
-	LDA !Animation
-	CMP #$08
-	BCC .store_tile
-	CMP #$10
-	BCC .frame1
-	CMP #$18
-	BCC .frame2
-	INX #27
+	TXA			;|
+	CLC			;| Increment X by 36 to draw
+	ADC #$24		;| animation frame 4.
+	TAX			;|
+	;INX #36		;|
+	BRA .store_tile		;/
+++
+	LDA !Animation		;\ For frames 0-7, draw
+	CMP #$08		;| animation frame 0.
+	BCC .store_tile		;/
+	CMP #$10		;\ For frames 8-15, draw
+	BCC .frame1		;/ animation frame 1.
+	CMP #$18		;\ For frames 16-23, draw
+	BCC .frame2		;/ animation frame 2.
+	TXA			;\ Otherwise, for frames 24-31,
+	CLC			;| increment X by 27 to draw
+	ADC #$1B		;| animation frame 3.
+	TAX			;/
+	;INX #27
 	BRA .store_tile
 .frame1
-	INX #9
+	TXA			;\
+	CLC			;| Increment X by 9 to draw
+	ADC #$09		;| animation frame 1.
+	TAX			;/
+	;INX #9
 	BRA .store_tile
 .frame2
-	INX #18
+	TXA			;\
+	CLC			;| Increment X by 18 to draw
+	ADC #$12		;| animation frame 2.
+	TAX			;/
+	;INX #18
 .store_tile
 	LDA Tilemap,x		;\ Store sprite's tile number in OAM.
 	STA $0302|!Base2,y	;/

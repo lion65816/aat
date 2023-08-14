@@ -1,14 +1,11 @@
+load:
+	JSL NoStatus_load
+	RTL
 
 init:
 	JSR Level_69_init
 	rtl
-	
-load:
-    lda #$01
-    sta $13E6|!addr
-	
-    ;rtl
-	
+
 main:
 	LDA $0DBE|!addr
 	INC A

@@ -1,9 +1,8 @@
-    
 init:
-	STZ $1B96|!addr
-	JSL statusbarremove_init
+	STZ $1B96|!addr		;> Disable side exit.
+	JSL hide_sb_uber_init
 	RTL
-		
+
 main:
 	LDA $0DBE|!addr
 	INC A
