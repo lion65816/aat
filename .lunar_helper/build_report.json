@@ -118,9 +118,9 @@
     "Levels/level 073.mwl": "4f4382fae155c65ce22aba399826341d",
     "Levels/level 074.mwl": "a956984a6f5794922166bed1bebb57db",
     "Levels/level 075.mwl": "5e5dd949bd5938efabce6ed749bd57d2",
-    "Levels/level 077.mwl": "2da159e7b9e6551eafb7de7fe87a68de",
-    "Levels/level 078.mwl": "a9e1701524bf1ae97a2367f0c8537aeb",
-    "Levels/level 079.mwl": "da595f67533e20d781595c2eb2cc23fe",
+    "Levels/level 077.mwl": "06b66dc537cf9a62d52e72d905f595b9",
+    "Levels/level 078.mwl": "d0bc9f4483948c58c78b4b7ce91c3116",
+    "Levels/level 079.mwl": "a58d67ddc607e98c4c275ba5d0dd3258",
     "Levels/level 07A.mwl": "4cda63c1d61bdbc16a99625dd9eb451f",
     "Levels/level 07B.mwl": "8def06ecf110ee7237295f4514da4655",
     "Levels/level 07D.mwl": "f0b6ccec869652e7297f59edf24f9c24",
@@ -278,7 +278,7 @@
     "Levels/level 156.mwl": "de32b86af54172459d5b7e0b7641916c",
     "Levels/level 157.mwl": "8479d2399a2f61ca2066461ffaaf0e45",
     "Levels/level 158.mwl": "530c7599e4aa78a1f42d316a005b4282",
-    "Levels/level 159.mwl": "2c192080c277d63238951912f2cac9a1",
+    "Levels/level 159.mwl": "4cadcc390a2ff53bcad06d9f309c98d0",
     "Levels/Level 15A.mwl": "619b1a48e101bd67791605190e69d59a",
     "Levels/Level 15B.mwl": "2a6b06f75b33a1cc0ca4ae3319af2c99",
     "Levels/Level 15C.mwl": "071af53a08b4e5d40f5d09699a46bbea",
@@ -15842,7 +15842,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "a0c78859e5b539a2ba05f3ee086667d2",
+      "hash": "65b3480de2e9f8ee1cbe3d1367b429c3",
       "dependencies": []
     },
     {
@@ -17056,7 +17056,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "8e4441a510bc5b219369aaf022d4855d",
+      "hash": "7bdb7c6874af467ab36d00711c2721ac",
       "dependencies": []
     },
     {
@@ -25352,7 +25352,7 @@
     }
   ],
   "graphics": "bdc03c4729b01f4d8c5f949ca22b098a",
-  "exgraphics": "584882c81f21a7ed97849a543d83fe09",
+  "exgraphics": "3040ecf14d55d49bc6a6a0c9722521fd",
   "init_bps": "61f20c0bf37c0e86a7f517113a3e117f",
   "global_data": "a1f75f6f206a40bc13f6d9dcf680c6d2",
   "title_moves": "64c6e42b4ef3fae83a3d7f7e2ab4f655",

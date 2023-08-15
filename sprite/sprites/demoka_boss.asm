@@ -17,7 +17,7 @@
 !PhaseNumber = $18C6|!addr	;| Free RAM addresses.
 !Animation = $18C7|!addr	;|
 !Enraged = $18C8|!addr		;/
-;!ButtonCounter = $18C9|!addr
+!PhaseCounter = $18C9|!addr
 
 ;=================================
 ; INIT and MAIN Wrappers
@@ -30,7 +30,7 @@ print "INIT ",pc
 	STZ !PhaseNumber
 	STZ !Animation
 	STZ !Enraged
-	;STZ !ButtonCounter
+	STZ !PhaseCounter
 	LDA #$FF		;\ Initialize the frame counter.
 	STA !154C,x		;/
 
@@ -74,30 +74,17 @@ Boss:
 	BRA +			;/
 .change_to_phase4
 	INC !PhaseNumber
+	INC !PhaseCounter
 	LDA #$FF
 	STA !154C,x
 	BRA +
 .change_to_phase3
 	DEC !PhaseNumber
+	INC !PhaseCounter
 	LDA #$FF
 	STA !154C,x
 	BRA +
 +
-
-; [[[[[TBD: Logic for bullet summon.]]]]]
-;LDA $16
-;CMP #$40
-;BNE +
-;INC !ButtonCounter
-;+
-;LDA !ButtonCounter
-;AND #$0F
-;CMP #$0F
-;BNE +
-;INC $0DBF|!addr
-;+
-	;LDA !157C,x		;\ [[[[[DEBUG]]]]]
-	;STA $0DBF|!addr	;/ [[[[[DEBUG]]]]]
 
 	LDA !PhaseNumber	;\
 	CMP #$03		;| Don't damage the sprite during the intro sequence.

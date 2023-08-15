@@ -22,7 +22,8 @@
 !DisabledFor = $30		; amount of frames to disable brick after landing
 !JumpMaxDist = $30		; how close the player needs to be to make the brick jump
 !Tile1 = $88			; brick tile
-!Tile2 = $9A			; Micro-Goomba tile
+!Tile2 = $8A			; Micro-Goomba tile (PSI Ninja edit: use a 16x16 tile instead)
+;!Tile2 = $9A			; Micro-Goomba tile
 !Pal1 = $01			; palette for the brick
 !Pal2 = $05			; palette for the Micro-Goomba
 
@@ -254,16 +255,16 @@ SubGFX:
 .NoJumpMode				;
 	LDA $00				;
 	STA $0300|!Base2,y		; brick tile X position
-	CLC				;
-	ADC #$04			;
+	;CLC				;\ (PSI Ninja edits)
+	;ADC #$04			;/
 	STA $0304|!Base2,y		; Micro-Goomba tile X position
 	LDA $01				;
 	CLC				; subtract 1 pixel to compensate for showing up 1 pixel lower
 	SBC $03				;
 	STA $0301|!Base2,y		; brick tile Y position
 	LDA $01				;
-	CLC				;
-	ADC #$07			;
+	;CLC				;\ (PSI Ninja edits)
+	;ADC #$07			;/
 	STA $0305|!Base2,y		; Micro-Goomba tile Y position
 	LDA #!Tile1			; set the tile number of the brick tile
 	STA $0302|!Base2,y		;
@@ -286,8 +287,9 @@ SubGFX:
 	TAY				;
 	LDA #$02			;
 	STA $0460|!Base2,y		; size of the first tile
-	LDA #$00			;
-	STA $0461|!Base2,y		; tsize of the second tile
+	;LDA #$00			;\ (PSI Ninja edits)
+	LDA #$02			;/
+	STA $0461|!Base2,y		; size of the second tile
 	PLY				;
 	LDA !14C8,x			;
 	CMP #$02			;
