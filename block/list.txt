@@ -188,6 +188,7 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 2D8C:130 SpinJumpPass.asm
 3300:25 BlkMus1.asm
 3301:25 no_yoshi.asm
+3525:130 infinite_throwblk.asm
 3578:130 spin-jump-bounce-damage.asm
 3579:130 spin-jump-bounce-damage.asm
 357C:130 spin-jump-bounce-damage.asm
@@ -332,6 +333,9 @@ R56C0-56D1:130 question_mark/giant_question_block_single.asm
 644D:25 ClapSE.asm
 644E:25 ClapSE.asm
 644F:25 ClapSE.asm
+645D:25 5up.asm
+6493:130 customvpipe_left.asm
+6494:130 customvpipe_right.asm
 703D:25 ScreenExitTeleport.asm
 71F0:25 TeleportBlockB3.asm
 7203:25 SwimSE.asm

@@ -244,7 +244,7 @@ X_Offset:		db $F8,$08,$F8,$08,$18,$08,$F8,$08
 
 Y_Offset:		db $F8,$F8,$08,$08,$08
 
-BlarggTilemap:		db $CE,$A4,$C2,$C4,$A6,$CE,$A4,$C0
+BlarggTilemap:		db $CA,$A4,$C2,$C4,$A6,$CA,$A4,$C0
 			db $C8,$A6
 
 CODE_03A09D:		LDA !1602,x				;\ use graphics frame to determine initial tile table offset

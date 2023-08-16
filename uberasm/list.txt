@@ -40,6 +40,7 @@ level:
 037	BG_AutoScroll4.asm
 038	BG_AutoScroll4.asm
 039	BG_AutoScroll4.asm
+03C	BG_AutoScroll4.asm
 042	watertides.asm
 044	FilterYoshi.asm
 051	PitCode.asm

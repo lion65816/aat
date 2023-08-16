@@ -8,7 +8,7 @@ db "PSI Ninja            " ; 006
 db "                     " ; 007
 db "Lord Ruby            " ; 008
 db "Nao                  " ; 009
-db "MULTIPERSON          " ; 00A
+db "Talkhaus             " ; 00A
 db "KobaBeach            " ; 00B
 db "Nao                  " ; 00C
 db "PSI Ninja            " ; 00D
@@ -21,7 +21,7 @@ db "4season              " ; 013
 db "Sam Deluxe           " ; 014
 db "4season              " ; 015
 db "Luckwaive            " ; 016
-db "camwoodstock and Tori" ; 017
+db "Camwoodstock and Tori" ; 017
 db "SAJewers             " ; 018
 db "PSI Ninja            " ; 019
 db "WitherSnow           " ; 01A
@@ -93,4 +93,4 @@ db "Big Brawler          " ; 137
 db "Gbreezesunset        " ; 138
 db "Big Brawler          " ; 139
 db "Gbreezesunset        " ; 13A
-db "MULTIPERSON          " ; 13B
+db "Talkhaus             " ; 13B

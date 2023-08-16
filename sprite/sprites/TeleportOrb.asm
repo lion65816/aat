@@ -276,7 +276,7 @@ HandleState:
         LDA !14D4,x                             ;  |
         STA $97                                 ; /
 
-        LDA #$0D                                ; \  play Thunder sound
+        LDA #$10                                ; \  play Thunder sound
         STA $1DF9|!Base2                        ; /
 
         LDA #$FF

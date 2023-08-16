@@ -397,6 +397,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 2d8f	0	This block boosts the player upwards.
 3300	0	BlkMus1.asm
 3301	0	A block which destroys (Baby) Yoshi if touched.
+3525	0	Throw block with infinite uses.
 3578	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
 3579	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
 357c	0	A block that bounces you up if you're spinjumping or on Yoshi but that will damage you if you are not.
@@ -544,6 +545,9 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 644d	0	
 644e	0	
 644f	0	
+645d	0	Adds #$05 lives one by one and then disappears in a glitter
+6493	0	The left tile of an exit enabled vertical pipe that uses a specific screen's exit depending on a specified condition.
+6494	0	The left tile of an exit enabled vertical pipe that uses a specific screen's exit depending on a specified condition.
 703d	0	
 71f0	0	
 7203	0	

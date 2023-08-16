@@ -18,7 +18,7 @@ YSpeed:
 db $D0,$C0,$B0,$D0
 
 Tilemap:
-db $CA,$CC
+db $CE,$CC
 
 !CeilingFix = 1		;Previously you had to uncomment some code, now you can just change this option to fix ninjis, so they won't go throught ceiling.
 
