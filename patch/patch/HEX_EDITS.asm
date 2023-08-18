@@ -227,3 +227,47 @@ org $04F4E1|!bank	;|
 org $02CB96|!bank
     db $4B,$0B		; Use palette D (originally: db $47,$07)
 
+; Wendy's bow fix for Taunt C.
+; Note: Specific taunts relating to Wendy below are based on: https://www.spriters-resource.com/snes/smarioworld/sheet/144218/
+org $03CFAF|!bank
+    db $08
+org $03CFB5|!bank
+    db $08
+org $03D1D7|!bank
+    db $1F,$1E
+org $03D1DD|!bank
+    db $1E,$1F
+
+; Use a unique second tile for Wendy's bow (tile numbers).
+org $03D1B9|!bank	; Taunt B (forward face)
+    db $43		; (originally: db $52)
+org $03D1C0|!bank	; (?) Taunt F (forward face/never used?)
+    db $43		; (originally: db $52)
+org $03D1E5|!bank	; Taunt E (tongue face)
+    db $43		; (originally: db $52)
+org $03D1EA|!bank	; Taunt E (forward face)
+    db $43		; (originally: db $52)
+org $03D1FB|!bank	; Taunt D (big right eye/looking right)
+    db $79,$78		; (originally: db $52,$52)
+org $03D201|!bank	; Taunt D (big left eye/looking left)
+    db $78,$79		; (originally: db $52,$52)
+
+; Use a unique second tile for Wendy's bow (tile properties).
+org $03D2CD|!bank	; Taunt B (forward face)
+    db $09		; (originally: db $49)
+org $03D2D4|!bank	; (?) Taunt F (forward face/never used?)
+    db $09		; (originally: db $49)
+org $03D2F9|!bank	; Taunt E (tongue face)
+    db $09		; (originally: db $49)
+org $03D2FE|!bank	; Taunt E (forward face)
+    db $09		; (originally: db $49)
+org $03D30F|!bank	; Taunt D (big right eye/looking right)
+    db $49		; (originally: db $09)
+org $03D316|!bank	; Taunt D (big left eye/looking left)
+    db $09		; (originally: db $49)
+
+; Use a unique second tile for the Wendy Decoy's bow.
+org $03D21A|!bank
+    db $69		; Tile number (originally: db $68)
+org $03D32E|!bank
+    db $05		; Tile property (originally: db $45)

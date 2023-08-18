@@ -1,13 +1,13 @@
-init:
-	LDA #$01
-	STA $140B|!addr
+load:
+
+	JSL FilterYoshi_load
+	JSL NoStatus_load
 	RTL
 
-load:
-    lda #$01
-    sta $13E6|!addr
-    rtl
 
-    JSL FilterYoshi_load
-    RTL 
-    
+init:
+
+	LDA #$01
+
+	STA $140B|!addr
+	RTL
