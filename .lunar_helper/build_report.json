@@ -376,7 +376,7 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonPatchRootVertex, LunarHelper",
       "path": "patch/patch/hex_edits.asm",
-      "hash": "562027d9656da32433ca22dc090972d4",
+      "hash": "44b1c0e445d467931312d4b054fcc08a",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -25414,8 +25414,8 @@
       "dependencies": []
     }
   ],
-  "graphics": "bdc03c4729b01f4d8c5f949ca22b098a",
-  "exgraphics": "ddff54ec0e93e9a980c685492cae3e74",
+  "graphics": "d2fef0e2b0269d09c18c26a8154910f8",
+  "exgraphics": "08450cde735c96546f0355ef1096e24b",
   "init_bps": "61f20c0bf37c0e86a7f517113a3e117f",
   "global_data": "a1f75f6f206a40bc13f6d9dcf680c6d2",
   "title_moves": "64c6e42b4ef3fae83a3d7f7e2ab4f655",

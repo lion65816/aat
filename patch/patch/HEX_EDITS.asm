@@ -227,8 +227,79 @@ org $04F4E1|!bank	;|
 org $02CB96|!bank
     db $4B,$0B		; Use palette D (originally: db $47,$07)
 
-; Wendy's bow fix for Taunt C.
+;;;;;;;;;;;;;;;;;;;;
+; Lemmy hex edits.
+; Note: Specific taunts relating to Lemmy below are based on: https://www.spriters-resource.com/snes/smarioworld/sheet/144218/
+;;;;;;;;;;;;;;;;;;;;
+
+; Fix Lemmy's head dislocation for Taunt B (side face).
+org $03CEFE|!bank
+    db $FD		; X position (originally: db $F8)
+org $03CF00|!bank
+    db $05		; X position (originally: db $00)
+
+; Fix Lemmy's head dislocation for Taunt B (forward face).
+org $03CF04|!bank
+    db $FE		; X position (originally: db $FB)
+org $03CF06|!bank
+    db $FE		; X position (originally: db $FB)
+org $03CF07|!bank
+    db $06		; X position (originally: db $03)
+
+; Fix Lemmy's head dislocation for Taunt A (side face #1).
+org $03CF16|!bank
+    db $FD		; X position (originally: db $F8)
+org $03CF18|!bank
+    db $05		; X position (originally: db $00)
+
+; Fix Lemmy's head dislocation for Taunt A (side face #2).
+org $03CF1C|!bank
+    db $FD		; X position (originally: db $F8)
+org $03CF1E|!bank
+    db $0D		; X position (originally: db $08)
+
+; Use a unique second tile for Lemmy's hair (tile numbers).
+org $03D12E|!bank	; Taunt B (forward face)
+    db $52,$43		; (originally: db $12,$12)
+org $03D135|!bank	; Taunt F (forward face)
+    db $52,$43		; (originally: db $12,$12)
+org $03D15A|!bank	; Taunt E (big left eye/looking left/tongue face)
+    db $78,$79		; (originally: db $12,$12)
+org $03D15F|!bank	; Taunt E (big right eye/looking right)
+    db $79,$78		; (originally: db $12,$12)
+org $03D171|!bank	; Taunt D (big right eye/looking right)
+    db $79,$78		; (originally: db $12,$12)
+org $03D177|!bank	; Taunt D (big left eye/looking left)
+    db $78,$79		; (originally: db $12,$12)
+
+; Use a unique second tile for Lemmy's hair (tile properties).
+org $03D243|!bank	; Taunt B (forward face)
+    db $05		; (originally: db $45)
+org $03D24A|!bank	; Taunt F (forward face)
+    db $05		; (originally: db $45)
+org $03D26F|!bank	; Taunt E (big left eye/looking left/tongue face)
+    db $05		; (originally: db $45)
+org $03D273|!bank	; Taunt E (big right eye/looking right)
+    db $45		; (originally: db $05)
+org $03D285|!bank	; Taunt D (big right eye/looking right)
+    db $45		; (originally: db $05)
+org $03D28C|!bank	; Taunt D (big left eye/looking left)
+    db $05		; (originally: db $45)
+
+;;;;;;;;;;;;;;;;;;;;
+; Wendy hex edits.
 ; Note: Specific taunts relating to Wendy below are based on: https://www.spriters-resource.com/snes/smarioworld/sheet/144218/
+;;;;;;;;;;;;;;;;;;;;
+
+; Fix Wendy's head dislocation for Taunt B (forward face).
+org $03CF8E|!bank
+    db $FE		; X position (originally: db $FB)
+org $03CF90|!bank
+    db $FE		; X position (originally: db $FB)
+org $03CF91|!bank
+    db $06		; X position (originally: db $03)
+
+; Wendy's bow fix for Taunt C.
 org $03CFAF|!bank
     db $08
 org $03CFB5|!bank
@@ -241,7 +312,7 @@ org $03D1DD|!bank
 ; Use a unique second tile for Wendy's bow (tile numbers).
 org $03D1B9|!bank	; Taunt B (forward face)
     db $43		; (originally: db $52)
-org $03D1C0|!bank	; (?) Taunt F (forward face/never used?)
+org $03D1C0|!bank	; Taunt F (forward face)
     db $43		; (originally: db $52)
 org $03D1E5|!bank	; Taunt E (tongue face)
     db $43		; (originally: db $52)
@@ -255,7 +326,7 @@ org $03D201|!bank	; Taunt D (big left eye/looking left)
 ; Use a unique second tile for Wendy's bow (tile properties).
 org $03D2CD|!bank	; Taunt B (forward face)
     db $09		; (originally: db $49)
-org $03D2D4|!bank	; (?) Taunt F (forward face/never used?)
+org $03D2D4|!bank	; Taunt F (forward face)
     db $09		; (originally: db $49)
 org $03D2F9|!bank	; Taunt E (tongue face)
     db $09		; (originally: db $49)
