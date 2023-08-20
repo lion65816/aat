@@ -227,6 +227,8 @@ org $04F4E1|!bank	;|
 org $02CB96|!bank
     db $4B,$0B		; Use palette D (originally: db $47,$07)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;;;;;;;;;;;;;;;;;;;;
 ; Lemmy hex edits.
 ; Note: Specific taunts relating to Lemmy below are based on: https://www.spriters-resource.com/snes/smarioworld/sheet/144218/
@@ -287,7 +289,7 @@ org $03D28C|!bank	; Taunt D (big left eye/looking left)
     db $05		; (originally: db $45)
 
 ;;;;;;;;;;;;;;;;;;;;
-; Wendy hex edits.
+; Wendy hex edits (needs SP3 = ExGFX18D).
 ; Note: Specific taunts relating to Wendy below are based on: https://www.spriters-resource.com/snes/smarioworld/sheet/144218/
 ;;;;;;;;;;;;;;;;;;;;
 
@@ -342,3 +344,13 @@ org $03D21A|!bank
     db $69		; Tile number (originally: db $68)
 org $03D32E|!bank
     db $05		; Tile property (originally: db $45)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Banzai Bill hex edits (needs SP2 = ExGFX181 and SP4 = ExGFX182).
+org $02D5C4|!bank			;\
+    db $80,$82,$84,$86,$A0,$88,$CE,$EE	;| Tilemap
+    db $C0,$C2,$E0,$E2,$8E,$AE,$E4,$80	;/
+org $02D5D4|!bank			;\
+    db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D	;| Tile properties
+    db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3C	;/

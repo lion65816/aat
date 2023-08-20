@@ -9,15 +9,19 @@
 ; 02 = Follow Mario
 ;=========================================================
 
-!BossStartHP = $0A
-!BossEnrageHP = $05
-!Cooldown = $1E			;> $1E = 30 frames
+;!BossStartHP = $63		;> 99 HP
+;!BossEnrageHP = $32		;> 50 HP
+!Cooldown = $0F			;> $0F = 15 frames
+!BossStartHP = $0A		;> 10 HP
+!BossEnrageHP = $05		;> 5 HP
+;!Cooldown = $1E		;> $1E = 30 frames
 
 !BossCurrentHP = $18C5|!addr	;\
 !PhaseNumber = $18C6|!addr	;| Free RAM addresses.
 !Animation = $18C7|!addr	;|
 !Enraged = $18C8|!addr		;/
 !PhaseCounter = $18C9|!addr
+!SpawnedBullets = $18CA|!addr
 
 ;=================================
 ; INIT and MAIN Wrappers
@@ -31,6 +35,7 @@ print "INIT ",pc
 	STZ !Animation
 	STZ !Enraged
 	STZ !PhaseCounter
+	STZ !SpawnedBullets
 	LDA #$FF		;\ Initialize the frame counter.
 	STA !154C,x		;/
 
@@ -63,6 +68,8 @@ Boss:
 	JSR Intro_Sequence	;> Phases 0-2
 
 	JSR Enrage		;> Phases 5-6
+
+	JSR Spawn_Bullets	;> Phases 7-8
 
 	LDA !154C,x		;\
 	BNE +			;|
@@ -216,7 +223,11 @@ Phase_3:
 	STZ $01			;|
 	STZ $02			;|
 	STZ $03			;|
-	%SpawnSprite()		;/
+	%SpawnSprite2()		;/
+	TYX
+	LDA !166E,x		;\
+	AND #$CF		;| Can be killed with fireballs and cape.
+	STA !166E,x		;/
 +
 
 	;STZ $0DBF|!addr	;> [[[[[DEBUG]]]]]
@@ -311,7 +322,11 @@ Phase_4:
 	STZ $01			;|
 	STZ $02			;|
 	STZ $03			;|
-	%SpawnSprite()		;/
+	%SpawnSprite2()		;/
+	TYX
+	LDA !166E,x		;\
+	AND #$CF		;| Can be killed with fireballs and cape.
+	STA !166E,x		;/
 +
 
 	;STZ $0DBF|!addr	;> [[[[[DEBUG]]]]]
@@ -400,6 +415,15 @@ Enrage:
 	BEQ .phase6
 	BNE .return
 .phase5
+	LDA $14			;\
+	AND #$02		;| Play the coin SFX
+	BEQ +			;| every other frame.
+	LDA #$01		;|
+	STA $1DFC|!addr		;|
+	BRA ++			;|
++				;|
+	STZ $1DFC|!addr		;/
+++
 	LDA !154C,x
 	CMP #$80
 	BEQ .change_to_phase6
@@ -415,6 +439,152 @@ Enrage:
 	BEQ .change_to_phase3
 	BRA .return
 .change_to_phase3
+	LDA #$FF
+	STA !154C,x
+	LDA #$03
+	STA !PhaseNumber
+.return
+	RTS
+
+;=============================================
+; Phases 7-8: Spawn bullets
+;=============================================
+
+BulletHeightLow:
+	db $D0,$E0,$F0,$00,$10,$20,$30,$40,$50,$60,$70,$80
+BulletHeightHigh:
+	db $00,$00,$00,$01,$01,$01,$01,$01,$01,$01,$01,$01
+BanzaiHeightLow:
+	db $D0,$10,$50
+BanzaiHeightHigh:
+	db $00,$01,$01
+
+Spawn_Bullets:
+	LDA !PhaseCounter
+	CMP #$03
+	BNE +
+	STZ !PhaseCounter
+	LDA #$07
+	STA !PhaseNumber
+	LDA #$FF
+	STA !154C,x
++
+	LDA !PhaseNumber
+	CMP #$07
+	BEQ .phase7
+	CMP #$08
+	BEQ .phase8
+	JMP .return
+.phase7
+	LDA $14			;\
+	AND #$02		;| Play the coin SFX
+	BEQ +			;| every other frame.
+	LDA #$01		;|
+	STA $1DFC|!addr		;|
+	BRA ++			;|
++				;|
+	STZ $1DFC|!addr		;/
+++
+	LDA !154C,x
+	CMP #$80
+	BEQ .change_to_phase8
+	JMP .return
+.change_to_phase8
+	LDA #$FF
+	STA !154C,x
+	INC !PhaseNumber
+.phase8
+	LDA !154C,x
+	CMP #$80
+	;BEQ .change_to_phase3
+	BNE +
+	JMP .change_to_phase3
++
+	LDA !SpawnedBullets
+	;BNE .return
+	BEQ +
+	JMP .return
++
+	LDA !Enraged
+	BNE ..spawn_banzai
+
+..spawn_bullet
+	PHX
+	LDY #$00
+--
+	CPY #$0C
+	BEQ ++
+	LDX #!SprSize-3		;> Skip the last two slots (otherwise, the tweaker properties may not work).
+-
+	LDA !14C8,x
+	BEQ +
+	DEX
+	BPL -
+	BRA ++			;> If no free slot found, then return.
++
+	LDA #$1C		;\
+	STA !9E,x		;| Spawn Bullet Bill.
+	JSL $07F7D2|!BankB	;/
+	LDA #$01
+	STA !14C8,x
+	LDA #$FF
+	STA !E4,x
+	LDA #$00
+	STA !14E0,x
+	LDA BulletHeightLow,y
+	STA !D8,x
+	LDA BulletHeightHigh,y
+	STA !14D4,x
+	LDA #$00
+	STA !B6,x
+	STA !AA,x
+	LDA #$01
+	STA !SpawnedBullets
+	INY
+	BRA --
+++
+	PLX
+	BRA .return
+
+..spawn_banzai
+	PHX
+	LDY #$00
+--
+	CPY #$03
+	BEQ ++
+	LDX #!SprSize-3		;> Skip the last two slots (otherwise, the tweaker properties may not work).
+-
+	LDA !14C8,x
+	BEQ +
+	DEX
+	BPL -
+	BRA ++			;> If no free slot found, then return.
++
+	LDA #$9F		;\
+	STA !9E,x		;| Spawn Banzai Bill.
+	JSL $07F7D2|!BankB	;/
+	LDA #$01
+	STA !14C8,x
+	LDA #$FF
+	STA !E4,x
+	LDA #$00
+	STA !14E0,x
+	LDA BanzaiHeightLow,y
+	STA !D8,x
+	LDA BanzaiHeightHigh,y
+	STA !14D4,x
+	LDA #$00
+	STA !B6,x
+	STA !AA,x
+	LDA #$01
+	STA !SpawnedBullets
+	INY
+	BRA --
+++
+	PLX
+	BRA .return
+.change_to_phase3
+	STZ !SpawnedBullets
 	LDA #$FF
 	STA !154C,x
 	LDA #$03
@@ -550,12 +720,16 @@ Graphics:
 	LDA !PhaseNumber	;\
 	CMP #$02		;|
 	BEQ +			;| Do the winking pose during
-	CMP #$05		;| the boss intro sequence
-	BEQ +			;| and also while enraging.
-	CMP #$06		;|
-	BNE ++			;|
+	CMP #$05		;| the boss intro sequence,
+	BEQ +			;| while enraging, and during
+	CMP #$06		;| the bullet wall summoning.
+	BEQ +			;|
+	CMP #$07		;|
+	BEQ +			;|
+	CMP #$08		;|
+	BNE ++			;/
 +
-	TXA			;|
+	TXA			;\
 	CLC			;| Increment X by 36 to draw
 	ADC #$24		;| animation frame 4.
 	TAX			;|

@@ -11,6 +11,8 @@
 	!firespeedset1 = $1924|!addr	;\ Free RAM needed to ensure that active
 	!firespeedset2 = $1923|!addr	;/ fireballs' speed is only set once.
 
+	!SprSize = $16
+
 init:
 	STZ !firespeedset1
 	STZ !firespeedset2
@@ -215,5 +217,27 @@ main:
 .ammnofire
 	LDA $00
 	STA $16
+
+	LDX #!SprSize-3		;> Skip the last two slots (otherwise, the tweaker properties may not work).
+-
+	LDA !9E,x
+	CMP #$1C
+	BNE +
+	LDA !166E,x		;\
+	AND #$CF		;| Can be killed with fireballs and cape.
+	STA !166E,x		;/
++
+	LDA !9E,x
+	CMP #$9F
+	BNE +
+	LDA !166E,x		;\
+	AND #$CF		;| Can be killed with fireballs and cape.
+	STA !166E,x		;/
+	LDA !190F,x		;\
+	ORA #$08		;| Needs 5 fireballs to kill.
+	STA !190F,x		;/
++
+	DEX
+	BPL -
 .return
 	RTL

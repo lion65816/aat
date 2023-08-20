@@ -8,7 +8,6 @@
 07 BowserStatue.json
 08 BoomerangBro.json
 09 HammerBro.json
-0A bunzai_bill.json
 0B FireBro.json
 0C goal_sphere_smw.cfg
 0D buster.json
