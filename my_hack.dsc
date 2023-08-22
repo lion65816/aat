@@ -383,6 +383,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1b91	0	Acts as 25 if a specific switch isn't active.
 1b92	0	Displays level message 1.
 1b93	0	Displays level message 2.
+1c90	0	A block that will act like tile 25 for Moving Coins
 1d0e	0	weak_break_block.asm
 1d0f	0	A Donut Lift, which will fall shortly after being stepped on.
 1f18	0	A block that, when touched by the player, will change the background music to a new value and then destroy itself.

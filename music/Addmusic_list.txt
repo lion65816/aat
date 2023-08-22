@@ -18,7 +18,7 @@ Locals:
 0F  originals/15 Cave.txt
 10  originals/16 Ghost.txt
 11  originals/17 Castle.txt
-12  originals/18 Switch Palace.txt
+12  18 Switch Palace (mute).txt
 13  originals/19 Welcome.txt
 14  originals/20 Rescue Egg.txt
 15  SNES Station - Menu.txt
@@ -93,6 +93,7 @@ Locals:
 5A  Star Ocean - Tense Atmosphere.txt
 5B  mitotic.txt
 5C  442.txt
+5D  originals/18 Switch Palace.txt
 5E  rack_real_final_u.txt
 5F  harvest.txt
 60  kraid.txt

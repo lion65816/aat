@@ -8,14 +8,18 @@
 	!shmupleft = $0C	; horizontal limits
 	!shmupright = $E4
 
+	!SprSize = $16		;> Number of SA-1 sprite slots ($16 = 22).
+
 	!firespeedset1 = $1924|!addr	;\ Free RAM needed to ensure that active
 	!firespeedset2 = $1923|!addr	;/ fireballs' speed is only set once.
-
-	!SprSize = $16
+	!PlayerCurrentHP = $58		;> Needs to be the same free RAM address as in SimpleHP.asm.
 
 init:
 	STZ !firespeedset1
 	STZ !firespeedset2
+	LDA #$1E		;\ Set the Green Star Block coin counter to 30.
+	STA $0DC0|!addr		;/ Used to keep track of when to grant bonus HP.
+	RTL
 
 main:
 	LDA $71			;\
@@ -29,6 +33,12 @@ main:
 	STZ $7B
 	STZ $7D
 	STZ $03
+
+	LDA $1493|!addr		;\ During the level end sequence,
+	BEQ +			;| stop processing player inputs,
+	;JMP .ammnostandanim	;| but keep Demo floating.
+	JMP .ammnoup		;/
++
 
 	LDA $15			; right pressed
 	AND #$01
@@ -183,6 +193,11 @@ main:
 	STZ !firespeedset2
 .firedone
 
+	LDA $1493|!addr		;\ During the level end sequence,
+	BEQ +			;| stop processing player inputs.
+	JMP .return		;/
++
+
 	; Control Override
 	STZ $17			; clear things
 	LDA $18			; but keep $18 as $01
@@ -218,18 +233,19 @@ main:
 	LDA $00
 	STA $16
 
+	; Allow bullets to be killed by fireballs.
 	LDX #!SprSize-3		;> Skip the last two slots (otherwise, the tweaker properties may not work).
 -
-	LDA !9E,x
-	CMP #$1C
-	BNE +
+	LDA !9E,x		;\
+	CMP #$1C		;| Check if the sprite is a Bullet Bill.
+	BNE +			;/
 	LDA !166E,x		;\
 	AND #$CF		;| Can be killed with fireballs and cape.
 	STA !166E,x		;/
 +
-	LDA !9E,x
-	CMP #$9F
-	BNE +
+	LDA !9E,x		;\
+	CMP #$9F		;| Check if the sprite is a Banzai Bill.
+	BNE +			;/
 	LDA !166E,x		;\
 	AND #$CF		;| Can be killed with fireballs and cape.
 	STA !166E,x		;/
@@ -237,7 +253,32 @@ main:
 	ORA #$08		;| Needs 5 fireballs to kill.
 	STA !190F,x		;/
 +
+	LDA !7FAB9E,x		;\
+	CMP #$1A		;| Check if the sprite is a Homing Bill.
+	BNE +			;/
+	LDA !166E,x		;\
+	AND #$CF		;| Can be killed with fireballs and cape.
+	STA !166E,x		;/
++
+	;LDA !9E,x		;\
+	;CMP #$21		;| Check if the sprite is a Moving Coin.
+	;BNE +			;/
+	;LDA #$01		;\ If so, freeze it in place.
+	;STA !C2,x		;/
+;+
 	DEX
 	BPL -
+
+	; Get +1 HP for every five coins collected.
+	LDA $0DC0|!addr		;> Use the Green Star Block coin counter. Counts down every time a coin is collected.
+	;STA $0DBF|!addr	;> [Debug]
+	CMP #$1A		;\
+	BCS .return		;| If less than 26 coins, increment the player's HP.
+	INC !PlayerCurrentHP	;/
+	LDA #$0B		;\ Play the "item placed in reserve box" SFX.
+	STA $1DFC|!addr		;/
+	LDA #$1E		;\ Reset the coin counter to 30.
+	STA $0DC0|!addr		;/
+
 .return
 	RTL

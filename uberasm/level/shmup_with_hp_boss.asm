@@ -1,3 +1,7 @@
+load:
+	;JSL NoStatus_load
+	RTL
+
 init:
 	JSL SimpleHP_init
 	JSL shmup_init

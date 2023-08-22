@@ -9,6 +9,7 @@
 ; 02 = Follow Mario
 ;=========================================================
 
+
 ;!BossStartHP = $63		;> 99 HP
 ;!BossEnrageHP = $32		;> 50 HP
 !Cooldown = $0F			;> $0F = 15 frames
@@ -17,11 +18,11 @@
 ;!Cooldown = $1E		;> $1E = 30 frames
 
 !BossCurrentHP = $18C5|!addr	;\
-!PhaseNumber = $18C6|!addr	;| Free RAM addresses.
-!Animation = $18C7|!addr	;|
-!Enraged = $18C8|!addr		;/
-!PhaseCounter = $18C9|!addr
-!SpawnedBullets = $18CA|!addr
+!PhaseNumber = $18C6|!addr	;|
+!Animation = $18C7|!addr	;| Free RAM addresses.
+!Enraged = $18C8|!addr		;|
+!PhaseCounter = $18C9|!addr	;|
+!SpawnedBullets = $18CA|!addr	;/
 
 ;=================================
 ; INIT and MAIN Wrappers
@@ -66,10 +67,9 @@ print "MAIN ",pc
 
 Boss:
 	JSR Intro_Sequence	;> Phases 0-2
-
 	JSR Enrage		;> Phases 5-6
-
 	JSR Spawn_Bullets	;> Phases 7-8
+	JSR Death_Sequence	;> Phases 9-10
 
 	LDA !154C,x		;\
 	BNE +			;|
@@ -100,6 +100,10 @@ Boss:
 	BEQ .no_damage		;| Nor during the enrage sequence.
 	CMP #$06		;|
 	BEQ .no_damage		;/
+	CMP #$09		;\
+	BEQ .no_damage		;| Nor during the death sequence.
+	CMP #$0A		;|
+	BEQ .no_damage		;/
 
 	LDA !1540,x		;\ If the cooldown timer is not zero,
 	BNE .no_damage		;/ then the sprite cannot be damaged.
@@ -109,16 +113,25 @@ Boss:
 	DEC $0F48|!addr		;> [[[[[DEBUG]]]]]
 	LDA #!Cooldown		;\ Set the cooldown timer to give the
 	STA !1540,x		;/ sprite some invincibility frames.
+	LDA !BossCurrentHP	;\
+	BNE .no_damage		;|
+	LDA #$09		;| Start the death sequence when the
+	STA !PhaseNumber	;| boss has zero HP.
+	LDA #$FF		;|
+	STA !154C,x		;/
 
-	; [[[[[TBD]]]]]
-	LDA !BossCurrentHP
-	BEQ .kill
-	BNE .no_damage
-.kill
-	;LDA #$02
-	;STA !14C8,x
-	;BRA .return
-	%Star()
+;	LDA !BossCurrentHP	;\
+;	BEQ .kill		;| If the boss HP is zero, then start the kill sequence.
+;	BNE .no_damage		;/
+;.kill
+;	LDA #$02		;\ Kill as if by a shell.
+;	STA !14C8,x		;/
+;	LDA #$01		;\ Freeze the player on level end and enable boss sequence cutscene.
+;	STA $13C6|!addr		;/ (Todo: Can still move Demo up and to the side.)
+;	LDA #$FF		;\ Set level end timer.
+;	STA $1493|!addr		;/
+;	LDA #$03		;\ Set the boss victory music.
+;	STA $1DFB|!addr		;/
 
 .no_damage
 	LDA !1540,x		;\ Draw the sprite graphics normally
@@ -230,12 +243,9 @@ Phase_3:
 	STA !166E,x		;/
 +
 
-	;STZ $0DBF|!addr	;> [[[[[DEBUG]]]]]
 	JSL $01A7DC|!BankB	;> Process contact with the player.
 	BCC +
 	JSL $00F5B7|!BankB
-	;LDA #$01		;\ [[[[[DEBUG]]]]]
-	;STA $0DBF|!addr	;/
 +
 
 	LDA $14			;\ only change speeds every fourth frame
@@ -329,12 +339,9 @@ Phase_4:
 	STA !166E,x		;/
 +
 
-	;STZ $0DBF|!addr	;> [[[[[DEBUG]]]]]
 	JSL $01A7DC|!BankB	;\ Process contact with the player.
 	BCC +			;| If contact was made, then hurt the player.
 	JSL $00F5B7|!BankB	;/
-	;LDA #$01		;\ [[[[[DEBUG]]]]]
-	;STA $0DBF|!addr	;/
 +
 	LDA !7FAB28,x
 	AND #$02
@@ -592,6 +599,43 @@ Spawn_Bullets:
 .return
 	RTS
 
+;=============================================
+; Phases 9-10: Play death sequence
+;=============================================
+
+Death_Sequence:
+	LDA !PhaseNumber
+	CMP #$09
+	BEQ .phase9
+	CMP #$0A
+	BEQ .phase10
+	BNE .return
+.phase9
+	LDA !154C,x
+	CMP #$80
+	BEQ .change_to_phase10
+	BRA .return
+.change_to_phase10
+	LDA #$FF
+	STA !154C,x
+	INC !PhaseNumber
+.phase10
+	LDA !154C,x
+	CMP #$80
+	BEQ .kill
+	BRA .return
+.kill
+	LDA #$02		;\ Kill as if by a shell.
+	STA !14C8,x		;/
+	LDA #$01		;\ Freeze the player on level end and enable boss sequence cutscene.
+	STA $13C6|!addr		;/
+	LDA #$FF		;\ Set level end timer.
+	STA $1493|!addr		;/
+	LDA #$03		;\ Set the boss victory music.
+	STA $1DFB|!addr		;/
+.return
+	RTS
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Sprite graphics routine
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -606,6 +650,7 @@ Tilemap:
 	db $0C,$0E,$60,$2C,$2E,$62,$4C,$4E,$45	;> Animation frame 2
 	db $06,$08,$0A,$26,$28,$2A,$46,$48,$4A	;> Animation frame 3
 	db $64,$66,$68,$6A,$6C,$6E,$C6,$C8,$CA	;> Animation frame 4 (wink)
+	db $4C,$8A,$4C,$4C,$8C,$A8,$AA,$AC,$4C	;> Animation frame 5 (death)
 Props:
 	db $0E,$0E,$0E,$0E,$0E,$0E,$0E,$0E,$0E	;> Facing left (to flip the tiles, use: EOR #$40)
 
@@ -664,14 +709,23 @@ Graphics:
 	EOR #$04		;|
 	STA $0303|!Base2,y	;/
 ++
-;	LDA !Enraged		;\
-;	CMP #$02		;| While enraged (after reaching phase 6),
-;	BNE +			;| change the sprite's palette.
-;	LDA $0303|!Base2,y	;|
-;	DEC #$04		;|
-;	STA $0303|!Base2,y	;/
-;+
-
+	LDA !PhaseNumber	;\
+	CMP #$09		;| If the sprite is in predeath (phase 9),
+	BEQ +++			;| then skip to the palette flashing code.
+	CMP #$0A		;| Otherwise, while dying
+	BNE ++++		;| (after reaching phase 10),
+	LDA $0303|!Base2,y	;| change the sprite's palette
+	DEC #$04		;| for the remainder of the
+	STA $0303|!Base2,y	;| fight.
+	BRA ++++		;/
++++
+	LDA $14			;\
+	AND #$02		;| Every two frames, switch the
+	BEQ ++++		;| palette from enraged to
+	LDA $0303|!Base2,y	;| dying to make it flash.
+	EOR #$0C		;|
+	STA $0303|!Base2,y	;/
+++++
 	BRA .check_animation
 
 .no_flip
@@ -701,13 +755,23 @@ Graphics:
 	EOR #$04		;|
 	STA $0303|!Base2,y	;/
 ++
-;	LDA !Enraged		;\
-;	CMP #$02		;| While enraged (after reaching phase 6),
-;	BNE +			;| change the sprite's palette.
-;	LDA $0303|!Base2,y	;|
-;	DEC #$04		;|
-;	STA $0303|!Base2,y	;/
-;+
+	LDA !PhaseNumber	;\
+	CMP #$09		;| If the sprite is in predeath (phase 9),
+	BEQ +++			;| then skip to the palette flashing code.
+	CMP #$0A		;| Otherwise, while dying
+	BNE ++++		;| (after reaching phase 10),
+	LDA $0303|!Base2,y	;| change the sprite's palette
+	DEC #$04		;| for the remainder of the
+	STA $0303|!Base2,y	;| fight.
+	BRA ++++		;/
++++
+	LDA $14			;\
+	AND #$02		;| Every two frames, switch the
+	BEQ ++++		;| palette from enraged to
+	LDA $0303|!Base2,y	;| dying to make it flash.
+	EOR #$0C		;|
+	STA $0303|!Base2,y	;/
+++++
 
 .check_animation
 	PLX			;\ Restore the loop counter, but store it to scratch RAM
@@ -719,23 +783,37 @@ Graphics:
 +
 	LDA !PhaseNumber	;\
 	CMP #$02		;|
-	BEQ +			;| Do the winking pose during
+	BEQ .wink		;| Do the winking pose during
 	CMP #$05		;| the boss intro sequence,
-	BEQ +			;| while enraging, and during
+	BEQ .wink		;| while enraging, and during
 	CMP #$06		;| the bullet wall summoning.
-	BEQ +			;|
+	BEQ .wink		;|
 	CMP #$07		;|
-	BEQ +			;|
+	BEQ .wink		;|
 	CMP #$08		;|
-	BNE ++			;/
-+
+	BEQ .wink		;/
+	CMP #$09		;\
+	BEQ .predeath		;| Transform during the death sequence.
+	CMP #$0A		;|
+	BEQ .death		;/
+	BRA .normal		;> Otherwise, draw the regular frames.
+.predeath
+	LDA $14
+	AND #$02
+	BEQ .normal
+.death
+	TXA			;\
+	CLC			;| Increment X by 45 to draw
+	ADC #$2D		;| animation frame 5.
+	TAX			;|
+	BRA .store_tile		;/
+.wink
 	TXA			;\
 	CLC			;| Increment X by 36 to draw
 	ADC #$24		;| animation frame 4.
 	TAX			;|
-	;INX #36		;|
 	BRA .store_tile		;/
-++
+.normal
 	LDA !Animation		;\ For frames 0-7, draw
 	CMP #$08		;| animation frame 0.
 	BCC .store_tile		;/
@@ -747,21 +825,18 @@ Graphics:
 	CLC			;| increment X by 27 to draw
 	ADC #$1B		;| animation frame 3.
 	TAX			;/
-	;INX #27
 	BRA .store_tile
 .frame1
 	TXA			;\
 	CLC			;| Increment X by 9 to draw
 	ADC #$09		;| animation frame 1.
 	TAX			;/
-	;INX #9
 	BRA .store_tile
 .frame2
 	TXA			;\
 	CLC			;| Increment X by 18 to draw
 	ADC #$12		;| animation frame 2.
 	TAX			;/
-	;INX #18
 .store_tile
 	LDA Tilemap,x		;\ Store sprite's tile number in OAM.
 	STA $0302|!Base2,y	;/
