@@ -1,3 +1,8 @@
+;cleartable
+
+
+
+
 	!dp = $0000
 	!addr = $0000
     !rom = $800000
@@ -326,25 +331,49 @@ if !sa1
 
 endif 
 
+
+;######################################
+;############## MaxTile ###############
+;######################################
+; MaxTile shared routines
+!maxtile_flush_nmstl		= $0084A8
+!maxtile_get_sprite_slot	= $0084AC
+!maxtile_get_slot			= $0084B0
+!maxtile_finish_oam			= $0084B4
+
 ;######################################
 ;############## Defines ###############
 ;######################################
 
-!FrameIndex = !SpriteMiscTable13
-;!LocalFlip = !SpriteMiscTable4
-!GlobalFlip = !SpriteMiscTable5
+!FrameIndex			= !SpriteMiscTable13
+!GlobalFlip			= !SpriteMiscTable5
+
+!HealthRam			= !SpriteMiscTable3
+
+!BossDamageTimer	= !SpriteDecTimer4
 
 !IntroTimer			= !SpriteDecTimer6
 !IntroTimer_Buffer	= !SpriteDecTimer5
-!GroundHit		= !SpriteMiscTable10
+!GroundHit			= !SpriteMiscTable10
 !BossStates			= !SpriteMiscTable11
 !BossSubStates		= !SpriteMiscTable12
 
+!SpriteXLowTarget = !SpriteMiscTable6
+!SpriteXHighTarget = !SpriteMiscTable7
+!SpriteYLowTarget = !SpriteMiscTable8
+!SpriteYHighTarget = !SpriteMiscTable9
+
+!BossCurrentAttackOffset = !SpriteMiscTable14
+
 !BossSubTimer		= !SpriteDecTimer7
+
 
 !MissileAnimation		= !SpriteMiscTable10
 !MissileType			= !SpriteMiscTable11
 !MissilePos				= !SpriteMiscTable12
+
+!PencilState			= !BossStates
+!PencilTimer			= !IntroTimer
 
 !SpriteInit_Because_ThisisDumb		= !SpriteMiscTable15
 
@@ -352,10 +381,34 @@ endif
 ;########### Init Routine #############
 ;######################################
 print "INIT ",pc
+;	LDA $18CC|!Base2
+;	BNE +
+;	LDX #$00
+;	INC $18CC|!Base2
+;+
+;	STZ !WhatSlotToBeIn,x
+;	LDA #$24 : STA !BossCurrentAttackOffset,x
+
+	; uncomment these to kill boss right away (test)
+;		LDA #$05 : STA !HealthRam,x
+;		LDA #$0B : STA !BossStates,x
+;		LDA #$04 : STA !SpriteXLowTarget,x ; explode timer
+
+	;TAY
+	;LDA FINISH_SUBSTATE_StateLists,y : STA !BossCurrentAttackOffset,x
+	
+	LDA #$02 : STA !IntroTimer_Buffer,x
+
+	LDA $1F2B|!Base2
+	AND #$01
+	BNE +
 	LDA #$60 : STA !IntroTimer_Buffer,x
++
 
 	LDA #$00
 	STA !GlobalFlip,x
+	STA $7FC0FC
+	STA $7FC0FD
 	
 	;JSL InitWrapperChangeAnimationFromStart
     ;Here you can write your Init Code
@@ -369,10 +422,21 @@ print "MAIN ",pc
     PHB
     PHK
     PLB
+;	JSR HandleSlot
     JSR SpriteCode
     JSR GraphicRoutine    ; why not do this?
+	JSR DISPLAY_HEALTH
     PLB
 RTL
+
+HandleSlot:
+;	LDA !WhatSlotToBeIn,x
+;	TAX
+;	STA !WhatSlotToBeIn,x
+;
+;RTS
+	
+
 
 ;>Routine: SpriteCode
 ;>Description: This routine excecute the logic of the sprite
@@ -389,11 +453,32 @@ SpriteCode:
 		; $01		- Aimed, x speed following active
 		; $02		- Not Aimed
 		; $03		- Not aimed, x speed following active
+	; $02 - Mini Castle
+		; !SpriteDirection
+		; $00 - go left
+		; $01 - go right
+	; $03 - Bolder Big
+	; $04 - Pencil (Deadly)
 
 ; First frame in sprite code, essentially an init but actually functional
 	LDA !SpriteInit_Because_ThisisDumb,x
 	BNE +
 	INC !SpriteInit_Because_ThisisDumb,x
+
+; HATE that I can't do this
+	; LDA $18CC|!Base2
+	; BNE ++
+	; CPX #$00
+	; BEQ ++
+	; STZ $01 : STZ $00
+	; STZ $03 : STZ $02
+	;;;;LDA #$00 : STA $04
+	; LDA !CustomSpriteNumber,x : SEC : %SpawnSprite();Safe()
+	; STZ !14C8,x
+	; RTS
+ ; ++	
+	; INC $18CC|!Base2
+
 	LDA !extra_byte_1,x ; simplest way of doing it imo
 	TAY
 	LDA WhatSprite,y
@@ -412,15 +497,6 @@ SpriteCode:
     %SubOffScreen()
 
     JSR InteractMarioSprite
-    ;After this routine, if the sprite interact with mario, Carry is Set.
-
-    ;Here you can write your sprite code routine
-    ;This will be excecuted once per frame excepts when 
-    ;the animation is locked or when sprite status is not #$08
-
-    ;JSR AnimationRoutine                ;Calls animation routine and decides the next frame to draw
-    
-	
 	LDA !FrameIndex,x
 	JSL $0086DF|!BankB
 		dw .Faro
@@ -452,7 +528,7 @@ SpriteCode:
 		dw .FortressDying
 		dw .FortressDying
 		dw .FortressDying
-		dw .FortressDying ; $1D
+		dw .CastleDestructionCutscene ; $1D
 		dw .MissileUp
 		dw .MissileUp
 		dw .MissileUp
@@ -496,7 +572,14 @@ SpriteCode:
 	LDA #$03 : STA !FrameIndex,x
 	STZ !SpriteYSpeed,x
 	STZ !SpriteXSpeed,x
+	; initial timer
 	LDA #$FF : STA !IntroTimer,x
+	LDA $1F2B|!Base2
+	AND #$01
+	BEQ .firsttime
+	LDA #$70 : STA !IntroTimer,x
+	LDA #$61 : STA $1DFB|!Base2 ; play music right away
+.firsttime
 	RTS
 ++	SEP #$20
 	
@@ -523,19 +606,23 @@ SpriteCode:
 	
 	
 .Fortress
-LDA !IntroTimer,x
-BEQ .BBBBBOSS_BATTLE
-DEC A
-BNE +
-LDA #$61 : STA $1DFB|!Base2
-LDA #$01 : STA $1426|!Base2
+	LDA !IntroTimer,x
+	BEQ .BBBBBOSS_BATTLE
+	DEC A
+	BNE +
+	LDA $1F2B|!Base2
+	AND #$01
+	BNE +
+	EOR #$01 : STA $1F2B|!Base2 ; set sram
+	LDA #$61 : STA $1DFB|!Base2
+	LDA #$01 : STA $1426|!Base2
 +
 
-JSL $01802A|!BankB
-JSL $019138|!BankB		;interact with objects
-LDA !1588,x
-AND #$04
-BEQ +
+	JSL $01802A|!BankB
+	JSL $019138|!BankB		;interact with objects
+	LDA !1588,x
+	AND #$04
+	BEQ +
 	LDA !GroundHit,x
 	BNE +
 	LDA #$E0 : STA !SpriteYSpeed,x
@@ -543,20 +630,31 @@ BEQ +
 	INC !GroundHit,x
 +	RTS
 .BBBBBOSS_BATTLE
+	JSR DetectDamage
+	LDA !BossDamageTimer,x
+	BEQ +
+	STA $18E6|!Base2
+	JMP .IsDamaged
++
+	LDA #$00 : STA $7FC0FD
 	LDA !BossStates,x
 	JSL $0086DF|!BankB
-		dw .Missiles
+		dw .Missiles ; DONE
 		dw .MiniCastles
 		dw .Bolders
-		dw .Pencils
-		dw .ThwompMadness
-		dw .Missiles ;Pattern, will just do it inside the .Missiles subroutine
-		dw .Fire
-		dw .Earthquake
-		dw .Bouncy
-		dw .RAM
+		dw .Pencils ; DONE
+		dw .ThwompLand ; DONE
+		dw .MissilesM ;Pattern, will just do it inside the .Missiles subroutine
+		dw .Fire ; kinda DONE (priority issues)
+		dw .Earthquake ; DONE
+		dw .Bouncy ; DONE
+		dw .RAM ; DONE
+		dw .Wyatt ; .ThwompLand + .Earthquake
+		dw .YouAreDeadDeadDead
 
 ;;;;;;;
+.MissilesM
+	LDA #$01 : STA $7FC0FD
 .Missiles
 ;;;;;;;
 	LDA !BossSubStates,x
@@ -592,7 +690,7 @@ BEQ +
 	PHX : TYX
 	INC !MissileType,x ; posmode
 	PLX : PHY
-	LDY !BossSubStates,x
+	LDA !BossSubStates,x : DEC A : TAY
 	LDA .SetPos,y : PLY : STA !MissilePos,y
 +	RTS
 .SetPos
@@ -610,36 +708,957 @@ BEQ +
 
 ;;;;;;;
 .MiniCastles
+	LDA !BossSubStates,x
+	JSL $0086DF|!BankB
+		dw .jumpandfly
+		dw .Firelo
+		dw .Firelo
+		dw .Firelo
+		dw .ReturnToGround
+		dw FINISH_SUBSTATE
+.jumpandfly
+	
+	LDA #-$0C : STA !sprite_speed_y,x
+	JSL $01801A|!BankB ; y
+	
+	LDA !sprite_y_low,x
+	CMP #$10
+	BCS +
+	INC !BossSubStates,x
++
+.doflyframes
+	LDA $14
+	LSR A : AND #$01
+	CLC : ADC #$04
+	STA !FrameIndex,x
+	RTS
+	
+.Firelo
+	JSR .doflyframes
+	STZ !GroundHit,x
+	LDA !BossSubTimer,x
+	BNE +
+	LDA #$40 : STA !BossSubTimer,x
+	INC !BossSubStates,x
+
+	STZ $00 : STZ $01
+	STZ $02 : STZ $03
+
+	LDA #$57 : JSR GenCSpr
+	CPY #$FF
+	BEQ +
+	
+	LDA #$02
+	PHX : TYX
+	STA !extra_byte_1,x
+	PLX
+	
+	PHY
+	LDY #$00
+	LDA !sprite_x_low,x
+	BMI ++
+	INY
+++	TYA : PLY : STA !SpriteDirection,y
+	
+	LDA #$20 : STA $1DF9|!Base2
++	JMP .wavymotion
+
+.ReturnToGround
+	LDA #$03 : STA !FrameIndex,x
+	JSL $01802A|!BankB
+	
+	LDA !GroundHit,x
+	BNE +
+	LDA #$20 : STA !BossSubTimer,x
++
+	
+	LDA !1588,x
+	AND #$04
+	BEQ +
+	LDA !GroundHit,x
+	BNE +
+	LDA #$E0 : STA !SpriteYSpeed,x
+	JSR ImpactEffect
+	INC !GroundHit,x
++
+
+	LDA !BossSubTimer,x
+	BNE +
+	INC !BossSubStates,x
++
+	RTS
 ;;;;;;;
 ;;;;;;;
 .Bolders
+;	JMP FINISH_SUBSTATE
+
+	LDA !BossSubStates,x
+	JSL $0086DF|!BankB
+		dw .flyup
+		dw .leftright
+		dw .leftright
+		dw .leftright
+		dw .oop
+		dw .returntospot
+		dw FINISH_SUBSTATE
+.oop
+	LDA #$50 : STA !BossSubTimer,x
+	INC !BossSubStates,x
+	BRA .Bolders
+.flyup
+;	LDA #$40 : STA !BossSubTimer,x
+	
+	LDA #-$18 : STA !sprite_speed_y,x
+	JSL $01801A|!BankB ; y
+	
+	STZ !sprite_speed_x,x
+	
+	LDA !sprite_y_high,x
+	BNE +
+	LDA !sprite_y_low,x
+	CMP #$D0
+	BCS +
+	INC !BossSubStates,x
++	JMP .doflyframes
+
+
+.speeeed
+	db $20,-$20
+.momentuummmm
+	db $02,-$02
+.leftright
+	JSR .doflyframes
+	STZ !GroundHit,x
+	
+	%SubHorzPos()
+	
+	LDA !sprite_speed_x,x
+	CMP .speeeed,y
+	BEQ +
+	CLC : ADC .momentuummmm,y
+	STA !sprite_speed_x,x
++	JSL $018022|!BankB
+
+	LDA !BossSubTimer,x
+	BNE +
+	LDA #$40 : STA !BossSubTimer,x
+	INC !BossSubStates,x
+
+	STZ $00 : STZ $01
+	STZ $02 : LDA #-$20 : STZ $03
+
+	LDA #$57 : JSR GenCSpr
+	CPY #$FF
+	BEQ +
+	
+	LDA #$03
+	PHX : TYX
+	STA !extra_byte_1,x
+	PLX
+	
+	LDA #$20 : STA $1DF9|!Base2
++	JMP .wavymotion
+
+.returntospot
+	STZ !sprite_speed_x,x
+	JMP .ReturnToPoint_Bypass
+	RTS
 ;;;;;;;
 ;;;;;;;
 .Pencils
+	LDA #$01 : STA $7FC0FD
+
+	LDA !BossSubStates,x
+	JSL $0086DF|!BankB
+		dw .DrawDemoLol
+		dw .DrawDemoLol
+		dw .DrawDemoLol
+		dw .Wait
+		dw .Wait
+		dw FINISH_SUBSTATE
+.DrawDemoLol
+	LDA !BossSubTimer,x
+	BNE +
+	INC !BossSubStates,x
+	LDA !BossSubStates,x : TAY
+	LDA .Times2,y : STA !BossSubTimer,x
+	
+	LDA #$57 : JSR GenCSpr
+	CPY #$FF
+	BEQ +
+	
+	LDA #$04
+	PHX : TYX
+	STA !extra_byte_1,x
+	PLX
+	
+	LDA #$20 : STA $1DF9|!Base2
+
++	RTS
+.Times2
+	db $40,$40,$40,$F0,$40
 ;;;;;;;
 ;;;;;;;
-.ThwompMadness
+.ThwompLand
+	LDA !BossSubStates,x
+	JSL $0086DF|!BankB
+		dw .SetTimern
+		dw .PoofGone
+		dw .PrestoItsGusto
+		dw .ThwompsForDays
+		dw .ReturnToPoint
+		dw FINISH_SUBSTATE
+.SetTimern
+	STZ $00 : STZ $01
+	LDA #$18 : STA $02
+	LDA #$01 : %SpawnSmoke()
+
+	LDA #$14 : STA !BossSubTimer,x
+	LDA #$03 : STA !sprite_x_high,x
+	INC !BossSubStates,x
+	BRA .ThwompLand
+
+.PoofGone
+	LDA !BossSubTimer,x
+	BNE +
+	LDA #$30 : STA !BossSubTimer,x
+	LDA #$01 : STA !sprite_x_high,x : STA !sprite_y_high,x
+	LDA #$00 : STA !sprite_y_low,x
+	LDA #$78 : STA !sprite_x_low,x
+	INC !BossSubStates,x
+	
+	STZ $00 : STZ $01
+	LDA #$18 : STA $02
+	LDA #$01 : %SpawnSmoke()
++	RTS
+
+.ThwompsForDays
+	JSR .T_hwomp
+	JSR .PrestoItsGusto
+	RTS
+
+.T_hwomp
+	LDA #$01 : STA $7FC0FC
+
+	LDA $14 : AND #$1F
+	BNE +
+.T_hanos
+	STZ $00 : STZ $01
+	STZ $02 : STZ $03
+	LDA #$93 : SEC
+	%SpawnSprite()
+	CPY #$FF : BEQ +
+	
+	PHY ;STY $0C
+	LDA #$03 : %Random()
+	TAY
+	LSR A : EOR #$01 : STA $00 ;!1534,y
+	LDA .xposs,y : STA $01 ; ypos low
+	LDA .xposh,y : STA $02
+	LDA .yposs,y : STA $03
+	;LDA .yposh,y : STA $04
+	PLY
+	LDA $00 : STA !1534,y
+	LDA $01 : STA !sprite_x_low,y
+	LDA $02 : STA !sprite_x_high,y
+	LDA $03 : STA !sprite_y_low,y
+	LDA #$01 : STA !sprite_y_high,y
+	PHX : TYX
+	;LDA !7FAB10,x : ORA #$04 : STA !7FAB10,x ; set extra bit
+	PLX
++	RTS
+.PrestoItsGusto
+	LDA !BossSubTimer,x
+	BNE +
+	STZ !GroundHit,x
+	STZ !sprite_speed_y,x
+	LDA #$FF : STA !BossSubTimer,x
+	INC !BossSubStates,x
++
+
+	LDA $14
+	LSR A : AND #$01
+	CLC : ADC #$04
+	STA !FrameIndex,x
+
+.wavymotion
+	LDA $14
+	LSR #3 : AND #$07
+	TAY	: LDA .WavySpd,y
+	STA !sprite_speed_y,x
+	JSL $01801A|!BankB
+	RTS
+.WavySpd
+	db $00,$F8,$F2,$F8,$00,$08,$0E,$08
+.xposs
+	db $E8,$E8,$08,$08
+.xposh
+	db $00,$00,$02,$02
+.yposs
+	db $38,$5B,$40,$60
+;.yposh
+
+.ReturnToPoint
+	LDA #$00 : STA $7FC0FC
+	LDA !BossSubTimer,x
+	CMP #$50
+	BCC +
+	LDA #$48 : STA !BossSubTimer,x
++
+.ReturnToPoint_Bypass
+
+	LDA #$03 : STA !FrameIndex,x
+
+	STZ !sprite_speed_x,x
+	LDA #$CA; : STA !SpriteXLowTarget,x
+	LDY #$01; : STA !SpriteXHighTarget,x
+
+	;LDY !SpriteXHighTarget,x
+	;LDA !SpriteXLowTarget,x
+	JSR EaseIn_X
+
+	JSL $01802A|!BankB
+	JSL $019138|!BankB		;interact with objects
+	LDA !1588,x
+	AND #$04
+	BEQ +
+	LDA !GroundHit,x
+	BNE +
+	LDA #$E0 : STA !SpriteYSpeed,x
+	JSR ImpactEffect
+	INC !GroundHit,x
++
+
+	LDA !BossSubTimer,x
+	BNE +
+	INC !BossSubStates,x
++	RTS
+
 ;;;;;;;
 ;;;;;;;
 .Fire
+	LDA #$01 : STA $7FC0FD
+	LDA !BossSubStates,x
+	JSL $0086DF|!BankB
+		dw .timerstuffman
+		dw .Firer
+		dw .Firer
+		dw .Firer
+		dw .TheReurn
+		dw FINISH_SUBSTATE
+
+.timerstuffman
+	LDA #$01 : STA $7FC0FC
+	LDA #$40 : STA !BossSubTimer,x
+	LDA #$0E : STA $1DFC|!Base2
+	INC !BossSubStates,x
+	BRA .Fire
+
+.Firer
+	LDA !BossSubTimer,x
+	CMP #$10
+	BCS ++
+	PHA
+	JSR DoShake
+	PLA
+++	CMP #$00
+	BNE +
+	INC !BossSubStates,x
+;	JSR GetScreenSide_Sprite
+	LDY #$00
+	LDA !sprite_x_low,x
+	BPL ++ : INY : ++
+	STY $0C
+	
+	LDA #$30 : STA !BossSubTimer,x
+	LDA #-$08 : STA $00
+	LDA #-$10 : STA $01
+	;LDA .spritexspawnsp,y : STA $02
+	STZ $02 : STZ $03
+	LDA #$94 : SEC : %SpawnSprite()
+	CPY #$FF : BEQ +
+	LDA !1528,y : INC : STA !1528,y ; change to fire
+;	LDA $0C : STA !SpriteDirection,y
+	PHX : LDX $0C
+	LDA .spritexspawnsp,x : STA !sprite_speed_x,y
+	PLX
+	
+	LDA #-$08 : STA $00
+	STZ $01 : LDA #$1B : STA $02
+	LDA #$01 : %SpawnSmoke()
++	RTS
+.spritexspawnsp
+	db $20,-$20
+
+.TheReurn
+	LDA #$00 : STA $7FC0FC
+	JMP .Stool
+
 ;;;;;;;
 ;;;;;;;
 .Earthquake
+	LDA !BossSubStates,x
+	JSL $0086DF|!BankB
+		dw .SetTimer
+		dw .Shaker
+		dw .Rise
+		dw .SMAAAASH
+		dw .Rise
+		dw .SMAAAASH
+		dw .Rise
+		dw .SMAAAASH
+		dw .ReturnRise
+		dw .SMAAAASH
+		dw .Stool
+		dw FINISH_SUBSTATE
+.SetTimer
+	LDA #$20 : STA !BossSubTimer,x
+	INC !BossSubStates,x
+	BRA .Earthquake
+
+.Shaker
+	JSR DoShake
+	LDA !BossSubTimer,x
+	BNE +
+	JSR .DoPose1
+	LDA #$30 : STA !BossSubTimer,x
+	INC !BossSubStates,x
++	RTS
+
+.ReturnRise
+	LDA #$CA : STA !SpriteXLowTarget,x
+.Rise
+	STZ !GroundHit,x
+	LDY !SpriteXHighTarget,x
+	LDA !SpriteXLowTarget,x
+	JSR EaseIn_X
+	LDY !SpriteYHighTarget,x
+	LDA !SpriteYLowTarget,x
+	JSR EaseIn_Y
+	LDA !BossSubTimer,x
+	BNE +
+	LDA #$20 : STA !BossSubTimer,x
+	INC !BossSubStates,x
++
+
+	LDA $14
+	LSR A : AND #$01
+	CLC : ADC #$04
+	STA !FrameIndex,x
+	RTS
+
+.SMAAAASH
+
+	LDA !GroundHit,x
+	BNE +
+	LDA #$03 : STA !FrameIndex,x
+	LDA #$70 : STA !sprite_speed_y,x
+	JSL $01802A|!BankB
+
+	LDA !1588,x
+	AND #$04
+	BEQ +
+	JSR ImpactEffect
+	INC !GroundHit,x
++
+
+	LDA !BossSubTimer,x
+	BNE +
+	JSR .DoPose1
+	LDA #$18 : STA !BossSubTimer,x
+	INC !BossSubStates,x
++
+	RTS
+
+.Stool
+	LDA !BossSubTimer,x
+	BNE +
+	INC !BossSubStates,x
++	RTS
+
+.DoPose1
+	LDA #$01 : STA !SpriteXHighTarget,x : STZ !SpriteYHighTarget,x
+	LDA $94 : STA !SpriteXLowTarget,x
+	LDA #$D0 : STA !SpriteYLowTarget,x
+	RTS
 ;;;;;;;
 ;;;;;;;
 .Bouncy
+JSL $01802A|!BankB
+
+	LDA !BossSubStates,x
+	JSL $0086DF|!BankB
+	dw .DoBounceOnce
+	dw .KeepBouncing
+	dw .Stallerella
+	dw FINISH_SUBSTATE
+.DoBounceOnce
+	JSR GetScreenSide_Sprite
+	LDA #$A0 : STA !sprite_speed_y,x
+	LDA .side,y : STA !sprite_speed_x,x
+	INC !BossSubStates,x
+	;BRA .Bouncy
+	RTS
+.side
+	db $09,-$09
+
+.KeepBouncing
+	LDA !1588,x
+	AND #$04
+	BEQ +
+	LDA !sprite_speed_x,x
+	BEQ .donebounce
+	LDA #$A8 : STA !sprite_speed_y,x
+	JSR ImpactEffect
++
+	LDY #$00
+	LDA !sprite_speed_x,x
+	BPL +
+	INY
++
+	LDA !sprite_x_low,x
+	CLC : ADC #$08
+	EOR .Reverse,y
+	CMP #$30
+	BCS +
+	STZ !sprite_speed_x,x
++	RTS
+.Reverse
+	db $FF,$00
+	
+.donebounce
+	INC !BossSubStates,x
+	LDA #$20 : STA !BossSubTimer,x
+;	LDA #$09 : STA $1DFC|!Base2
+	JSR ImpactEffect
+	RTS
+.Stallerella
+	LDA !BossSubTimer,x
+	BNE +
+	INC !BossSubStates,x
++	RTS
+
 ;;;;;;;
 ;;;;;;;
 .RAM
-RTS
+	LDA !BossSubStates,x
+	JSL $0086DF|!BankB
+	dw .dotimerset
+	dw .WhoaBackAwayFriend
+	dw .RAAAAAAAAAAAA
+	dw .bump
+	dw FINISH_SUBSTATE
+
+.dotimerset
+	LDA #$1C : STA !BossSubTimer,x
+	INC !BossSubStates,x
+	BRA .RAM
+
+.WhoaBackAwayFriend
+	JSR GetScreenSide_Sprite
+	LDA .sideh,y : STA !sprite_speed_x,x
+.lel
+	
+	LDA !BossSubTimer,x
+	BNE +
+	INC !BossSubStates,x
+	LDA .sideE,y : STA !sprite_speed_x,x
++	
+	JSL $018022|!BankB
+	RTS
+.sideh
+	db -$08,$08
+	
+	
+.RAAAAAAAAAAAA
+	LDA $14
+	AND #$07
+	BNE +
+	LDA #$01 : STA $1DF9|!Base2
+	STZ $00
+	LDA #$0B : STA $01
+	LDA #$14 : STA $02
+	LDA #$03 : %SpawnSmoke()
++
+
+
+	LDA !sprite_x_high,x
+	CMP #$01 : BEQ +
+	TAY ; ez
+	INC !BossSubStates,x
+	LDA .xpostarget,y : STA !SpriteXLowTarget,x
+	LDA #$01 : STA !SpriteXHighTarget,x
+	JSR ImpactEffect
+	LDA #-$10 : STA !sprite_speed_y,x
++
+
+	LDA #$30 : STA !BossSubTimer,x ; literally bs lol
+	JSR .lel
+	RTS
+.xpostarget
+	db $2B,$FF,$CA
+.sideE
+	db $34,-$34
+
+.bump
+	LDY !SpriteXHighTarget,x
+	LDA !SpriteXLowTarget,x
+	JSR EaseIn_X
+
+	STZ !sprite_speed_x,x
+	JSL $01802A|!BankB
+	JMP .Stool
+
+;;;;;;;
+;;;;;;;
+.Wyatt
+	;JMP .ThwompLand
+
+	LDA !BossSubStates,x
+	JSL $0086DF|!BankB
+		dw .SetTimern
+		dw .PoofGone
+		dw .PrestoItsGusto
+		dw .ThwompsForDaysButWithATwist
+		dw .ThwompsForDaysButWithATwist
+		dw .ThwompsForDaysButWithATwist
+		dw .ThwompsForDaysButWithATwist
+		
+		dw .ThwompsForDaysButWithATwist
+		dw .ThwompsForDaysButWithATwist
+		dw .ThwompsForDaysButWithATwist
+		dw .ThwompsForDaysButWithATwist
+		
+		dw .ThwompsForDaysButWithATwist
+		dw .ThwompsForDaysButWithATwist
+		dw .ThwompsForDaysButWithATwist
+		dw .ThwompsForDaysButWithATwist
+		
+		dw .ThwompsForDaysButWithATwist
+		dw .ThwompsForDaysTwistFinale
+		dw .ThwompsForDaysTwistFinale
+		dw FINISH_SUBSTATE
+
+.ThwompsForDaysButWithATwist
+	JSR .definitelyknowwhatimdoing
+	JSR .ahdamnit
+	RTS
+
+.ThwompsForDaysTwistFinale
+	JSR .definitelyknowwhatimdoing
+	
+	LDA !BossSubStates,x
+	AND #$01
+	JSL $0086DF|!BankB
+		dw .ReturnRise
+		dw .SMAAAASH
+
+.definitelyknowwhatimdoing
+	LDA !BossSubTimer,x
+	CMP #$50
+	BCC +
+	LDA #$40 : STA !BossSubTimer,x
++
+	LDA $14
+	AND #$3F
+	BNE +
+	JSR .T_hanos
++	RTS
+;	LDA !BossSubTimer,x
+;	BNE +
+;;	STZ !GroundHit,x
+;	STZ !sprite_speed_y,x
+;	LDA #$FF : STA !BossSubTimer,x
+;	INC !BossSubStates,x
+;+
+.ahdamnit
+	LDA !BossSubStates,x
+	INC : AND #$03
+	JSL $0086DF|!BankB
+		dw .Shaker
+		dw .Rise
+		dw .Rise
+		dw .SMAAAASH
+	
+	
 ;;;;;;;
 
 
+
+
 ;######################################
-;######## Boss Dead Routine ###########
+;##### Boss Dead/Damaged Routines #####
 ;######################################
-.FortressDying
+.IsDamaged
+	LDY #$01
+	LDA #$CA
+	JSR EaseIn_X
+	JSL $01802A|!BankB
+
+	LDA !GroundHit,x
+	BNE +
+	LDA !1588,x
+	AND #$04
+	BEQ +
+	JSR ImpactEffect
+	INC !GroundHit,x
+	LDA #$E0 : STA !sprite_speed_y,x
++
+
+	LDA !BossDamageTimer,x
+	CMP #$20
+	BNE .nohealther
+	LDA !HealthRam,x
+	CMP #$02 : BEQ .healther
+	CMP #$04 : BEQ .healther
+	BRA .nohealther
+.healther
+	LDA #$01 : STA $0DC2|!Base2
+	LDA #$1C : STA $1DF9|!Base2
+	LDA #$0B : STA $1DFC|!Base2
+.nohealther
+	RTS
+
+.YouAreDeadDeadDead
+	LDA #$FF : STA $1DFB|!Base2
+	
+	LDA !BossSubStates,x
+	JSL $0086DF|!BankB
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .DoSmoke
+		dw .shakerrrr
+		dw .DoDie
+.shakerrrr
+	LDA #$28 : STA $1887|!Base2
+	INC !BossSubStates,x
+	JMP .YouAreDeadDeadDead
+
+.DoSmoke
+	LDA !BossSubStates,x
+	BEQ +
+	CMP #$10
+	BCC ++
+	JSR DoShake
+++	JSR DoShake
++
+	LDA !BossSubTimer,x
+	BNE +
+	INC !BossSubStates,x
+	LDA !SpriteXLowTarget,x
+	CMP #$04
+	BEQ ++
+	DEC !SpriteXLowTarget,x
+++	LDA !SpriteXLowTarget,x
+	STA !BossSubTimer,x
+	
+	LDA #$09 : STA $1DFC|!Base2
+	
+	LDA #$30 : %Random()
+	SEC : SBC #$18 : STA $0E
+	LDA #$40 : %Random()
+	SEC : SBC #$30
+	STA $01 : LDA $0E : STA $00
+	LDA #$1B : STA $02
+	LDA #$01 : %SpawnSmoke()
+	CPY #$FF : BEQ +
++	RTS
+
+.DoDie
+	STZ !SpriteXLowTarget,x
+	LDA #$06 : STA !FrameIndex,x ; move to death
+	LDA #$30 : STA !BossSubTimer,x
+	LDA #$16 : STA $1DFC|!Base2	
 RTS
+
+.FortressDying
+	LDA !BossSubTimer,x
+	BEQ .DoTheDie
+;	DEC A : BNE .nosfx
+;.nosfx
+	LDA $14 : LSR A : AND #$03 : PHA
+	CLC : ADC #$06
+	STA !FrameIndex,x
+	PLA : AND #$01
+	ASL A : TAY
+	REP #$20
+	LDA .backpal,y : STA $0701|!Base2 : STA $0903|!Base2
+	SEP #$20
+	RTS
+.backpal
+	dw $4A94,$4EB5
+
+.DoTheDie
+	REP #$20
+	LDA .backpal : STA $0701|!Base2 : STA $0903|!Base2
+	SEP #$20
+	
+;	LDA !FrameIndex,x
+;	CMP #$1D
+;	BEQ +
+	LDA $14
+	AND #$03 : BNE .skip
+	LDA #$09 : STA $1DFC|!Base2 : STA $1887|!Base2
+	INC !FrameIndex,x
+	LDA !FrameIndex,x
+	CMP #$1D : BNE .skip
+	STZ !BossSubStates,x
+	LDA #$30 : STA !BossSubTimer,x
+;	BRA .skip
+;+
+;	LDA #$22 : STA $1DF9|!Base2
+;	LDA #$13 : STA $1DFB|!Base2
+;	LDA #$0B : STA $71 : STZ $7B
+;	LDA $13EF|!Base2 : BEQ +
+;	LDA #$26 : STA $13E0|!Base2 : STA $13D3|!Base2
+.skip
+	STZ !sprite_speed_y,x
+	STZ !sprite_speed_x,x
+
+	RTS
+
+
+.CastleDestructionCutscene
+	LDA !BossSubStates,x
+	JSL $0086DF|!BankB
+		dw .DelayOfText
+		dw .FreezeVictory ;
+		dw .DisplayText
+		dw .FreezeVictory
+		dw .DisplayText
+		dw .FreezeVictory
+		dw .DisplayText
+		dw .FreezeVictory
+		dw .DisplayText
+		dw .FreezeVictory
+		dw .DisplayText
+		dw .FreezeVictory
+		dw .DisplayText
+		dw .FreezeVictory
+		dw .DisplayText
+		dw .FreezeVictory
+		dw .DisplayTextFinal
+		dw .FreezeVictoryToEnd
+	
+.DelayOfText
+	LDA !BossSubTimer,x
+	BNE +
+	INC !BossSubStates,x
+	LDA #60 : STA !BossSubTimer,x
++	RTS
+
+.FreezeVictory
+	JSR .TheFreeze
+
+	LDA !BossSubTimer,x
+	BNE +
+	INC !BossSubStates,x
++	RTS
+
+.TheFreeze
+;	LDA #$22 : STA $1DF9|!Base2
+	LDA #$13 : STA $1DFB|!Base2
+;	LDA #$0B : STA $71 : STZ $7B
+;	LDA $13EF|!Base2 : BEQ +
+;	LDA #$26 : STA $13E0|!Base2 : STA $13D3|!Base2
+;+
+	STZ !sprite_speed_y,x
+	STZ !sprite_speed_x,x
+	RTS
+
+
+.DisplayText
+	INC $18CB|!Base2 ; all handled in uberasm
+	INC !BossSubStates,x
+	LDA #$28 : STA !BossSubTimer,x
+	RTS
+
+
+.DisplayTextFinal
+	JSR .DisplayText
+	
+;	INC !BossSubStates,x
+	LDA #$FF : STA !BossSubTimer,x
+	RTS
+
+.FreezeVictoryToEnd
+	JSR .TheFreeze
+
+	LDA !BossSubTimer,x
+	BNE .keeptimerfrosten
+	LDA !SpriteDecTimer3,x
+	BNE +
+	LDA $16 : ORA $18
+	BEQ +
+	; clear level through regular fade
+	LDA #$01
+	STA $13CE|!Base2
+	STA $0DD5|!Base2
+	INC $1DE9|!Base2
+	LDA #$0B
+	STA $0100|!Base2
++
+	RTS
+.keeptimerfrosten
+	LDA #$FF : STA !SpriteDecTimer3,x
+	RTS
 
 
 ;######################################
@@ -672,7 +1691,7 @@ RTS
 	; pos check
 	LDA !SpriteYHigh,x : XBA : LDA !SpriteYLow,x
 	REP #$20
-	CMP #$00A0
+	CMP #$0080
 	SEP #$20
 	BCS +
 	LDA !MissileType,x
@@ -728,14 +1747,139 @@ RTS
 	STZ !14C8,x
 +	RTS
 
-
+;;;;;;;;;;;;;;;;;;;;
 .MiniCastle
 	LDA !SpriteDirection,x
 	TAY
 
+	LDA !SpriteBlockedStatus_ASB0UDLR,x
+	AND #$04
+	BEQ +
+	LDA .direc,y : STA !sprite_speed_x,x
+	LDA #$D0 : STA !sprite_speed_y,x
++
 
+
+;.Bolder
+	JSL $01802A|!BankB
+	
+	LDA !SpriteHMoreThan4TilesOffScreenFlag,x
+	;ORA !SpriteVOffScreenFlag,x
+	BEQ +
+	STZ !14C8,x
++	RTS
+.direc
+	db -$20,$20
+
+;;;;;;;;;;;;;;;;;;;; lol
 .Bolder
+	STZ !sprite_speed_x,x
+	JSL $01802A|!BankB ; yea das it
+	
+	LDA !SpriteBlockedStatus_ASB0UDLR,x
+	AND #$04
+	BEQ +
+	STZ !14C8,x
+	
+	LDY #$01
+-
+	STY $0C
+	STZ $00 : STZ $01
+	LDA .xspeedrock,y : STA $02
+	LDA #$D0 : STA $03
+	LDA #$48 : CLC : %SpawnSprite()
+	CPY #$FF : BEQ ++
+	
+++	LDY $0C : DEY : BPL -
+
+	LDA #$08 : STA $1887|!Base2
+
+	STZ $00 : STZ $01
+	LDA #$1B : STA $02
+	LDA #$01 : %SpawnSmoke()
++	RTS
+.xspeedrock
+	db $30,-$30
+
+;;;;;;;;;;;;;;;;;;;;
 .Pencil
+	LDA !PencilState,x
+	JSL $0086DF|!BankB
+		dw .repos
+		dw .dofollow
+		dw .delayrise
+		dw .SPIKE
+		dw .delaydrop
+		dw .drop
+		dw .endme
+.repos
+	LDA !sprite_y_low,x
+	CLC : ADC #$05
+	STA !sprite_y_low,x
+	INC !PencilState,x
+	BRA .Pencil
+
+.dofollow
+	LDA !PencilTimer,x
+	BNE +
+	PHA
+	LDA #$60 : STA !PencilTimer,x
+	PLA
++	CMP #$01
+	BNE +
+	INC !PencilState,x
+	LDA #$1C : STA !PencilTimer,x
++
+.easein
+	REP #$20
+	LDA $94
+	CLC : ADC #$0002
+	STA $0C
+	SEP #$20
+	LDY $0D
+	LDA $0C
+	JSR EaseIn_X
+	RTS
+
+.delayrise
+	JSR .easein
+	LDA !PencilTimer,x
+	AND #$03
+	BNE +
+	LDA #$23 : STA $1DFC|!Base2
++
+
+	LDA !PencilTimer,x
+	BNE +
+	LDA #$06 : STA !PencilTimer,x
+	LDA #$27 : STA $1DFC|!Base2
+	INC !PencilState,x
++	RTS
+
+.SPIKE
+	LDA !sprite_y_high,x : XBA : LDA !sprite_y_low,x
+	REP #$20
+	SEC : SBC #$0008
+	SEP #$20
+	STA !sprite_y_low,x : XBA : STA !sprite_y_high,x
+
+.delaydrop
+	LDA !PencilTimer,x
+	BNE +
+	LDA #$10 : STA !PencilTimer,x
+	INC !PencilState,x
++	RTS
+
+.drop
+	LDA !sprite_y_high,x : XBA : LDA !sprite_y_low,x
+	REP #$20
+	CLC : ADC #$0008
+	SEP #$20
+	STA !sprite_y_low,x : XBA : STA !sprite_y_high,x
+	BRA .delaydrop
+
+.endme
+	STZ !14C8,x
 	RTS
 
 
@@ -748,8 +1892,47 @@ FINISH_SUBSTATE:
 	STZ !BossSubStates,x
 	STZ !SpriteXSpeed,x : STZ !SpriteYSpeed,x ; clean up speed
 	;INC 
-	STZ !BossStates,x ; for now
+;	LDA #$04 : STA !BossStates,x ; for now
+
+	INC !BossCurrentAttackOffset,x
+	LDA !BossCurrentAttackOffset,x
+	TAY
+	LDA .BEGIN,y
+	CMP #$FF
+	BNE +
+;	PHY
+	LDA !HealthRam,x : TAY
+	LDA .StateLists,y : STA !BossCurrentAttackOffset,x
+	STA $0C;	PLY
+	
+	STZ $00 : STZ $01
+	STZ $02 : STZ $03
+	LDA #$94 : SEC : %SpawnSprite()
+	CPY #$FF : BEQ ++
+	LDA #$01 : STA !sprite_x_high,y
+	DEC : STA !sprite_y_high,y
+	LDA #$E0 : STA !sprite_y_low,y
+	LDA #$78 : STA !sprite_x_low,y
+++
+	LDY $0C
++	
+
+	LDA .BEGIN,y : STA !BossStates,x
+
 	RTS ;JMP SpriteCode_Fortress_BBBBBOSS_BATTLE
+.BEGIN
+	db $00,$08,$00,$09,$01,$FF
+.INCHING
+	db $03,$09,$09,$02,$FF,$FF
+.TRICKY
+	db $09,$05,$08,$07,$FF,$FF
+.HARD_ONLY
+	db $09,$06,$09,$06,$04,$FF,$FF
+.LAST_RUSH
+	db $00,$03,$08,$01,$05,$09,$06,$09,$02,$06,$07,$0A,$FF
+
+.StateLists
+	db $00,$06,$0C,$12,$19
 
 GenCSpr:
 	PHA ; save it
@@ -771,6 +1954,188 @@ ImpactEffect:
 	LDA #$09 : STA $1DFC|!Base2 : ASL A : STA $1887|!Base2
 	RTS
 
+EaseIn_X:
+	; 16bit value of Sprite's "target" x position
+	STA $00 : STY $01
+	
+	; 16bit value of Sprite's x position
+	LDA !sprite_x_low,x : STA $02
+	LDA !sprite_x_high,x : STA $03
+
+	; Find the middle of the two numbers
+	JSR DoMiddleTwoNumberMath	
+	STA !sprite_x_low,x : XBA : STA !sprite_x_high,x ; Store it to sprite's x position.
+	RTS
+
+EaseIn_Y:
+	; 16bit value of Sprite's "target" x position
+	STA $00 : STY $01
+	
+	; 16bit value of Sprite's x position
+	LDA !sprite_y_low,x : STA $02
+	LDA !sprite_y_high,x : STA $03
+
+	; Find the middle of the two numbers
+	JSR DoMiddleTwoNumberMath	
+	STA !sprite_y_low,x : XBA : STA !sprite_y_high,x ; Store it to sprite's x position.
+	RTS
+
+; formula is basically (a+b)/2
+;
+; Input (16-bit):
+; $00 - Target Position
+; $02 - Current Position
+;
+; Output:
+; A - Result
+;
+; keep in mind, this does not account for "negative numbers".
+DoMiddleTwoNumberMath:
+	REP #$20 : LDA $00 : CLC : ADC $02 ; Add the values of the sprite vs target location
+	LSR A : STA $00
+	LDA $00 : CLC : ADC $02 
+	LSR A : SEP #$20 ; Divide it by 2 and return to 8bit
+	RTS
+
+
+DoShake:
+	LDA $14 : AND #$01
+	ASL A : TAY
+	LDA !sprite_x_high,x : XBA : LDA !sprite_x_low,x
+	REP #$20 : CLC : ADC .Shk,y : SEP #$20
+	STA !sprite_x_low,x : XBA : STA !sprite_x_high,x
+	RTS
+.Shk
+	dw $0002,$FFFE
+
+
+GetScreenSide_Sprite:
+	LDA !sprite_x_low,x
+	AND #$80 : ROL #2
+	TAY : RTS
+
+
+DetectDamage:
+
+	LDY.b #!SprSize-1
+-
+	PHX : TYX
+	LDA !7FAB9E,x ; custom sprite num
+	PLX
+	CMP #$94 ; TNT
+	BNE +
+
+	LDA !14C8,y
+	CMP #$08
+	BNE + ; invalid
+	LDA !1534,y
+	BEQ + ; not exploding
+;	STA $18E6|!Base2
+;	LDA !1528,y
+;	STA $18CB
+	JSR BombLogic
++	DEY
+	BPL -
+	RTS
+
+BombLogic:
+	;  bomb pos
+	;PHX : TYX
+	;JSL $03B6E5|!BankB ; $03B69F
+	;PLX
+	LDA !sprite_x_high,y : XBA : LDA !sprite_x_low,y
+	REP #$20
+	SEC : SBC #$0008
+	SEP #$20
+	STA $00 : XBA : STA $08
+	LDA !sprite_y_low,y : STA $01
+	LDA !sprite_y_high,y : STA $09
+	LDA #$40 : STA $02
+	LDA #$20 : STA $03
+
+	; boss pos
+	;LDA !SpriteXHigh,x : XBA : LDA !SpriteXLow,x
+	;REP #$20 : SEC : SBC #$0008 : SEP #$20 ; shift centerpoint right a bit
+	;STA $04 : XBA : STA $0A
+	LDA !sprite_x_low,x : STA $04
+	LDA !sprite_x_high,x : STA $0A
+    ;LDA !SpriteYLow,x : STA $05
+    ;LDA !SpriteYHigh,x : STA $0B
+	LDA !SpriteYHigh,x : XBA : LDA !SpriteYLow,x
+	REP #$20
+	SEC : SBC #$0018
+	SEP #$20
+	STA $05 : XBA : STA $0B
+	LDA #$30 : STA $06
+	LDA #$40 : STA $07
+
+	; compare contact
+	JSL $03B72B|!BankB
+	BCC .invalid
+	
+	JSR BombDamage
+	
+.invalid
+	RTS
+	
+
+BombDamage:
+;	STA $18E6|!Base2
+	; winning
+	LDA !BossDamageTimer,x ; damage timer
+	BEQ .damageboss
+	RTS
+
+.damageboss
+	LDA #$56 : STA !BossDamageTimer,x
+	INC !HealthRam,x
+	
+	LDA !HealthRam,x : TAY
+	LDA FINISH_SUBSTATE_StateLists,y : STA !BossCurrentAttackOffset,x
+	LDA !BossCurrentAttackOffset,x : TAY
+	LDA FINISH_SUBSTATE_BEGIN,y : STA !BossStates,x
+	STZ !BossSubStates,x
+	STZ !BossSubTimer,x
+	STZ !SpriteXSpeed,x : STZ !SpriteYSpeed,x
+	STZ !GroundHit,x
+	
+	JSR KillAllButSelf
+	
+	LDA !HealthRam,x
+	CMP #$05 : BNE .nokillboss
+	LDA #$0B : STA !BossStates,x
+	ASL A : STA !SpriteXLowTarget,x
+	LDA #$FF : STA !BossSubTimer,x
+.nokillboss
+	RTS
+
+
+KillAllButSelf:
+	PHY
+	LDY #!SprSize-1
+-	LDA !SpriteIndex : STA $00
+	CPY $00
+	BEQ .dontkill
+	LDA !9E,y
+	CMP #$74 : BEQ .dontkill ; mushroom
+	CMP #$75 : BEQ .dontkill ; flower
+	CMP #$76 : BEQ .dontkill ; cape
+	CMP #$77 : BEQ .dontkill ; star
+	CMP #$78 : BEQ .dontkill ; 1-up
+	CMP #$7F : BEQ .dontkill ; flying 1-up (why not)
+	
+	PHX : TYX
+	LDA !CustomSpriteNumber,x
+	PLX
+	CMP #$94 : BNE .IsNotTNT
+	LDA !1528,y : BEQ .dontkill
+.IsNotTNT
+	LDA #$00
+	STA !14C8,y
+.dontkill
+	DEY : BPL -
+	PLY
+	RTS
 ;>EndRoutine
 
 ;######################################
@@ -795,6 +2160,12 @@ ImpactEffect:
 ;results will be visible the next frame.
 ;>RoutineLength: Short
 GraphicRoutine:
+	; basic flash
+	LDA !BossDamageTimer,x
+	LSR A : AND #$01
+	BEQ +
+	RTS
++
 
     %GetDrawInfo()                     ;Calls GetDrawInfo to get the free slot and the XDisp and YDisp
 
@@ -1167,45 +2538,45 @@ Frame9_Destruction4_Properties:
 	db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$7D,$3D,$3B,$3B,$3B
 	db $3B,$3B,$3B
 Frame10_Crashing1_Properties:
-	db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$7D,$3D,$33,$33,$33
+	db $2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$6D,$2D,$23,$23,$23
 Frame11_Crashing2_Properties:
-	db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$7D,$3D,$73,$73,$73
+	db $2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$6D,$2D,$63,$63,$63
 Frame12_Crashing3_Properties:
-	db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$7D,$3D,$33,$33,$33
+	db $2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$6D,$2D,$23,$23,$23
 Frame13_Crashing4_Properties:
-	db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$73,$73,$73
+	db $2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$63,$63,$63
 Frame14_Crashing5_Properties:
-	db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$33,$33,$33
+	db $2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$23,$23,$23
 Frame15_Crashin6_Properties:
-	db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$73,$73,$73
+	db $2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$63,$63,$63
 Frame16_Crashing7_Properties:
-	db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D,$33,$33,$33
+	db $2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$2D,$23,$23,$23
 Frame17_Crashing8_Properties:
-	db $3D,$3D,$3D,$3D,$3D,$3D,$73,$73,$73
+	db $2D,$2D,$2D,$2D,$2D,$2D,$63,$63,$63
 Frame18_Crashing9_Properties:
-	db $3D,$3D,$3D,$3D,$3D,$3D,$33,$33,$33
+	db $2D,$2D,$2D,$2D,$2D,$2D,$23,$23,$23
 Frame19_Crashing10_Properties:
-	db $3D,$3D,$3D,$3D,$3D,$3D,$73,$73,$73
+	db $2D,$2D,$2D,$2D,$2D,$2D,$63,$63,$63
 Frame20_Crashing11_Properties:
-	db $3D,$3D,$3D,$3D,$3D,$3D,$33,$33,$33
+	db $2D,$2D,$2D,$2D,$2D,$2D,$23,$23,$23
 Frame21_Crashing12_Properties:
-	db $3D,$3D,$3D,$73,$73,$73
+	db $2D,$2D,$2D,$63,$63,$63
 Frame22_Crashing13_Properties:
-	db $3D,$3D,$3D,$3D,$33,$33,$33
+	db $2D,$2D,$2D,$2D,$23,$23,$23
 Frame23_Crashing14_Properties:
-	db $3D,$3D,$3D,$3D,$73,$73,$73
+	db $2D,$2D,$2D,$2D,$63,$63,$63
 Frame24_Crashing15_Properties:
-	db $3D,$3D,$3D,$3D,$33,$33,$33
+	db $2D,$2D,$2D,$2D,$23,$23,$23
 Frame25_Crashin16_Properties:
-	db $3D,$3D,$3D,$3D,$7D,$73,$73,$73
+	db $2D,$2D,$2D,$2D,$6D,$63,$63,$63
 Frame26_Crashing17_Properties:
-	db $3D,$3D,$3D,$3D,$7D,$33,$33,$33
+	db $2D,$2D,$2D,$2D,$6D,$23,$23,$23
 Frame27_Crashing18_Properties:
-	db $3D,$3D,$3D,$3D,$7D,$73,$73,$73
+	db $2D,$2D,$2D,$2D,$6D,$63,$63,$63
 Frame28_Crashing19_Properties:
-	db $3D,$3D,$3D,$3D,$7D,$33,$33,$33
+	db $2D,$2D,$2D,$2D,$6D,$23,$23,$23
 Frame29_Dead_Properties:
-	db $3D,$3D,$3D,$3D,$7D
+	db $2D,$2D,$2D,$2D,$6D
 Frame30_BigFFFFFMissile_Properties:
 	db $2F,$2F,$2F,$2F,$2F,$2F,$2F,$2F,$25
 Frame31_BigFFFFFMissile2_Properties:
@@ -1533,11 +2904,11 @@ Frame44_Pencil_XDispFlipX:
 YDisplacements:
     
 Frame0_FarAway_YDisp:
-	db $F0,$F8
+	db $F0-7,$F8-7
 Frame1_FarAway_Fly_1_YDisp:
-	db $07,$F0,$F8
+	db $07-6,$F0-6,$F8-6
 Frame2_FarAway_Fly_2_YDisp:
-	db $07,$F0,$F8
+	db $07-6,$F0-6,$F8-6
 Frame3_BigCastle_YDisp:
 	db $D0,$D0,$D0,$E0,$E0,$E0,$F0,$F0,$F0,$00,$00,$00,$00
 Frame4_BigCastleFly1_YDisp:
@@ -2171,82 +3542,75 @@ FrameHitBoxes:
 	db $02,$FF
 	db $02,$FF
 	db $03,$FF
+	db $03,$FF
+	db $03,$FF
+	db $03,$FF
 	db $04,$FF
 	db $05,$FF
 	db $06,$FF
-	db $07,$FF
-	db $08,$FF
-	db $09,$FF
 	
 	db $FF
 	db $FF
 	db $FF
+	db $07,$FF
+	db $07,$FF
+	db $07,$FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $FF
+	db $08,$FF
+	db $08,$FF
+	db $08,$FF
+	db $08,$FF
+	db $09,$FF
+	db $09,$FF
+	db $09,$FF
+	db $09,$FF
 	db $0A,$FF
 	db $0A,$FF
 	db $0A,$FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
-	db $FF
+	db $0A,$FF
 	db $0B,$FF
-	db $0B,$FF
-	db $0B,$FF
-	db $0B,$FF
-	db $0C,$FF
-	db $0C,$FF
-	db $0C,$FF
 	db $0C,$FF
 	db $0D,$FF
-	db $0E,$FF
-	db $0F,$FF
-	db $10,$FF
-	db $11,$FF
-	db $12,$FF
-	db $13,$FF
 	
 
 HitboxesStart:
-    dw $0000,$0006,$000C,$0012,$0018,$001E,$0024,$002A,$0030,$0036,$003C,$0042,$0048,$004E,$0054,$005A
-	dw $0060,$0066,$006C,$0072
+    dw $0000,$0006,$000C,$0012,$0018,$001E,$0024,$002A,$0030,$0036,$003C,$0042,$0048,$004E
 
 Hitboxes:
     db $01,$F4,$D4,$28,$3C,$00
 	db $01,$00,$DC,$10,$34,$00
 	db $01,$00,$E0,$10,$34,$00
-	db $01,$F4,$D4,$28,$48,$00
-	db $01,$F8,$DC,$20,$3C,$00
-	db $01,$FC,$E0,$18,$30,$00
-	db $01,$00,$E4,$10,$28,$00
+	db $01,$F8,$F0,$20,$10,$00
 	db $01,$FC,$F4,$18,$1C,$00
 	db $01,$FC,$FC,$18,$18,$00
 	db $01,$04,$0C,$08,$34,$00
 	db $01,$F4,$D4,$28,$3C,$00
 	db $01,$00,$DC,$10,$34,$00
 	db $01,$00,$E0,$10,$34,$00
-	db $01,$F4,$D4,$28,$48,$00
-	db $01,$F8,$DC,$20,$3C,$00
-	db $01,$FC,$E0,$18,$30,$00
-	db $01,$00,$E4,$10,$28,$00
+	db $01,$F8,$F0,$20,$10,$00
 	db $01,$FC,$F4,$18,$1C,$00
 	db $01,$FC,$FC,$18,$18,$00
 	db $01,$04,$0C,$08,$34,$00
@@ -2262,6 +3626,18 @@ JustHurt:
 RTS
 
 +
+	LDA !BossDamageTimer,x
+	BEQ +
+	RTS
++
+	LDA !BossStates,x
+	CMP #$0B
+	BNE +
+	RTS
++
+
+	LDA $7FC0FD
+	BNE JustHurt
 	%SubVertPos()
 	LDA !ScratchF
 	CLC : ADC #$40
@@ -2289,3 +3665,82 @@ DoLogic:
 	
     
 ;>End Hitboxes Interaction Section
+
+
+
+
+; this thing is total garbage btw, I'm just needing it for demonstration.
+DISPLAY_HEALTH:
+	LDA !extra_byte_1,x
+	BEQ +
+	RTS
++
+
+	LDA !FrameIndex,x
+	CMP #$03 : BCC +
+	CMP #$06 : BCS +
+	BRA ++
++	RTS
+++
+	LDA !HealthRam,x : STA $0C
+;	CMP #$0B
+;	BNE +
+;	RTS
+;+
+	PHX
+	LDY #$FC
+	LDX #$16
+	
+-
+;	CPY #((75-64)*4) : BEQ ++
+;	CPY #((76-64)*4) : BEQ ++
+;	CPY #((77-64)*4) : BEQ ++
+;	CPY #((78-64)*4) : BEQ ++
+	lda $0301|!addr,y : cmp #$F0 : beq +
+++	dey #4 : bpl -
+
+	PLX : rts
+
++
+	LDA .ex,x : CLC : ADC #$78 : STA $0300|!addr,y
+	LDA .why,x : CLC : ADC #$CE : STA $0301|!addr,y
+	
+	LDA .tilebytile,x : CMP #$30
+	BNE +
+	CPX $0C
+	BCS +
+	LDA #$25
++
+	STA $0302|!addr,y
+	LDA #$3D : STA $0303|!addr,y
+	PHY : TYA : LSR #2 : TAY
+	LDA .minesbigger,x : STA $0460|!addr,y
+	PLY : DEY #4 : DEX : BPL -
+
+	PLX : RTS
+
+.ex
+db $28,$14,$00,$EC,$D8
+
+db $BC,$C4,$CC,$D4,$DC,$E4,$EC,$F4,$FC,$04,$0C,$14
+db $24,$2C,$34,$3C,$44,$4C
+
+.why
+db $00,$00,$00,$00,$00
+db $F7,$F7,$F7,$F7,$F7,$F7,$F7,$F7,$F7,$F7,$F7,$F7
+db $F7,$F7,$F7,$F7,$F7,$F7
+
+;.props
+;db $2F,$2F,$2F,$2F,$2F,$2F,$2F,$2F,$2F,$2F,$2F,$2F
+;db $2F,$2F,$2F,$2F,$2F,$2F
+;db $2F,$2F,$2F,$2F,$2F
+
+.minesbigger
+db $02,$02,$02,$02,$02
+db $00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00,$00
+db $00,$00,$00,$00,$00,$00
+
+.tilebytile
+db $30,$30,$30,$30,$30
+db $23,$24,$02,$03,$04,$05,$02,$24,$24,$06,$23,$12
+db $23,$02,$13,$14,$15,$16

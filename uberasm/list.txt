@@ -51,8 +51,8 @@ level:
 05E	FilterYoshi_ConstantAutoscroll5E_with_hp.asm
 060	DisableLR.asm
 066	Gradient66.asm
-068	NoStatus_CustomBar.asm
-069	NoStatus_CustomBar.asm
+068	statusbarremove_CustomBar.asm
+069	statusbarremove_CustomBar.asm
 06A	hide_sb_uber_Level5.asm
 06B	hide_sb_uber_Level5.asm
 06C	hide_sb_uber_Level5.asm
@@ -62,7 +62,7 @@ level:
 074	Autoscroll74.asm
 07A	BG_AutoScroll7A.asm
 07B	BG_AutoScroll7B.asm
-07D	NoStatus_CustomBar.asm
+07D	statusbarremove_CustomBar.asm
 07E	FilterYoshi.asm
 07F	FilterYoshi.asm
 080	LV135.asm
@@ -137,7 +137,7 @@ level:
 123	freescrollbabey.asm
 125	HDMAGradient125.asm
 126	LevelIntro.asm
-128	NoStatus_CustomBar.asm
+128	statusbarremove_CustomBar.asm
 129	LV129.asm
 12B	Gradient12B.asm
 12C	DisableLeft.asm
@@ -192,7 +192,7 @@ level:
 174	FilterYoshi.asm
 175	PitCode.asm
 176	FilterYoshi.asm
-177	HDMAGradient125.asm
+177	HDMAGradient125_flowers.asm
 178	onoff.asm
 179	FilterYoshi.asm
 17A	LV131.asm
