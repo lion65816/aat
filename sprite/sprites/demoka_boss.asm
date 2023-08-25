@@ -1,6 +1,7 @@
 ;=========================================================
 ; The Bunny Queen (Not Reisen)
 ; by PSI Ninja
+; based on code by yoshicookiezeus, ASM, and Erik557
 ;
 ; Does not use the first extra bit.
 ;
@@ -9,13 +10,9 @@
 ; 02 = Follow Mario
 ;=========================================================
 
-
-;!BossStartHP = $63		;> 99 HP
-;!BossEnrageHP = $32		;> 50 HP
-!Cooldown = $0F			;> $0F = 15 frames
-!BossStartHP = $0A		;> 10 HP
-!BossEnrageHP = $05		;> 5 HP
-;!Cooldown = $1E		;> $1E = 30 frames
+!BossStartHP = $40		;> $63 = 99 HP, $40 = 64 HP, $0A = 10 HP
+!BossEnrageHP = $21		;> $32 = 50 HP, $20 = 32 HP, $05 = 5 HP
+!Cooldown = $0F			;> $0F = 15 frames, $1E = 30 frames
 
 !BossCurrentHP = $18C5|!addr	;\
 !PhaseNumber = $18C6|!addr	;|
@@ -120,19 +117,6 @@ Boss:
 	LDA #$FF		;|
 	STA !154C,x		;/
 
-;	LDA !BossCurrentHP	;\
-;	BEQ .kill		;| If the boss HP is zero, then start the kill sequence.
-;	BNE .no_damage		;/
-;.kill
-;	LDA #$02		;\ Kill as if by a shell.
-;	STA !14C8,x		;/
-;	LDA #$01		;\ Freeze the player on level end and enable boss sequence cutscene.
-;	STA $13C6|!addr		;/ (Todo: Can still move Demo up and to the side.)
-;	LDA #$FF		;\ Set level end timer.
-;	STA $1493|!addr		;/
-;	LDA #$03		;\ Set the boss victory music.
-;	STA $1DFB|!addr		;/
-
 .no_damage
 	LDA !1540,x		;\ Draw the sprite graphics normally
 	BEQ .draw_gfx		;/ if the cooldown timer is zero.
@@ -224,7 +208,6 @@ Phase_3:
 	ORA $9D
 	BEQ +
 	JMP .return
-	;BNE .return
 +
 
 	LDA $14			;\
