@@ -165,7 +165,7 @@ level:
 156	LV13.asm
 157	FilterYoshi_freescrollbabey.asm
 159	killyoshi.asm
-15B	NoStatus_CustomBar.asm
+15B	statusbarremove_CustomBar.asm
 15D	Gradient15D.asm
 15E	FilterYoshi.asm
 15F	hide_sb_uber_Level5.asm
