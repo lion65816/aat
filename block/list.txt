@@ -284,6 +284,7 @@ R56C0-56D1:130 question_mark/giant_question_block_single.asm
 57C1:02  Waterfall.asm
 57C2:02  Waterfall.asm
 57C3:02  Waterfall.asm
+5880:130 sprite_solid.asm
 60DD:130 StickyBlock.asm
 60DE:130 StickyBlock.asm
 60DF:130 StickyBlock.asm

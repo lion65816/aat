@@ -20,7 +20,7 @@
 14 vwf/vwf.json
 15 vwf/vwf_data.json
 16 giant_green_koopa.json
-17 giant_red_koopa.json
+17 GiantThwomp.json
 18 flying_rope.json
 19 Ukiki.json
 1A RealHomingBill.cfg

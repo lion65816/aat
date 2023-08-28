@@ -12,7 +12,7 @@
 
 !BossStartHP = $40		;> $63 = 99 HP, $40 = 64 HP, $0A = 10 HP
 !BossEnrageHP = $21		;> $32 = 50 HP, $20 = 32 HP, $05 = 5 HP
-!Cooldown = $0F			;> $0F = 15 frames, $1E = 30 frames
+!Cooldown = $14			;> $0F = 15 frames, $14 = 20 frames, $1E = 30 frames
 
 !BossCurrentHP = $18C5|!addr	;\
 !PhaseNumber = $18C6|!addr	;|
@@ -28,7 +28,6 @@
 print "INIT ",pc
 	LDA #!BossStartHP	;\ Initialize boss HP.
 	STA !BossCurrentHP	;/
-	STA $0F48|!addr		;> [[[[[DEBUG]]]]]
 	STZ !PhaseNumber
 	STZ !Animation
 	STZ !Enraged
@@ -107,7 +106,6 @@ Boss:
 	%FireballContact()	;\ Otherwise, check if a fireball made contact with the sprite.
 	BCC .no_damage		;/ If not, then do not damage the sprite.
 	DEC !BossCurrentHP	;> Otherwise, the sprite loses 1 HP.
-	DEC $0F48|!addr		;> [[[[[DEBUG]]]]]
 	LDA #!Cooldown		;\ Set the cooldown timer to give the
 	STA !1540,x		;/ sprite some invincibility frames.
 	LDA !BossCurrentHP	;\
@@ -301,7 +299,6 @@ Phase_4:
 	ORA $9D
 	BEQ +
 	JMP .return
-	;BNE .return
 +
 	LDA #$00
 	%SubOffScreen()
@@ -405,6 +402,7 @@ Enrage:
 	BEQ .phase6
 	BNE .return
 .phase5
+	STZ !SpawnedBullets	;> Reset this flag just in case the boss becomes enraged during phase 8.
 	LDA $14			;\
 	AND #$02		;| Play the coin SFX
 	BEQ +			;| every other frame.
@@ -486,12 +484,10 @@ Spawn_Bullets:
 .phase8
 	LDA !154C,x
 	CMP #$80
-	;BEQ .change_to_phase3
 	BNE +
 	JMP .change_to_phase3
 +
 	LDA !SpawnedBullets
-	;BNE .return
 	BEQ +
 	JMP .return
 +
@@ -592,8 +588,55 @@ Death_Sequence:
 	BEQ .phase9
 	CMP #$0A
 	BEQ .phase10
-	BNE .return
+	;BNE .return
+	JMP .return
 .phase9
+	PHX
+	LDX #!SprSize-3		;> Kill all bullets on the screen (skip the last two sprite slots).
+-
+	LDA !9E,x		;\
+	CMP #$9F		;| Check if the sprite is a Banzai Bill.
+	BNE +			;/
+	LDA !14C8,x		;\
+	CMP #$08		;| If it's already killed, then branch.
+	BCC +			;/
+	STZ $00			;\
+	STZ $01			;| Spawn a puff of smoke at the last position of the bullet.
+	LDA #$1B		;| The smoke lasts for 27 frames.
+	STA $02			;|
+	LDA #$01		;|
+	%SpawnSmoke()		;/
+	LDA #$04		;\ Kill as if by a spinjump.
+	STA !14C8,x		;/
++
+	LDA !7FAB9E,x		;\
+	CMP #$1A		;| Check if the sprite is a Homing Bill.
+	BNE +			;/
+	LDA !14C8,x		;\
+	CMP #$08		;| If it's already killed, then branch.
+	BCC +			;/
+	STZ $00			;\
+	STZ $01			;| Spawn a puff of smoke at the last position of the bullet.
+	LDA #$1B		;| The smoke lasts for 27 frames.
+	STA $02			;|
+	LDA #$01		;|
+	%SpawnSmoke()		;/
+	LDA #$04		;\ Kill as if by a spinjump.
+	STA !14C8,x		;/
++
+	DEX
+	BPL -
+	PLX
+
+	LDA $14			;\
+	AND #$02		;| Play the magic SFX
+	BEQ +			;| every other frame.
+	LDA #$10		;|
+	STA $1DF9|!addr		;|
+	BRA ++			;|
++				;|
+	STZ $1DF9|!addr		;/
+++
 	LDA !154C,x
 	CMP #$80
 	BEQ .change_to_phase10
@@ -608,6 +651,8 @@ Death_Sequence:
 	BEQ .kill
 	BRA .return
 .kill
+	LDA #$23		;\ Play Lemmy/Wendy fall SFX.
+	STA $1DF9|!addr		;/
 	LDA #$02		;\ Kill as if by a shell.
 	STA !14C8,x		;/
 	LDA #$01		;\ Freeze the player on level end and enable boss sequence cutscene.

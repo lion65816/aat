@@ -496,6 +496,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 57c1	0	Waterfall.asm
 57c2	0	Waterfall.asm
 57c3	0	Waterfall.asm
+5880	0	A block that will act like tile 25 for Mario
 60dd	0	StickyBlock.asm
 60de	0	StickyBlock.asm
 60df	0	StickyBlock.asm
