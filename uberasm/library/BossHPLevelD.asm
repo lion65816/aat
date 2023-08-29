@@ -54,7 +54,7 @@ main:
 ;=================================
 ; Draw HP UI (sprite-based, make
 ; sure the HP graphics are in the
-; appropriate places in SP2+SP4)
+; appropriate places in SP2)
 ;=================================
 
 BossHPTiles:
@@ -76,11 +76,11 @@ Draw:
 	CMP $00					;> Compare with current HP.
 	BCC .full_tile				;> If Index < HP, then print full HP tile.
 	BEQ .part_tile				;> If Index = HP, then print partial HP tile.
-	LDA.w #$3000+!BossNoHPTile		;\ If Index > HP, then print empty HP tile. High byte contains the YXPPCCCT.
+	LDA.w #$3800+!BossNoHPTile		;\ If Index > HP, then print empty HP tile. High byte contains the YXPPCCCT.
 	STA $400002,x				;/ Store to MaxTile
 	BRA +
 .full_tile
-	LDA.w #$3000+!BossHPTile		;\ High byte contains the YXPPCCCT.
+	LDA.w #$3800+!BossHPTile		;\ High byte contains the YXPPCCCT.
 	STA $400002,x				;/ Store to MaxTile
 	BRA +
 .part_tile
@@ -90,7 +90,7 @@ Draw:
 	TAY					;/
 	LDA.w BossHPTiles,y			;\ Get the appropriate partial HP tile.
 	CLC					;|
-	ADC #$3000				;| High byte contains the YXPPCCCT.
+	ADC #$3800				;| High byte contains the YXPPCCCT.
 	STA $400002,x				;/ Store to MaxTile
 	PLY
 +

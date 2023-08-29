@@ -1,9 +1,8 @@
 load:
-	;JSL NoStatus_load
+	JSL NoStatus_load
 	RTL
 
 init:
-	;JSL hide_sb_uber_init
 	JSL SimpleHP_init
 	JSL shmup_init
 	JSL fastbgscroll_init

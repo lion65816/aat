@@ -464,6 +464,8 @@ Spawn_Bullets:
 	BEQ .phase8
 	JMP .return
 .phase7
+	JSR BulletWarning
+
 	LDA $14			;\
 	AND #$02		;| Play the coin SFX
 	BEQ +			;| every other frame.
@@ -662,6 +664,61 @@ Death_Sequence:
 	LDA #$03		;\ Set the boss victory music.
 	STA $1DFB|!addr		;/
 .return
+	RTS
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Bullet warning routine
+; Uses the MaxTile system to request OAM slots. Needs SA-1 v1.40.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+!NumWarningTiles = 3
+
+WarningYX:
+	dw $28F0,$68F0,$A8F0
+
+BulletWarning:
+	LDY.b #$00+(!NumWarningTiles)		;> Request 3 tiles. Input parameter for call to MaxTile.
+	REP #$30				;> (As the index registers were 8-bit, this fills their high bytes with zeroes)
+	LDA.w #$0000				;> Maximum priority. Input parameter for call to MaxTile.
+	JSL $0084B0				;\ Request MaxTile slots (does not modify scratch ram at the time of writing).
+						;| Returns 16-bit pointer to the OAM general buffer in $3100.
+						;/ Returns 16-bit pointer to the OAM attribute buffer in $3102.
+	BCC +					;\ Carry clear: Failed to get OAM slots, abort.
+						;/ ...should never happen, since this will be executed before sprites, but...
+	PHX
+
+	LDX $3100				;> Main index (16-bit pointer to the OAM general buffer)
+	LDY.w #$0000+((!NumWarningTiles-1)*2)	;> Loop index
+-
+	LDA WarningYX,y				;\ Load X and Y coordinates
+	STA $400000,x				;/
+	LDA $14
+	AND #$0004				;> Change the palette every four frames (flashing).
+	BEQ .palette1
+	LDA.w #$381D				;> High byte: YXPP CCCT, Low byte: Tile number
+	BRA .palette2
+.palette1
+	LDA.w #$341D				;> High byte: YXPP CCCT, Low byte: Tile number
+.palette2
+	STA $400002,x
+
+	INX #4					;\
+	DEY #2					;| Move to next slot and loop
+	BPL -					;/
+
+	LDX $3102				;> Bit table index (16-bit pointer to the OAM attribute buffer)
+	LDY.w #$0000+(!NumWarningTiles)/2-1	;> Loop index
+	LDA.w #$0000				;> Small (8x8) for both tiles
+-
+	STA $400000,x				;> Store to both
+
+	INX #2					;\
+	DEY					;| Loop to set the remaining OAM extra bits.
+	BPL -					;/
+
+	PLX
++
+	SEP #$30
 	RTS
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
