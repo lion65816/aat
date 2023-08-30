@@ -1,5 +1,16 @@
 init:
     jsl retry_level_init_3_init
+    phk : pea.w (+)-1
+    pea.w ($02|!bank8)|(init>>16<<8)
+    plb
+    jml $028B20|!bank
++   pea.w ($00|!bank8)|(init>>16<<8)
+    plb
+    phk
+    pea.w (+)-1
+    pea.w $0084CF-1
+    jml $008494|!bank
++   plb
     rtl
 
 main:

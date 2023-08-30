@@ -22,7 +22,6 @@
 	- Clock (Subtract 100)
 14	Vwf
 15	vwf data
-16	Giant Green Koopa
 17	Giant Thwomp, Down.
 	Giant Thwomp, Up.
 18	Flying Rope
@@ -40,7 +39,8 @@
 1B	Nipper Smb3
 1C	Para Beetle
 1D	Piledriver
-1E	Ptooie
+1E	Banzai Bill, faces left.
+	Banzai Bill, faces right.
 1F	Rocky
 22	Spike Blue
 23	Spike Yellow

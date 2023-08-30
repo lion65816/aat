@@ -110,6 +110,7 @@ level:
 0F8	BG_AutoScroll.asm
 0F9	leafspawn_uberASM.asm
 0FB	SimpleHP.asm
+0FC	NoStatus.asm
 0FE	NoStatus_FilterYoshi.asm
 0FF	NoStatus.asm
 100	bonusmusicrng.asm
@@ -161,6 +162,7 @@ level:
 143	aquarium.asm
 14B	DisableLR.asm
 14C	solved.asm
+14E  hdma_andnoflight.asm
 151	151.asm
 155	BG_AutoScroll4.asm
 156	LV13.asm
@@ -204,6 +206,7 @@ level:
 1A0	FilterYoshi.asm
 1A2	Layer2Smash_1A2.asm
 1A3	DisableA.asm
+1A4	freescrollbabey.asm
 1B0	redswitch.asm
 1B1	redswitch.asm
 1B2	redswitch.asm

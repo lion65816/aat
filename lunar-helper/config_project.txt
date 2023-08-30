@@ -54,6 +54,7 @@ patches
 	patch\patch\FixFeather.asm
 	patch\patch\owcount.asm
 	patch\patch\ndp.asm
+	patch\patch\sprite_item_box.asm
 ]
 -- patch\patch\bwram_plus.asm
 -- patch\patch\midway\multi_midway_1.7.asm

@@ -24,6 +24,7 @@ main:
 	CMP #$0E : BEQ .print151
 	CMP #$0F : BEQ .print0A4
 	CMP #$10 : BEQ .print146
+	CMP #$11 : BEQ .print14E
 	BRA .exit
 .erase
 	LDA blank,y		; copy one byte
@@ -76,6 +77,10 @@ main:
 .print146
 	LDA text146,y		; copy one byte
 	BRA .next
+.print14E
+	LDA text14E,y		; copy one byte
+	BRA .next
+
 
 .next
 	STA $7F837D,x
@@ -262,6 +267,13 @@ text146:
 	db !T_,!h_,!e_,!__,!M_,!a_,!g_,!i_,!c_,!__,!S_,!t_,!a_,!i_,!r_,!w_,!e_,!l_,!l_,!__,!__,!__,!__,!__,!__,!__,!__
 	db $5A,$A0,$00,$35
 	db !b_,!y_,!__,!D_,!J_,!__,!B_,!u_,!c_,!k_,!l_,!e_,!y_,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+	
+text14E:
+	db $5A,$80,$00,$35
+	db !R_,!u_,!n_,!__,!DH,!i_,!n_,!DH,!__,!H_,!e_,!l_,!l_,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+	db $5A,$A0,$00,$35
+	db !b_,!y_,!__,!d_,!a_,!v_,!i_,!d_,!v_,!a_,!m_,!a_,!2_,!1_,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+
 
 
 ;template:

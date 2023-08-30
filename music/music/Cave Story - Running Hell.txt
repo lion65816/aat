@@ -1,0 +1,791 @@
+#amk 2
+
+#SPC
+{
+#author "Pixel"
+#game "Cave Story"
+#title "Running Hell"
+}
+
+$EF $FF $0A $0A
+$F1 $0A $60 $01
+
+#path "cs-runninghell"
+#samples 
+
+{
+#optimized
+"rh_1.brr"
+"rh_2.brr"
+"rh_4.brr"
+"rh_2high.brr"
+"rh_3.brr" 
+"rh_3high3.brr"
+"rh_3higher.brr"
+"rh_kick2.brr"
+"rh_snare.brr"
+"rh_closedhihat.brr"
+"rh_ophat.brr"}
+
+#instruments
+{
+"rh_1.brr" $FF $E0 $40 $04 $00
+"rh_2.brr" $FF $E0 $00 $04 $00
+"rh_4.brr" $FF $E0 $00 $04 $00
+"rh_2high.brr" $FF $E0 $00 $04 $00
+"rh_3.brr" $FF $E0 $00 $04 $00
+"rh_3high3.brr" $FF $E0 $00 $04 $00
+"rh_3higher.brr" $FF $E0 $00 $04 $00
+"rh_kick2.brr" $FF $E0 $00 $04 $00
+"rh_snare.brr" $FF $E0 $00 $04 $00
+"rh_closedhihat.brr" $FF $E0 $00 $04 $00
+"rh_ophat.brr" $FF $E0 $00 $04 $00
+}
+
+(!100)[$FA $01 $20]
+(!101)[$ED $7F $E0]
+(!102)[v255]
+(!103)[v190]
+(!104)[v255 $ED $7F $E0]
+
+w180 t33
+#0
+$F4 $02
+$EE $00 $FA $03 $00
+l32 @31  q7f
+[v255 o3
+v255a^^v190^^r
+v255av190^rr
+v255av190^rr
+v255av190^]7
+
+v255av180^r
+v230av165^r
+v200av145^r
+v170av120^r
+v150av80^r^
+
+/ $EE $00 $FA $03 $00 l32 @31  q7f
+v255
+
+(2)[a^^rrr
+arrr
+arrr
+ar]2
+
+(3)[g^^rrr
+grrr
+grrr
+gr]
+
+(4)[gr
+g^v190^r
+v255g^v190^r
+v255e^v190^r
+v255gv190^]
+
+v255
+
+>
+@32d^^rrr
+drrr
+drrr
+dr
+
+f^^rrr
+frrr
+frrr
+fr
+
+e^^rrr
+errr
+errr
+er
+
+g^^rrr
+grrr
+grrr
+gr
+
+@31
+<
+[[
+[a^^r^^ar^^ar^^ar]2
+g^^r^^gr^^gr^^gr
+a^^r^^ar^^ar^^ar
+]]2
+@31 >>
+(2) (2)
+(3)
+(4)
+v255
+
+<
+@31 <
+(2)2
+
+(3)
+
+g^^rrr
+grrr
+g^rr
+gr
+
+
+o5
+rrrr  q7f
+[v255av210^
+
+v255dv210^]3
+
+rrrr  q7f
+[v255bv210^
+
+v255gv210^]2
+
+v255bv210^
+
+v255f+v210^
+
+>
+rrrr  q7f
+[v255dv210^
+<
+v255bv210^>]3
+
+
+rrrr  q7f
+v255ev210^
+<
+v255av210^>
+rrrr
+
+v255dv210^
+<
+
+v255av210^>
+
+
+rrrr
+[v255cv190^
+<
+v255av190^]2
+>
+v255c^
+v255c+^
+
+v255 d^^ v200 ^ v215 ^ v195 ^ v210 ^ v185 ^
+
+v255 g^^ v195 ^ v210 ^ v190 ^ v205 ^ v180 ^
+
+v255 e^^^^^^ v195 ^ v210 ^ v190 ^ v205 ^ v180 ^ v200 ^ v170 ^ v185 ^ v165 ^
+
+v255 a v200 ^ v215 ^ v190 ^ v210 ^ v180 ^ v205 ^ v175 ^
+
+v255 g v200 ^ v215 ^ v190 ^ v210 ^ v180 ^ v205 ^ v175 ^
+
+rrrr
+v255e^v180^^
+v255a^v180^^
+
+@33
+ $FA $03 $FF
+o4 v255 $EE $30 v255b^v190^^
+v255a+^^^
+v190 ^^^^
+$EE $00 @31 >> $FA $03 $00
+v255
+a^^^
+g^^^
+
+v255e^^^
+v190 ^^^^
+v255
+d^^^<
+b^^^>
+v255c^^^
+v190 ^^^^
+v255<
+b^^^
+v190 ^^^^>
+
+[rrrrrrrrrrrrrrrr]2
+rrrrrrrrrrrr
+@33 $FA $03 $FF $EE $30
+<<<
+v200g+v220bv240>d+g+
+>
+v255d+dc+c<ba+ag+gf+fed+dc+c
+$EE $00
+ q7f
+            
+#1
+@30 o3 
+
+(!104, -1)
+(!100, 3)
+
+l32 q7f
+
+[dv190^r^]28
+
+dv190^r (!100,0) (!101, -1) (!100, 3)
+v225dv170^r
+v205dv150^r
+v175dv130^r
+v140dv100^r^
+/(!104, -1)
+(1)[[
+[dv190^r^]8
+[cv190^r^]4
+[cv190^r^]2
+ev190^r^
+cv190^r^]]2
+
+[[
+[dv190^r^]8
+[cv190^r^]4
+[dv190^r^]4
+]]2
+
+[[
+[dv190^r^]8
+[cv190^r^]4
+[cv190^r^]2
+ev190^r^
+cv190^r^]]2
+
+[[
+[f^r^]4
+[g^r^]4
+[e^r^]4
+[a^r^]2
+[g^r^]2
+
+[f^r^]4
+[g^r^]4
+[e^r^]4
+[a^r^]2
+>e^r^
+d^r^]]2
+    
+#2
+r1r1r1r1 
+/
+
+(!102, -1)
+(!103, 3)
+q7f
+(30)[@34 v255
+o3
+a r
+>
+f r
+d r
+<
+a r
+>
+f r
+d r
+<
+a r
+>
+g+ r
+
+a^
+f r
+d r
+a r
+f r
+d r
+>c r <
+
+g^
+
+a^
+c^
+<a+ r
+>c r
+<a+ r
+>c r
+c+ r
+d r
+
+c r
+>
+c^
+<b r
+a+ r
+a^
+g+^
+g^
+f+^
+
+o4
+a r
+>
+f r
+d r
+<
+a r
+>
+f r
+d r
+<
+a r
+>
+g+ r
+
+a^
+f r
+d r
+a r
+f r
+d r
+>c r <
+g^
+
+a^
+c r
+<a+ r
+>c r
+<a+ r
+>c r
+c+ r
+d r
+
+]
+
+c r
+f^^^
+(!100,0)
+v230 e^^^
+v200 d+^^^
+>
+v170 d+ v200 e
+
+v255
+
+(20)[v255  q7f f r
+v255 d v120 f
+v255 f v120 d
+@35 $FA $03 $FF<<
+v255 a+ >>
+@34 $FA $03 $00
+v120 f
+v255 a
+
+@35 $FA $03 $FF<<
+v120 a+
+@34 $FA $03 $00>>
+v255 f v120 a
+v255 d v120 f
+<
+v255 a v120 > d <
+>
+v255 g v120 a
+v255 e v120 g
+v255 c v120 e
+v255 g v120 c
+v255 c v120 g
+v255 e v120 c
+v255 g v120 e
+v255 e v120 f
+
+v255g
+v220^v210^v190^v205^v175^
+v255f
+v205^v210^v185^v205^v175^
+v255e
+v200^v210^v170^
+
+v255y5 f r
+
+v240d y10 v140 f
+v240y15 f y10 v140 d
+v240y15 d y10 v140 f
+v240y5 f y10 v140 d
+v240y5 d y10 v140 f
+v240y15f y10 v140 d
+v240y15d y10 v140 f]
+>
+
+@35 << $FA $03 $FF
+v255 f r
+v255 d v120 f
+v255 f v120 d
+
+v255 a+
+v120 f
+v255 a
+
+v120 a+
+v255 f v120 a
+v255 d v120 f
+<
+v255 a v120 > d <
+>
+v255 g v120 a
+v255 e v120 g
+v255 c v120 e
+v255 g v120 c
+v255 c v120 g
+v255 e v120 c
+v255 g v120 e
+v255 e v120 f
+
+v255g
+v220^v210^v190^v205^v175^
+v255f
+v205^v210^v185^v205^v175^
+v255e
+v200^v210^v170^
+
+v255y5 f r
+
+v240d y10 v140 f
+v240y15 f y10 v140 d
+v240y15 d y10 v140 f
+v240y5 f y10 v140 d
+v240y5 d y10 v140 f
+v240y15f y10 v140 d
+v240y15d y10 v140 f
+ 
+$FA $03 $00
+$EE $00 (!102, -1) (!103, 3)
+(30) (!100, 0)
+v255 e v190 ^
+v255f^
+e^
+c^
+f^
+g^
+a^
+>
+c^
+
+v255 d^^^ v190 ^^^^ rrrrrrrr
+
+v255 c^^^ v190 ^^rr < b^^^a^^^
+
+v255 g^^^ v190 ^^rr e^^^g^^^
+
+v255 a^^^ v190 ^^rr g^^^v190^^rr
+
+v255 f^^^ v190 ^^rr rrrr e^f^
+
+v255 g^^^ v190 ^^rr e^^^d^^^
+
+v255 e^^^ v190 ^^ rrrrrrrrrr
+
+[r]16
+
+@35
+v255 $FA $03 $FF
+c^^^ v190 ^^rrrrrrrrrr
+v255
+d^^^ v190 ^^^^ v255c^^^<b^^^
+$FA $03 $00
+@34 >>
+v255
+a^^ << @35 $FA $03 $FF b^^ >> @34 $FA $03 $00 g^^^rrd^^^
+
+v255
+e^^^ v190 ^^^^
+v255d^^^ v190 ^^^^
+<
+v255
+e^^f^^g^e^^d^^c^
+<
+b^^>c^^<a^>c^^<b^^g^
+a^^^^^^^>e^^^^^^^a^^^^^^^^^^^ v190 ^ rrr
+
+#3
+v255
+[r1]4
+/ q7f
+r1r1
+@31 
+(2)2
+(3)2
+
+@32
+
+[[
+[fr<
+ar>]4
+
+[er<
+gr>]8
+
+[fr<
+ar>]4
+]]2
+
+r1r1
+@32 <
+d^^r^^dr^^dr^^dr
+f^^r^^fr^^fr^^fr
+e^^r^^er^^er^^er
+g^^r^^gr^^gr^^gr
+
+>
+(!102,-1)
+(50)[c v160 ^<
+e^
+a^>
+c v160 ^
+<e^
+a^>
+c v160^<
+ a^
+
+b v160 ^
+d^
+g^
+b v160 ^
+d^
+g^
+b v160^
+ d^
+>
+
+d v160 ^
+<
+e^
+g^
+>d v160 ^
+<e^
+g^
+>d v160^
+< b^]
+>
+c v160 ^<
+e^
+a^
+>c v160 ^<
+e^
+a^>
+c v160^<
+ a^
+
+(50)
+>
+c v160 ^<
+e^
+a^>
+c v160 ^
+e^
+<a^>
+c v160^
+<
+ a^
+
+(50)
+>
+c v160 ^<
+e^
+a^
+>c v160 ^<
+e^
+a^>
+c v160^<
+ a^
+
+>
+
+c v160 ^<
+e^
+a^>
+c v160 ^
+<e^
+a^>
+c v160^<
+ a^
+
+b v160 ^
+d^
+g^
+b v160 ^
+d^
+g^
+b v160^
+ d^
+
+a v160 ^
+d^
+e^
+a v160 ^
+d^
+e^
+a v160^
+ d^
+
+
+a v160 ^
+c^
+e^
+a v160 ^
+c^
+e^
+a v160^
+ c^
+
+[r1]99
+
+#4
+v240
+@37 o4 $EE $30 q7f 
+[e8]28
+
+e2
+/
+[e8]96
+e8e8e8e8
+
+[e^e^^^e^^^e^^^e^]16
+
+#5
+r2r2r2 
+@38
+rrrrrrrr  q7f
+v90f+
+v120f+
+v140f+
+v160f+
+v185f+
+v200f+
+v220f+
+f+
+
+^^
+v205
+
+f+^^^
+v240f+
+v210f+
+^^
+v220f+^^^ v240 f+^^^
+
+v205
+
+f+^^^
+v240f+^^^
+
+v220f+^^^ v240 f+f+
+
+^^
+v205
+
+f+^^^
+v240f+
+v210f+
+^^
+v220f+^^^ v240 f+^
+
+f+^^
+v210
+f+^^
+v165
+f+^
+v175
+f+^^
+v155
+f+^^
+v90
+f+^
+
+/
+
+^^
+[v205
+
+f+^^^
+v240f+
+v210f+
+^^
+v220f+^^^ v240 f+^^^
+
+v205
+
+f+^^^
+v240f+^^^
+
+v220f+^^^ v240 f+f+
+
+^^]11
+
+v205
+
+f+^^^
+v240f+
+v210f+
+^^
+v220f+^^^ v240 f+^^^
+
+v220f+^^^
+v240f+^
+f+
+f+
+v220f+
+v240f+
+f+
+f+
+f+
+f+
+ 
+[^^^^
+f+^^^r^^^
+f+^^^]16
+
+#6
+r1r1 
+/
+v255 q7f
+@39 
+
+[g+^^^
+g+^^^
+g+^^^
+g+^^^]28
+
+[r1]8
+
+#7
+
+@40 
+o3 
+v240 q7f
+c+^^^^^
+d+^^^^^
+e^^^^^
+f^^^^^
+f+^^^
+g+^^^
+a^^^^^v210a+^^^^^
+v200b^^^
+v185b^^^^^
+v165b^
+>v140c^
+v100c^
+v80d^
+v70d^ 
+[y10rr
+v230
+g+^v50^^^^^^^^^^^^
+^^^^^^
+v230y15g+^v50^^
+v230y5g+^v50^^^^]2
+/
+[y10rr
+v230
+g+^v50^^^^^^^^^^^^
+^^^^^^
+v230y15g+^v50^^
+v230y5g+^v50^^^^]12
+y10
+[
+v210g+^^^
+v225g+^^^
+v215g+^^^
+v225g+^^^]16
