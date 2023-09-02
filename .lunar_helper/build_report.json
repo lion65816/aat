@@ -275,7 +275,7 @@
     "Levels/level 147.mwl": "fbd5eacf6c0e63ae6974c4bdcb8a0712",
     "Levels/level 149.mwl": "b85613a4ca169767d4afc329d4cbba54",
     "Levels/level 14A.mwl": "fabd6fcbab2e8fdc669af18b42c86d8a",
-    "Levels/level 14B.mwl": "2f729ba055f07002ba57f5facfec7721",
+    "Levels/level 14B.mwl": "c03a1cbb6dad9ebc456841f076be76b6",
     "Levels/level 14C.mwl": "00a01127a72758265b4a15c58d4c72ac",
     "Levels/level 14D.mwl": "7c9454579ade6aa97e59d89f6ebee2de",
     "Levels/level 14E.mwl": "7c120256914c09dad14f4265e07fff83",
@@ -287,9 +287,9 @@
     "Levels/level 157.mwl": "8479d2399a2f61ca2066461ffaaf0e45",
     "Levels/level 158.mwl": "530c7599e4aa78a1f42d316a005b4282",
     "Levels/level 159.mwl": "d0316a7e0e03e6da63ecea4763475d2d",
-    "Levels/level 15A.mwl": "619b1a48e101bd67791605190e69d59a",
-    "Levels/level 15B.mwl": "2a6b06f75b33a1cc0ca4ae3319af2c99",
-    "Levels/level 15C.mwl": "071af53a08b4e5d40f5d09699a46bbea",
+    "Levels/Level 15A.mwl": "619b1a48e101bd67791605190e69d59a",
+    "Levels/Level 15B.mwl": "2a6b06f75b33a1cc0ca4ae3319af2c99",
+    "Levels/Level 15C.mwl": "071af53a08b4e5d40f5d09699a46bbea",
     "Levels/level 15D.mwl": "4d5b3c372d0da2f62e87cbb7e64f21ef",
     "Levels/level 15E.mwl": "f4ebf8464b9f424aa343199f7973a4b6",
     "Levels/level 15F.mwl": "1cd44076eebb8cb1677561288c9d0fc3",
@@ -11133,7 +11133,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "a0d828ddb5989d000686d9650870de0f",
+      "hash": "dfb7df4c4201195d78fe77a06586edec",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -12398,7 +12398,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "a5e1dd70707640b7da89c184347ccf48",
+      "hash": "ee275a7727054936625f5ed0bcc2b65c",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -16026,12 +16026,12 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "6a8bb7cbfaeba1de2e688b649a86056f",
+      "hash": "e3faf9ea8a550a6aa88e9a76d9f10273",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "a709c1eba15ede3b4428b54ae0cfdf99",
+      "hash": "7d673a2b5854a9845c94e80515e26505",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -16095,7 +16095,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "aa355def504c8af5f885c7df818e33c1",
+      "hash": "31f6a339f5ffcb687f33766456482c32",
       "dependencies": []
     },
     {
@@ -16147,7 +16147,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "36551d93d3f8fe45cb78b8f5a7501f95",
+      "hash": "5bd409a07c7f297f174b9403b97332c0",
       "dependencies": []
     },
     {
@@ -17142,7 +17142,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "5832fd2d27521ef8ba4a9feb2402c423",
+      "hash": "751402ffdaf61c1f3be0030cad74dac2",
       "dependencies": []
     },
     {
@@ -17788,12 +17788,12 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "a167caf512c96c890f57c858d95eb059",
+      "hash": "ed78595ae1cb3f046b6d5702f46a155b",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "a4fc854cc516937c97ca6986abd727f1",
+      "hash": "6857746ce3dbaed877aaa4326f5d68c1",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -17836,12 +17836,12 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "7ff5c2685cdd26be9f1a5489f41158ba",
+      "hash": "43d592b2eda1bacd4b58269e10d336c0",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "ebf8f746663a1625c776cfb8b9c3c9e5",
+      "hash": "6a8220c2c633d9ada3759a68a9880133",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -18044,12 +18044,12 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "81cc66db22cc6f66922a352f3ce208b8",
+      "hash": "e9687939cb528ff94a25f63759b1fa73",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "9fd363509a100260132c35fa16e724c2",
+      "hash": "14e5773a433de1000dda8153fd3c498e",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -18060,7 +18060,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "c9da439d02ae47e6f4f38128c5e553a0",
+      "hash": "a7bf7058c36015e8b6acafab8c4f9646",
       "dependencies": []
     },
     {
@@ -18456,12 +18456,12 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "5170d95edb454183c386aaa3f6f6cfc9",
+      "hash": "a31acb84a01f0de0b6e91ff2afc44e81",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "ffcd0453e9119a869637bdb583c390ce",
+      "hash": "e30cce0c6388ee92cf44b6ffce8db244",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -18888,12 +18888,12 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "d46bba83498e518e63ac92abf50fa6d6",
+      "hash": "75473503d48f62099df69075350cdb41",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "82ac5ab472428053cdeada89094b59ef",
+      "hash": "d45055a5d493357eebf3c27fe3bcaa22",
       "dependencies": [
         {
           "$type": "LunarHelper.DependencyGraphSerializer+JsonDependency, LunarHelper",
@@ -19323,7 +19323,7 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashFileNameVertex, LunarHelper",
       "file_name": "hundred_points.asm",
-      "hash": "4cb1ea8e2e7ba855bc7b5f0058187b9a",
+      "hash": "fb4144a7e2651d4f85e3847b0d322282",
       "dependencies": []
     },
     {
@@ -19395,7 +19395,7 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashFileNameVertex, LunarHelper",
       "file_name": "row_points.asm",
-      "hash": "c473dfc8f9bd27f0ffb6b90780f5a028",
+      "hash": "2152572bcd3bb6b1879e1cbd4ac6aa9b",
       "dependencies": []
     },
     {
@@ -22627,13 +22627,13 @@
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashFileNameVertex, LunarHelper",
       "file_name": "star_points.asm",
-      "hash": "7a90cda310d1e81341248fa0bb449676",
+      "hash": "4bb57763e7d5f50de83d71e89201ce6b",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashFileNameVertex, LunarHelper",
       "file_name": "stomped_points.asm",
-      "hash": "15c9842516a61697bebabb5eb0cb6d7b",
+      "hash": "9f1455fdb75c6f1cdee40d190e198bb1",
       "dependencies": []
     },
     {
@@ -23155,7 +23155,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "fe6631492ba243411f16b82fe8d5c730",
+      "hash": "16274e1f7e2137dd5e2faf1ae5a93e19",
       "dependencies": []
     },
     {
@@ -23334,12 +23334,12 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "ed4b5da5a016ff4b92a061573f0a5539",
+      "hash": "3ed9dc9fcf2f28b9140b99c553c68090",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "4babb43ad16fa955007c6efd76825f36",
+      "hash": "39bf5990a3ee34f94fbcf77a5ec8d392",
       "dependencies": []
     },
     {
@@ -23380,17 +23380,17 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "3f393ccc1e38028bb92251a65424c873",
+      "hash": "7656d7deafe41a4ac9ed8cc2322be96c",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "24044bc7fed32c5748b7f326e04ea021",
+      "hash": "7f561213286ff044634dbbe306167ca7",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "6c34c07d3a0284811eddb278984b0b2f",
+      "hash": "5e0957a91f93ba92ff364e66c8c307c7",
       "dependencies": []
     },
     {
@@ -23400,7 +23400,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "3110c0025da15bc087c7eea5bc4bfaf6",
+      "hash": "b32c376d527a4d6ae49388fea08555a8",
       "dependencies": []
     },
     {
@@ -23460,17 +23460,17 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "3110c671dabd5b66c1287edb7fc63078",
+      "hash": "55cfaca5cfdf2b094ec03ea2504433c8",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "8df88ad851ef6464e8f98b220a55d2ea",
+      "hash": "8a77784675f2ddd4ad409bb25a5eec54",
       "dependencies": []
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "aa38ddc9c0cbd9d9c2086a94d0eaf9b5",
+      "hash": "9ae8a5a9953661d7f0fdf7f849d56c82",
       "dependencies": []
     },
     {
@@ -25522,7 +25522,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "3eaeac57b39b9abaed47f35bae2b29fa",
+      "hash": "e9be35ca555f77ac3b0b5668bbeb5025",
       "dependencies": []
     },
     {
@@ -25567,7 +25567,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "9115e9aee29468f9231ffef904cf3f1d",
+      "hash": "438fd72341cde59641799da9658375d1",
       "dependencies": []
     },
     {
@@ -25798,7 +25798,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "a09b5bb060a3a60ae86c636c64a2c973",
+      "hash": "661def02c7c16a9361e01660123787a6",
       "dependencies": []
     },
     {
