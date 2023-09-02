@@ -16,4 +16,4 @@ includeonce
 !LH_ASSEMBLING = 1
 
 ; Define that contains the path to Lunar Helper's globule folder, useful for calling globules without having to hardcode a user-specific path to the globule
-!LH_GLOBULES_FOLDER = D:/Games/Mario/Projects/a3mt/.lunar_helper/globules/
+!LH_GLOBULES_FOLDER = D:/Documents/Other/GitHub/aat/.lunar_helper/globules/

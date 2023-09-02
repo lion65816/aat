@@ -4,7 +4,7 @@
 
 ; You should disable this if the method you used to remove the status bar didn't also disable the item drawing routine.
 ; For example, with the "Remove Status Bar" patch you need this at 1, but for something that disables it per-level you probably want this at 0.
-!draw_item = 0
+!draw_item = 1
 
 ; If set to an address, the item box/item will only be drawn when this address holds a non-zero value.
 ; (it can be used to only draw in specific levels, for example if you have a patch that only removes the status bar in specific levels).

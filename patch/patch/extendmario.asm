@@ -35,15 +35,15 @@ lorom
 org $00DFDA
 
 db $00,$02,$80,$80	;nothing			(00-03)
-db $00,$02,$0C,$80	;running fullspeed		(04-07)
-db $00,$02,$1A,$1B	;jumping full speed/flying	(08-0B)
-db $00,$02,$0D,$80	;wall-running			(0C-0F)
+db $00,$02,$80,$80	;running fullspeed		(04-07)
+db $00,$02,$80,$80	;jumping full speed/flying	(08-0B)
+db $00,$02,$80,$80	;wall-running			(0C-0F)
 db $00,$02,$80,$80	;swimming 1			(10-13)
 db $00,$02,$80,$80	;swimming 2			(14-17)
-db $00,$02,$0A,$0B	;swimming 3			(18-1B)
+db $00,$02,$80,$0B	;swimming 3			(18-1B)
 db $00,$02,$80,$80	;hitting wall behind		(1C-1F)
 db $00,$02,$80,$80	;hitting wall infront		(20-23)
-db $00,$02,$7E,$80	;punching Yoshi			(24-27)
+db $00,$02,$80,$80	;punching Yoshi			(24-27)
 
 ;Big Mario Balloon:
 ;Head, Right body, Left body, unused
@@ -53,7 +53,7 @@ db $00,$02,$02,$80	;  		    [all 16x16]	(28-2B)
 ;The below values are for the cape
 
 db $04			;Cape		      [16x16]	(2C)
-db $7F,$4A,$5B,$4B,$5A	;Cape gliding stuff  [all 8x8]	(2D-31)
+db $7F,$4A,$5B,$80,$5A	;Cape gliding stuff  [all 8x8]	(2D-31)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
