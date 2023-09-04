@@ -165,6 +165,7 @@ A3  Bonk 3 - Round 4.txt
 A4  Town Where the West Wind Blows.txt
 A5  Lone_Moments.txt
 A6  greatbattleship.txt
+A7  Cave Story - Running Hell.txt
 A8  21 Ratchet Ambience.txt
 A9  Kirby's Dream Land 3 - Iceberg.txt
 AA  DSOT_mml.txt

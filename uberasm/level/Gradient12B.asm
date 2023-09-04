@@ -36,11 +36,7 @@ init:
 	LDA.b #%00011000
 	TSB   $6D9F
 
-load:
-    lda #$01
-    sta $13E6|!addr
-
-	RTL ; <-- Can also be RTL.
+	RTL
 
 ; --- HDMA Tables below this line ---
 Gradient1_RedGreenTable:

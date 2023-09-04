@@ -1,6 +1,14 @@
+load:
+	JSL NoStatus_load
+	RTL
+
+init:
+	JSL freescrollbabey_init
+	RTL
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; uberASM to disable controller buttons by janklorde   	;
-; Special thanks to RussianMan							;
+; Special thanks to RussianMan				;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; This is a simple uberASM that allows you to disable  	;
@@ -9,7 +17,7 @@
 ; them individually. For example, if you wanted Y and B	;
 ; to function individually but Y+B to be disabled, this	; 
 ; is not possible. Please use sensibly, disabling all  	;
-; buttons isn't going to be fun for anyone.				;
+; buttons isn't going to be fun for anyone.		;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
@@ -33,33 +41,24 @@
 
 !InputByte2 = #%10000000
 
-init:
-    INC $140B
-    RTL
-
 main:
 	LDA !InputByte1		; Load input
 	AND #%10110000		; Bitmask of which bits not to run through $15
-	BEQ +				; If none of these bits are set, branch
+	BEQ +			; If none of these bits are set, branch
 	EOR !InputByte1		; Flip masked bits out for now
-	TRB $15				; Reset bits for currently held down controller buttons
+	TRB $15			; Reset bits for currently held down controller buttons
 	TRB $16
 	EOR !InputByte1		; Flip back the bits previously disabled
 	TSB $0DAA|!addr		; And set those ones here, allowing to hold some buttons.
 	TSB $0DAB|!addr		; Same for second controller
-	BRA ++				; Branch to second input
+	BRA ++			; Branch to second input
 +	LDA !InputByte1		; Reload data
 	TSB $0DAA|!addr		;\ Since none of the masked bits were set,
 	TSB $0DAB|!addr		;|
-	TRB $15				;/ Just disable them at addresses as normal. (including second controller)
+	TRB $15			;/ Just disable them at addresses as normal. (including second controller)
 	TRB $16
 ++	LDA !InputByte2		;\ Disable second byte normally as there are no exeptions.
-	TRB $17				;|
+	TRB $17			;|
 	TSB $0DAC|!addr		;/
 	TSB $0DAD|!addr		; Same for controller 2
-	RTL					; Return
-
-load:
-    lda #$01
-    sta $13E6|!addr
-    rtl 
+	RTL			; Return

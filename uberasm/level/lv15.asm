@@ -1,15 +1,34 @@
+load:
+	JSL FilterYoshi_load
+	RTL
+
+init:
+	JSL freescrollbabey_init
+
+	LDA $19			;\
+	BEQ +			;| Filter fire and cape.
+	LDA #$01		;|
+	STA $19			;/
++
+	LDA $0DC2|!addr		;\
+	BEQ +			;| Filter fire and cape reserve.
+	LDA #$01		;|
+	STA $0DC2|!addr		;/
++
+	RTL
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; uberASM to disable controller buttons by janklorde   	;
-; Special thanks to RussianMan							;
+; Special thanks to RussianMan				;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; This is a simple uberASM that allows you to disable  	;
 ; any combination of controller inputs. You cannot     	;
 ; disable combinations of buttons without disabling    	;
 ; them individually. For example, if you wanted Y and B	;
-; to function individually but Y+B to be disabled, this	; 
+; to function individually but Y+B to be disabled, this	;
 ; is not possible. Please use sensibly, disabling all  	;
-; buttons isn't going to be fun for anyone.				;
+; buttons isn't going to be fun for anyone.		;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
@@ -54,26 +73,3 @@ main:
 	TSB $0DAC|!addr		;/
 	TSB $0DAD|!addr		; Same for controller 2
 	RTL					; Return 
-
-init:
-STZ $0F48|!addr
-
-	LDA $19
-	BEQ +
-	LDA #$01
-	STA $19
-+	LDA $0DC2|!addr
-	BEQ +
-	LDA #$01
-	STA $0DC2|!addr
-+	LDA #$01
-    STA $140B|!addr
-    RTL
-
-
-load:
-    lda #$01 : sta $1B9B|!addr
-    lda #$01
-    sta $13E6|!addr
-    rtl
-    

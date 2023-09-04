@@ -235,11 +235,11 @@
 ; For example, !tile_curs = $24 means both $24 and $25 will be overwritten.
 ; Also, obviously these aren't used if you don't use the Retry prompt.
     !tile_curs = $20
-    !tile_blk  = $22
+    !tile_blk  = $56
     !tile_r    = $30
     !tile_e    = $31
-    !tile_t    = $32
-    !tile_y    = $33
+    !tile_t    = $0B
+    !tile_y    = $5B
     !tile_x    = $4A
     !tile_i    = $5A
 

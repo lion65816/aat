@@ -378,6 +378,12 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 195d	0	Print the room/author names for sublevel 0A4.
 195e	0	Print the room/author names for sublevel 146.
 195f	0	Print the room/author names for sublevel 146.
+1960	0	Print the room/author names for sublevel 14E.
+1961	0	Print the room/author names for sublevel 14E.
+1970	0	Print the room/author names for sublevel 14E.
+1971	0	Print the room/author names for sublevel 14E.
+1980	0	Print the room/author names for sublevel 14E.
+1981	0	Print the room/author names for sublevel 14E.
 19ff	0	Erase the room/author names.
 1b90	0	Acts as 25 if a specific switch is active.
 1b91	0	Acts as 25 if a specific switch isn't active.

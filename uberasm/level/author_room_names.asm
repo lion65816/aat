@@ -1,11 +1,14 @@
+;;;;;;;;;;;;;;;;;;;;
 ; Print the room and author names to Layer 3 when Demo touches a door.
 ; Uses free RAM address: $1923|!addr
 ; Source: https://www.smwcentral.net/?p=viewthread&t=93207
+;;;;;;;;;;;;;;;;;;;;
 
 main:
-	LDY #$00		; counter for how many tiles written
-	LDA $7F837B : TAX	; get current stripe index
-.loop
+	LDY #$00		;> Counter for how many tiles written
+	LDA $7F837B		;\ Get current stripe index
+	TAX			;/
+-
 	LDA $1923|!addr
 	BEQ .erase
 	CMP #$01 : BEQ .print140
@@ -26,135 +29,83 @@ main:
 	CMP #$10 : BEQ .print146
 	CMP #$11 : BEQ .print14E
 	BRA .exit
-.erase
-	LDA blank,y		; copy one byte
-	BRA .next
-.print140
-	LDA text140,y		; copy one byte
-	BRA .next
-.print141
-	LDA text141,y		; copy one byte
-	BRA .next
-.print142
-	LDA text142,y		; copy one byte
-	BRA .next
-.print143
-	LDA text143,y		; copy one byte
-	BRA .next
-.print144
-	LDA text144,y		; copy one byte
-	BRA .next
-.print145
-	LDA text145,y		; copy one byte
-	BRA .next
-.print149
-	LDA text149,y		; copy one byte
-	BRA .next
-.print14A
-	LDA text14A,y		; copy one byte
-	BRA .next
-.print14B
-	LDA text14B,y		; copy one byte
-	BRA .next
-.print14C
-	LDA text14C,y		; copy one byte
-	BRA .next
-.print14D
-	LDA text14D,y		; copy one byte
-	BRA .next
-.print14F
-	LDA text14F,y		; copy one byte
-	BRA .next
-.print150
-	LDA text150,y		; copy one byte
-	BRA .next
-.print151
-	LDA text151,y		; copy one byte
-	BRA .next
-.print0A4
-	LDA text0A4,y		; copy one byte
-	BRA .next
-.print146
-	LDA text146,y		; copy one byte
-	BRA .next
-.print14E
-	LDA text14E,y		; copy one byte
-	BRA .next
 
+.erase
+	LDA blank,y : BRA .next
+.print140
+	LDA text140,y : BRA .next
+.print141
+	LDA text141,y : BRA .next
+.print142
+	LDA text142,y : BRA .next
+.print143
+	LDA text143,y : BRA .next
+.print144
+	LDA text144,y : BRA .next
+.print145
+	LDA text145,y : BRA .next
+.print149
+	LDA text149,y : BRA .next
+.print14A
+	LDA text14A,y : BRA .next
+.print14B
+	LDA text14B,y : BRA .next
+.print14C
+	LDA text14C,y : BRA .next
+.print14D
+	LDA text14D,y : BRA .next
+.print14F
+	LDA text14F,y : BRA .next
+.print150
+	LDA text150,y : BRA .next
+.print151
+	LDA text151,y : BRA .next
+.print0A4
+	LDA text0A4,y : BRA .next
+.print146
+	LDA text146,y : BRA .next
+.print14E
+	LDA text14E,y : BRA .next
 
 .next
 	STA $7F837D,x
-	INX			; increment indices
-	INY
-	CPY #$74		; if not at the end of the table, repeat
-	BMI ._loop
-.endloop
-	LDA #$FF		; write $FF as the ending byte
+	INX			;\ Increment indices
+	INY			;/
+	CPY #$74		;\
+	BPL +			;| If not at the end of the table,
+	JMP -			;/ then repeat
++
+	LDA #$FF		;> Otherwise, write $FF as the ending byte
 	STA $7F837D,x
-	TXA : STA $7F837B	; store stripe end index
+	TXA			;\ Store stripe end index
+	STA $7F837B		;/
 .exit
 	RTL
-._loop
-	JMP .loop
+
+;;;;;;;;;;;;;;;;;;;;
+; Defines for printing the Layer 3 text.
+; Tile numbers are based on GFX2A.
+;;;;;;;;;;;;;;;;;;;;
 
 !props = $39	; YXPCCCTT (0011 1001) (white letters on black BG)
 
-!A_ = $00,!props
-!B_ = $01,!props
-!C_ = $02,!props
-!D_ = $03,!props
-!E_ = $04,!props
-!F_ = $05,!props
-!G_ = $06,!props
-!H_ = $07,!props
-!I_ = $08,!props
-!J_ = $09,!props
-!K_ = $0A,!props
-!L_ = $0B,!props
-!M_ = $0C,!props
-!N_ = $0D,!props
-!O_ = $0E,!props
-!P_ = $0F,!props
-!Q_ = $10,!props
-!R_ = $11,!props
-!S_ = $12,!props
-!T_ = $13,!props
-!U_ = $14,!props
-!V_ = $15,!props
-!W_ = $16,!props
-!X_ = $17,!props
-!Y_ = $18,!props
-!Z_ = $19,!props
+!A_ = $00,!props : !B_ = $01,!props : !C_ = $02,!props : !D_ = $03,!props
+!E_ = $04,!props : !F_ = $05,!props : !G_ = $06,!props : !H_ = $07,!props
+!I_ = $08,!props : !J_ = $09,!props : !K_ = $0A,!props : !L_ = $0B,!props
+!M_ = $0C,!props : !N_ = $0D,!props : !O_ = $0E,!props : !P_ = $0F,!props
+!Q_ = $10,!props : !R_ = $11,!props : !S_ = $12,!props : !T_ = $13,!props
+!U_ = $14,!props : !V_ = $15,!props : !W_ = $16,!props : !X_ = $17,!props
+!Y_ = $18,!props : !Z_ = $19,!props
 
-!a_ = $40,!props
-!b_ = $41,!props
-!c_ = $42,!props
-!d_ = $43,!props
-!e_ = $44,!props
-!f_ = $45,!props
-!g_ = $46,!props
-!h_ = $47,!props
-!i_ = $48,!props
-!j_ = $49,!props
-!k_ = $4A,!props
-!l_ = $4B,!props
-!m_ = $4C,!props
-!n_ = $4D,!props
-!o_ = $4E,!props
-!p_ = $4F,!props
-!q_ = $50,!props
-!r_ = $51,!props
-!s_ = $52,!props
-!t_ = $53,!props
-!u_ = $54,!props
-!v_ = $55,!props
-!w_ = $56,!props
-!x_ = $57,!props
-!y_ = $58,!props
-!z_ = $59,!props
+!a_ = $40,!props : !b_ = $41,!props : !c_ = $42,!props : !d_ = $43,!props
+!e_ = $44,!props : !f_ = $45,!props : !g_ = $46,!props : !h_ = $47,!props
+!i_ = $48,!props : !j_ = $49,!props : !k_ = $4A,!props : !l_ = $4B,!props
+!m_ = $4C,!props : !n_ = $4D,!props : !o_ = $4E,!props : !p_ = $4F,!props
+!q_ = $50,!props : !r_ = $51,!props : !s_ = $52,!props : !t_ = $53,!props
+!u_ = $54,!props : !v_ = $55,!props : !w_ = $56,!props : !x_ = $57,!props
+!y_ = $58,!props : !z_ = $59,!props
 
-!1_ = $64,!props
-!2_ = $65,!props
+!1_ = $64,!props : !2_ = $65,!props
 
 !EX = $1A,!props	;> Exclamation point
 !PD = $1B,!props	;> Period
@@ -162,6 +113,8 @@ main:
 !CM = $1D,!props	;> Comma
 !QS = $1E,!props	;> Question mark
 !__ = $1F,!props	;> Space
+!OP = $5B,!props	;> Open parenthesis
+!CP = $5C,!props	;> Close parenthesis
 !QT = $5D,!props	;> Quotation mark
 !BL = $5F,!props	;> Blank tile
 
@@ -270,7 +223,7 @@ text146:
 	
 text14E:
 	db $5A,$80,$00,$35
-	db !R_,!u_,!n_,!__,!DH,!i_,!n_,!DH,!__,!H_,!e_,!l_,!l_,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+	db !R_,!u_,!n_,!n_,!i_,!n_,!g_,!__,!OP,!i_,!n_,!CP,!__,!H_,!e_,!l_,!l_,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
 	db $5A,$A0,$00,$35
 	db !b_,!y_,!__,!d_,!a_,!v_,!i_,!d_,!v_,!a_,!m_,!a_,!2_,!1_,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
 

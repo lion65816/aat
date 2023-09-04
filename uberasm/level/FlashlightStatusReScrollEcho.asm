@@ -1,3 +1,17 @@
+load:
+	;LDA #$01
+	;STA $13E6|!addr
+	RTL
+
+	; PSI Ninja: Were these needed? The code never executes these.
+	LDA #$01
+	STA $140B|!addr
+	RTL
+
+	LDA #$06
+	STA $1DFA|!addr
+	RTL
+
 ;Flashlight effect by Incognito (optimized by Blind Devil, allow effect for other layers by MarioFanGamer)
 
 !Layer = 3	; Which layer to affect (note that layer 1 isn't particularly recommend)
@@ -41,10 +55,10 @@ init:
 	STA $212F
 
 main:
-LDA $71
-CMP #$09
-BNE +
-RTL
+	LDA $71
+	CMP #$09
+	BNE +
+	RTL
 +
 	REP #$20
 	LDA #$00F8
@@ -69,16 +83,3 @@ endif
 	STA !layer_y_curr
 	SEP #$20
 	RTL
-
-load:
-    lda #$01
-    sta $13E6|!addr
-    rtl
-
-    LDA #$01
-    STA $140B|!addr
-    RTL
-
-LDA #$06
-STA $1DFA|!addr
-RTL

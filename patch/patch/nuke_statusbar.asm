@@ -1,10 +1,9 @@
 lorom
 
 ; Note: if you use the powerdown patch, find the line below that mentions that
+; AAT edits: Enable all status bar counters (not just the coin counter).
 
-; 1 enables the coin counter (just internally, you can't actually see it)
-; you'll also get a reward (1UP) every 100 coins
-; (of course you can change the reward to whatever, if you want)
+; 1 enables all counters (timer, coins, and bonus stars)
 !enable_counters = 1
 
 if read1($00FFD5) == $23
@@ -84,6 +83,7 @@ NMI_hijack:
 .special
 	JMP $827A	
 
+; Recovered code (and comments) taken from the disassembly.
 if !enable_counters
 	counters:
 		LDA $1493|!base2	;\
@@ -126,27 +126,26 @@ if !enable_counters
 
 	.coins
 		LDA $13CC|!base2	; add up coins
-		BEQ +
+		BEQ .bonus_stars
 		DEC $13CC|!base2
 		INC $0DBF|!base2
 		LDA $0DBF|!base2
 		CMP #$64		; only give a reward with 100 coins
-		BCC +
+		BCC .bonus_stars
 		INC $18E4|!base2	; REWARD (1UP)
 		STZ $0DBF|!base2
-	+
 
-;CODE_008F5B:	LDX.W $0DB3|!base2               ; \ Get bonus stars 
-;CODE_008F5E:	LDA.W $0F48|!base2,X             ; /  
-;CODE_008F61:	CMP.B #$64                ; \ If bonus stars is less than 100, 
-;CODE_008F63:	BCC CODE_008F73           ; / branch to $8F73 
-;CODE_008F65:	LDA.B #$FF                ; \ Start bonus game when the level ends 
-;CODE_008F67:	STA.W $1425|!base2               ; /  
-;CODE_008F6A:	LDA.W $0F48|!base2,X             ; \  
-;CODE_008F6D:	SEC                       ;  |Subtract bonus stars by 100 
-;CODE_008F6E:	SBC.B #$64                ;  | 
-;CODE_008F70:	STA.W $0F48|!base2,X             ; /  
-;CODE_008F73:
+	.bonus_stars
+		LDX $0DB3|!base2	;> Get bonus stars (X = 0 for Demo, 1 for Iris).
+		LDA $0F48|!base2,x	;\
+		CMP #$64		;| If bonus stars are less than 100,
+		BCC .return		;/ then branch.
+		LDA #$FF		;\ Otherwise, start bonus game when the level ends.
+		STA $1425|!base2	;/
+		LDA $0F48|!base2,x	;\ Zero out bonus stars.
+		STZ $0F48|!base2,x	;/
+
+	.return
 		RTS
 endif
 

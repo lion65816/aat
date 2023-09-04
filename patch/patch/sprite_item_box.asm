@@ -13,7 +13,7 @@
 
 ; Box GFX properties.
 !box_tile = $22
-!box_prop = $36 ; YXPPCCCT
+!box_prop = $30 ; YXPPCCCT
 !box_xpos = $70
 !box_ypos = $07
 !box_size = $02 ; $00 = 8x8, $02 = 16x16

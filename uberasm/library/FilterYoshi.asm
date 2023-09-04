@@ -1,4 +1,4 @@
 load:
-    lda #$01 : sta $1B9B|!addr
-    rtl
-    
+	LDA #$01
+	STA $1B9B|!addr
+	RTL
