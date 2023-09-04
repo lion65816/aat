@@ -179,6 +179,7 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 1D0F:130 donutblk_solid.asm
 1F18:25 touchdown.asm
 1F1B:130 addtimetouch.asm
+1F26:25 keyholeblock.asm
 1F35:25 BarTest.asm
 1F36:25 lifeadd.asm
 1FFB:25 screentele_door_rand.asm
