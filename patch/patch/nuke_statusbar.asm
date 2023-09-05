@@ -7,7 +7,7 @@ lorom
 !enable_counters = 1
 
 if read1($00FFD5) == $23
-	sa1rom
+	;sa1rom
 	!sa1 = 1
 	!base2 = $6000
 else
@@ -88,40 +88,55 @@ if !enable_counters
 	counters:
 		LDA $1493|!base2	;\
 		ORA $9D			;| If level is ending or sprites are locked,
-		BNE .coins		;/ don't decrement timer, handle it at 00, etc basically, freeze timer if sprites locked
+		BNE .coins			;/ don't decrement timer, handle it at 00, etc basically, freeze timer if sprites locked
 		LDA $0D9B|!base2	;\
-		CMP #$C1		;|
-		BEQ .coins		;/ if at bowser, do not worry about time running out
+		CMP #$C1			;|
+		BEQ .coins			;/ if at bowser, do not worry about time running out
 		DEC $0F30|!base2	;\ Decrement timer, basically...decrementing the timer's timer, to be exact
-		BPL .coins		;/ if it's not to lower the timer, skip time running out and such
-		LDA #$28		;\
+		BPL .coins			;/ if it's not to lower the timer, skip time running out and such
+		LDA #$28			;\
 		STA $0F30|!base2	;/ reset the timer's timer
 		LDA $0F31|!base2	;\
 		ORA $0F32|!base2	;| If time is 0,
 		ORA $0F33|!base2	;| don't handle time running out, since it's already out
-		BEQ .coins		;/
-		LDX #$02		;\
-	-				;|
+		BEQ .coins			;/
+		LDX #$02			;\
+	-					;|
 		DEC $0F31|!base2,x	;|
-		BPL +			;| handle decrementing the timer
-		LDA #$09		;|
+		BPL +				;| handle decrementing the timer
+		LDA #$09			;|
 		STA $0F31|!base2,x	;|
-		DEX			;|
-		BPL -			;/
+		DEX				;|
+		BPL -				;/
 	+
+		LDA $13BF|!base2	;\
+		CMP #$3B			;|
+		BNE .reg			;|
+		LDA $0F31|!base2	;| If the level if 117,
+		AND $0F32|!base2	;| and time is 119,
+		CMP #$01			;| speed up the music
+		BNE +				;|
+		LDA $0F33|!base2	;|
+		CMP #$09			;|
+		BNE +				;|
+		LDA #$FF			;|
+		STA $1DF9|!base2	;/
+
+		
+	.reg
 		LDA $0F31|!base2	;\
-		BNE +			;|
+		BNE +				;|
 		LDA $0F32|!base2	;|
 		AND $0F33|!base2	;| If time is 99, 
-		CMP #$09		;| speed up the music 
-		BNE +			;|
-		LDA #$FF		;|
+		CMP #$09			;| speed up the music 
+		BNE +				;|
+		LDA #$FF			;|
 		STA $1DF9|!base2	;/
 	+
 		LDA $0F31|!base2	;\
 		ORA $0F32|!base2	;|
 		ORA $0F33|!base2	;| If time is 0,
-		BNE .coins		;| run the death routine
+		BNE .coins			;| run the death routine
 		JSL $00F606		;/
 
 	.coins
@@ -130,7 +145,7 @@ if !enable_counters
 		DEC $13CC|!base2
 		INC $0DBF|!base2
 		LDA $0DBF|!base2
-		CMP #$64		; only give a reward with 100 coins
+		CMP #$64			; only give a reward with 100 coins
 		BCC .bonus_stars
 		INC $18E4|!base2	; REWARD (1UP)
 		STZ $0DBF|!base2
@@ -138,9 +153,9 @@ if !enable_counters
 	.bonus_stars
 		LDX $0DB3|!base2	;> Get bonus stars (X = 0 for Demo, 1 for Iris).
 		LDA $0F48|!base2,x	;\
-		CMP #$64		;| If bonus stars are less than 100,
+		CMP #$64			;| If bonus stars are less than 100,
 		BCC .return		;/ then branch.
-		LDA #$FF		;\ Otherwise, start bonus game when the level ends.
+		LDA #$FF			;\ Otherwise, start bonus game when the level ends.
 		STA $1425|!base2	;/
 		LDA $0F48|!base2,x	;\ Zero out bonus stars.
 		STZ $0F48|!base2,x	;/
