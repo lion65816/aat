@@ -8,6 +8,7 @@ main:
 	STA $7FC0FC
 	JML .Return
 	
+	
 .Iris
 	LDA #$01  ;Bit value
 	STA $7FC0FC

@@ -20,6 +20,10 @@ init:
 
 main:
 	JSL retry_level_init_3_main
+	
+	LDA #$28		; Fix the timer starting
+	STA $0F30|!addr	; 2 seconds wrong
+
 
 	; Handle Iris palette with ExAnimation custom trigger.
 	LDA $0DB3|!addr
