@@ -1,15 +1,15 @@
-01	0	md
-01	1	md
-02	0	go
-02	1	go
+01	0	demo_death
+01	1	demo_death
+02	0	game_over
+02	1	game_over
 03	0	marisagoal
 03	1	marisagoal
 04	0	marisagoal
 04	1	marisagoal
 05	0	leek
 05	1	leek
-06	0	06 P-Switch.txt
-06	1	06 P-Switch.txt
+06	0	iris_death
+06	1	iris_death
 07	0	07 Keyhole.txt
 07	1	07 Keyhole.txt
 08	0	08 Iris Out.txt
@@ -276,8 +276,6 @@
 8C	1	Go Red Team! Go White Team! Rah 
 8D	0	Bonus Stage
 8D	1	Bonus Stage
-8E	0	fail
-8E	1	fail
 8F	0	Frost Man
 8F	1	Frost Man
 90	0	Mizuno

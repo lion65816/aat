@@ -207,13 +207,13 @@ draw_custom_bar:
 	STA $400000,x			;/
 
 	LDA TileProps,y			;> Load tile properties.
-PHY
-	PHX				;\ Need to be in 8-bit mode for the following subroutine.
+	PHY				;\
+	PHX				;| Need to be in 8-bit mode for the following subroutine.
 	SEP #$30			;| Note that the high byte of A will remain preserved,
 	JSR counters			;| while the high bytes of X and Y will be cleared.
 	REP #$30			;| This shouldn't matter for X and Y if they only contain 8-bit values.
-	PLX				;/ The subroutine returns the updated tile number in the low byte of A.
-PLY
+	PLX				;| The subroutine returns the updated tile number in the low byte of A.
+	PLY				;/
 	STA $400002,x
 
 	INX #4				;\
@@ -240,6 +240,11 @@ counters:
 	JSR lives
 	STX $00
 	JSR convert_digit
+	CMP #$20			;\ Remove leading zero.
+	BEQ ++				;/
+	JMP .return
+++
+	LDA #$0A
 	JMP .return
 +
 	CPY #$06			;> Lives counter (ones digit)
@@ -276,6 +281,11 @@ counters:
 	JSR coins
 	STX $00
 	JSR convert_digit
+	CMP #$20			;\ Remove leading zero.
+	BEQ ++				;/
+	JMP .return
+++
+	LDA #$0A
 	JMP .return
 +
 	CPY #$16			;> Coin counter (ones digit)
@@ -290,6 +300,11 @@ counters:
 	JSR bonus_stars
 	STX $00
 	JSR convert_digit
+	CMP #$20			;\ Remove leading zero.
+	BEQ ++				;/
+	JMP .return
+++
+	LDA #$0A
 	JMP .return
 +
 	CPY #$1E			;> Bonus stars counter (ones digit)
@@ -299,20 +314,6 @@ counters:
 	JSR convert_digit
 	JMP .return
 +
-;	CPY #$24			;> Death counter (100,000s digit)
-;	BNE +
-;	JSR deaths
-;	STX $00
-;	JSR convert_digit
-;	JMP .return
-;+
-;	CPY #$26			;> Death counter (10,000s digit)
-;	BNE +
-;	JSR deaths
-;	STA $00
-;	JSR convert_digit
-;	JMP .return
-;+
 	CPY #$28			;> Death counter (1,000s digit)
 	BNE +
 	JSR deaths
@@ -344,66 +345,81 @@ counters:
 +
 	CPY #$30			;> Dragon Coin #1
 	BNE +
+	JSR dragon_coin_check
+	BNE +++
 	LDA $1420|!addr			;> Load Dragon Coins collected for the current level.
 	CMP #$01
 	BCC ++
-	LDA #$29
++++
+	LDA #$46
 	JMP .return
 ++
-	LDA #$33
+	LDA #$47
 	JMP .return
 +
 	CPY #$32			;> Dragon Coin #2
 	BNE +
+	JSR dragon_coin_check
+	BNE +++
 	LDA $1420|!addr			;> Load Dragon Coins collected for the current level.
 	CMP #$02
 	BCC ++
-	LDA #$29
++++
+	LDA #$46
 	JMP .return
 ++
-	LDA #$33
+	LDA #$47
 	JMP .return
 +
 	CPY #$34			;> Dragon Coin #3
 	BNE +
+	JSR dragon_coin_check
+	BNE +++
 	LDA $1420|!addr			;> Load Dragon Coins collected for the current level.
 	CMP #$03
 	BCC ++
-	LDA #$29
++++
+	LDA #$46
 	JMP .return
 ++
-	LDA #$33
+	LDA #$47
 	JMP .return
 +
 	CPY #$36			;> Dragon Coin #4
 	BNE +
+	JSR dragon_coin_check
+	BNE +++
 	LDA $1420|!addr			;> Load Dragon Coins collected for the current level.
 	CMP #$04
 	BCC ++
-	LDA #$29
++++
+	LDA #$46
 	JMP .return
 ++
-	LDA #$33
+	LDA #$47
 	JMP .return
 +
 	CPY #$38			;> Dragon Coin #5
 	BNE +
+	JSR dragon_coin_check
+	BNE +++
 	LDA $1420|!addr			;> Load Dragon Coins collected for the current level.
 	CMP #$05
 	BCC ++
-	LDA #$29
++++
+	LDA #$46
 	JMP .return
 ++
-	LDA #$33
+	LDA #$47
 	JMP .return
 +
 .return
 	RTS
 
 digits:
-	db $0C,$0D,$1A,$1B		;> 0, 1, 2, 3
-	db $38,$39,$46,$47		;> 4, 5, 6, 7
-	db $68,$69			;> 8, 9
+	db $20,$21,$22,$23		;> 0, 1, 2, 3
+	db $30,$31,$32,$33		;> 4, 5, 6, 7
+	db $38,$39			;> 8, 9
 
 convert_digit:
 	LDY $00				;> Load the digit, stored to $00 by the counters subroutine.
@@ -412,7 +428,7 @@ convert_digit:
 	LDA digits,y			;> Otherwise, load the digit's tile number.
 	BRA .return
 .default
-	LDA #$0C			;> The default tile is 0.
+	LDA #$0A			;> The default tile is blank.
 .return
 	XBA				;\ Put the tile properties in the high byte,
 	LDA #$30			;| just in case it was overwritten (e.g., by
@@ -461,6 +477,20 @@ deaths:
 	REP #$20			;> For the following subroutine: A = 16-bit, XY = 8-bit
 	LDA !700000+$07ED,x		;\ Load the first two bytes of the Demo counter as input.
 	JSR HexToDecSuper		;/ Note: The high byte of the Demo counter is not used here.
+	RTS
+
+; Check if all Dragon Coins had been collected in a level. Returns A = 0 if true.
+; Needed for when the player exits and reenters a level with all Dragon Coins collected.
+; Adapted from PassableOnAllDragonCoins.asm block.
+dragon_coin_check:
+	LDA.W $13BF|!addr              
+	LSR #3                    
+	TAY                       
+	LDA.W $13BF|!addr              
+	AND.B #$07                
+	TAX                       
+	LDA.W $1F2F|!addr,Y             
+	AND.L $0DA8A6|!bank,X
 	RTS
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -521,33 +551,33 @@ HexToDecSuper:
 	RTS
 
 TileCoord:				; YYXX
-	dw $0000,$0414,$041C,$0424	; Lives counter
-	dw $0084,$008C,$0094,$009C	; Timer
-	dw $0884,$088C,$0894,$089C	; Coin counter
+	dw $0000,$0410,$0418,$0420	; Lives counter
+	dw $0088,$0090,$0098,$00A0	; Timer
+	dw $0888,$0890,$0898,$08A0	; Coin counter
 	dw $0834,$083C,$0844,$084C	; Bonus star counter
-	dw $04AC,$04B4,$04AC,$04B4	; Death counter
-	dw $04BC,$04C4,$04CC,$04D4	; Death counter (continued)
-	dw $0034,$003C,$0044,$004C	; Dragon coins
-	dw $0054,$005C			; Dragon coins (continued)
+	dw $00B4,$00BC,$00C4,$00CC	; Death counter ("demos")
+	dw $08B4,$08BC,$08C4,$08CC	; Death counter (digits)
+	dw $0030,$0038,$0040,$0048	; Dragon coins
+	dw $0050,$0058			; Dragon coins (continued)
 
-; Y index starts from 58 (decimal), then decrements by 2 each time [[[[[46 (decimal)]]]]]
+; Y index starts from 58 (decimal), then decrements by 2 each time
 TileProps:				; High byte = YXPPCCCT, low byte = tile number
-	dw $3044,$304B,$3033,$3033	; Lives counter			indices 00-06
-	dw $307E,$3023,$3033,$3033	; Timer				indices 08-0E
-	dw $3029,$304B,$3033,$3033	; Coin counter			indices 10-16
-	dw $30EF,$304B,$3033,$3033	; Bonus star counter		indices 18-1E
-	dw $300A,$304B,$3033,$3033	; Death counter			indices 20-26
-	dw $3033,$3033,$3033,$3033	; Death counter (continued)	indices 28-2E
-	dw $3033,$3033,$3033,$3033	; Dragon coins			indices 30-36
-	dw $3033,$3033			; Dragon coins (continued)	indices 38-3A
+	dw $3044,$3029,$300A,$300A	; Lives counter			indices 00-06
+	dw $307E,$3023,$300A,$300A	; Timer				indices 08-0E
+	dw $3046,$3029,$300A,$300A	; Coin counter			indices 10-16
+	dw $30EF,$3029,$300A,$300A	; Bonus star counter		indices 18-1E
+	dw $300C,$300D,$301A,$301B	; Death counter ("demos")	indices 20-26
+	dw $300A,$300A,$300A,$300A	; Death counter (digits)	indices 28-2E
+	dw $300A,$300A,$300A,$300A	; Dragon coins			indices 30-36
+	dw $300A,$300A			; Dragon coins (continued)	indices 38-3A
 
-; Y index starts from 28 (decimal), then decrements by 2 each time [[[[[22 (decimal)]]]]]
+; Y index starts from 28 (decimal), then decrements by 2 each time
 TileExtra:				; High byte = first tile, low byte = second tile
 	dw $0200,$0000			; Lives counter			indices 00-02
 	dw $0000,$0000			; Timer				indices 04-06
 	dw $0000,$0000			; Coin counter			indices 08-0A
 	dw $0000,$0000			; Bonus star counter		indices 0C-0E
-	dw $0000,$0000			; Death counter			indices 10-12
-	dw $0000,$0000			; Death counter (continued)	indices 14-16
+	dw $0000,$0000			; Death counter	("demos")	indices 10-12
+	dw $0000,$0000			; Death counter (digits)	indices 14-16
 	dw $0000,$0000			; Dragon coins			indices 18-1A
 	dw $0000			; Dragon coins (continued)	indices 1C-1D

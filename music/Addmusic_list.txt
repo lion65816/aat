@@ -1,10 +1,10 @@
 Globals:
-01  md.txt
-02  go.txt
+01  demo_death.txt
+02  game_over.txt
 03  marisagoal.txt
 04  marisagoal.txt
 05  leek.txt
-06  originals/06 P-Switch.txt
+06  iris_death.txt
 07  originals/07 Keyhole.txt
 08  originals/08 Iris Out.txt
 09  originals/09 Bonus End.txt
@@ -140,7 +140,6 @@ Locals:
 8B  16 Flyswatter ~ Level 2.txt
 8C  froge.txt
 8D  bonk2.txt
-8E  fail.txt
 8F  frost man.txt
 90  Mizuno.txt
 91  The Ground's Color is Yellow.txt

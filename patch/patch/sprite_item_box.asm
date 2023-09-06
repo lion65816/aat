@@ -12,7 +12,7 @@
 !freeram = 0
 
 ; Box GFX properties.
-!box_tile = $22
+!box_tile = $68
 !box_prop = $30 ; YXPPCCCT
 !box_xpos = $70
 !box_ypos = $07

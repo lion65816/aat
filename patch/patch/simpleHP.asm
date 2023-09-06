@@ -34,7 +34,7 @@ sa1rom
 !StunTime = $11
 
 !MarioMusic = $01		;\ Change these.
-!LuigiMusic = $8E		;/
+!LuigiMusic = $06		;/
 
 ;;;Hijacks
 ;Hurt

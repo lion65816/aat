@@ -16,7 +16,6 @@
 10 stationary_magikoopa.cfg
 11 PipeSpawner.cfg
 12 giant_piranha_red.json
-13 PlusMinusClock.json
 14 vwf/vwf.json
 15 vwf/vwf_data.json
 16 lakitu_smb3.cfg

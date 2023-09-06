@@ -56,9 +56,10 @@ endif
 if !exit_animation == 0
     lda !ram_hurry_up : beq .skip
 endif
+    ; Load Demo/Iris death music.
     lda $0DB3|!addr
     beq +
-    lda.b #$8E
+    lda.b #$06
     bra ++
 +   lda.b #$01
 ++  sta $1DFB|!addr
