@@ -5,6 +5,7 @@ lorom
 
 ; 1 enables all counters (timer, coins, and bonus stars)
 !enable_counters = 1
+!PSwitchSFX = $2D
 
 if read1($00FFD5) == $23
 	;sa1rom
@@ -15,44 +16,47 @@ else
 	!base2 = $0000
 endif
 
-org $0081F4			; JSR $008DAC
+org $0081F4				; JSR $008DAC
 	BRA + : NOP : +
 	
-org $008275			; this one nukes the IRQ
+org $008275				; this one nukes the IRQ
 	JMP NMI_hijack
 
-org $0082E8			; JSR $008DAC
+org $0082E8				; JSR $008DAC
 	BRA + : NOP : +
 	
-org $008C81			; literally nuke the status bar
-	pad $009045		; (but skip over hextodec)
+org $008C81				; literally nuke the status bar
+	pad $008DAC			; (but skip over hextodec)
 org $009051
 	pad $0090D1
 
-org $00985A			; JSR $008CFF
+org $00985A				; JSR $008CFF
 	BRA + : NOP : +
 	
-org $00A2D5			; JSR $008E1A
+org $00A2D5				; JSR $008E1A
 	if !enable_counters
 		JSR counters
 	else
 		BRA + : NOP : +
 	endif
 
-org $00A5A8			; JSR $008CFF
+org $00A5A8				; JSR $008CFF
 	BRA + : NOP : +
 	
-org $00A5D5			; JSR $008E1A
+org $00A5D5				; JSR $008E1A
 	if !enable_counters
 		JSR counters
 	else
 		BRA + : NOP : +
 	endif
+	
+org $00C54C				; This used to change the music back after the p switch finished.
+	NOP #3				; We don't want this to happen anymore.
 
-;org $00F5F8			; don't try dropping anything when getting hurt
-;	BRA + : NOP #2 : +	; REMOVE THIS IF YOU USE THE POWERDOWN PATCH
+;org $00F5F8				; don't try dropping anything when getting hurt
+;	BRA + : NOP #2 : +		; REMOVE THIS IF YOU USE THE POWERDOWN PATCH
 
-;org $01C540			; don't store items ever
+;org $01C540				; don't store items ever
 ;	BRA + : NOP #11 : +
 
 ; use the old status bar area as freespace
@@ -61,12 +65,12 @@ NMI_hijack:
 	LDA $0D9B|!base2
 	BNE .special
 	if !sa1
-		LDX #$81		; don't do IRQ (lated stored to $4200)
+		LDX #$81			; don't do IRQ (lated stored to $4200)
 	else
-		LDA #$81		; don't do IRQ
+		LDA #$81			; don't do IRQ
 		STA $4200
 	endif
-	LDA $22			; update mirrors
+	LDA $22				; update mirrors
 	STA $2111
 	LDA $23
 	STA $2111
@@ -154,13 +158,52 @@ if !enable_counters
 		LDX $0DB3|!base2	;> Get bonus stars (X = 0 for Demo, 1 for Iris).
 		LDA $0F48|!base2,x	;\
 		CMP #$64			;| If bonus stars are less than 100,
-		BCC .return		;/ then branch.
+		BCC MAIN_CODE		;/ then branch.
 		LDA #$FF			;\ Otherwise, start bonus game when the level ends.
 		STA $1425|!base2	;/
 		LDA $0F48|!base2,x	;\ Zero out bonus stars.
 		STZ $0F48|!base2,x	;/
 
-	.return
+	MAIN_CODE:				; START OF THE TICKING P-SWITCH CODE
+		STZ $2115			; (Restored code from hacked routine)
+		LDA #$42			; (Restored code from hacked routine)
+	
+		PHP				;
+		PHB				;
+		PHY				;  Push some stuff
+		PHX				;
+		PHA				;
+
+		LDA $14AD|!base2	;  Check the blue p switch timer
+		AND #$0F
+		CMP #$0F
+		BNE CHECKSILVER		; Every time the first 5 bits are 1, it plays the sound.
+		LDA #!PSwitchSFX	;
+		STA $1DF9|!base2		;
+
+	CHECKSILVER:
+		LDA $14AE|!base2		; Check the silver p switch timer
+		AND #$0F
+		CMP #$0F
+		BNE CHECKDIRECTIONAL	; Every time the first 5 bits are 1, it plays the sound.
+		LDA #!PSwitchSFX	;
+		STA $1DF9|!base2		;
+
+	CHECKDIRECTIONAL:
+		LDA $190C|!base2	; Check the directional coin timer
+		AND #$0F
+		CMP #$0F
+		BNE RETURN			; Every time the first 5 bits are 1, it plays the sound.
+		LDA #!PSwitchSFX	;
+		STA $1DF9|!base2	;
+
+	RETURN:
+		PLA				;  
+		PLX				;
+		PLY				;  Pull some stuff
+		PLB				;
+		PLP				;
+
 		RTS
 endif
 

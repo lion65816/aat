@@ -42,7 +42,6 @@ patches
 	patch\patch\simpleHP.asm
 	patch\patch\easy_mode7.asm
 	patch\patch\timeupfix.asm
-	patch\patch\ticking.asm
 	patch\patch\bg_candle_flames_fix.asm
 	patch\patch\SpriteScrollFix.asm
 	patch\patch\walljumpnoteblockglitchfix.asm
@@ -55,7 +54,10 @@ patches
 	patch\patch\ndp.asm
 	patch\patch\sprite_item_box.asm
 	patch\patch\nuke_statusbar.asm
+	patch\patch\1control.asm
+	patch\patch\lives.asm
 ]
+-- patch\patch\ticking.asm
 -- patch\patch\bwram_plus.asm
 -- patch\patch\midway\multi_midway_1.7.asm
 -- patch\patch\999.asm
