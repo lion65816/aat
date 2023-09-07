@@ -28,6 +28,7 @@ main:
 	CMP #$0F : BEQ .print0A4
 	CMP #$10 : BEQ .print146
 	CMP #$11 : BEQ .print14E
+	CMP #$12 : BEQ .print154
 	BRA .exit
 
 .erase
@@ -66,6 +67,8 @@ main:
 	LDA text146,y : BRA .next
 .print14E
 	LDA text14E,y : BRA .next
+.print154
+	LDA text154,y : BRA .next
 
 .next
 	STA $7F837D,x
@@ -227,7 +230,11 @@ text14E:
 	db $5A,$A0,$00,$35
 	db !b_,!y_,!__,!d_,!a_,!v_,!i_,!d_,!v_,!a_,!m_,!a_,!2_,!1_,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
 
-
+text154:
+	db $5A,$80,$00,$35
+	db !T_,!h_,!e_,!y_,!__,!w_,!a_,!r_,!n_,!e_,!d_,!__,!y_,!o_,!u_,!PD,!PD,!PD,!__,!__,!__,!__,!__,!__,!__,!__,!__
+	db $5A,$A0,$00,$35
+	db !b_,!y_,!__,!C_,!a_,!t_,!a_,!b_,!o_,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
 
 ;template:
 ;	db $5A,$80,$00,$35

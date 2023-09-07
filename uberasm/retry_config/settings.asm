@@ -234,14 +234,14 @@
 ; Note: when the prompt box is enabled, !tile_curs and !tile_blk actually use 2 adjacent 8x8 tiles.
 ; For example, !tile_curs = $24 means both $24 and $25 will be overwritten.
 ; Also, obviously these aren't used if you don't use the Retry prompt.
-    !tile_curs = $20
-    !tile_blk  = $56
-    !tile_r    = $30
-    !tile_e    = $31
-    !tile_t    = $0B
-    !tile_y    = $5B
-    !tile_x    = $4A
-    !tile_i    = $5A
+    !tile_curs = $4A    ;> Overwrites player 8x8 cape frames
+    !tile_blk  = $56    ;> Overwrites "YAY"
+    !tile_r    = $5A    ;\ Overwrites player 8x8 cape frames
+    !tile_e    = $5B    ;/
+    !tile_t    = $6A    ;\
+    !tile_y    = $6B    ;| Overwrites the second water
+    !tile_x    = $7A    ;| splash frame.
+    !tile_i    = $7B    ;/
 
 ;======================== Death Counter =================================;
 

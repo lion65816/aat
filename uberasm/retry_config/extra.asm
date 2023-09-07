@@ -240,11 +240,11 @@ counters:
 	JSR lives
 	STX $00
 	JSR convert_digit
-	CMP #$20			;\ Remove leading zero.
-	BEQ ++				;/
-	JMP .return
-++
-	LDA #$0A
+;	CMP #$20			;\ Remove leading zero.
+;	BEQ ++				;/
+;	JMP .return
+;++
+;	LDA #$0A
 	JMP .return
 +
 	CPY #$06			;> Lives counter (ones digit)
@@ -281,11 +281,11 @@ counters:
 	JSR coins
 	STX $00
 	JSR convert_digit
-	CMP #$20			;\ Remove leading zero.
-	BEQ ++				;/
-	JMP .return
-++
-	LDA #$0A
+;	CMP #$20			;\ Remove leading zero.
+;	BEQ ++				;/
+;	JMP .return
+;++
+;	LDA #$0A
 	JMP .return
 +
 	CPY #$16			;> Coin counter (ones digit)
@@ -300,11 +300,11 @@ counters:
 	JSR bonus_stars
 	STX $00
 	JSR convert_digit
-	CMP #$20			;\ Remove leading zero.
-	BEQ ++				;/
-	JMP .return
-++
-	LDA #$0A
+;	CMP #$20			;\ Remove leading zero.
+;	BEQ ++				;/
+;	JMP .return
+;++
+;	LDA #$0A
 	JMP .return
 +
 	CPY #$1E			;> Bonus stars counter (ones digit)
@@ -439,13 +439,28 @@ lives:
 	LDA $0DBE|!addr			;\ Load current player's lives.
 	INC A				;/ SMW indexes from zero, so need to add one here to account for that.
 	JSL $00974C			;> HexToDec function (returns ones digit in A and tens digit in X)
+	CPX #$00			;\ Print a blank tile instead of a leading zero.
+	BEQ +				;/
+	BRA .return
++
+	LDX #$0A
+.return
 	RTS
 
 timer:
 	LDA $0F31|!addr			;> Load hundreds digit of timer
+	BNE +				;> If it's not a zero, then branch.
+	LDA #$0A			;> Otherwise, print a blank tile instead of a leading zero.
++
 	STA $00
 	LDA $0F32|!addr			;> Load tens digit of timer
 	STA $01
+	BNE +				;> If it's not a zero, then branch.
+	LDA $00				;\ Otherwise, check if the hundreds digit was also
+	CMP #$0A			;/ a zero (in this case, a blank tile).
+	BNE +				;> If not, then branch.
+	STA $01				;> Otherwise, print a blank tile instead of a leading zero.
++
 	LDA $0F33|!addr			;> Load ones digit of timer
 	STA $02
 	RTS
@@ -453,6 +468,12 @@ timer:
 coins:
 	LDA $0DBF|!addr			;> Load current player's coins.
 	JSL $00974C			;> HexToDec function (returns ones digit in A and tens digit in X)
+	CPX #$00			;\ Print a blank tile instead of a leading zero.
+	BEQ +				;/
+	BRA .return
++
+	LDX #$0A
+.return
 	RTS
 
 bonus_stars:
@@ -464,6 +485,12 @@ bonus_stars:
 	LDA $0F49|!addr			;> Load Iris' bonus stars.
 +
 	JSL $00974C			;> HexToDec function (returns ones digit in A and tens digit in X)
+	CPX #$00			;\ Print a blank tile instead of a leading zero.
+	BEQ +				;/
+	BRA .return
++
+	LDX #$0A
+.return
 	RTS
 
 deaths:
@@ -475,8 +502,44 @@ deaths:
 	;LDA !700000+$07ED,x		;> Load Demo counter (low byte).
 	;JSL $00974C			;> HexToDec function (returns ones digit in A and tens digit in X)
 	REP #$20			;> For the following subroutine: A = 16-bit, XY = 8-bit
-	LDA !700000+$07ED,x		;\ Load the first two bytes of the Demo counter as input.
+	LDA !700000+$07ED,x		;> Load the first two bytes of the Demo counter as input.
+	CMP #$2710			;> Check for 9,999 deaths.
+	BCC +				;> If less than 9,999 deaths, then update the counter normally.
+	SEP #$20			;\
+	LDA #$09			;| Otherwise, cap the counter display at 9,999
+	TAY				;| in order to prevent rollover. Need to restore A
+	TAX				;| to 8-bit mode here since that would've otherwise
+	STA $0A				;| been done in the HexToDecSuper subroutine.
+	BRA .return			;/
++
 	JSR HexToDecSuper		;/ Note: The high byte of the Demo counter is not used here.
+
+	; Handle leading zeroes.
+	PHA				;> Preserve the 1s digit.
+	LDA $0A				;> Load 1000s digit of death counter.
+	BNE +				;> If it's not a zero, then branch.
+	LDA #$0A			;\ Otherwise, print a blank tile instead of a leading zero.
+	STA $0A				;/
++
+	CPX #$00			;\ If the 100s digit of death counter
+	BNE +				;/ is not a zero, then branch.
+	LDA $0A				;\ Otherwise, check if the 1000s digit was also
+	CMP #$0A			;/ a zero (in this case, a blank tile).
+	BNE +				;> If not, then branch.
+	TAX				;> Otherwise, print a blank tile instead of a leading zero.
++
+	CPY #$00			;\ If the 10s digit of death counter
+	BNE +				;/ is not a zero, then branch.
+	CPX #$0A			;> Otherwise, check if the 100s digit was also a zero (in this case, a blank tile).
+	BNE +				;> If not, then branch.
+	LDA $0A				;\ Otherwise, check if the 1000s digit was also
+	CMP #$0A			;/ a zero (in this case, a blank tile).
+	BNE +				;> If not, then branch.
+	TAY				;> Otherwise, print a blank tile instead of a leading zero.
++
+	PLA				;> Restore the 1s digit.
+
+.return
 	RTS
 
 ; Check if all Dragon Coins had been collected in a level. Returns A = 0 if true.

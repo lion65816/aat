@@ -7,6 +7,7 @@ verbose: on
 level:
 000	bonusmusicrng.asm
 002	cityofgulpgulp.asm
+;003	demo_counter_test.asm
 004	LevelIntro.asm
 005	LevelIntro.asm
 006	LevelIntro.asm

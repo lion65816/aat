@@ -345,7 +345,7 @@ org $03D32E|!bank
 ; Banzai Bill hex edits (needs SP2 = ExGFX181 and SP4 = ExGFX182).
 org $02D5C4|!bank			;\
     db $80,$82,$84,$86,$A0,$88,$CE,$EE	;| Tilemap
-    db $C0,$C2,$E0,$E2,$8E,$AE,$E4,$80	;/
+    db $C0,$C2,$E0,$E2,$8E,$AE,$E4,$EC	;/
 org $02D5D4|!bank			;\
     db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D	;| Tile properties
     db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3C	;/

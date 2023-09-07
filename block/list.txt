@@ -175,6 +175,12 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 1971:20 final_castle_door_14E.asm
 1980:20 final_castle_door_14E.asm
 1981:20 final_castle_door_14E.asm
+1962:20 final_castle_door_154.asm
+1963:20 final_castle_door_154.asm
+1972:20 final_castle_door_154.asm
+1973:20 final_castle_door_154.asm
+1982:20 final_castle_door_154.asm
+1983:20 final_castle_door_154.asm
 19FF:25 final_castle_door_erase.asm
 1B90:130 switch_act - OFF.asm
 1B91:130 switch_act.asm
