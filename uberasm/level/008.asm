@@ -8,6 +8,10 @@
 !timer = $58
 
 ;;Code
+load:
+    JSL MinStatus_load
+RTL
+
 init:
     LDA #$C3 : STA !timer   ;Initialize timer to one second of no jumping.
 RTL

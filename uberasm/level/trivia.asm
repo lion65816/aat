@@ -1,5 +1,5 @@
 load:
-	JSL NoStatus_load
+	JSL MinStatus_load
 	RTL
 
 init:

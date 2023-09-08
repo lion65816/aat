@@ -54,12 +54,12 @@ level:
 066	Gradient66.asm
 068	NoStatus_CustomBar.asm
 069	NoStatus_CustomBar.asm
-06A	NoStatus_CustomBar.asm
-06B	NoStatus_CustomBar.asm
-06C	NoStatus_CustomBar.asm
-06D	NoStatus_CustomBar.asm
-06E	NoStatus_CustomBar.asm
-06F	NoStatus_CustomBar.asm
+06A	trivia.asm
+06B	trivia.asm
+06C	trivia.asm
+06D	trivia.asm
+06E	trivia.asm
+06F	trivia.asm
 074	Autoscroll74.asm
 07A	BG_AutoScroll7A.asm
 07B	BG_AutoScroll7B.asm
@@ -170,7 +170,7 @@ level:
 15B	NoStatus_CustomBar.asm
 15D	Gradient15D.asm
 15E	FilterYoshi.asm
-15F	NoStatus_CustomBar.asm
+15F	trivia.asm
 160	FilterYoshi.asm
 161	FilterYoshi.asm
 162	FilterYoshi.asm

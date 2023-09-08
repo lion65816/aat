@@ -12,7 +12,7 @@
 !propsAbove =   $24     ; YXPPCCCT properties
 
 ; Tile and YXPPCCCT for the marker when Mario is below the screen.
-!tileBelow  =   $0D     ; Tile number
+!tileBelow  =   $0A     ; Tile number
 !propsBelow =   $24     ; YXPPCCCT properties
 
 ; How many pixels the tile should be offset from the very top/bottom of the screen.
