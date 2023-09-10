@@ -29,30 +29,36 @@ org $009113|!bank
 org $009178|!bank
 	db $F4,$B4,$34,$B4,$34,$00
 
-ORG $02FBBF|!bank			;Fix GFX for Boo rings and generators
-db $88,$88,$a8,$8e,$aa,$ae,$88	;Fix GFX for Boo rings and generators
-db $88				;Fix GFX for Boo rings and generators
-ORG $01FA37|!bank			;Fix GFX for Boo block
-db $88				;Fix GFX for Boo block
-ORG $01C34C|!bank			;Non flipping fire flower
-db $00				;Non flipping fire flower
-ORG $02FDB8|!bank			;Death bat ceiling fix
-db $ae,$ae,$c0,$e8		;Death bat ceiling fix
+; Fix GFX for Boo rings and generators
+org $02FBBF|!bank			
+	db $88,$88,$A8,$8E,$AA,$AE,$88,$88
+
+; Fix GFX for Boo block
+org $01FA37|!bank
+	db $88
+
+; Non flipping fire flower
+org $01C34C|!bank
+	db $00
+
+; Death bat ceiling fix
+org $02FDB8|!bank
+	db $ae,$ae,$c0,$e8
 
 ; Blank tile ($83) fixes. Map to AAT-specific blank tile $0A in GFX00.
-org $019BC1|!bank                     ;\ Piranha Plant tilemap
-    db $0A,$0A,$C4,$C4,$0A,$0A        ;/
-org $019C25|!bank                     ;\ Portable springboard tilemap
-    db $0A,$0A                        ;/
-org $01DEE3|!bank                     ;\
-    db $58,$59,$0A,$0A,$48,$49,$58    ;|
-    db $59,$0A,$0A,$48,$49,$34,$35    ;|
-    db $0A,$0A,$24,$25,$34,$35,$0A    ;| Bonus roulette tilemap
-    db $0A,$24,$25,$36,$37,$0A,$0A    ;|
-    db $26,$27,$36,$37,$0A,$0A,$26    ;|
-    db $27                            ;/
-org $02AD4D|!bank                     ;\ Floating point notations
-    db $0A,$0A,$0A,$0A                ;/
+org $019BC1|!bank					;\ Piranha Plant tilemap
+    db $0A,$0A,$C4,$C4,$0A,$0A		;/
+org $019C25|!bank					;\ Portable springboard tilemap
+    db $0A,$0A						;/
+org $01DEE3|!bank					;\
+    db $58,$59,$0A,$0A,$48,$49,$58	;|
+    db $59,$0A,$0A,$48,$49,$34,$35	;|
+    db $0A,$0A,$24,$25,$34,$35,$0A	;| Bonus roulette tilemap
+    db $0A,$24,$25,$36,$37,$0A,$0A	;|
+    db $26,$27,$36,$37,$0A,$0A,$26	;|
+    db $27							;/
+org $02AD4D|!bank					;\ Floating point notations
+    db $0A,$0A,$0A,$0A				;/
 
 ;ORG $9D30			;title screen "Erase Game" palette darken fix
 ;db $EA,$EA,$EA,$EA,$EA		;title screen "Erase Game" palette darken fix
@@ -111,12 +117,13 @@ org $02A2E7|!bank			;change hammer extended GFX from B to A
 db $45,$45,$05,$05		; changed palette from B to A
 db $85,$85,$C5,$C5		; (YXPPCCCT: $x7 -> $x5)
 
+; File select
 org $05B7F1|!bank ; demo a
-db $7C,$30,$73,$31,$76,$31,$83,$30,$FC,$38,$71,$31,$FC,$38
+	db $7C,$30,$73,$31,$76,$31,$83,$30,$FC,$38,$71,$31,$FC,$38
 org $05B815|!bank ; demo b
-db $7C,$30,$73,$31,$76,$31,$83,$30,$FC,$38,$2C,$31,$FC,$38
+	db $7C,$30,$73,$31,$76,$31,$83,$30,$FC,$38,$2C,$31,$FC,$38
 org $05B839|!bank ; demo c
-db $7C,$30,$73,$31,$76,$31,$83,$30,$FC,$38,$2D,$31,$FC,$38
+	db $7C,$30,$73,$31,$76,$31,$83,$30,$FC,$38,$2D,$31,$FC,$38
 
 ; status bar rejiggering
 org $008C89|!bank
@@ -194,33 +201,33 @@ db $04				; re-play switch palaces
 ; Change life swap menu text (2 Player Mode).
 ; First byte is the tile, second byte is the tile property (YXPC CCTT = $3C = 0011 1100 -> CCC = 111).
 org $04F4B6|!bank	; Mario text
-    db $0D,$3C		; D
-    db $0E,$3C		; E
-    db $16,$3C		; M
-    db $18,$3C		; O
-    db $29,$3C		; (blank)
+	db $0D,$3C		; D
+	db $0E,$3C		; E
+	db $16,$3C		; M
+	db $18,$3C		; O
+	db $29,$3C		; (blank)
 org $04F4C4|!bank	; Luigi text
-    db $12,$3C		; I
-    db $1B,$3C		; R
-    db $12,$3C		; I
-    db $1C,$3C		; S
-    db $29,$3C		; (blank)
+	db $12,$3C		; I
+	db $1B,$3C		; R
+	db $12,$3C		; I
+	db $1C,$3C		; S
+	db $29,$3C		; (blank)
 org $04F4D3|!bank	;\
-    db $3C		;|
+	db $3C			;|
 org $04F4D5|!bank	;| Change tile properties of Demo's lives.
-    db $3C		;|
+	db $3C			;|
 org $04F4D7|!bank	;|
-    db $3C		;/
+	db $3C			;/
 org $04F4DD|!bank	;\
-    db $3C		;|
+	db $3C			;|
 org $04F4DF|!bank	;| Change tile properties of Iris' lives.
-    db $3C		;|
+	db $3C			;|
 org $04F4E1|!bank	;|
-    db $3C		;/
+	db $3C			;/
 
 ; Fix Diggin' Flower arm palette.
 org $02CB96|!bank
-    db $4B,$0B		; Use palette D (originally: db $47,$07)
+	db $4B,$0B		; Use palette D (originally: db $47,$07)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -231,57 +238,57 @@ org $02CB96|!bank
 
 ; Fix Lemmy's head dislocation for Taunt B (side face).
 org $03CEFE|!bank
-    db $FD		; X position (originally: db $F8)
+	db $FD			; X position (originally: db $F8)
 org $03CF00|!bank
-    db $05		; X position (originally: db $00)
+	db $05			; X position (originally: db $00)
 
 ; Fix Lemmy's head dislocation for Taunt B (forward face).
 org $03CF04|!bank
-    db $FE		; X position (originally: db $FB)
+	db $FE			; X position (originally: db $FB)
 org $03CF06|!bank
-    db $FE		; X position (originally: db $FB)
+	db $FE			; X position (originally: db $FB)
 org $03CF07|!bank
-    db $06		; X position (originally: db $03)
+	db $06			; X position (originally: db $03)
 
 ; Fix Lemmy's head dislocation for Taunt A (side face #1).
 org $03CF16|!bank
-    db $FD		; X position (originally: db $F8)
+	db $FD			; X position (originally: db $F8)
 org $03CF18|!bank
-    db $05		; X position (originally: db $00)
+	db $05			; X position (originally: db $00)
 
 ; Fix Lemmy's head dislocation for Taunt A (side face #2).
 org $03CF1C|!bank
-    db $FD		; X position (originally: db $F8)
+	db $FD			; X position (originally: db $F8)
 org $03CF1E|!bank
-    db $0D		; X position (originally: db $08)
+	db $0D			; X position (originally: db $08)
 
 ; Use a unique second tile for Lemmy's hair (tile numbers).
 org $03D12E|!bank	; Taunt B (forward face)
-    db $52,$43		; (originally: db $12,$12)
+	db $52,$43		; (originally: db $12,$12)
 org $03D135|!bank	; Taunt F (forward face)
-    db $52,$43		; (originally: db $12,$12)
+	db $52,$43		; (originally: db $12,$12)
 org $03D15A|!bank	; Taunt E (big left eye/looking left/tongue face)
-    db $78,$79		; (originally: db $12,$12)
+	db $78,$79		; (originally: db $12,$12)
 org $03D15F|!bank	; Taunt E (big right eye/looking right)
-    db $79,$78		; (originally: db $12,$12)
+	db $79,$78		; (originally: db $12,$12)
 org $03D171|!bank	; Taunt D (big right eye/looking right)
-    db $79,$78		; (originally: db $12,$12)
+	db $79,$78		; (originally: db $12,$12)
 org $03D177|!bank	; Taunt D (big left eye/looking left)
-    db $78,$79		; (originally: db $12,$12)
+	db $78,$79		; (originally: db $12,$12)
 
 ; Use a unique second tile for Lemmy's hair (tile properties).
 org $03D243|!bank	; Taunt B (forward face)
-    db $05		; (originally: db $45)
+	db $05			; (originally: db $45)
 org $03D24A|!bank	; Taunt F (forward face)
-    db $05		; (originally: db $45)
+	db $05			; (originally: db $45)
 org $03D26F|!bank	; Taunt E (big left eye/looking left/tongue face)
-    db $05		; (originally: db $45)
+	db $05			; (originally: db $45)
 org $03D273|!bank	; Taunt E (big right eye/looking right)
-    db $45		; (originally: db $05)
+	db $45			; (originally: db $05)
 org $03D285|!bank	; Taunt D (big right eye/looking right)
-    db $45		; (originally: db $05)
+	db $45			; (originally: db $05)
 org $03D28C|!bank	; Taunt D (big left eye/looking left)
-    db $05		; (originally: db $45)
+	db $05			; (originally: db $45)
 
 ;;;;;;;;;;;;;;;;;;;;
 ; Wendy hex edits (needs SP3 = ExGFX18D).
@@ -290,75 +297,80 @@ org $03D28C|!bank	; Taunt D (big left eye/looking left)
 
 ; Fix Wendy's head dislocation for Taunt B (forward face).
 org $03CF8E|!bank
-    db $FE		; X position (originally: db $FB)
+	db $FE			; X position (originally: db $FB)
 org $03CF90|!bank
-    db $FE		; X position (originally: db $FB)
+	db $FE			; X position (originally: db $FB)
 org $03CF91|!bank
-    db $06		; X position (originally: db $03)
+	db $06			; X position (originally: db $03)
 
 ; Wendy's bow fix for Taunt C.
 org $03CFAF|!bank
-    db $08
+	db $08
 org $03CFB5|!bank
-    db $08
+	db $08
 org $03D1D7|!bank
-    db $1F,$1E
+	db $1F,$1E
 org $03D1DD|!bank
-    db $1E,$1F
+	db $1E,$1F
 
 ; Use a unique second tile for Wendy's bow (tile numbers).
 org $03D1B9|!bank	; Taunt B (forward face)
-    db $43		; (originally: db $52)
+	db $43			; (originally: db $52)
 org $03D1C0|!bank	; Taunt F (forward face)
-    db $43		; (originally: db $52)
+	db $43			; (originally: db $52)
 org $03D1E5|!bank	; Taunt E (tongue face)
-    db $43		; (originally: db $52)
+	db $43			; (originally: db $52)
 org $03D1EA|!bank	; Taunt E (forward face)
-    db $43		; (originally: db $52)
+	db $43			; (originally: db $52)
 org $03D1FB|!bank	; Taunt D (big right eye/looking right)
-    db $79,$78		; (originally: db $52,$52)
+	db $79,$78		; (originally: db $52,$52)
 org $03D201|!bank	; Taunt D (big left eye/looking left)
-    db $78,$79		; (originally: db $52,$52)
+	db $78,$79		; (originally: db $52,$52)
 
 ; Use a unique second tile for Wendy's bow (tile properties).
 org $03D2CD|!bank	; Taunt B (forward face)
-    db $09		; (originally: db $49)
+	db $09			; (originally: db $49)
 org $03D2D4|!bank	; Taunt F (forward face)
-    db $09		; (originally: db $49)
+	db $09			; (originally: db $49)
 org $03D2F9|!bank	; Taunt E (tongue face)
-    db $09		; (originally: db $49)
+	db $09			; (originally: db $49)
 org $03D2FE|!bank	; Taunt E (forward face)
-    db $09		; (originally: db $49)
+	db $09			; (originally: db $49)
 org $03D30F|!bank	; Taunt D (big right eye/looking right)
-    db $49		; (originally: db $09)
+	db $49			; (originally: db $09)
 org $03D316|!bank	; Taunt D (big left eye/looking left)
-    db $09		; (originally: db $49)
+	db $09			; (originally: db $49)
 
 ; Use a unique second tile for the Wendy Decoy's bow.
 org $03D21A|!bank
-    db $69		; Tile number (originally: db $68)
+	db $69			; Tile number (originally: db $68)
 org $03D32E|!bank
-    db $05		; Tile property (originally: db $45)
+	db $05			; Tile property (originally: db $45)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Banzai Bill hex edits (needs SP2 = ExGFX181 and SP4 = ExGFX182).
-org $02D5C4|!bank			;\
-    db $80,$82,$84,$86,$A0,$88,$CE,$EE	;| Tilemap
-    db $C0,$C2,$E0,$E2,$8E,$AE,$E4,$EC	;/
-org $02D5D4|!bank			;\
-    db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D	;| Tile properties
-    db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3C	;/
+org $02D5C4|!bank						;\
+	db $80,$82,$84,$86,$A0,$88,$CE,$EE	;| Tilemap
+	db $C0,$C2,$E0,$E2,$8E,$AE,$E4,$EC	;/
+org $02D5D4|!bank						;\
+	db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D	;| Tile properties
+	db $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3C	;/
 
 ; Remap floating point notation tiles (score/1-Up) to free up space in GFX00.
-org $02AD51|!bank			;\ 1st half
-    db $0A,$0A,$0A,$0A,$0A,$0A,$0A,$0A	;| originally: $44,$54,$46,$47,$44,$54,$46,$47
-    db $56,$56,$56,$56			;/             $56,$29,$39,$38
-org $02AD63|!bank			;\ 2nd half
-    db $0A,$0A,$0A,$0A,$0A,$0A,$0A,$0A	;| originally: $44,$54,$46,$47,$45,$45,$45,$45
-    db $0A,$0A,$0A,$0A,$57,$57,$57,$57	;|             $55,$55,$55,$55,$57,$57,$57,$57
-    db $4E,$0A,$4F,$0A			;/             $4E,$44,$4F,$54
+org $02AD51|!bank						;\ 1st half
+	db $0A,$0A,$0A,$0A,$0A,$0A,$0A,$0A	;| originally: $44,$54,$46,$47,$44,$54,$46,$47
+	db $56,$56,$56,$56					;/             $56,$29,$39,$38
+org $02AD63|!bank						;\ 2nd half
+	db $0A,$0A,$0A,$0A,$0A,$0A,$0A,$0A	;| originally: $44,$54,$46,$47,$45,$45,$45,$45
+	db $0A,$0A,$0A,$0A,$57,$57,$57,$57	;|             $55,$55,$55,$55,$57,$57,$57,$57
+	db $4E,$0A,$4F,$0A					;/             $4E,$44,$4F,$54
 
 ; Remap some of the water splash tiles (goodbye tile $68).
 org $028D42|!bank
-    db $64,$64				;> originally: $68,$68
+	db $64,$64				;> originally: $68,$68
+
+; Demo/Iris on Yoshi victory pose fix.
+; Source: https://smwc.me/1226116
+org $00DCEC+$14
+	db $00					;> originally: $0E
