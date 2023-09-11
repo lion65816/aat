@@ -222,6 +222,13 @@ draw_custom_bar:
 	LDA TileCoord,y		;\ Load tile X and Y coordinates
 	CLC					;| Add offset for the entire status bar.
 	ADC #!Offset		;|
+	;PHY
+	;PHX
+	;SEP #$30
+	;JSR offsets
+	;REP #$30
+	;PLX
+	;PLY
 	STA $400000,x		;/
 
 	LDA TileProps,y		;> Load tile properties.
@@ -259,6 +266,49 @@ draw_custom_bar:
 	BPL -				;/
 
 	PLB
+	RTS
+
+offsets:
+	PHA
+	LDA $13E6|!addr
+	CMP #$02
+	BNE +
+	PLA
+	CPY #$08
+	BEQ ++
+	CPY #$0A
+	BEQ ++
+	CPY #$0C
+	BEQ ++
+	CPY #$0E
+	BEQ ++
+	CPY #$10
+	BEQ ++
+	CPY #$12
+	BEQ ++
+	CPY #$14
+	BEQ +++
+	CPY #$16
+	BEQ +++
+	CPY #$18
+	BEQ +++
+	CPY #$1A
+	BNE .return
++++
+	XBA
+	SEC
+	SBC #$04
+	XBA
+	BRA .return
+++
+	XBA
+	CLC
+	ADC #$04
+	XBA
+	BRA .return
++
+	PLA
+.return
 	RTS
 
 counters:
@@ -403,6 +453,30 @@ counters:
 	JSR coins
 	STA $00
 	JSR convert_digit
+	JMP .return
++
+	CPY #$2C			;\
+	BEQ ++				;|
+	CPY #$2E			;| Death counter ("demos")
+	BEQ ++				;|
+	CPY #$30			;|
+	BEQ ++				;|
+	CPY #$32			;/
+	BNE +
+++
+	PHA
+	LDA $0DB3|!addr
+	BEQ ++
+	PLA
+	XBA
+	LDA #$3A			;> If Iris, use palette row D.
+	XBA
+	JMP .return
+++
+	PLA
+	XBA
+	LDA #$36			;> If Demo, use palette row B.
+	XBA
 	JMP .return
 +
 	CPY #$34			;> Death counter (1,000s digit)
@@ -650,7 +724,7 @@ TileProps:						; High byte = YXPPCCCT, low byte = tile number
 	dw $30EF,$3029,$300A,$300A	; Bonus star counter		indices 14-1A
 	dw $307E,$3023,$300A,$300A	; Timer						indices 1C-22
 	dw $3046,$3029,$300A,$300A	; Coin counter				indices 24-2A
-	dw $300C,$300D,$301A,$301B	; Death counter ("demos")	indices 2C-32
+	dw $360C,$360D,$361A,$361B	; Death counter ("demos")	indices 2C-32
 	dw $300A,$300A,$300A,$300A	; Death counter (digits)	indices 34-3A
 
 ; Y index starts from 28 (decimal), then decrements by 2 each time

@@ -13,7 +13,7 @@
 
 ; Box GFX properties.
 !box_tile = $68
-!box_prop = $30 ; YXPPCCCT
+!box_prop = $36 ; YXPPCCCT (palette row B)
 !box_xpos = $70
 !box_ypos = $07
 !box_size = $02 ; $00 = 8x8, $02 = 16x16
@@ -98,6 +98,12 @@ draw_item_box:
     lda.w box_ypos,x : sta $0201|!addr,y
     lda.b #!box_tile : sta $0202|!addr,y
     lda.w box_prop,x : ora.b #!box_prop : sta $0203|!addr,y
+
+    ; AAT edits: Use palette row D if Iris is in play.
+    lda.w $0DB3|!addr : beq +
+    lda $0203|!addr,y : clc : adc #$04 : sta $0203|!addr,y
++
+
     phy
     rep #$20
     tya : lsr #2 : tay

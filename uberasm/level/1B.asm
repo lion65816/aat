@@ -1,13 +1,3 @@
-init:
-	LDA $141D|!addr
-	ORA $13CF|!addr
-	BEQ +		; intro
-	STZ $1692|!addr
-+
-    LDA #$01
-    STA $140B
-	RTL
-
 main:
     LDX #!sprite_slots-1
 -

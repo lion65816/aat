@@ -1,13 +1,5 @@
 load:
-	;LDA #$01
-	;STA $13E6|!addr
-	RTL
-
-	; PSI Ninja: Were these needed? The code never executes these.
-	LDA #$01
-	STA $140B|!addr
-	RTL
-
+	; Enable echo for SFX.
 	LDA #$06
 	STA $1DFA|!addr
 	RTL
