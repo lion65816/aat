@@ -4,6 +4,10 @@
 !Counter = $58    ;needs to be DB or Long (2 or 6 digits, not 4)
 table table.txt
 
+load:
+   JSL NoStatus_load
+   RTL
+
 init:
    LDA #$00             ; \ Reset Counter
    STA !Counter         ; / if you want
@@ -141,10 +145,3 @@ TableLevels:
    %secen($0046, 0)
    %secen($0047, 0)
 .end
-
-
-load:
-    lda #$01
-    sta $13E6|!addr
-    rtl
-

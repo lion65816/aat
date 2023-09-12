@@ -4,10 +4,8 @@ load:
 
 init:
 	JSL FilterFireCape_init
-	JSL gradient_green_garden_init
-	RTL
+	JSL freescrollbabey_init
 
-main:
 	; Disable L and R buttons.
 	LDA #%00000000 : STA $00
 	LDA #%00110000 : STA $01

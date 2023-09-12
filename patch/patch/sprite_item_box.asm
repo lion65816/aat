@@ -1,6 +1,6 @@
 ; 0 = only draw the box if there's an item.
 ; 1 = always draw the box.
-!always_draw = 0
+!always_draw = 1
 
 ; You should disable this if the method you used to remove the status bar didn't also disable the item drawing routine.
 ; For example, with the "Remove Status Bar" patch you need this at 1, but for something that disables it per-level you probably want this at 0.
@@ -56,7 +56,11 @@ if not(!always_draw)
     ; If there's no item, return.
     lda $0DC2|!addr : beq .return
 endif
-    
+
+    ; AAT edit: If the status bar is disabled, then only draw the item box if there's a reserve.
+    lda $13E6|!addr : cmp #$01 : bne +
+    lda $0DC2|!addr : beq .return
++
     ; Draw it!
     phb : phk : plb
     jsr draw_item_box

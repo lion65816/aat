@@ -24,16 +24,7 @@ init:
 	LDA #$18
 	TSB $0D9F|!addr
 
-	; Filter flower and cape powerups.
-	LDA $19
-	BEQ +
-	LDA #$01
-	STA $19
-+	LDA $0DC2|!addr
-	BEQ +
-	LDA #$01
-	STA $0DC2|!addr
-+	RTL
+	RTL
 
 .Table1
 db $12,$29,$9D

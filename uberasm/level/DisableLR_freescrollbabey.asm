@@ -1,10 +1,5 @@
-load:
-	JSL FilterYoshi_load
-	RTL
-
 init:
-	JSL FilterFireCape_init
-	JSL gradient_green_garden_init
+	JSL freescrollbabey_init
 	RTL
 
 main:

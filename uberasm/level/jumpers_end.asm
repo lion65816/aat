@@ -4,7 +4,7 @@ load:
 
 init:
 	JSL freescrollbabey_init
-	JSL jumpers_gradient_init
+	JSL gradient_jumpers_init
 	RTL
 
 main:

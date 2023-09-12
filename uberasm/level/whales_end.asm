@@ -1,5 +1,5 @@
 init:
-	JSL whales_gradient_init
+	JSL gradient_whales_init
 	RTL
 
 main:

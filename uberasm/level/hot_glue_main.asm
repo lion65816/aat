@@ -4,5 +4,5 @@ load:
 
 init:
 	JSL freescrollbabey_init
-	JSL hot_glue_gradient_init
+	JSL gradient_hot_glue_init
 	RTL

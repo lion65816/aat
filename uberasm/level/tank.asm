@@ -1,17 +1,24 @@
 !ParallaxLayer = 2		; Which layer is affected by the HDMA
-
 !DisableHdmaAtGoal = 1	; HDMA and IRQ don't mix very well
 
+load:
+	JSL FilterYoshi_load
+	RTL
+
 init:
-    LDA #$01
-    STA $140B|!addr
+	JSL FilterFireCape_init
+	JSL freescrollbabey_init
 
 	LDA.b #$0D+((!ParallaxLayer-1)<<1)
 	JSL ParallaxToolkit_init
-	JSL lvlfilter_init
+	RTL
 
 main:
-		JSL lvlfilter_main
+	; Disable L and R buttons.
+	LDA #%00000000 : STA $00
+	LDA #%00110000 : STA $01
+	JSL DisableButton_main
+
 	if !DisableHdmaAtGoal
 		LDA $1493|!addr
 		BEQ +
@@ -44,10 +51,6 @@ endif
 	LDX.b #ScrollVal>>16
 	JSL ParallaxToolkit_main
 RTL
-
-load:
-    lda #$01 : sta $1B9B|!addr
-    rtl
 
 ; The values are specified in the readme.
 ScrollVal:
