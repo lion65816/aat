@@ -507,6 +507,16 @@ ADC HeadYOffset,x		; set the Y offset for the head tile
 STA $0301|!Base2,y		;
 
 LDA HeadTilemap,x		; set the tile for the head
+CMP #$C2				;\
+BNE +					;|
+LDA $010B|!Base2		;|
+CMP #$87				;| AAT edit:
+BNE ++					;| If Level 87, then use tile EC instead of C2
+LDA #$EC				;| for one of the Venus head frames.
+BRA +					;|
+++						;|
+LDA #$C2				;|
++						;/
 STA $0302|!Base2,y
 
 LDX $15E9|!Base2		;

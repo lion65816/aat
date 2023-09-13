@@ -133,7 +133,7 @@
     "Levels/level 083.mwl": "cfdc27cdb529a4fa6cb13dc0e2648893",
     "Levels/level 084.mwl": "158b8a3e2dc30e15e09af8b0801e7250",
     "Levels/level 085.mwl": "53bd308044531aac0cbecaf745a2eac5",
-    "Levels/level 087.mwl": "5fedc6a8e7691e8bd7f89e3ebe53c4bb",
+    "Levels/level 087.mwl": "e400aa380a23ac5dc63600e1b8efd2e4",
     "Levels/level 08A.mwl": "37021cfa76f753feeb86bb41e74ccf5d",
     "Levels/level 08B.mwl": "9b9f8f90f53e645bb93e2e0c12c15293",
     "Levels/level 08C.mwl": "145a2d1d56a74f9784d66862de06af37",
@@ -142,7 +142,7 @@
     "Levels/level 08F.mwl": "21d7de87b70b475cc515315d7ea518d7",
     "Levels/level 090.mwl": "599aa344783aac8f66970c76e7e9a86c",
     "Levels/level 091.mwl": "8504327fd7c150c2f09470d67963080f",
-    "Levels/level 092.mwl": "41c0371cea84c2ccc318eba5e9f7c13b",
+    "Levels/level 092.mwl": "9b66e36058f752654d89c6fcc0b72248",
     "Levels/level 093.mwl": "91251f75f120faabd141bdf32033f581",
     "Levels/level 095.mwl": "20a5f8dae87c9bef58135fd4ada7dade",
     "Levels/level 096.mwl": "4b29125ab0f614d78c105eb8fbec244b",
@@ -154,7 +154,7 @@
     "Levels/level 0A4.mwl": "fd86abc792eacc3af082e2fb978a3ba3",
     "Levels/level 0AA.mwl": "3313bdda4d368518e76232618362e2d9",
     "Levels/level 0AB.mwl": "b4f05e41e04054cf9dcca46306230453",
-    "Levels/level 0AF.mwl": "4203e0158c733e438556a08557d89d7b",
+    "Levels/level 0AF.mwl": "20532d6e68495d219be25692d8976740",
     "Levels/level 0B0.mwl": "d450f1aeec2b0d53d1182d2cd95a8ced",
     "Levels/level 0B1.mwl": "eb2384db89ca24dba159957a52524903",
     "Levels/level 0B2.mwl": "3911ced7a34aa9bf26a192b1b46e4f25",
@@ -244,7 +244,7 @@
     "Levels/level 126.mwl": "ad827ea8a9e66eda83c6b55eee22d27b",
     "Levels/level 127.mwl": "5a440ef0e9b920d8c44a1f07d2684277",
     "Levels/level 128.mwl": "f3926ef0629b9a340d26160d8d68e8bf",
-    "Levels/level 129.mwl": "986613cefbbfd6327976840eb9da9c89",
+    "Levels/level 129.mwl": "0a376ec2b4d202acb98ffbfaf4854c68",
     "Levels/level 12A.mwl": "d994a6aed824d2fe5fd6dbc5a880ab7b",
     "Levels/level 12B.mwl": "9c99787c6d3d674b942bfa28f46c05a0",
     "Levels/level 12C.mwl": "623a107f609ce8de6885634f351fe812",
@@ -15857,7 +15857,7 @@
     },
     {
       "$type": "LunarHelper.DependencyGraphSerializer+JsonHashVertex, LunarHelper",
-      "hash": "949901b664269595c0c341947d1cebf3",
+      "hash": "aadd58d980d302b06be994cb0a1d8627",
       "dependencies": []
     },
     {
@@ -26155,7 +26155,7 @@
     }
   ],
   "graphics": "6f369b7540f2171cdfa0e05b906ac8e6",
-  "exgraphics": "3e36fed9e4c0cc8e5209f1ee1545916c",
+  "exgraphics": "300fa30ebc18844ee64a112c47a93c7b",
   "init_bps": "61f20c0bf37c0e86a7f517113a3e117f",
   "global_data": "f799e55ef476e8709d6592233bd03387",
   "title_moves": "64c6e42b4ef3fae83a3d7f7e2ab4f655",
