@@ -210,6 +210,12 @@ round_finished_x:
 	JSR get_map16			;\ First, check if the new tile's location is the respawn point for the second midpoint.
 	CMP #$1654			;| If so, then don't draw Demo's Map16 death tiles.
 	BEQ +++				;/ Otherwise, a softlock will occur if Demo dies underneath it.
+	PHA				;\ Save the result from get_map16 on the stack,
+	SEP #$20			;/ and set A to 8-bit mode.
+	LDA $0DB3|!addr			;\ If the player is Iris,
+	BNE iris_tiles			;/ then draw the Iris tiles instead.
+	REP #$20			;\ Set A to 16-bit mode,
+	PLA				;/ and restore the result from get_map16.
 	CMP #$1632			;\
 	BNE +				;| If Demo's head doesn't occupy the current tile, then just draw the normal body tile.
 	LDA #$1643			;| Else, we need to draw the combined body/head tile for Demo.
@@ -218,6 +224,19 @@ round_finished_x:
 +
 	LDA #$1642			;> Load the Map16 value of the Demo's body tile.
 	JSR change_map16		;> With the (x,y)-coordinates and the Map16 value set, we can now update the Map16 to Demo's body tile.
+	BRA demo_head
+iris_tiles:
+	REP #$20			;\ Set A to 16-bit mode,
+	PLA				;/ and restore the result from get_map16.
+	CMP #$1635			;\
+	BNE +				;| If Iris' head doesn't occupy the current tile, then just draw the normal body tile.
+	LDA #$1646			;| Else, we need to draw the combined body/head tile for Iris.
+	JSR change_map16		;|
+	BRA iris_head			;/ Perform checks for the drawing the head part of the Iris blocks.
++
+	LDA #$1645			;> Load the Map16 value of the Iris' body tile.
+	JSR change_map16		;> With the (x,y)-coordinates and the Map16 value set, we can now update the Map16 to Iris' body tile.
+	BRA iris_head
 demo_head:
 	LDA $98				;\ Demo's death sprite is two tiles high! We don't want the top of Demo's head to overwrite an existing body tile.
 	SEC				;|
@@ -238,7 +257,28 @@ demo_head:
 	JSR change_map16		;/
 +++
 	SEP #$20			;> Set A to 8-bit.
-
+	BRA finished_tiles
+iris_head:
+	LDA $98				;\ Iris' death sprite is two tiles high! We don't want the top of Iris' head to overwrite an existing body tile.
+	SEC				;|
+	SBC #$0010			;|
+	STA $98				;| Store the 16-bit y-coordinate for the Map16 tile above Iris' body tile that was just written.
+	;STZ $1933|!addr		;| The Map16 tile is on Layer 1 (need to store zero to this address).
+	JSR get_map16			;| Lookup the Map16 tile based on the (x,y)-coordinates and layer, and return the 16-bit value in A.
+	;REP #$20			;| Reset A to 16-bit.
+	CMP #$1645			;| If the returned Map16 value is Iris' body tile...
+	BEQ ++				;/ ...then replace it with a combined body/head tile to avoid cutoff graphics.
+	CMP #$0025			;\ Else, if the tile is not blank, then don't draw the head to avoid additional cutoff graphics.
+	BNE +++				;/
+	LDA #$1635			;\
+	JSR change_map16		;| Else, just draw the tile for the top of Iris' head.
+	BRA +++				;/
+++
+	LDA #$1646			;\ Update the Map16 to a combined body/head Iris tile.
+	JSR change_map16		;/
++++
+	SEP #$20			;> Set A to 8-bit.
+finished_tiles:
 	LDA #$01			;\ After the Map16 routine has finished running,
 	STA !IsWarping			;/ trigger the warping sequence.
 	LDA #!FramesToWait
@@ -721,7 +761,13 @@ respawn:
 +
 	LDA !DiedOnce			;\ Check if the player died for the first time in this sublevel.
 	BNE .already_died		;/ If not, then we don't have to keep restarting the death music for every death.
-	LDA #$01			;\ Play the normal death music only for the player's first death.
+	LDA $0DB3|!addr			;\ Check whether the player is Demo or Iris.
+	BNE .iris			;/
+	LDA #$01			;\ Play Demo's death music only for the player's first death.
+	STA $1DFB|!addr			;/
+	BRA +				;> Skip playing the "Quick Retry" death SFX upon for the first death.
+.iris
+	LDA #$06			;\ Play Iris' death music only for the player's first death.
 	STA $1DFB|!addr			;/
 	BRA +				;> Skip playing the "Quick Retry" death SFX upon for the first death.
 .already_died

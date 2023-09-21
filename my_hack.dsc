@@ -275,10 +275,11 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1611	0	This is the no yoshi/sprite vertical pipe cap 2/2
 1612	0	This is the no yoshi/sprite horizontal pipe cap
 1640	0	Activate keyhole when touched, even without a key.
-1652	0	Teleports the player to level 1D6.
+1652	0	Teleports the player to level 1D6 if Demo, and level 1D9 if Iris.
 1653	0	Sets a new respawn point at the first midway in level 1D0.
 1654	0	Sets a new respawn point at the second midway in level 1D0.
 1690	0	yesyoshiintro.asm
+1699	0	Teleports the player to level 1DC.
 17a0	0	
 17a1	0	
 1840	0	A simple brick block.

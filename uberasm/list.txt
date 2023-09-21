@@ -228,7 +228,6 @@ level:
 1D7	BabaBlocks.asm
 1D8	BabaBlocks.asm
 1DA	BabaBlocks.asm
-1DC	killyoshi.asm
 1F6	hdmatest_freescrollbabey.asm
 1F7	hdmatest_freescrollbabey.asm
 1F8	hdmatest_freescrollbabey.asm
