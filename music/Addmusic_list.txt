@@ -45,7 +45,7 @@ Locals:
 2A  Welcome to Booster Tower (Game Over fix).txt
 2B  And my Name's Booster (Game Over fix).txt
 2C  117 Fight Against a Stronger Monster.txt
-2D  Sparkster - Lakeside.txt
+2D  jackie_chan_stage_2-1.txt
 2E  voile, the magic library.txt
 2F  Journey to Silius - Stage 2 (SMW).txt
 30  StillOfTheNight.txt

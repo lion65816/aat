@@ -1,0 +1,156 @@
+#amk 2
+#path "jackie_chan_stage_2-1"
+#spc
+{
+	#author "Masakatsu Maekawa"
+	#game "Jackie Chan's Action Kung-Fu (TG-16)"
+	#comment "Ported by crm0622"
+	#title "Stage 2-1"
+}
+
+#samples
+{
+#optimized
+"WAVF1_0.brr"
+"WAVF1_1.brr"
+"WAVF1_2.brr"
+"WAVF2.brr"
+"WAVF3.brr"
+"WAVF4.brr"
+"WAVF6_0.brr"
+"WAVF6_1.brr"
+"WAVF6_2.brr"
+}
+
+$EF $FF $64 $64
+$F1 $00 $9C $01
+$F5 $0C $21 $2B $2B $13 $FE $F3 $F9
+
+#instruments
+{
+"WAVF1_0.brr" $FF $E0 $7F $01 $F5 ;@30 o5 f ($EE $1B)
+"WAVF1_0.brr" $FB $E0 $7F $01 $F5 ;@31 o5 f ($EE $1B)
+"WAVF1_1.brr" $FF $E0 $7F $08 $D5 ;@32 o3 d+
+"WAVF1_1.brr" $FB $E0 $7F $08 $D5 ;@33 o3 d+
+"WAVF1_2.brr" $FF $F6 $7F $01 $50 ;@34 o6 c
+"WAVF2.brr" $FB $E0 $7F $04 $2C ;@35 o4 e
+"WAVF2.brr" $FF $E0 $7F $04 $2C ;@36 o4 e
+"WAVF3.brr" $FF $E0 $7F $0A $8C ;@37 o3 c
+"WAVF4.brr" $FB $E0 $7F $04 $67 ;@38 o4 d+ ($EE $07)
+"WAVF4.brr" $FF $E0 $7F $04 $67 ;@39 o4 d+ ($EE $07)
+"WAVF6_0.brr" $FF $E0 $7F $01 $64 ;@40 o5 b (Kick)
+"WAVF6_1.brr" $FF $E0 $7F $01 $64 ;@41 o5 b (Snare)
+"WAVF6_2.brr" $FF $E0 $7F $01 $64 ;@42 o5 b (Drum)
+}
+
+"VF0 = v254 $E8 $0C $B6" ; WAVF3
+"VF1 = v182 $E8 $24 $8F" ; WAVF1_0
+"VF2 = v182 $E8 $18 $99" ; WAVF1_1
+"VF3 = v197 $E8 $30 $88" ; WAVF2 + WAVF4
+"VF4 = v160 $E8 $24 $7E" ; WAVF1_0(WAVF5_0)
+"VF5 = v160 $E8 $18 $88" ; WAVF1_1(WAVF5_1)
+
+#0 w128 t30 $F4 $02
+;1~2
+(21)[@30 o5 y10 $EE $1B $F4 $01 VF1 g+8]1
+/
+(1)[g+16 $F4 $01 @31 VF1 a+8. VF1 >c8 @30 VF1 <g8. VF1 g+8. VF1 a+8 VF1 f8. VF1 g8. VF1 g+8]1 @31 VF1 f8. VF1 g8. VF1 f8 (21)1
+(1)1 $F4 $01 VF1 f8. $E8 $3C $99 f4^16 $F4 $01
+;3~6
+@32 $EE $00
+(3)[VF2 <f8 VF2 >c16 VF2 <f16 VF2 a+16 VF2 >c8 @33 VF2 d8 @32 VF2 <a+16 VF2 >c16 VF2 d16 VF2 d+16 VF2 d16 VF2 c8 @33 VF2 <f8 VF2 >c16 VF2 @32 <f16 VF2 a+16 VF2 a16 VF2 g16 VF2 f8]1 @33 VF2 d+8 VF2 f16 @32 VF2 g16 VF2 f16 VF2 d+8
+(3)1 VF2 d+16 VF2 d16 VF2 c16 VF2 <a+16 VF2 >c16 VF2 <a+16 VF2 g16
+(5)[VF2 f8 @33 VF2 >c16 @32 VF2 <f16 VF2 a+16 VF2 >c8 @33 VF2 d8 @32 VF2 <a+16 VF2 >c16 VF2 d16 VF2 d+16 VF2 d16 VF2 c8 @33 VF2 <f8 @32 VF2 >c16 VF2 <f16 VF2 a+16 VF2 a16 VF2 g16 VF2 f8]1 (4)[@33 VF2 d+8 VF2 f16 @32 VF2 g16 VF2 f16 VF2 d+8]1
+(5)1 @33 VF2 >d+16 @32 VF2 c16 VF2 d+16 VF2 f16 VF2 d+16 VF2 f16 VF2 g16
+;7~10
+$F4 $01 VF2 a4 $E8 $90 $A8 a2. $F4 $01
+[[@34 v166 y15 $E8 $06 $83 >f32 v180 y5 $E8 $06 $83 a+32 v197 y11 $E8 $06 $8F >c32 y9 $E8 $06 $8F f32]]24
+(21)1
+
+#1
+;1~2
+(20)[@35 o4 $F4 $01 VF3 g+8]1
+/
+(9)[g+3^24 $F4 $01 VF3 g2]1 VF3 f2 VF3 f2 (20)1
+(9)1 @36 VF3 f2 @35 VF3 f4 $F4 $03 [[VF3 f16]]4
+;3~6
+$F4 $03
+[[
+(10)[VF3 a2 VF3 a4 VF3 a8 VF3 a+8 VF3 a2 VF3 g4]1 VF3 g8 VF3 g8
+(10)1 VF3 a8 VF3 a8
+]]2
+;7~10
+$F4 $03
+[[@36 VF3 e16]]64
+$F4 $03 (20)1
+
+#2
+;1~2
+(2)[@37 o3 VF0 f16 VF0 f32 VF0 f32]1
+/
+(18)[VF0 f16 VF0 f32 VF0 f32]3
+(19)[
+[[VF0 g16 VF0 g32 VF0 g32]]4 [[VF0 g+16 VF0 g+32 VF0 g+32]]4 [[VF0 a+16 VF0 a+32 VF0 a+32]]4
+]1
+(18)4 (19)1
+;3~6
+[
+[[VF0 f16 VF0 f32 VF0 f32]]4 [[VF0 d+16 VF0 d+32 VF0 d+32]]4
+[[VF0 c+16 VF0 c+32 VF0 c+32]]4 [[VF0 c16 VF0 c32 VF0 c32]]2 VF0 c16 VF0 >c32 VF0 <c32 VF0 d+16 VF0 >d+32 VF0 <d+32
+]4
+;7~10
+[
+[[VF0 f16]]16
+[[VF0 d+16]]12 VF0 <a+16 VF0 >>d+32 VF0 <d+32 VF0 c16 VF0 >e32 VF0 <e32
+]2
+(2)1
+
+#3
+;1~2
+(17)[@38 o4 $EE $07 $F4 $01 VF4 d+8]1
+/
+(11)[d+3^24 $F4 $01 VF4 d+2]1 VF4 c+2 VF4 c+2 (17)1
+(11)1 @39 VF4 c+2 @38 VF4 d4 $F4 $03 [[VF4 d16]]4
+;3~6
+$F4 $03
+[[
+(12)[VF4 f2 VF4 f4 VF4 f8 VF4 f8 VF4 f2 VF4 d+4]1 VF4 d+8 VF4 d+8
+(12)1 VF4 f8 VF4 f8
+]]2
+;7~10
+$F4 $03
+[[@39 VF4 a16]]64
+$F4 $03 (17)1
+
+#4
+;1~3
+r8
+/
+@30 o5 y10 $EE $1B (22)[VF4 g+8. @31 VF4 a+8. VF4 >c8 @30 VF4 <g8. VF4 g+8. VF4 a+8 VF4 f8. VF4 g8. VF4 g+8]1 @31 VF4 f8. VF4 g8. VF4 f8
+(22)1 $F4 $01 VF4 f8. $E8 $3C $88 f4^16 $F4 $01
+;3~7
+@32 $EE $00
+(23)[VF5 <f8 VF5 >c16 VF5 <f16 VF5 a+16 VF5 >c8 @33 VF5 d8 @32 VF5 <a+16 VF5 >c16 VF5 d16 VF5 d+16 VF5 d16 VF5 c8 @33 VF5 <f8 VF5 >c16 VF5 @32 <f16 VF5 a+16 VF5 a16 VF5 g16 VF5 f8]1 @33 VF5 d+8 VF5 f16 @32 VF5 g16 VF5 f16 VF5 d+8
+(23)1 VF5 d+16 VF5 d16 VF5 c16 VF5 <a+16 VF5 >c16 VF5 <a+16 VF5 g16
+(24)[VF5 f8 @33 VF5 >c16 @32 VF5 <f16 VF5 a+16 VF5 >c8 @33 VF5 d8 @32 VF5 <a+16 VF5 >c16 VF5 d16 VF5 d+16 VF5 d16 VF5 c8 @33 VF5 <f8 @32 VF5 >c16 VF5 <f16 VF5 a+16 VF5 a16 VF5 g16 VF5 f8]1 @33 VF5 d+8 VF5 f16 @32 VF5 g16 VF5 f16 VF5 d+8
+(24)1 @33 VF5 >d+16 @32 VF5 c16 VF5 d+16 VF5 f16 VF5 d+16 VF5 f16 VF5 g16
+;7~11
+$F4 $01 VF5 a4 $E8 $84 $93 a2^8. $F4 $01
+[[@34 v143 y15 $E8 $06 $6D >f32 v153 y5 $E8 $06 $6D a+32 v168 y11 $E8 $06 $78 >c32 y9 $E8 $06 $78 f32]]24
+r16
+
+#5
+;1~2
+v182 (16)[@40 o5 $FA $03 $AF b8]1
+/
+@41 v254 b8 (13)[@40 v254 y10 b8 @41 b8]6 @40 b16 @41 b16 b32 b32 b32 b32
+(13)6 (14)[@40 b16 @41 b32 b16 b16 b32]1 @40 b32 [[@41 b32]]7
+;3~6
+(13)15
+@40 b16 $FA $03 $00 @42 b32 v232 a+32 a32 g+32 y13 g32 f+32
+v254 y10 $FA $03 $AF (13)14
+(14)1 (15)[@40 b32 $FA $03 $00 @42 >d32 v232 y7 c+32 c32 y10 <b32 a+32 y13 a32 $ED $7F $F8 g+32]1
+;7~10
+v254 y10 $FA $03 $AF [[@41 b16 @40 b16]]30
+v232 (15)1
+v254 y10 (16)1
