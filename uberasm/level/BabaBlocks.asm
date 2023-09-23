@@ -1,3 +1,6 @@
+load:
+	JSL HoldYoshi_load
+	RTL
 
 init:
 	JSL RequestRetry_init

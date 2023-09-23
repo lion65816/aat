@@ -166,7 +166,7 @@ level:
 155	BG_AutoScroll4.asm
 156	tank.asm
 157	FilterYoshi_freescrollbabey.asm
-159	killyoshi.asm
+159	RemoveYoshi.asm
 15B	craigdarroch.asm
 15D	whales_main.asm
 15E	FilterYoshi.asm
@@ -185,7 +185,7 @@ level:
 16B	FilterYoshi.asm
 16C	FilterYoshi.asm
 16D	green_garden_main.asm
-16E	lvlfilterYoshi.asm
+16E	lvlfilterYoshi16E.asm
 16F	DisableSideExit.asm
 170	hot_glue_main.asm
 171	jumpers_main.asm
@@ -228,7 +228,7 @@ level:
 1D7	BabaBlocks.asm
 1D8	BabaBlocks.asm
 1DA	BabaBlocks.asm
-1DC	killyoshi.asm
+1DC	RemoveYoshi.asm
 1F6	hdmatest_freescrollbabey.asm
 1F7	hdmatest_freescrollbabey.asm
 1F8	hdmatest_freescrollbabey.asm

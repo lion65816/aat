@@ -47,6 +47,16 @@ init:
     sep #$20
 
 .skip:
+    lda $13BF|!addr							;\ Load the translevel number.
+    cmp #$36 : beq +						;| If not Level 112,
+    cmp #$45 : beq +						;| or Level 121, 
+    cmp #$54 : bne ++						;/ or Level 130, then run the regular Yoshi resets.
++
+    lda $0F3E|!addr : bne +					;> If Yoshi retention flag already set, then return.
+    lda $0DC1|!addr : sta $0F3F|!addr		;> Else, store "player on Yoshi" information (includes the Yoshi's color).
+    lda #$01 : sta $0F3E|!addr				;> Set the Yoshi retention flag.
+    bra +
+++
     ; Reset Yoshi, but only if respawning and not parked outside of a Castle/Ghost House.
     lda !ram_is_respawning : beq +
 if not(!counterbreak_yoshi)
