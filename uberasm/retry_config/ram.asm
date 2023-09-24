@@ -17,6 +17,13 @@
 !amk_freeram = $7FB000
 
 ;=====================================
+; What freeram is used for restoring the overworld Yoshi
+; for stages with in-level Yoshis that filter outside Yoshis.
+;=====================================
+!saved_yoshi_flag = $0F3E|!addr
+!saved_yoshi_info = $0F3F|!addr
+
+;=====================================
 ; Don't change from here.
 ;=====================================
 if read1($00FFD5) == $23

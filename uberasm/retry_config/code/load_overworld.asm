@@ -49,13 +49,15 @@ endif
     jsr shared_reset_checkpoint
 
 ..skip:
+    lda !saved_yoshi_flag : beq ++			;> Return if we don't have to restore a saved Yoshi.
     lda $13BF|!addr							;\ Load the translevel number.
     cmp #$36 : beq +						;| If not Level 112,
     cmp #$45 : beq +						;| or Level 121, 
     cmp #$54 : bne ++						;/ or Level 130, then return.
 +
-    lda $0F3F|!addr							;\ Restore the saved Yoshi status (and its color).
-	sta $0DC1|!addr : sta $13C7|!addr		;/
-    stz $0F3F|!addr : stz $0F3E|!addr		;> Reset the free RAM addresses.
+    lda !saved_yoshi_info					;\ Restore the saved Yoshi status (and its color).
+    sta $0DC1|!addr : sta $13C7|!addr		;/
+    stz !saved_yoshi_info					;\ Reset the free RAM addresses.
+    stz !saved_yoshi_flag					;/
 ++
     rtl

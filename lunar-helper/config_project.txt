@@ -56,6 +56,7 @@ patches
 	patch\patch\nuke_statusbar.asm
 	patch\patch\1control.asm
 	patch\patch\lives.asm
+	patch\patch\playerpalupdate.asm
 ]
 -- patch\patch\ticking.asm
 -- patch\patch\bwram_plus.asm

@@ -52,9 +52,9 @@ init:
     cmp #$45 : beq +						;| or Level 121, 
     cmp #$54 : bne ++						;/ or Level 130, then run the regular Yoshi resets.
 +
-    lda $0F3E|!addr : bne +					;> If Yoshi retention flag already set, then return.
-    lda $0DC1|!addr : sta $0F3F|!addr		;> Else, store "player on Yoshi" information (includes the Yoshi's color).
-    lda #$01 : sta $0F3E|!addr				;> Set the Yoshi retention flag.
+    lda !saved_yoshi_flag : bne +			;> If Yoshi retention flag already set, then return.
+    lda $0DC1|!addr : sta !saved_yoshi_info	;> Else, store "player on Yoshi" information (includes the Yoshi's color).
+    lda #$01 : sta !saved_yoshi_flag		;> Set the Yoshi retention flag.
     bra +
 ++
     ; Reset Yoshi, but only if respawning and not parked outside of a Castle/Ghost House.
