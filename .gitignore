@@ -1,8 +1,13 @@
 *.smc
 *.smc~
+*.zst
 *.srm
 *.bak
 *.sfc
+*.mss
+*.bsz
+*.000
+!smwtitledemo.000
 monitor
 uberasm/asm/work/*.asm
 music/stats
@@ -20,3 +25,4 @@ lunar-monitor-log.txt
 resource/temp/all.map16
 *.extmod
 *.lnk
+.lunar_helper/
