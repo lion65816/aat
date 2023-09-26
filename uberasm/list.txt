@@ -5,7 +5,7 @@ verbose: on
 
 ; Level list. Valid values: 000-1FF.
 level:
-000	bonusmusicrng.asm
+000	bonusmusic.asm
 002	cityofgulpgulp.asm
 ;003	demo_counter_test.asm
 004	LevelIntro.asm
@@ -114,7 +114,7 @@ level:
 0F9	leafspawn_uberASM.asm
 0FB	SimpleHP.asm
 0FE	FilterYoshi.asm
-100	bonusmusicrng.asm
+100	bonusmusic.asm
 101	LevelIntro.asm
 103	LevelIntro.asm
 106	freescrollbabey.asm

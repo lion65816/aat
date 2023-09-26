@@ -1,0 +1,847 @@
+#amk 2
+
+#path "tta_bonus"
+
+#samples
+{
+	#optimized
+	"sample_00.brr"
+	"sample_01.brr"
+	"sample_02.brr"
+}
+
+#instruments
+{
+	"sample_00.brr"	$8F $D2 $B8 $03 $20	; @30
+	"sample_01.brr"	$8F $D4 $B8 $01 $12	; @31
+	"sample_02.brr"	$8F $D4 $B8 $01 $96	; @32
+}
+
+#0 w255 t95 r192 @30 v123 y10 o5 $EE $A6 g+16.. g+=20 r=23
+g+=108
+
+r96 $EE $A8 g=20
+g16.. r=23 g=108
+
+
+r96 $EE $A6 g+=20 r=23
+g+=20 r=23
+$EE $A7 a+=20 r=23 $EE $A5 b16...
+r=23 $ED $0F $E2 > c=85
+
+$EE $9A g+=86
+
+r64 $ED $7F $D4 v147 << $EE $AA g+=20 > $EE $AB f=43
+f=43
+r96 $EE $AC e=20
+$EE $AB f=43
+r96 < $EE $AA g+16.. > f+=43
+r96 f+=41
+r96 f+=20 $EE $AB f16...
+$EE $AA f+16.. r96 $EE $A6 g+=41
+r96 g+=43
+$EE $A8 g=43
+$EE $A6 g+=43
+r96 > $EE $A5 c8..
+< b16.. r96 $EE $A7 a+=41
+r96 $EE $A5 a=20
+$EE $A6 g+=23 $EE $AA f+=20 r96 < g+16..
+> $EE $A6 g+=43
+r96 g+=41
+r96 < $EE $AD b=20 > $EE $AB f16...
+$EE $A6 g+16.. r96 $EE $AA f+=20
+$EE $AB f=23 $EE $AA f+=20 r96 $EE $A7 a+=41
+r96 > $EE $A2 c+16..
+r96 $EE $A5 c=20 $EE $A2 c+16..
+r96 $EE $A0 f8..
+f=43
+e=43 r96 e=41
+r96 d+16..
+$EE $A3 d16... $EE $A0 d+16..
+r96 $EE $9A g+8..
+g+3
+r96 << $EE $AA g+=20 > $EE $AB f=43
+r96 f=43
+$EE $AC e16..
+r96 $EE $AB f=41
+r96 < $EE $AA g+=20 > f+=43
+r96 f+=43
+f+=20 r96 $EE $AB f16..
+$EE $AA f+=20 r96 $EE $A6 g+=43
+g+=43
+$EE $A8 g=43
+r96 $EE $A6 g+=41
+r96 > $EE $A5 c=43
+< b=20 r96 $EE $A7 a+=43
+$EE $A5 a16..
+r96 $EE $A6 g+=20 $EE $AA f+16... < g+16..
+r96 > $EE $A6 g+=41
+r96 g+=43
+< $EE $AD b=20 r96 > $EE $AB f16..
+$EE $A6 g+16... $EE $AA f+16.. r96
+$EE $AB f=20 $EE $AA f+16.. r96 $EE $A7 a+8..
+> $EE $A2 c+16..
+r96 $EE $A5 c=20 $EE $A2 c+=23
+$EE $A0 f=43
+f=43 r96
+e=41 r96 e8..
+d+16..
+r96 $EE $A3 d=20 $EE $A0 d+16..
+r96 $EE $9A g+=43
+g+=65
+r=43
+$ED $3F $CC v84 g+8..
+r96 v131 g+=41
+r96 $EE $A2 c+=43
+v79 $EE $A0 d+=43 v131 d+=43
+r96 $EE $A2 c+=41
+r96 < $EE $A5 a=43
+$EE $A7 a+=43
+> $EE $A2 c+=43
+r96 $EE $A0 d+=41
+r96 $EE $9E f+2
+
+r96 f+=20 f+16...
+f+16.. r96 f+=20
+f+16.. r96 f+=20
+f+=33 $EE $A0 e=43
+r96 f=43
+< $EE $A6 g+=43
+$EE $A5 b=43
+$EE $A7 a+=43
+r96 $EE $A6 g+8..
+$EE $AC e=43
+$EE $AB f=43 $EE $A6 g+=43
+r96 $EE $A7 a+=43
+> $EE $A2 c+=86
+
+r96 c+=41
+r96 c+=43
+c+=43
+r8....
+v84 $EE $9A g+=41
+r96 v131 g+8..
+$EE $A2 c+=43 v79 $EE $A0 e=43
+r96 v131 $EE $9E f+=41
+r96 $EE $A0 e=43
+$EE $9E f+=43
+$EE $A2 c+=43
+r96 c+=41
+r96 c+8..
+c+=86
+
+r96 $EE $A0 e=86
+$EE $9E f+=43
+r96
+
+
+#1 $F0 @30 $ED $0F $E2 v52 y10 o5 $EE $BB g+16.. g+=43
+g+=108
+
+r96 $EE $BF g=20
+g=44 g=108
+
+
+r96 $EE $BB g+=41
+r96 g+8..
+a+=44 $EE $B9 b=43
+r96 > $EE $B8 c=85
+
+$EE $AF g+=86
+
+r=23 $ED $0A $E2 v66 << $EE $D3 g+16..
+r96 > $EE $D4 f=43
+f=43
+e16... f=43
+< $EE $D3 g+16.. r96
+> $EE $D4 f+8.. f+=43
+f+=23
+f=20 r96 f+16..
+$EE $CF g+=43
+r96 g+=41 r96
+$EE $D0 g8.. $EE $CF g+=43
+> $EE $CD c=43
+r96 < $EE $CE b16..
+$EE $D0 a+=43
+$EE $CE a16... $EE $CF g+16.. r96 $EE $D4 f+=20
+< $EE $D3 g+16... > $EE $CF g+=43
+g+=43
+< $EE $D4 b=23
+> f=20 r96 $EE $CF g+16..
+$EE $D4 f+16... f16.. r96 f+=20
+$EE $D0 a+=43
+r96 > $EE $CD c+=20 c16..
+r96 c+=20 $EE $C8 f=43
+r96 f=41
+r96 e=43
+e=43
+$EE $C9 d+16... $EE $CB d16..
+r96 $EE $C9 d+=20 $EE $C3 g+=43
+r96 g+=41
+r=23 << $EE $D3 g+16...
+> $EE $D4 f=43
+f=43
+r96 e=20 f=43
+< $EE $D3 g+=23 > $EE $D4 f+=43
+f+=43
+r96 f+=20
+f16.. r96 f+=20
+r96 $EE $CF g+=41
+r96 g+=43 $EE $D0 g=43
+$EE $CF g+=43
+r96 > $EE $CD c=41
+r96 < $EE $CE b=20
+$EE $D0 a+=43 r96
+$EE $CE a=20 $EE $CF g+=23 $EE $D4 f+=20
+r96 < $EE $D3 g+16.. > $EE $CF g+=43
+g+=43
+r96 < $EE $D4 b=20
+> f16... $EE $CF g+16.. r96
+$EE $D4 f+=20 f16.. r96 f+=20
+$EE $D0 a+=43
+r96 > $EE $CD c+16.. c16...
+c+16.. r96 $EE $C8 f=41
+r96 f8..
+e=43
+e=43
+r96 $EE $C9 d+16.. $EE $CB d=20
+r96 $EE $C9 d+16.. r96 $EE $C3 g+=41
+r96 g+8..
+r=65
+v52 g+=43
+g+=43
+$EE $CD c+=43
+r96 v44 $EE $C9 d+8..
+v52 d+=43
+$EE $CD c+=44
+< $EE $CE a=43
+r96 $EE $D0 a+8.. > $EE $CD c+=43
+$EE $C9 d+=43
+r96 $EE $C5 f+2
+
+f+16...
+f+16.. r96 f+=20
+f+16.. r96 f+16..
+f+16... f+6
+$EE $C8 e=44
+f=43
+r96 < $EE $CF g+=41 r96 $EE $CE b8..
+$EE $D0 a+=43
+$EE $CF g+=43
+r96 $EE $D4 e=41
+r96 f=43
+$EE $CF g+=43
+$EE $D0 a+=43
+r96 > $EE $CD c+=85
+
+c+=44 c+=43
+r96 c+=20
+r=67
+$EE $C3 g+8..
+g+=43
+r96 $EE $CD c+=43
+v44 $EE $C8 e=43
+v52 $EE $C5 f+=43
+$EE $C8 e=43
+r96 $EE $C5 f+8..
+$EE $CD c+=43 c+=43
+c+=43
+r96 c+=86
+
+$EE $C8 e=86
+
+r96 $EE $C5 f+=20 $ED $0F $E2 < $EE $BB g+16...
+g+=43
+g+=108
+
+
+#2 r192 @30 $ED $7F $D2 v140 y10 o5 $EE $AF c16.. c=20 r=23
+c=108
+
+r96 $EE $AB c+=20
+c+16.. r=23 c+=108
+
+
+r96 $EE $AF c=20 r=23
+c=20 r=23
+$EE $AB c+=20 r=23 d16...
+r=23 $ED $7F $CF $EE $AF d+=85
+
+$EE $A6 g+=86
+
+r64 $ED $7F $D4 v131 < $EE $AE f=20 > $EE $AB c+=43
+c+=43
+r96 $EE $AF c=20
+$EE $AB c+=43
+r96 < $EE $AC f+16.. > $EE $AF d+=43
+r96 d+=41
+r96 d+=20 $EE $AB d16...
+$EE $AF d+16.. r96 $EE $AB f=41
+r96 f=43
+$EE $AC e=43
+$EE $AB f=43
+r96 $EE $A6 g+8..
+$EE $A8 g16.. r96 $EE $AA f+=41
+r96 f+=20
+$EE $AB f=23 $EE $AF d+=20 r96 < $EE $AE f16..
+> $EE $AB f=43
+r96 f=41
+r96 < $EE $AA g+=20 $EE $AD b16...
+> $EE $AB f16.. r96 < $EE $AA a+=43
+a+=20 r96 > $EE $AB c+=41
+r96 $EE $AC e=43
+$EE $A8 g16..
+r96 $EE $A6 g+8..
+g+=43
+$EE $A8 g=43 r96 g=41
+r96 $EE $AA f+=43
+f+16..
+r96 $EE $A6 g+8..
+g+3
+r96 < $EE $AE f=20 > $EE $AB c+=43
+r96 c+=43
+$EE $AF c16..
+r96 $EE $AB c+=41
+r96 < $EE $AC f+=20 > $EE $AF d+=43
+r96 d+=43
+d+=20 r96 $EE $AB d16..
+$EE $AF d+=20 r96 $EE $AB f=43
+f=43
+$EE $AC e=43
+r96 $EE $AB f=41
+r96 $EE $A6 g+=43
+$EE $A8 g=20 r96 $EE $AA f+=43
+f+16..
+r96 $EE $AB f=20 $EE $AF d+16... < $EE $AE f16..
+r96 > $EE $AB f=41
+r96 f=43
+< $EE $AA g+=20 r96 $EE $AD b16..
+> $EE $AB f16... < $EE $AA a+=43
+a+16.. r96 > $EE $AB c+8..
+$EE $AC e=43
+$EE $A8 g=23
+$EE $A6 g+=43
+g+=43 r96
+$EE $A8 g=41 r96 g8..
+$EE $AA f+=43
+f+16..
+r96 $EE $A6 g+=43
+g+=65
+r=43
+$ED $3F $CC v79 g+8..
+r96 v120 g+=41
+r96 $EE $AB c+=43
+v79 $EE $AF d+=43 v120 d+=43
+r96 $EE $AB c+=41
+r96 < $EE $AC a=43
+$EE $AA a+=43
+> $EE $AB c+=43
+r96 $EE $AF d+=41
+r96 $EE $AA f+=85
+
+f+=23 f+=20
+r96 f+16.. f+=20 r96 f+16..
+r96 f+=20 f+=43
+$EE $AC e=43
+r96 $EE $AB f=43
+< $EE $AA g+=43
+$EE $AD b=43
+$EE $AA a+=43
+r96 g+8..
+$EE $B3 e=43
+$EE $AE f=43 $EE $AA g+=43
+r96 a+=43
+> $EE $AB c+=43
+$EE $AC e=43
+r96 $EE $A6 g+=41
+r96 g+=43
+g+=43
+r8....
+v79 g+=41
+r96 v120 g+8..
+$EE $AB c+12.. r=15 v79 $EE $AC e=43
+r96 v120 $EE $AA f+=41
+r96 $EE $AC e12..
+r=15 $EE $AA f+12..
+r=15 f+=43
+r96 f+=27
+r=15 $EE $AC e12.. r=15
+$EE $AB c+=86
+
+r96 $EE $AC e=86
+$EE $AA f+=43
+r96 $ED $7F $D2 v140 $EE $AF c=20
+c=20 r=23
+c=108
+
+
+#3 @30 $ED $7F $D2 v123 y10 o4 $EE $AA g+16.. g+16.. r=23
+g+=107
+
+r96 $EE $AC g=20
+g16.. r=23 g=108
+
+
+r96 $EE $AA g+=20 r=23
+g+=20 r=23
+a+=20 r=23 $EE $AD b16...
+r=23 $ED $7F $CF > $EE $AF c=66
+
+r=20 < $EE $AA g+=85
+
+r8....
+$ED $7F $D4 v117 $EE $AE f=86
+
+f=86
+r96
+$EE $AC f+=85
+f+=86
+
+r96 $EE $AE f=86
+
+f=88
+
+$EE $AC f+=86
+
+f+=87
+$EE $AE f=86
+
+f=88
+
+$EE $AC f+=86
+
+r96 g=41
+r96 $EE $AA g+=43
+g+=43
+$EE $AC g=43 r96 g=41
+r96 f+8..
+f+16..
+r96 f+=43
+f+=63
+r8...
+$EE $AE f=86
+
+r96 f=86
+$EE $AC f+=86
+
+r96 f+=85
+
+$EE $AE f=86
+
+r96 f=86
+
+$EE $AC f+=86
+r96
+f+=86
+$EE $AE f=86
+
+r96 f=85
+
+$EE $AC f+=86
+
+r96 g=43
+$EE $AA g+=43
+g+=43 r96 $EE $AC g=41
+r96 g=43
+f+=43
+f+=20
+r96 f+=43
+f+=65
+r=43
+f+=86
+
+r96 f+=85
+f+=86
+
+r96 f+=86
+
+f+=86
+
+r96 f+=86
+
+f+=86
+r96 f+=85
+
+$EE $AE f=88
+
+f=86
+
+f=87
+
+f=87
+f=87
+
+f=86
+
+r96 f=86
+
+f=43
+r8....
+$EE $AC f+=85
+
+f+=86
+r96 f+=86
+
+f+=86
+
+r96 f+=86
+
+f+=86
+
+r96 f+=85
+f+=43
+$ED $7F $D2 v123 $EE $AA g+16...
+g+16.. r=23
+g+=107
+
+
+#4 r192 @31 v113 y10 o6 $EE $F6 d16.. d=20 r=23
+d=108
+
+r96 $EE $F5 d+=20
+d+16.. r=23 d+=108
+
+
+r96 $EE $F6 d=20 r=23
+d=20 r=23
+$EE $F4 e=20 r=23 $EE $F3 f16...
+r=23 $ED $0F $D2 $EE $F2 f+=66
+
+r=20 $EE $F6 d=85
+
+r8....
+$ED $0F $82 v117 $EE $F0 g=85
+
+g=86
+r96
+$EE $F2 f+=86
+f+=86
+
+r96 $EE $F0 g=86
+
+g=87
+
+$EE $F2 f+=86
+
+f+=88
+$EE $F0 g=86
+
+$EE $F3 f=88
+
+$EE $F0 g=86
+
+r96 g=41
+r96 g8..
+g=43
+g=43 r96 g=41
+r96 g=43
+g16..
+r96 $ED $0F $CF $EE $F2 f+8..
+$ED $0F $82 f+3
+r8...
+$EE $F0 g=86
+
+r96 g=85
+$EE $F2 f+=86
+
+r96 f+=86
+
+$EE $F0 g=86
+
+r96 g=86
+
+$EE $F2 f+=86
+
+r96 f+=85
+$EE $F0 g=86
+
+r96 $EE $F3 f=86
+
+$EE $F0 g=86
+
+r96 g=43
+g=43
+g=43 r96
+g=41 r96 g8..
+g=43
+g16..
+r96 $ED $0F $CF $EE $F2 f+=43
+$ED $0F $82 f+=65
+r=43
+$EE $F0 g=85
+
+r96 g=86
+g=86
+
+r96 g=86
+
+g=86
+
+r96 g=85
+
+g=86
+r96 g=86
+
+g=88
+
+g=86
+
+g=87
+
+g=86
+g=88
+
+g=86
+
+r96 g=86
+
+g=43
+r8....
+g=85
+
+g=86
+r96 g=86
+
+g=86
+
+r96 g=85
+
+g=86
+
+r96 g=86
+g=43
+r96 $F4 $09 v113 $EE $F6 d=20
+d=20 r=23
+d=108
+
+
+#5 @31 $ED $7F $D4 v172 y10 o5 d+16.. d+16.. r=23
+d+3
+@32 b=43
+r96 @31 $ED $7F $D4 e=20
+e16.. r=23 e=65
+
+@32 b=43
+r96 @31 $ED $7F $D4 d+=20 r=23
+d+=20 r=23
+f=20 r=23 f+16...
+r=23 $ED $7F $D2 g=66
+
+r=20 d+=85
+
+r64 $ED $0F $82 v149 $EE $FD g=41
+r96 > $EE $F6 d=43
+< $EE $F9 b=43
+> $EE $F6 d=43
+r96 < $EE $F9 a=41 r96
+> $EE $F6 d8.. < $EE $00 d+=43
+> $EE $F6 d=43
+r96 < $EE $FD g=41
+r96 > $EE $F6 d=43
+< $EE $F9 b=43
+> $EE $F6 d=43
+r96 < $EE $F9 a=43
+> $EE $F6 d=43
+< $EE $00 d+=43
+> $EE $F6 d=43 r96 < $EE $FD g8..
+> $EE $F6 d=43
+< $EE $FC g+=43
+> $EE $F6 d=43
+r96 < $EE $F9 a=43
+> $EE $F4 e=43
+< $EE $F9 a+=43
+r96 > $EE $F4 e=41
+r96 < $EE $F9 b=43
+b=43
+a+=43 r96 a+=41
+r96 a8..
+a16..
+r96 $ED $0F $D1 > $EE $F6 d=43
+$ED $0F $82 < $EE $00 d+=63
+r96 $EE $FD g=43
+> $EE $F6 d=43
+< $EE $F9 b=43
+r96 > $EE $F6 d=41
+r96 < $EE $F9 a=43 > $EE $F6 d=43
+< $EE $00 d+=43
+r96 > $EE $F6 d=41
+r96 < $EE $FD g8..
+> $EE $F6 d=43
+< $EE $F9 b=43
+r96 > $EE $F6 d=41
+r96 < $EE $F9 a=43
+> $EE $F6 d=43
+< $EE $00 d+=43 r96
+> $EE $F6 d=43 < $EE $FD g=43
+> $EE $F6 d=43
+< $EE $FC g+=43
+r96 > $EE $F6 d8..
+< $EE $F9 a=43
+> $EE $F4 e=43
+< $EE $F9 a+=43
+r96 > $EE $F4 e=43
+< $EE $F9 b=43
+b=43 r96 a+=41
+r96 a+=43
+a=43
+a=20
+r96 $ED $0F $D1 > $EE $F6 d=43
+$ED $0F $82 < $EE $00 d+=65
+c+=43
+> $EE $F4 e=43
+r96 < $EE $00 f=41
+r96 > $EE $F4 e8.. < $EE $FD g=43
+> $EE $F4 e=43
+r96 < $EE $F9 a=41
+r96 > $EE $F4 e=43
+< $EE $F9 a+=43
+> $EE $F4 e=43
+r96 < $EE $F9 a=41
+r96 > $EE $F4 e8..
+< $EE $FD g=44
+> $EE $F4 e=43
+r96 < $EE $00 f=41 r96 > $EE $F4 e8..
+< $EE $FD g=43
+> $EE $F6 d=43
+r96 < $EE $00 c=43
+> $EE $F6 d=43
+< $EE $00 d+=43
+> $EE $F6 d=43
+r96 < $EE $00 f8..
+> $EE $F6 d=43
+< $EE $00 f+=44 > $EE $F6 d=43
+r96 < $EE $00 f8..
+> $EE $F6 d=43
+< $EE $00 d+=43
+r96 > $EE $F6 d=41
+r96 < $EE $00 c=43
+> $EE $F6 d=43
+< $EE $00 c+=44
+r96 > $EE $F4 e=41
+r96 < $EE $00 f8..
+> $EE $F4 e=43 < $EE $FD g=43
+r96 > $EE $F4 e=41
+r96 < $EE $F9 a=43
+> $EE $F4 e=43
+< $EE $F9 a+=43
+r96 > $EE $F4 e=41
+r96 < $EE $F9 a=43
+> $EE $F4 e=43
+< $EE $FD g=43
+r96 > $EE $F4 e=41 r96
+< $EE $00 f8.. > $EE $F4 e=43
+$ED $7F $D4 v172 < $EE $00 d+16...
+d+16.. r=23
+d+3
+@32 b=43
+@31 $ED $7F $D4 e16... e16..
+r=23 e=65
+
+@32 b=43
+@31 $ED $7F $D4 d+16... r=23 d+=20
+r=23 f=20
+r=23 f+=20
+r=23 $ED $7F $D2 g=68
+
+r=20 d+=85
+
+r64 $ED $0F $82 v149 $EE $FD g=41
+r96 > $EE $F6 d=43
+< $EE $F9 b=43
+> $EE $F6 d=43 r96 < $EE $F9 a=41
+r96 > $EE $F6 d8..
+< $EE $00 d+=43
+> $EE $F6 d=43
+r96 < $EE $FD g=41
+r96 > $EE $F6 d=43
+< $EE $F9 b=43
+> $EE $F6 d=43
+r96 < $EE $F9 a=41
+r96 > $EE $F6 d=43 < $EE $00 d+=43
+> $EE $F6 d=43
+r96 < $EE $FD g=41
+r96 > $EE $F6 d8..
+< $EE $FC g+=43
+> $EE $F6 d=43
+r96 < $EE $F9 a=41
+r96 > $EE $F4 e=43
+< $EE $F9 a+=43
+> $EE $F4 e=43 r96
+< $EE $F9 b=43 b=43
+a+=43
+a+=43
+r96 a8..
+a16.. r96
+$ED $0F $D1 > $EE $F6 d=41 r96 $ED $0F $82 < $EE $00 d+=63
+
+r96 $EE $FD g=43
+> $EE $F6 d=43
+< $EE $F9 b=43 r96 > $EE $F6 d=41
+r96 < $EE $F9 a=43
+> $EE $F6 d=43
+< $EE $00 d+=43
+r96 > $EE $F6 d=41
+r96 < $EE $FD g8..
+> $EE $F6 d=43
+< $EE $F9 b=43
+r96 > $EE $F6 d=41
+r96 < $EE $F9 a=43
+> $EE $F6 d=43 < $EE $00 d+=43
+r96 > $EE $F6 d=41
+r96 < $EE $FD g=43
+> $EE $F6 d=43
+< $EE $FC g+=43
+r96 > $EE $F6 d=41
+r96 < $EE $F9 a8..
+> $EE $F4 e=43
+< $EE $F9 a+=43
+r96 > $EE $F4 e=41 r96 < $EE $F9 b=43
+b=43
+a+=43
+r96 a+=43
+a=43
+a=20 r96 $ED $0F $D1 > $EE $F6 d=43
+$ED $0F $82 < $EE $00 d+=65
+
+c+8..
+> $EE $F4 e=44 < $EE $00 f=43
+r96 > $EE $F4 e8..
+< $EE $FD g=43
+> $EE $F4 e=43
+r96 < $EE $F9 a=41
+r96 > $EE $F4 e=43
+< $EE $F9 a+=43
+> $EE $F4 e=43
+r96 < $EE $F9 a=41
+r96 > $EE $F4 e8..
+< $EE $FD g=44 > $EE $F4 e=43
+r96 < $EE $00 f=41
+r96 > $EE $F4 e8..
+< $EE $FD g=43
+> $EE $F6 d=43
+r96 < $EE $00 c=41
+r96 > $EE $F6 d=43
+< $EE $00 d+=43
+> $EE $F6 d=43
+r96 < $EE $00 f=41 r96
+> $EE $F6 d8.. < $EE $00 f+=44
+> $EE $F6 d=43
+r96 < $EE $00 f=41
+r96 > $EE $F6 d8..
+< $EE $00 d+=43
+> $EE $F6 d=43
+r96 < $EE $00 c=43
+> $EE $F6 d=43
+< $EE $00 c+=44
+> $EE $F4 e=43 r96 < $EE $00 f8..
+> $EE $F4 e=43
+< $EE $FD g=43
+> $EE $F4 e=43
+r96 < $EE $F9 a=43
+> $EE $F4 e=43
+< $EE $F9 a+=43
+r96 > $EE $F4 e=41
+r96 < $EE $F9 a=43
+> $EE $F4 e=43
+< $EE $FD g64 
+

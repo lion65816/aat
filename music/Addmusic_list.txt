@@ -140,6 +140,7 @@ Locals:
 8B  16 Flyswatter ~ Level 2.txt
 8C  froge.txt
 8D  Bonkers Fabulous Mansion.txt
+8E  tta_bonus.txt
 8F  frost man.txt
 90  Mizuno.txt
 91  The Ground's Color is Yellow.txt
