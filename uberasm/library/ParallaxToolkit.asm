@@ -12,7 +12,7 @@
 !HDMATable = $7F1853
 
 if !sa1
-	!HDMATable = $418AFF	; If using SA-1
+	!HDMATable = $418B03	; If using SA-1
 endif
 
 ; Init code
