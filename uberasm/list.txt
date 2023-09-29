@@ -74,6 +74,7 @@ level:
 090	green_garden_main.asm
 095	Layer2Smash_095.asm
 097	freescrollbabey.asm
+099  BG_AutoScroll99.asm
 0A0	DisableLR_freescrollbabey.asm
 0A4	BG_AutoScroll7B.asm
 0AA	freescrollbabey.asm

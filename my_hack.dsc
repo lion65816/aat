@@ -404,6 +404,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1f26	0	Ends the level via keyhole exit if touched while carrying a key, or if touched while riding a Yoshi with a key in its mouth.
 1f35	0	A block that is passable only when the player has 10 dragon coins.
 1f36	0	Adds a life to  the player, then disappears.
+1f51	0	Shatters and makes the player bounce a bit on player contact.
 1ffb	0	A door that uses 1 of 15 screens randomly.
 1ffc	0	A door that uses a specific screen exit.
 2093	0	Spawns sprite $BA.

@@ -150,3 +150,5 @@
 [Message] - [ 2023-09-21 08:15:43 ] - Successfully loaded ROM: "D:\Games\Mario\Projects\a3mt\my_hack.smc"
 [Message] - [ 2023-09-23 13:35:17 ] - Attempting to switch to new ROM
 [Message] - [ 2023-09-23 13:35:17 ] - Successfully loaded ROM: "D:\Games\Mario\Projects\a3mt\my_hack.smc"
+[Message] - [ 2023-09-27 11:34:47 ] - Attempting to switch to new ROM
+[Message] - [ 2023-09-27 11:34:47 ] - Successfully loaded ROM: "D:\Games\Mario\Projects\a3mt\my_hack.smc"

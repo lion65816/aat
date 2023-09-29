@@ -195,6 +195,7 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 1F26:25 keyholeblock.asm
 1F35:25 BarTest.asm
 1F36:25 lifeadd.asm
+1F51:130 shatter_and_bounce.asm
 1FFB:25 screentele_door_rand.asm
 1FFC:25 screentele_door.asm
 2093:130 question_block.asm
