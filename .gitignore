@@ -22,6 +22,7 @@ music/temp.bin
 sysLMRestore
 lunar-helper/config_user.txt
 lunar-monitor-log.txt
+lunar_monitor_log.txt
 resource/temp/all.map16
 *.extmod
 *.lnk

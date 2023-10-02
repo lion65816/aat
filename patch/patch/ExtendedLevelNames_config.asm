@@ -35,7 +35,7 @@ NameData:
  db "  Thwompire State  "
  db "     Building      "
  ;Level 007
- db "                   "
+ db "    Bunn Canyon    "
  db "                   "
  ;Level 008
  db " Locus of Control  "

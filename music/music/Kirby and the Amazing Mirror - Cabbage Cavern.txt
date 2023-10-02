@@ -1,0 +1,130 @@
+#amk 2
+
+#path "cabbagecavern"
+
+#spc
+{
+	#title "Cabbage Cavern"
+	#game "Kirby and the Amazing Mirror"
+	#author "Hironobu Inagaki, Atsuyoshi Isemura"
+	#comment "Ported by Dippy"
+}
+
+#samples
+{
+	#optimized
+	"slap bass.brr"		 
+	"kick.brr"			 
+	"snare.brr"			 
+	"closed hi-hat.brr"	 
+	"open hi-hat.brr"	 
+	"finger bass.brr"	 
+	"wasp synth.brr"	 
+	"tom.brr"
+	"chord1.brr"
+	"chord2.brr"
+	"ooh.brr"
+	"trumpet.brr"
+	"wasp synth chord.brr"
+	"blown bottle.brr"
+	"am_orchhit.brr"
+}
+
+#instruments
+{
+	"slap bass.brr"			$FF $EE $B8 $11 $F0 	;@30
+	"kick.brr"				$FF $E0 $B8 $07 $40 	;@31
+	"snare.brr"				$FF $E0 $B8 $07 $A0 	;@32
+	"closed hi-hat.brr"		$FF $E0 $B8 $07 $A0 	;@33
+	"open hi-hat.brr"		$FF $E0 $B8 $05 $B0 	;@34
+	"finger bass.brr"		$AF $B2 $B8 $0E $F0 	;@35
+	"wasp synth.brr"		$FF $E0 $B8 $04 $00 	;@36
+	"tom.brr" 				$FF $E0 $B8 $07 $A0 	;@37
+	"chord1.brr" 			$AF $E0 $B8 $0B $35 	;@38
+	"chord2.brr" 			$AF $E0 $B8 $0A $00 	;@39
+	"ooh.brr" 				$FF $E0 $B8 $07 $90 	;@40
+	"trumpet.brr"			$FF $E0 $B8 $04 $00 	;@41
+	"wasp synth chord.brr"	$FF $E0 $B8 $04 $80 	;@42
+	"blown bottle.brr"		$FF $E0 $B8 $03 $00 	;@43
+	"am_orchhit.brr" 		$FF $E0 $B8 $03 $C0 	;@44
+}
+
+w215 t50 $F4 $02
+
+$EF $18 $20 $20
+$F1 $04 $37 $01
+
+;Macros
+"K=@31c"
+"S=@32c"
+
+#0 / v175 o4 ;Percussion 1
+(1)[K12. K12. S6^24 q79 S12. q7b S24 q7f K12. S4]3  K12. K12. S6^24 q79 S12. q7b S24 q7f K12. @37 y15 q7d c24 y10 < g24 y05 d+24 y10 c12.
+y10 q7f (1)3 > (4)[K12. K12. S6^24 q77 S12. q7a S48 S48 q7c S12. q7f S4]
+[[(1)3 (4)]]4
+
+
+#1 / v149 o4 y09 ;Percussion 2
+[ [[@33 q7f c12 q77 c24 q7a @34 c12.]]3 @33 q7f c12 q77 c24 q7f @34 c12.]24
+
+
+#2 / v163 o2 @30 ;Bass
+(3)[e12 r6.. < b12 > e12 r4^6 < b24 > e12 r6.. < b12 > e6 e24 r6^12. < b24]3 >
+e12 r6.. < b12 > e12 r4^6 < b24 > e12 r6.. < b12 > e6 e24 r12 a24 g24 e24 < b12. 
+(3)2 $FA $02 $03 (3)2 $FA $02 $00 >
+[e12 r6.. < b12 > e12 r4^6 < b24 > f12 r6.. c12 f6 f24 r6^12. c24]2 
+g12 r6.. d12 g12 r4^6 d24 a12 r6.. e12 a6 a24 r6^12. e24
+g12 r6.. < g12 > g12 r4^6 < g24 > b12 r6.. < b12 > b6 b24 r6^12. < b24
+
+
+#3 / $DF @35 v100 o3 y11
+r12. (2)[q7f b12 r24 q7f > c+12 r24 q75 c+12 r24 q72 c+12 r24 q7f d12 r24 q7f c+12 r24 q75 c+12 r24 q72 c+12 r24 <
+q7f b12 r24 q7f a12 r24 q75 a12 r24 q72 a12 r24 q7f g12 r24 q7f a12 r24 q75 a12 r24 q72 a12 r24] >
+q7f d12 r24 q7f e12 r24 q75 e12 r24 q72 e12 r24 q7f f+12 r24 q7f e12 r24 q75 e12 r24 q72 e12 r24 
+q7f d12 r24 q7f c+12 r24 q75 c+12 r24 q72 c+12 r24 < q7f b12 r24 > q7f c+12 r24 q75 c+12 r24
+
+@36 v142 o4 y10 p26,24,43
+(5)[q7f e6^24 f+48 g48 > d12 q78 d24 q7f c+12 q78 c+24 q7f < b12 q78 b24 q7f a12 q78 a24 q7f g12 q78 g24 q7f f+12 q78 f+24
+q5f g12 a24 g12 a24 g12 a24 q78 a12 q5f b2^24]
+q7f e12. f+12 g24 > d12 q78 d24 q7f c+12 q78 c+24 q7f < b12 q78 b24 q7f a12 q78 a24 q7f g12 q78 g24 q7f f+12 q78 f+24
+q5f g12 g24 g12 g24 f+12 d24 q78 d12 q5f e2^24
+@40 v115 $DF $FA $02 $F4 (5) $FA $02 $00 o3
+g12 a24 b12 r24 > d12 q78 d24 q7f c+12. < b12 q78 b24 q7f a12 q78 a24 q7f g12 q78 g24 q7f f+12.
+q5f g12 g24 g12 g24 f+12 d24 q78 d12 q5f e2^24
+
+@41 o4 q7f p38,24,43
+g6^24 a48 a+48 > c12 q78 c24 q7f < a+12 q78 a+24 q7f a12 q78 a24 q7f g12 q78 g24 > q7f d6^24 d+48 e48
+f12 q78 f24 q7f e12 q78 e24 q7f d12 c24 q78 c12 q5f d2^24 <
+q7f g6^24 a48 a+48 > c12 q78 c24 q7f < a+12 q78 a+24 q7f a12 q78 a24 q7f g12 q78 g24 q7f d12 q78 d24 q7f a12 q78 a24
+q7f g6^24 d24 c12 c+24 d12 < q5f g2^24
+
+@36 v157 o4 y10 p26,24,43
+q7f e6^24 f+24 g12 q78 g24 q7f a12 q78 a24 q7f b12 q78 b24 q7f a12 q78 a24 q7f g12 q78 g24 q7f e12 q78 e24
+q7f f6^24 g24 a12 b24 q78 b12 > q7f c4 < c4 r24
+e6^24 f+24 g12 a24 q78 a12 q7f b24 q78 b12 q7f a24 q78 a12 q7f g24 q78 g12 q7f e6 
+f12 e24 f12 g24 a12 b24 q78 b12 q7f > c24 q78 c12 < q7f f12 q78 f24 q7f c4 r24
+
+@43 v127 o5 y10 $DF
+g6^24 a24 b12 > c24 q78 c12 q7f d24 q78 d12 q7f c24 q78 c12 < q7f b24 q78 b12 q7f g12. r24 
+q5f a12 b24 a12 b24 q7f > c12 d24 q78 d12 q7f e24 q78 e12 < q7f a24 q78 a12 q7f e24 q78 e12 < q7f a12. r24
+
+@36 v157 < p26,24,43
+b6^24 > c24 d12 e24 q78 e12 q7f f24 q78 f12 q7f e24 q78 e12 q7f d24 q78 d12 q7f c12. r24 
+< b6^24 > e48 f+48 a12 f+12. q5f b2^24
+
+
+#4 / @35 v100 o3 y09 
+r12. g12 r24 a12 r24 q75 a12 r24 q72 a12 r24 q7f b12 r24 q7f a12 r24 q75 a12 r24 q72 a12 r24
+q7f g12 r24 f+12 r24 q75 f+12 r24 q72 f+12 r24 q7f e12 r24 q7f f+12 r24 q75 f+12 r24 q72 f+12 r24
+q7f b12 r24 > c+12 r24 q75 c+12 r24 q72 c+12 r24 q7f d12 r24 q7f c+12 r24 q75 c+12 r24 q72 c+12 r24 <
+q7f b12 r24 a12 r24 q75 a12 r24 q72 a12 r24 q7f g12 r24 q7f a12 r24 q75 a12 r24
+
+r12. o2 v120 y10
+(6)[q7f @38 b12 r24 q7f > c+12 r24 q75 c+12 r24 q72 c+12 r24 q7f @39 d12 r24 q7f @38 c+12 r24 q75 c+12 r24 q72 c+12 r24 <
+q7f b12 r24 q7f @39 a12 r24 q75 a12 r24 q72 a12 r24 q7f g12 r24 q7f a12 r24 q75 a12 r24 q72 a12 r24]4
+$FA $02 $03 (6)2 $FA $02 $00
+@42 o4 v134
+[[$FA $02 $00 (7)[q7f e12 q7a e24 q7f e12 r24 e12 r24 r12.]2 $FA $02 $01 (7)2]]2
+$FA $02 $03 (7)2 $FA $02 $05 (7)2 $FA $02 $03 (7)2 $FA $02 $07 (7) q7f e12 q7a e24 $FA $02 $00 q7f 
+@44 v210 o3 b4
+

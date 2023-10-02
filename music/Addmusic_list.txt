@@ -171,3 +171,6 @@ A9  Kirby's Dream Land 3 - Iceberg.txt
 AA  DSOT_mml.txt
 AB  Meme Organ.txt
 AC  kayoto.txt
+AD  Super Marisa World - World 2.txt
+AE  Kirby and the Amazing Mirror - Cabbage Cavern.txt
+AF  Quiet Forest.txt

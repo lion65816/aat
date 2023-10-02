@@ -1,0 +1,122 @@
+#amk 2
+
+#path "quietforest"
+
+#spc
+{
+    #title   "Quiet Forest"
+    #game    "Kirby 64: The Crystal Shards"
+    #author  "Jun Ishikawa"
+    #comment "Ported by Fyre150"
+}
+
+#samples
+{
+	#quiet-forest
+	"01 wood.brr" 
+	"02 ding.brr" 
+	"03 dong.brr" 
+	"04 santa.brr" 
+	"05 thing.brr" 
+	"06 voice.brr" 
+	"07 wave.brr" 
+}
+
+#instruments
+{
+	"01 wood.brr" $CF $67 $7F $09 $1B ; @30
+	"02 ding.brr" $9F $4D $7F $06 $D4 ; @31
+	"03 dong.brr" $8F $4C $7F $04 $88 ; @32
+	"04 santa.brr" $00 $00 $DF $08 $98 ; @33
+	"05 thing.brr" $00 $00 $F2 $05 $12 ; @34
+	"06 voice.brr" $00 $00 $DF $05 $BE ; @35
+	"07 wave.brr" $AE $2E $7F $09 $1B ; @36
+}
+
+
+;-----------------------;
+;        Echo           ;
+;-----------------------; 
+$EF $FF $2E $D2 
+$F1 $04 $5D $01 
+$F5 $10 $22 $24 $20 $28 $F8 $F8 $F8
+
+
+;-----------------------;
+;        Macros         ;
+;-----------------------; 
+"VF10 = v60 $E8$C0$50"
+"VF11 = $E8$90$64"
+"VF12 = $E8$F0$56"
+"VF13 = $E8$90$4B"
+
+
+;-----------------------;
+;       Channels        ;
+;-----------------------;
+#0 $F4$02 l8 w145 / v165 t48
+@31 o2 [cg>debed<g]12 [[$FA$02$FE *3 $FA$02$00 *3]]2
+$FA$02$FF *2 $FA$02$FE *2 $FA$02$FC *2
+$FA$02$00 [[<g>db>dgd<bd]]2 [[<f+>c+g+a+>f<a+g+c+]]3
+
+
+#1 @31 l16 v115 o2 r
+(10)[y14 g y6 g y14 c y6 c y14 g y6 g> y14 d y6 d 
+y14 e y6 e y14 b y6 b y14 e y6 e y14 d y6 d<]12 
+$FA$02$FE (10)3 $FA$02$00 (10)3 $FA$02$FE (10)3
+$FA$02$00 (10)2 y14 g y6 g y14 c 
+t49 y6 c y14 g y6 g> y14 d 
+t47 y6 d y14 e y6 e y14 b 
+t43 y6 b y14 e y6 e y14 d
+@35 o1 y8 t41 VF10 b4 t48 ^4 t50 ^4 t56 ^4 VF11 ^1 
+a+1.. t55 ^4 g+1^1 g1. VF12 ^2
+t54 f+4 t53 ^4 ^4 t52 ^4 ^4 t51 ^4 t50 ^4 t48 ^4 
+t45 VF13 ^4 t40 ^4 t36 ^4 t32 $FA$01$AE ^4
+
+
+#2 l8 v150 y10
+@30 o4 $ED$4F$24 q7e b1 q7d a1 q7f b> q7c c q7b d< q7a b 
+q7e a4 q7c g4 q7a a2.. $ED$2F$9A ^8
+@34 o3 q7a f+gaf+e4d4e2. $FA$01$B9 ^8
+@30 q7d c-b2..c-a2..c-b> q7c c q7d d q7b e< 
+q7d b4 q7c a4 q7b g2.. $ED$2F$9A ^8
+@34 o3 q7a f+gabf+6e6d6e2.. $FA$01$B9 ^8
+@32 o4 y6 q7d $FA$02$FE (20)[b2e2d2e2] (21)[b4d4e4b4]
+$FA$02$00 (20) (21) $FA$02$FE (20) (21) $FA$02$00 (20) b4d4e4a4
+@30 l4 y10 q7e $ED$4F$47 [ba+g+f+ff+g+f] $FA$02$FF * $FA$02$FD *
+$FA$02$00 g2<b2a2b2>f2<a+2g+2 q7c a+2> 
+q7b f q7a <a+>c+8f+8 q79 g+8 q78 a+8
+
+
+#3 l8 v150 y10 [[r2]]8
+@34 o3 q7a def+dc4c-4c2. $FA$01$B9 ^4 [[r2]]8
+@34 o3 q7a def+gd6c6c-6c2.. $FA$01$B9 ^8
+@32 o4 y14 q7d r4 $FA$02$FE (20) (21) $FA$02$00 (20) (21)
+$FA$02$FE (20) (21) $FA$02$00 b2e2d2e4.b4d4e4a8
+@35 o4 y9 VF10 d+1 VF11 c+2d+2 d1c2d2
+c1<a+2>c2 d1. VF12 ^2 c+1^1 VF13 ^2. $FA$01$AE ^4
+
+
+#4 l16 v90 y9 [[r2]]24
+@36 o4 $FA$02$FE [de]24 $FA$02$00 *24 [aa+]24 
+[gb+bb+bb+]5 bb+ * b [[gb+b]]3
+@35 o3 y11 VF10 b1 VF11 ^1 a+1^1 
+g+1^1 g2b2a2 VF12 b2 a+1^1 VF13 ^2. $FA$01$AE ^4
+
+
+#5 l8 v120 y9  
+@33 o4 [q7b c4 q7a c4. q7b c4 q78 c]12
+[[*2 q7a rccc4 q7b c4 q79 c]]4
+@35 o3 y11 VF10 f+1 VF11 ^1 f1^1 
+d+1^1 d1. VF12 ^2 f+2f2f+2g+2 VF13 f4f+4g+4f=1 $FA$01$AE ^=47
+
+
+#6 @31 l16 v115 o2 [[r2]]48
+$FA$02$FF r (10)2 $FA$02$FE (10)2 $FA$02$FC (10)2 y14 g y6 g
+$FA$02$00 [[<y14 g y6 g> y14 d y6 d y14 b y6 b> y14 d y6 d
+y14 g y6 g y14 d y6 d< y14 b y6 b y14 d y6 d]]2
+[[ [<y14 f+ y6 f+> y14 c+ y6 c+ y14 g+ y6 g+ y14 a+ y6 a+> 
+y14 f y6 f< y14 a+ y6 a+ y14 g+] y6 g+ y14 c+ y6 c+]]2 *
+
+
+#7 @33 l8 v120 y9 q7b o4 [[r2]]48 [[c]]88

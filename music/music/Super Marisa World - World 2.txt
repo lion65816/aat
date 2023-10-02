@@ -1,0 +1,176 @@
+#amk 2
+#path "MarisaWorld"
+
+#spc
+{
+    #title   "Super Marisa World - World 2"
+    #game    "Super Marisa World"
+    #comment "Port by Luckwaive"
+}
+
+#samples
+{
+#default
+"cymbal.brr"
+}
+
+#instruments
+{
+"cymbal.brr" $DF$72$00$07$00 ;@30
+}
+
+$F4$08
+
+$EF$23$20$20
+$F1$05$20$00
+
+(!800)[$ED$3F$6D]
+(!801)[$ED$7F$F6]
+
+#0 w237 t66
+$FA $03 $70
+@3 v255 o4
+$ED$5C$4F
+$DB$0B
+
+l8 [gab]3>c+ v241 d+e $ED$5C$2F f+4.
+$ED$5C$4F v255 <f+[gab]2ga4> $ED$5C$2F v241 a4f+4< v255
+
+$ED$5C$4F
+dg+a2.c+g/(1)[g+2.<b>ef+4d+2.r2.dg+a2.c+gg+2.<b>e]
+f+4bf+b2.r2
+dg+a2.c+g(1)d+2.r4.
+
+@2 v127 <g+>e4a l16 f+8 ^4 $DD$00$3C c+r8 ;f+8 ^4 $DD$00$3C$A5 r8 OR f+8 ^4 $DD$00$3C c+16r
+
+@3 v240 $ED$5C$4F l8 bf+4>d+<b4bf+bg+4>ed+<b4<a+16b16>dd+f+dd+g+2c+<b>ef+c+<bf+4.
+<f+16b16>>d+16b16>d+4d+c+<b16a+16ag+bg+e<a+16b16>gf+d+16<b16f+4>bg+>d+4<c+16d16c+16d16c+4.
+
+v244 d+ef+2.d+ef+4>ed+2.r<<g>d16<g16>ega4<a>c+16<a16>deg+aa4>c+<b4.
+ef+b>c+d+4< v241 b>c+d+4.<ef+g[abg]2<bab>c+ v237 aa+b>c+d+2^8<a+b>c+d+4ed+4.
+<<f+g+a4g16b16>d16e16g16a16b>d4<<g+16a16>c+16d16e16g+16a16>d+16e16g+16a4.e
+d+4.<ab>d+ef+4<ab>d+4.<ef+gabgab>d<g16g+16ab>c+<ab>c+4
+
+c+4c+<f+4f+f+4f+4>c+4c+<f+f+4>c+ v234 <f+4>c+f+4c+4f+c+f+4.r v179 c+< v214 b v255 a2.c+g
+
+#1
+$FA $03 $5B
+@0 v048 o5
+$ED$0D$EB
+$DB$0B
+$DE$0C$C0$24
+l1 [r]4r2../r8[r]3 dc+< $ED$0D$E8 br $ED$0D$EB
+>f+g+f+c+dc+d+c+
+d+2.f+4d+4.f+8d+4c+4<b2>d+2c+2f+2d+
+
+r^8
+$DF
+
+@3 v196 o4
+$ED$5C$4F
+$DB$0B
+l8 <b16f+16d+>f+16g16g+d+b<br2r
+
+@2 v091
+$DB$0C
+>f+rf+4.ed+4f+rf+4g+f+4.ed+r1..
+v077 ara4.f+a4arf+r
+
+@3 v197
+$ED$5C$4F
+$DB$0B
+f+ab4d+r1.ref+g+a+b4.r4.g+a+b4.r4.<d+4f+4r1.>> v244 e4 v197 r1^4<egb4d+r1^4egaega4r2.> v217 c+4r2.c+4
+
+@0 v048 o5
+$ED$0D$EB
+$DB$09
+$DE$0C$C0$24
+[r1]3
+
+#2
+$FA $03 $50
+@16 v121 o4
+$DB$08
+(!800,-1)
+(!801,3)
+
+[b>c+d<]2b>c+d+<b>c+d<b^4f+[b>c+d<]2b>c+4f+4f+4r
+
+v115 ed+drd4r<f+4/r4>c+4r4.<f+4r4b4 v135 b>ef+d16d+^16c+4r v110 <b>r^2 v121
+d4r<a4r4>c+4r4.<f+4re16f+16b4
+rb4<b>c+eaba>f+ed4rdrdedc+4rc+<f4g+af+4b4rb4r>c+4r<a4>c+red4r
+d4r<f+4r4g+bf4d+ef+4rf+b4>d+<b24>c+24<b24ag+>e4a l16 f+8 ^4 $DD$00$3C$A5 r8
+
+l8 d+<b4>f+d+4.rd+<b4>g+d+4c+4<br>crc+4r4c+4e4f+<b16a+16f+4>f+d+4af+4r4f+d+4bg+4g4f+rerd+4r4
+v153 <<c+d+ef+g+a+b>c+ v125 b4bd+16b16[d+b4]3f+bagrg<b>db4c+[a4e]2a4b4b<b4>b4d+brb4rb4
+a16a+16brarg4rb16>c16c+r<bra4r4.b4<b>f+d+b>c+<b4[b4r]2d4br4b4r4.>c+r4e4
+d+4r4.<b4rb4r2..g4.f+12e24d4.g12g+24a4ra12b24a4r4 f+bf+4<b>>f+4r[f+r]2f+16r16f+4[r1]2 v105 d+ v115 drd4r<f+4r
+
+#3
+$FA $03 $50
+@16 v113 o4
+$DB$08
+(!800,-1)
+(!801,3)
+
+[gab]3d+ef+f+^4r[gab]2ga4>[c+4]2 v107 r<ba+ara4r4./r4b4r4.c+4<b4> v115 f+4rf+4a4a< v130 a>c+f+<a4 v90 >d4r v107
+a4rf+4r4b4r4.c+4r^2f+4r2.>dc+<b4af+af+g+ar4<g+r2..>f+4< v141 b16>c+16dc+<b> v107 a4rf+4aera4ra4r^2c+r4.<b>c+d+4r2..e>c+4f+ l16 d+8 ^4 $DD$00$3C$AE <r8
+
+l8 [r1]2f+rgrg+4r1^4>d+<b4>f+d+4r4d+<b4>g+e4r4d+r4.<g+4r1^4 v113 f+4f+r2<b>f+4f+f+4rd+rdrgr4g4r^4^1f+r4f+4r^2d+f+4f16f+16grf+re4r4arg+gf+fed+4f+4r^2
+d+4d+4<b>f+4e<b4>gd16r16dg4rc+4ar16e16e>c+4<b4rd+ef+4d+f+4d+d+f+bf+bad4.r<a4.r>e4r1^4. >c+4<f+>c+<bag+16g16f+2r1... v100 a+ v107 ara4r4.
+
+#4
+$FA $03 $4A
+@8 v181 o2
+$ED$2F$26
+$DB$0C
+[r1]3r2.ed+d4raa4r/dc+4rg+g+4rc+<b4r>f+4$DD$18$3C$8E ^8 r<ba4r>ee4r<a>
+d4rg+a4rdc+4rgg+4rc+<b4>rff+4r<b>c+4rg+
+
+@14 v209
+f+r<f+r>
+
+@8 v181
+d4ra4.rdc+4rg+4.rc+<b4>rff+4r<ba4>ree.$DD$0C$24$8D ^16<a4>d4raa4rc+c+4rg+g+4rc+<b4>rgf+4r<b>c+4rg+f+.$DD$0C$24$8F ^16<f+4
+v207 b4r>f+4r<f+4g+4r>d+<g+4g4f+4rf+16g16g+4rg+>c+4rf+4r<f+4b4r>f+4r<a+ag+4r>d+<g+4g4f+4b4g+4rg+>c+4r<f+4r4b
+b4r>f+4r<brb4r>f+4r<f+rg4r>d4r<gra4r>e4r<aa+b4r>f+rf+4<b4r4>f+4r<b4g4r>dd4r<ga4r>ee4r<ab>c+d+f+4r<brb4r>f+16g16f+4<f+r
+g4r>d4r<gra4r>e4r<aa+b4r>f+rf+.$DD$0C$24$8F ^16<b4r4>f+<b4a4g4rb12>c+24d4r<ga4r>d12d+24e4r<ab4r>f32 $DD$03$0C$92 ^4 $DD$13$24$91 ^16^32
+<b16>c+16<bb4r>f+4ra4 v179 <b4r>f+4r<b4b4r>f+4<f+>c+c+d4raa4r
+
+#5
+$FA $03 $52
+@21 o3 v153
+$DB$0A
+l8 br [@23 >f<@21br]4 @29 v146 >c+4< v153 @21 br [@23 >f<@21br]2 @23 >f @29 v146 [c+4]2 [c+16]3 c+r16< v153
+@21 br @23 >f< @21 bbr @23 >f< / @21 b [br @23 >f< @21 b]3 b @10 >f+ @23 f< @21 b @10 >f+r @23 f< @21 b [br @23 >f< @21 b]6
+b @10 >f+ @23 f< @21 b @10 >f+r @23 f @10 f+r @29 v146 [c+16]2c+ < [a16]2a > v153 @23 rf< @21 b [br @23 >f< @21 b]4 [b]5 r @23 >f< @21 b[br]2 [br @23 >f< @21 b]5
+rb @23 >f< @21 [b]6 @29 v146 >c+ <a16ar16
+@30 v139 a+2 ;cymbal
+>@10 v153 f @12 < [e16]2 [c+16]2 < [a+16]2>
+@30 v139 a+2 ;cymbal
+>@10 v153 f @12 << [a+16]2 [g16]2 [e16]2 > [@21 br @23 >fr<]2 @21 b @12 < [e16]2e>[e16]2e<[a+16]2a+[g16]2>
+@30 v139 a+2 ;cymbal
+>@10 v153 f @12 < [a+16]2 [g16]2 [e16]2
+@30 v139 a+2 ;cymbal
+>@10 v153 f @12 << [e16]2 [c+16]2 < [a+16]2 >> @21 br @23 >fr4.fr
+@30 v139 <a+4.> ;cymbal
+@29 v146 [c+]3 [c+16]4< v162
+[@21 br @29 v146 >c+< v162 @21 bbr @29 v146 >c+r< v162]3 @21 br @29 v146 >c+< v162 @21 bb @29 v146 >c+<g16gr16 v162
+@21 br @29 v146 >c+< v162 @21 bbb @29 v146 >c+< v162 @21 br4 @29 v146 >c+< v162 @21 bbr @29 v146 >c+r16<a16 v162
+@21 br @29 v146 >c+< v162 @21 bbr @29 v146 >c+r< v162 @21 br @29 v146 >c+< v162 @21 bb @29 v146 >[c+16]2c+< v162
+@21 [b16]2br @29 v146 >c+r16< v162 @21 b16bb @29 v146 >c+< v162 @21 bbr16b16 @29 v146 >c+< v162 @21 bbr16b16 @29 v146 >c+r< v162
+@21 br @29 v146 >c+< v162 @21 [b]3 @29 v146 >c+r16<a16 v162 @21 bb @29 v146 >c+< v162 @21 [b16]2[b]2 @29 v146 >c+< v162 @21 b16 @29 v146 >c+16< v162
+@21 br @29 v146 >c+r16< v162 @21 b16[b]2 @29 v146 >c+< v162 @21 brb @29 v146 >c+16< v162 @21 b16[b]2r16b16 @29 v146 >c+< v162 @21 b16br8.
+[@29 v146 >c+< v162 @21 [[b]]2r]3 v153 [@23 >f< @21 [[b]]2r @23 >f< @21 br4]3 [@23 >f< @21 br4]2 @29 v146 >c+r< v153
+@21 br @23 >f< @21 bbr @23 >f<
+
+#6
+$FA $03 $5B
+@2 v071 o4
+$DB$0C
+l8 [r1]4r2../r[r1]28rarf+4a4f+r1.r
+[g+]2f+4.ed+4ere4f+4f+2[r1]2
+a4.f+a4arf+4arf+4a4f+[r1]2
+[a4]2af+[a]3a4[a]2a2[r1]2r2.
+
+#7

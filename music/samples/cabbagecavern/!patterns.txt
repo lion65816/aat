@@ -1,0 +1,15 @@
+"slap bass.brr"			$FF $EE $B8 $11 $F0 $8C $40 $40
+"kick.brr"				$FF $E0 $B8 $07 $40 $A4 $40 $40
+"snare.brr"				$FF $E0 $B8 $07 $A0 $A4 $40 $40
+"closed hi-hat.brr"		$FF $E0 $B8 $07 $A0 $A4 $40 $40
+"open hi-hat.brr"		$FF $E0 $B8 $05 $B0 $A4 $40 $40
+"finger bass.brr"		$AF $B2 $B8 $0E $F0 $A4 $40 $40
+"wasp synth.brr"		$FF $E0 $B8 $04 $00 $A4 $40 $40
+"tom.brr" 				$FF $E0 $B8 $07 $A0 $A4 $40 $40
+"chord1.brr" 			$AF $E0 $B8 $0B $35 $A4 $40 $40
+"chord2.brr" 			$AF $E0 $B8 $0A $00 $A4 $40 $40
+"ooh.brr" 				$FF $E0 $B8 $07 $90 $A4 $40 $40
+"trumpet.brr"			$FF $E0 $B8 $04 $00 $A4 $40 $40
+"wasp synth chord.brr"	$FF $E0 $B8 $04 $80 $A4 $40 $40
+"blown bottle.brr"		$FF $E0 $B8 $03 $00 $A4 $40 $40
+"am_orchhit.brr" 		$FF $E0 $B8 $03 $C0 $A4 $40 $40

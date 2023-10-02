@@ -11,6 +11,7 @@ level:
 004	LevelIntro.asm
 005	LevelIntro.asm
 006	LevelIntro.asm
+007	freescrollbabey.asm
 008	008.asm
 009	disableflight.asm
 00B	LevelIntro.asm
@@ -76,6 +77,9 @@ level:
 097	freescrollbabey.asm
 099  BG_AutoScroll99.asm
 0A0	DisableLR_freescrollbabey.asm
+0A1	freescrollbabey.asm
+0A2	freescrollbabey.asm
+0A3	freescrollbabey.asm
 0A4	BG_AutoScroll7B.asm
 0AA	freescrollbabey.asm
 0AF	special_smi2.asm
