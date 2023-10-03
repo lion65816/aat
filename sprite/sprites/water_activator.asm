@@ -1,4 +1,7 @@
-!Tile = $80
+!Tile1 = $80
+!Tile2 = $82
+!Tile3 = $84
+!Tile4 = $86
 
 !waterTimer = $1864|!addr  ;free RAM, must be shared with the uberasm for the levels that use it
 
@@ -64,7 +67,24 @@ LDA $00
 STA $0300|!addr,y
 LDA $01
 STA $0301|!addr,y
-LDA #!Tile
+LDA !extra_byte_1,x
+CMP #$18
+BCS +
+LDA #!Tile1
+BRA ++
++
+CMP #$38
+BCS +
+LDA #!Tile2
+BRA ++
++
+CMP #$58
+BCS +
+LDA #!Tile3
+BRA ++
++
+LDA #!Tile4
+++
 STA $0302|!addr,y
 LDA !sprite_oam_properties,x
 ORA $64

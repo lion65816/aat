@@ -5,7 +5,7 @@ db "KobaBeach            " ; 003
 db "Jolpengammler        " ; 004
 db "SAJewers             " ; 005
 db "PSI Ninja            " ; 006
-db "                     " ; 007
+db "Luckwaive            " ; 007
 db "Lord Ruby            " ; 008
 db "Nao                  " ; 009
 db "Talkhaus             " ; 00A

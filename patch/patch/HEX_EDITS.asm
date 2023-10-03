@@ -374,3 +374,17 @@ org $028D42|!bank
 ; Source: https://smwc.me/1226116
 org $00DCEC+$14
 	db $00					;> originally: $0E
+
+; Fix the "partially red" overworld Yoshi glitch.
+org $048A36
+	db $42,$22,$43,$22,$52,$22,$53,$22
+
+; Change palette rows for overworld Yoshi. Follows YXPPCCCT convention.
+;org $048CDF
+;	db $08					;> Yellow Yoshi (originally: $00)
+;org $048CE1
+;	db $0A					;> Blue Yoshi (originally: $02)
+;org $048CE3
+;	db $0C					;> Red Yoshi (originally: $04)
+;org $048CE5
+;	db $0E					;> Green Yoshi (originally: $06)
