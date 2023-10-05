@@ -97,28 +97,8 @@
 37 0022 0,0,0
 38 0020 Undefined Sprite
 38 0022 0,0,0
-39 0020 Undefined Sprite
-39 0022 0,0,0
 3B 0020 Undefined Sprite
 3B 0022 0,0,0
-3C 0020 Undefined Sprite
-3C 0022 0,0,0
-3D 0020 Undefined Sprite
-3D 0022 0,0,0
-3E 0030 An enemy from SMW2 that holds a sprite of your choice and drops it when Mario gets near. It will come back after it's dropped its payload.
-3E 0032 0,0,D9
-3E 0020 An enemy from SMW2 that holds a sprite of your choice and drops it when Mario gets near. It won't come back.
-3E 0022 0,0,37
-3F 0020 Undefined Sprite
-3F 0022 0,0,0
-40 0020 Baron Von Zeppelin. An enemy from SMW2 that holds a Galoomba and drops it when Mario gets near. SP3=A5
-40 0022 0,0,1C7 0,16,C
-40 0030 Baron Von Zeppelin. An enemy from SMW2 that holds a Galoomba and drops it when Mario gets near. It will come back after it's dropped its payload. SP3=A5
-40 0032 0,0,1C7 0,16,C 16,0,114
-41 0020 Birdo from SMB2. She spits out eggs and must be hit by 3 eggs in order to be defeated. SP4=A4
-41 0022 0,0,BF 0,-16,AF
-42 0020 The egg Birdo spits.
-42 0022 0,0,37
 43 0020 A parakoopa that flies on a circular style, clockwise.
 43 0022 0,-16,12 0,0,22 16,-16,7 -16,0,114
 43 0030 A parakoopa that flies on a circular style, counter clockwise.
@@ -139,8 +119,6 @@
 49 0022 36,20,114 4,4,B6 20,4,B6 12,4,B6 28,4,B6 36,4,B6 44,4,B6
 49 0030 Firebar Counter
 49 0032 36,-12,114 20,4,B6 12,4,B6 4,4,B6 28,4,B6 36,4,B6 44,4,B6
-4A 0020 Undefined Sprite
-4A 0022 0,0,0
 4B 0020 Undefined Sprite
 4B 0022 0,0,0
 4C 0020 Undefined Sprite
