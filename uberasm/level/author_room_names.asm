@@ -90,7 +90,7 @@ main:
 ; Tile numbers are based on GFX2A.
 ;;;;;;;;;;;;;;;;;;;;
 
-!props = $39	; YXPCCCTT (0011 1001) (white letters on black BG)
+!props = $2D	; YXPCCCTT (0010 1101) (white letters on black BG)
 
 !A_ = $00,!props : !B_ = $01,!props : !C_ = $02,!props : !D_ = $03,!props
 !E_ = $04,!props : !F_ = $05,!props : !G_ = $06,!props : !H_ = $07,!props

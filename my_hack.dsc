@@ -503,6 +503,8 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 5658	0	A block that acts like a mid-air suspended Spiny.
 5668	0	A block that acts like a mid-air suspended Spiny.
 5697	0	A block that acts like a mid-air suspended Spiny.
+5698	0	Spawns enemy sprite $74.
+56b6	0	Solid if anything goes left
 56c0	0	A giant question mark block which spawns sprite $78.
 56c1	0	A giant question mark block which spawns sprite $78.
 56d0	0	A giant question mark block which spawns sprite $78.

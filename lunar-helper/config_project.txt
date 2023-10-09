@@ -57,6 +57,8 @@ patches
 	patch\patch\1control.asm
 	patch\patch\lives.asm
 	patch\patch\playerpalupdate.asm
+	patch\patch\BetterBonusGame.asm
+	patch\patch\blockmask.asm
 ]
 -- patch\patch\ticking.asm
 -- patch\patch\bwram_plus.asm

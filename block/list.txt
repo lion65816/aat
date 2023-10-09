@@ -294,6 +294,8 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 5658:25 spinyblock14B.asm
 5668:25 spinyblock14B.asm
 5697:25 spinyblock14B.asm
+5698:129 ShoomBlock.asm
+56B6:25 one_way_right.asm
 R56C0-56D1:130 question_mark/giant_question_block_single.asm
 57B1:02  Waterfall.asm
 57C1:02  Waterfall.asm

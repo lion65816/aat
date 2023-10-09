@@ -160,6 +160,7 @@ level:
 13B	author_room_names.asm
 13D	DisableSideExit.asm
 13E	levelwarp.asm
+13F  vertical_level_end_fix.asm
 140	RequestRetry_freescrollbabey.asm
 141	NoStatus_with_hp.asm
 142	lowjump.asm
@@ -234,6 +235,12 @@ level:
 1D8	BabaBlocks.asm
 1DA	BabaBlocks.asm
 1DC	RemoveYoshi.asm
+1E1	author_room_names.asm
+1E2	author_room_names.asm
+1E3	author_room_names.asm
+1E4	author_room_names.asm
+1E5	author_room_names.asm
+1E6	author_room_names.asm
 1F6	hdmatest_freescrollbabey.asm
 1F7	hdmatest_freescrollbabey.asm
 1F8	hdmatest_freescrollbabey.asm
