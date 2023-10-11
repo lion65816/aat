@@ -47,10 +47,10 @@
 2E burnerh.json
 2F burnerv.json
 30 BossBass.json
-31 AngrySun-SMM2.json
-32 bomb_bro.json
-33 shell_bro.json
-34 propeller_block.json
+31 RealHomingBill2.cfg
+32 thwomps1.json
+33 shockwave.json
+34 haimari_ball.cfg
 35 thwomp_left.json
 36 thwomp_right.json
 37 thwomp_up.json
@@ -189,7 +189,7 @@ C2 missile_bill_shooter.cfg
 C3 missile_bill_shooter_v.cfg
 C4 diag_bill_up.cfg
 C5 diag_bill_down.cfg
-C6 vertical_bill_ud.cfg
+C6 RealHomingShooter2.cfg
 C7 falling_fireball_shooter.cfg
 C8 CustomShooter.cfg
 C9 BigSteelyShooter.cfg

@@ -55,11 +55,11 @@
 	Burner Vertical, Up
 30	Boss Bass
 	Boss Bass - Small
-31	Angry Sun
-	Happy Moon
-32	Bomb Bro
-33	Shell Bro
-34	Propeller Block
+32	Downwards Thwomp
+	Upwards Thwomp
+	Left Thwomp
+	Right Thwomp
+33	Shockwave
 35	Thwomp Left
 36	Thwomp Right
 37	Thwomp Up
