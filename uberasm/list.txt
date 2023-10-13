@@ -75,7 +75,7 @@ level:
 090	green_garden_main.asm
 095	Layer2Smash_095.asm
 097	freescrollbabey.asm
-099  BG_AutoScroll99.asm
+099	BG_AutoScroll99.asm
 0A0	DisableLR_freescrollbabey.asm
 0A1	freescrollbabey.asm
 0A2	freescrollbabey.asm
@@ -157,10 +157,9 @@ level:
 138	LevelIntro.asm
 139	LevelIntro.asm
 13A	LevelIntro.asm
-13B	author_room_names.asm
 13D	DisableSideExit.asm
 13E	levelwarp.asm
-13F  vertical_level_end_fix.asm
+13F	vertical_level_end_fix.asm
 140	RequestRetry_freescrollbabey.asm
 141	NoStatus_with_hp.asm
 142	lowjump.asm
