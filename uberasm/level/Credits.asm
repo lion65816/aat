@@ -61,5 +61,11 @@ main:
     LDA.b #!Speed
 	STA $7B
     .nospd:
+    
+    STZ $1401|!addr
+    LDA #$80
+	TRB $16
+	TRB $18
+	RTL
 	RTL
     

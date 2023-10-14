@@ -715,7 +715,7 @@ Graphics:
         STA $0301|!Base2,y
         LDA !Frame
         STA $0302|!Base2,y
-        LDA #$31
+        LDA #$21
         ORA $03
         STA $0303|!Base2,y
 
@@ -728,7 +728,7 @@ Graphics:
         LDA !Frame
         CLC : ADC #$20
         STA $0302|!Base2,y
-        LDA #$31
+        LDA #$21
         ORA $03
         STA $0303|!Base2,y
 
@@ -778,7 +778,7 @@ Graphics:
         STA $0301|!Base2,y
         LDA !Frame
         STA $0302|!Base2,y
-        LDA #$31
+        LDA #$21
         ORA $03
         STA $0303|!Base2,y
 
@@ -807,7 +807,7 @@ Graphics:
         STA $0301|!Base2,y
         LDA !Frame
         STA $0302|!Base2,y
-        LDA #$31
+        LDA #$21
         ORA $03
         STA $0303|!Base2,y
 
@@ -821,7 +821,7 @@ Graphics:
         LDA !Frame
         CLC : ADC #$20
         STA $0302|!Base2,y
-        LDA #$31
+        LDA #$21
         ORA $03
         STA $0303|!Base2,y
 
@@ -836,7 +836,7 @@ Graphics:
         LDA !Frame
         CLC : ADC #$02
         STA $0302|!Base2,y
-        LDA #$31
+        LDA #$21
         ORA $03
         STA $0303|!Base2,y
 
@@ -850,7 +850,7 @@ Graphics:
         LDA !Frame
         CLC : ADC #$22
         STA $0302|!Base2,y
-        LDA #$31
+        LDA #$21
         ORA $03
         STA $0303|!Base2,y
 
@@ -867,7 +867,7 @@ Graphics:
         LDA !Frame
         CLC : ADC #$02
         STA $0302|!Base2,y
-        LDA #$31
+        LDA #$21
         ORA $03
         STA $0303|!Base2,y
 
@@ -881,7 +881,7 @@ Graphics:
         LDA !Frame
         CLC : ADC #$22
         STA $0302|!Base2,y
-        LDA #$31
+        LDA #$21
         ORA $03
         STA $0303|!Base2,y
 
@@ -895,7 +895,7 @@ Graphics:
         STA $0301|!Base2,y
         LDA !Frame
         STA $0302|!Base2,y
-        LDA #$31
+        LDA #$21
         ORA $03
         STA $0303|!Base2,y
 
@@ -909,7 +909,7 @@ Graphics:
         LDA !Frame
         CLC : ADC #$20
         STA $0302|!Base2,y
-        LDA #$31
+        LDA #$21
         ORA $03
         STA $0303|!Base2,y
 
