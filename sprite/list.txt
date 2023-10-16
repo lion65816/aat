@@ -148,6 +148,8 @@
 96 EnemyStackV2_NoSway.json
 97 panser_green.cfg
 98 panser_blue.cfg
+99 big_boo_28.cfg
+9A NPC_priority_2.cfg
 9B VenusVerticalShortSpitTwo.cfg
 9E FireMagikoopa.json
 9F superfast_chain.cfg
@@ -155,7 +157,7 @@ A0 TorpedoTed.cfg
 A1 Geyser.cfg
 A2 CastleBlock.cfg
 A3 grrrol.cfg
-A4 NPC.cfg
+A4 NPC_priority_3.cfg
 A5 MontyMoleDis.cfg
 A6 tap_tap2.cfg
 A7 SMM2_Spike.json
@@ -197,6 +199,7 @@ CA sideways_bill_lr.cfg
 CB custom_bbshooter.cfg
 CC TapShooter.cfg
 CD torpedo_launcher.cfg
+CE EerieShooter.cfg
 
 D0 gusty_generator.cfg
 D1 no_spin_sfx.cfg

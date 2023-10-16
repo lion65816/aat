@@ -299,5 +299,5 @@ NameData:
  db "Use Of A Goal Posts"
  db "                 **"
  ;Level 13B
- db "Final Nall         "
+ db "Final Mall         "
  db "     (Name Pending)"

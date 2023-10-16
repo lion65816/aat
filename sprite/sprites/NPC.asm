@@ -1,6 +1,6 @@
 
-        ; NPCs (version 4.2 I guess)
-        ; made in 2021-22 by WhiteYoshiEgg
+        ; NPCs (version 4.3 I guess)
+        ; made in 2021-23 by WhiteYoshiEgg
 
         ; This is a sprite that doesn't hurt the player and doesn't interact with any other sprites.
         ; It can stay still, walk around, or jump, and also display a message if the player
@@ -29,6 +29,9 @@
         ; You shouldn't need to handle the details yourself, but if you're interested,
         ; the extra byte usage is documented at the bottom of this file.
 
+        ; AAT edits: Prints a "!" indicator if an NPC can be spoken to,
+        ; and the sprite priority can be specified in the first extra property byte.
+
 
 
 ; definitions
@@ -42,7 +45,7 @@
         !PowerupGivenFlag       = !1602,x
         !Frame                  = !1570,x
         !SolidContactOccurred   = !187B,x
-        !ShowIndicator          = $18CC|!addr   ;> PSI Ninja edit: Free RAM address.
+        !ShowIndicator          = $18CC|!addr   ;> AAT edit: Free RAM address.
 
         !WalkingTopLeftTile     = $00
         !JumpingTopLeftTile     = $04
@@ -62,7 +65,7 @@
 
         ; if you have applied the VWF Dialogues Patch, take note!
 
-        ; - do you have version 1.3 (released in 2022) or newer?
+        ; - do you have version 1.3 (released after 2022) or newer?
         ;   if so, it comes with a file called "vwfsharedroutines.asm".
         ;   copy that file into PIXI's "sprites" folder to make sure that the VWF dialogs work as intended.
         ;   if you don't do that, the NPC sprite should work anyway, it's just not recommended.
@@ -164,7 +167,7 @@ print "MAIN ",pc
         %prepare_extra_bytes()
 
         STZ !SolidContactOccurred
-        STZ !ShowIndicator                      ;> PSI Ninja edit: By default, don't show the indicator.
+        STZ !ShowIndicator                      ;> AAT edit: By default, don't show the indicator.
 
         LDA $9D
         BNE .return
@@ -621,7 +624,7 @@ endif
         AND #$C0                                ;  | don't show a message if not set to
         BEQ .dontShowMessage                    ; /
 
-        LDA #$01                                ;\ PSI Ninja edit.
+        LDA #$01                                ;\ AAT edit
         STA !ShowIndicator                      ;/
         PHX : PHY                               ; \
         %load_extra_byte(7)                     ;  |
@@ -635,6 +638,28 @@ endif
         PLY : PLX                               ;  |
         CMP #$00                                ;  |
         BEQ .dontShowMessage                    ; /
+
+        LDA $00 : PHA                           ; \
+        LDA !7FAB9E,x : STA $00                 ;  |
+        LDX #!SprSize-1                         ;  | if any other NPC sprite
+    -   CPX $15E9|!addr                         ;  | already has its message timer set,
+        BEQ +                                   ;  | don't show a message after all
+        LDA !7FAB10,x                           ;  | (kinda hacky but this should fix a lot of conflicts)
+        AND #$08                                ;  |
+        BEQ +                                   ;  |
+        LDA !7FAB9E,x                           ;  |
+        CMP $00                                 ;  |
+        BNE +                                   ;  |
+        LDA !MessageTimer                       ;  |
+        BNE ++                                  ;  |
+    +   DEX                                     ;  |
+        BPL -                                   ;  |
+        LDX $15E9|!addr                         ;  |
+        PLA : STA $00                           ;  |
+        BRA .showMessage                        ;  |
+    ++  LDX $15E9|!addr                         ;  |
+        PLA : STA $00                           ;  |
+        BRA .dontShowMessage                    ; /
 
 .showMessage
 
@@ -696,13 +721,13 @@ Graphics:
         AND #$30
         ;CMP #$30 : BEQ .32x32
         ;CMP #$10 : BEQ .16x16
-        CMP #$30
-        BNE +
-        JMP .32x32
-+
-        CMP #$10
-        BNE .16x32
-        JMP .16x16
+        CMP #$30                                ;\
+        BNE +                                   ;|
+        JMP .32x32                              ;| AAT edit
++                                               ;|
+        CMP #$10                                ;|
+        BNE .16x32                              ;|
+        JMP .16x16                              ;/
 
 .16x32
 
@@ -715,7 +740,8 @@ Graphics:
         STA $0301|!Base2,y
         LDA !Frame
         STA $0302|!Base2,y
-        LDA #$21
+        ;LDA #$31
+        LDA !extra_prop_1,x                     ;> AAT edit
         ORA $03
         STA $0303|!Base2,y
 
@@ -728,11 +754,12 @@ Graphics:
         LDA !Frame
         CLC : ADC #$20
         STA $0302|!Base2,y
-        LDA #$21
+        ;LDA #$31
+        LDA !extra_prop_1,x                     ;> AAT edit
         ORA $03
         STA $0303|!Base2,y
 
-        ;> PSI Ninja edit: Show the NPC message indicator when the player overlaps the NPC (use ExGFX18A in SP2).
+        ;> AAT edit: Show the NPC message indicator when the player overlaps the NPC (use ExGFX18A in SP2).
         LDA !ShowIndicator
         BEQ +++
         INY #4
@@ -758,7 +785,7 @@ Graphics:
         LDY #$02
         LDA #$02
         JSL $01B7B3|!BankB
-	BRA ++++
+        BRA ++++
 +++
         LDY #$02
         LDA #$01
@@ -778,7 +805,8 @@ Graphics:
         STA $0301|!Base2,y
         LDA !Frame
         STA $0302|!Base2,y
-        LDA #$21
+        ;LDA #$31
+        LDA !extra_prop_1,x                     ;> AAT edit
         ORA $03
         STA $0303|!Base2,y
 
@@ -794,7 +822,7 @@ Graphics:
 
         %GetDrawInfo()
 
-        LDA $157C,x
+        LDA !157C,x
         BNE + : JMP ..right : +
 
 ..left
@@ -807,7 +835,8 @@ Graphics:
         STA $0301|!Base2,y
         LDA !Frame
         STA $0302|!Base2,y
-        LDA #$21
+        ;LDA #$31
+        LDA !extra_prop_1,x                     ;> AAT edit
         ORA $03
         STA $0303|!Base2,y
 
@@ -821,7 +850,8 @@ Graphics:
         LDA !Frame
         CLC : ADC #$20
         STA $0302|!Base2,y
-        LDA #$21
+        ;LDA #$31
+        LDA !extra_prop_1,x                     ;> AAT edit
         ORA $03
         STA $0303|!Base2,y
 
@@ -836,7 +866,8 @@ Graphics:
         LDA !Frame
         CLC : ADC #$02
         STA $0302|!Base2,y
-        LDA #$21
+        ;LDA #$31
+        LDA !extra_prop_1,x                     ;> AAT edit
         ORA $03
         STA $0303|!Base2,y
 
@@ -850,7 +881,8 @@ Graphics:
         LDA !Frame
         CLC : ADC #$22
         STA $0302|!Base2,y
-        LDA #$21
+        ;LDA #$31
+        LDA !extra_prop_1,x                     ;> AAT edit
         ORA $03
         STA $0303|!Base2,y
 
@@ -867,7 +899,8 @@ Graphics:
         LDA !Frame
         CLC : ADC #$02
         STA $0302|!Base2,y
-        LDA #$21
+        ;LDA #$31
+        LDA !extra_prop_1,x                     ;> AAT edit
         ORA $03
         STA $0303|!Base2,y
 
@@ -881,7 +914,8 @@ Graphics:
         LDA !Frame
         CLC : ADC #$22
         STA $0302|!Base2,y
-        LDA #$21
+        ;LDA #$31
+        LDA !extra_prop_1,x                     ;> AAT edit
         ORA $03
         STA $0303|!Base2,y
 
@@ -895,7 +929,8 @@ Graphics:
         STA $0301|!Base2,y
         LDA !Frame
         STA $0302|!Base2,y
-        LDA #$21
+        ;LDA #$31
+        LDA !extra_prop_1,x                     ;> AAT edit
         ORA $03
         STA $0303|!Base2,y
 
@@ -909,13 +944,14 @@ Graphics:
         LDA !Frame
         CLC : ADC #$20
         STA $0302|!Base2,y
-        LDA #$21
+        ;LDA #$31
+        LDA !extra_prop_1,x                     ;> AAT edit
         ORA $03
         STA $0303|!Base2,y
 
 +
 
-        ;> PSI Ninja edit: Show the NPC message indicator when the player overlaps the NPC (use ExGFX18A in SP2).
+        ;> AAT edit: Show the NPC message indicator when the player overlaps the NPC (use ExGFX18A in SP2).
         LDA !ShowIndicator
         BEQ +++
         INY #4
@@ -1309,8 +1345,6 @@ SolidContact:
         LDA $04
         CLC
         ADC $06
-        DEC
-        DEC
         STA $0C
 
         LDA $0A
@@ -1319,6 +1353,8 @@ SolidContact:
 
         REP #$20
         LDA $0C
+        DEC
+        DEC
         STA $94
         SEP #$20
 

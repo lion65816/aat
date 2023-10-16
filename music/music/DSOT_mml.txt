@@ -6,7 +6,10 @@
 	#game "And Another Thing"
 }
 
-#0 w255 t60
+$EF$FF$20$20
+$f1$04$40$01
+
+#0 w200 t60
 @17 v220 o4
 a+4. f8 f+4. f8 
 d+4. a+8 g+4. d+8 
