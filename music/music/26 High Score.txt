@@ -1,0 +1,71 @@
+#amk 2
+
+#spc
+{
+    #title   "High Score"
+    #game    "Yoshi's Safari"
+    #author  "Nishimura, Uemura & Tokunaga"
+    #comment "Ported by Kevin"
+}
+
+#path "high-score"
+
+#samples
+{
+    #default
+    "03.brr"
+    "08.brr"
+}
+
+#instruments
+{
+    "03.brr" $8f $e6 $00 $0f $f0 ; @30
+    "08.brr" $8f $6c $00 $07 $03 ; @31
+}
+
+w190 t30
+
+#0 $f0 $f4$02 /
+v180 y10 (00)[@31 o4 l6 $de$26$14$28
+g f+ g > d3 c < b3 a+ a2 a g+ a > e3 d c3 d < b2
+> d c < b > c3 < f b3 a+ a2 d e f g a b > c2 d2]
+
+#1
+@30 v165 y10 o2 l6
+c2 c < g > c d+2 f+2 d2 q7e d q7f < a > d g3 d < g2
+> f2 g+2 e2 d+ a > d+ d3 < a d < a > d < g2 > g2
+
+#2
+@31 v155 y10 o4 l2 $de$26$14$28
+e6 d+6 e6 b f+ f+ f6 f6 f6 > c < a g+
+(21)[a g+ g f+ c d a b]
+
+#3
+v152 y11 (30)[@31 o4 l2 $de$26$14$28
+d g d+ d+ d a g f]
+(31)[g f e d+ < a a > g a]
+
+#4
+v152 y9 (40)[@31 o4 l2 $de$26$14$28
+c e c c c f f d]
+f d+ d c < f f > f g
+
+#5
+r16.
+
+v75 y9 $ee$16
+(00)
+
+#6
+r16.
+
+v70 y10 $ee$16
+(30)
+(21)
+
+#7
+r16.
+
+v70 y10 $ee$16
+(40)
+(31)

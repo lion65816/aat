@@ -1,0 +1,10 @@
+"creepy.brr" 				$FF $E0 $B8 $01 $40 $A4 $40 $40
+"kick.brr" 				$FF $E0 $B8 $03 $4F $A4 $40 $40
+"snare.brr" 				$FF $E0 $B8 $03 $4F $A4 $40 $40
+"power kick.brr" 			$FF $E0 $B8 $03 $4F $A4 $40 $40
+"power snare.brr" 		$FF $E0 $B8 $03 $4F $A4 $40 $40
+"synth chords.brr" 		$FF $E0 $B8 $05 $0A $A4 $40 $40
+"square synth.brr" 		$FF $EF $B8 $02 $7D $A4 $40 $40
+"sine.brr" 				$AF $20 $B8 $04 $00 $A4 $40 $40
+"snare acoustic.brr" 	$FF $E0 $B8 $03 $4F $A4 $40 $40
+"synth bass.brr" 			$FF $EC $B8 $02 $7F $A4 $40 $40

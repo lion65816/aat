@@ -174,3 +174,11 @@ AC  kayoto.txt
 AD  Super Marisa World - World 2.txt
 AE  Kirby and the Amazing Mirror - Cabbage Cavern.txt
 AF  Quiet Forest.txt
+B0  smb_metal.txt
+B1  Pizza Tower - The Death That I Deservioli.txt
+B2  Takeshi's Challenge - Main Theme.txt
+B3  mus_37.txt
+B4  Wario Land 4 - Hurry Up!.txt
+B5  Mother's Tormented Soul.txt
+B6  showdown_on_the_tower.txt
+B7  26 High Score.txt

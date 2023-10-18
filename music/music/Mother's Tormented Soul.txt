@@ -1,0 +1,1162 @@
+;==========================================;
+;	SPC Generator
+;==========================================;
+
+#SPC
+{
+	#title "Mother's Tormented Soul" ; ~ Pure Furies ~ Whereabouts Of The Heart (SNES Remix)
+	#game "Touhou LoL OK: Revenge of Junko"
+	#author "Jun'ya ''ZUN'' Ota"
+	#comment "arr. Hooded Edge"
+	#length "auto"
+}
+
+;==========================================;
+;	THIS RIGHT HERE IS DEFINITELY IMPORTANT!!
+;==========================================;
+
+;	To change the pitch of the song, replace the number after
+;	"PITCH" to any number between whatever's included below.
+;	This won't affect the percussion / sfx by this at all.
+
+;	To change the VOICE of the song, replace the number after
+;	"VOICE" to any number between whatever's included below.
+;	This'll affect whether the voice clips appears in the song, 
+;	but it will disable SMW-Compatibility completely.
+
+;	This allows for awesome customization to fit your needs or your
+;	preferences... but if you know your stuff, then you should be able
+;	to go way beyond the limits I gave you here.
+
+;==========================================;
+;	Song Pitch
+;==========================================;
+
+	#define PITCH 2 ; Choose between 1 - 3
+	#define VERSION 2 ; Choose between 1 - 2
+
+;=================| Pitch |===================;
+
+;	1	= Pitch will be on the c# minor w/ slight detune (Remix - Listening-Only)
+;	2	= Pitch will be on the c# minor (Original)
+;	3	= Pitch will be on the c minor (Custom)
+
+;=================| Voice |==================;
+
+;	1	=	Enables the voice clip, but disables SMW-Compatibility completely (Voice Enabled)
+;	2	=	Disables the voice clip (Voice Disabled)
+
+;	To change the VOICE of the song, replace the number after
+;	"VOICE" to any number between whatever's included below.
+;	This'll affect whether the voice clips appears in the song, 
+;	but it will disable SMW-Compatibility completely.
+
+;==========================================;
+;	Samples
+;==========================================;
+
+#path "ARE-YOU-WATCHING-CHANG'E"
+
+;==========================================;
+
+#if VERSION == 1
+#SAMPLES
+{
+	"../default/02 SMW @2.brr"
+	"../default/04 SMW @4.brr"
+}
+#endif
+
+#if VERSION == 2
+#SAMPLES
+{
+	"../optimized/00 SMW @0.brr"
+	"../optimized/01 SMW @1.brr"
+	"../default/02 SMW @2.brr"
+	"../optimized/03 SMW @3.brr"
+	"../default/04 SMW @4.brr"
+	"../optimized/05 SMW @8.brr"
+	"../optimized/06 SMW @22.brr"
+	"../optimized/07 SMW @5.brr"
+	"../default/08 SMW @6.brr"
+	"../EMPTY.brr"
+	"../optimized/0A SMW @9.brr"
+	"../optimized/0B SMW @10.brr"
+	"../default/0C SMW @13.brr"
+	"../optimized/0D SMW @14.brr"
+	"../optimized/0E SMW @29.brr"
+	"../optimized/0F SMW @21.brr"
+	"../EMPTY.brr"
+	"../optimized/11 SMW @17.brr"
+	"../EMPTY.brr"
+	"../EMPTY.brr"
+}
+#endif
+
+#SAMPLES
+{
+	"Popful Mail Overdrive.brr"
+	"Chrono Pulse-Width Mod.brr" 
+	"KDL3 Trumpet.brr"
+	"MM7 Pulse 50%.brr"
+
+	"Wind String Ens.brr"
+	"EB Elec Piano.brr"
+	"S3 Slap Bass II.brr"
+
+	"Yasui Snare.brr"
+	"DR-660 Kick.brr"
+	"S-550 LA Tom.brr"
+	"TR-909 Hi-Hat.brr"
+	"R-8 Crash Cym.brr"
+}
+
+;==========================================;
+;	Instruments
+;==========================================;
+
+#INSTRUMENTS
+{
+	"Yasui Snare.brr" $9F $F5 $B8 $15 $A0 ; @30 snare
+	"DR-660 Kick.brr" $CF $FA $B8 $13 $00 ; @31 bass drum
+	"S-550 LA Tom.brr" $9F $F4 $B8 $0D $00 ; @32 tom
+	"TR-909 Hi-Hat.brr" $FF $FC $B8 $0A $80 ; @33 closed hi-hat
+	"TR-909 Hi-Hat.brr" $FF $F5 $B8 $0A $80 ; @34 open hi-hat
+	"TR-909 Hi-Hat.brr" $FE $FC $B8 $0A $20 ; @35 pedal hi-hat
+	"R-8 Crash Cym.brr" $9F $F2 $B8 $0A $00 ; @36 crash cymbal (c+1)
+	"R-8 Crash Cym.brr" $9F $F3 $B8 $0A $00 ; @37 crash cymbal (c+4)
+
+	"Popful Mail Overdrive.brr" $FF $E8 $B8 $03 $C0 ; @38 overdrive
+	"Chrono Pulse-Width Mod.brr" $FE $E6 $B8 $04 $02 ; @39 sawtooth
+	"KDL3 Trumpet.brr" $AB $C6 $B8 $04 $00 ; @40 trumpet
+	"MM7 Pulse 50%.brr" $FF $E0 $B8 $04 $01 ; @41 square
+
+	"Chrono Pulse-Width Mod.brr"  $FE $E0 $B8 $04 $02 ; @42 synth
+	"../default/02 SMW @2.brr" $AF $2E $B8 $03 $00 ; @43 musicbox
+
+	"Wind String Ens.brr" $F9 $E0 $B8 $01 $E8 ; @44 string chord
+	"../default/04 SMW @4.brr" $AE $F0 $B8 $03 $00 ; @45 brass chord
+	"EB Elec Piano.brr" $FF $F0 $B8 $04 $00 ; @46 electric piano chord
+	"S3 Slap Bass II.brr" $FF $EB $B8 $05 $C0 ; @47 slap bass
+}
+
+;==========================================;
+;	Main Macros
+;==========================================;
+
+	"@e = $F4 $03"
+	"%l = $F4 $01"
+
+	"($EE-X) = $EE $00"
+	"($FA-3X) = $FA $03 $00"
+	"$XR-X = $FA $02 $00"
+		"$XR- = $FA $02 $"
+	"($E8-X) = $E8 $00 $00"
+		"($E8-0) = $E8 $FF $1A" ; fade out
+	"($EC-X) = $EC $00 $00 $00"
+		"($EC-0) = $EC $00 $04 $02"
+	"(6T = (69"
+
+	"@rest = r2 /"
+
+;==========================================;
+;	Note Commands
+;==========================================;
+
+	"u = < @p c ($FA-3X) >"
+	"u16 = < @p c16 ($FA-3X) >"
+	"u8 = < @p c8 ($FA-3X) >"
+
+	"n+ = ($FA-3X) b+ @p"
+		"n+ n+ = ($FA-3X) b+ b+ @p"
+	"n+16 = ($FA-3X) b+16 @p"
+		"n+16 n+16 = ($FA-3X) b+16 b+16 @p"
+		"n+16 n+16 n+16 = ($FA-3X) b+16 b+16 b+16 @p"
+		"n+16 @open n+16 @closed n+16 = ($FA-3X) b+16 @open b+16 @closed b+16 @p"
+	"n+8 = ($FA-3X) b+8 @p"
+		"n+8 n+8 = ($FA-3X) b+8 b+8 @p"
+	"n+4 = ($FA-3X) b+4 @p"
+		"n+4 n+4 = ($FA-3X) b+4 b+4 @p"
+	
+	"k = @e c+ ($FA-3X) @e"
+	"k8 = @e c+8 ($FA-3X) @e"
+		"k8^ = @e c+8^ ($FA-3X) @e"
+		"k8^32 = @e c+8^32 ($FA-3X) @e"
+		"k8. = @e c+8. ($FA-3X) @e"
+	"k6 = @e c+6 ($FA-3X) @e"
+		"k6 k6 k6- @crash- -k4 = @e c+6 c+6 c+6 @crash- c+4 ($FA-3X) @e"
+	"k4 = @e c+4 ($FA-3X) @e"
+		"k4^ = @e c+4^ ($FA-3X) @e"
+		"k4^16 = @e c+4^16 ($FA-3X) @e"
+			"k4^16. = @e c+4^16. ($FA-3X) @e "
+		"k4. = @e c+4. ($FA-3X) @e"
+	"k2 = @e c+2 ($FA-3X) @e"
+		"k2. = @e c+2. ($FA-3X) @e"
+	"k1 = @e c+1 ($FA-3X) @e"
+		"k1. = @e c+1. ($FA-3X) @e"
+		"k1^1^1^1 = @e c+1^1^1^1 ($FA-3X) @e"
+	
+	"kx = c+ ($FA-3X)"
+	"kx8 = c+8 ($FA-3X)"
+		"kx8^ = c+8^ ($FA-3X)"
+		"kx8^32 = c+8^32 ($FA-3X)"
+		"kx8. = c+8. ($FA-3X)"
+	"kx4 = c+4 ($FA-3X)"
+		"kx4^ = c+4^ ($FA-3X)"
+		"kx4^32 = c+4^32 ($FA-3X)"
+		"kx4^16 = c+4^16 ($FA-3X)"
+			"kx4^16. = c+4^16. ($FA-3X)"
+		"kx4. = c+4. ($FA-3X)"
+		"kx4.. = c+4.. ($FA-3X)"
+	"kx2 = c+2 ($FA-3X)"
+		"kx2. = c+2. ($FA-3X)"
+	"kx1 = c+1 ($FA-3X)"
+		"kx1. = c+1. ($FA-3X)"
+		"kx1^1^1^1 = c+1^1^1^1 ($FA-3X)"
+
+;==========================================;
+;	Remote Commands
+;==========================================;
+
+	(!800)[ $F4 $09 ]
+	(!810)[ $ED $7F $FA ]
+
+	"@cmd_main = (!800, -1) (!810, 3)"
+	
+	"@cmd_main_off = (!800, 0) (!810, 0)"
+
+;==========================================;
+;	Instrument Macros
+;==========================================;
+
+		"(F00) = $ED $7F $F4 ^8"
+		"(F10) = $ED $7F $F2 ^4"
+		"(F20) = $ED $7F $F1 ^2"
+		"(F30) = $ED $7F $EF ^1"
+
+	"@overdrive = @38 v255 | $DE $16 $0A $2F"
+		"(V00) = v180 y10"
+	"@sawtooth = @39 v210 | $DE $16 $0A $2F"
+	"@zunpet = @40 v255 | $DE $20 $06 $4A"
+		"(B00) = $DE $20 $08 $2A"
+	"@square = @41 v180 | $DE $16 $0A $2F"
+
+	"@synth = @42 v200 | $DE $16 $0C $32"
+		"(V10) = v150"
+		"(V15) = v180"
+	"@musicbox = @43 v235 | $DF"
+
+	"@strchd = @44 v175 | $DE $00 $0A $1B"
+		"(V20) = v140 y10"
+	"@brasschd = @45 v180 | $DE $0A $0A $1B"
+	"@epiano = @46 v160 | $DE $00 $08 $14"
+	"@slapbass = @47 o4 v215"
+
+;==========================================;
+;	Percussion Macros
+;==========================================;
+
+	"@p = $FA $03 $4F"
+
+	"@snare = @30 v255 y10"
+	"@kick = @31 v215 y10"
+	"@tom = @32 v255"
+
+		"(vol) = v195"
+	"@closed = @33 v195 y9"
+	"@open = @34 v195 y10"
+	"@pedal = @35 v195 y10"
+	"@crash = v255 y10 | $FA $03 $DF"
+		"@crash+ = @36 | @crash"
+		"@crash- = @37 | @crash"
+
+;==========================================;
+;	Echo Values
+;==========================================;
+
+#if VERSION == 1
+	$F1 $05 $9D $01
+#endif
+
+#if VERSION == 2
+	$F1 $04 $9D $01
+#endif
+
+	$EF $BC $40 $B0 ; OFF - #0, #1, #6
+	$F4 $02
+
+;==========================================;
+;	DON'T MESS WITH THIS
+;	IF YOU DON'T KNOW WHAT YOU'RE DOING!!!
+;==========================================;
+
+#if PITCH == 1 ; Remix
+;	$E4 $00 ; c# minor w/ slight detune
+	"@rosalina = $EE $00 | $DF"
+	"@junko = $EE $28"
+#endif
+
+#if PITCH == 2 ; Original
+;	$E4 $00 ; c# minor
+	"@rosalina = $DF"
+	"@junko = "
+#endif
+
+#if PITCH == 3 ; Custom
+	$E4 $FF ; c minor
+	"@rosalina = h1 | $DF"
+	"@junko = h0"
+#endif
+
+;==========================================;
+;==========================================;
+
+#if VERSION == 1
+
+#SAMPLES
+{
+	"MJ SCREAM.brr"
+}
+
+#INSTRUMENTS
+{
+	"MJ SCREAM.brr" $00 $00 $7F $06 $00 ; @47 mj scream
+}
+
+	"@scream = @48 o3 v255 y10 | $FA $03 $FF | e4 ($FA-3X)"
+
+#endif
+
+
+;==========================================;
+;	Extras
+;==========================================;
+
+	"CHANNEL # = #"
+
+;==========================================;
+;	Global Volume / Tempo
+;==========================================;
+	w100
+	t72
+;==========================================;
+
+;==========================================;
+	CHANNEL #0 | @rosalina @p
+;==========================================;
+
+@snare o3 | l8
+r4 c16 c16 c16 c16 @kick
+
+(000)[ [[ c r4 ]]4 c r ] c r 
+(000) @snare c32 c32 c16 c16 c16 @kick
+
+(001)[ c r @snare c @kick c16 c r16 @kick c @snare c4 @kick
+c r @snare c. @kick c r16 c @snare ] c @kick c16 @snare c16 @kick
+(001) c16 c16 c16 c16 / @kick
+
+c c (002)[ @snare c @kick c16 @snare c. @kick
+c @snare c4. @kick c @snare c4 @kick
+c c @snare c @kick c16 @snare c16 @kick
+c c @snare c @kick c16 @snare ] (003)[ c. @kick
+c @snare c4. @kick c @snare c. @kick c r16 c @snare c c16 c16 @kick ]
+c c16 @closed n+16 (002) (004)[ c @kick c16 c @snare c4 @kick 
+c @snare c c @kick c @snare c @kick c @snare c16 c c16 @kick ]
+
+c c @snare c32 c32 c16 c16 c16 @kick
+
+(010)[ c16 (vol) @closed n+16 n+ @snare c. @kick c16 c c @snare c4. @kick
+c @snare c. c16 @kick c c @snare c @kick
+c16 (vol) @closed n+16 n+16 n+16 @kick c @snare c. @kick c16 c c @snare ] c4 @kick
+(011)[ c r @snare c. c16 @kick c c @snare c c16 c16 @kick ]
+(010) c. @kick c16 
+(012)[ @snare c6 c6 c6 @snare c @kick c16 @closed n+16 @snare c16 c16 c16 c16 @kick ]
+
+(013)[ c16 @closed n+16 n+16 n+16 @snare c. @kick c16 c c @snare c4. @kick 
+c @snare c. c16 @kick c c @snare c ] (014)[ @kick 
+c16 @closed n+16 n+16 n+16 @kick c @snare c. @kick c16 c c @snare c4. @kick 
+c @snare c. c16 @kick c c @snare c c16 c16 @kick ]
+(013) (016)[ c @kick 
+c16 @closed n+16 @kick c @snare c4 c @kick c @snare c16 c16 c16 c16 ]
+c4. @kick c c @snare c c16 c16 c16 c16 @kick
+
+(020)[ c16 @closed n+16 @kick c16 @closed n+16 @snare c4 @kick c c @snare c4. @kick
+c @snare c4 @kick c16 c16 c @snare ] (021)[ c4 @kick 
+c c @snare c4 @kick c c @snare ] (022)[ c4. @kick
+c @snare c. c @kick c16 c @snare c16 c16 c @kick ]
+(020) (021) c4. @kick
+c @snare c. c16 @kick c c @snare c16 c c16 @kick 
+(020) (021) (022) 
+(020) (021) c4. @kick
+c @snare c4 c4 c16 c16 c16 c16 @kick 
+(020) (021) (022) 
+(020) (021) c4. @kick
+c @snare c. c16 @kick c c @snare c16 c c16 @kick 
+(020) (021) (022) 
+(020) (021) c4. @kick
+c @snare c4 c @kick c @snare c24 c24 c24 c16 c16 @kick
+
+(030)[ c @pedal n+ @snare c @kick c16 @snare c @kick c16 c r @snare c @kick
+c r @snare c. @kick c c c r16 @snare c16 c16 @kick
+c r @snare c @kick c16 @snare c16 @kick c16 @snare c16 @kick c @snare c @kick c ]
+c c @snare c @kick c @snare c @kick c16 @snare c @kick c16 @snare c16 c16 @kick
+(030)
+
+r2 c c16 c16 @snare c16 c16 c16 c16 @kick
+
+(010) c4 @kick (011)
+(010) c. @kick c16 (012)
+
+(013) (014) (013) (016)
+c c @snare c4 c @kick c @snare c16 c16 c16 c16 @kick 
+
+(020) (021) (022) 
+(020) (021) c4. @kick 
+c @snare c. c16 @kick c c @snare c16 c c16 @kick 
+(020) (021) (022) 
+(020) (021) c4. @kick 
+c @snare c4 c4 c16 c16 c16 c16 @kick 
+
+(020) (021) (022) 
+(020) (021) c4. @kick
+c @snare c. c16 @kick c c @snare c16 c c16 @kick 
+(020) (021) (022) 
+(020) (021) c4 
+c @kick c @snare c4 c @kick c @snare c16 c16 c16 c16 @kick 
+(020) (021) (022) 
+(020) @snare c @kick c16 @closed n+16 
+@open n+16 @closed n+16 @kick c @snare c4 @kick c c @snare c4. @kick 
+c @snare c. c16 @kick c c @snare c16 c c16 @kick 
+(020) (021) (022) 
+c16 @closed n+16 @kick c16 @closed n+16 @snare c4 @kick c c @snare c @kick c16 
+@closed n+16 @open n+16 @closed n+16 @kick c @snare c. c16 @kick c16 c16 c @snare c c @kick 
+c16 @closed n+16 @kick c @snare c4 @kick c c @snare c4 
+c4 c4 c4 c16 c16 c16 c16 @kick 
+
+(020) (021) (022) 
+c16 @closed n+16 @kick c16 @closed n+16 @snare c4 @kick c [ c @snare c @kick c16 @closed n+16 
+@open n+16 @closed n+16 @kick c @snare ] c. c16 @kick c16 c16
+* c4 @kick c
+* c. c16 @kick c c @snare c16 c c16 @kick 
+(020) (021) (022) 
+c16 @closed n+16 @kick c16 @closed n+16 @snare c4 @kick c
+*  c. c16 @kick c16 c16 c @snare c c @kick 
+c16 @closed n+16 @kick c @snare c4 @kick c c @snare c4 
+c4 c4 c @kick c @snare c16 c16 c16 c16 	
+
+> @crash+ k1^1^1^1 < @kick 
+[[ c r4. ]]6 c r c r c r @snare c16 c16 c @kick 
+
+c c16 @closed n+16 (002) (003)
+c c16 @closed n+16 (002) (004)
+
+;==========================================;
+	CHANNEL #6 | @rosalina
+;==========================================;
+
+o4 | l16
+@tom y13 d y12 d < y11 b+ y10 b+ y9 a y8 a y7 g y6 g > @closed
+
+[[ (600)[ c8 c c @open c8 @closed ]4 (601)[ c c @open c8 @closed ]2 ]]2
+[[ (600)2 (602)[ c8 @kick u @closed c @open c8 @closed ] (600) (601)2 ]]2 /
+
+(600) (603)[ c8 c @kick u @open c8 @closed ] (602) (600)
+(601)2 (600) (603) (602) (600)
+(601)2 @crash- k4 @open c8 @closed (603) (602) (600)
+(601)2 (600)2 c8 c c @crash- k4 @closed (601)3 
+
+@tom y6 d y7 d < y8 b+ y9 b+ y10 a y11 a y12 g y13 g >
+
+(615)[ @crash- k4 @open c8 @kick u @closed c ] 
+(610)[ c c c8 @open c8 @kick u @closed c ]2 
+(611)[ c c c8 @open c8 @crash- k4 @closed c8 @open c8 @kick u @closed c ] (610)3 
+(615) (610)2 (611) (610) 
+
+(612)[ @crash+ k6 k6 k6- @crash- -k4 @tom y13 d < y11 b+ y9 a y7 g > ]
+
+@crash- k4 [[ (617)[ @open c @closed c @kick u @closed c ]
+(616)[ @open c @closed c c c ] ]]3 
+(618)[ @open c @closed c @crash- k4 @closed c c ] [[ (617) (616) ]]3
+(617) 
+@crash- k4 [[ (617) (616) ]]3 
+(618) (617) (616)2 @crash+ k2^8 (6T0)[ @tom y11 d y10 d < y9 b+ y8 b+ y7 a y6 a > ]
+
+(625)[ @crash- k4 @open c8 @closed c @kick u @closed ]
+(620)[ c c c c @open c8 @kick u @closed c ]
+(621)[ c c c c @open c8 @closed c c ] (620) 
+(622)[ c c c c @open c8 @closed c @kick u @closed ] (620)2 (621) 
+(625) (620) (621) (620) 
+(622) (620) (620) (620) 
+(625) (620) (621) (620) 
+(622) (620) (620) (621) 
+(625) (620) (621) (620) 
+(622) (620) (622) (623)[ c c @kick u @closed c @tom y13 d < y11 b+ y9 a y7 g > ]
+
+(625) (616) (626)[ @open c8 @kick u @closed c ]
+(616) (627)[ @open c8 @closed c c ] (616) (626) 
+(616) @open c8 @closed c @kick u (616) (626) 
+(616) (626) (616) (627) 
+(625) (616) (626) 
+(616) (627) (616) (626) 
+(616) @open c8 @closed c @kick u (616) (626) 
+(616) (626) (616) (626) 
+(625) (616) (626) 
+(616) (627) (616) (626) 
+(616) @open c8 @closed c @kick u (616) (626) 
+(616) (626) (616) (627) 
+(625) (616) (626) 
+(616) (627) (616) (626) 
+(616) @open c8 @closed c @kick u (616) (626) 
+(616) @open c8 @closed c @kick u @open c @closed c (6T1)[ @tom y8 d y9 d < y10 b+ y11 b+ y12 a y13 a > ]
+
+@crash- k4 (630)[ @open c8 @closed c8 @pedal c8 @closed c c c8 @open c8 @closed ]
+[[ c8 @pedal c8 @closed (630) ]]3
+@crash- k4 (630) [[ c8 @pedal c8 @closed (630) ]]2
+
+r2^8 (6T0)
+
+(615) (610)2 (611) (610)3 
+(615) (610)2 (611) (610) 
+
+(612)
+
+@crash- k4 [[ (617) (616) ]]3
+(618) [[ (617) (616) ]]3
+(617) 
+@crash- k4 [[ (617) (616) ]]3
+(618) (617) (616)2 
+@crash- k4. @kick u8 r8 (6T0)
+
+(625) (620) (621) (620) (622) (620) (620) (621)
+(625) (620) (621) (620) (622) (620) (620) (620)
+(625) (620) (621) (620) (622) (620) (620) (621)
+(625) (620) (621) (620) (622) (620) (622) (623)
+
+(625) (616) (626) 
+(616) (627) (616) (626) 
+(616) @open c8 @closed c @kick u (616) (626) 
+(616) (626) (616) (627) 
+(625) (616) (626) 
+(616) (627) (616) (626) 
+(616) @open c8 @closed c @kick u (616) (626) 
+(616) (626) (616) (626) 
+(625) (616) (626) 
+(616) (627) (616) (626) 
+(616) @open c8 @closed c @kick u (616) (626) 
+(616) (626) (616) (627) 
+(625) (616) (626) 
+(616) (627) (616) (626) 
+(616) @open c8 @closed c @kick u (616) (626) 
+(616) @open c8 @closed c @kick u @open c @closed c (6T1)
+
+(625) (616) (626) 
+(616) (627) (616) (626) 
+(616) @open c8 @closed c @kick u (616) (626) 
+(616) (626) (616) (627) 
+(625) (616) (626) 
+(616) (627) (616) (629)[ @open c8 @crash- k4 @closed 
+c c ] @open c8 @closed c @kick u (616) (626) 
+(616) (626) (616) (626) 
+(625) (616) (626) 
+(616) (627) (616) (626) 
+(616) @open c8 @closed c @kick u (616) (626) 
+(616) (626) (616) (627) 
+(625) (616)
+(629) (627) (616)
+(629) @open c8 @closed c @kick u (616) (626) 
+(617) (626) @open c @tom y7 d @kick u @tom y7 d y8 d < y9 b+ y11 a y13 g > 
+(625) (616) (626) 
+(616) (627) (616) (626) 
+(616) @open c8 @closed c @kick u (616) (626) 
+(616) (626) (616) (627) 
+(625) (616)
+(629) (627) (616) 
+(629) @open c8 @closed c @kick u (616) 
+(629) (626) (616) (626) 
+(625) (616) (626) 
+(616) (627) (616) (626) 
+(616) @open c8 @closed c @kick u (616) (626) 
+(616) (626) (616) (627) 
+(625) (616) 
+(629) (627) (616)
+(629) @open c8 @closed c @kick u (616) (626) 
+(617) (626) @tom y13 d y12 d < y11 b+ y10 b+ y9 a y8 a y7 g y6 g > @closed 
+
+[[ [ c8 ]12 @open c8 @closed c8 c8 c8 ]]4
+
+@crash- k4 @open c8 @closed (603) (602) (600)
+(601)2 (600) (603) (602) (600) (601)2 
+@crash- k4 @open c8 @closed (603) (602) (600)
+(601)2 (600)2 c8 c c @crash- k4 @closed (601)3
+
+;==========================================;
+	CHANNEL #1 | @junko @rest
+;==========================================;
+
+@slapbass | l8
+(100)[ c+4 q78 c+ q7F c+4 q78 c+ q7F c+4 q78 c+ q7F ] < g+4 q78 g+ q7F g+4 g+4 
+(101)[ a4 q78 a q7F a4 q78 a q7F a4 q78 a q7F ] > e4 q78 e q7F e e f+ e 
+(100) c-4 q78 c- q7F c-4 c-4 
+(101) c-4 q78 c- q7F c- b16 b16 f+16 f+16 c-16 c-16 /
+
+[[ c+ ]]8 < [[ g+ ]]8 [[ a ]]8 [[ b ]]6 > c+ g+ 
+[[ c+ ]]8 < [[ b ]]8 [[ a ]]8 [[ a+ ]]4 > 
+c+16 c+16 > c+16 c+16 < g+16 g+16 c+16 c+16 < r2 
+
+(110)[ a a > a < a ]2 
+(111)[ > c- c- b c- c- c- b < ] 
+(112)[ g+4 g+ > g+ < g+ [[ g+ g+ > g+ < g+ ]]2 g+ > c+16 c+16 g+16 g+16 c+ ]
+(110)2  (111) (113)[ c+4 c+ > c+ < c+ c+ c+ > c+ < c+ 
+c+ q78 c+24 q7F c+ q78 c+24 q7F c+ q78 c+24 q7F c-. q78 c-16 q7F c-16 c-16 c- < ]
+
+(114)[ [[a8 a16 a16 > a8 < a8 ]]2 
+> c-8 c-16 c-16 b8 c-8 c-16 c-16 ] (116)[ c-8 b8 < 
+g+4 g+16 g+16 > g+8 < g+8 [[ g+8 g+16 g+16 > g+8 < g+8 ]]2 g+16 g+16 > c+16 c+16 g+16 g+16 c+16 c+16 ]
+(114) (117)[ c+8 b8 c+4 
+c+16 c+16 > c+16 c+16 < c+16 c+16 c+16 c+16 c+16 c+16 > c+16 c+16 < c+16 c+16 ]
+c+4 q78 c+8 q75 c+8 q72 c+8 q7F > c+8 < c+8 > c+8 < 
+
+l16
+(120)[ c+8 > c+16 c+16 < ]4 ; c+
+$XR-FF (120)4 ; c
+$XR-FE (120)4 ; b
+$XR-FD (120)4 ; a+
+$XR-FC (120)4 ; a
+$XR-FE (120)4  ; b
+$XR-X (120)4 ; c+
+(121)[ c+ e f+ b > c+ < b f+ e ] (122)[ c+ c+ > c+ c+ < ]2
+(120)4 ; c+
+$XR-FF (120)4 ; c
+$XR-FE (120)4 ; b
+$XR-FD (120)4 ; a+
+$XR-FC (120)4 ; a
+$XR-FE (120)4 ; b
+$XR-X (120)4 ; c+
+(121) (123)[ c+ c+ > c+ c+ < g+ g+ c+ c+ ]
+
+(122)4
+$XR-FF (122)4 
+$XR-FE (122)4
+$XR-FD (122)4
+$XR-FC (122)4
+$XR-FE (122)4
+$XR-X (122)4
+(121) (122)2
+(122)4
+$XR-FF (122)4
+$XR-FE (122)4
+$XR-FD (122)4
+$XR-FC (122)4
+$XR-FE (122)4
+$XR-X (122)4
+(121) (123)
+
+l16
+(130)[ c+8 q78 c+ q7F c+8 q78 c+ q7F c+8 q78 c+8 q7F > c+ c+ < g+ g+ c+ c+
+< g+8 q78 g+ q7F g+8 q78 g+ q7F g+8 q78 g+8 q7F g+ g+ > d+ d+ g+ g+
+< a8 q78 a q7F a8 q78 a q7F a8 a+8 q78 a+ q7F a+8 q78 a+ q7F a+8 > ]
+c8 q78 c q7F c8 q78 c q7F c8 c c g+ g+ c c g+ g+ 
+(130)
+
+r2^8 > d d < a a d d 
+
+$XR-01 (110)2 (111) (112)
+(110)2 (111) (113)
+
+(114) (116)
+(114) (117) 
+$XR-X d4. d d d d > e e c c < e e 
+
+$XR-01 (122)4 
+$XR-X (122)4 
+$XR-FF (122)4 
+$XR-FE (122)4 
+$XR-FD (122)4 
+$XR-FF (122)4 
+$XR-01 (122)4
+(121) (122)2
+$XR-01 (122)4 
+$XR-X (122)4 
+$XR-FF (122)4 
+$XR-FE (122)4 
+$XR-FD (122)4 
+$XR-FF (122)4 
+$XR-01 (122)4
+(121) (123)
+
+$XR-FE (122)4
+$XR-FD (122)4
+$XR-FC (122)4
+$XR-FB (122)4
+$XR-FA (122)4
+$XR-FC (122)4
+$XR-FE (122)4
+$XR-FE (121) (122)2
+(122)4 
+$XR-FD (122)4
+$XR-FC (122)4
+$XR-FB (122)4
+$XR-FA (122)4
+$XR-FC (122)4
+$XR-FE (122)4
+(121) (123) <
+$XR-X
+
+[ g8 > g g < ]3 g8 
+a4 > a a < [ a8 > a a < ]2 a8
+> c-4 [ b b c-8 ]3 < 
+a4 > a a < [ a8 > a a < ]3
+[ g8 > g g ]3 < g8 
+a4 > a a < [ a8 > a a < ]3
+[ f+8 > f+ f+ ]4
+[ c-8 b b ]2 < [ a8 > a a < ]2 
+[ g8 > g g < ]3 g8 
+a4 > a a < [ a8 > a a < ]2 a8
+> c-4 b b c-8 b b c-8 b b c-8 < 
+a4 > a a < [ a8 > a a ]3
+[ < g8 > g g ]3 < g8 
+a4 [  > a a < a8 ]3 
+> c-4 b b [ c-8 b b ]5 c-8 > e e < a a e e < 
+
+[ g g > g g < ]3 g g 
+a8 [ a a > a a < ]3 a a >
+c-8 [ c- c- b b ]3 c- c- <
+a8 [ a a > a a < ]4 
+[ g g > g g < ]3 g g 
+a8 [ a a > a a < ]4 
+[ f+ f+ > f+ f+ ]4 
+[ c- c- b b < ]2 [ a a > a a < ]2 
+[ g g > g g ]3 < g g 
+a8 [ a a > a a < ]3 a a > 
+c-8 [ c- c- b b ]3 c- c- <
+a8 [ a a > a a ]4 < 
+[ g g > g g < ]3 g g 
+a8 [ a a > a a < ]3 a a >
+c-8 $XR-FE (122)4 $XR-X 
+[ c- c- b b ]2 c- c- > e e < a a e e 
+
+l4
+< b1 f+1 g1 a1
+[[ b ]]4 [[ a ]]4 [[ g ]]4 a a a a8 a8
+
+l8
+[[ b ]]8 [[ f+ ]]8 [[ g ]]8 [[ a ]]8 
+[[ b ]]8 [[ a ]]8 [[ g ]]8 [[ g+ ]]8 
+
+;==========================================;
+	CHANNEL #2 | @rosalina @rest
+;==========================================;
+
+o4
+@crash+ [[ c+1^1^1^1 ]]2 /
+
+@rosalina
+q7F @crash- c+4^32 ($FA-3X) @junko
+
+@synth o5 (V10) | l8
+f+ g+ c+ q79 c+ q7F (300)[ > c+ < f+ g+ c+ q79 c+ q7F ] q76 c+ q7F (300) 
+(300)2 q76 c+ q7F > c+ < f+ g+ c+16.
+
+@zunpet o4 | (B00) | l1
+q7D c+ d+ e f+ 
+
+(F00) r4^16 
+
+@overdrive | l8
+(215)[ %l q7C c+64 q7D d+64 q7E e64 q7F f+64 %l ] 
+(210)[ g+4. q79 g+ q7F > d+4. q79 d+ q7F f+4. c+16 d+16 e d+ c- < ] (219)[ g+1^1^16 
+%l q7C c+64 q7D d+64 q7E e64 q7F f+64 %l] 
+(211)[ g+ q79 g+16 q7F g+ q79 g+16 q7F g+ > d+4 d+16 q79 d+16 q7F d+16 q79 d+16 q7F 
+f+4. c+16 d+16 e d+ c- ] c+1^16 <
+
+(212)[ ($FA-3X)
+
+@sawtooth
+%l q7C f+64 q7D g+64 q7E a+64 q7F b64 %l
+> c+ q79 c+24 q7F c+ q79 c+24 q7F c+6 < b. q79 b16 q7F b4 ]
+
+@overdrive y9 | l16
+(210) (213)[ g+1 
+g+ a+ b > c+ < b g+ f+ b g+ b > c+ c- c+ d+ c+ < b g+ f+ > ]
+(211) c+1^8 c+4 r4.  ($FA-3X)
+
+@zunpet o4 | l4
+(220)[ c+16 d+16 e16 f+16 g+16 b16 ]
+(221)[ > c+1 d+1 e1 f+2 g+ b > c+2 c- c+ e d+ < f+ b g+1^. c- c-8 d+8 c-8 
+c+1 d+1 e1 f+. g+. b > c+2 c-8 c+8 c-8 e e8 d+ c- d+ ] c+1. < c-2 >
+(221) c+1^1 
+
+@sawtooth o5 | l16
+(230)[ c+4. d+ e f+8 g+8 c+8 q79 c+8 q7F 
+< g+4. a+ b > c+8 d+8 < g+8 q79 g+8 q7F 
+a8 b8 > c+8 < ] g+ a b8 > c+8 d+8 c-8 
+e8 d+8 c-8 c c+ < g+8 b8 f+8 q79 f+8 q7F
+(230) a b > e8 d+8 c-8 c+8 
+
+@square o5 | l24
+q7A c16 r8 q7C c16 r8 q7E c16 r8 q7F < a+ r48 > a r48 f r48 e r48 f r48 e r48 c r48
+
+@overdrive y10 | $XR-01 | l1
+(210) (219) (211) c+^16 (212)
+
+@overdrive
+(210) (213) (211) c+^8 c+2^8 ($FA-3X)
+
+@zunpet
+(220) (221) > c+.. (F10) 
+
+@sawtooth
+$XR-FE (221) c+.. (F10) < $XR-X
+
+@overdrive | l4
+f+4 (270)[ > d c+ < e8 f+1 f+. > e d c+8 d. c+ < b a8 
+[[ b. a f+ a8 ]]2 ] f+. e f+ a8 f+1 
+f+. (270) b1^1 (F00) ($FA-3X)
+
+@sawtooth o5
+c-2.. c-. c+ d e8 f+1 f+. e d e8
+(280)[ d. c+ c- c+8 ]2 d. e f+ e8 f+1^8
+f+2.. b. > c+ d c+8 d. c+ < b a8 b1 >
+$XR-0C (280)2 $XR-X d+1... (F10) 
+
+@synth o5 (V10) | l8
+r8^32 $XR-FE [[ (300)2 q76 c+ q7F (300) ]]3
+(300)2 q76 c+ q7F > c+ < f+16. $XR-X
+
+@synth y9
+%l q7A f+16 q7B b16 > q7C c+16 q7D e16 %l
+[[ (290)[ f+ < a b f+ q77 f+ q7D > ] (290) < q74 f+ q7D > (290) ]]4
+
+;==========================================;
+	CHANNEL #3 | @junko @rest r1^1^1^1
+;==========================================;
+
+@strchd o4 (V20)
+r8. (400)[ c+1 d+1 e1 ] f+2^16
+
+(305)[ @synth o5 y11 | l8
+%l q7C c+16 q7D f+16 q7E g+16 q7F b16 %l ] / $XR-X
+
+[[ (300)2 q76 c+ q7F (300) ]]4
+
+q76 c+ q73 c+ q71 c+ q7F r
+
+@overdrive o5 (V00)
+r16. (215) (210) (219) (211) c+2.... <
+
+(312)[ ($FA-3X)
+
+@sawtooth o4 y12
+q7D a q77 a24 q7D a q77 a24 q7D a6 f+. q77 f+16 q7D f+
+
+@overdrive o5 y12
+q7D c-16 c+16 
+e4. q77 e q7D f+4. q77 f+ q7D b2 g+ f+ e c+1^1 c-16 c+16 
+e q77 e16 q7D e q77 e16 q7D e b4 b16 q77 b16 q7D b16 q77 b16 q7D > d+4. c+16 d+16 e d+ < b f+1^ ] f4 r2. ($FA-3X)
+
+@musicbox o4 y11 | l4
+q7F (320)[ c+ g+ > c+ f+ < c g+ > c e <
+c- f+ b > f+ e d+ c+ c- <
+< a > c+ a > c+ e d+ < f+ b
+c+ g+ ] > c+ f+2 < g+ > d+ g+
+(320) f+2 e < g+ > c+ e <
+
+@zunpet o4 y12
+q7D (321)[ g+1 b+1 b1 a+ > c+ e g+ a e g+ a > c+ < b d+ g+ e < g+ > c+ e d+. < ]
+(322)[ g+ g+8 b8 g+8
+ g+1 b+1 b1 > c+. e. g+ a2 g+8 a8 g+8 > c+ c+8 < b g+ b ] g+1..^16 
+
+@sawtooth o4 y9
+q7F f+16 g+16 b16 q7D
+
+r1^1^1^1
+
+@sawtooth o5 y12 | l8
+q7D e4. f+16 g+16 a b e q77 b q7D
+c-4. c+16 d+16 e f+ c- q77 c- q7D 
+c+ d+ e c+16 d+16 g+ f+ d+ e 
+
+@square o5 | l24
+q78 d+16 r8 q7A d+16 r8 q7C d+16 r8 q7D d r48 > d r48 < a r48 g r48 a r48 g r48 e r48
+
+r1^1
+
+@synth o5 (V15) y11
+$XR-01 (300)2 q76 c+8 q7F (300) $XR-X
+
+@overdrive o4 y12 | l16
+q7D f8 q77 f q7D f8 q77 f q7D f8 b+4 b+ q77 b+ q7D b+ q77 b+ q7D
+> e4 q77 e8 q7D < a+ > c d8 c8 < a8 a1^8 >
+
+$XR-01 (312) f1 ($FA-3X) $XR-X
+
+@musicbox o4 y11 | l4
+q7F d e f g c+ d e f 
+c d e f c- c d e 
+l8
+< a+ > f e f a+ f e f c g f g b+ g f g 
+d g a4 > c d. c+16 d16. e32 f e c ; d < a b+ g a
+
+@zunpet o5 y12
+q7D $XR-01 (322) g+1^4. $XR-X
+
+@sawtooth o4 y9 | l16
+q7D > c+ < a q7E f+ d f+ q7F a b > c+ < b a
+
+o5 y12
+q7D $XR-FE (321) (322) g+1.. $XR-X
+
+@overdrive y9
+q7C < a q7D b > q7E d q7F e 
+
+@overdrive o5 (V00) | l4
+r8^32 f+4 (270)
+f+4. e4 f+4 a8 f+2.^16.
+
+@overdrive y12 | l4
+q7D d. f+ e c+8 d1 d. a f+ e8 f+. e d c+8 
+[[ d. c+ < b > c+8 ]]2 d+1.^. ($FA-3X)
+
+@sawtooth o4 y9
+q7C e16 q7D f+16 q7E g16 q7F a16
+
+y12 | l8
+q7D f+2.. f+4. f+4 f+4 f+8 b1 b4. b4 b4 b8
+[[ b4. a4 f+4 a8 ]]2 b4. b4 b4 b8 b1^8
+> d2.. f+4. a4 b4 a8 b4. a4 f+4 f+ f+1 
+f+4. e4 d4 e8 f+4. e4 f+4 a8 b1...
+
+$XR-FE (305) [[ (300)2 q76 c+8 q7F (300) ]]8
+
+;==========================================;
+	CHANNEL #4 | @junko @rest r1^1^1^1
+;==========================================;
+
+@strchd o4 y13 | l1
+(400) f+ /
+e d+ e d+ 
+(400) f+1
+
+#if VERSION == 1
+(F00) r8
+
+@rosalina
+@scream @junko
+#endif
+
+#if VERSION == 2
+(F00) r4. 
+#endif
+
+@brasschd o4 y13
+(410)[ c+4^16 q79 c+16 q7F c+8. q79 c+16 q7F c+8. q79 c+16 q7F c+8. 
+q79 c+16 q7F d+8. q79 d+16 q7F d+8. q79 d+16 q7F d+8. q79 d+16 q7F ] d+4^16 
+q79 d+16 q7F d+8. q79 d+16 q7F d+8. q79 d+16 q7F d+8 e8. 
+(411)[ q79 e16 q7F e8. q79 e16 q7F e8. q79 e16 q7F ] d+8. q79 d+16 q7F d+8 
+(410) e4^16 
+(411) e8 e8 
+
+(412)[ e8 q79 e24 q7F e8 q79 e24 q7F e6 d+8. q79 d+16 q7F d+4 ]
+
+@brasschd y13
+[ e8 q79 e8 q7F ]4
+[ d+8 q79 d+8 q7F ]3 d+8 
+d+4 q79 d+8 q7F [ d+8 q79 d+8 q7F ]3
+e8 q79 e8 q7F e8 q79 e8 q7F d+8 q79 d+8 q7F d+8 q79 d+8 q7F 
+[ c+8 q79 c+8 q7F ]4
+[ d+8 q79 d+8 q7F ]3 d+8 
+f+4 q79 f+8 q7F [ f+8 q79 f+8 q7F ]3
+f4 r2.
+
+@strchd
+[[ (420)[ e1 d+1^1 c+1 
+^1 d+1 ] c+1. d+2 
+(420) f+1 e2 d+2 ]]2
+
+@epiano | @cmd_main
+(430)[ [[ g+16 r8 q7D g+16 r8 q7B g+16 r8 q78 g+16 r8 q7D g+16 r16 q7F g+16 r16 q7F ]]2
+a16 r8 q7D a16 r8 q7B a16 r8 q7D a+16 r8 q7B a+16 r16 q7D a+16 r16 q7F ]
+g+16 r8 q7D g+16 r8 q7B g+16 r8 q7D g+16 r8 q7F g+16 r16 g+16 r16 
+(430)
+@cmd_main_off
+
+r1
+
+@brasschd o4 y13
+(440)[ d4 d4 d4 d4 e4 e4 e4 e8 ]
+e4. e4 e4 e4 f4 f4 e4 e4 
+(440) f4. f4 f4 f8 f8 
+
+$XR-01 (412) $XR-X
+
+@strchd o4
+f1 e2.. f1^8 f2 e2 
+d1 e2.. g1^8 f+1 
+
+(450)[ f1 e1^1 d1^1 e1 ] d1. e2 
+(450) g1 f+2 e2 
+
+(460)[ f+1^1 e1^1 d1 ] e1 d1. e2 
+(460) e1^1 d2 c+2 
+
+(470)[ d2.. e1^8 f+2.. e1^8 d2.. ] (471)[ e1^8 c+2. e4 f+2 e2 ]
+(470) e1 f+1.^8 e2 
+(472)[ d2.. e1 f+1 e1^8 d2.. ] (471)
+(472) e1 f+1^8 e1 
+
+[[ d1 c+1 d1 c-1 
+^1 c+1 d1 e1 ]]2
+
+;==========================================;
+	CHANNEL #7 | @junko @rest r1^1^1^1
+;==========================================;
+
+@strchd o3 y7 | l1
+(700)[ g+ b > c+ ] d+ /
+c+ c- c+ c-
+(700) d+ <
+
+(F00) r4. 
+
+@brasschd | l8
+(710)[ a4^16 q79 a16 q7F a. q79 a16 q7F a. q79 a16 q7F a. 
+q79 a16 q7F b. q79 b16 q7F b. q79 b16 q7F b. q79 b16 q7F ] b4^16 
+q79 b16 q7F b. q79 b16 q7F b. q79 b16 q7F b > c+. 
+q79 c+16 q7F c+. q79 c+16 q7F c+. q79 c+16 q7F < b. q79 b16 q7F b 
+(710) > c+4^16 
+q79 c+16 q7F c+. q79 c+16 q7F c+. q79 c+16 q7F c+ c+ 
+
+(712)[ c+ q79 c+24 q7F c+ q79 c+24 q7F c+ q79 c+24 q7F c-. q79 c-16 q7F c-4 ]
+
+c+ q79 c+ q7F c+ q79 c+ q7F c+ q79 c+ q7F c+ q79 c+ q7F 
+c- q79 c- q7F c- q79 c- q7F c- q79 c- q7F c- c-4 
+q79 c- q7F c- q79 c- q7F c- q79 c- q7F c- q79 c- q7F 
+c+ q79 c+ q7F c+ q79 c+ q7F < b q79 b q7F b q79 b q7F 
+a q79 a q7F a q79 a q7F a q79 a q7F a q79 a q7F 
+b q79 b q7F b q79 b q7F b q79 b q7F b > c+4 
+q79 c+ q7F c+ q79 c+ q7F c+ q79 c+ q7F c+ q79 c+ q7F 
+c+4 r2.
+
+@strchd o4 | l1
+(720)[ c+ c < b a+
+a b ] g+. b2 > 
+(720) c+ c+2 ; c-2
+
+@zunpet y12
+q7D g+2 q7F
+
+@strchd y11
+(720) < g+. b2 > 
+(720) c+ c+2 c-2
+
+@epiano o4 | @cmd_main | l16
+(730)[ e r8 q7D e r8 q7B e r8 q78 e r8 q7D e r q7B e r q7F
+d+ r8 q7D d+ r8 q7B d+ r8 q78 d+ r8 q7D d+ r q7B d+ r q7F
+f+ r8 q7D f+ r8 q7B f+ r8 q7D f+ r8 q7B f+ r q7D f+ r q7F ]
+d+ r8 q7D d+ r8 q7B d+ r8 q7D d+ r8 q7F d+ r d+ r
+(730)
+@cmd_main_off
+
+r1
+
+@brasschd o4 | l4
+(740)[ < a+ a+ a+ a+ > c c c c8 ] c. c c c d d c c 
+(740) d. d d d8 d8 
+
+$XR-01 (712) $XR-X
+
+@strchd o4 |  l1
+d c^ d2 c2 
+< a+ > c2.. d^^8 
+
+^ (750)[ c+ c c- 
+< a+ b+ ] a. b+2 >
+d (750) d. c+2 
+
+(760)[ d c+^ c- 
+^ c+ c-. ] c+2 
+(760) < a2 >
+
+(770)[ c-2.. c+^8 d2.. c+^8 c-2.. ] (780)[ c+^8 < a+ > d2 c+2 ]
+(770) c+ d+.^8 c+2 
+c-2.. c+ d c+^8 c-2.. (780)
+(770) c+ d+^8 c+ 
+
+c- < (790)[ a b g 
+f+ a ] b^
+^ (790) b^
+
+;==========================================;
+	CHANNEL #5 | @junko @rest r1^1^1^1
+;==========================================;
+
+@strchd o3 y11 | l1
+(500)[ e f+ a ] b /
+g+ f+ a f+ 
+(500) a+
+
+(F00) r4.
+
+@brasschd | l8
+(510)[ f+4^16 q79 f+16 q7F f+8. q79 f+16 q7F f+8. q79 f+16 q7F f+8. 
+q79 f+16 q7F g+8. q79 g+16 q7F g+8. q79 g+16 q7F g+8. q79 g+16 q7F g+4^16 
+q79 g+16 q7F g+8. q79 g+16 q7F g+8. q79 g+16 q7F g+8 ] g+8. 
+q79 g+16 q7F g+8. q79 g+16 q7F g+8. q79 g+16 q7F f+8. q79 f+16 q7F f+8 
+(510) g+8 
+
+(512)[ a8 q79 q79 a24 q7F q7F a8 q79 q79 a24 q7F q7F a8 q79 q79 a24 q7F f+8. q79 f+16 q7F f+4 ] 
+
+a8 q79 a8 q7F a8 q79 a8 q7F a8 q79 a8 q7F a8 q79 a8 q7F 
+g+8 q79 g+8 q7F g+8 q79 g+8 q7F g+8 q79 g+8 q7F g+8 g+4 
+q79 g+8 q7F g+8 q79 g+8 q7F g+8 q79 g+8 q7F g+8 q79 g+8 q7F 
+g+8 q79 g+8 q7F g+8 q79 g+8 q7F f+8 q79 f+8 q7F f+8 q79 f+8 q7F 
+f+8 q79 f+8 q7F f+8 q79 f+8 q7F f+8 q79 f+8 q7F f+8 q79 f+8 q7F 
+g+8 q79 g+8 q7F g+8 q79 g+8 q7F g+8 q79 g+8 q7F g+8 g+4 
+q79 g+8 q7F g+8 q79 g+8 q7F g+8 q79 g+8 q7F g+8 q79 g+8 q7F 
+g+4 r2.
+
+@strchd
+[[ (520)[ g+1^1 f+1^1 e1 f+1 ] e1. f+2 
+(520) a+1 g+1 ]]2
+
+@epiano o4 | @cmd_main | l16
+(530)[ c+ r8 q7D c+ r8 q7B c+ r8 q78 c+ r8 q7D c+ r q7F c+ r 
+c- r8 q7D c- r8 q7B c- r8 q78 c- r8 q7D c- r q7F c- r 
+c+ r8 q7D c+ r8 q7B c+ r8 q7D c+ r8 q7B c+ r q7D c+ r q7F]
+c r8 q7D c r8 q7B c r8 q7D c r8 q7F c r c r
+(530)
+@cmd_main_off
+
+r1
+
+@brasschd o3 | l4
+(540)[ g g g g 
+a a a a8 
+a. a a ] a 
+a a g g 
+(540) a8 a8 
+$XR-01 (512) $XR-X
+
+@strchd o3 | l1
+a+ a2.. a^8 a2 g2 
+g a2.. a^8 a 
+
+(550)[ a^ g^ f g ] f. g2 
+(550) b a 
+
+(560)[ b a+ a g+ g a ] f+. a2 
+(560) g+ f+ 
+
+(570)[ g2.. a^8 b2.. a^8 g2.. ] (571)[ a^8 f+ b2 a2 ]
+(570) a b.^8 a2 g2.. a b a^8 
+g2.. (571)
+(570) a b^8 a 
+
+[[ f+ e g e 
+d e g g+ ]]2
+
+;==========================================;
+;	MML by Hooded Edge
+;==========================================;
+
+#amk 2

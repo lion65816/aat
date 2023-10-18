@@ -1,0 +1,537 @@
+#amk 2 
+
+#path "smb_metal"
+
+#spc
+{
+#title "Overworld (Metal Remix)"
+#game "Super Mario Bros."
+#author "siromaru"
+#comment "Ported by Anas"
+}
+
+#samples
+{
+#smb_metal
+"yasui_snare_short.brr"	; snare used by Yousuke Yasui in some games
+	
+"ride 2.brr"			; from Samples of Insanity
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+"piano.brr"				;/ by worldpeace (downgraded)
+"saw.brr"				;\ orig. sample 'saw_orig.brr'
+						
+; piano chords by me, based off of 'piano.brr'
+"p_maj.brr"
+"p_min.brr"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Rudra no Hihou samples, downgraded
+"rnh_crash_16k.brr" 
+"rnh_ohat_16k.brr"	
+"rnh_tom_16k.brr"	
+}
+
+#instruments
+{
+"pc_16k.brr" 			$AF $A6 $00 $03 $00 ; @30 from Samples of Insanity (downgraded)
+"o5 high.brr"			$00 $00 $7F $03 $00 ; @31 from Samples of Insanity
+"saw.brr" 				$FF $ED $A0 $01 $7A ; @32 
+"mmx_od_guitar.brr"		$FF $E0 $7F $03 $00 ; @33 from Mega Man X
+"kick 1.brr"			$00 $00 $7F $03 $00 ; @34 from Samples of Insanity
+"piano.brr"				$FF $F3 $00 $05 $0A ; @35 
+"yasui_snare_short.brr"	$9F $00 $00 $0C $00	; @36 
+"p_maj.brr"				$FF $F3 $00 $05 $0A ; @37 
+"p_min.brr"				$FF $F3 $00 $05 $0A ; @38 
+"rnh_ohat_16k.brr" 		$DF $B1 $A0 $03 $D4 ; @39 
+"rnh_crash_16k.brr" 	$8F $11 $A0 $03 $D4	; @40 
+"ride 2.brr"			$DF $B1 $B8 $06 $1D ; @41 
+"rnh_tom_16k.brr" 		$9F $B5 $A0 $05 $12 ; @42 
+}
+
+"BASS=@8 $ED$7F$ED"
+"POW=@30"
+"SQ=@31"
+"SAW=@32"				; sawtooth
+"OG=@33" 				; overdriven guitar 
+"BDRUM=h0 @34"
+"PIA=@35"				; piano
+"SNR=h-2 @36"
+"PMAJ=@37" 				; minor chord
+"PMIN=@38" 				; major chord
+"OHAT=@39 q78"
+"CRASH=@40 q7C"
+"RIDE=@41 q7D"
+"TOM=@42 q78" 
+
+(!800)[$F4$09]
+(!801)[$ED$7F$FD]
+
+"ON=(!800,-1)(!801,3)"
+"OFF=(!800,0)(!801,0)"
+"SQ_DISTORT=$EE$DE"
+$EF$30$30$30
+$F1$07$36$00
+$F4$02
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    1st channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#0 t89 w255 
+
+(50)[SQ v60 o5 e8e8r8e8r8c8e8r8g8r4.] <g4.>
+
+o3 v140 POW $F4$03 f16f16 $F4$03
+
+v180 BASS o1
+
+[
+[[f8]]8 [[g8]]8 >[[c8]]14 <a+8a+8
+g+8g+8g+8g+8g+8g+8g+8a+4
+a+8a+8a+8a+8a+8a+8a+8
+>c8c8c8c8c8c8<a+8>c4
+c8d+8c8d+8c8<a+8a+8]2
+
+/(1)[>[[c8]]8 [[<g+8]]8 [[g8]]8
+g+8g+8g+8g+8b8b8b8b8]2
+
+(2)[>[[c8]]8 [[<g+8]]8 [[a+8]]8 [[g8]]8
+>[[c8]]8 [[<g+8]]8
+a+8a+8a+8a+8a+8b8b8b8
+>[[c8]]8]
+
+(3)[<g+8g+8g+8g+8g+8g+8a+8a+8
+>c8c8c8c8c8c8<a+8a+8]3
+
+[[g+8]]8
+
+$F4$03 SAW v130 o5 b1 $F4$03 
+
+BASS o1 v180 g+2 [[g4]]14 g+2 [[g4]]13 g8
+
+;SUS $F4$03 o4 g16a+16 $F4$03 
+
+o1 g+4g+8g+8g+8g+8g+8g+8
+a+4a+8a+8a+8a+8a+8a+8a+8
+b8b8b8b8b8b8b8
+>c4c8c8c8c8c8c8<a+8
+g+8g+8g+8g+8g+8g+8g+8g+8g1
+
+[g+2 [[g4]]14]4
+
+[f8g8g8g8g8g8g+8g8
+g8g8g+8g8g8g8g+8g8
+g+8g8g8g8g8g8g+8g8
+g8g8g+8g8g8g8g+4]2
+
+g+8g+8r8g+8r8g+8g+4g2.
+
+$F4$03 o2 PMAJ v130 b8 PMIN >d8 $F4$03
+
+BASS o1 v180
+
+>c1^1<a+1^1
+(5)[g+1^1g1g+4.a+4.b4
+>[[c8]]16 <[[a+8]]16 [[g+8]]16 [[g8]]8
+g+8g+8g+8a+4a+8b8b8]
+
+(1)2 (2)
+
+(3)3 [g+8]8 [g8]8 
+(3)3 [g+8]8 [g8]8
+OG $F4$03 $ED$7F$E7 v90 o5 b8 $DD$00$18 >c^1^1^1^2.. $F4$03
+ 
+BASS o1 v180 (5)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    2nd channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#1 $FA$02$FF SQ_DISTORT (50)>>>g2<
+
+POW $FA$02$00 $EE$00 v140 o3 ON $F4$03
+
+[f=168 f16f16
+g=144 g16g16g16g16
+>d+8<g16r16g16r16 >c8<g16r16g16r16a+8>c8
+<g16r16>d+8f8<g16r16>f8f+8<a+4
+
+g+=144 g+16g+16
+a+=168 a+16a+16a+16a+16
+>d+8<g16r16g16r16 >d+8<g16r16>c8<a+8>c4
+<g16r16>d+8 <g16g16>d+8c8<a+4]2
+
+/(6)[>c4 [[c8<g16r16g16r16]]2
+[[>d+8<g+16r16g+16r16]]2 >d+8<g+16r16
+[[g16r16g16r16>d8]]2 <g16r16g16r16
+>d+8<g+16r16g+16r16
+>d+8<g16r16g16r16b8g16r16]2
+
+(7)[
+[[g16r16g16r16>c8<]]2 g16r16g16r16
+[[>d+8<g+16r16g+16r16>]]2 d+8<g+16r16
+[[a+16r16a+16r16>f8<]]2 a+16r16a+16r16
+[[>d8<g16r16g16r16>]]2 d8<g16r16
+
+[[g16r16g16r16>c8<]]2 g16r16g16r16
+[[>d+8<g+16r16g+16r16>]]2 d+8<g+16r16
+a+16r16a+16r16>f8< a+16r16a+16r16b8 g16r16g16r16
+[[>c8<g16r16g16r16>]]2 c8<g16r16]
+
+(8)[
+[[g+16r16g+16r16>d+8<]]2 a+16r16a+16r16
+[[>c8<g16r16g16r16>]]2 f8<a+16r16]3
+
+(10)[
+[[g+16r16g+16r16>d+8<]]2 g+16r16g+16r16g1]
+
+(9)[g+2g16r16g16r16g16r8.
+[[g16r8.g16r8.]]3
+g4g16r8. g16r16g16r16 g16r8.g4g16r8.
+
+g+2 [[g16r8.g16r8.]]4 g4g16r8.
+g16r16g16r16g16r8.g4] g16r16g+4
+
+g+8g+16r16g+16r16 g+8g+16r16g+8
+a+4 [[a+8a+16r16a+16r16]]2 a+16r16
+[[b16r16b16r16b8]]2 b16r16
+
+>c4 [[c8<g16r16g16r16]]2 a+8
+[[g+16r16g+16r16g+8]]2  
+
+g+16r16g+16r16g1
+
+(9) g16r8.
+(9) g16r8. 
+
+[f8g8 [[g16r16g16r16]]2 
+[[g+8g8g16r16g16r16]]2 g+8g8g+8g8
+[[g16r16g16r16]]2 
+[[g+8g8g16r16g16r16]]2 g+4]2 
+
+g+8g+8r8g+8r8g+8g+4g1
+
+(11)[>c1^1<a+1^1g+1^1g1
+g+4.a+4.b4]2
+
+(6)2 (7) (8)3 (10) (8)3 (10)
+(11)2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    3rd channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#2 (51)[v60 SQ o3 d8d8r8d8r8d8d8r8>g8r4.<<g2]
+
+v125 o4 
+[[(15)[BDRUM c4 SNR c4 BDRUM c8c8 SNR c4]3
+(16)[BDRUM c8c8 SNR c4 BDRUM c8c8 SNR c4]
+(17)[BDRUM c4 SNR c4 BDRUM c8c8 SNR c8 BDRUM c8]
+(21)[r8 BDRUM c8 SNR c4 BDRUM c8c8 SNR c8 BDRUM c8]
+(17)
+^8 BDRUM c16c16 SNR c8 BDRUM c16c16 SNR c8 BDRUM c8 SNR c16c16c16c16]]2
+
+/(15)11 (17) (15)2
+(26)[BDRUM c4 SNR c8 BDRUM c4c8 SNR c4]
+
+(15)4 BDRUM c8c8 SNR c8
+(23)[BDRUM c4c16c16 SNR c8 BDRUM c8] (15)4
+
+(18)[BDRUM c8r4. SNR c2]
+(19)[BDRUM c4c4 SNR c2]
+(18) 
+(20)[BDRUM c4c4 SNR c4 BDRUM c8 SNR c8]
+(18)(19)(18)
+
+BDRUM c4c4 BDRUM c8 SNR c16c16c16c16 BDRUM c4
+BDRUM c16c16 SNR c4 BDRUM c8c8 SNR c8 BDRUM c8
+
+[[(21)(17)]]2 BDRUM c1
+
+[[(18)(19)(18)(20)(18)(19)(18)
+BDRUM c4c4 SNR c32c8.. BDRUM c4]]2
+
+[SNR c8 BDRUM c8c8c8]14
+[SNR c8 BDRUM c8 SNR c8 BDRUM c16c16]2
+
+BDRUM c8c4c4 SNR c32c16. BDRUM c4
+(22)[BDRUM c8 SNR c16c16 BDRUM c4c4c4]
+
+(27)[BDRUM c8^1. SNR c8c4 BDRUM c1 SNR c32c4^16
+TOM v220 $F4$03 y7 o3 g32<d4^16.g32<d^8 $F4$03 y10]
+o4 v125 q7F BDRUM c8^1.c8 SNR c8c8 BDRUM c1
+TOM v220 $F4$03 y13 <d16d16<a+8d8>> $F4$03 y10 v125 q7F
+
+(23)(15)(16)(15)
+(25)[BDRUM c8c8 SNR c8 BDRUM c8c8 BDRUM c8 SNR c8 BDRUM c8]
+(15)(16)(15)
+(24)[BDRUM c8c8 SNR c8 BDRUM c4c16c16 SNR c8 BDRUM c8]
+(15)11 (17) (15)2 (26) (15)4 (24)
+(15)7 (24) (15)3
+
+BDRUM c4 SNR c4 BDRUM c8 SNR c16c16c8c8
+(27)
+
+v125 q7F BDRUM c1
+[BDRUM c8 SNR c8c8]2  BDRUM c8 SNR c8
+(22)
+[BDRUM c8 SNR c16c16c16c16]2 BDRUM c8 SNR c16c16
+(15)(16)(15)(25)(15)(16)(15)(24)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    4th channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#3 (52)[v60 SQ o4 f+8f+8r8f+8r8f+8f+8r8b8r4.g2] $F4$03 
+
+v210 [[
+[y13 CRASH c4 OHAT y7 c4c4c4]2
+y13 CRASH c4 RIDE c4c4c4c4c4c4
+y7 CRASH y13 c4c4 OHAT y7 c4c8c4 CRASH c4.
+OHAT c4c4 CRASH c4 y13 c4 RIDE c4c8c4
+CRASH y7 c4. y13 c4c2]]2
+
+/v210 (29)[y13 CRASH c4 y7 OHAT [[c4c4]]5] [[c4c4]]2 c4 (29) [[c4c4]]2 CRASH c4
+(29) q78 c4c8
+
+(35)[SAW q7F y10 v115 o6 c8r8c8c4<b4>c8.r1....
+<c16d16d+4.d4.c2..<a+32r16.]
+
+(28)[>c8c8r8c8r8c8d4d16d+16d8c8<a+8g4.]
+(36)[g+16a+16>c8c8r8c8r8c8d4d+2.r8<a+16b16]
+(28)
+(37)[>c16d16d+8d+8r8d+8r8c8d+4] r8
+
+PMAJ v130 q7F o3 g8b8g8 PMIN g+8f8 PMAJ g8 PMIN d+8
+
+PIA c2<b4b4.
+>d4<b4>d4f8.
+g+8f8f8d8d8<b8^48>d6
+d+6c6d+6g6d+6g6
+g+6>c6c6d+6c6c6
+f6d6d6g6d+6d+6
+b8g8g6d+8^48d8<b8b8g8^48
+g6g8b8b8b8>c8 PMAJ c4.
+
+v220 CRASH y13 c4 RIDE 
+(30)[c8c4 CRASH c4. RIDE c4c8c8 y7 CRASH c4]
+y13 c4 RIDE c4 (30) 
+y13 c4 RIDE c4c4 y7 CRASH c4 y13 c4
+y7 OHAT c4c4c4
+
+SAW q7F v100 y10 o6 $ED$7F$E0
+(4)[d8 $DD$00$18 d+^4d4<b16>c16d16c16<b16>c16
+<b16g+16b16g+16g16g+16g16f16g16f16d+16f16d+16d16c16<b16
+g16b16>d16f16g16f16d16<b16>c16d+16g16b16>c16<b16g16d+16
+d16c16<b16>d+16c16<b16>d16c16<b16>d+16c16<b16>d16c16.<b16.
+>c16<a16>c16d+16f+16d+16f+16a16>c16<a16>c16d+16d16c16<a16f+16
+g8>d8c8d8<b8>d8<g+8>d8<g8>d8<f8>d8<d+8>d8<f8>d8
+<g12>d12c12d12<b12>d12<g+12>d12<g12>d12<f12>d12
+<g+4.g4 $DD$2B$30 <d+^8>
+d+16c16<a16>c16
+f+16d+16c16d+16a16f+16d+16f+16>c16<a16f+16a16>d+16c16<a16>c16
+f16g16f16d16f16d16c16<b16>c16<b16g16f16d+16d16c8^64
+d12^48c8<b8>c8d+8c8<b8>c8f8c8<b8>c8d+8c8<b8>c8
+<b8>c8<b8g+8g6f6d+6
+d16c16d16d+16d16d+16f16g16d+16f16g16g+16f16g16g+16b16
+g16g+16b16>c16<g+16b16>c16d16<b16>c16d16d+16f16g16g+16b16
+b4 $DD$00$24 >c^2]
+
+OG v90 $F4$01 <b16>c16d24^96d+32.d24^96
+c32.<b24^96>c24d24d+24d24c24<b24>d24^96d+32.d24^96c32.
+<b24^96>c24d24d+24d24c24^64<b64^96>c16<b16^64>f32. 
+d+16d16c16<b16g+16g16f16d+16d16c16<b16g+16g16a16>c16
+d+16f+16c16d+16f+16a16d+16f+16a16>c16<f+16a16>c16d+16f+16d+16
+c16<a16>d+16c16<a16f+16>c16<a16f+16d+16a16f+16d+16c16f+16d+16
+c16<a16>d+16c16<a16f+16>c16<a16f+16d+16d16c16d16d+16 
+d24d+24f24g24d+24f24g24g+24f24g24g+24b24g24g+24b24>c24<g+24b24
+>c24d24<b24>c24d24d+24c24d24d+24f24d+24f24g24g+24b24
+>c24d24d+24f24d+24f24g2 $F4$01
+d+8d+8r8d+8r8c8d+4f+8 $DD$00$24 g^2. $DD$20$30 f^8
+
+v130 o3 (32)[PMIN d+4f4 PMAJ g4 PMIN d+4g+4 PMAJ g4 PMIN f4 PMAJ g4]3
+(33)[PIA g4 PMIN f4d+4d4 PIA <g+4> PIA d+8 PMAJ d4 PIA f8]
+d4 (32)3 (33) PMAJ b4 > PIA c4
+
+o4 v220 y7 OHAT [[c4c4]]7 c4 (29) [[c4c4]]2 CRASH c4
+(29) q78 c4c8
+
+(35)(28)(36)(28)(37) q7F >g1<
+(28)(36)(28)(37) q7F >g1
+
+v130 q7F o3 (32)3 (33)
+d4 (32)3 (33) PMAJ b4 q7F r192
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    5th channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#4 $F4$03 $FA$02$FF SQ_DISTORT (51) $F4$03 $EE$00 $FA$02$00
+
+o4 [[r1]]16
+/v220 [[r1]]11 r4
+OHAT y7 c4c4c4 (29)
+(43)[CRASH c4 OHAT c4 y13 CRASH c4 y7 OHAT c4 CRASH c4]
+(29)(44)[q78 c4c4c4c4 q7F CRASH c4] 
+(29) q78 c4r8
+ 
+q7F PIA y10 v130 o2 f16g16g+4g4f4
+d+2d4d4c8d8d+8f+8g8g+8b8
+>d8d4<b4g+4g4f4d+4f4g4
+PMAJ >c2 PIA <g4b4>c4d4c4<b4
+PMAJ >c4<b4 PMIN g+4 PMAJ g4 PMIN f4d+4d2
+
+[[r1]]6 v220 o4 
+
+[[
+(31)[CRASH y13 c2 y7 OHAT c4c4c4c4c4c4c4c4c4c4c4c4] c4c4
+(31) c4 CRASH c4
+]]2
+
+CRASH y13 c4 RIDE c4c2
+
+[[r1]]9
+
+(45)[y13 CRASH c4 OHAT y7 c2c2c2^8 TOM <<g8>> 
+y13 CRASH c4 OHAT y7 c2c1^4]
+y13 CRASH c4 OHAT y7 c2c2c4. CRASH c4.
+y13 CRASH c4 OHAT y7 c4c4c4 r4. CRASH c4. y13 c4
+
+(29) q78 [[c4c4]]2 c4
+(29) q78 c4c8c4 CRASH y13 c4. y7 c4
+
+[[r1]]11 r8 SAW q7F y10 v100 o5 <g8r8g8g4b4>c8.r1....
+OG v90 c16d16d+4.d4.d+2>c4 $DD$40$24 <a^4
+
+(49)[d+8d+8r8d+8r8d+8]
+(46)[d4d16d+16d8c8d8c4 $DD$30$30 <d+^8]
+(47)[g+16a+16>c8c8r8c8r8c8d4d+4.
+$F4$01 c16d16d+16d16c16d+16d16c16<a+16b16 $F4$01]
+
+(49)(46)(48)[>d+16f16g+8g+8r8g+8r8d+8g+4]
+$F4$01 b16g+16g16f16g+16g16f16d+16g16f16d+16d16f16d+16d16c16 $F4$01
+
+d4. $DD$00$18 d+^4 $DD$30$30 <g+^8
+(46)(47)
+(49)(46)(48) >a+2 $DD$00$18 b^4 $DD$30$30 d^4
+
+v220 <(45)
+y13 CRASH c4 y7 OHAT c2c4 CRASH c4. y13 c4. y7 c4
+y13 CRASH c4 TOM y13 <d16d16d16d16
+y11 <a+16a+16a+16a+16d16d16 
+y7 <b16b16>>> 
+y13 CRASH c4. y7 c4. y13 TOM <<a+16a+8.>>
+
+(29) [[c4c4]]2 c4 (29) c4c4c8 CRASH y13 c4. y7 c4
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    6th channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#5 $F4$03 $FA$02$FF SQ_DISTORT (52) $F4$03 $EE$00 $FA$02$00
+
+v120 [[r1]]15 r2.. o4
+SAW g+32a32a+32b32
+
+/SAW (12)[>c4.<g4.d+4.
+g+8r8a+8r8g+8g4
+g6>d+6g6g+4f8g4
+d+4c8d8<b4.]2 r8..
+
+(13)[>e32f8f+8f8d+4f4
+<g+8a+8>c4<a+8>c8d8r8] r16.
+
+(38)[e32f8f+8f8d+4f8r16.]
+(39)[f+32g8r8g8g2^8.r32]
+
+(13) 
+
+(40)[g16f16g4.f4.d+=168]
+
+d32<a+32f32d+32
+
+(14)[>d+8d+8r8d+8r8d+8f4
+f16g16f8d+8d8c4.]
+
+(41)[c16d16d+8d+8r8d+8r8d+8f4
+g2.r8d16d+16]
+
+(14)
+
+(42)[d+16f16g+8g+8r8g+8r8d+8g+4]r8.
+
+PMIN o3 g+8g+8f8 PMAJ g8 PMIN d+8f8d16
+
+PIA d+2d4d4d+4c4c4d+4
+g8g8d+8d+8c8c8c6c6
+d6f6d6f6g+6f6 
+a+6>d6d6d6d6<b6 
+>d+6d+6c6f6f6d8^48 
+g+8f8^48f6c8c8c8<g+8
+f6g+8^48g+8>c16d8d8d+8
+
+OG v90 a+8 $DD$00$24 >c^4. d4c4
+c+4.. $DD$00$24 d^4 $DD$37$18 <f^+16.
+a+12^48>c12^48d12^48d+4.d4.d+8c2..
+c8<a+8g+2.a+4b2.. $DD$40$30 <d+^8<
+
+(4)
+
+v220 y13 o4 RIDE [[c4c4]]6 c4
+CRASH c4 RIDE [[c4c4]]3 c4
+CRASH c4 RIDE c4 CRASH c4 RIDE c4 
+CRASH c4 y7 c4 y13 c4 y7 c4
+
+TOM y13 <<d8d4d4>> 
+CRASH y7 c4 y13 c4
+TOM y13 <d16d16d16d16
+y11 <a+16a+16a+16a+16 
+y7 d16d16d16d16>>  
+
+r4 o2 q7F y10 v130 
+(34)[PIA [[g4g4]]11 g4g8>d8<g4g4g4g4>c4]
+
+^4.<b4<r8 (34) r2^8
+
+SAW o3 (12)2 r8..
+(13) r16. (38)(39)(13)(40)
+
+d32<a+32f32d+32
+
+(14)(41)(14)(42) >>>b1
+(14)(41)(14)(42) b1
+
+v130 r8 (34)^4.<b4<r8 (34) r2^8^192
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    7th channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#6 [[r1]]18
+/v180 BASS o1 [[r1]]23 [[g8]]8 $F4$03
+v220 o4 (31) q78 c4c4 q7F (31) y13 CRASH c4. y7 c1
+[[r1]]58
+
+r4. OHAT y7 c4c4c4 (29)(43)(29)(44)(29) q78 c4c4 
+y13 CRASH c4 y7 OHAT c4 y13 CRASH c4
+(29)(44)(29) q78 c4c4 y13 CRASH c4 y7 OHAT c2
+
+OG y10 q7F $ED$7F$E7 v90 o5 f+8 $DD$00$18 g^1^1^1^2.. 
+
+[[r1]]12
+ 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    8th channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#7 [[r1]]18
+/v130 SAW $F4$03 o5 [[r1]]23 g1 
+[[r1]]67 r8
+v100 o5 c8r8c8c4
+[[r1]]20 r4
+
+$F4$03 BASS o1 v180 >c1^1<a+1^1 $F4$03
+[[r1]]12 

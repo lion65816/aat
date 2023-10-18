@@ -32,8 +32,8 @@
 1F rocky.json
 20 scocs.cfg
 21 nuts.cfg
-22 spike_blue.json
-23 spike_yellow.json
+22 zin.cfg
+23 zinstay.cfg
 24 spikes_ball.json
 25 stretch.json
 26 missile_bill_horz.json

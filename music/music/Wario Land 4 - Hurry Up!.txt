@@ -1,0 +1,303 @@
+
+;--NOTE: Ignore the "Errors" that appear when using this song with AMK. The song itself seems to work fine.
+
+#amk 2
+
+#spc
+{
+	#title "Hurry Up!"
+	#game "Wario Land 4"
+	#author "Ryoji Yoshitomi"
+	#comment "Ported by Dippy"
+}
+
+#path "hurryup"
+
+#samples
+{
+	#optimized
+	"creepy.brr" 				
+	"kick.brr" 				
+	"snare.brr" 				
+	"power kick.brr" 			
+	"power snare.brr" 		
+	"synth chords.brr" 	
+	"square synth.brr"
+	"sine.brr" 
+	"snare acoustic.brr" 	
+	"synth bass.brr" 				
+}	
+
+#instruments
+{
+	"creepy.brr" 				$F9 $E0 $B8 $01 $40 	;@30
+	"kick.brr" 				$FF $E0 $B8 $03 $4F 	;@31
+	"snare.brr" 				$FF $E0 $B8 $03 $4F 	;@32
+	"power kick.brr" 			$FF $F5 $B8 $03 $4F 	;@33
+	"power snare.brr" 		$FF $F5 $B8 $03 $4F 	;@34
+	"synth chords.brr" 		$FF $E7 $B8 $05 $0A 	;@35
+	"square synth.brr" 		$FC $ED $B8 $02 $7D	;@36
+	"sine.brr" 				$AF $20 $B8 $04 $00	;@37
+	"sine.brr" 				$FF $E8 $B8 $04 $00	;@38
+	"snare acoustic.brr" 	$FF $F8 $B8 $03 $4F	;@39
+	"synth bass.brr" 			$FF $EC $B8 $02 $7F	;@40
+	"square synth.brr" 		$FF $E5 $B8 $02 $7D	;@41
+	"synth chords.brr" 		$FF $E0 $B8 $05 $0A 	;@42
+	"synth chords.brr" 		$FF $ED $B8 $05 $0A 	;@43
+	"square synth.brr" 		$FC $E5 $B8 $01 $3E	;@44
+}
+
+w242 t74 $F4 $02
+
+;Remote Commands
+(!100)[$F4 $09]
+(!101)[$FA $01 $B8]
+
+;Macros
+"K=@31 c"
+"S=@32 c"
+"PK=@33 c"
+"PS=@34 c"
+"L=$F4 $01"
+
+"G_OFF=(!100,0)"
+"G_B8=(!100,-1) (!101,3)"
+
+#0 l8 o4 v182 ;Percussion
+[r2]6
+;;--INTRO--;;
+K4S.K16ccSK16c16 K4SK4c16c16SK
+rKS16K16c16c16ccS.K16c16c16c16r16SK16c16rcS16K16c16c16
+K4S.K16ccSK4cSKc16c16c16r16SK
+rcS16K16c16c16ccS.K16c16c16c16r16SK16S16c16c16c16c16c16PK16S16c16
+PK4PS.PK16ccPSPK16c16 ccPSPK4c16c16PSPK4
+cPS16PK16c16c16ccPS.[c16]5 PSPK16c16 PS16c16PK16PS16c16c16c16PK16
+PScPK.c16PSPK4cPSPK4cPS16PK16c16PS16c16c16PKPSPK16PS16c16PK16c16PS16
+cPKPS.[c16]5 PSPK16c16PS16c16PK16PS16c16c16c16
+KcS.K16ccSK16c16K4SK4K16c16SK rKS16K16c16c16rcS.[S16]5 SK16c16 S16c16K16S16c16K16S16K16
+K2c4.S16c16c2..K16S16S1K1 S2.KSc2c4.SS2K2S2K4.S16c16c2K4.S
+[S4 K4 K4 K4]2 [S4 K4 K4 K S16S16]2 S4 S. S16KSKS ScK16S16SKSKS
+K4 S.S16c4Kc16c16K4S.c16K16S16SK16Sc16
+S4c.S16KSKS16c16 c16c16rc.c16K4Sc16c16 ccc16S16SKSKS S4c.S16KSKS16S16 K4S.S16K4Sc
+[K4S4]5K4S.S16
+K2S2K2S2K4.S16c16ccr4K4.^16S16
+$E8 $C0 $2A [S.]11 r2 $E7 $B6 
+;;--PRE-LOOP--;;
+[PS4PK4PK4PK4]2 [PS4PK4PK4PKPS16PS16]2
+PS4c.c16PKPSPKPSccc16c16cPKPSPKPS PK4c.c16c4cPS16c16PK4c.PS16PK16PS16cPK16PSc16
+c4c.c16PKPSPKPS16c16c16c.c.c16PK4cPS16c16
+ccc16c16cPKPScc PK4 PS. c16 c4 PK PS16c16
+PK4PS.c16PK4PSc
+[PK4PS4]5 PK4PS.c16
+[PK2PS2]2 PK4.PS16c16cc4.PK4.PS 
+$E8 $C0 $2A [PS.]11 r4^16 $E7 $B6 @39 q77 c16 q7a c16 q7f c16
+;;--LOOP--;;
+/ (6)[PK4PS.PK16ccPSPK16c16 c4 PSPK4c16c16PSPK4
+cPS16PK16c16c16ccPS.PK16 c16c16cPSPK16c.cPSPK16c16
+c4PS.PK16ccPSPK4cPSPKc16c16cPSPK4 c PS PK16 c16 c16 c16 c PS PK
+c16c16cPSPK16 [[PS16]]7PK] r2. @39 q7f c16. q7a c32 q7f c16 PK16
+(6)2 r2^8 @39 q78 c32 q7a c32 q7c c32 c32 q7f c16 c16 c8
+
+#1 @35 o2 v155 L l16  
+;;--INTRO--;;
+[r2]6
+$E8 $C0 $55 (20)[g]16 $E8 $C0 $00 (20)16
+[r2]16
+@30 o3 v155 G_B8 L l16
+[g+4^16r8.]3g+4>>c8.r<<g+4>c8.r<g+8.r>>c8.r<
+c8.r<g+8.r>g8.r<g+4br8.a+r8.ar8.g+8
+gg+aa+b>cc+dd+eff+gg+aa+b<
+g4.r8f+4f1^8r8 (10)[a4^16r8.]6  
+$FA $02 $FF (10) $FA $02 $FE (10) $FA $02 $FD (10) $FA $02 $FC (10) $FA $02 $FB (10) $FA $02 $FA (10)25
+r1 o3 $FA $02 $00
+(11)[cr8.]7 crer (11)3 crer [[ (11)3 crcr]]2
+[[ (11)3 crer]]2 (11)3 crcr
+[r1]5r G_OFF
+@35 o3 v105 L y10 p20,32
+d^4 $DD$00$18 << f^4 $DD$00$C0 >> d^2^8.^1 
+;;--PRE-LOOP--;;
+[r2]10 r=144 L r2. 
+@38 o2 v110 
+(17)[f4 $DD$00$30 > c ]
+c1 $DD$30$30 < a ^2^8 r8
+a4 $DD$00$30 > d
+d1 $DD$30$30 < b ^2^8 r8
+(17) >
+c1 $DD$30$30 < a ^2^8 ^4.
+[r2]14 r1 r
+;;--LOOP--;;
+/ @35 o3 v105
+d^4 $DD$00$18 << f^4 $DD$00$C0 >> d^2^8.^1 
+[r2]12 r2.
+@42 o3 v96 L
+(12)[f1 $DD$30$30 d @43 d2.. L @42 d8 $DD$00$18 a L
+a1 $DD$30$30 g @43 g2.. L @42 d8 $DD$00$18 f L]
+(13)[f1 $DD$30$30 d @43 d2.. L @42 d8 $DD$00$18 f L]2 
+(12) (13)
+f1 $DD$30$30 d @43 d2.. L @42 r8
+r1
+
+#2 @30 o3 l16 v137 G_B8
+;;--INTRO--;;
+a2r3ra2r4..a2^a6^a32r8a2.rg2^g6r8a2^a6r48a2
+r12r48a4.r8>a3r24r96>c4r48<<e6r8c4.r32e8r24>>>e8.r32<<<<g6^g24
+>>>a8^a32f12c.r48<g8^g48>d16.r32g16r96>c24^c96<<<<g96r96>>>>f12^f48d24r96<a32<<g4
+r48d1.r24 
+[r2]16 r2.^=20
+@35 o3 v105 L p32,32
+d2 $DD$00$30 << f $DD$00$C0 >> d1^1^1^1 L r1^1 r2^8
+L o3 v115 d2 $DD$00$30 << g+ $DD$00$C0 > b1^1^1.
+r=696 [r2]34 L
+@30 o2 v137
+c32ef12r96d12r96f.rd.f.b8f6r24r96f.g8>c.r32<a8rg8r>e8r32c12r96f8
+eg12r96>c8r32<g8d.r32<afr32er32g>cegb>dr32<bfra>cfbrbfr96<af+24r=8
+;;--PRE-LOOP--;;
+@36 o2 v158 y12
+[d4>d8.<df8g8c8a4>c8<d8b8g4c8>c8d4<g8.af8g8d8f4.g8c8r8d8r8f8]3
+d4>d8.<df8g8c8a4>c8<d8b8g4c4d4r4d4r4r2d4r4
+[r2]12 r
+;;--LOOP--;;
+/ @40 o3 v163 G_OFF y10
+d4a4>c4<f8g4>d4<g8a4>c4< d4a4>c4<f8g4>d4<f8g4c4
+(5)[d4a4>c4<f8g4>d4<d8f4g4] (8)[d4a4>c4<f8g4>d4<f8g4f8r8]
+r2..c8 (5) (7)[d4a4>c4<f8g4>d4<f8g4f4] (5) d4a4>c4<f8g4>d4<f8g4f8c8
+(5)(7)(5)(8)
+r2..c8
+
+#3 @30 o3 l16 v137 G_B8
+;;--INTRO--;;
+r1r2..r48b2^b6r8r32b2.rr96a2.r32>d2r6r24g4..r6<f+4.
+r24r96>>c3r24r96d4r8d6r48 g12^g32<<d4..r<f6r96>>>>c4
+r24r96<<<a6^a96>e8..r96<a.r24>>a24r32<<<a8.>dr96>>d
+<arc6r8r32<<b1^b8..^b48r=56 
+[r2]16 r2.^=20
+@35 o3 v105 L p32,32
+a2 $DD$00$30 < d+ $DD$00$C0 > a1^1^1^1 L r1^1 r2^8 
+o2 v115 a2 $DD$00$30 < f+ $DD$00$C0 > f+1^1^1. 
+L r=696 [r2]34 L
+@30 o2 v137
+d.r32g12r24e8re6r6r96g8r8r32a8rg.r.>d.r<ar8r32a32r32>d12r
+r96d12r96a3r96e.r32<b.r8.a>d
+r32fa>cec<gr.b>eg>cr<aer96<g24^g96
+;;--PRE-LOOP--;;
+@36 o3 v142 y08
+drarfrgrdd+aedfa+gdr>c<edrbrdrafdege
+(19)[frarfrggdg+ardra+rdrardrgec+rfrdc+ed]
+frarfrgrdrardra+rdr>cr<drbrdrardrgr
+(19)
+d(3)[afgdada+d>c<dbdadgfafgdada+dadgc+fde]
+f(3)
+[ [[df>cd]]4<[[dfb>d]]4<[[dfa>c]]4<[[dgb>c]]4<]2
+$E8 $C0 $2A [dgb>c<]8 r
+;;--LOOP--;;
+/ $FA $02 $00 @35 o4 q7f v100 y08
+(4)[df>cd]19 
+$FA $02 $01 (4) $FA $02 $02 (4) $FA $02 $03 (4) $FA $02 $04 (4) $FA $02 $05 (4) $FA $02 $06 (4) $FA $02 $07 (4) $FA $02 $08 (4) $FA $02 $09 (4)
+$FA $02 $0A (4) $FA $02 $0B (4) $FA $02 $0C (4) $FA $02 $00 p0,0 (9)[@37 o3 v115 y07 df>cdr< y13 q7a f>cdr< y07 q78 f>cdr< y13 q76 f>cdr< y07 q74 f>cd<]
+@44 v135 y08 q7f
+[[(4)18 $FA $02 $FF (4) $FA $02 $FE (4) $FA $02 $FD (4) $FA $02 $FC (4) $FA $02 $FB (4) $FA $02 $FA (4) $FA $02 $F9 (4) $FA $02 $F8 (4)
+$FA $02 $F7 (4) $FA $02 $F6 (4) $FA $02 $F4 (4) $FA $02 $06 (4) $FA $02 $09 (4) $FA $02 $00 (4)]]2
+@37 o3 v115 y07 df>cdr< y13 q7a f>cdr< y07 q78 f>cdr< y13 q76 fcd 
+
+
+#4 @30 o4 l16 v137 G_B8
+;;--INTRO--;;
+r1r1..r32c+2.r<b2^b6 r6>e2^e8 <f+2r12>g3r8<a3r48>>g4.f4r12r32g8.ra6r48<<<gr4r96a
+r48b32rr96>g12^g32>c8f12c.r48<f12r<b12fr48b24r96>>>g24r48
+<<b.>f12r96<e1.^e^e96r=50
+[r2]16 r4 r2^=20
+@35 o2 v105 L p32,32
+d2 $DD$00$30 < d+ $DD$00$C0 > d1^1^1^1 L r1^1 r2^8
+L [r2]40 r=696 L
+@30 o2 v137
+r4.a8r.g.r4b.r8r32br8b8r8b8r.b12r96>e12r
+r96f12r96b4f8c.r32<gr8.br3r96
+>aer.>dr32ar6r32c+24^c+96r=6
+;;--PRE-LOOP--;;
+@36 o2 v122 r4
+[d8r8>d8r<df8g8c8a8r8>c8<d8b8g8r8
+c8>c8d8r8<g8raf8g8d8f8r4g8c8r8d8r8f8]3
+d4>d8.<df8g8c8a4>c8<d8b8g4r8 [r8 q7f d8. q7a d8]2
+q79 d8 q77 d8r4. q7f  d8. q7a d8.
+[r2]12 r
+;;--LOOP--;;
+/ @41 o5 v115 G_OFF p0,0
+q7f d1 q76 d2.. < q7f
+e8 $DD$00$18 > e e2..d2.. G_B8 d8 r8. q7b d8 r8. q76 d8 r8. d8 r8. G_OFF $F4 $09 <
+[r2]6 r2.. q7f 
+d8 $DD$00$18 > d d1 q76 d2.. q7f < e8 $DD$00$18 > e e1 q76 e2.. < [q7f d8 $DD$00$18 > d d1 q76 d2..]2 q7f < d8 $DD$00$18 > d 
+d1 q76 d2.. q7f < d8 $DD$00$18 > d e2 q76 e4 q7f < e8 $DD$00$18 > e f2.. q76 f8 q7f < 
+[q7f d8 $DD$00$18 > d d1 q76 d2..]2 r8
+r1
+
+#5 @30 o4 l16 v137 G_B8
+;;--INTRO--;;
+[r2]6r4..r6d2^d8.r3f4..r32a4.r4b4..r3<a4r4..r96
+>>b8.r.>c8.r8..r12<b8r8d.r6c.r8r32>d24r48<<<<g12^g32>>>>c24r4r96
+<<<b1.^b^b96r=60 
+[r2]38 r2^=20 
+@36 o2 v130 y13
+r4.ga>dg>dr4..<< v90 ga>dg>dr4..<<r8
+[r2]6 (1)[@37 o4 v95 r8.
+bgfd<bgfdr8>v45bgfd<bgfdr4>r4..]
+[r2]20 (1)
+[r2]6 r
+@35 o3 v105 L y10 p32,32 G_OFF
+a^4 $DD$00$18 < d+^4 $DD$00$C0 > a^2^8.^1 
+;;--PRE-LOOP--;;
+[r2]10 r=144 L r2. 
+@38 o2 v110 p20,32
+(16)[d4 $DD$00$30 a]
+a1 $DD$30$30 f ^2^8 r8
+e4 $DD$00$30 b
+b1 $DD$30$30 g+ ^2^8 r8
+(16) 
+a1 $DD$30$30 f ^2^8 ^4.
+[r2]4 G_B8
+y13 (1) [r2]6 r2 r G_OFF
+r2
+;;--LOOP--;;
+/ @35 o3 v105 y10
+a^4 $DD$00$18 < d+^4 $DD$00$C0 > a^2^8.^1 
+[r2]12 r2.
+@42 o3 v96 L
+(14)[d1 $DD$30$30 < b @43 b2.. L @42 b8 $DD$00$18 > f L
+f1 $DD$30$30 d+ @43 d+2.. L @42 < b8 $DD$00$18 > d L]
+(15)[d1 $DD$30$30 < b @43 b2.. L @42 b8 $DD$00$18 > d L]2
+(14)(15)
+d1 $DD$30$30 < b @43 b2.. L @42 r8
+r1 
+
+#6 @30 o3 l16 v137 G_B8
+;;--INTRO--;;
+[r2]10r6r32e4.r2r24g2...r4<a8^a96r24b8.r3r32
+>d12^d32r8>b4r96<g.r12r32>>>e6r4..r6<<<g3^g4r=202
+[r2]39 r=20 
+@36 o2 v60 y07
+r2. ga>dg>dr4..<< v65 ga>dg>dr8.
+[r2]6 (2)[@37 o4 v70
+r4.. bgfd<bgfdr8>v33bgfd<bgfd>r4..]
+[r2]20 (2)
+[r2]6 r
+@35 o2 v105 y10 L p32,32 G_OFF 
+d^4 $DD$00$18 < d+^4 $DD$00$C0 > d^2^8.^1 
+;;--PRE-LOOP--;;
+[r2]28 r=144 L G_B8
+y07 (2) [r2]6 r2 r G_OFF
+@35 o2 v105 y10 r4
+;;--LOOP--;;
+/ 
+d^4 $DD$00$18 < d+^4 $DD$00$C0 > d^2^8.^1 
+[r2]48
+
+#7 @30 o5 l16 v137 G_B8
+;;--INTRO--;;
+[r2]16r24
+g6r1r4.<d1^d8.r=96
+[r2]52 r2^=20 [r2]24
+@30 o3 v137
+r2..r32c8r8r32d16.r4r16c16.r1r1r6r16b24^b96r=6
+;;--PRE-LOOP--;;
+[r2]44 r
+;;--LOOP--;;
+/ [r2]52 

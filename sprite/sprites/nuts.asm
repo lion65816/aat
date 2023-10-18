@@ -5,11 +5,11 @@
 ; sprite data
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                     
-!tile = $C2
+!tile = $E0
 
-!mata_debiles_fireballs = 1
+!mata_debiles_fireballs = 0
 !mata_debiles_cape_spin = 0
-!mata_debiles_estrella = 0
+!mata_debiles_estrella = 1
 !mata_debiles_slide = 0
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
