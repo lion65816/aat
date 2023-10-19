@@ -151,6 +151,7 @@
 99 big_boo_28.cfg
 9A NPC_priority_2.cfg
 9B VenusVerticalShortSpitTwo.cfg
+9C FryGuy.json
 9E FireMagikoopa.json
 9F superfast_chain.cfg
 A0 TorpedoTed.cfg

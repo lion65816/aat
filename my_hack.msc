@@ -2,8 +2,8 @@
 01	1	demo_death
 02	0	game_over
 02	1	game_over
-03	0	marisagoal
-03	1	marisagoal
+03	0	bossdefeat
+03	1	bossdefeat
 04	0	marisagoal
 04	1	marisagoal
 05	0	leek

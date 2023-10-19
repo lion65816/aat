@@ -1,7 +1,7 @@
 Globals:
 01  demo_death.txt
 02  game_over.txt
-03  marisagoal.txt
+03  bossdefeat.txt
 04  marisagoal.txt
 05  leek.txt
 06  iris_death.txt

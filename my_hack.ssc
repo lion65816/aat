@@ -209,28 +209,32 @@ Add 40 to make it stun and 80 to make it spawn shockwaves.
 95 0022 -12,-8,46B 4,-8,46C -12,0,46D 4,0,46E
 96 0020 Uses 8 extra bytes which determine the sprites in the stack from bottom to top (FF for an empty slot).  Use the Lunar Magic numbers for shells (DA-DE).\nThe 9th extra byte marks each sprite in the stack as a custom sprite. The bits are in order from left to right with left being the bottom of the stack (so 80 would make just the bottom a custom sprite).\nThe 10th extra byte is the same, but for the extra bit.
 96 0022 0,0,0
+9C 0020 Fryguy. He moves around the room while throwing fireballs. He can be hit with thrown items or star power. After getting defeated, he splits into Mini Fryguys.
+9C 0022 0,-16,46F 16,-16,470 0,0,471 16,0,472 8,-2,473
+9C 0030 Fryguy. He moves around the room very fast while throwing fireballs very frequently. He can be hit with thrown items or star power. After getting defeated, he splits into Mini Fryguys.
+9C 0032 0,-16,46F 16,-16,470 0,0,471 16,0,472 8,-2,474
 9E 0020 A Fire Magikoopa that shoots 1 fireball.
-9E 0022 0,1,46F 0,17,470 0,0,B6
+9E 0022 0,1,475 0,17,476 0,0,B6
 9E 0030 A Fire Magikoopa that shoots 3 fireballs.
-9E 0032 0,1,46F 0,17,470 0,0,B6 8,-4,B6 -4,8,B6
+9E 0032 0,1,475 0,17,476 0,0,B6 8,-4,B6 -4,8,B6
 A7 0020 spike(smm2 style)
 Extra Bits - wing flag
 Extra Byte1 - throw speed
-A7 0022 0,2,471 0,-12,472
+A7 0022 0,2,477 0,-12,478
 A7 0030 spike+wing(smm2 style)
 Extra Bits - wing flag
 Extra Byte1 - throw speed
-A7 0032 0,2,471 0,-12,472 12,-8,7
+A7 0032 0,2,477 0,-12,478 12,-8,7
 A8 0020 --- spike ball ---
 Extra Byte1:
 start x speed ($00-$7F)
 Extra Byte2
 start y speed ($00-$FF)
-A8 0022 0,0,473
+A8 0022 0,0,479
 B1 0020 Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and that's it. It's the freezy type.
-B1 0022 0,0,475 -16,0,474 16,0,476 16,-16,479 0,-16,478 -16,-16,477 16,-32,47C 0,-32,47B -16,-32,47A -8,-24,47D 16,-20,47F 16,-4,47E
+B1 0022 0,0,47B -16,0,47A 16,0,47C 16,-16,47F 0,-16,47E -16,-16,47D 16,-32,482 0,-32,481 -16,-32,480 -8,-24,483 16,-20,485 16,-4,484
 B1 0030 Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and this one is a ground detector also. It's the freezy type.
-B1 0032 -16,0,474 0,0,475 16,0,476 -16,-16,477 0,-16,478 16,-16,479 -16,-32,47A 0,-32,47B 16,-32,47C -8,-24,47D 12,0,47F -4,0,47E
+B1 0032 -16,0,47A 0,0,47B 16,0,47C -16,-16,47D 0,-16,47E 16,-16,47F -16,-32,480 0,-32,481 16,-32,482 -8,-24,483 12,0,485 -4,0,484
 B2 0020 Undefined Sprite
 B2 0022 0,0,0
 B3 0020 Undefined Sprite
@@ -242,6 +246,6 @@ B5 0032 8,-16,2D 8,0,68
 B7 0020 Disassembly of Sprite 54
 B7 0022 8,8,128 24,8,129 40,8,12A 8,24,138 8,40,148 24,40,149 40,40,14A 40,24,13A 24,24,139
 BE 0020 An awesome Mechakoopa that behaves like the original, shoots a projectile, shoots lightning, or explodes when stunned.
-BE 0022 0,0,480 0,-16,481 16,-16,482 16,0,483 14,0,484
+BE 0022 0,0,486 0,-16,487 16,-16,488 16,0,489 14,0,48A
 BE 0030 An awesome Mechakoopa that behaves like the original, shoots a projectile, shoots lightning, or explodes when stunned. This version flies too!
-BE 0032 0,0,480 0,-16,481 16,-16,482 16,0,483 14,0,484 8,16,485 16,16,485
+BE 0032 0,0,486 0,-16,487 16,-16,488 16,0,489 14,0,48A 8,16,48B 16,16,48B

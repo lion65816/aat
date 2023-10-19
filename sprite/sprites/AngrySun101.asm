@@ -498,7 +498,8 @@ print "MAIN ",pc
 	PLY
 
 	PHX
-	LDX #$04
+	LDX #$03			;> AAT edit: Four tiles per frame.
+	;LDX #$04
 -	PHX
 
 	TXA
@@ -581,13 +582,21 @@ print "MAIN ",pc
 	db $86,$FC,$8A,$FC,$FF	; SMB3
 	db $C0,$FC,$E0,$FC,$FF
 
-	db $A2,$FC,$FD,$FE,$A8	; SMM2; idle
-	db $C0,$FC,$FD,$FE,$A8
-	db $C2,$FC,$FD,$FE,$A8
+	db $00,$02,$20,$22,$A8	; SMM2; idle (AAT edit: use two frames in SP3)
+	db $04,$06,$24,$26,$A8
+	db $00,$02,$20,$22,$A8
 
-	db $A2,$FC,$FD,$FE,$A6	; SMM2; angry
-	db $C0,$FC,$FD,$FE,$A6
-	db $C2,$FC,$FD,$FE,$A6
+	db $00,$02,$20,$22,$A6	; SMM2; angry (AAT edit: use two frames in SP3)
+	db $04,$06,$24,$26,$A6
+	db $00,$02,$20,$22,$A6
+
+	;db $A2,$FC,$FD,$FE,$A8	; SMM2; idle
+	;db $C0,$FC,$FD,$FE,$A8
+	;db $C2,$FC,$FD,$FE,$A8
+
+	;db $A2,$FC,$FD,$FE,$A6	; SMM2; angry
+	;db $C0,$FC,$FD,$FE,$A6
+	;db $C2,$FC,$FD,$FE,$A6
 
 	db $8A,$AE,$8E,$FF,$FF	; Happy Moon, normal/blinking
 	db $86,$AE,$8E,$FF,$FF
