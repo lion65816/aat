@@ -453,36 +453,39 @@ State1:		JSR S_Label4
 			JSL $019D5F|!bank		; SubSprGfx1
 			RTS
 
-S_Label5:	LDA !1540,x
-			BNE Return5
-			LDA #$02
-			STA !1540,x
-			DEC !1570,x
-			BNE Label52
-			INC !C2,x
-			LDA #$10
-			STA !1540,x
-			PLA
-			PLA
+; Disappear
+S_Label5:	LDA !1540,x				;\ Only run code every third frame.
+			BNE Return5				;|
+			LDA #$02				;|
+			STA !1540,x				;/
+			DEC !1570,x				;\ If palette changing done,
+			BNE Label52				;/ then branch.
+			INC !C2,x				;> Go to the next sprite state.
+			LDA #$10				;\ Set time until next appearance.
+			STA !1540,x				;/
+			PLA						;\ Return directly from main routine,
+			PLA						;/ skipping graphics routine.
 Return5:	RTS
 
-S_Label4:	LDA !1540,x
-			BNE Label50
-			LDA #$04
-			STA !1540,x
+; CheckPalette
+S_Label4:	LDA !1540,x				;\ Only run code every fifth frame.
+			BNE Label50				;|
+			LDA #$04				;|
+			STA !1540,x				;/
 			INC !1570,x
-			LDA !1570,x
-			CMP #$09
-			BNE Label51
-			LDY #$24
-			STY $40
-Label51:	CMP #$09
-			BNE Label52
-			INC !C2,x
-			LDA #$70
-			STA !1540,x
+			LDA !1570,x				;\ If palette changing done,
+			CMP #$09				;| then branch.
+			BNE Label51				;/
+			LDY #$24				;\ Store CGADSUB settings.
+			STY $40					;/ #$24 = backdrop enable, enable Layer 3
+Label51:	CMP #$09				;\ If palette changing done,
+			BNE Label52				;/ then branch.
+			INC !C2,x				;> Go to the next sprite state.
+			LDA #$70				;\ Set time before appearing again.
+			STA !1540,x				;/
 			RTS
 
+; ChangePalette
 Label52:	LDA !15F6,x
 			ASL A
 			ASL A
@@ -490,14 +493,14 @@ Label52:	LDA !15F6,x
 			ORA #$80
 			AND #$F0
 			STA $01
-			LDA !1570,x
-			DEC A
-			ASL A
-			ASL A
-			ASL A
-			ASL A
-			TAX
-			STZ $00
+			LDA !1570,x				;\ Get color table offset (MagiKoopaPals).
+			DEC A					;| Each row is 16 bytes, so need to
+			ASL A					;| multiply by 4 after decrementing
+			ASL A					;| the accumulator.
+			ASL A					;|
+			ASL A					;|
+			TAX						;/
+			STZ $00					;> Zero out the loop counter for dynamically uploading palette colors.
 			LDY $0681|!addr
 Label53:	LDA MagiKoopaPals,x
 			STA $0684|!addr,y

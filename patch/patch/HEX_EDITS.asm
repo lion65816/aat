@@ -388,10 +388,3 @@ org $048A36
 ;	db $0C					;> Red Yoshi (originally: $04)
 ;org $048CE5
 ;	db $0E					;> Green Yoshi (originally: $06)
-
-; Change Torpedo Ted arm launcher priority.
-; This is to accommodate the Layer 3 effects of Level 10E.
-; Note that the arm will go in front of any blocks it is placed under,
-; unless the priority of those blocks is set to "On".
-org $029E74
-	db $23					;> originally: $13
