@@ -1,0 +1,20 @@
+???: We are pleased to receive you, Demo, lithe, loathesome lingerer from afar. Your visit was not easy to arrange. Great things never are. Oh how we admire you.
+[wait]
+[erase]
+[wait=30]
+
+DEMO: Wait a second... Did someone cross the streams again?
+[wait]
+[erase]
+[wait=30]
+
+???: It shall never be the same. Your arrival has set things in motion. Awesome things. Acquiring such alien acumen has enabled us. Energized us. Enlightened us. Your device has set us free!
+
+[wait]
+[erase]
+[wait=30]
+(Parrot Boom Boom Reveal)
+[wait]
+[erase]
+[wait=30]
+[end=00]

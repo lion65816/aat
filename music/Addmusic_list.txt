@@ -182,3 +182,4 @@ B4  Wario Land 4 - Hurry Up!.txt
 B5  Mother's Tormented Soul.txt
 B6  showdown_on_the_tower.txt
 B7  26 High Score.txt
+B8  Chocolate Rain.txt

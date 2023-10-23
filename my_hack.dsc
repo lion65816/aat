@@ -585,3 +585,18 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 7264	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
 7273	0	
 7274	0	
+7f09	0	
+7f66	0	
+7f6d	0	conveyer move left fast
+7f6e	0	conveyer move left fast
+7f7a	0	Change the song of the level
+7f7d	0	conveyer move right fast
+7f7e	0	conveyer move right fast
+7f7f	0	conveyer move right fast
+7f88	0	
+7fe0	0	
+7fe1	0	
+7fe2	0	
+7fe3	0	
+7fec	0	
+7fed	0	

@@ -36,8 +36,8 @@
 23 zinstay.cfg
 24 spikes_ball.json
 25 stretch.json
-26 missile_bill_horz.json
-27 missile_bill_vert.json
+26 cookie.cfg
+27 bouncing_cookie.cfg
 28 hotfoot.json
 29 fire_snake_athletic.json
 2A DirectionalPlatform.json

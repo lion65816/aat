@@ -1,0 +1,63 @@
+#am4
+#spc
+{
+	#author "Lucas"
+	#title "Chocolate Rain"
+	#game "Taz Zonday"
+}
+;-- HEADER AUTOMATICALLY GENERATED --
+$ED $80 $6D $2B 
+$ED $80 $7D $00 
+$F0
+;-- END OF HEADER -------------------
+
+
+#0 w255 t35
+
+#0	@21	q7f v200 y10
+#1	@9	q7f v200 y10
+#2	@9	q7f v200 y10
+#3	@4	q7f v180 y10
+#4	@11	q7f v200 y10
+#5	@4	q7f v180 y10
+#6	@22	q7f v200 y10
+
+#0
+o3
+[c4r4c8c8c8c16c16]100
+
+#1
+o3
+[c4a+8^16g4d8^16d+8
+g+8>d+8d8<a+16>c8<g8a+16r4
+g+4f8^16>c4d8^16d+8
+<g+4g8^16g+4a+4r16]100
+
+#2
+o5[d+16d+16g16d+16f16d16<a+16>d+8c8d8<a+16>c8
+d+16d+16g16d+16f16d16<a+16>d+8c8d8<a+16>c8
+d+16d+16g16d+16a+16<a+16>d16d+8c8d8<a+16>c8
+>c16<c16g16g16a+16a+16f16g8d+8f8d16d+8]100
+
+#3
+o2
+[r1]4[g8d+8g2^8^8
+d+8g8f8d16d+8c8d8<a+16>c8
+a+8d+8g2^8r16d+16
+d+8g8f8d16d+8c8d8<a+16>c8]100
+
+#4
+o3
+[c1^1^1^1]100
+
+
+#5
+o3
+[r1]4[g8d+8g2^8^8
+d+8g8f8d16d+8c8d8<a+16>c8
+a+8d+8g2^8r16d+16
+d+8g8f8d16d+8c8d8<a+16>c8]100
+
+#6
+o3
+[f+8f+16f+8f+8f+16f+8f+8f+8f+16f+16]100

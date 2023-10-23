@@ -373,6 +373,22 @@ R56C0-56D1:130 question_mark/giant_question_block_single.asm
 7264:25 QuicksandPit.asm
 7273:130 TeleportB2.asm
 7274:130 TeleportB2.asm
+7F6D:130 conveyer move left fast.asm
+7F6E:130 conveyer move left fast.asm
+7F6E:130 conveyer move left fast.asm
+7F7D:130 conveyer move right fast.asm
+7F7E:130 conveyer move right fast.asm
+7F7F:130 conveyer move right fast.asm
+7F7A:25 ChangeSong.asm
+7F09:100 NoSlipe.asm
+7FE0:100 NoSlipe.asm
+7FE1:130 NoSlipe.asm
+7F66:130 Slipe.asm
+7FE2:130 Slipe.asm
+7FE3:130 Slipe.asm
+7FEC:130 Slipe.asm
+7FED:130 Slipe.asm
+7F88:130 Slipe.asm
 
 
 
