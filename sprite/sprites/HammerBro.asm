@@ -234,7 +234,8 @@ Graphics:
 ;    db $A2,$C2,$A2,$E2,$A2,$C0,$A2,$E0
 
 .hammerFlip
-    db $47,$07
+    db $45,$05    ;\ AAT edit: Change palette from B to A.
+;    db $47,$07   ;/
 
 GenerateHammer:
     LDA !15A0,x

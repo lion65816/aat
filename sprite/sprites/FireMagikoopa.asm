@@ -450,6 +450,8 @@ Return2:	RTS
 
 State1:		JSR S_Label4
 			STZ !1602,x
+			LDA #$0F				;\ AAT edit: Use palette row F.
+			STA !15F6,x				;/
 			JSL $019D5F|!bank		; SubSprGfx1
 			RTS
 
@@ -494,9 +496,10 @@ Label52:	LDA !15F6,x
 			AND #$F0
 			STA $01
 			LDA !1570,x				;\ Get color table offset (MagiKoopaPals).
-			DEC A					;| Each row is 16 bytes, so need to
+			STA $02					;/ AAT edit: Store in scratch RAM.
+			DEC A					;\ Each row is 16 bytes, so need to
 			ASL A					;| multiply by 4 after decrementing
-			ASL A					;| the accumulator.
+			ASL A					;| the color table offset.
 			ASL A					;|
 			ASL A					;|
 			TAX						;/
@@ -513,8 +516,14 @@ Label53:	LDA MagiKoopaPals,x
 			LDX $0681|!addr
 			LDA #$10
 			STA $0682|!addr,x
-			LDA $01
-			STA $0683|!addr,x
+			;LDA $01				;> (Begin AAT edits.)
+			LDA $02					;\ If color table offset is odd, then upload first
+			AND #$01				;| half of palette. Needed because only eight colors
+			BEQ +					;/ at most can be uploaded per frame.
+			LDA #$F0				;> Start uploading at palette F, color 0.
+			BRA ++
++			LDA #$F8				;> Start uploading at palette F, color 0. (End AAT edits.)
+++			STA $0683|!addr,x
 			STZ $0694|!addr,x
 			TXA
 			;CLC
@@ -525,18 +534,31 @@ Label50:	LDX $15E9|!addr
 			RTS
 
 State3:		JSR S_Label5
+			LDA #$0F				;\ AAT edit: Use palette row F.
+			STA !15F6,x				;/
 			JSL $019D5F|!bank		; SubSprGfx1
 			RTS
 
+; AAT edit: Palette changes in sets of 4, with the first half uploaded before the last half.
 MagiKoopaPals:
-			dw $7FFF,$294A,$0000,$0404,$042A,$469F,$000A,$002A
-			dw $7FFF,$35AD,$0000,$0806,$044F,$321F,$000D,$00AD
-			dw $7FFF,$4210,$0000,$0809,$0451,$1D7F,$0050,$0110
-			dw $7FFF,$4E73,$0000,$080C,$0453,$08DF,$00B3,$0173
-			dw $7FFF,$5AD6,$0000,$080F,$0455,$049B,$0116,$01D6
-			dw $7FFF,$6739,$0000,$0812,$0458,$0457,$0179,$0239
-			dw $7FFF,$739C,$0000,$0815,$045B,$0452,$01DC,$029C
-			dw $7FFF,$7FFF,$0000,$0818,$087F,$087F,$023F,$02FF
+			dw $7FFF,$0000,$0000,$0000,$0000,$0000,$0000,$0000	;> Cycle 1, first half
+			dw $0000,$0000,$0000,$0000,$0000,$0000,$0000,$0000	;> Cycle 1, last half
+			dw $7FFF,$294A,$0000,$0027,$0C4A,$18EA,$0048,$00CA	;> Cycle 2, first half
+			dw $0000,$0000,$0000,$0000,$2125,$212A,$10AA,$0465	;> Cycle 2, last half
+			dw $7FFF,$56B5,$0000,$002D,$1C94,$2DD5,$006F,$0175	;> Cycle 3, first half
+			dw $0000,$0000,$0000,$0000,$464B,$4235,$2535,$04C9	;> Cycle 3, last half
+			dw $7FFF,$7FFF,$0000,$0054,$28DE,$46BF,$00B7,$023F	;> Cycle 4, first half
+			dw $0000,$0000,$0000,$0000,$6770,$635F,$35DF,$092E	;> Cycle 4, last half
+
+;MagiKoopaPals:
+;			dw $7FFF,$294A,$0000,$0404,$042A,$469F,$000A,$002A
+;			dw $7FFF,$35AD,$0000,$0806,$044F,$321F,$000D,$00AD
+;			dw $7FFF,$4210,$0000,$0809,$0451,$1D7F,$0050,$0110
+;			dw $7FFF,$4E73,$0000,$080C,$0453,$08DF,$00B3,$0173
+;			dw $7FFF,$5AD6,$0000,$080F,$0455,$049B,$0116,$01D6
+;			dw $7FFF,$6739,$0000,$0812,$0458,$0457,$0179,$0239
+;			dw $7FFF,$739C,$0000,$0815,$045B,$0452,$01DC,$029C
+;			dw $7FFF,$7FFF,$0000,$0818,$087F,$087F,$023F,$02FF
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
