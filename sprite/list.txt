@@ -215,6 +215,7 @@ CLUSTER:
 11 flowers.asm
 12 sandstorm.asm
 13 leaf.asm
+14 ash.asm
 
 EXTENDED:
 00 boomerang.asm

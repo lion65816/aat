@@ -14,6 +14,7 @@ level:
 007	freescrollbabey.asm
 008	008.asm
 009	disableflight.asm
+00A  ashspawn_uberASM.asm
 00B	LevelIntro.asm
 00C	LevelIntro.asm
 00D	LevelIntro.asm
@@ -73,6 +74,7 @@ level:
 085	DisableRightLR.asm
 087	008.asm
 090	green_garden_main.asm
+098  SimpleHP.asm
 095	Layer2Smash_095.asm
 097	freescrollbabey.asm
 099	BG_AutoScroll99.asm
@@ -223,6 +225,14 @@ level:
 1B7	redswitch.asm
 1B8	redswitch.asm
 1B9	redswitch.asm
+1BB  ashspawn_uberASM.asm
+1BC  ashspawn_uberASM.asm
+1BD  ashspawn_uberASM.asm
+1BE  ashspawn_uberASM.asm
+1BF  ashspawn_uberASM.asm
+1C0  ashspawn_uberASM.asm
+1C5  BG_AutoScroll1C5.asm
+1C7  BG_AutoScroll1C5.asm
 1C8	DisableSideExit.asm
 1CC	shmup_with_hp_boss.asm
 1CE	BabaBlocks.asm

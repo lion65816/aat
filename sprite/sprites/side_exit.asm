@@ -23,7 +23,8 @@ print "MAIN ",pc
 ;Side exit code.
 
 Spr:
-CODE_02F4D5:                      LDA.b #$01		;\                
+STZ $1B96|!Base2
+;CODE_02F4D5:                      LDA.b #$00		;\                
 ;CODE_02F4D7:                      STA.w $1B96|!Base2           ;/ Set side exit enabled flag.  
 CODE_02F4DA:                      LDA !E4,X       
 CODE_02F4DC:                      AND.b #$10		; X&1                
