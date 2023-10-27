@@ -388,3 +388,9 @@ org $048A36
 ;	db $0C					;> Red Yoshi (originally: $04)
 ;org $048CE5
 ;	db $0E					;> Green Yoshi (originally: $06)
+
+; Remove Yoshi's throat tile when swallowing.
+org $01F08B|!bank
+	db $0A					;> Tile number (originally: $3F)
+org $01F097|!bank
+	db $00					;> Tile properties (originally: $01)

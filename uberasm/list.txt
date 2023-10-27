@@ -82,7 +82,7 @@ level:
 0A1	freescrollbabey.asm
 0A2	freescrollbabey.asm
 0A3	freescrollbabey.asm
-0A4	BG_AutoScroll7B.asm
+0A4	flavor.asm
 0AA	freescrollbabey.asm
 0AF	special_smi2.asm
 0B0	DisableLR_freescrollbabey.asm
@@ -120,7 +120,6 @@ level:
 0F8	BG_AutoScroll.asm
 0F9	leafspawn_uberASM.asm
 0FB	SimpleHP.asm
-0FE	FilterYoshi.asm
 100	bonusmusic.asm
 101	LevelIntro.asm
 103	LevelIntro.asm

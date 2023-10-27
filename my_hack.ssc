@@ -213,6 +213,10 @@ Add 40 to make it stun and 80 to make it spawn shockwaves.
 9E 0022 0,1,475 0,17,476 0,0,B6
 9E 0030 A Fire Magikoopa that shoots 3 fireballs.
 9E 0032 0,1,475 0,17,476 0,0,B6 8,-4,B6 -4,8,B6
+A0 0020 A dry bones that throws bones and follows Mario, but will walk off ledge edges. He'll fall apart if Mario jumps on him, but will reassemble a few seconds later.
+A0 0022 0,1,207 0,-11,206 -8,-15,36
+A0 0030 A dry bones that will stay on ledges, but doesn't throw any bones unless the level you entered from the overworld is level 10D. He'll fall apart if Mario jumps on him, but will reassemble a few seconds later.
+A0 0032 0,1,46 -8,-14,36
 A7 0020 spike(smm2 style)
 Extra Bits - wing flag
 Extra Byte1 - throw speed

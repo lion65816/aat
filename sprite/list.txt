@@ -155,7 +155,7 @@
 9D side_exit.cfg
 9E FireMagikoopa.json
 9F superfast_chain.cfg
-A0 TorpedoTed.cfg
+A0 dry_bones_30+32.json
 A1 Geyser.cfg
 A2 CastleBlock.cfg
 A3 grrrol.cfg
@@ -200,7 +200,6 @@ C9 BigSteelyShooter.cfg
 CA sideways_bill_lr.cfg
 CB custom_bbshooter.cfg
 CC TapShooter.cfg
-CD torpedo_launcher.cfg
 CE EerieShooter.cfg
 
 D0 gusty_generator.cfg

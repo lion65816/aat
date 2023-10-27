@@ -5,7 +5,7 @@
 	
 ; Direction (Self-explanatory)
 ; Valid values are !Left, !Right, !Up, !Down, !DiagUL, !DiagUR, !DiagDL, !DiagDR
-	!Direction	= !Up
+	!Direction	= !DiagDR
 	
 ; Disable Scroll on No-Yoshi intro.
 ; Valid values are 0 (Enable) or 1 (Disable)
@@ -18,12 +18,6 @@
 !DiagUL = 4	:	!DiagUR = 5	:	!DiagDL = 6	:	!DiagDR = 7
 
 main:
-; Disable L and R buttons.
-LDA #%00000000 : STA $00
-LDA #%00110000 : STA $01
-JSL DisableButton_main
-
-JSL DisableSideExit_init
 LDA $9D			; Checks animation lock flag
 ORA $13D4|!addr		; or pause flag
 BNE .stop		; then stop the scroll

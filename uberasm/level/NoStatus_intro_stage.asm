@@ -3,6 +3,11 @@ load:
 	RTL
 
 main:
+	; Disable L and R buttons.
+	LDA #%00000000 : STA $00
+	LDA #%00110000 : STA $01
+	JSL DisableButton_main
+
 	LDA $71			;\ Dying
 	CMP #$09		;/
 	BNE .return
