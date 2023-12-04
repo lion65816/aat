@@ -22,9 +22,10 @@
 !DisabledFor = $30		; amount of frames to disable brick after landing
 !JumpMaxDist = $30		; how close the player needs to be to make the brick jump
 !Tile1 = $88			; brick tile
-!Tile2 = $8A			; Micro-Goomba tile (PSI Ninja edit: use a 16x16 tile instead)
+!Tile2 = $8A			; Micro-Goomba tile (AAT edit: use a 16x16 tile instead)
 ;!Tile2 = $9A			; Micro-Goomba tile
-!Pal1 = $01			; palette for the brick
+!Pal1 = $05			; palette for the brick (AAT edit: use a 16x16 tile instead)
+;!Pal1 = $01			; palette for the brick
 !Pal2 = $05			; palette for the Micro-Goomba
 
 XSpeed:

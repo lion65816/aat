@@ -494,6 +494,7 @@ STA !OAM_Tile,y					;
 
 LDA Table_8x8Flips,x				;apply appropriate flips
 ORA $03						;
+ORA #$04						; (AAT edit: palette A)
 STA !OAM_Prop,y					;
 
 LDX $04						;reload current tile index
@@ -544,6 +545,7 @@ LDA !SpriteRAM_FaceDirection			;load which way the sprite's facing
 LSR						;
 LDA #$00					;
 ORA !SpriteRAM_GraphicalProps			;
+ORA #$04						; (AAT edit: palette A)
 BCS .NoXFlip					;
 
 EOR #!PropXFlip					;apply x-flip if facing a different direction (right)
