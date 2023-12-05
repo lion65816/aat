@@ -3,7 +3,7 @@ load:
 	RTL
 
 init:
-	JSL FilterFireCape_init
+	;JSL FilterFireCape_init
 	JSL gradient_green_garden_init
 	RTL
 

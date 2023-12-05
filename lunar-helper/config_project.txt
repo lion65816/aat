@@ -62,6 +62,7 @@ patches
 	patch\patch\torpedo_ted_priority.asm
 	patch\patch\falling_spike_palette.asm
 	patch\patch\mole_palette.asm
+	patch\patch\IrisPalFix.asm
 ]
 -- patch\patch\ticking.asm
 -- patch\patch\bwram_plus.asm

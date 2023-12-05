@@ -4,7 +4,7 @@ load:
 	RTL
 
 init:
-	JSL FilterFireCape_init
+	;JSL FilterFireCape_init
 	JSL freescrollbabey_init
 	RTL
 

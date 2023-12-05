@@ -6,7 +6,7 @@ load:
 	RTL
 
 init:
-	JSL FilterFireCape_init
+	;JSL FilterFireCape_init
 	JSL freescrollbabey_init
 
 	LDA.b #$0D+((!ParallaxLayer-1)<<1)
