@@ -2,7 +2,7 @@
 ;	0 = a filtered fire flower or feather will always be given back.
 ;	1 = if the mushroom the filtered item has been turned into gets lost, the item will be lost as well.
 
-!ruleset = 1
+!ruleset = 0
 
 ;freeram to use. make sure nothing else in your hack uses this!
 ;note that it must not get cleared on level load or overworld load.
