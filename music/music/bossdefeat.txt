@@ -8,13 +8,13 @@ $F4$08
 $EF$FF$18$18
 $F1$02$00$00
 
-#0 w255 t48
+#0 w255 t40
 @9 v190 o3
 $FA $03 $60
 $ED$5D$E0
 $DB$0A
 
-l8 b16 > d16[f+]2edc+ < [a16]2aa16 > c+16[e16]4dc+ < b4 > b
+r4 l8 b16 > d16[f+]2edc+ < [a16]2aa16 > c+16[e16]4dc+ < b4 > b
 
 #1
 @9 v190 o3
@@ -22,7 +22,7 @@ $FA $03 $60
 $ED$5D$E0
 $DB$0B
 
-l4 [r]6r8 f+^8
+r4 l4 [r]6r8 f+^8
 
 #2
 @9 v190 o3
@@ -30,32 +30,32 @@ $FA $03 $60
 $ED$5D$E0
 $DB$09
 
-l4 [r]6r8 d+^8
+r4 l4 [r]6r8 d+^8
 
 #3
 @5 v195 o2
 $FA $03 $80
 $DB$09
 
-l8 rb > v190 b16r16 < v195 f+ > v190 b16r16 < v195 a > v190 a16r16 < v195 f+ > v190 a16r16 < v195 a+f+g+a+b4^8
+r4 l8 rb > v190 b16r16 < v195 f+ > v190 b16r16 < v195 a > v190 a16r16 < v195 f+ > v190 a16r16 < v195 a+f+g+a+b4^8
 
 #4
 @15 v185 o4
 $FA $03 $80
 $DB$0B
 
-l4 [r]7r8 b
+r4 l4 [r]7r8 b
 
 #5
 @3 v139 o4
 $FA $03 $80
 $DB$0C
 
-l16 r8 bf+<bf+> e<bf+c+> ae<ae bf+<bf+> l8 v180 [f+]2g+a+b^4
+r4 l16 r8 bf+<bf+> e<bf+c+> ae<ae bf+<bf+> l8 v180 [f+]2g+a+b^4
 
 #6
 @12 v160 o3
 $FA $03 $80
 $DB$08
 
-l8 r[f+r16a16]3[f+]3[a16f+16]3f+r4
+r4 l8 r[f+r16a16]3[f+]3[a16f+16]3f+r4

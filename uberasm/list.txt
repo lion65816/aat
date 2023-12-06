@@ -84,6 +84,7 @@ level:
 0A3	freescrollbabey.asm
 0A4	flavor.asm
 0AA	freescrollbabey.asm
+0AC  0AC.asm
 0AF	special_smi2.asm
 0B0	DisableLR_freescrollbabey.asm
 0B1	purkinje_key.asm

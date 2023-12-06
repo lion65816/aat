@@ -7,6 +7,7 @@ init:
 	RTL
 
 main:
+	JSL InvertPalette_main
 	; Disable down and A buttons.
 	LDA #%00000100 : STA $00
 	LDA #%10000000 : STA $01

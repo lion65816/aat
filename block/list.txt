@@ -200,6 +200,7 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 1FFC:25 screentele_door.asm
 2093:130 question_block.asm
 2300:25 noyoshiintro.asm
+2C07:25 RemoveYoshi.asm
 2D8F:130 boost_up.asm
 2D8C:130 SpinJumpPass.asm
 3300:25 BlkMus1.asm
