@@ -394,3 +394,11 @@ org $01F08B|!bank
 	db $0A					;> Tile number (originally: $3F)
 org $01F097|!bank
 	db $00					;> Tile properties (originally: $01)
+
+; Change broken brick tile palettes from 8 to A.
+org $028B8C|!bank
+	db $04,$04,$84,$84,$84,$C4,$44,$04	;> originally: $00,$00,$80,$80,$80,$C0,$40,$00
+
+; Change castle entrance door palette from 8 to A.
+org $02F6DA|!bank
+	db $25					;> originally: $21

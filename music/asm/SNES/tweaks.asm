@@ -85,7 +85,8 @@ org $00EEC3
 org $00F60B
 	db !Miss
 org $018784
-	db !BossClear
+	db !StageClear	;\ AAT edit: Play the stage clear music for the goal sphere.
+	;db !BossClear	;/
 org $01AB08
 	db !PSwitch
 org $01C0F0

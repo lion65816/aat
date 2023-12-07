@@ -1,5 +1,10 @@
 #amk 2
 
+"VCMD_PAN_FADE=$dc"
+"VCMD_VIBRATO_ON=$de"
+"VCMD_ECHO_OFF=$f0"
+"VCMD_PITCH_SLIDE=$dd"
+
 #option TempoImmunity
 #option NoLoop
 
@@ -9,53 +14,67 @@ $EF$FF$18$18
 $F1$02$00$00
 
 #0 w255 t40
+r=84
 @9 v190 o3
 $FA $03 $60
 $ED$5D$E0
 $DB$0A
 
-r4 l8 b16 > d16[f+]2edc+ < [a16]2aa16 > c+16[e16]4dc+ < b4 > b
+l8 b16 > d16[f+]2edc+ < [a16]2aa16 > c+16[e16]4dc+ < b4 > b
 
 #1
+VCMD_ECHO_OFF
+@2 y20
+VCMD_PAN_FADE $54 $00
+q7f
+o4 f4..
+VCMD_PITCH_SLIDE $00 $0c $b7
+VCMD_PITCH_SLIDE $00 $18 $b0
+VCMD_PITCH_SLIDE $00 $30 $a4
 @9 v190 o3
 $FA $03 $60
 $ED$5D$E0
 $DB$0B
 
-r4 l4 [r]6r8 f+^8
+l4 [r]6r8 f+^8
 
 #2
+r=84
 @9 v190 o3
 $FA $03 $60
 $ED$5D$E0
 $DB$09
 
-r4 l4 [r]6r8 d+^8
+l4 [r]6r8 d+^8
 
 #3
+r=84
 @5 v195 o2
 $FA $03 $80
 $DB$09
 
-r4 l8 rb > v190 b16r16 < v195 f+ > v190 b16r16 < v195 a > v190 a16r16 < v195 f+ > v190 a16r16 < v195 a+f+g+a+b4^8
+l8 rb > v190 b16r16 < v195 f+ > v190 b16r16 < v195 a > v190 a16r16 < v195 f+ > v190 a16r16 < v195 a+f+g+a+b4^8
 
 #4
+r=84
 @15 v185 o4
 $FA $03 $80
 $DB$0B
 
-r4 l4 [r]7r8 b
+l4 [r]7r8 b
 
 #5
+r=84
 @3 v139 o4
 $FA $03 $80
 $DB$0C
 
-r4 l16 r8 bf+<bf+> e<bf+c+> ae<ae bf+<bf+> l8 v180 [f+]2g+a+b^4
+l16 r8 bf+<bf+> e<bf+c+> ae<ae bf+<bf+> l8 v180 [f+]2g+a+b^4
 
 #6
+r=84
 @12 v160 o3
 $FA $03 $80
 $DB$08
 
-r4 l8 r[f+r16a16]3[f+]3[a16f+16]3f+r4
+l8 r[f+r16a16]3[f+]3[a16f+16]3f+r4

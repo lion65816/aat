@@ -34,7 +34,7 @@
 
 ;LEVEL END MUSIC
 ;What song to play when the goal sphere is collected.
-	!Music = $03
+	!Music = $04
 ;	!Music = $0B
 
 ;OVERWORLD DESTINATION 1
