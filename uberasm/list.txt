@@ -20,7 +20,7 @@ level:
 00D	LevelIntro.asm
 00E	LevelIntro.asm
 00F	ReverseBG.asm
-010	LevelIntro.asm
+010	LevelIntro010.asm
 013	LevelIntro.asm
 015	LevelIntro.asm
 016	LevelIntro.asm

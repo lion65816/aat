@@ -81,7 +81,8 @@ org $00D0DE
 org $00E304
 	db !PSwitch
 org $00EEC3
-	db !StageClear
+	db !BossClear	;\ AAT edit: Play the boss clear music when the Switch Palace is beaten.
+	;db !StageClear	;/
 org $00F60B
 	db !Miss
 org $018784
