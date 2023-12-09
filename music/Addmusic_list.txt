@@ -100,6 +100,7 @@ Locals:
 61  Legend of Mana - Irwin on Reflection.txt
 62  Legend of Mana - Irwin on Reflection (Brutal Mario).txt
 63  th12_hokkai.txt
+64  HeyThereEveryone.txt
 65  Approaching the Castle (Fullcannon).txt
 66  HJ Demo 2 (Bouncy) (VecchiaZim).txt
 67  Earthbound_-_Pokey_Means_Business (A3MT Edit).txt

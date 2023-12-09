@@ -46,7 +46,7 @@
 !ForestOfIllusion = #$1B
 !ValleyOfBowser	= #$1C
 !SpecialWorld	= #$1D
-!NintPresents   = #$1E		; Note that this is a song, not a sound effect!
+!NintPresents   = #$64		; Note that this is a song, not a sound effect!
 
 !Bowser2	= #$1F		;
 !Bowser3	= #$20

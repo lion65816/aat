@@ -568,6 +568,17 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 645d	0	Adds #$05 lives one by one and then disappears in a glitter
 6493	0	The left tile of an exit enabled vertical pipe that uses a specific screen's exit depending on a specified condition.
 6494	0	The left tile of an exit enabled vertical pipe that uses a specific screen's exit depending on a specified condition.
+68e3	0	A block that will act like tile 25 for Mario
+6969	0	Erase the room/author names.
+696a	0	Erase the room/author names.
+6979	0	Erase the room/author names.
+697a	0	Erase the room/author names.
+69fe	0	Erase the room/author names.
+69ff	0	Erase the room/author names.
+6cee	0	Disables horizontal scrolling at an exact position.
+6f43	0	
+6f9d	0	Teleports the player.
+6fad	0	Teleports the player.
 703d	0	
 71f0	0	
 7203	0	
@@ -580,12 +591,19 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 7234	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
 7243	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
 7244	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+7249	0	Disables horizontal scrolling at an exact position.
 7253	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
 7254	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+7259	0	Disables horizontal scrolling at an exact position.
 7263	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
 7264	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+7269	0	Disables horizontal scrolling at an exact position.
 7273	0	
 7274	0	
+7279	0	Disables horizontal scrolling at an exact position.
+727c	0	Disables horizontal scrolling at an exact position.
+7288	0	Disables horizontal scrolling at an exact position.
+7298	0	Disables horizontal scrolling at an exact position.
 7f09	0	
 7f66	0	
 7f6d	0	conveyer move left fast

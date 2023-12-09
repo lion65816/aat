@@ -356,6 +356,17 @@ R56C0-56D1:130 question_mark/giant_question_block_single.asm
 645D:25 5up.asm
 6493:130 customvpipe_left.asm
 6494:130 customvpipe_right.asm
+68E3:130 sprite_solid.asm
+697A:25 final_castle_door_erase.asm
+696A:25 final_castle_door_erase.asm
+6969:25 final_castle_door_erase.asm
+6979:25 final_castle_door_erase.asm
+69FE:25 final_castle_door_erase.asm
+69FF:25 final_castle_door_erase.asm
+6CEE:25 ExactHScrollDisable.asm
+6F43:130 Message134.asm
+6F9D:25 teleport.asm
+6FAD:25 teleport.asm
 703D:25 ScreenExitTeleport.asm
 71F0:25 TeleportBlockB3.asm
 7203:25 SwimSE.asm
@@ -368,12 +379,19 @@ R56C0-56D1:130 question_mark/giant_question_block_single.asm
 7234:25 QuicksandPit.asm
 7243:25 QuicksandPit.asm
 7244:25 QuicksandPit.asm
+7249:25 ExactHScrollDisable.asm
 7253:25 QuicksandPit.asm
 7254:25 QuicksandPit.asm
+7259:25 ExactHScrollDisable.asm
 7263:25 QuicksandPit.asm
 7264:25 QuicksandPit.asm
+7269:25 ExactHScrollDisable.asm
 7273:130 TeleportB2.asm
 7274:130 TeleportB2.asm
+7279:25 ExactHScrollDisable.asm
+727C:25 ExactHScrollDisable.asm
+7288:25 ExactHScrollDisable.asm
+7298:25 ExactHScrollDisable.asm
 7F6D:130 conveyer move left fast.asm
 7F6E:130 conveyer move left fast.asm
 7F6E:130 conveyer move left fast.asm

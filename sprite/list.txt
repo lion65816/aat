@@ -38,7 +38,7 @@
 25 stretch.json
 26 cookie.cfg
 27 bouncing_cookie.cfg
-28 hotfoot.json
+28 npc2.cfg
 29 fire_snake_athletic.json
 2A DirectionalPlatform.json
 2B DirectionalPlatform2.json

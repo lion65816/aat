@@ -1,0 +1,19 @@
+#samples
+{
+	#optimized
+	"raocow.brr"
+}
+
+#instruments
+{
+	"raocow.brr" $8F $E0 $00 $03 $C0 ; @30
+	@3 $FE $11 $B8 $03 $00
+}
+
+#option smwvtable
+
+#0 w255 t62 @30 o5 c1^1
+;#0 ?0 @30
+;v255 o4 b32>c                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+
+#amk 2

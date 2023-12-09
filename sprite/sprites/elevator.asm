@@ -16,7 +16,7 @@
 !ElevContRAnim1		 = $88	;left part of the control tile of the elevator, frame 2.
 !ElevContRAnim2		 = $C2  ;right part of the control tile of the elevator, frame 2.
 ;;Edit the palette below. I'll explain its options.
-!PaletteChoice		 = $3D	;the values follows the YXPPCCCT format. Only PP, CCC and T are needed. The number in parenthesis are in bit format.(PP-layer priority; 00 - lowest priority; 01 - decent priority; 10 - good priority; 11 - highest priority; CCC -palette; 000 - palette 8; 001 - palette 9; 010 - palette A; 011 - palette B; 100 - palette C; 101 - palette D; 110 - palette E; 111 - palette F) If you want the sprite to be on the 2nd layer priority, use palette C and GFX page 1, not that you want to, then it's $18.
+!PaletteChoice		 = $33	;the values follows the YXPPCCCT format. Only PP, CCC and T are needed. The number in parenthesis are in bit format.(PP-layer priority; 00 - lowest priority; 01 - decent priority; 10 - good priority; 11 - highest priority; CCC -palette; 000 - palette 8; 001 - palette 9; 010 - palette A; 011 - palette B; 100 - palette C; 101 - palette D; 110 - palette E; 111 - palette F) If you want the sprite to be on the 2nd layer priority, use palette C and GFX page 1, not that you want to, then it's $18.
 
 ;symbolic names for ram addresses - DON'T change them or you'll break the sprite, and maybe even SMW.  Not good.
 !MARIO_X_SPEED   = $7B
