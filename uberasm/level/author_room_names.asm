@@ -6,6 +6,10 @@
 !TileOrigin = $D000	;> Reference coordinate (YYXX)
 !TileProp = $3000	;> High byte contains the YXPPCCCT
 
+load:
+	JSL FilterYoshi_load
+	RTL
+
 ;=================================
 ; Main routine
 ;=================================
