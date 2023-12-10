@@ -1,0 +1,309 @@
+<html>
+	<head>
+		<style>
+			html {
+			background-color: #000207;
+			color: white;
+			font-family: sans-serif;
+			}
+			
+			table, th, td {
+			border: 1px solid white;
+			border-collapse: collapse;
+			}
+			
+			span.NoLineBreak {
+				white-space: nowrap;
+			}
+			
+			input[type='text'] { font-family: monospace;}
+			input[type='number'] { font-family: monospace;}
+		</style>
+	</head>
+	<body onload="Calculate()">
+	<a href="../Readme.html#MemoryCalculator">Back</a><br><br>
+	
+	<h3>Notes</h3>
+	<ul>
+	<li><p>This javascript calculator uses <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt"><kbd>BigInt</kbd></a> as its number format. Make sure your
+	browser supports this format. Currently (the time of writing 2019-12-29), edge, IE (why use this browser?), safari (and IOS) don't support this format. The reason is because to prevent a potential
+	rounding issues with the precision, <kbd>Math.floor(x/y)</kbd> could have the quotient be rounded up before the floor function kicks in). An example is this: <kbd>Math.floor(100000000000000.9999)</kbd>,
+	its between <kbd>100000000000000</kbd> and <kbd>100000000000001</kbd>, however, it is rounded towards <kbd>100000000000001</kbd> and not <kbd>100000000000000</kbd>, which is wrong.<p></li>
+	
+	<li><p>Google chrome (and potentially other browsers) seems to struggle to render this page with huge tables (when you set the number of group-128s to a high value), firefox seems fine
+	when handling this.</p></li>
+	
+	<li><p>Leading zeros are omitted here, so if you are using CTR+F to find the flag number, don't have leading zeroes (find &ldquo;$03&rdquo; should be &ldquo;$3&rdquo; instead).</p></li>
+	</ul>
+	<kbd>!Freeram_MemoryFlagRAM = </kbd>$<input type="text" onchange="Calculate()" value="7FAD49" id="Freeram_MemoryFlagRAM" list="MemoryFlagRAMTables"><button onclick="BigintIncreaseDecreaseHexInput(1n, 'Freeram_MemoryFlagRAM', 0n, BigInt('0xFFFFFF')) ">+</button><button onclick="BigintIncreaseDecreaseHexInput(-1n, 'Freeram_MemoryFlagRAM', 0n, BigInt('0xFFFFFF')) ">-</button>
+	<datalist id="MemoryFlagRAMTables">
+	<option value="7FAD49">Default RAM address</option>
+	<option value="4001B9">Default RAM address (SA-1)</option>
+	</datalist><br>
+	Number of group-128s = <input type="number" onchange="Calculate()" value="2" min="1" max="16" id="NumberOfGroup128"><br>
+	<kbd>!Freeram_KeyCounter = </kbd>$<input type="text" onchange="Calculate()" value="7FAD79" id="Freeram_KeyCounter" list="KeyCounters"><button onclick="BigintIncreaseDecreaseHexInput(1n, 'Freeram_KeyCounter', 0n, BigInt('0xFFFFFF')) ">+</button><button onclick="BigintIncreaseDecreaseHexInput(-1n, 'Freeram_KeyCounter', 0n, BigInt('0xFFFFFF')) ">-</button>
+	<datalist id="KeyCounters">
+	<option value="7FAD79">Default RAM address</option>
+	<option value="4001E9">Default RAM address (SA-1)</option>
+	</datalist><br>
+	Number of separate key counters = <input type="number" onchange="Calculate()" value="2" min="1" max="256" id="NumberOfKeyCounters"><br>
+	
+	<button onclick="reset()">Reset</button><br>
+	<hr>
+	<span id="Output"></span>
+	<h2>Placeholder table templates</h2>
+	<p>I made this so it is easier to paste the tables in their respective ASM files. All you have to do is edit some placeholder values. Careful
+	not to insert or delete items off the table that isn't the last (bottomost) item, else you would have to move the comments (starting
+	from the area that you've insert or deleted to the last) if you are using them to find what flags/level ID they are.</p>
+	
+	SRAM/BWRAM tables filled with for default block flags:<br>
+	<input type="radio" name="SRAMDefaultBits" id="ID_SRAMDefaultBits0" checked onchange="Calculate()"><label for="ID_SRAMDefaultBits0"><kbd>db %00000000</kbd></label><br>
+	<input type="radio" name="SRAMDefaultBits" id="ID_SRAMDefaultBits1" onchange="Calculate()"><label for="ID_SRAMDefaultBits1"><kbd>db %11111111</kbd></label><br><br>
+	
+	<span id="Output2"></span>
+<script>
+	function reset() {
+		document.getElementById("Freeram_MemoryFlagRAM").value = "7FAD49"
+		document.getElementById("ID_SRAMDefaultBits0").checked = true
+		document.getElementById("NumberOfGroup128").value = "2"
+		document.getElementById("Freeram_KeyCounter").value = "7FAD79"
+		
+		Calculate()
+	}
+	function Calculate() {
+		var MemoryFlagRAM = BigintClamp(CorrectHexBigIntValue(document.getElementById("Freeram_MemoryFlagRAM").value), 0n, BigInt("0xFFFFFF"))
+		document.getElementById("Freeram_MemoryFlagRAM").value = MemoryFlagRAM.toString(16).toUpperCase()
+		
+		var NumberOfGroup128 = BigintClamp(BigInt(document.getElementById("NumberOfGroup128").value), 1n, 16n)
+		document.getElementById("NumberOfGroup128").value = NumberOfGroup128.toString(10)
+		
+		var KeyCounterRAM = BigintClamp(CorrectHexBigIntValue(document.getElementById("Freeram_KeyCounter").value), 0n, BigInt("0xFFFFFF"))
+		document.getElementById("Freeram_KeyCounter").value = KeyCounterRAM.toString(16).toUpperCase()
+		
+		var NumberOfKeyCounters = BigintClamp(BigInt(document.getElementById("NumberOfKeyCounters").value), 1n, 256n)
+		document.getElementById("NumberOfKeyCounters").value = NumberOfKeyCounters.toString(10)
+		
+		var NumberOfBytesOfMemoryFlagRAM = NumberOfGroup128*16n
+		var TotalNumberOfBitsOfMemoryFlagRAM = NumberOfBytesOfMemoryFlagRAM*8n
+		
+		var Output = ""
+		document.getElementById("Output").innerHTML = ""
+		
+		Output += "This JS file also generate ASM tables below this HTML table. For quick access, you can CTRL+F these to instantly jump to:"
+		Output += "<ul>"
+		Output += "<li>SRAM/BWRAM plus</li>"
+		Output += "<li>SearchBlockFlagIndex.asm (custom blocks routine)</li><ul>"
+		Output += "<li>?GetFlagNumberLayerProcessingStart</li>"
+		Output += "<li>?GetFlagNumberC800IndexStart</li></ul>"
+		Output += "<li>MBCM16WriteGroup128To7FC060.asm (uberasm tool)</li><ul>"
+		Output += "<li>.OneHundredTwentyEightFlagGroupList</li></ul>"
+		Output += "</ul>"
+		
+		Output += "<table>"
+		Output += "<tr><th colspan='2'>Total size and entire range</th></tr>"
+		Output += "<tr>"
+		Output += "<td><kbd>!Freeram_MemoryFlagRAM</kbd> range:</td>"
+		Output += "<td><kbd>$" + MemoryFlagRAM.toString(16).toUpperCase() + "</kbd> to <kbd>$" + (MemoryFlagRAM+(NumberOfBytesOfMemoryFlagRAM-1n)).toString(16).toUpperCase() + "</kbd> (<kbd>!Freeram_MemoryFlagRAM</kbd> to <kbd>!Freeram_MemoryFlagRAM+$" + (NumberOfBytesOfMemoryFlagRAM-1n).toString(16).toUpperCase() + "</kbd>), <kbd>" + NumberOfBytesOfMemoryFlagRAM.toString(10) + "</kbd> bytes</td>"
+		Output += "</tr>"
+		Output += "<tr>"
+		Output += "<td>Flag numbering range:</td>"
+		Output += "<td><kbd>0</kbd> to <kbd>" + (TotalNumberOfBitsOfMemoryFlagRAM-1n).toString(10) + "</kbd> (<kbd>$0</kbd> to <kbd>$" + (TotalNumberOfBitsOfMemoryFlagRAM-1n).toString(16).toUpperCase() + "</kbd>, <kbd>" + TotalNumberOfBitsOfMemoryFlagRAM.toString(10) + "</kbd> bits)</td>"
+		Output += "</tr>"
+		Output += "<tr>"
+		Output += "<td><kbd>!Freeram_KeyCounter</kbd> range</td>"
+		Output += "<td><kbd>$" + KeyCounterRAM.toString(16).toUpperCase() + "</kbd> to <kbd>$" + (KeyCounterRAM+(NumberOfKeyCounters-1n)).toString(16).toUpperCase() + "</kbd> (<kbd>!Freeram_KeyCounter</kbd> to <kbd>!Freeram_KeyCounter+$" + (NumberOfKeyCounters-1n).toString(16).toUpperCase() + "</kbd>), <kbd>" + NumberOfKeyCounters.toString(10) + "</kbd> bytes)</td>"
+		Output += "</tr>"
+		Output += "</table><br>"
+		if (NumberOfGroup128 >= 2n) {
+			var GroupCount = 0n
+			Output += "<table>"
+			Output += "<tr><th colspan='3'>Subranges of each group</th></tr>"
+			Output += "<tr><th>Group number</th><th>RAM byte range</th><th>Bit flag numbering range</th></tr>"
+			for (GroupCount = 0n; GroupCount < NumberOfGroup128; GroupCount++) {
+				Output += "<tr>"
+				Output += "<td>Group <kbd>$" + GroupCount.toString(16).toUpperCase() + "</kbd></td>"
+				Output += "<td><kbd>$" + (MemoryFlagRAM+(GroupCount*16n)).toString(16).toUpperCase() + "</kbd> to <kbd>$" + (MemoryFlagRAM+((GroupCount*16n)+15n)).toString(16).toUpperCase() + "</kbd> (<kbd>!Freeram_MemoryFlagRAM+$" + (GroupCount*16n).toString(16).toUpperCase() + "</kbd> to <kbd>!Freeram_MemoryFlagRAM+$" + ((GroupCount*16n)+15n).toString(16).toUpperCase()  + "</kbd>)</td>"
+				Output += "<td><kbd>" + (GroupCount*128n).toString(10) + "</kbd> to <kbd>" + ((GroupCount*128n)+127n).toString(10) + "</kbd> (<kbd>$" + (GroupCount*128n).toString(16).toUpperCase() + "</kbd> to <kbd>$" + ((GroupCount*128n)+127n).toString(16).toUpperCase() + "</kbd>)</td>"
+				Output += "</tr>"
+			}
+			Output += "</table>"
+		}
+		
+		Output += "<br>"
+		
+		Output += "<table>"
+		Output += "<tr><th colspan='2'>RAM addresses</th><th colspan='8'>Bit within each byte</th></tr>"
+		Output += "<tr>"
+		Output += "<th>Address of <kbd>!Freeram_MemoryFlagRAM</kbd></th>"
+		Output += "<th>LM's <kbd>$7FC060</kbd> address</th>"
+		Output += "<th>Bit <kbd>7</kbd>"
+		Output += "<th>Bit <kbd>6</kbd>"
+		Output += "<th>Bit <kbd>5</kbd>"
+		Output += "<th>Bit <kbd>4</kbd>"
+		Output += "<th>Bit <kbd>3</kbd>"
+		Output += "<th>Bit <kbd>2</kbd>"
+		Output += "<th>Bit <kbd>1</kbd>"
+		Output += "<th>Bit <kbd>0</kbd>"
+		Output += "</tr>"
+		
+		//8372320 is $7FC060
+		ByteIndexCount = 0n
+		for (ByteIndexCount = 0n; ByteIndexCount < NumberOfBytesOfMemoryFlagRAM; ByteIndexCount++) {
+			if ((ByteIndexCount % 16n) == 0n) {
+				Output += "<tr><th colspan='10'>Group $" + (ByteIndexCount/16n).toString(16).toUpperCase() + "</th></tr>"
+			}
+			Output += "<tr>"
+			Output += "<td><kbd>$" + (MemoryFlagRAM+ByteIndexCount).toString(16).toUpperCase() + "</kbd> (<kbd>!Freeram_MemoryFlagRAM+$" + ByteIndexCount.toString(16).toUpperCase() + "</kbd>)</td>"
+			Output += "<td><kbd>$" + (8372320n+(ByteIndexCount % 16n)).toString(16).toUpperCase() + "</kbd></td>"
+			Output += "<td>Flag: <kbd>$" + ((ByteIndexCount * 8n)+7n).toString(16).toUpperCase() + "</kbd><br> LM: <kbd>$" + (((ByteIndexCount % 16n) * 8n)+7n).toString(16).toUpperCase() + "</kbd></td>"
+			Output += "<td>Flag: <kbd>$" + ((ByteIndexCount * 8n)+6n).toString(16).toUpperCase() + "</kbd><br> LM: <kbd>$" + (((ByteIndexCount % 16n) * 8n)+6n).toString(16).toUpperCase() + "</kbd></td>"
+			Output += "<td>Flag: <kbd>$" + ((ByteIndexCount * 8n)+5n).toString(16).toUpperCase() + "</kbd><br> LM: <kbd>$" + (((ByteIndexCount % 16n) * 8n)+5n).toString(16).toUpperCase() + "</kbd></td>"
+			Output += "<td>Flag: <kbd>$" + ((ByteIndexCount * 8n)+4n).toString(16).toUpperCase() + "</kbd><br> LM: <kbd>$" + (((ByteIndexCount % 16n) * 8n)+4n).toString(16).toUpperCase() + "</kbd></td>"
+			Output += "<td>Flag: <kbd>$" + ((ByteIndexCount * 8n)+3n).toString(16).toUpperCase() + "</kbd><br> LM: <kbd>$" + (((ByteIndexCount % 16n) * 8n)+3n).toString(16).toUpperCase() + "</kbd></td>"
+			Output += "<td>Flag: <kbd>$" + ((ByteIndexCount * 8n)+2n).toString(16).toUpperCase() + "</kbd><br> LM: <kbd>$" + (((ByteIndexCount % 16n) * 8n)+2n).toString(16).toUpperCase() + "</kbd></td>"
+			Output += "<td>Flag: <kbd>$" + ((ByteIndexCount * 8n)+1n).toString(16).toUpperCase() + "</kbd><br> LM: <kbd>$" + (((ByteIndexCount % 16n) * 8n)+1n).toString(16).toUpperCase() + "</kbd></td>"
+			Output += "<td>Flag: <kbd>$" + (ByteIndexCount * 8n).toString(16).toUpperCase() + "</kbd><br> LM: <kbd>$" + ((ByteIndexCount % 16n) * 8n).toString(16).toUpperCase() + "</kbd></td>"
+			Output += "</tr>"
+		}
+		Output += "</table><br><br>"
+		//And edit the HTML via JS code
+		document.getElementById("Output").innerHTML = Output
+		
+		//Generate placeholder tables
+		var Output2 = ""
+		document.getElementById("Output2").innerHTML = ""
+		Output2 += "<h3>SRAM/BWRAM plus</h3>"
+		
+		Output2 += "<table><tr><td><pre>"
+		Output2 += "	dl $" + KeyCounterRAM.toString(16).toUpperCase() + " : dw " + NumberOfKeyCounters.toString(10) + "	;&gt;!Freeram_KeyCounter<br>"
+		Output2 += "	dl $" + MemoryFlagRAM.toString(16).toUpperCase() + " : dw " + NumberOfBytesOfMemoryFlagRAM.toString(10) + "	;&gt;!Freeram_MemoryFlagRAM<br>"
+		Output2 += "	;[...]<br>"
+		var PlaceHolderLoopCount = 0n
+		var SRAMBWRAM_TableFiller = "00000000"
+		if (document.getElementById("ID_SRAMDefaultBits1").checked == true) {
+			SRAMBWRAM_TableFiller = "11111111"
+		}
+		Output2 += ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br>"
+		Output2 += ";Default values for how many keys you picked up.<br>"
+		Output2 += ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br>"
+		for (PlaceHolderLoopCount = 0n; PlaceHolderLoopCount < NumberOfKeyCounters; PlaceHolderLoopCount++) {
+			Output2 += "	db $00		;&gt;$" + (KeyCounterRAM+PlaceHolderLoopCount).toString(16).toUpperCase() + ", Key counter $" + PlaceHolderLoopCount.toString(16).toUpperCase() + "<br>"
+		}
+		Output2 += ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br>"
+		Output2 += ";Default values for the MBCM16 blocks when you start up your new file<br>"
+		Output2 += ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br>"
+		for (PlaceHolderLoopCount = 0n; PlaceHolderLoopCount < NumberOfBytesOfMemoryFlagRAM; PlaceHolderLoopCount++) {
+			Output2 += "	db %" + SRAMBWRAM_TableFiller + "		;&gt;$" + (MemoryFlagRAM+PlaceHolderLoopCount).toString(16).toUpperCase() + " (byte $" + PlaceHolderLoopCount.toString(16).toUpperCase() + ") Flags $" + (PlaceHolderLoopCount*8n).toString(16).toUpperCase() + " to $" + ((PlaceHolderLoopCount*8n)+7n).toString(16).toUpperCase() + " (Group $" + (PlaceHolderLoopCount/16n).toString(16).toUpperCase() + ")<br>"
+		}
+		Output2 += "</pre></td></tr></table>"
+		
+		Output2 += "<h3>SearchBlockFlagIndex.asm (custom blocks routine)</h3>"
+
+		Output2 += "<table><tr><td><pre>"
+		Output2 += ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br>"
+		Output2 += ";List of level numbers. This is essentially what level the flags are in.<br>"
+		Output2 += ";<br>"
+		Output2 += ";Note: you CAN have duplicate level numbers here if you have multiple flags<br>"
+		Output2 += ";in a single level.<br>"
+		Output2 += ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br>"
+		
+		Output += "?GetFlagNumberLevelIndexStart:<br>"
+		for (PlaceHolderLoopCount = 0n; PlaceHolderLoopCount < TotalNumberOfBitsOfMemoryFlagRAM; PlaceHolderLoopCount++) {
+			Output2 += "	dw $FFFF		;&gt;Flag $" + PlaceHolderLoopCount.toString(16).toUpperCase() + " (Group $" + (PlaceHolderLoopCount/128n).toString(16).toUpperCase() + ") -&gt; LM's CM16 flag $" + (PlaceHolderLoopCount % 128n).toString(16).toUpperCase() + "<br>"
+		}
+		Output2 += "?GetFlagNumberLevelIndexEnd:<br>"
+		
+		Output2 += ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br>"
+		Output2 += ";List of what layer the flag is on. Put &quot;$01&quot; for layer 2 blocks if you<br>"
+		Output2 += ";are using a layer 2 level and have that flagged block on that layer, otherwise put &quot;$00&quot; instead.<br>"
+		Output2 += ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br>"
+		
+		Output2 += "?GetFlagNumberLayerProcessingStart:<br>"
+		for (PlaceHolderLoopCount = 0n; PlaceHolderLoopCount < TotalNumberOfBitsOfMemoryFlagRAM; PlaceHolderLoopCount++) {
+			Output2 += "	db $00		;&gt;Flag $" + PlaceHolderLoopCount.toString(16).toUpperCase() + " (Group $" + (PlaceHolderLoopCount/128n).toString(16).toUpperCase() + ") -&gt; LM's CM16 flag $" + (PlaceHolderLoopCount % 128n).toString(16).toUpperCase() + "<br>"
+		}
+		Output2 += "?GetFlagNumberLayerProcessingEnd:<br>"
+		Output2 += ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br>"
+		Output2 += ";List of positions.<br>"
+		Output2 += ";With the help of asar's function (not sure if Xkas first made this or not),<br>"
+		Output2 += ";adding a location to the table is very easy. Format:<br>"
+		Output2 += ";<br>"
+		Output2 += ";dw GetC800IndexHorizLvl($HHHH, $XXXX, $YYYY)<br>"
+		Output2 += ";dw GetC800IndexVertiLvl($XXXX, $YYYY)<br>"
+		Output2 += ";<br>"
+		Output2 += ";-$HHHH is the level height (in pixels), basically RAM address $13D7. Fastest way to<br>"
+		Output2 += "; know what value is this in a level is in lunar magic, hover your mouse on the last<br>"
+		Output2 += "; row of blocks, and the status bar on the window (&lt;XPos_in_hex&gt;,&lt;YPos_in_hex&gt;:&lt;TileNumber&gt;),<br>"
+		Output2 += "; take the &lt;YPos_in_hex&gt; and add 1 AND THEN multiply by $10 (or just add a zero at the end;<br>"
+		Output2 += "; example: ($1A + 1)*$10 = $1B0)<br>"
+		Output2 += ";-$XXXX and $YYYY are the block coordinates, in units of 16x16 blocks (not pixels).<br>"
+		Output2 += ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br>"
+		Output2 += "?GetFlagNumberC800IndexStart:<br>"
+		for (PlaceHolderLoopCount = 0n; PlaceHolderLoopCount < TotalNumberOfBitsOfMemoryFlagRAM; PlaceHolderLoopCount++) {
+			Output2 += "	dw GetC800IndexHorizLvl($01B0, $0000, $0000)		;&gt;Flag $" + PlaceHolderLoopCount.toString(16).toUpperCase() + " (Group $" + (PlaceHolderLoopCount/128n).toString(16).toUpperCase() + ") -&gt; LM's CM16 flag $" + (PlaceHolderLoopCount % 128n).toString(16).toUpperCase() + "<br>"
+		}
+		Output2 += "?GetFlagNumberC800IndexEnd:"
+		Output2 += "</pre></td></tr></table><br>"
+		
+		Output2 += "<h3>MBCM16WriteGroup128To7FC060.asm (uberasm tool)</h3>"
+		Output2 += "Note: if you have any levels not using the MBCM16, feel free to delete from the bottom up. Make sure both tables have equal number of items though.<br><br>"
+		Output2 += "<kbd>Level ID</kbd> refers to what index on the list, this is not the same as the flag numbers for the previous tables. It's there so that you can match "
+		Output2 += "what level and what group-128 each item are linked to (example: the 10th item on the list correlates to the 10th item on the other list)."
+		Output2 += "<table><tr><td><pre>"
+		Output2 += ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br>"
+		Output2 += ";List of levels. Each level are given what group-128 to use.<br>"
+		Output2 += ";You cannot have one level with multiple group-128s, however<br>"
+		Output2 += ";you can have multiple levels using the same group-128, which<br>"
+		Output2 += ";that saves you memory if you find one level using less than 128<br>"
+		Output2 += ";flags.<br>"
+		Output2 += ";<br>"
+		Output2 += ";Also, you cannot have duplicate level numbers here, else during<br>"
+		Output2 += ";running this, it will ONLY take the last level number of the duplicates<br>"
+		Output2 += ";matching with the current level number.<br>"
+		Output2 += ";<br>"
+		Output2 += ";Although I could simply only have the table [.OneHundredTwentyEightFlagGroupList], have the index be<br>"
+		Output2 += ";the level number (X ranging from $0000 to $01FF), and have the value $FF to indcate that the level does<br>"
+		Output2 += ";not use MBCM16, it is very possible that you may have levels that don't use MBCM16 at all, thus resulting<br>"
+		Output2 += ";lots of unused values in the table with $FF, which waste space.<br>"
+		Output2 += ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br>"
+		Output2 += ".LevelList<br>"
+		for (PlaceHolderLoopCount = 0n; PlaceHolderLoopCount < 512n; PlaceHolderLoopCount++) {
+			//Assuming if all levels would ever use the group-128
+			Output2 += "	dw $FFFF		;&gt;Level ID = " + PlaceHolderLoopCount.toString(10) + "<br>"
+		}
+		Output2 += "..End<br>"
+		Output2 += ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br>"
+		Output2 += ";This table specifies what group-128 each level should use.<br>"
+		Output2 += ";Only enter numbers here as [$X0], where X is the group number in hex (therefore, numbers here must be<br>"
+		Output2 += ";multiples of 16: [ValueYouPutHere = GroupNumber * $10]).<br>"
+		Output2 += ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;<br>"
+		Output2 += ".OneHundredTwentyEightFlagGroupList<br>"
+		for (PlaceHolderLoopCount = 0n; PlaceHolderLoopCount < 512; PlaceHolderLoopCount++) {
+			Output2 += "	db $00			;&gt;Level ID = " + PlaceHolderLoopCount.toString(10) + "<br>"
+		}
+		Output2 += "..End<br>"
+		
+		document.getElementById("Output2").innerHTML = Output2
+	}
+	function BigintClamp(num, min, max) {
+		//Restrict a number within a specified range, bigInt edition.
+		return num <= min ? min : num >= max ? max : num;
+	}
+	function BigintIncreaseDecreaseHexInput(ChangeBy, WhatInput, Min, Max) {
+		//To be used along with a hex input the user enters.
+		//This function is for the increment/decrement buttons since
+		//only the "number" input (only allows characters 0-9) allows
+		//the increment/decrement action (up/down button when selected,
+		//and pressing up and down)
+		document.getElementById(WhatInput).value = BigintClamp((CorrectHexBigIntValue(document.getElementById(WhatInput).value) + ChangeBy), Min, Max).toString(16).toUpperCase()
+		Calculate()
+	}
+	function CorrectHexBigIntValue(String) {
+		//This converts the user's input hex string (negative numbers not allowed)
+		//to BigInt.
+		if ((/^([0-9]|[A-F]|[a-f])+$/).test(String) == false) {
+			String = 0n
+		}
+		return CanConvertHexStringToBigInt = BigInt("0x" + String)
+	}
+</script>

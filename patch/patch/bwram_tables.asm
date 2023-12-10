@@ -89,3 +89,30 @@ bw_ram_defaults:
 	db $C0,$00,$C0,$00,$C0,$00,$C0,$00,$C0,$00,$C0,$00,$C0,$00,$C0,$00
 	db $C0,$00,$C0,$00,$C0,$00,$C0,$00,$C0,$00,$C0,$00,$C0,$00,$C0,$00
 	db $C0,$00,$C0,$00,$C0,$00,$C0,$00,$C0,$00,$C0,$00,$C0,$00,$C0,$00
+	
+	dl $7FAD79 : dw 1	;>!Freeram_KeyCounter
+	dl $7FAD49 : dw 16	;>!Freeram_MemoryFlagRAM
+	;[...]
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Default values for how many keys you picked up.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	db $00		;>$7FAD79, Key counter $0
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;Default values for the MBCM16 blocks when you start up your new file
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	db %00000000		;>$7FAD49 (byte $0) Flags $0 to $7 (Group $0)
+	db %00000000		;>$7FAD4A (byte $1) Flags $8 to $F (Group $0)
+	db %00000000		;>$7FAD4B (byte $2) Flags $10 to $17 (Group $0)
+	db %00000000		;>$7FAD4C (byte $3) Flags $18 to $1F (Group $0)
+	db %00000000		;>$7FAD4D (byte $4) Flags $20 to $27 (Group $0)
+	db %00000000		;>$7FAD4E (byte $5) Flags $28 to $2F (Group $0)
+	db %00000000		;>$7FAD4F (byte $6) Flags $30 to $37 (Group $0)
+	db %00000000		;>$7FAD50 (byte $7) Flags $38 to $3F (Group $0)
+	db %00000000		;>$7FAD51 (byte $8) Flags $40 to $47 (Group $0)
+	db %00000000		;>$7FAD52 (byte $9) Flags $48 to $4F (Group $0)
+	db %00000000		;>$7FAD53 (byte $A) Flags $50 to $57 (Group $0)
+	db %00000000		;>$7FAD54 (byte $B) Flags $58 to $5F (Group $0)
+	db %00000000		;>$7FAD55 (byte $C) Flags $60 to $67 (Group $0)
+	db %00000000		;>$7FAD56 (byte $D) Flags $68 to $6F (Group $0)
+	db %00000000		;>$7FAD57 (byte $E) Flags $70 to $77 (Group $0)
+	db %00000000		;>$7FAD58 (byte $F) Flags $78 to $7F (Group $0)

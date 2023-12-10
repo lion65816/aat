@@ -253,6 +253,11 @@ level:
 1E5	author_room_names.asm
 1E6	author_room_names.asm
 1E8	FilterYoshi.asm
+1EB  Elevator.asm
+1EC  Elevator.asm
+1ED  Elevator.asm
+1EE  Elevator.asm
+1EF  Elevator.asm
 1F6	hdmatest_freescrollbabey.asm
 1F7	hdmatest_freescrollbabey.asm
 1F8	hdmatest_freescrollbabey.asm
