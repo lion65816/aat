@@ -8,9 +8,6 @@
 
 load:
 	JSL FilterYoshi_load
-	;Transfer group-128 to $7FC060
-	JSL MBCM16WriteGroup128To7FC060_LoadFlagTableToCM16
-	;[...]
 	RTL
 
 ;=================================
