@@ -1,0 +1,409 @@
+#amk 2
+
+#spc
+{
+    #title   "Battle 2"
+    #game    "Sword of Mana"
+    #author  "Kenji Ito"
+    #comment "Ported by doranarasi / KevinM"
+}
+
+#path "sd1-bt2"
+
+#samples
+{
+    #sd1-bt2
+    "Strings.brr"
+    "Trumpet.brr"
+    "Flute.brr"
+    "Slap Bass.brr"
+    "Tom.brr"
+    "Closed Hi-Hat.brr"
+    "Crash.brr"
+    "Kick.brr"
+    "Snare.brr"
+}
+
+#instruments
+{
+    "Strings.brr"       $ff $e0 $a0 $03 $4f ; @30
+    "Trumpet.brr"       $ff $e0 $a0 $06 $66 ; @31
+    "Flute.brr"         $ff $e0 $a0 $07 $9d ; @32
+    "Slap Bass.brr"     $ff $ef $a0 $09 $99 ; @33
+    "Tom.brr"           $ff $e0 $a0 $03 $09 ; @34
+    "Closed Hi-Hat.brr" $ff $e0 $a0 $05 $1c ; @35
+    "Crash.brr"         $ff $ef $a0 $03 $9c ; @36
+    "Kick.brr"          $ff $e0 $a0 $02 $07 ; @37
+    "Snare.brr"         $ff $e0 $a0 $05 $1c ; @38
+}
+
+;==================;
+; Volume  /  Tempo ;
+;==================;
+   w140       t62
+
+;==================;
+;       Echo       ;
+;==================;
+$ef $eb $3c $3c
+$f1 $05 $46 $01
+
+;==================;
+;      Macros      ;
+;==================;
+"Strings = @30"
+"Trumpet = @31"
+"Flute   = @32"
+"Bass    = @33"
+"Tom     = @34 o4"
+"CHat    = @35 o4"
+"Crash   = @36 o5 v215"
+"Kick    = @37 o4"
+"Snare   = @38 o4"
+
+;==================;
+;     Commands     ;
+;==================;
+"FadeIn1 = 900"
+"FadeIn2 = 901"
+"FadeIn3 = 902"
+"FadeIn4 = 903"
+(!FadeIn1)[v120 $e8$05$ac]
+(!FadeIn2)[v130 $e8$05$b6]
+(!FadeIn3)[v125 $e8$05$b0]
+(!FadeIn4)[v118 $e8$05$a5]
+
+;==================;
+;    Channel #0    ;
+;==================;
+#0 $f4$02
+Strings y8 o4 l16 (!FadeIn1,-1)
+f c+ f g+ > c+ < b a g+
+< [[f+ a > f+ < a]]4
+[[e g+ > e < g+]]4
+d f+ > d < f+ d f+ > d < f+
+c+ e > c+ < e c+ e > c+ < e
+< b > d b d < b > d b d
+> f c+ < g+ > c+ < g+ f g+ c+
+> f+ c+ f+ a f+ c+ f+ a
+f c+ f a f c+ f a
+e < b > e g+ e < b > e g+
+d+ < b g+ b g+ f g+ d
+f+8. g+8. a8 b8. > c+8. d8
+c+8. < a8. > c+8 f8. c+8. f8 <
+[[a f+ b f+ > c+ < f+ > d < f+
+> c+ < f+ b f+ a f+ g+ f+]]2
+
+/
+
+[a8 b8 a8 g+ a^2
+g+4. f+8 e4. > d e
+f+8 e8 d8 e f+8. f+8 g+8 f+8
+e8. d8. c+8 <] a8 f+8 a8 > c+8
+d4. e8 d8. c+8. < b8
+> d8. c+8. < b8 b8. > c+8. d8
+c+8. < g+8. > c+8 d8. < a8. > d8
+e8. < b8. > e8 f c+ < a > c+ < a f a > c+ <
+* > g+8. f+8. e8
+f+8. d8. f+8 g+4 f+4
+e8. < b8. > d8 c+4 < b4
+> d8. < a8. b > c+ < b4 g+4
+> c+ < a > c+ f+ a f+ a > c+ f+2
+
+$f4$01 <<
+[[f+ g+ a g+ f+ e f+ g+ a g+ f+ e f+ g+ a g+]]2
+f+ e f+ d+ [[e d+ e f+ e d+ e d+ e f+]]2 e d+ e d+ e f+ a b
+$f4$01
+
+> c+8 < b8 a8 b8 > c+8. d8. e8
+d2 c+4 < b4
+
+$f4$01 >
+d c- d f+ b f+ b > f+ < c+ < a > c+ e a e a > e <
+$f4$01
+
+f+ d < b > d f+ d < b > d
+g+ d < b > d f+ d < b > d
+c+2 d2
+e c+ e g+ b g+ b > c+
+e c+ < g+ > c+ < g+ e g+ e
+
+;==================;
+;    Channel #1    ;
+;==================;
+#1
+r2
+
+Trumpet y10 o4 l16 $de$18$09$20 (!FadeIn1,-1)
+f+4. f+ f+ f+8. g+8. f+8
+f4. f f f8. f+8. f8
+d+4. d+ d+ d+8. f8. d+8
+d8. d+8. f8 g+8. f+8. g+8
+a+4. a+ a+ a+8. b8. a+8
+g+8. a+8. b8 > c+8. < a+8. g+8
+f+8. g+8. a+8 b8. > c+8. d+8
+d8. < a+8. > d8 f8. d+8. d8
+d+1
+r2.. < d+ f
+
+/
+
+[f+2 r8 f+8 g+8 a+8
+a+8. g+8. f+8 f4. d+ f
+f+2 r8 f+8 g+8 f+8
+f8. d+8. c+8] c+4 r8 d+ f
+f+8. f8. d+8 d+4 r8 f f+
+g+8. f+8. f8 f8. f+8. g+8
+a+4 r8 g+ a+ b4 r8 a+ b
+> c+4 r8 < b > c+ d4 r8 < d+ f
+* > c+4. < a+ b
+> c+8. < b8. a+8 b2
+a+8. f8. g+8 f+4 f4
+d+4. f f+ f4 c+4
+d+1
+
+Flute (!FadeIn2,-1)
+g4. $f4$01 f d+ $f4$01 d8. c8. d8
+d2 r8 $f4$01 d d+ f d+ d c $f4$01
+< a+4. > a+4 f4 g+8
+g2^4 r8
+
+Trumpet (!FadeIn1,-1)
+a+ b
+> c+8 < b8 a+8 b8 > c+8. d+8. e8
+d+4 < a+8 > d+4 c+8 < b8 a+8
+b2. r8 g+ a+
+b4 a+4 g+4 f+4
+f8. < a+8. > f8 f+8. < b8. > f+8
+g+8. c+8. g+8 a+4 r8 d+ f
+
+;==================;
+;    Channel #2    ;
+;==================;
+#6
+Strings y10 o4 l8 (!FadeIn1,-1)
+r2
+c+2^. d. c+
+< b2^. > c+. < b
+a2^. b. a >
+c+. d+. f g+. f. g+
+a2^. b. a
+g+. a. b > c+4 < g+4
+< a. b. > c+ d. e. f+
+f. c+. f g+. f+. g+
+f+1 $e8$c0$20 ^1
+
+/
+
+l2 (!FadeIn3,-1)
+< f+1 e1
+d1 c+1
+< b > d < b a4 b4 >
+c+ d e f
+f+1 e1
+d1 c+1
+d e c+ f+
+< f+ e4 g+4 f+1
+f+1^1
+b1 > c+1
+e f+4 g+4 a+ f+
+d c+ < b a
+g+ a b > c+
+
+;==================;
+;    Channel #3    ;
+;==================;
+#3
+Strings y12 o3 l8 (!FadeIn1,-1)
+g+ b > d f < c+2
+d2 < b2
+> c+2 d2
+c+2 < b. > c+. d+
+f. d+. f f+2
+g+2 e2
+f+2
+
+(!FadeIn4,-1)
+> c+. d. e
+f+. g+. a b2
+> d. c+. < b
+a1 $e8$c0$20 ^1
+
+/
+
+c+ d c+ < b16 > c+. c+ d e
+e. d. c+ < b4. f+16 g+16
+a g+ f+ g+16 a2^16
+b. g+. f+ e2
+f+4. g+ a2
+f+. e. d d. e. f+
+e2 f+2
+g+2 a16 f16 c+16 f16 c+16 < a16 > c+16 f16
+> c+ d c+ < b16 > c+. c+ d e
+e. d. c+ < b4. f+16 g+16
+a g+ f+ g+16 a2^16
+g+4. f+ b2
+a2 b2
+g+2 a4 g+4
+f+2 e4 < b4
+> f+ a > c+ e a2
+c+1
+< b. > e. d c+. < b. > c+
+< b1
+> c+. < b. a > g+. f+. e
+g+ f+ e f+ g+. a. b
+a+4 f+ a+4 g f+ e
+< f+ b > f+ b < e a > e a
+< g+2 f+2
+g+16 e16 c+16 g+16 e16 c+16 g+16 c+16 a16 f+16 d16 a16 f+16 d16 a16 d16
+g+ b > e g+ > c+ < g+ e < b
+
+;==================;
+;    Channel #4    ;
+;==================;
+#4
+Bass v222 y10 o3 l16
+r2
+a+4. a+ a+ d+8. a+8. d+8
+g+4. g+ g+ c+8. g+8. c+8
+f+4. f+ f+ f8. < a+8. > f8
+a+8. g+8. a+8 > f8. c+8. < g+8
+a+ r a+ r a+ r a+ r
+a r a r a r a r
+g+ r g+ r g+ r g+ r
+g r g r g r g r
+f+8. > c+8. < f+8 d+8. a+8. d+8
+f r8 f r8 f r
+> d+8. c+8. c8 < a+2..
+g+ r a+ r^2
+f r f r f r
+
+/
+
+(40)[
+[[a+8 > a+ r <]]4
+[[g+8 > g+ r <]]4
+[[f+8 > f+ r <]]4
+[[f8 > f r <]]4
+]
+[d+8 > d+ r <]4
+[[b+8 > b+ r <]]4
+
+f8. > f8. c8 < f+8. > f+8. c+8 < g+8. > g+8. d+8 <
+a4 > f4 $dd$06$2a$a2 <
+
+(40)
+f+8 > f+ r < f+8 > f+ r < d+8 > d+ r < d+8 > d+ r <
+f8 > f r < f8 > f r < a+8 > a+ r < g+8 > g+ r <
+f8 > f r < f8 > f r < g+8 > g+ r < g+8 > g+ r <
+a+4 f4 a+4 > f4 $dd$06$2a$9d <
+
+[f r]5 > f r < f r > f r <
+*5 > f r c r < f r
+[[g+ r]]5 > g+ r < g+ r > g+ r <
+f4 > f4 c4 < f4
+
+[[g+8 > g+ r <]]4
+a+8 > a+ r < a+8 > a+ r c8 > c r < d8 > d r <
+d+ r d+ r d+ r d+ r
+c+ r c+ r c+ r c+ r
+c2^8
+f+ r c r < f+ r
+f r f r f r f r
+f+ r f+ r f+ r f+ r
+g+ r g+ r g+ r g+ r
+> f4 < g+4 $dd$06$2a$9b
+
+;==================;
+;    Channel #5    ;
+;==================;
+#5
+Crash l16 r2 y11 c+1 y9 c-1 y11 c+1 y9 c-2 $f4$03
+(50)[Tom v245 y12 r8 b b v255 y10 g g v239 y8 d+ d+]
+(51)[CHat v192 y13 g8 g g]12
+r2
+(50)
+Crash y9 $f4$03 c-1. $f4$03
+(50)
+
+/
+
+(51)24
+(50)3
+r2
+(51)28
+Tom v245 y12 r b v255 y10 g v239 y8 d+
+r2.
+[[CHat v192 y13 g8 g8 (51)]]7
+Tom v245 y12 b b b v255 y10 g g g v239 y8 d+ d+
+Crash y11 $f4$03 c+1. $f4$03
+(50)3
+Crash y11 $f4$03 c+1 $f4$03
+(51)6
+Tom v245 y12 r b v255 y10 g r v245 y12 b v239 y8 d+ r v255 y10 g
+
+;==================;
+;    Channel #6    ;
+;==================;
+#7
+[[r2]]8
+
+Crash
+(62)[y11 c+8. y9 c-8. y11 c+8] c+1^1^1
+(62) c+2^1^1
+
+/
+
+(60)[y11 c+1^1^1^1]
+c+1^1 c+2 y9 c-2 y11 c+1
+(60)3
+r1^1 c+2 y9 c-2^1^1^1
+
+;==================;
+;    Channel #7    ;
+;==================;
+#2
+v196 y10
+Kick r2 b4. b8 b2 b2 b2 b2 b2 b4 b4 b2
+(70)[Kick b4]11 b8 b16 b16
+Snare g8. g8. g8 g2
+Kick b1^2 b2
+
+/
+
+(71)[
+Kick b4
+Snare g4
+Kick b8 b8
+Snare g4
+]3
+(72)[
+Kick b4
+Snare g4
+Kick b8 b8
+Snare g8
+Kick b8
+]
+(71)
+(74)[
+Kick b4
+Snare g4
+]
+Kick b8 b8
+Snare g8 g16 g16
+(73)[
+Kick b2 b2 b2 b8
+Snare g16 g16 g8 g16 g16
+]
+(71)5
+(72)
+(71)
+Kick b4
+Snare g8 g16 g16 g2
+(70)14
+^2
+(74)3
+Kick b2
+(73)
+(70)6
+Snare g8. g8. g8

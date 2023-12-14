@@ -32,8 +32,8 @@
 10	1	Ghost House
 11	0	Castle
 11	1	Castle
-12	0	Switch Palace
-12	1	Switch Palace
+12	0	18 Switch Palace.txt
+12	1	18 Switch Palace.txt
 13	0	Welcome
 13	1	Welcome
 14	0	Egg is rescued
@@ -72,12 +72,12 @@
 24	1	Bowser Zoom Out
 25	0	Princess Rescued
 25	1	Princess Rescued
-26	0	Staff Roll
-26	1	Staff Roll
+26	0	38 Staff Roll.txt
+26	1	38 Staff Roll.txt
 27	0	Yoshis' Home
 27	1	Yoshis' Home
-28	0	Cast List
-28	1	Cast List
+28	0	40 Cast List.txt
+28	1	40 Cast List.txt
 29	0	Percussive Maintenance
 29	1	Percussive Maintenance
 2A	0	Welcome to Booster Tower
@@ -358,11 +358,13 @@ B3	0	RS3 =ラストバトル=
 B3	1	RS3 =ラストバトル=
 B4	0	Hurry Up!
 B4	1	Hurry Up!
-B5	0	Mother's Tormented Soul
-B5	1	Mother's Tormented Soul
+B5	0	Battle 2
+B5	1	Battle 2
 B6	0	showdown_on_the_tower
 B6	1	showdown_on_the_tower
 B7	0	High Score
 B7	1	High Score
 B8	0	Chocolate Rain
 B8	1	Chocolate Rain
+B9	0	Homestuck - 'Showtime'
+B9	1	Homestuck - 'Showtime'

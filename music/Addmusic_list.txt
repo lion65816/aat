@@ -18,7 +18,7 @@ Locals:
 0F  originals/15 Cave.txt
 10  originals/16 Ghost.txt
 11  originals/17 Castle.txt
-12  18 Switch Palace (mute).txt
+12  silence/18 Switch Palace.txt
 13  originals/19 Welcome.txt
 14  originals/20 Rescue Egg.txt
 15  SNES Station - Menu.txt
@@ -38,9 +38,9 @@ Locals:
 23  originals/35 Bowser Zoom In.txt
 24  originals/36 Bowser Zoom Out.txt
 25  originals/37 Princess Peach is Rescued.txt
-26  originals/38 Staff Roll.txt
+26  silence/38 Staff Roll.txt
 27  originals/39 The Yoshis Are Home.txt
-28  originals/40 Cast List.txt
+28  silence/40 Cast List.txt
 29  Percussive_Maintenance.txt
 2A  Welcome to Booster Tower (Game Over fix).txt
 2B  And my Name's Booster (Game Over fix).txt
@@ -181,7 +181,7 @@ B1  Pizza Tower - The Death That I Deservioli.txt
 B2  Takeshi's Challenge - Main Theme.txt
 B3  mus_37.txt
 B4  Wario Land 4 - Hurry Up!.txt
-B5  Mother's Tormented Soul.txt
+B5  sd1-bt2.txt
 B6  showdown_on_the_tower.txt
 B7  26 High Score.txt
 B8  Chocolate Rain.txt
