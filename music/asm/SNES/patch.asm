@@ -1,5 +1,5 @@
 
-lorom
+;lorom
 
 !FreeROM		= $0E8000		; DO NOT TOUCH THESE, otherwise the program won't be able to determine where the data in your ROM is stored!
 ;!Data			= $0E8000		; Data+$0000 = Table of music data pointers 300 bytes long. 
@@ -8,19 +8,19 @@ lorom
 						; Data+$0600 = Table of sample loop pointers (relative to $0000; modified in-game).
 						; Note that the first few bytes of !Data are meta bytes, so it's actually something like !Data+$0308
 						
-if read1($00FFD5) == $23			; \
-	!UsingSA1 = 1				; | Check if this ROM uses the SA-1 patch.	
-else						; |
-	!UsingSA1 = 0				; / 
-endif
+;if read1($00FFD5) == $23			; \
+;	!UsingSA1 = 1				; | Check if this ROM uses the SA-1 patch.	
+;else						; |
+;	!UsingSA1 = 0				; / 
+;endif
 
 
 if !UsingSA1
-	sa1rom
+	;sa1rom
 	!SA1Addr1 = $3000
 	!SA1Addr2 = $6000
 else
-	fastrom
+	;fastrom
 	!SA1Addr1 = $0000
 	!SA1Addr2 = $0000
 endif

@@ -2,7 +2,18 @@
 ; This undoes hijacks done by other music insertion tools.
 ; It does NOT erase the data inserted by those tools; the program itself does that.
 
-lorom
+;lorom
+if read1($00FFD5) == $23			; \
+	!UsingSA1 = 1				; | Check if this ROM uses the SA-1 patch.
+	if read1($00FFD7) == $0D
+		fullsa1rom
+	else
+		sa1rom
+	endif	
+else						; |
+	!UsingSA1 = 0				; / 
+	fastrom
+endif
 
 if read1($008055) == $5C
 
@@ -53,7 +64,7 @@ org $05855F
 endif
 
 
-if read($05D8E6) == $22
+if read1($05D8E6) == $22
 print "Sample Tool data detected. Undoing ASM hijacks..."
 
 org $00800A
