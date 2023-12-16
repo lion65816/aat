@@ -5,7 +5,7 @@ lorom
 
 ; 1 enables all counters (timer, coins, and bonus stars)
 !enable_counters = 1
-!PSwitchSFX = $2D
+!PSwitchSFX = $2F
 
 if read1($00FFD5) == $23
 	;sa1rom

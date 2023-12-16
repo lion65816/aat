@@ -10,10 +10,10 @@
 05	1	leek
 06	0	iris_death
 06	1	iris_death
-07	0	07 Keyhole.txt
-07	1	07 Keyhole.txt
-08	0	08 Iris Out.txt
-08	1	08 Iris Out.txt
+07	0	Keyhole
+07	1	Keyhole
+08	0	Iris Out
+08	1	Iris Out
 09	0	Bonus Game Clear
 09	1	Bonus Game Clear
 0A	0	Piano
