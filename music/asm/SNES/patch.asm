@@ -127,11 +127,20 @@ db $00, $00, $00, $00		;
 db $00, $00, $00, $00		;
 
 MainLabel:
-	STZ $10
+	STZ $10 		;\ LX5 Tweak
+				;| 
+	JSL moved_main		;| 
+				;| 
+	JML $00806B|!Bank	;| Return.  TODO: Detect if the ROM is using the Wait Replace patch.
+				;| 
+moved_main:			;| 
+	PHY			;| 
+	PHX			;/ 
 	PHP
 	PHB
 	PHK
 	PLB
+	SEP #$30		; LX5 Tweak
 if !PSwitchStarRestart == !true
 	lda !Trick
 	beq +
@@ -174,9 +183,9 @@ endif
 	CLI
 	PLB
 	PLP
-
-
-	JML $00806B|!Bank	; Return.  TODO: Detect if the ROM is using the Wait Replace patch.
+	PLX			;\ LX5 Tweak
+	PLY			;| 
+	RTL			;/
 
 NoMusic:
 	LDA #$00
