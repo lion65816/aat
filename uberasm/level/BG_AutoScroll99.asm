@@ -17,6 +17,10 @@
 !Left = 0	:	!Right = 1	:	!Up = 2		:	!Down = 3
 !DiagUL = 4	:	!DiagUR = 5	:	!DiagDL = 6	:	!DiagDR = 7
 
+load:
+JSL NoStatus_load
+RTL
+
 main:
 LDA $9D			; Checks animation lock flag
 ORA $13D4|!addr		; or pause flag

@@ -237,7 +237,7 @@ PowInteract:
 
 	;; If star or switch music not already playing, then don't set the music to play
 	lda $0DDA|!Base2 : bmi +
-	lda #$0E : sta $1DFB|!Base2
+	;lda #$0E : sta $1DFB|!Base2	;> AAT edit: Commented out. Otherwise, this changes the song to the vanilla SMW boss music.
 	+
 	;; Set timer for how long the pswitch will stay onscreen before dissapearing
 	lda #$20 : sta !163E,x
