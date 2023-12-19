@@ -58,6 +58,10 @@ freecode
 DeathReset:
 	PHX
 	LDA $010A|!addr
+	TAX					;\ PSI Ninja edit: Initialize SRAM for "Mall Floors Cleared" flags.
+	LDA #$00			;|
+	STA !700000+$07EA,x	;|
+	TXA					;/
 	ASL
 	CLC
 	ADC $010A|!addr
