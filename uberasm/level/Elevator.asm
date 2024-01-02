@@ -1,19 +1,15 @@
-incsrc "../FlagMemoryDefines/Defines.asm"
-
 load:
-	;Transfer group-128 to $7FC060
-	JSL MBCM16WriteGroup128To7FC060_LoadFlagTableToCM16
-	;[...]
+	JSL NoStatus_load
 	RTL
-;main:
-;	;Display key counter on the HUD (during the level at play)
-;	LDY #$00					;>$xx is what key counter to use, as an index from !Freeram_KeyCounter.
-;	JSL MBCM16DisplayKeyCounter_DisplayHud
-;	;[...]
-;	RTL
-;init:
-;	;Display key counter on the HUD (during screen fading into the level)
-;	LDY #$00					;>$xx is what key counter to use, as an index from !Freeram_KeyCounter.
-;	JSL MBCM16DisplayKeyCounter_DisplayHud
-;	;[...]
-;	RTL
+
+main:
+	; Disable all buttons except "up".
+	LDA #%11110111 : STA $00
+	LDA #%11110000 : STA $01
+	JSL DisableButton_main
+
+	; Always press "up".
+	LDA #%00001000
+	TSB $15
+	TSB $16
+	RTL

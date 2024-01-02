@@ -581,12 +581,12 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 69fe	0	Erase the room/author names.
 69ff	0	Erase the room/author names.
 6cee	0	Disables horizontal scrolling at an exact position.
-6ee8	0	Solid if the corresponding switch is activated.
-6ee9	0	Solid if the corresponding switch is activated.
-6eea	0	Solid if the corresponding switch is activated.
-6eeb	0	Solid if the corresponding switch is activated.
-6eec	0	Solid if the corresponding switch is activated.
-6eed	0	Solid if the corresponding switch is activated.
+6ef8	0	Solid if the corresponding switch is activated.
+6ef9	0	Solid if the corresponding switch is activated.
+6efa	0	Solid if the corresponding switch is activated.
+6efb	0	Solid if the corresponding switch is activated.
+6efc	0	Solid if the corresponding switch is activated.
+6efd	0	Solid if the corresponding switch is activated.
 6f43	0	
 6f9d	0	Teleports the player.
 6fad	0	Teleports the player.
