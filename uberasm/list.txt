@@ -117,6 +117,7 @@ level:
 0E5	Credits.asm
 0F0	F0_scroll.asm
 0F2	freescrollbabey.asm
+0F6	ashspawn_uberASM.asm
 0F7	freescrollbabey.asm
 0F8	BG_AutoScroll.asm
 0F9	leafspawn_uberASM.asm

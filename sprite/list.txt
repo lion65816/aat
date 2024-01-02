@@ -68,7 +68,7 @@
 43 BlueParakoopa.json
 44 ball-n-chain-pendulum.json
 45 egg_plant.json
-46 rideable_balloon.json
+46 urchin_3A+3B.json
 47 bumpty.json
 48 blooper.json
 49 FireBar_Shiftable.json
@@ -183,6 +183,7 @@ B8 InfoBox.cfg
 B9 baba_block.cfg
 BA mushroom_block.cfg
 BB Carryable_Football.cfg
+BC SMWSDIS_A8_blargg.cfg
 BD thunderlakitu.cfg
 BE mechakoopa_but_awesome.json
 BF custom_bowser_statue.cfg

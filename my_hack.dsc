@@ -409,7 +409,12 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1ffc	0	A door that uses a specific screen exit.
 2093	0	Spawns sprite $BA.
 2300	0	noyoshiintro.asm
+2b26	0	32x32coin [up left][10coins]
+2b27	0	32x32coin [up right][10coins]
+2b36	0	32x32coin [down left][10coins]
+2b37	0	32x32coin [down right][10coins]
 2c07	0	A block that removes yoshi upon entering the next room.
+2cf0	0	Same as the 1-up sprite.
 2d8c	0	Can't pass unless spinjumping
 2d8f	0	This block boosts the player upwards.
 3300	0	BlkMus1.asm
@@ -549,7 +554,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 62d2	0	A block that acts like a mid-air suspended Spiny.
 62e0	0	A blue P-Switch which can be activated from above/below and switches to the next tile.
 62e2	0	A block that acts like a stationary Swooper.
-62f0	0	same as the mushroom sprite.
+62f0	0	Same as the mushroom sprite.
 62f1	0	Same as the flower sprite.
 62f2	0	Same as the feather sprite.
 62f7	0	A block that will act like tile 25 for Mario

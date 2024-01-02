@@ -99,8 +99,16 @@ Add 40 to make it stun and 80 to make it spawn shockwaves.
 44 0032 0,0,1D6 0,16,1D6 0,32,1C4 16,32,1C5 0,48,1D4 16,48,1D5
 45 0020 Undefined Sprite
 45 0022 0,0,0
-46 0020 Undefined Sprite
-46 0022 0,0,0
+46 0120 An urchin that moves back and forth a fixed distance of 6 tiles vertically or horizontally depending on its X position. The distance can be shorter if it encounters a solid oject first. It does not require water. It's currently set to go horizontally.
+
+46 0122 0,0,39 16,0,3A 0,16,49 16,16,4A 8,8,4F
+46 0020 An urchin that moves back and forth a fixed distance of 6 tiles vertically or horizontally depending on its X position. The distance can be shorter if it encounters a solid oject first. It does not require water. It's currently set to go vertically.
+
+46 0022 0,0,39 16,0,3A 0,16,49 16,16,4A 8,8,3F
+46 0130 An urchin that moves back and forth between two walls vertically or horizontally depending on its X position. It does not require water. It's currently set to go horizontally.
+46 0132 0,0,3B 16,0,3C 0,16,4B 16,16,4C 8,8,4F
+46 0030 An urchin that moves back and forth between two walls vertically or horizontally depending on its X position. It does not require water. It's currently set to go vertically.
+46 0032 0,0,3B 16,0,3C 0,16,4B 16,16,4C 8,8,3F
 47 0020 Undefined Sprite
 47 0022 0,0,0
 48 0020 A Blooper from SMB1. SP4=BD
