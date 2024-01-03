@@ -34,8 +34,8 @@
 21 nuts.cfg
 22 zin.cfg
 23 zinstay.cfg
-24 spikes_ball.json
-25 stretch.json
+24 yi_wildptooie.cfg
+25 yellow_needlenose.cfg
 26 cookie.cfg
 27 bouncing_cookie.cfg
 28 npc2.cfg

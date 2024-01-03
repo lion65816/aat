@@ -223,6 +223,8 @@ level:
 1A4	freescrollbabey.asm
 1A5	InitSpriteFacing.asm
 1A6	1A6Grad.asm
+1A7	BG_AutoScroll1A7.asm
+1A8	leafspawn_uberASM.asm
 1B0	redswitch.asm
 1B1	redswitch.asm
 1B2	redswitch.asm
