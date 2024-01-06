@@ -54,7 +54,7 @@
 35 thwomp_left.json
 36 thwomp_right.json
 37 thwomp_up.json
-38 rotating-gray-platform-pendulum.json
+38 tweeter.cfg
 39 EliteParaYellow.cfg
 3A roto_disc_vanilla.cfg
 3B lotus_down.json
