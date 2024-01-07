@@ -181,11 +181,16 @@ level:
 142	lowjump.asm
 143	aquarium.asm
 145  MallReset.asm
+146  MallReset.asm
 147	Elevator.asm
 148	Elevator.asm
-14B	DisableLR.asm
+149  MallReset.asm
+14A  MallReset.asm
+14B	DisableLRMall.asm
 14C	solved.asm
+14D  MallReset.asm
 14E	hdma_andnoflight.asm
+150  MallReset.asm
 151	151.asm
 152	Elevator.asm
 153	Elevator.asm

@@ -1,8 +1,3 @@
-init:
-
-	STZ $14AF|!addr
-	RTL
-
 !screen_num = $0D
 
 main:
@@ -11,4 +6,8 @@ main:
     LDA ($19D8+!screen_num)|!addr
     STA $0D
     JSL MultipersonReset_main
-RTL
+	; Disable L and R buttons.
+	LDA #%00000000 : STA $00
+	LDA #%00110000 : STA $01
+	JSL DisableButton_main
+	RTL

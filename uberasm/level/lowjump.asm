@@ -1,6 +1,13 @@
 ; Example code. Makes Mario neurodivergent.
 
+!screen_num = $0D
+
 main:
+    LDA ($19B8+!screen_num)|!addr
+    STA $0C
+    LDA ($19D8+!screen_num)|!addr
+    STA $0D
+    JSL MultipersonReset_main
 ; Check if the game is paused or frozen due to animation and such.
 	LDA $9D
     BNE Ret

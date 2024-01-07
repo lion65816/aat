@@ -17,7 +17,14 @@ init:
 	STZ $1411|!addr
 
 
+!screen_num = $0D
+
 main:
+    LDA ($19B8+!screen_num)|!addr
+    STA $0C
+    LDA ($19D8+!screen_num)|!addr
+    STA $0D
+    JSL MultipersonReset_main
 
 	LDY #$00
 	REP #$20

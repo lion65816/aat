@@ -65,8 +65,15 @@ init:         	; CURRENTLY HAS THE INIT CODE FOR THE HDMA (MODIFY IF ADDING OTHE
    db $06 : db $3E   ; 
    db $00            ; 
    
-
+!screen_num = $0D
 main:         ; CURRENTLY HAS THE MAIN CODE FROM THE DISABLE FLIGHT FILE
+
+    LDA ($19B8+!screen_num)|!addr
+    STA $0C
+    LDA ($19D8+!screen_num)|!addr
+    STA $0D
+    JSL MultipersonReset_main
+
 	STZ $149F|!addr
 	RTL
 
