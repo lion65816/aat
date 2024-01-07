@@ -194,6 +194,7 @@ level:
 151	151.asm
 152	Elevator.asm
 153	Elevator.asm
+154  MallReset.asm
 155	BG_AutoScroll4.asm
 156	tank.asm
 157	FilterYoshi_freescrollbabey.asm
