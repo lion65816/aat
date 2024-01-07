@@ -22,6 +22,12 @@ JSL NoStatus_load
 RTL
 
 main:
+    LDA $010B|!addr
+    STA $0C
+    LDA $010C|!addr
+    STA $0D
+    JSL MultipersonReset_main
+
 LDA $9D			; Checks animation lock flag
 ORA $13D4|!addr		; or pause flag
 BNE .stop		; then stop the scroll

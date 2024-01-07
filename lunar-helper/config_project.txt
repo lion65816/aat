@@ -63,6 +63,8 @@ patches
 	patch\patch\falling_spike_palette.asm
 	patch\patch\mole_palette.asm
 	patch\patch\IrisPalFix.asm
+	patch\patch\layer1_events.asm
+	patch\patch\more_hardcoded_paths.asm
 ]
 -- patch\patch\ticking.asm
 -- patch\patch\bwram_plus.asm
