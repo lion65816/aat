@@ -17,7 +17,7 @@ level:
 00A	ashspawn_uberASM.asm
 00B	LevelIntro.asm
 00C	LevelIntro.asm
-00D	LevelIntro.asm
+00D	LevelIntroV2.asm
 00E	LevelIntro.asm
 00F	ReverseBG.asm
 010	LevelIntroV2.asm
@@ -119,7 +119,9 @@ level:
 0C8	PitCode2.asm
 0D0	jumpers_end.asm
 0D1	MWIVJS1.asm
+0DD	NoStatus.asm
 0DE	shmup_with_hp.asm
+0DF	shmup_with_hp.asm
 0E0	jumpers_end.asm
 0E1	Credits.asm
 0E2	Credits.asm
@@ -128,6 +130,8 @@ level:
 0E5	Credits.asm
 0F0	F0_scroll.asm
 0F2	freescrollbabey.asm
+0F4  SPECIAL.asm
+0F5  SPECIAL.asm
 0F6	ashspawn_uberASM.asm
 0F7	freescrollbabey.asm
 0F8	BG_AutoScroll.asm
@@ -136,7 +140,6 @@ level:
 100	bonusmusic.asm
 101	LevelIntro.asm
 103	LevelIntro.asm
-
 106	freescrollbabey.asm
 108	LevelIntro.asm
 109	leafspawn_uberASM.asm
@@ -245,6 +248,8 @@ level:
 1A6	1A6Grad.asm
 1A7	BG_AutoScroll1A7.asm
 1A8	leafspawn_uberASM_1A8.asm
+1A9	InitSpriteFacing.asm
+1AB	TeleportOnCoins.asm
 1B0	redswitch.asm
 1B1	redswitch.asm
 1B2	redswitch.asm

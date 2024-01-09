@@ -1,2 +1,11 @@
 00 lady_crithania.txt
-01 postgame_boss.txt
+01 postgame_clue1.txt
+02 postgame_clue2.txt
+03 postgame_clue3.txt
+04 postgame_clue4.txt
+05 postgame_clue5.txt
+06 postgame_clue6.txt
+07 postgame_clue7.txt
+08 postgame_clue8.txt
+09 postgame_boss.txt
+0A demoka.txt

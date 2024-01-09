@@ -35,6 +35,7 @@ Init:
 RTL
 
 Main:
+	LDA $010B|!addr
 	STA $0C
     LDA $010C|!addr
     STA $0D

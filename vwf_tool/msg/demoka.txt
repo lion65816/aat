@@ -1,0 +1,138 @@
+/////////////
+// Scene 1 //
+/////////////
+
+[sprite=54]
+// Demo and Iris
+(60,2A,84,02,big)(90,2A,82,00,big)
+(60,3A,A0,02,big)(90,3A,A2,00,big)
+// Background
+(30,08,8A,06,big)(40,08,EE,06,big)(50,08,8A,06,big)(60,08,8A,06,big)(70,08,8A,06,big)(80,08,CC,06,big)(90,08,8A,06,big)(A0,08,8A,06,big)(B0,08,8A,06,big)(C0,08,8A,06,big)
+(30,18,EC,06,big)(40,18,8A,06,big)(50,18,8A,06,big)(60,18,8A,06,big)(70,18,8A,06,big)(80,18,8A,06,big)(90,18,8A,06,big)(A0,18,8A,06,big)(B0,18,8A,06,big)(C0,18,8A,06,big)
+(30,28,8A,06,big)(40,28,8A,06,big)(50,28,8A,06,big)(60,28,8A,06,big)(70,28,8A,06,big)(80,28,8A,06,big)(90,28,8A,06,big)(A0,28,8A,06,big)(B0,28,EC,06,big)(C0,28,8A,06,big)
+(30,38,E6,06,big)(40,38,E8,06,big)(50,38,EA,06,big)(60,38,E6,06,big)(70,38,E8,06,big)(80,38,EA,06,big)(90,38,E6,06,big)(A0,38,E8,06,big)(B0,38,EA,06,big)(C0,38,E6,06,big)
+(30,48,C2,08,big)(40,48,C2,08,big)(50,48,C2,08,big)(60,48,C2,08,big)(70,48,C2,08,big)(80,48,C2,08,big)(90,48,C2,08,big)(A0,48,C2,08,big)(B0,48,C2,08,big)(C0,48,C2,08,big)
+[/sprite]
+[font color=1]
+[topic]Demo[/topic]
+Looks like the only way out of here is up.
+[wait]
+[erase]
+[sprite=erase]
+[wait=30]
+
+/////////////
+// Scene 2 //
+/////////////
+
+[sprite=52]
+// Demo and Iris
+(60,48,80,02,big)(90,48,82,00,big)
+// Background
+(30,08,C8,08,big)(40,08,C8,08,big)(50,08,C8,08,big)(60,08,CA,08,big)(70,08,8A,06,big)(80,08,8A,06,big)(90,08,C6,08,big)(A0,08,C8,08,big)(B0,08,C8,08,big)(C0,08,C8,08,big)
+(30,18,8A,06,big)(40,18,8A,06,big)(50,18,8A,06,big)(60,18,8A,06,big)(70,18,8A,06,big)(80,18,8A,06,big)(90,18,8A,06,big)(A0,18,8A,06,big)(B0,18,8A,06,big)(C0,18,8A,06,big)
+(30,28,8A,06,big)(40,28,EE,06,big)(50,28,8A,06,big)(60,28,8A,06,big)(70,28,8A,06,big)(80,28,CC,06,big)(90,28,8A,06,big)(A0,28,8A,06,big)(B0,28,8A,06,big)(C0,28,8A,06,big)
+(30,38,EC,06,big)(40,38,8A,06,big)(50,38,8A,06,big)(60,38,8A,06,big)(70,38,8A,06,big)(80,38,8A,06,big)(90,38,8A,06,big)(A0,38,8A,06,big)(B0,38,8A,06,big)(C0,38,8A,06,big)
+(30,48,8A,06,big)(40,48,8A,06,big)(50,48,8A,06,big)(60,48,8A,06,big)(70,48,8A,06,big)(80,48,8A,06,big)(90,48,8A,06,big)(A0,48,8A,06,big)(B0,48,EC,06,big)(C0,48,8A,06,big)
+[/sprite]
+[font color=2]
+[topic]Iris[/topic]
+Now just how are we supposed to get up there?
+[wait=30]
+Become magical girls and fly?
+[wait]
+[erase]
+[sprite=erase]
+[wait=30]
+
+/////////////
+// Scene 3 //
+/////////////
+
+[sprite=58]
+// Demo and Iris
+(30,2A,84,02,big)(60,2A,A4,00,big)
+(30,3A,A0,02,big)(60,3A,A2,40,big)
+// Kyubey
+(A0,28,8C,04,big)(B0,28,8E,04,big)
+(A0,38,AC,04,big)(B0,38,AE,04,big)
+// Background
+(30,08,8A,06,big)(40,08,8A,06,big)(50,08,CC,06,big)(60,08,8A,06,big)(70,08,8A,06,big)(80,08,8A,06,big)(90,08,8A,06,big)(A0,08,8A,06,big)(B0,08,8A,06,big)(C0,08,E0,08,big)
+(30,18,8A,06,big)(40,18,8A,06,big)(50,18,8A,06,big)(60,18,8A,06,big)(70,18,8A,06,big)(80,18,8A,06,big)(90,18,8A,06,big)(A0,18,CE,06,big)(B0,18,8A,06,big)(C0,18,E0,08,big)
+(30,28,8A,06,big)(40,28,8A,06,big)(50,28,8A,06,big)(60,28,8A,06,big)(70,28,8A,06,big)(80,28,EC,06,big)(90,28,8A,06,big)(A0,28,8A,06,big)(B0,28,8A,06,big)(C0,28,E0,08,big)
+(30,38,E6,06,big)(40,38,E8,06,big)(50,38,EA,06,big)(60,38,E6,06,big)(70,38,E8,06,big)(80,38,EA,06,big)(90,38,E6,06,big)(A0,38,E8,06,big)(B0,38,EA,06,big)(C0,38,E0,08,big)
+(30,48,C2,08,big)(40,48,C2,08,big)(50,48,C2,08,big)(60,48,C2,08,big)(70,48,C2,08,big)(80,48,C2,08,big)(90,48,C2,08,big)(A0,48,C2,08,big)(B0,48,C4,08,big)(C0,48,E0,08,big)
+[/sprite]
+[font color=3]
+[topic]Kyubey[/topic]
+That can be arranged.
+[wait]
+[erase]
+[sprite=erase]
+[wait=30]
+
+/////////////
+// Scene 4 //
+/////////////
+
+[sprite=50]
+// Background
+(30,08,00,0B,big)(40,08,02,0B,big)(50,08,04,0B,big)(60,08,06,0B,big)(70,08,08,0B,big)(80,08,0A,0B,big)(90,08,0C,0B,big)(A0,08,0E,0B,big)(B0,08,A0,0B,big)(C0,08,A2,0B,big)
+(30,18,20,0B,big)(40,18,22,0B,big)(50,18,24,0B,big)(60,18,26,0B,big)(70,18,28,0B,big)(80,18,2A,0B,big)(90,18,2C,0B,big)(A0,18,2E,0B,big)(B0,18,C0,0B,big)(C0,18,C2,0B,big)
+(30,28,40,0B,big)(40,28,42,0B,big)(50,28,44,0B,big)(60,28,46,0B,big)(70,28,48,0B,big)(80,28,4A,0B,big)(90,28,4C,0B,big)(A0,28,4E,0B,big)(B0,28,E0,0B,big)(C0,28,E2,0B,big)
+(30,38,60,0B,big)(40,38,62,0B,big)(50,38,64,0B,big)(60,38,66,0B,big)(70,38,68,0B,big)(80,38,6A,0B,big)(90,38,6C,0B,big)(A0,38,6E,0B,big)(B0,38,A4,0B,big)(C0,38,A6,0B,big)
+(30,48,80,0B,big)(40,48,82,0B,big)(50,48,84,0B,big)(60,48,86,0B,big)(70,48,88,0B,big)(80,48,8A,0B,big)(90,48,8C,0B,big)(A0,48,8E,0B,big)(B0,48,C4,0B,big)(C0,48,C6,0B,big)
+[/sprite]
+It's simple.[br]
+[wait=30]
+[label=contract]
+[pad left=16]
+Just make a contract with me.[br]
+[wait=30]
+No.[br]
+Yes.[br]
+YES!!!
+[pad left=8]
+[branch=no,yes,yess]
+[label=no]
+Then how are you going to beat the level?[br]
+[wait=30]
+[jump=contract]
+[label=yes]
+Excellent.
+[jump=accepted]
+[label=yess]
+I appreciate your enthusiasm!
+[label=accepted]
+[wait]
+[erase]
+[sprite=erase]
+[wait=30]
+
+/////////////
+// Scene 5 //
+/////////////
+
+[sprite=56]
+// Demo and Iris
+(60,22,86,02,big)(90,1A,88,00,big)
+(50,32,AA,42,big)(60,32,A6,02,big)(90,2A,A8,00,big)(A0,2A,AA,00,big)
+// Background
+(30,08,8A,06,big)(40,08,EE,06,big)(50,08,8A,06,big)(60,08,8A,06,big)(70,08,8A,06,big)(80,08,CC,06,big)(90,08,8A,06,big)(A0,08,8A,06,big)(B0,08,8A,06,big)(C0,08,8A,06,big)
+(30,18,EC,06,big)(40,18,8A,06,big)(50,18,8A,06,big)(60,18,8A,06,big)(70,18,8A,06,big)(80,18,8A,06,big)(90,18,8A,06,big)(A0,18,8A,06,big)(B0,18,8A,06,big)(C0,18,8A,06,big)
+(30,28,8A,06,big)(40,28,8A,06,big)(50,28,8A,06,big)(60,28,8A,06,big)(70,28,8A,06,big)(80,28,8A,06,big)(90,28,8A,06,big)(A0,28,8A,06,big)(B0,28,EC,06,big)(C0,28,8A,06,big)
+(30,38,E6,06,big)(40,38,E8,06,big)(50,38,EA,06,big)(60,38,E6,06,big)(70,38,E8,06,big)(80,38,EA,06,big)(90,38,E6,06,big)(A0,38,E8,06,big)(B0,38,EA,06,big)(C0,38,E6,06,big)
+(30,48,C2,08,big)(40,48,C2,08,big)(50,48,C2,08,big)(60,48,C2,08,big)(70,48,C2,08,big)(80,48,C2,08,big)(90,48,C2,08,big)(A0,48,C2,08,big)(B0,48,C2,08,big)(C0,48,C2,08,big)
+[/sprite]
+[topic][/topic]
+You have become meguca!
+[wait=30]
+You can now do magical things!
+[wait]
+[br]Collect coins to heal!
+[wait]
+[erase]
+[sprite=erase]
+[wait=30]
+
+[end=00]

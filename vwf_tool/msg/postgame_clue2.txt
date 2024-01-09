@@ -1,0 +1,10 @@
+/////////////
+// Scene 1 //
+/////////////
+
+You found a missing page from Prof. Broadsword's sketchbook!
+[wait]
+[erase]
+[wait=30]
+
+[end=00]

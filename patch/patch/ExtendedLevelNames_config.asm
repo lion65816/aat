@@ -53,7 +53,7 @@ NameData:
  db " What the House?!  "
  db "                   "
  ;Level 00D
- db "(WIP) Puella Magi  "
+ db "    Puella Magi    "
  db "   Demoka Magica   "
  ;Level 00E
  db "    Moon Palace    "

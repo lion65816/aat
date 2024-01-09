@@ -40,8 +40,8 @@
 27 bouncing_cookie.cfg
 28 npc2.cfg
 29 fire_snake_athletic.json
-2A DirectionalPlatform.json
-2B DirectionalPlatform2.json
+2A baseballbat.cfg
+2B flamingbaseball.cfg
 2C DirectionalPlatform3.json
 2D chainchomp.json
 2E burnerh.json

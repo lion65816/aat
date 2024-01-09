@@ -244,6 +244,11 @@
 7c6	0	Password door number 1
 7f0	0	Thwomp Crush Block\nA block that shatters when hit by a Thwomp.
 7f1	0	Sprites touching this block will die as if by lava.
+a8b	0	A block which destroys (Baby) Yoshi if touched.
+a9b	0	A block which destroys (Baby) Yoshi if touched.
+aab	0	A block which destroys (Baby) Yoshi if touched.
+abb	0	A block which destroys (Baby) Yoshi if touched.
+acc	0	A block which destroys (Baby) Yoshi if touched.
 da0	0	A block that will act like tile 25 for Mario
 da1	0	A block that will act like tile 25 for sprites
 e70	0	Sprites touching this block will die.

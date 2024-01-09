@@ -45,10 +45,6 @@
 1F 0022 0,0,0
 29 0020 This is a fire snake from SMB3 that jumps towards the player slowly. Weapons or a star can defeat it.
 29 0022 0,0,430
-2A 0020 Undefined Sprite
-2A 0022 0,0,0
-2B 0020 Undefined Sprite
-2B 0022 0,0,0
 2C 0020 Undefined Sprite
 2C 0022 0,0,0
 2D 0020 Undefined Sprite
