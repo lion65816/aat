@@ -16,7 +16,7 @@
 0F InfoBox2.cfg
 10 stationary_magikoopa.cfg
 11 PipeSpawner.cfg
-12 giant_piranha_red.json
+12 BossBassF4.cfg
 13 bullet_bill_1C.cfg
 14 vwf/vwf.json
 15 vwf/vwf_data.json

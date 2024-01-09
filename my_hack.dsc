@@ -413,6 +413,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 2b27	0	32x32coin [up right][10coins]
 2b36	0	32x32coin [down left][10coins]
 2b37	0	32x32coin [down right][10coins]
+2b79	0	Kills Mario unless he has a star or is riding Yoshi
 2c07	0	A block that removes yoshi upon entering the next room.
 2cf0	0	Same as the 1-up sprite.
 2d8c	0	Can't pass unless spinjumping

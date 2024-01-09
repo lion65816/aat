@@ -18,8 +18,6 @@
 0B 0022 0,0,40F 0,-16,40E -8,0,410
 0D 0020 This sprite will pick up block 12E or any block set to act like 12E (by default)
 0D 0022 0,0,C7
-12 0020 Undefined Sprite
-12 0022 0,0,0
 14 0020 Main sprite that loads the game loop for VWF Cutscene Tool.
 
 14 0022 0,0,*Game\nloop\nsprite*

@@ -62,8 +62,8 @@ NameData:
  db " Lost Souls Dorms  "
  db "                   "
  ;Level 010
- db "The Beginning      "
- db "          of Spring"
+ db "   The Beginning   "
+ db "     of Spring     "
  ;Level 011
  db " Warning!  It's a  "
  db "Red Radish Morning*"
@@ -77,7 +77,7 @@ NameData:
  db " Pipe Town, There  "
  db "                   "
  ;Level 015
- db "Demo in            "
+ db "      Demo in      "
  db "thornbush scrumble*"
  ;Level 016
  db "  Cryotranquility  "
@@ -125,32 +125,32 @@ NameData:
  db "  Valley of Wheat  "
  db "                   "
  ;Level 101
- db "Spikes do hurt     "
- db "        (sometimes)"
+ db "  Spikes do hurt   "
+ db "    (sometimes)    "
  ;Level 102
- db "Chrystal Caves     "
+ db "  Chrystal Caves   "
  db "                  *"
  ;Level 103
  db "James Turner (temp "
  db "name, may keep it) "
  ;Level 104
- db "(WIP)              "
+ db "       (WIP)       "
  db "                   "
  ;Level 105
- db "Rachel's Rebate    "
- db "Rotorcraft         "
+ db "  Rachel's Rebate  "
+ db "    Rotorcraft     "
  ;Level 106
  db "  Horse Adventure  "
  db "                   "
  ;Level 107
- db "Doing Things       "
- db "the Hard Way       "
+ db "   Doing Things    "
+ db "   the Hard Way    "
  ;Level 108
- db "   The Castle      "
- db "      of Spirits   "
+ db "    The Castle     "
+ db "    of Spirits     "
  ;Level 109
  db " A Nighttime Hike  "
- db "   Up the Mountain "
+ db "  Up the Mountain  "
  ;Level 10A
  db "Lucifer's Lava Lamp"
  db "                   "
@@ -158,8 +158,8 @@ NameData:
  db "    Bad Day at     "
  db "    the Garden    *"
  ;Level 10C
- db "yeah! get down!    "
- db "   ONE MORE TIME! *"
+ db "  yeah! get down!  "
+ db "  ONE MORE TIME!  *"
  ;Level 10D
  db " The Palace Color  "
  db "     is Yellow     "
@@ -170,13 +170,13 @@ NameData:
  db "     Sui Glide     "
  db "                   "
  ;Level 110
- db "My Green Garden    "
- db "in Green Forest   *"
+ db "  My Green Garden  "
+ db "  in Green Forest *"
  ;Level 111
  db "    Tim Hortons    "
  db "                   "
  ;Level 112
- db "Good Ol' Days      "
+ db "   Good Ol' Days   "
  db "                   "
  ;Level 113
  db "   Quirky Quarry   "
@@ -191,14 +191,14 @@ NameData:
  db "  time to take a   "
  db "                   "
  ;Level 117
- db "pREsent(ing) gifts "
- db " Day               "
+ db "   pREsent(ing)    "
+ db "     gifts Day     "
  ;Level 118
  db " Hot Glue Garbage  "
  db "                   "
  ;Level 119
- db "  Jumpers Are      "
- db "  All Winners!     "
+ db "    Jumpers Are    "
+ db "    All Winners!   "
  ;Level 11A
  db "       PUNT        "
  db "      RETURN       "
@@ -236,16 +236,16 @@ NameData:
  db " The Purkinje Tree "
  db "      Ruins       *"
  ;Level 126
- db "  Switching        "
- db "    Difficulties  *"
+ db "     Switching     "
+ db "   Difficulties   *"
  ;Level 127
  db "     Greenhouse    "
  db "     Gambling      "
  ;Level 128
- db "The Crash at       "
+ db "   The Crash at    "
  db "Craigdarroch Castle"
  ;Level 129
- db "Super Easy Going   "
+ db " Super Easy Going  "
  db "                   "
  ;Level 12A
  db "   Twilight Tofu   "
@@ -257,8 +257,8 @@ NameData:
  db "   Can't Go Back   "
  db "                   "
  ;Level 12D
- db "watch out!         "
- db "     bad word ahead"
+ db "    watch out!     "
+ db "  bad word ahead   "
  ;Level 12E
  db "                   "
  db "                   "
@@ -266,8 +266,8 @@ NameData:
  db " Where The Whales  "
  db "  Come To Rest    *"
  ;Level 130
- db "Assault on Snake   "
- db "Block Fortress     "
+ db " Assault on Snake  "
+ db "  Block Fortress   "
  ;Level 131
  db "   Killy Killer    "
  db "     Volcano      *"
@@ -275,7 +275,7 @@ NameData:
  db "     The Cave      "
  db "    of Monsters   *"
  ;Level 133
- db "Idiom Factory II   "
+ db " Idiom Factory II  "
  db "                   "
  ;Level 134
  db "  Sweet Paradise   "
@@ -284,13 +284,13 @@ NameData:
  db " An Infinite Dream "
  db "                   "
  ;Level 136
- db "Who put Touhou     "
- db "in my hack??       "
+ db "  Who put Touhou   "
+ db "   in my hack??    "
  ;Level 137
- db "Rift Collapse      "
+ db "   Rift Collapse   "
  db "                   "
  ;Level 138
- db "Weird Teal House   "
+ db " Weird Teal House  "
  db "                   "
  ;Level 139
  db "    Revenge of     "
@@ -299,5 +299,5 @@ NameData:
  db "Use Of A Goal Posts"
  db "                 **"
  ;Level 13B
- db "Final Mall         "
- db "     (Name Pending)"
+ db "    A Shopping     "
+ db "    Mall Thing     "
