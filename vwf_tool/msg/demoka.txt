@@ -18,6 +18,7 @@
 Looks like the only way out of here is up.
 [wait]
 [erase]
+[topic][/topic]
 [sprite=erase]
 [wait=30]
 
@@ -42,6 +43,7 @@ Now just how are we supposed to get up there?
 Become magical girls and fly?
 [wait]
 [erase]
+[topic][/topic]
 [sprite=erase]
 [wait=30]
 
@@ -68,6 +70,7 @@ Become magical girls and fly?
 That can be arranged.
 [wait]
 [erase]
+[topic][/topic]
 [sprite=erase]
 [wait=30]
 
@@ -83,6 +86,8 @@ That can be arranged.
 (30,38,60,0B,big)(40,38,62,0B,big)(50,38,64,0B,big)(60,38,66,0B,big)(70,38,68,0B,big)(80,38,6A,0B,big)(90,38,6C,0B,big)(A0,38,6E,0B,big)(B0,38,A4,0B,big)(C0,38,A6,0B,big)
 (30,48,80,0B,big)(40,48,82,0B,big)(50,48,84,0B,big)(60,48,86,0B,big)(70,48,88,0B,big)(80,48,8A,0B,big)(90,48,8C,0B,big)(A0,48,8E,0B,big)(B0,48,C4,0B,big)(C0,48,C6,0B,big)
 [/sprite]
+[font color=3]
+[topic]Kyubey[/topic]
 It's simple.[br]
 [wait=30]
 [label=contract]
@@ -106,6 +111,7 @@ I appreciate your enthusiasm!
 [label=accepted]
 [wait]
 [erase]
+[topic][/topic]
 [sprite=erase]
 [wait=30]
 
@@ -124,12 +130,11 @@ I appreciate your enthusiasm!
 (30,38,E6,06,big)(40,38,E8,06,big)(50,38,EA,06,big)(60,38,E6,06,big)(70,38,E8,06,big)(80,38,EA,06,big)(90,38,E6,06,big)(A0,38,E8,06,big)(B0,38,EA,06,big)(C0,38,E6,06,big)
 (30,48,C2,08,big)(40,48,C2,08,big)(50,48,C2,08,big)(60,48,C2,08,big)(70,48,C2,08,big)(80,48,C2,08,big)(90,48,C2,08,big)(A0,48,C2,08,big)(B0,48,C2,08,big)(C0,48,C2,08,big)
 [/sprite]
-[topic][/topic]
 You have become meguca!
 [wait=30]
 You can now do magical things!
 [wait]
-[br]Collect coins to heal!
+[br]Collect 5 coins to heal HP!
 [wait]
 [erase]
 [sprite=erase]

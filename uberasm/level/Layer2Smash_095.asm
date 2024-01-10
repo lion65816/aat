@@ -133,11 +133,12 @@ endif
     rtl
 
 main:
-    LDA $010B|!addr
-    STA $0C
-    LDA $010C|!addr
-    STA $0D
-    JSL MultipersonReset_main
+    lda $010B|!addr
+    sta $0C
+    lda $010C|!addr
+    ora #$04
+    sta $0D
+    jsl MultipersonReset_main
 
     ; Don't run if the game is paused or during No Yoshi intros.
     lda $9D : ora $13D4|!addr : bne .return

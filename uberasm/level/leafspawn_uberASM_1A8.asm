@@ -60,9 +60,10 @@ InitXSpeed:
 db $06,$F1,$FC,$00,$ED,$FB,$0D,$00,$FF,$0D,$14,$F0,$EF,$0C,$07,$EE,$F5,$00,$04,$F0
 
 main:
-    LDA $010B|!addr
-    STA $0C
-    LDA $010C|!addr
-    STA $0D
-    JSL MultipersonReset_main
-    RTL
+	LDA $010B|!addr
+	STA $0C
+	LDA $010C|!addr
+	ORA #$04
+	STA $0D
+	JSL MultipersonReset_main
+	RTL
