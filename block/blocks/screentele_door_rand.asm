@@ -19,6 +19,7 @@
 !WarpC = $0C		;|
 !WarpD = $0D		;|
 !WarpE = $0E		;/
+!WarpF = $0F		;/
 
 !small_door = 0		;>0 = allow all forms, 1 = small only.
 
@@ -47,12 +48,13 @@ if !small_door > 0		;|
 	ORA $19			;|
 endif				;|
 	BNE PullYret		;/
-
-	LDA #$0F		;\play door sound
+	
+	
+	LDA #$29		;\play door sound
 	STA $1DFC|!addr		;/
 
 	LDA $14			;\use frame #$00-#$03
-	AND #$0E		;/
+	AND #$0F		;/
 	TAX			;\use for table
 	LDA randomtable,x	;/
 	TAY
@@ -87,5 +89,5 @@ ret_16bit:
 	PLY
 	RTL
 randomtable:
-	db !Warp0, !Warp1, !Warp2, !Warp3, !Warp4, !Warp5, !Warp6, !Warp7, !Warp8, !Warp9, !WarpA, !WarpB, !WarpC, !WarpD, !WarpE
-print "A door that uses 1 of 15 screens randomly."
+	db !Warp0, !Warp1, !Warp2, !Warp3, !Warp4, !Warp5, !Warp6, !Warp7, !Warp8, !Warp9, !WarpA, !WarpB, !WarpC, !WarpD, !WarpE, !WarpF
+print "A door that uses 1 of 16 screens randomly."

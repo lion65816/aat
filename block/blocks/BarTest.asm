@@ -1,8 +1,8 @@
 ;Block that is passable only when you have 4 (or specified number) dragon coins.
 
-!CoinRequirement = 10			;how many yoshi/dragon coins needed to make this block passable
+!CoinRequirement = 10			;how many levels entered needed to make this block passable
 
-print "A block that is passable only when the player has ",dec(!CoinRequirement)," dragon coins."
+print "A block that is passable only when the player has ",dec(!CoinRequirement)," levels entered."
 
 db $37
 JMP MarioBelow : JMP MarioAbove : JMP MarioSide : JMP SpriteV : JMP SpriteH : JMP MarioCape : JMP MarioFireBall
@@ -17,7 +17,7 @@ MarioBelow:
 MarioSide:
 WallFeet:
 WallBody:
-	LDA $141A|!addr		;Load number of dragon coins
+	LDA $141A|!addr		;Load number of levels entered
 	CMP #!CoinRequirement
 	BCS GotCoins		;Branch to 'Gotcoins'
 

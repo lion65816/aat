@@ -253,9 +253,9 @@ BossBass_Main:
 	STZ !1594,x	; sprite is in "chasing" state
 +	RTS		; 
 .yaccel
-	db $00,$02,$FE
+	db $00,$01,$FE
 .yvel_limit
-	db $00,$30,$20
+	db $00,$20,$10
 .xvel_limit
 	db $30,$50,$20,$60
 .xaccel	db $FC,$04,$FF,$01

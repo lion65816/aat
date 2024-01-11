@@ -407,11 +407,12 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1f18	0	A block that, when touched by the player, will change the background music to a new value and then destroy itself.
 1f1b	0	Adds 20 seconds to the clock and shatters
 1f26	0	Ends the level via keyhole exit if touched while carrying a key, or if touched while riding a Yoshi with a key in its mouth.
-1f35	0	A block that is passable only when the player has 10 dragon coins.
+1f35	0	A block that is passable only when the player has 10 levels entered.
 1f36	0	Adds a life to  the player, then disappears.
+1f40	0	A block that ends the level.
 1f51	0	Shatters and makes the player bounce a bit on player contact.
-1ffb	0	A door that uses 1 of 15 screens randomly.
-1ffc	0	A door that uses a specific screen exit.
+1ffb	0	A door that uses 1 of 16 screens randomly.
+1ffc	0	A door.
 2093	0	Spawns sprite $BA.
 2300	0	noyoshiintro.asm
 2b26	0	32x32coin [up left][10coins]
