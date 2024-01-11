@@ -116,6 +116,14 @@ To add the vertical free scroll camera (VIP-style camera, scrolls up as the prot
 
 If you have any trouble please ask on the AAT talkhaus subforum or on the romhack shack discord and I, Koba (lion), will try to reach you <3 (yes homo... maybe)
 
+### Adding VWF cutscenes
+
+By placing sprites `14 vwf/vwf.json` and `15 vwf/vwf_data.json` in a level, a specific VWF cutscene will play based on the latter's X,Y coordinate (see [here](https://github.com/TheLX5/VWF-Cutscene-Tool/wiki/Basic-usage) for more information). However, if a new VWF cutscene needs to be added to the list, a series of new VWF-related files need to be generated and reinserted.
+
+First, you need to add a VWF-formatted text file containing the cutscene specifications to the `vwf_tool\msg` directory, and append the filename to `vwf_tool\list.txt`. Note that the filenames must be listed in consecutive hexadecimal order with no missing numbers. Next, run the script titled `Insert VWF Cutscene.bat` in the main directory. This script will run the `vwftool` program, which will generate the necessary VWF files. Then these files will be moved to the `sprite\sprites\vwf` folder and automatically inserted into the ROM using PIXI. You will need to have Python 3 installed in order to execute `vwftool`.
+
+Note that this script only needs to be run whenever a new VWF cutscene needs to be inserted, and should be done before doing a clean build with Lunar Helper.
+
 #### Further Questions?
 
 Please reach us at our Discord server or on Talkhaus.
