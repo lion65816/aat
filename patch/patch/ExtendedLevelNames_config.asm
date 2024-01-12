@@ -14,20 +14,20 @@ NameData:
 ; db "                   "
 
  ;Level 000
- db "    BONUS GAME     "
  db "                   "
+ db "    BONUS GAME     "
  ;Level 001
  db " baby catnips get  "
  db "tragic concussions*"
  ;Level 002
- db " City of Gulp Gulp "
  db "                   "
+ db " City of Gulp Gulp "
  ;Level 003
  db "  Demo in the Sky  "
  db "   (no diamonds)   "
  ;Level 004
- db "    R.A.O.C.O.W.   "
  db "                   "
+ db "    R.A.O.C.O.W.   "
  ;Level 005
  db "The Emerald Winston"
  db "Bar and Restaurant "
@@ -35,32 +35,32 @@ NameData:
  db "  Thwompire State  "
  db "     Building      "
  ;Level 007
- db "    Bunn Canyon    "
  db "                   "
+ db "    Bunn Canyon   *"
  ;Level 008
- db " Locus of Control  "
  db "                   "
+ db " Locus of Control  "
  ;Level 009
  db "   NO VEGETABLES,  "
  db "    ONLY TREES     "
  ;Level 00A
- db "   (WIP) SPECIAL   "
  db "                   "
+ db "   (WIP) SPECIAL   "
  ;Level 00B
  db "  Siege at Castle  "
  db "    Wolfenstein    "
  ;Level 00C
- db " What the House?!  "
  db "                   "
+ db " What the House?!  "
  ;Level 00D
  db "    Puella Magi    "
  db "   Demoka Magica   "
  ;Level 00E
+ db "                   "
  db "    Moon Palace    "
- db "                   "
  ;Level 00F
- db " Lost Souls Dorms  "
  db "                   "
+ db " Lost Souls Dorms  "
  ;Level 010
  db "   The Beginning   "
  db "     of Spring     "
@@ -74,14 +74,14 @@ NameData:
  db " Normal Mode Tank  "
  db "  Tank ga Warui    "
  ;Level 014
- db " Pipe Town, There  "
  db "                   "
+ db " Pipe Town, There  "
  ;Level 015
  db "      Demo in      "
  db "thornbush scrumble*"
  ;Level 016
- db "  Cryotranquility  "
- db "                  *"
+ db "                   "
+ db "  Cryotranquility *"
  ;Level 017
  db " matcha ampersand  "
  db "      avocado      "
@@ -89,8 +89,8 @@ NameData:
  db "      TRIPLE       "
  db "      THREAT       "
  ;Level 019
- db "  Fishing Grounds  "
  db "                   "
+ db "  Fishing Grounds  "
  ;Level 01A
  db "     Love Frog     "
  db "    Hangout Spot  *"
@@ -98,14 +98,14 @@ NameData:
  db "     BRAINY OR     "
  db "     WORRIED?      "
  ;Level 01C
+ db "                   "
  db "   DUCKMOUNTAIN    "
- db "                   "
  ;Level 01D
- db "  Temporal House   "
  db "                   "
+ db "  Temporal House   "
  ;Level 01E
- db "Aileron Moonbounce "
- db "                  *"
+ db "                   "
+ db "Aileron Moonbounce*"
  ;Level 01F
  db "    PREHISTORIC    "
  db "    DOOM CASTLE    "
@@ -113,35 +113,35 @@ NameData:
  db "   Silent Flower   "
  db "      Forest      *"
  ;Level 021
- db "how eerie, an eerie"
- db "                  *"
+ db "    how eerie,     "
+ db "     an eerie     *"
  ;Level 022
- db "   THE OBSTACLE    "
  db "                   "
+ db "   THE OBSTACLE    "
  ;Level 023
  db "  The Feeling of   "
  db "    a Freshman     "
  ;Level 024
- db "  Valley of Wheat  "
  db "                   "
+ db "  Valley of Wheat  "
  ;Level 101
  db "  Spikes do hurt   "
  db "    (sometimes)    "
  ;Level 102
- db "  Chrystal Caves   "
- db "                  *"
+ db "                   "
+ db "  Chrystal Caves  *"
  ;Level 103
  db "James Turner (temp "
  db "name, may keep it) "
  ;Level 104
- db "       (WIP)       "
  db "                   "
+ db "       (WIP)       "
  ;Level 105
  db "  Rachel's Rebate  "
  db "    Rotorcraft     "
  ;Level 106
- db "  Horse Adventure  "
  db "                   "
+ db "  Horse Adventure  "
  ;Level 107
  db "   Doing Things    "
  db "   the Hard Way    "
@@ -152,8 +152,8 @@ NameData:
  db " A Nighttime Hike  "
  db "  Up the Mountain  "
  ;Level 10A
- db "Lucifer's Lava Lamp"
  db "                   "
+ db "Lucifer's Lava Lamp"
  ;Level 10B
  db "    Bad Day at     "
  db "    the Garden    *"
@@ -164,23 +164,23 @@ NameData:
  db " The Palace Color  "
  db "     is Yellow     "
  ;Level 10E
- db "  Aerial Airships  "
- db "                  *"
- ;Level 10F
- db "     Sui Glide     "
  db "                   "
+ db "  Aerial Airships *"
+ ;Level 10F
+ db "                   "
+ db "     Sui Glide     "
  ;Level 110
  db "  My Green Garden  "
  db "  in Green Forest *"
  ;Level 111
+ db "                   "
  db "    Tim Hortons    "
- db "                   "
  ;Level 112
+ db "                   "
  db "   Good Ol' Days   "
- db "                   "
  ;Level 113
- db "   Quirky Quarry   "
  db "                   "
+ db "   Quirky Quarry   "
  ;Level 114
  db "  Moving Ahead at  "
  db "   Great Lengths   "
@@ -188,14 +188,14 @@ NameData:
  db "     Homeworld     "
  db "       Chunk      *"
  ;Level 116
- db "  time to take a   "
  db "                   "
+ db "  time to take a   "
  ;Level 117
  db "   pREsent(ing)    "
  db "     gifts Day     "
  ;Level 118
- db " Hot Glue Garbage  "
  db "                   "
+ db " Hot Glue Garbage  "
  ;Level 119
  db "    Jumpers Are    "
  db "    All Winners!   "
@@ -206,32 +206,32 @@ NameData:
  db "    FIGHT THE      "
  db "RED SWITCH PALACE! "
  ;Level 11C
- db "  Lady Crithania   "
  db "                   "
+ db "  Lady Crithania   "
  ;Level 11D
  db "   The Castle of   "
  db " SERIOUS BUSINESS *"
  ;Level 11E
- db "Fungus Forest Flow "
- db "                  *"
- ;Level 11F
- db "  A Warm Welcome   "
  db "                   "
+ db "Fungus Forest Flow*"
+ ;Level 11F
+ db "                   "
+ db "  A Warm Welcome   "
  ;Level 120
  db " The Legend of the "
  db "Captain Blackpowder"
  ;Level 121
+ db "                   "
  db "  SWITCH IS BLUE   "
- db "                   "
  ;Level 122
- db "   Life Goes On    "
- db "                  *"
+ db "                   "
+ db "   Life Goes On   *"
  ;Level 123
+ db "                   "
  db " Coasting Redwoods "
- db "                   "
  ;Level 124
- db " Accordion Depths  "
  db "                   "
+ db " Accordion Depths  "
  ;Level 125
  db " The Purkinje Tree "
  db "      Ruins       *"
@@ -245,17 +245,17 @@ NameData:
  db "   The Crash at    "
  db "Craigdarroch Castle"
  ;Level 129
+ db "                   "
  db " Super Easy Going  "
- db "                   "
  ;Level 12A
- db "   Twilight Tofu   "
  db "                   "
+ db "   Twilight Tofu   "
  ;Level 12B
  db "Tap Dancing Lessons"
  db "  In The Workshop  "
  ;Level 12C
- db "   Can't Go Back   "
  db "                   "
+ db "   Can't Go Back   "
  ;Level 12D
  db "    watch out!     "
  db "  bad word ahead   "
@@ -273,31 +273,31 @@ NameData:
  db "     Volcano      *"
  ;Level 132
  db "     The Cave      "
- db "    of Monsters   *"
+ db "    of Monsters  **"
  ;Level 133
+ db "                   "
  db " Idiom Factory II  "
- db "                   "
  ;Level 134
+ db "                   "
  db "  Sweet Paradise   "
- db "                   "
  ;Level 135
- db " An Infinite Dream "
  db "                   "
+ db " An Infinite Dream "
  ;Level 136
  db "  Who put Touhou   "
  db "   in my hack??    "
  ;Level 137
+ db "                   "
  db "   Rift Collapse   "
- db "                   "
  ;Level 138
- db " Weird Teal House  "
  db "                   "
+ db " Weird Teal House  "
  ;Level 139
  db "    Revenge of     "
  db "     the Sushi    *"
  ;Level 13A
- db "Use Of A Goal Posts"
- db "                 **"
+ db "     Use Of A      "
+ db "    Goal Posts   **"
  ;Level 13B
  db "    A Shopping     "
  db "    Mall Thing     "
