@@ -13,9 +13,14 @@ function vram_addr(offset) = (!base_vram+(offset*$10))
 function gfx_size(num)     = (num*$20)
 
 level:
+    ; AAT edit: Skip if it's Level A (SPECIAL).
+    ; This prevents the bug where the retry tiles remain loaded into VRAM
+    ; after restarting a sublevel via the MultipersonReset UberASM.
+    lda $13BF|!addr : cmp #$0A : beq +
+
     ; Skip if it's not time to upload the tiles.
     lda !ram_update_request : bne .upload
-    rtl
++   rtl
 
 .upload:
     ; Only upload on this frame.

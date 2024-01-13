@@ -616,7 +616,11 @@ endif
 .notSolid                                       ; /
 
         %safe_JSL($01A7DC|!BankB)               ; \  if not in contact with the player, don't show a message
-        BCC .noContact                          ; /
+        ;BCC .noContact                         ;  |
+        BCC +                                   ;  |
+        BRA .countAsContact                     ;  |
++                                               ;  |
+        JMP .noContact                          ; /
 
 .countAsContact
 
@@ -663,8 +667,18 @@ endif
 
 .showMessage
 
+        REP #$20
+        LDA $010B|!addr                         ;\ AAT edit: Do not show the message;
+        CMP #$01AE                              ;| only teleport if sublevel 1AE.
+        BEQ +                                   ;/
+        SEP #$20
         LDA #$18                                ; \  set the message timer
         STA !MessageTimer                       ; /  which sets all the other stuff in motion
+        BRA .dontShowMessage
++
+        SEP #$20
+        LDA #$09
+        STA !MessageTimer
 
 .dontShowMessage
 
@@ -958,8 +972,19 @@ Graphics:
         PHY
         %GetDrawInfo()
         PLY
+        REP #$20
+        LDA $010B|!addr                         ;\ Shift the indicator 8 pixels to the right
+        CMP #$000F                              ;| if sublevel 00F.
+        BEQ ..shift                             ;/
+        SEP #$20
+        LDA $00
+        CLC : ADC #$00
+        BRA ..store
+..shift
+        SEP #$20
         LDA $00
         CLC : ADC #$08
+..store
         STA $0300|!Base2,y
         LDA $01
         SEC : SBC #$20

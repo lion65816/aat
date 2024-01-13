@@ -1,0 +1,53 @@
+/////////////
+// Scene 1 //
+/////////////
+
+[sprite=58]
+// Demo and Iris
+(38,28,80,04,big)(50,28,82,02,big)
+(38,38,A0,04,big)(50,38,A2,02,big)
+// Panda
+(68,28,84,0E,big)(78,28,86,0E,big)
+(68,38,A4,0E,big)(78,38,A6,0E,big)
+// Couch
+(80,28,88,06,big)(90,28,8A,06,big)(A0,28,8C,06,big)(B0,28,8A,46,big)(C0,28,88,46,big)
+(80,38,A8,06,big)(90,38,AA,06,big)(A0,38,AC,06,big)(B0,38,AA,46,big)(C0,38,A8,46,big)
+// Background
+(30,08,8E,06,big)(40,08,8E,06,big)(50,08,8E,06,big)(60,08,8E,06,big)(70,08,8E,06,big)(80,08,8E,06,big)(90,08,8E,06,big)(A0,08,8E,06,big)(B0,08,8E,06,big)(C0,08,8E,06,big)
+(30,18,8E,06,big)(40,18,8E,06,big)(50,18,8E,06,big)(60,18,8E,06,big)(70,18,8E,06,big)(80,18,8E,06,big)(90,18,8E,06,big)(A0,18,8E,06,big)(B0,18,8E,06,big)(C0,18,8E,06,big)
+(30,28,8E,06,big)(40,28,8E,06,big)(50,28,8E,06,big)(60,28,8E,06,big)(70,28,8E,06,big)
+(30,38,8E,06,big)(40,38,8E,06,big)(50,38,8E,06,big)(60,38,8E,06,big)(70,38,8E,06,big)
+(30,48,AE,06,big)(40,48,AE,06,big)(50,48,AE,06,big)(60,48,AE,06,big)(70,48,AE,06,big)(80,48,AE,06,big)(90,48,AE,06,big)(A0,48,AE,06,big)(B0,48,AE,06,big)(C0,48,AE,06,big)
+[/sprite]
+[font color=1]
+[topic]The Guy Who Quits History[/topic]
+It's the story of this dude who is just super fed up with the insanity of humanity,[wait=30] and what they did in the past,[wait=30] are doing in the present,[wait=30] and will probably keep doing in the future.
+[wait]
+[br]Mind you,[wait=30] he doesn't want to kill himself,[wait=30] or anything,[wait=30] he still wants to live,[wait=30] and so through an unexplained process,[wait=30] the guy quits history.
+[wait]
+[br]Being separated from history,[wait=30] he is now separated from time,[wait=30] he doesn't age and cannot die as his death is bound to affect someone,[wait=30] even a passerby,[wait=30] thus he is contrained to live,[wait=30] actually,[wait=30] completely unnoticed,[wait=30] as a statistically insignificant head in a crowd.
+[wait]
+[br]An eternal NPC.
+[wait]
+[br]He cannot have any meaningful conversations,[wait=30] idle chats with stangers are completely immemorable.
+[wait]
+[br]He cannot purchase anything that is not so popular that his one sale contribution would be noticed by anyone,[wait=30] in fact,[wait=30] he can only go into wholesale superstores and franchised fast food restaurants.
+[wait]
+[br]He cannot hunt or fish for his own food,[wait=30] as he would affect the history of TH.
+[wait]
+[br]Nothing will ever affect his life or his existence,[wait=30] with the consequence that he will never affect the life or existence of anyone else,[wait=30] in good or in bad,[wait=30] for both the former and the latter. 
+[wait]
+[br]The story doesn't really end.
+[wait]
+[br]Living outside of history,[wait=30] he is free to witness the complete evolution of humanity and its end,[wait=30] and then kind of dicks around on a dead planet until the Sun goes supernova.
+[wait]
+[br]He then gets to float around in space until the heat death of the universe,[wait=30] never to encounter any extraterrestrial life,[wait=30] as that would affect their history too.
+[wait]
+[br]The end.
+[wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+
+[end=00]

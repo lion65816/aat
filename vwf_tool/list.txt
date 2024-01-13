@@ -9,3 +9,4 @@
 08 postgame_clue8.txt
 09 postgame_boss.txt
 0A demoka.txt
+0B panda.txt
