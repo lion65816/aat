@@ -211,6 +211,7 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 2B36:25 32x32Coins/Coin10DownLeft.asm
 2B37:25 32x32Coins/Coin10DownRight.asm
 2B79:130 kill_muncher.asm
+2B90:25 MorphBlock.asm
 2C07:25 RemoveYoshi.asm
 2CF0:25 1-Up.asm
 2D8F:130 boost_up.asm

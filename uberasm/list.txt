@@ -130,8 +130,9 @@ level:
 0E5	Credits.asm
 0F0	F0_scroll.asm
 0F2	freescrollbabey.asm
+0F3  MultiStepAutoscroll.asm
 0F4	SPECIAL.asm
-0F5	SPECIAL.asm
+0F5	smario.asm
 0F6	ashspawn_uberASM.asm
 0F7	freescrollbabey.asm
 0F8	BG_AutoScroll.asm
@@ -241,6 +242,7 @@ level:
 17E	FilterYoshi.asm
 180	Elevator.asm
 181	Elevator.asm
+193  Lightning2.asm
 1A0	FilterYoshi.asm
 1A1	SPECIAL.asm
 1A2	Layer2Smash_1A2.asm

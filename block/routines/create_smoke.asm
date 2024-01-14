@@ -3,9 +3,8 @@
 	SEP #$30
 	PHX
 	LDX #$03
-?loop:
-	LDA $17C0|!addr,x
-	BNE ?next
+.loop	LDA $17C0|!addr,x
+	BNE .next
 	
 	INC $17C0|!addr,x
 	LDA #$1B
@@ -17,12 +16,12 @@
 	LDA $9A
 	AND #$F0
 	STA $17C8|!addr,x
-	BRA ?+
+	BRA +
 
-?next:
-	DEX
-	BPL ?loop
+.next	DEX
+	BPL .loop
 
-?+	PLX
++	TXA
+	PLX
 	PLP
 	RTL

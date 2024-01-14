@@ -11,13 +11,13 @@
 ;How many of chosen sprite can be on screen before it stops generating.  A sprite is counted even if it wasn't generated.
 
 ;Tilemap defines:
-!Plant1 =	$4E	;plant frame 1
+!Plant1 =	$62	;plant frame 1
 !Plant2 =	$60	;plant frame 2
-!Plant3 =	$4A	;plant frame 3
+!Plant3 =	$46	;plant frame 3
 !Plant4 =	$48	;plant frame 4
-!Plant5 =	$4C	;plant frame 5
-!Stem1 =	$3A	;left stem portion
-!Stem2 =	$2A	;right stem portion
+!Plant5 =	$08	;plant frame 5
+!Stem1 =	$7D	;left stem portion
+!Stem2 =	$6D	;right stem portion
 
 !StemProp = $06		;stem properties, YXPPCCCT format.
 
