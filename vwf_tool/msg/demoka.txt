@@ -4,8 +4,8 @@
 
 [sprite=54]
 // Demo and Iris
-(60,2A,84,02,big)(90,2A,82,00,big)
-(60,3A,A0,02,big)(90,3A,A2,00,big)
+(60,2A,84,02,big)(90,2A,82,0C,big)
+(60,3A,A0,02,big)(90,3A,A2,0C,big)
 // Background
 (30,08,8A,06,big)(40,08,EE,06,big)(50,08,8A,06,big)(60,08,8A,06,big)(70,08,8A,06,big)(80,08,CC,06,big)(90,08,8A,06,big)(A0,08,8A,06,big)(B0,08,8A,06,big)(C0,08,8A,06,big)
 (30,18,EC,06,big)(40,18,8A,06,big)(50,18,8A,06,big)(60,18,8A,06,big)(70,18,8A,06,big)(80,18,8A,06,big)(90,18,8A,06,big)(A0,18,8A,06,big)(B0,18,8A,06,big)(C0,18,8A,06,big)
@@ -28,7 +28,7 @@ Looks like the only way out of here is up.
 
 [sprite=52]
 // Demo and Iris
-(60,48,80,02,big)(90,48,82,00,big)
+(60,48,80,02,big)(90,48,82,0C,big)
 // Background
 (30,08,C8,08,big)(40,08,C8,08,big)(50,08,C8,08,big)(60,08,CA,08,big)(70,08,8A,06,big)(80,08,8A,06,big)(90,08,C6,08,big)(A0,08,C8,08,big)(B0,08,C8,08,big)(C0,08,C8,08,big)
 (30,18,8A,06,big)(40,18,8A,06,big)(50,18,8A,06,big)(60,18,8A,06,big)(70,18,8A,06,big)(80,18,8A,06,big)(90,18,8A,06,big)(A0,18,8A,06,big)(B0,18,8A,06,big)(C0,18,8A,06,big)
@@ -53,8 +53,8 @@ Become magical girls and fly?
 
 [sprite=58]
 // Demo and Iris
-(30,2A,84,02,big)(60,2A,A4,00,big)
-(30,3A,A0,02,big)(60,3A,A2,40,big)
+(30,2A,84,02,big)(60,2A,A4,0C,big)
+(30,3A,A0,02,big)(60,3A,A2,4C,big)
 // Kyubey
 (A0,28,8C,04,big)(B0,28,8E,04,big)
 (A0,38,AC,04,big)(B0,38,AE,04,big)
@@ -91,7 +91,7 @@ That can be arranged.
 It's simple.[br]
 [wait=30]
 [label=contract]
-[pad left=16]
+[pad left=24]
 Just make a contract with me.[br]
 [wait=30]
 No.[br]
@@ -121,8 +121,8 @@ I appreciate your enthusiasm!
 
 [sprite=56]
 // Demo and Iris
-(60,22,86,02,big)(90,1A,88,00,big)
-(50,32,AA,42,big)(60,32,A6,02,big)(90,2A,A8,00,big)(A0,2A,AA,00,big)
+(60,22,86,02,big)(90,1A,88,0C,big)
+(50,32,AA,42,big)(60,32,A6,02,big)(90,2A,A8,0C,big)(A0,2A,AA,0C,big)
 // Background
 (30,08,8A,06,big)(40,08,EE,06,big)(50,08,8A,06,big)(60,08,8A,06,big)(70,08,8A,06,big)(80,08,CC,06,big)(90,08,8A,06,big)(A0,08,8A,06,big)(B0,08,8A,06,big)(C0,08,8A,06,big)
 (30,18,EC,06,big)(40,18,8A,06,big)(50,18,8A,06,big)(60,18,8A,06,big)(70,18,8A,06,big)(80,18,8A,06,big)(90,18,8A,06,big)(A0,18,8A,06,big)(B0,18,8A,06,big)(C0,18,8A,06,big)

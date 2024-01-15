@@ -193,7 +193,7 @@ level:
 14A	MallReset.asm
 14B	DisableLRMall.asm
 14C	solved.asm
-14D	MallReset.asm
+14D	FishyGarden.asm
 14E	hdma_andnoflight.asm
 14F	MallReset.asm
 150	MallReset.asm
@@ -242,6 +242,7 @@ level:
 17E	FilterYoshi.asm
 180	Elevator.asm
 181	Elevator.asm
+183	SPECIAL.asm
 193  Lightning2.asm
 1A0	FilterYoshi.asm
 1A1	SPECIAL.asm
