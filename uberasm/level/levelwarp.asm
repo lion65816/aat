@@ -117,13 +117,13 @@ Add:
 ; Names, always 16 byte
 ; Use capital letters only
 TableNames:
-   db "WORLD 1         "
+   db "PIEDMONT HILL   "
    db "THE FISHMARKET  "
-   db "FOREST WORLD    "
-   db "SKY WORLD       "
-   db "MOUNTAIN WORLD  "
-   db "FINAL WORLD     "
-   db "POSTGAME WORLD  "
+   db "THE LOST WOODS  "
+   db "HEAVEN          "
+   db "RESORTCITY BANFF"
+   db "NEGATIVE ZONE   "
+   db "ONE LAST THING  "
    
    
 macro level(level, midway)

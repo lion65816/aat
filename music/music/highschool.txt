@@ -1,0 +1,161 @@
+#amk 2
+#path "highschool"
+#spc
+{
+	#title		"High School"
+	#game		"Part Time UFO"
+	#author		"Shogo Sakai"
+}
+#samples 
+{ 
+		#highschool
+		"ha.brr"
+		"ta.brr"
+		"ra.brr"
+		"ku.brr"
+		"u.brr"
+		"u2.brr"
+		"fo.brr"
+		"o.brr"
+		"snare1.brr"
+		"square.brr"
+		"soft saw.brr"
+		"organ.brr"
+		"flute.brr"
+		"synthbass.brr"
+		"whistleperc.brr"
+}
+#instruments
+{
+		"ha.brr" $FE $E0 $B8 $05 $3A
+		"ta.brr" $FE $E0 $B8 $05 $2A
+		"ra.brr" $FE $E0 $B8 $05 $3A
+		"ku.brr" $FE $E0 $B8 $05 $3A
+		"u.brr" $FE $E0 $B8 $05 $00
+		"u2.brr" $FE $E0 $B8 $05 $1A
+		"fo.brr" $FE $E0 $B8 $05 $3A
+		"o.brr" $FE $E0 $B8 $05 $3A
+		"snare1.brr" $FF $E0 $B8 $07 $A0		;38
+		"square.brr" $FF $F4 $B8 $04 $00
+		"soft saw.brr" $FF $F4 $B8 $03 $00
+		"organ.brr" $FF $E0 $B8 $03 $D0
+		"flute.brr" $FF $E0 $B8 $03 $00
+		"synthbass.brr" $FF $F2 $B8 $0F $00
+		"whistleperc.brr" $FF $E0 $B8 $07 $A0
+}
+$EF $3F $10 $10
+$F1 $04 $50 $01
+t53
+#0 w255 v180
+ y10 @43 [o2 q7C g4d4g8d8e8g8
+c4g4c8>c8<g8c8
+g4d4g8d8e8g8
+d4a4d8>d8<a8f+8
+g4d4g8d8e8g8
+c4g4c8>c8<g8c8
+g4d4d4b4
+g4d4g8d8e8f+8]2
+#1 v100
+ @40 y15 (10)[o4 q5C d16g16b16>d16g16b16b16g16d16<b16g16d16b16g16b16>e16
+<e16g16>c16e16g16>c16c16<g16e16c16<g16e16e16a16>c16e16
+<b16g16b16>d16g16b16b16g16d16<b16g16d16g16d16b16>d16
+<f+16a16>d16f+16a16>d16d16<a16f+16d16<a16f+16f+16a16>d16f+16
+<d16g16b16>d16g16b16b16g16d16<b16g16d16b16g16b16>d16
+<e16g16>c16e16g16>c16c16<g16e16c16<g16e16e16g16>c16e16
+<f+16g16b16>d16g16b16b16g16d16<b16>d16f+16b16>d16d16<b16]1
+<d16g16b16>d16g16b16b16g16d16<b16g16d16d16g16b16>d16
+(10)1 
+ $F4 $03 @44 v120 y07 q7C <<b4.r8>c16 v120 y15 $F4 $03 @40 q5C b16g16d16d16g16b16>d16
+#2 v160
+ @42 o6 q7C y10 d8.r16d8.r16e16r16 $DE $0C $10 $50 d8.r16 $DF <b16a16
+g8.r16g8.r16a16.r32 $DE $0C $10 $50 g8.r16 $DF g16a16
+b8.r16b8.r16>d16r16<b8.r16b16r16
+ $DE $30 $10 $50 a2.r4
+ $DF >d8.r16d8.r16e16r16d8.r16<b16a16
+g8.r16g8.r16a16r16g8.r16g16a16
+b8.r16b8.r16a16r16b8.r16a16r16
+ $DE $48 $10 $50 g2.r2 $DF 
+d8.c16d16c16d16r2
+r16
+e8.d16e16d16e16r2
+r16
+d8.c16d16c16d16r2
+r16
+c16c16r8c16r8c8.r4.
+d8.c16d16c16d16r2
+r16
+e8.d16e16d16e16r1.
+r16
+d16d16r8d16r8d8.r8
+#3 v90 y06
+ [@39 o4 q5C g16b16>d16g16b16>d16d16<b16g16d16<b16g16>d16<b16>d16g16
+<g16>c16e16g16>c16e16e16c16<g16e16c16<g16g16>c16e16g16
+d16<b16>d16g16b16>d16d16<b16g16d16<b16g16b16g16>d16g16
+<a16>d16f+16a16>d16f+16f+16d16<a16f+16d16<a16a16>d16f+16a16
+<g16b16>d16g16b16>d16d16<b16g16d16<b16g16>d16<b16>d16g16
+<g16>c16e16g16>c16e16e16c16<g16e16c16<g16g16>c16e16g16
+<a16b16>d16g16b16>d16d16<b16a16d16f+16b16>d16f+16f+16d16
+<<g16b16>d16g16b16>d16d16<b16g16d16<b16g16g16b16>d16g16]2
+#4
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r4 v100 @41 $DF
+o4 q7C y13 g8.f+16g16f+16g16r2
+r16
+g8.f+16g16f+16g16r2
+r16
+g8.f+16g16f+16g16r2
+r16
+f+16f+16r8f+16r8f+8.r4.
+g8.f+16g16f+16g16r2
+r16
+g8.f+16g16f+16g16r2
+ y10 v170 @31 c12r12r48 @33 c16.r8r32 $DE $0C $10 $40 @35 c4r8
+ $DE $0C $10 $20 @37 c2..r8
+#5
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r4 v100 @41 
+o4 q7C y07 b8.a16b16a16b16r2
+r16
+>c8.<b16>c16<b16>c16r2
+r16
+<b8.a16b16a16b16r2
+r16
+a16a16r8a16r8a8.r4.
+b8.a16b16a16b16r2
+r16
+>c8.<b16>c16<b16>c16r4r32r64
+ y10 v170 $DE $0C $10 $40 @30 <c8..r32r64 $DF @32 c16.r8r32 @34 c6r6r24 q6C @36 c6
+r6r24 v100 @41 q7C b16b16r8b16r8b8.r8
+#6 @38 v160 y12 
+ [o4 q7C c8 q7A c16c16 q7C c8 q7A c16c16 q7C c8 q7A c16c16 q7C c16 q7A c16 q7C c16 q7A c16]16
+#7
+r1
+r1
+r1  @44 v120 y07 
+o3 q7C b16r8.b16r8.b4.r1
+r1
+r1
+r8
+b4.r8>c16r1
+r1
+r1
+r4..
+<b16r8.b16r8.b4.r1
+r1
+r1
+r4. v100 @41 
+ q7C >g16g16r8g16r8g8.r8

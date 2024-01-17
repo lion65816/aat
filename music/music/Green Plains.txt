@@ -1,0 +1,288 @@
+#amk 2
+
+; SPC Generator Info
+#SPC
+{
+    #author  "Yasuhiko Fukuda, Akira Yamaoka, Manabu Saito"
+    #title   "Green Plains"
+    #game    "Smart Ball/Jerry Boy"
+    #comment "Ported by Jakeapus"
+}
+
+#path	"Plains"
+
+#samples
+{
+	#optimized
+	"Kick.brr"
+	"Snare.brr"
+	"Vibraphone.brr"
+	"trumpet 1.brr"
+	"25% Pulse Bass.brr"
+}
+
+#instruments
+{
+	"Kick.brr"		$00 $00 $7F $12 $0D ; @30
+	"Snare.brr"		$00 $00 $7F $12 $0D ; @31
+	"Vibraphone.brr"	$FF $F1 $00 $02 $85 ; @32
+	"trumpet 1.brr"		$00 $00 $7f $04 $00 ; @33
+	"25% Pulse Bass.brr"	$FF $EE $B8 $0F $00 ; @34
+}
+
+w200 t18 ; Global Volume and Tempo
+$e4 $fd ; Global Transpose
+$ef $0f $14 $14 ; Echo
+$f1 $05 $32 $01 ; Echo Param
+
+; +---------------------+
+; |     Channel #0	|
+; +---------------------+
+
+#0
+@0
+r12... /
+
+@0
+$de $10 $23 $23
+v120 y9
+q7f
+o5 
+
+[[c32 c32 c32 e32 r32 c32 r32 < b32^32 a16 r32 r8 
+b32 b32 b32 > d32 r32 < b32 r32 a32^32 g16 r32 r8 
+> c16. r32 c32 c32 g32 g32 r32 f32
+r32 c32 c16 d16 e16 f32 d32 r32 e32 c32 r32 r4]]2 
+
+@6 v110 r32 
+y18 q5f
+
+[[
+(1)[d32 d32 r32 d32 d32 r32 d32 r32 d32 d32 r32 
+d32 d32 r32 d32 r32 c32 c32 r32 c32 c32 r32] 
+
+(2)[c32 r32 c32 c32 r32 c32 c32 r32 r32 r32] 
+]]2
+
+(1)
+ 
+c32 r32 c+32 c+32 r32 c+32 c+32 r32 r32 r32
+ 
+[d32 d32 r32 d32 d32 r32 d32 r32]2 d32 d32 r32 d32 d32 r32 g32 r32
+
+@14 q7f v140 y0 o2 g32 a32 g32 a+32 g32 b32 g32
+
+
+
+; +---------------------+
+; |     Channel #1	|
+; +---------------------+
+
+#1
+
+r12... / 
+@0
+$de $10 $23 $23
+v110 y17
+q7e
+o4 
+
+[[e32 e32 e32 g32 r32 e32 r32 d32^32 c16 r32 r8
+d32 d32 d32 f32 r32 d32 r32 c32^32 < b16 r32 r8
+> g16. r32 g32 g32 > c32 c32 r32 < a32 r32 f+32
+f+16 f+16 g16 a32 f32 r32 g32 e32 r32 r4]]2 
+
+@6 v110 y2
+r32 q6f
+
+[[b32 b32 r32 b32 b32 r32 b32 r32 b32 b32 r32 b32 b32 r32 b32 r32
+g32 g32 r32 g32 g32 r32 g32 r32 e32 e32 r32 e32 e32 r16 r32]]2
+
+[[b32 b32 r32 b32 b32 r32 b32 r32]]2 
+
+g32 g32 r32 g32 g32 r32 g32 r32 g32 g32 r32 g32 g32 r16 r32
+
+[[f32 f32 r32 f32 f32 r32 f32 r32]]2 
+g32 g32 r32 b32 b32 r32 > d32 r4
+
+
+
+
+; +---------------------+
+; |     Channel #2	|
+; +---------------------+
+
+#2
+
+@32 v110 o6
+r12... / 
+y5 r32 q6f 
+
+(3)[c32 < g32 > c32 < c32 
+e32 r32 f32 r32 a32 < a32 > a32 d32 f+32 r32 a32 r32
+< g32 > g32 < g32 > g32 < b32 r32 > e32 r32 c32 < b32 > g32 < b32 > f32 
+r32 g32 c32 e32 g32 > c32 r32 < c32 e32 c32 a32 f32
+c32 < a32 r32 d32 f+32 a32 b32 g32 > d32 f32 r32 >]
+
+< d32 < b32 > c32 r32 c32 > c32 < c32 r32 < g32 > g32 < g32 r32  
+
+y2 v110
+
+>> 
+(3) 
+< f32 < b32 > c32 r32 c32 e32 g32 r32 < g32 > g32 < g32
+
+@3 
+y5 v120 ; I wasn't sure whether to break the part below into some labeled loops or a two loop, so I opted for the two loop. 
+r32 q7e
+
+g32 
+[[
+>
+[g32 < g32 > g32 < g32 r32 g32 r32 g32 > g32 < g32 > g32 < g32 r32 g32 r32 > c32 > c32 < c32 > c32 < c32 r32 c32 r32]
+c32 > c32 < c32 > c32 < c32 r32 c32 r32 < g32
+]]2 
+ 
+> *
+ 
+c+32 > c+32 < c+32 > c+32 < c+32 r32 c+32 r32 < f32 > f32 < f32 > f32 < f32 r32 f32 r32 f32 > f32 < f32 > f32 < f32 r32 f32 r32 b32 b32 b32 > d32 d32 r32 d32 
+ 
+y20 r32
+@32 v150
+y0 
+$dc $36 $20 ; The panning fade here was super awkward and defaulted to the left speaker after looping originally, so this was my answer to fix it.
+
+q7f
+g32 a32 g32 a+32 g32 b32 g32  
+
+; +---------------------+
+; |     Channel #3	|
+; +---------------------+
+
+#3
+@0
+r12... /
+@0
+v130 y3
+
+$de $10 $23 $23
+
+q7e
+o4 
+e32 e32 e32 g32 r32 e32 r32 d32^32 c16 r32 r8 d32 d32 d32 f32
+r32 d32 r32 c32^32 < b16 r32 r8 > g16. r32 g32 g32 > c32 c32 
+r32 < a32 r32 f+32 f+16 f+16 g16 a32 f32 r32 g32 e32 r32 r4 
+
+
+
+@1 v110 y13
+$de $10 $23 $24
+
+q7f
+
+> > e8 < g8 a8 > d32 c32 < b32 a32 g8 b8 > c8 < g32 a32 b32 
+> d32 e16 d32 c32^8 r16. < < a32 > f+16 a16 b16. g32^16 > c16^16. r32 r8 
+
+y10
+@33 o5 
+v145
+$de $10 $2b $26
+
+< d32 r32 
+(6)[< b32 r32 a32 r32 g32 r32 > d24 r48 < b32 > c32 r32 d32 r16 c8^32 r32] 
+< a32 g48.. r=23 r8 
+
+> d32 r32 
+(6) g32 g48.. r=23 r8 
+
+d32 r32 
+(6) < a32 g48.. r=17 
+
+g32 g16 > g16 g=27 r64 f32 e32 f24 r12 f32 e48.. 
+r=5 c48.. r=5 d32 c+32 d32 e32 f32 f+32 r32 g32. r16.. r8 
+
+; +---------------------+
+; |     Channel #4	|
+; +---------------------+
+
+#4
+v210
+@34
+q7f
+o1 g32 a16 b16 /
+
+v160
+y10
+q7f
+
+ 
+
+(7)[> c16 c32 e32 r32 e32 r32 f32^32 f16 f32 f+32 r32 f+16 g16 g32 f32 r32 f32 r32 e32^32 e16 e32 d32 r32 < g16 >
+c16. c32 < a+32 a+16 a+32 a32 a16 a32
+f+32 r32 > f+16 < g16 g32 b32^32 b16 > c32 r32 <]
+
+> c16 c32 c32 < g32 a32 b32
+
+(7)
+g16 
+
+
+q4f
+> g16 q7f
+
+c32 > c32 < c32 < g32 g32 > g32 < g32 r32 g32 > g32 < g32 r32 > f32 > f32 < f32 r32 f32 > f32 < f32 r32 e32 > e32 < e32 r32 e32 > e32 < e32 r32
+ 
+(9)[c32 > c32 < c32 c32 > c32 c32 < c32] 
+r32 < g32 > g32 
+
+(10)[< g32 r32 g32 > g32 < g32 r32 > f32 > f32 < f32 r32 f32 > f32 < f32 r32 e32 > e32 < e32 r32 e32 > e32 < e32 r32] 
+
+(9) < g32 g32 > g32 (10) 
+
+< a32 > a32 < a32 a32 > a32 a32 < a32 r32 > d32 > d32 < d32 r32 d32 
+> d32 < d32 r32 c32 > c32 < c32 r32 c32 > c32 < c32 r32 < b32 > b32 
+< b32 b32 > b32 g32 < g32 
+
+y20
+
+r32 v140
+q7f
+g32 a32 g32 a+32 g32 b32 g32 
+
+
+
+; +---------------------+
+; |     Channel #5	|
+; +---------------------+
+
+#5
+r12... /
+o2
+@31 v155
+q7f
+
+[[@30c32 r32 @31c32 @30c32 r32 @30c32 @31c32 r32]]15
+
+@30c32 r32 @31c32 @30c32 r32 @31c32 @31c32 @31c32 @30c32 r32 r32
+
+[[@30c32 r32 @30c32 @31c32 r32 @30c32 r32 r32 @30c32 r32 @30c32 @31c32 @30c32 @30c32 r32 r32
+@30c32 r32 @30c32 @31c32 r32 @30c32 r32 r32 @30c32 r32 @31c32 @31c32 @30c32 @30c32 r32 r32]]3
+
+@30c32 r32 @30c32 @31c32 r32 @30c32 r32 r32 @30c32 r32 @30c32 @31c32 @30c32 @30c32 r32 r32
+
+@30c32 @31c32 @31c32 r32 @31c32 r8 @30c32 @31c32 @31c32 @31c32
+
+
+
+; +---------------------+
+; |     Channel #6	|
+; +---------------------+
+
+#6
+r12... /
+o4
+v160
+y10
+q6f
+
+[[@23c32]]248 r4 

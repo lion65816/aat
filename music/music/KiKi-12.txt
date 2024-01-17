@@ -1,0 +1,144 @@
+;Encoding: Shift-JIS
+;For AddmusicK 1.0.8
+;2023/10/21
+;==============================================================================
+#amk 2
+;==============================================================================
+#define SPC_Tag_Language 0
+;==============================================================================
+#spc
+{
+#if SPC_Tag_Language == 0	;English
+	#game		"Pocky & Rocky"
+	#title		"Enchanted Forest"
+	#author		"Hiroyuki Iwatsuki"
+	#comment	"--------------------------------"
+#endif
+
+#if SPC_Tag_Language == 1	;Japanese (Shift-JIS)
+	#game		"ŠïX‰öŠE “ä‚Ì•ƒ}ƒ“ƒg"
+	#title		"¬—‚ÌX"
+	#author		"ŠâŒŽ”Ž”V"
+	#comment	"--------------------------------"
+#endif
+}
+;==============================================================================
+#instruments
+{
+	@0	$8E $E0 $00 $06 $00	;@30
+	@14	$8E $EB $00 $07 $00	;@31
+	@3	$8E $6A $00 $03 $00	;@32
+	@8	$FF $EE $00 $1E $00	;@33
+	@6	$FB $E2 $00 $03 $00	;@34
+	@23	$00 $00 $7F $07 $00	;@35
+}
+;==============================================================================
+;Macros
+;Rhythm Sample
+"@b=@21 h4"			;Bass Drum 	o4a
+"@s=@29 h-3"		;Snare 		o3e
+"@h=@23 h-3 v140"	;Hi-hat 	o3a
+"@i=@35"			;Rim Shot
+;==============================================================================
+$EF $77 $32 $32
+$F1 $06 $48 $00
+$F5 $34 $33 $00 $D9 $E5 $01 $FC $EB
+w140 t53/
+;==============================================================================
+#0 v220 o4 @30 p24,16,32
+(001)[c4d4f4g4>c4<a4g8a16g16f4 c4d4f4g8a16g16f8>c8<a2^8 r8>
+c4d4f4e8c8<g8>c8<a4g8a16g16f4 c4d4f4] g4>c4<a2g8r8
+(001) g8a16g16f8g8f2.
+l8
+r4f4.gargfgagfg2f4.gargfgagfdr
+dfg4a4f4g4a4>c4<a4 gf g16a16g16f16g2. g16a16g16f16g2. c8r2^8
+;==============================================================================
+#1
+@31 v182 o4 y7 l16
+g4
+(101)[ [[a8ar>ar<ar g8gr>gr<gr]]2
+f8fr>fr<fr g8gr>gr<gr a8ar>ar<ar a8>ar<g8>gr< 
+f8fr>fr<fr e8er>er<er d8dr>dr<dr [[f8fr>fr<fr]]2] f8fr>fr<fr [[g8gr>gr<gr]]2
+
+(101) g8gr>gr<gr f8frfrfr>f8gra8>cr
+@32 o5 l8 y20
+(102)[fd<a>fd<a>fd ge<a>ge<a>ge
+fd<a>fd<a>fd gd<a>gd<a>gd]
+[[r4]]9
+@30 l16 v144
+y0 (103)[q7f gagf q78 gagf q75 gagf] r4
+y20 (103)
+@31 v182 q7f o5 y7
+c8c16r16<g16r16e16r16c16r16r8
+;==============================================================================
+#2 v255 @33 o2 l16 $FA $03 $7F
+c4
+(201)[ [[d8drdrdr c8crcrcr]]2 < a+8a+ra+ra+r > c8crcrcr d8drdrdr d8>dr<c8>cr<<
+a+8a+ra+ra+r a8ararar g8grgrgr f8frfrfr a+8a+ra+ra+r]
+a+8a+ra+ra+r > c8crcrcr c8g8e8c8
+
+(201) c8crcrcr <f8>fr <a8>ar c8>cr <e8>er<
+
+l8 d2rd<a>d c+2rc+<a>c+ c2rc<g>c <b2rbgb
+l16
+a+8a+ra+ra+r> c8crcrcr c+8c+rc+rc+r d8drdrdr < 
+[[a+8a+ra+ra+r]]2 > [[c8crcrcr]]2 cr>cr<grercr r8
+;==============================================================================
+#3 v255 o4 l4
+@b c4 [[@b c4 @s c4]]31
+@b c8c8 @s c8 @b c8c4 
+[[@s c8 @b c8c4 @s c4 @b c4]]3
+@s c8 @b c8c4 @s c8c8
+[[@b c4 @s c4]]8 @b c2.
+;==============================================================================
+#4 v180
+r4 y10
+@34 o4 l2 p24,16,32 $E5 $18 $06 $20
+(401)[fefcdef2.e4defc] d1e1
+(401) de<a4>c4f4g4
+f1e1f1f1
+l8 y14
+fd<a>dge<a+>ege<a+>eafcffd<a>dfd<a>dge<a+>ege<a+>e>c>
+c16r16<g16r16e16r16c16r16r8
+
+;==============================================================================
+#5
+@31 v182 o4 y13 l16
+e4
+(501)[ [[f8fr>fr<fr e8er>er<er]]2 d8dr>dr<dr e8er>er<er f8fr>fr<fr f8>fr<e8>er<
+d8dr>dr<dr c8cr>cr<cr <a+8a+r>a+r<a+r> c8cr>cr<cr d8dr>dr<dr]
+d8dr>dr<dr [[e8er>er<er]]2
+(501) e8er>er<er c8cr>cr<cr >c8drf8gr
+
+@32 y0
+$FA$02$F4 (102) $FA$02$00
+@34 y10 o4 v120 p24,16,32 $E5$18$06$20 d2e2e2f2f1g1 $DF $E5$00$00$00
+@31 y13 o4 v182 c8>g16r16e16r16c16r16g16r16r8
+;==============================================================================
+#6 v180
+r4 y10
+@34 o4 l2 p24,16,32 $E5 $18 $06 $20
+(601)[dcd<ga+>cd2.c4<a+>cd<a] a+1>c1
+(601) <fgf4a4>c4e4<
+a1a1a1a1>
+l8 y6
+d<a+fa>ec<g>cec+<g>c+fd<
+a>dd<a+fa>d<a+fa>ec<g>cec<g>cg>
+g16r16e16r16c16r16<g16r16r8
+
+;==============================================================================
+#7 l192
+"setD1=v120 $E8$30$00"
+"setD2=v120 $E8$18$3C"
+"BaseNote04=[[<gagaa>c<a>c]]6"
+"BaseNote08=[[<gagaa>c<a>c]]3"
+"I_04=h8 setD1 BaseNote04 h0"
+"I_08=h8 setD2 BaseNote08 h0"
+
+@i I_04 @h [[c8]]29 @i I_08 @h c8 @i I_08
+@h [[c8]]61 @i I_08 @h c8 @i I_08
+@h [[c8]]30
+[@h c8c8 @i I_08 @h c8c8 @i I_04 @h c8]4
+@h [[c8]]33 @i I_08 @h c8
+r2^8
+

@@ -1,0 +1,82 @@
+; Bass
+"Synth Bass.brr"         $ff $e0 $00 $14 $00 $98 $40 $40
+"Slap Bass.brr"          $ff $ed $00 $0f $00 $98 $40 $40
+"Wasp Synth.brr"         $ff $ed $00 $09 $00 $8c $40 $40
+
+; Synths
+"Synth Strings.brr"      $ff $e0 $00 $01 $3e $a4 $40 $40
+"Synth Strings 2.brr"    $f8 $e0 $00 $02 $86 $a4 $40 $40
+"Synth Strings 3.brr"    $ff $e0 $00 $01 $1e $a4 $40 $40
+"Synth Pad.brr"          $ff $e0 $00 $04 $ad $a4 $40 $40
+"Synth Pad 2.brr"        $ff $e0 $00 $04 $b4 $a4 $40 $40
+"Synth Pad 3.brr"        $ff $e0 $00 $05 $97 $a4 $40 $40
+"Synth Brass.brr"        $ff $e0 $00 $03 $3b $a4 $40 $40
+"Synth Brass 2.brr"      $ff $e0 $00 $02 $cb $a4 $40 $40
+"Synth Voice 1.brr"      $ff $e0 $00 $00 $e7 $a4 $40 $40
+"Synth Voice 2.brr"      $ff $e0 $00 $01 $e0 $a4 $40 $40
+"Synth Voice 3.brr"      $ff $e0 $00 $02 $2f $a4 $40 $40
+"Space Synth.brr"        $ff $e0 $00 $00 $80 $a4 $40 $40
+
+; Orchestral stuff
+"Strings.brr"            $ff $e0 $00 $07 $00 $a4 $40 $40
+"Hammered Strings.brr"   $ff $e0 $00 $04 $ec $a4 $40 $40
+"Hammered Strings 2.brr" $ff $e0 $00 $06 $cd $a4 $40 $40
+"Bass Trombone.brr"      $ff $e0 $00 $06 $00 $a4 $40 $40
+"French Horn.brr"        $ff $eb $00 $02 $a5 $a4 $40 $40
+"Violin.brr"             $ff $e0 $00 $02 $f2 $a4 $40 $40
+"Flute.brr"              $ff $e0 $00 $01 $bf $a4 $40 $40
+"Piano (Low).brr"        $ff $f2 $00 $02 $09 $a4 $40 $40
+"Piano (High).brr"       $ff $e0 $00 $04 $3c $a4 $40 $40
+"Choir (High).brr"       $ff $e0 $00 $04 $c0 $a4 $40 $40
+"Choir (Low).brr"        $ff $e0 $00 $02 $02 $a4 $40 $40
+
+; Basic waves
+"Sine Wave.brr"          $ff $e0 $00 $04 $00 $a4 $40 $40
+"Sawtooth.brr"           $ff $e0 $00 $07 $00 $a4 $40 $40
+"Triangle Wave.brr"      $ff $e0 $00 $03 $80 $a4 $40 $40
+"Triangle Wave 2.brr"    $ff $f2 $00 $01 $00 $a4 $40 $40
+
+; Chromatic percussions test
+"Vibraphone.brr"         $ff $f2 $00 $03 $00 $a4 $40 $40
+"Vibraphone 2.brr"       $ff $e0 $00 $05 $00 $a4 $40 $40
+"Marimba.brr"            $ff $f4 $00 $07 $00 $a4 $40 $40
+"Xylophone.brr"          $ff $ee $00 $04 $00 $a4 $40 $40
+"Bell.brr"               $fd $f3 $00 $03 $00 $a4 $40 $40
+"Tubular Bells.brr"      $ff $e0 $00 $01 $86 $a4 $40 $40
+"Timpani.brr"            $ff $e0 $00 $03 $29 $98 $40 $40
+"Timpani 2.brr"          $ff $e0 $00 $01 $b3 $98 $40 $40
+"Timpani 3.brr"          $ff $e0 $00 $02 $a5 $98 $40 $40
+
+; Percussions
+"Snare.brr"              $ff $e0 $00 $05 $c0 $9f $40 $40 ; o3g
+"Bass Drum.brr"          $ff $e0 $00 $05 $70 $93 $40 $40 ; o2g
+"Closed Hi-Hat.brr"      $ff $e0 $00 $07 $a0 $a8 $40 $40 ; o4e
+"Closed Hi-Hat 2.brr"    $ff $e0 $00 $02 $20 $b0 $40 $40 ; o5c
+"Closed Hi-Hat 3.brr"    $ff $e0 $00 $04 $80 $a8 $40 $40 ; o4e
+"Open Hi-Hat.brr"        $ff $e0 $00 $06 $b0 $b0 $40 $40 ; o5c (o1d for a "breath" sound)
+"Wood Block.brr"         $ff $e0 $00 $04 $80 $9c $40 $40 ; o2e
+"Bongo.brr"              $ff $e0 $00 $03 $d0 $a4 $40 $40
+"Bongo 2.brr"            $ff $e0 $00 $02 $50 $a4 $40 $40
+"Bongo 3.brr"            $ff $e0 $00 $05 $70 $91 $40 $40
+
+; SFX and weird stuff
+"Crackling.brr"          $ff $e0 $00 $00 $30 $bb $40 $40 ; o5b
+"Explosion.brr"          $ff $e0 $00 $07 $a0 $98 $40 $40 ; o3c
+"Explosion 2.brr"        $ff $e0 $00 $02 $90 $9c $40 $40 ; o3e
+"Explosion 3.brr"        $ff $e0 $00 $04 $40 $84 $40 $40 ; o1e
+"Laser.brr"              $ff $e0 $00 $00 $f0 $a9 $40 $40 ; o4f
+"Tick.brr"               $ff $e0 $00 $05 $70 $93 $40 $40 ; o2g
+"Wind.brr"               $ff $e0 $00 $06 $00 $87 $40 $40 ; o1g
+"Electricity.brr"        $ff $e0 $00 $06 $f0 $98 $40 $40 ; o3c
+"Alarm.brr"              $ff $e0 $00 $00 $80 $bb $40 $40 ; o5b
+"Alarm 2.brr"            $ff $e0 $00 $00 $80 $bc $40 $40 ; o6c
+"Cry.brr"                $ff $e0 $00 $07 $a0 $94 $40 $40 ; o2g+
+"Accident.brr"           $ff $e0 $00 $02 $90 $95 $40 $40 ; o2a
+"Weird SFX.brr"          $ff $e0 $00 $01 $90 $b0 $40 $40 ; o5c
+"Weird SFX 2.brr"        $ff $e0 $00 $00 $80 $a3 $40 $40 ; o3b
+"Bubbles.brr"            $ff $e0 $00 $04 $d0 $8c $40 $40 ; o3
+"Monster SFX.brr"        $ff $e0 $00 $03 $80 $93 $40 $40 ; o2g
+"Water Flow.brr"         $ff $e0 $00 $00 $d0 $a4 $40 $40 ; o4c
+"Ship Sound 1.brr"       $ff $e0 $00 $06 $90 $84 $40 $40 ; o1e
+"Ship Sound 2.brr"       $ff $e0 $00 $07 $a0 $84 $40 $40 ; o1e
+"Spaceship.brr"          $ff $e0 $00 $03 $90 $98 $40 $40 ; o3c

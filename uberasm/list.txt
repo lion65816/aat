@@ -302,6 +302,7 @@ level:
 1EF	elevator_shaft.asm
 1F0	elevator_shaft.asm
 1F1	elevator_shaft.asm
+1F5  1F5.asm
 1F6	hdmatest_freescrollbabey.asm
 1F7	hdmatest_freescrollbabey.asm
 1F8	hdmatest_freescrollbabey.asm
@@ -318,6 +319,8 @@ level:
 ; 6 = Star World.
 overworld:
 ; Insert files here
+4  floating_ow.asm
+;0  test.asm
 
 ; Game mode list. Valid values: 00-FF.
 gamemode:

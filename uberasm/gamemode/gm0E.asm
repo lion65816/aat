@@ -41,8 +41,12 @@
 ; bother with this because it entertains you to see green Mario or Red Luigi for a split second or 2 on the overworld map, by all means, don't add this stuff.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;	                            
 
+init:
+JSL WarpTest_init
+RTL
 
 main:
+JSL WarpTest_main
 
 ;checks
 	LDA $0DB2|!addr             ; If 2 Player game skip

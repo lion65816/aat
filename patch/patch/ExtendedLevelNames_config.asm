@@ -15,7 +15,7 @@ NameData:
 
  ;Level 000
  db "                   "
- db "    BONUS GAME     "
+ db "                   "
  ;Level 001
  db " baby catnips get  "
  db "tragic concussions*"

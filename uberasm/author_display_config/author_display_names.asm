@@ -1,4 +1,4 @@
-db "(Dev Level)          " ; 000
+db "                     " ; 000
 db "Nao                  " ; 001
 db "DiskPoppy, SAJewers  " ; 002
 db "KobaBeach            " ; 003

@@ -1,0 +1,111 @@
+#amk 2
+$EF$3F$1f$1f
+$F1$06$3f$01
+#path "super-metroid"
+
+#spc
+{
+#author "Martin O'Donnell"
+#game "Halo: Combat Evolved"
+#comment "Arranged by Trojan Horse"
+#title "A Walk in the Woods"
+}
+
+#samples
+{
+#default
+"Bongo 3.brr"
+"Bass Drum.brr"
+"Closed Hi-Hat.brr"
+"Open Hi-Hat.brr"
+"Slap Bass.brr"
+"Snare.brr"
+"Synth Voice 3.brr"
+"Wood Block.brr"
+}
+
+#instruments
+{
+"Synth Voice 3.brr"      $ff $e0 $00 $02 $2f ;30
+"Slap Bass.brr"          $ff $ed $00 $0f $00 ;31
+"Bass Drum.brr"          $ff $e0 $00 $05 $70 ;32, o2g
+"Snare.brr"              $ff $e0 $00 $05 $c0 ;33, o3g
+"Closed Hi-Hat.brr"      $ff $e0 $00 $07 $a0 ;34, o4e
+"Open Hi-Hat.brr"        $ff $e0 $00 $06 $b0 ;35, o5c (o1d for a "breath" sound)
+"Bongo 3.brr"            $ff $e0 $00 $05 $70 ;36
+"Wood Block.brr"         $ff $e0 $00 $04 $80 ;37, o2e
+}
+
+;BRR samples made by KevinM: https://www.smwcentral.net/?p=section&a=details&id=22531
+
+#0	t53 ;lead1
+@30 o4 l8 v172 y8
+(1)[f+4g4f+4f4^1e4d4c4d4^1d2.d4^1d1^1]
+(1)
+r1r1r1r1
+v150
+(1)2
+r1r1r1r1
+v172
+(1)2
+r1r1r1r1
+
+#1		;lead2
+@30 o4 l8 v172
+(11)[d2.c4^1c2r4<b4^1a2.a+4^1]b1^1
+(11)a1^1
+v150 y5 $DC$FF$0F
+a1^1
+$DC$FF$05
+a1^1
+y10
+(11)b1^1(11)a1^1
+r1r1r1r1
+v172
+(11)b1^1(11)a1^1
+r1r1r1r1
+
+#2		;lead3
+@30 o3 l8 v172 y12
+(21)[a2.a4^1g2.g4^1f+2.f4^1] g1^1
+(21)f+1^1
+v150 y15 $DC$FF$05
+d1^1
+$DC$FF$0F
+d1^1
+y12
+(21)g1^1(21)f+1^1
+r1r1r1r1
+v172
+(21)g1^1(21)f+1^1
+r1r1r1r1
+
+#3		;bass
+@31 o1 l8 v155
+(31)[ddr2d1ra ddr2d2.^8da>d<](31)
+(32)[d4a16r16d>d<da16r16d rda16r16d>d<da16r16d d4a16r16d>d<da16r16drda16r16d>dr<ad](32)
+r1r1r1r1
+(31)2(32)2
+r1r1r1r1
+(31)2(32)2
+r1r1r1r1
+
+#4		;drum1 (bass n snare)
+[r1r1r1r1]4
+o2 v180
+(41)[@32ggrg>@33gr4.<](41)2
+(42)[@32ggrg>@33gr4<@32g]
+(41)3(42)(41)3
+@32ggrg>@33gggg<
+(43)[@32grgr>@33gr4.< @32gr4g>@33gr4.<](43)3
+(41)4
+(44)[@32gr>@33g<@32gr4>@33gr< @32gg>@33g<@32gr4>@33gr<](44)11
+
+
+#5		;drum2 (hihats)
+[r1r1r1r1]4
+o4 v150
+(51)[@34e<<y12@37e>>y10@34e<y7@36f+>y10@34e<y7@36a>>y10@35c<@34e](51)11
+o5
+(52)[y10@35c<<<y12@37e>>>y10@35c<@34e>@35c<<y7@36a>>y10@35c<<y7@36f+>>](52)11
+(52)20

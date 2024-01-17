@@ -85,7 +85,7 @@ STA $02
 SEP #$10
 
 LDA #$FE : STA $00	;no yoshi coin tile (Layer 3)
-LDA #$24 : STA $01	;no yoshi coin property byte (YXPCCCTT = 00100100, CCC = 001 for palette 1)
+LDA #$38 : STA $01	;no yoshi coin property byte (YXPCCCTT = 00100100, CCC = 001 for palette 1)
 ;LDA #$FF : STA $00	;no yoshi coin tile (Layer 3)
 ;LDA #$28 : STA $01	;no yoshi coin property byte
 
@@ -99,7 +99,7 @@ DEX : BPL -
 LSR #3
 TAY
 LDA #$8C : STA $00	;empty yoshi coin tile (Layer 3)
-LDA #$24 : STA $01	;empty yoshi coin property byte (YXPCCCTT = 00100100, CCC = 001 for palette 1)
+LDA #$38 : STA $01	;empty yoshi coin property byte (YXPCCCTT = 00100100, CCC = 001 for palette 1)
 ;LDA #$78 : STA $00	;empty yoshi coin tile (Layer 3)
 ;LDA #$39 : STA $01	;empty yoshi coin property byte
 LDA $02
@@ -109,7 +109,7 @@ LDA $1F2F|!addr,y
 AND $05B35B|!bank,x
 BEQ +
 LDA #$8D : STA $00	;complete yoshi coin tile (Layer 3)
-LDA #$24 : STA $01	;complete yoshi coin property byte (YXPCCCTT = 00100100, CCC = 001 for palette 1)
+LDA #$38 : STA $01	;complete yoshi coin property byte (YXPCCCTT = 00100100, CCC = 001 for palette 1)
 ;LDA #$8E : STA $00	;complete yoshi coin tile (Layer 3)
 ;LDA #$28 : STA $01	;complete yoshi coin property byte
 +

@@ -187,3 +187,13 @@ B7  26 High Score.txt
 B8  Chocolate Rain.txt
 B9  Rivals of Aether EX - Embers of a Burning Dystopia.txt
 BA  Homestuck - 'Showtime'.txt
+BB  KiKi-12.txt
+BC  mus_a2mtovr1.txt
+BD  LB1 - Dungeon (3mix).txt
+BE  Road12.txt
+BF  Love Escalator - Snowwhite Moon (OPNA).txt
+C0  A Walk in the Woods.txt
+C1  15 Sailing the Ocean.txt
+C2  highschool.txt
+C3  Venturing into the Mechanized World.txt
+C4  Green Plains.txt

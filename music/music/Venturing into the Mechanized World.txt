@@ -1,0 +1,155 @@
+#amk 2
+$EF$1E$2d$2d
+$F1$05$32$01
+
+#path "KSS"
+#samples
+{
+#default
+"12.5% Pulse Wave.brr"
+"25% Pulse Wave.brr"
+"Acoustic Flute.brr"
+"Bass Drum.brr"
+"Electric Closed Hi-hat.brr"
+"Electric Snare Drum.brr"
+"FM Glockenspiel.brr"
+"KDL1 GB Bass.brr"
+"Square Wave.brr"
+"String Ensemble.brr"
+"Timpani.brr"
+"Trumpet.brr"
+}
+
+#instruments
+{
+"Trumpet.brr" 					$FF $E0 $B8 $04 $00 ;@30
+"KDL1 GB Bass.brr" 				$AF $B2 $B8 $0E $F0 ;@31
+"Electric Closed Hi-hat.brr" 	$FF $E0 $B8 $07 $A0 ;@32
+"Electric Snare Drum.brr"		$FF $E0 $B8 $07 $A0 ;@33
+"Acoustic Flute.brr"			$FC $E0 $B8 $07 $00 ;@34
+"Square Wave.brr"				$8E $E0 $B8 $02 $00	;@35
+"Bass Drum.brr"					$FF $E0 $B8 $03 $C0 ;@36
+"FM Glockenspiel.brr"			$BF $B3 $B8 $03 $00 ;@37
+"25% Pulse Wave.brr"			$FF $E0 $B8 $02 $00 ;@38
+"String Ensemble.brr"			$8E $E0 $B8 $03 $C0 ;@39
+"12.5% Pulse Wave.brr"			$FF $E0 $B8 $02 $00 ;@40
+"Timpani.brr"					$FF $E0 $B8 $04 $80 ;@41
+}
+
+;BRR samples made by Milon Luxy: https://www.smwcentral.net/?p=section&a=details&id=27708
+
+#spc
+{
+#author "Hirokazu Ando"
+#game "Kirby: Planet Robobot"
+#comment "Arranged by Trojan Horse"
+#title "Venturing into the Mechanized World"
+}
+
+#0 w225 t62
+
+#0
+v200 l16 o4
+(1)[y10 @36c y12 @32cc8 y10 @33c8 y12 @32cc y10 @36c y12 @32cc8 y10 @33c y12 @32ccc](1)
+/
+(1)7
+y10 @36c y12 @32cc8 y10 @33c8 y12 @32cc y10 @36c4 y12 @33cccc
+(1)7 y10
+[@36c@33ccc@36c@33ccc]2
+(2)[y10 @36c y12 @32cc y10 @33c y12 @32cc y10 @36c y12 @32c ccc8 y10 @33c8 y12 @32cc]
+(2)4
+(1)7
+y10 @36c8 y12 @32c8 y10 @33c8 y12 @32cc y10 @36c8@33c8 y12 @32cc y10 @33c8
+(1)7
+
+#1
+l8 r1r1
+/
+@35 v130 o4 p12,32 y8
+g4>c4<g>d4<g>e.f16ecd2< g4>c4<g>d4<g>e.f16ecg4.g24a24b24>
+c4c<b16a16g4cga4ag16f16e4<g>c
+d4e4d4< v120 fed.c16<bag>>> @40 d16r16g16r.
+@34 o4 v165
+g4>c4<g>d4<g>e.f16ecd2< g4>c4<g>d4<g>e.f16ecg4.g24a24b24>
+c4c<b16a16g4cga4ag16f16e4r
+@38 o4 v180
+c16d16d+4d+fgf16r16d+16r16<a+16r16>cr16c16cr16c16crcr
+@30 o5 
+a+2ra+16>c16<a+16a16ga.f16f2r< @39 f16g16g+2rg+16a+16g+16g16f g.d+16d+2r
+@35 v130 o4
+d+16f16f+2rf+16g+16f+16f16d+f6c+6f6>c+6<f+6a+6g+2r>g+16a+16g+16d+16f f+4.e16f16f+f16f+16g4
+@30 v130 o3
+gr>cr<g>d4.^1 @35 b4>e4<b>f+4.^1
+@30 o4
+drgrda4db.>c16<bg>d.r16c.r16<b2.rg16b16a4.a24b24>c24dr<d16d16d16r16
+g1^1g1.r2
+
+#2
+l8 r1r1
+/
+r1r1 y10
+@35 v100 o5 p12,32
+g4>c4<g>d4<g>e.f16ecg4.r
+r1r1
+v120 o4 a+4>c4<a+4
+@37 v150 o5 agf.e16dc<br4.
+@35 v130 o4 r1r1
+g4>c4<g>d4<g>e.f16ecg4.r
+r1r2r4. v100 @38 
+o5 c16d16d+4d+fgf16r16d+16r16<a+16r16 @30 v150 o4 d+4f4g4a4
+y7 a+r16a+r16a+r2 ar16ar16ar>>@37c4. v120 @38 c+16c+16r16c+16c+16r16<g+r2 g16g16r16a+16a+16r16grv150@37g+4.<
+y12 v120 @35 b.r.br4f+16f16d+ o4 c+6<a+6>c+6a+6d+6f+6d+2r2> @30 d+2f+rg4
+@30 v130 o3
+crgrca4.^1 g+rg+ra+a+4.^1>
+drdrcc4c<b.>c16<bg>d+.r16c+.r16e2.r4d2f+rcr
+d+1^1d1.r2
+
+#3
+@30 v150 o4 l8 y7
+(3)[rcrcrdrdrererdrd]
+/ @30 v150 o4 y7
+(3)
+rcrcrgrgrgrgrcrc
+rfrfrererfrfrere
+o4 d4e4d4r4r1
+@30 v150 o4
+[rererfrfrgrgrfrf]2
+rarargrgrfrfrgrg
+<g+2a+2g+4a+4>c4d4
+y12
+gr16gr16gr2 fr16fr16fr>@37a+4. @38g+16g+16r16g+16g+16r16d+r2 d+16d+16r16g16g16r16d+r@37g4.
+<v120 @35 g+.r.g+r2 y7 @30 f6c+6f6>c+6<f+6a+6>c2r2<b2>drd4
+@37 o5 v100
+r1r b>cdf+<b>c<d r1ref+g+>ef+g+e
+@40 o5 v130 y7
+drgrda4db.>c16<bg>d.r16c.r16<b2.rg16b16a4.a24b24>c24dr<d16d16d16r16
+@37 o5 v150
+f4a+4f>c4<f<
+@35 v120
+f4a+4>d+>d+16d+16rc16c16
+@34 o3 v130
+d4g4da4d>c4.<b16a16br4.
+
+#4
+v150 o2 l8 y12 
+(4)[@31f>@30ara<@31f>@30brb<@31f>>@30crc<<@31f>@30brb<]
+/ o2 y12 
+(4)
+@31f>@30ara<@31f>>@30crc<<@31e>@30brb<<@31a>>@30grg<
+@31f>>@30crc<<@31e>>@30crc<<@31d>>@30drd<<@31c>>@30crc<<
+@31 o1 y10
+a+r4a+a+r4a+gr4ggr4.
+o2 y12
+@31c>@30b<<@31g>>@30b< @31d>>@30c<<<@31g>>>@30c<< @31c>>@30d<<<@31g>>>@30d<< @31d>>@30c<<<@31g>>>@30c<<
+@31c>@30b<<@31g>>@30b< @31d>>@30c<<<@31g>>>@30c<< @31e>>@30d<<@31e>>@30d<<< @31a>>>@30c<<<@31a>>>@30c<<
+@31f>>@30f<<@31f>>@30f<< @31e>>@30e<<<@31b>>>@30e<< @31d>>@30d<<<@31g>>>@30d<< @31c>>@30c<<<@31a+>>>@30c
+@31 o1 y10
+g+4g+4a+4a+4f4g4a4a+4
+o2
+c.c.<f4.>f4<a+.a+.f4.>f4< a+.a+.d+4.>g4d+.<d+.d+4.>d+4
+g+.g+.c+4.>c+4<f4>f4d+4c+4c4<a+4g+4d+4c+4c+4d4g4
+@41 o3 v200
+c4 y5 c4 y15 c y5 c4.^4 y10 c<g>c<g>c16c16<g>
+e4 y5 e4 y15 e y5 e4.^4 y10 c<g>c<g>c16c16<g
+@31 o2 v150 g4g4cc4cb.a16gf+f4d+4 d.d.drdrdd.d.drdd16d16d
+d+4>d+d+<d+>d+4d+<<g+4>g+g+<g+>g+4g+<g4>gg<g>g4g< g4>d4<g>dg16g16f

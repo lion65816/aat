@@ -1,0 +1,178 @@
+#amk 2
+
+#spc
+{
+	#author  "Hiroyuki Yanada, Iwao Mitsunaga"
+	#title   "Dungeon (3mix)"
+	#game    "Revelations: the Demon Slayer"
+        #comment "arr. icrawfish"
+}
+
+#path "LB1Dungeon"
+#samples
+{
+ #optimized
+"Whistle.brr"
+"Synth Keyboard.brr"
+"Synth Bass 1.brr"
+"Choir (5th).brr"
+"Strings (5th).brr"
+"Strings (min6 chord).brr"
+"Strings (maj9 chord).brr"
+"Closed Hi-hat.brr"
+"Snare Drum 4.brr"
+"Kick Drum 2.brr"
+}
+
+#instruments
+{
+"Whistle.brr"              $FB $E5 $80 $05 $06 ;@30
+"Synth Keyboard.brr"       $DF $92 $80 $05 $BC ;@31
+"Synth Bass 1.brr"         $DE $AA $80 $06 $3D ;@32
+
+"Choir (5th).brr"          $F7 $E6 $80 $06 $02 ;@33
+"Strings (5th).brr"        $FC $E0 $80 $04 $8D ;@34
+"Strings (min6 chord).brr" $FD $E0 $80 $05 $6A ;@35
+"Strings (maj9 chord).brr" $FF $E5 $80 $06 $13 ;@36
+
+"Closed Hi-hat.brr"        $FF $EF $80 $05 $AA ;@37
+"Snare Drum 4.brr"         $FF $F2 $80 $06 $70 ;@38
+"Kick Drum 2.brr"          $FF $F4 $80 $03 $38 ;@39
+}
+
+"Kk=@39 v210"
+"Sn=@38 v190"
+
+$EF$82$30$30
+$F1$05$30$01
+$F5 $0B $23 $2C $28 $12 $FC $F4 $FC
+
+$F4$02
+
+t43 w200
+
+#0
+@32 v230 o3 l16 y10,1,0
+e8.er2. f+8.f+r2. g8.gr2. f+8.f+r4 b8.bab>f+d
+/
+e4.eer8.<begab >d4.ddr4<ab8. >c4.ccr4^c<bg f4.fff+8.brb>f+<f+
+
+e8.er2. d8.dr2d>d8. c8.cr2. <b8.br2^baf+
+e8.er4^b>f $DD$00$0C g^f+ed<a b8.br2g>c $DD$00$0C d^<b >c8.cr2^c<bg a8.ar2ag8.
+
+[f8.>c8rf $DD$00$18 g^8.frercr <e8.b8r>e $DD$00$18 f+^8.e8.<b8.]
+f8.>c8rf $DD$00$18 g^8.frerdr c8.g8ra+ $DD$00$18 >c^8.<bgre8r
+* <d8.a8r>d $DD$00$18 e^8.f8.d8. <d+8.a+8r>e $DD$00$18 f+^8.<b8.b>b<b
+
+>e8.er8e8^2 d8.dr8d8^2 c8.cr8c8^2 <a8.ar8a4..b>b<b 
+>e8.er8e8.er8de>e<e <b8.br8b8.br8ab>b<b >c8.cr8c8.cr8<b>c>c<c <f8.fr8b8.br8ab>b<b
+
+#1 @31 v200 o3 l8 y15
+(10)[ [[$DC$60$05 ef+ga $DC$60$0F bd<b>f+]]3 $DC$60$05 ef+ga $DC$60$0F b>c+] d+f+
+/
+q7F
+[[$DC$60$05 ef+ga $DC$60$0F bd<b>f+]]3 $DC$60$05 efga $DC$60$0F bd<b>f+
+q7A
+(11)[y15$DC$60$0A <egb>d y5$DC$60$0A <egb>d y15$DC$60$0A <df+b>d y5$DC$60$0A <df+b>d y15$DC$60$0A <cegb y5$DC$60$0A cegb y15$DC$60$0A <b>df+a y5$DC$60$0A <b>df+a
+y15$DC$60$0A <b>egb y5$DC$60$0A <b>egb y15$DC$60$0A <b>df+b y5$DC$60$0A <b>df+b y15$DC$60$0A cegb y5$DC$60$0A cegb y15$DC$60$0A ceg>c y5$DC$60$0A <c] eg>c
+q7F
+(12)[ [[y10$DC$60$05 ec<af y10$DC$60$0F >ec<af y10$DC$60$05 >d<bge y10$DC$60$0F >d<bge]]3
+y10$DC$60$05 >c<afd y10$DC$60$0F >c<afd y10$DC$60$05 >c+<a+f+d+ y10$DC$60$0F f+a] b>d+
+q77
+> y5(13)[ [[$DC$60$0F ef+ga $DC$60$05 bd<b>f+]]7 $DC$60$0F efa>c] $DC$60$05 <ab>de
+
+#2
+[[r2]]8
+/
+@34 v120 o4 l1 y12
+$E8$C0$C8 b $E8$C0$B4 ^ $E8$C0$A0 g $E8$60$78 f2 $E8$60$F0 e2
+@33 v130 y8
+b a g d
+g a g e
+v170 y12
+@36 <f @35 b @36 f c
+f @35 b a a+2b2
+@33 v120 y8
+>g d e a
+v130 b v150 b v180 >c $E8$60$78 c2 $E8$60$F0 <b2
+
+#3
+[[r2]]8
+/
+@34 v120 o4 l1 y12
+$E8$C0$C8 g $E8$C0$B4 ^ $E8$C0$A0 e $E8$60$78 c2 $E8$60$F0 d2
+@33 v130 y8
+g d e <b
+>e d e c
+@30 v100 y7 $F4$03
+<g32 $DD$00$06 a^16.^2b8>c8<a8 g8>c32 $DD$00$06 d^8..<b4g16a16b16>c16<b16g16
+>d32 $DD$00$06 e^32^8d8.c8.d8.<g8a8 $F4$01 a32 $DD$00$06 b^32^4.a32g+32g=95r=1 $F4$01
+r8a+32 $DD$00$06 >c^16.<b8a8g4.a16b16 >c32 $DD$00$06 d^16.^4<b16>d16 $F4$01 d32 $DD$00$06 e^32^8c+32c32<b=47r=1 $F4$01
+b32 $DD$00$06 >c^16.<b8g8f8e8d8f8e8 $F4$01 e32 $DD$00$06 f+^32^4.g32g+32a=95r=1 $F4$01
+@33 v120 y8 $F4$03
+>e <b >c e
+v130 g v150 g v180 g $E8$60$78 a2 $E8$60$F0 a2
+
+#4
+[[r2]]8
+/
+@34 v120 o4 l1 y12
+$E8$C0$C8 e $E8$C0$B4 d $E8$C0$A0 c $E8$60$78 <a2 $E8$60$F0 b2
+@30 v180 y13 $F4$03
+>e2.f32 $DD$00$06 g^16.b8 f+2d4e32 $DD$00$06 f+^8..
+e16d16e16 $F4$01 g2f+32f32e=47r=1 $F4$01 f+16e16f+16g32 $DD$00$06 a^32^2 f+16 $DD$00$0C g^16f+8
+e2^8g8b8>d8 d32 $DD$00$06 e^32^8d8.<b8>c16 $DD$00$0C d^8.<a8b8
+g2^8e8g8e8 g32 $DD$00$06 a^32^8b8.g4. v200 d16e16g16d16
+
+d32 $DD$00$06 e^16.^2g8a8d8 e8a32 $DD$00$06 b^8..g4d16e16g16e16d16e16
+a+32 $DD$00$06 >c^32^8<b8.a8.b8.d8e8 $F4$01 f32 $DD$00$06 g^32^4.f+32f32e=95r=1 $F4$01
+r8d32 $DD$00$06 e^16.d8e8g4.e16g16 g32 $DD$00$06 a^16.^4g16a16 $F4$01 a32 $DD$00$06 b^32^8a32g+32g=47r=1 $F4$01
+g32 $DD$00$06 a^16.g8e8d8c8<a8>d8c8 $F4$01 c+32 $DD$00$06 d+^32^4.e32f32f+=95r=1 $F4$01
+
+@33 v130 y8 $F4$03
+[[r2]]6 c
+v130 e v150 d v180 e $E8$60$78 f2 $E8$60$F0 e2
+
+#5
+@37 v170 o4 l16 y11
+(50)[q7Fc q78cc q7Fc+ q78c q7Bc q78c q7Bc q78c q7Fc+ q78cc q7Fc+ q78ccc32 q7Bc32]
+(51)[q7Fc q78cc q7Fc+ q78c q7Bc q78c q7Bc q78c q7Fc+ q78cc] q7Fc+ q78ccc
+(50)(51) (52)[q7Fc+32 q7Bc+32c q78cc]
+/
+[[(50)(51) q7Fc+ q78ccc]]3
+
+(50)(51)(52)
+(50)(51) q7Fc+ q78ccc (50)(51)(52)
+[[(50)(51) q7Fc+ q78ccc]]3 (50)(51)(52)
+
+[[r2]]8
+v80 $E8$C0$60 (50) $E8$C0$70 (51) q7Fc+ q78ccc $E8$C0$88 (50) $E8$C0$AA (51)(52)
+
+
+#6 o4 l16 y9
+[[r2]]7 r8. Kkc Sncc8. $F4$03
+/ $F4$03
+[Kkc8c Snc8. Kkc q7ASnc q7FKkc Snc Kkc8 Snc4]3 Kkc8c Snc8. Kkc q7ASnc q7FKkc Snc Kkc8 q7CSnc q7Ac32 q7Cc32 q7Fcc
+@33 v130 y8
+e1 <b1 >c1 <a1
+b1 b1 >c1 <a1
+y9 o4
+*3 Kkc8c Snc8. Kkc q7ASnc q7FKkc Snc Kkc8 Snc8cc
+*3 Kkc8c Snc8. Kkc q7ASnc q7FKkc Snc q7Acc q7Fc q7Ac32c32 q7Fcc
+
+@31 v120 o4 l8 y15 $F4$03
+[[r2]]8
+[[$DC$60$05 gab>d $DC$60$0F e<f+ga]]3 $DC$60$05 ga>ce $DC$60$0F d<bag
+
+#7
+@31 v100 o4 l8 y15
+r8. (10) d+16 $F4$03
+/ $F4$03
+@31 v140 y5
+< [[$DC$60$0F b>def+ $DC$60$05 e<f+ga]]3 $DC$60$0F gab>c $DC$60$05 <bf+ga
+v100
+r8. (11) e16 $F4$03 Sn o4 y9 c16c16
+@31 v130 $F4$03
+r8. (12) <b16
+v110
+r8. (13) y9 $F4$03 Kk o4 c16 Sn c16c8.

@@ -1,0 +1,217 @@
+#amk 2
+
+#SPC
+
+{
+#author "Ott M. Aaloe"
+#title "Road 12"
+#game "Skyroads"
+#comment "ported by Mirrordrill"
+}
+#path "Skyroads"
+#samples
+{
+	#optimized
+	"bassoon1.brr"
+	"basstrlg.brr"
+	"keybrd3.brr"
+	"bdrum1.brr"
+	"logdrum1.brr"
+	"jewsharp.brr"
+	"trumpet2.brr"
+	"scratch.brr"
+	"sdrum2.brr"
+}
+
+#instruments
+{
+	"bassoon1.brr" 	$00 $00 $7F $02 $00; @30
+	"basstrlg.brr"  $B3 $EC $7F $02 $00; @31
+	"keybrd3.brr" 	$00 $00 $7F $02 $00; @32
+	"bdrum1.brr" 	$00 $00 $7F $04 $00; @33
+	"logdrum1.brr" 	$00 $00 $7F $04 $00; @34
+	"jewsharp.brr" 	$00 $00 $7F $04 $00; @35
+	"trumpet2.brr" 	$00 $00 $7F $04 $00; @36
+	"scratch.brr" 	$00 $00 $7F $04 $00; @37
+	"sdrum2.brr" 	$00 $00 $7F $04 $00; @38
+}
+;;original tracker patterns: 012123456678
+#0 @32 v165 y13 w130 t50			;;keyboard 1
+
+o3
+[[d4.d4.d4
+>c4<g4>d2]]2 /
+
+o3
+[d4.d4.d4
+>c4<b4a2
+d4.d4.d4
+>c4<g4>d4.f8]5
+
+<g4.g4.g4
+>f4e4d2
+<g4.g4.g4
+>f4c4g4.a+8
+
+*
+
+<a4.a4.a4
+a4a4>c2
+
+[[
+<a4.a4.a4
+a4a4>d4.<a8
+a4.a4.a4
+a4a4>c2]]2
+
+<a4.a4.a4
+a4a4>d4.<a8
+a1^1^1^1;
+
+
+#1 @30 v240 y13 h-12				;;bassoon
+o4
+[d1^1]2/
+*10
+g1^1g1^1
+d1^1d1^1
+[[f1^1
+d1^1]]4;
+
+
+#2 @32 v180 y7 						;;keyboard 2
+
+r8o3
+a4. a4. a4
+a4  a4. a4.
+a4. a4. a4
+a4  a4. a4>/^8
+
+(21)[<a4.a4.a4
+>c4c4.<b4.
+a4.a4.a4
+a4a4.>c4.]5
+
+d4. d4. d4
+f4  f4. e4.
+d4. d4. d4
+d4  d4. f4.
+(21)
+<[f4.f4.f4
+f4b4.b4.
+d4.d4.d4
+g4>c4.<g4]^8
+*^8
+*
+d1^1(0)[r2]4;
+
+
+#6 @10 v220 y7 h-12					;;drums
+
+(0)3^4.
+o5
+@34c8<@33c8>@38c8<@33c8.>@37c16<@33c8>@34c16@38c16<@33c8>@34c8
+<@33c8>@37c8<@33c8>@38c8<@33c8>@34c8<@33c8>@34c16@38c16/
+[[
+<@33c8>@37c16@38c16
+<@33c8>@38c8<@33c16>@37c16@34c8
+<@33c8>@34c8
+<@33c8>@38c16c16
+<@33c8>@37c8
+<@33c8>@34c8
+<@33c8>@34c8
+<@33c8>@38c8
+<@33c8.>@37c16
+<@33c8>@34c16@38c16
+<@33c8>@34c8
+<@33c8>@37c8
+<@33c8>@38c8
+<@33c8>@34c8
+<@33c8>@34c16@38c16]]9
+(0)14^4
+<@33c4c8.c16>@38c16
+<@33c16>@38c16
+<@33c16;
+
+
+#3  v255 y7 h-12					;;string
+@31
+o4
+[a1..
+b4
+a1^1]
+/@31
+*5
+>d1..
+e4
+d1^1
+o4
+@36v175[[c8d8]]80;
+
+
+#4 @35 v170 y7 h-12					;;melody
+(0)8
+/o5
+(51)[
+d8.<f16g8a8b8>c8<b8a8
+e4f4e4c4
+f8.d16c8d8<a8g8f8g8
+a4e4d2]
+(52)[
+o5f8.d16c8d8g16f16d16c16d16<a16g16a16
+>c8.c16<b8>c8<a4g4
+f8.f8.f8e8.e8.e8
+d8<d8>d8
+$E6 $00
+	<d16>d16	;[[]]5
+$E6 $04]
+(51)
+(52)
+<d8>d8<d8>d16<d8>d16<d8>d8<d8
+>c8<d8>c8<d16>d8<d16>d8<d8>d16<d16
+>c8<d8>d8<d16>d8<d16>d8.<d16>d8
+c8<d8>d8<d16>d8<d16>d16<d16>c16<d16>d8
+<g8>g8<g8>g16<g8>g16<g8>g8<g8
+>f8<g8>f8<g16>g8<g16>g8<g8>g16<g16
+>f8<g8>g8<g16>g8<g16>g8.<g16>g8
+f8<g8>g8<g16>g8<g16>g16<g16>f16<g16>g4
+[[d4.d4.d4d4.
+d8<b8>c8c+4]]9
+d4.d4.d4
+d4.d8<b8>c8c+8;
+
+#5 @35 v150 y13 h-12				;;echo
+(0)8
+
+/^8.
+(61)[o5d8.<f16g8a8b8>c8<b8
+a8e4f4e4c4
+f8.d16c8d8<a8g8f8
+g8a4e4d2]
+
+(62)[o5f8.d16c8d8g16f16d16c16d16
+<a16g16a16>c8.c16<b8>c8<a4g4
+f8.f8.f8e8.e8.
+e8d8<d8>d8
+<d16>d16
+<d16>d16
+<d16>d16<d4]
+(61)
+
+(62)
+ d8>d8<d8>d16<d8>d16<d8>d8
+<d8>c8<d8>c8<d16>d8<d16>d8<d8
+>d16<d16>c8<d8>d8<d16>d8<d16>d8.
+<d16>d8c8<d8>d8<d16>d8<d16>d16<d16>c4
+<g8>g8<g8>g16<g8>g16<g8>g8
+<g8>f8<g8>f8<g16>g8<g16>g8<g8
+>g16<g16>f8<g8>g8<g16>g8<g16>g8.
+<g16>g8f8<g8>g8<g16>g8<g16>g16<g16>f4.
+[[d4.d4.
+d4d4.d8<b8>c8
+c+4d4.d4.
+d4d4.d8<b8>c4.]]4
+d4.d4.
+d4d4.d8<b8>c8
+c+4d4.d4.
+d4d4.d8<b8>c16;
