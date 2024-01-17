@@ -122,6 +122,6 @@ Warp:
     sta $1F21|!addr,x
     sep #$20
     stz $0DD5|!addr
-    lda #$0B            ;\ Load OW gamemode.
+    lda #$0F            ;\ Load OW gamemode.
     sta $0100|!addr     ;/
     rts
