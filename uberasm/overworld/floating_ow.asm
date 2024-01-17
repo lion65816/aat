@@ -2,7 +2,7 @@
 !direction = 1
 
 ; One byte of freeram.
-!freeram = $60
+!freeram = $1475|!addr
 
 !layer1 = $1A+(!direction*2)
 !layer2 = $1E+(!direction*2)

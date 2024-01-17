@@ -1,4 +1,4 @@
-!freeram        = $13E6
+!freeram        = $18E6
 
 !base1 = $0000
 !base2 = $0000
