@@ -19,7 +19,7 @@ freecode
 ; Each bit corresponds to one level (1 = enabled, 0 = disabled).
 ; By default 104 (Yoshi's House) has it disabled like in vanilla SMW.
 mario_start_enabled:
-    db %11110111 ; 000-007
+    db %11111011 ; 000-007
     db %11111110 ; 008-00F
     db %11111111 ; 010-017
     db %11111011 ; 018-01F

@@ -10,6 +10,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 HammerFreq:	db $1F,$0F,$0F,$0F,$0F,$0F,$0F
+;HammerFreq:	db $1F,$1F,$1F,$1F,$1F,$1F,$1F	;> AAT edit: originally $1F,$0F,$0F,$0F,$0F,$0F,$0F
 
 HammerBroDispX:		db $08,$10,$00,$10
 HammerBroDispY:		db $F8,$F8,$00,$00
