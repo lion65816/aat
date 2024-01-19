@@ -194,6 +194,6 @@ BE  Road12.txt
 BF  Love Escalator - Snowwhite Moon (OPNA).txt
 C0  A Walk in the Woods.txt
 C1  15 Sailing the Ocean.txt
-C2  highschool.txt
-C3  Venturing into the Mechanized World.txt
+C2  Beanbean Fields.txt
+C3  Neutopia II - Sphere 1.txt
 C4  Green Plains.txt

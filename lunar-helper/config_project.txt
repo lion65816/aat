@@ -67,6 +67,10 @@ patches
 	patch\patch\more_hardcoded_paths.asm
 	patch\patch\OWMusic.asm
 	patch\patch\perlevel_mario_start.asm
+	patch\patch\YoshiSpriteInteractionsFix.asm
+	patch\patch\slide_kill_gfx_fix.asm
+	patch\patch\OWtileSounds.asm
+	patch\patch\DarkenPause.asm
 ]
 -- patch\patch\ticking.asm
 -- patch\patch\bwram_plus.asm

@@ -138,6 +138,7 @@ level:
 0F8	BG_AutoScroll.asm
 0F9	leafspawn_uberASM.asm
 0FB	SimpleHP.asm
+0FF  InitSpriteFacing.asm
 100	bonusmusic.asm
 101	LevelIntro.asm
 103	LevelIntro.asm
