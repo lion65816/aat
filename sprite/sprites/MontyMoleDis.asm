@@ -8,8 +8,8 @@ incsrc EasyPropDefines.txt
 
 !Def_HopTime = $50				;how long does it take for the hopping kind to hop
 
-!Def_AppearTimeYI = $20				;how long does it take for the moley to appear (Yoshi's Island, see !Def_UniqueTimerMapID) (AAT edit: originally $68)
-!Def_AppearTime = $20				;how long does it take anywhere else
+!Def_AppearTimeYI = $68				;how long does it take for the moley to appear (Yoshi's Island, see !Def_UniqueTimerMapID)
+!Def_AppearTime = $68				;how long does it take anywhere else (AAT edit: Used for slow moles in Level 12F. Originally $20.)
 
 ;a tile to generate. NOTE: Uses $9C and $00BEB0 format. see RAM map $9C for possible values. By default $08 - Mole hole (map16 tile 0C6)
 ;if you want a better customizable map16 tile generation, use custom monty mole.

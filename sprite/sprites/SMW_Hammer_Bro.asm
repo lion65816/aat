@@ -9,8 +9,7 @@
 ; Tables
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-HammerFreq:	db $1F,$0F,$0F,$0F,$0F,$0F,$0F
-;HammerFreq:	db $1F,$1F,$1F,$1F,$1F,$1F,$1F	;> AAT edit: originally $1F,$0F,$0F,$0F,$0F,$0F,$0F
+HammerFreq:	db $1F,$1F,$1F,$1F,$1F,$1F,$1F	;> AAT edit: originally $1F,$0F,$0F,$0F,$0F,$0F,$0F
 
 HammerBroDispX:		db $08,$10,$00,$10
 HammerBroDispY:		db $F8,$F8,$00,$00
@@ -56,7 +55,8 @@ CODE_02DA89:
 	LDA !1570,x
 	ASL
 	CPY #$00
-	BEQ CODE_02DA92
+	BNE CODE_02DA92		;\ AAT edit: Fixes a bug where slow hammers (i.e., $1F)
+	;BEQ CODE_02DA92	;/ are only thrown on one side.
 	ASL
 CODE_02DA92:
 	AND #$40

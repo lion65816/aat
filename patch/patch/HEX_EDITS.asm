@@ -406,11 +406,3 @@ org $02F6DA|!bank
 ; Disable Yoshi rescue message.
 org $01EC36|!bank
 	db $80					;> originally: $D0
-
-; Make all Monty Moles emerge fast.
-org $01E2FB|!bank
-	db $20					;> originally: $68
-
-; Make all Amazing Flyin' Hammer Brothers throw hammers with low frequency.
-;org $02DA67|!bank
-;	db $1F,$1F,$1F,$1F,$1F,$1F,$1F	;> originally: $1F,$0F,$0F,$0F,$0F,$0F,$0F
