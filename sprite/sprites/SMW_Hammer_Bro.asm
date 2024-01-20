@@ -54,10 +54,9 @@ HammerBro:
 CODE_02DA89:
 	LDA !1570,x
 	ASL
-	CPY #$00
-	BNE CODE_02DA92		;\ AAT edit: Fixes a bug where slow hammers (i.e., $1F)
-	;BEQ CODE_02DA92	;/ are only thrown on one side.
-	ASL
+	;CPY #$00			;\ AAT edit: Fixes a bug where slow hammers (i.e., $1F)
+	;BEQ CODE_02DA92	;| are only thrown on one side.
+	;ASL				;/
 CODE_02DA92:
 	AND #$40
 	STA !157C,x

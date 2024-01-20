@@ -1,11 +1,19 @@
 ; Draw filter signs in level intros as sprite tiles.
 ; This makes them consistent with the sprite-based No-Yoshi signs.
 
+init:
+	; Use the MaxTile system to request OAM slots. Needs SA-1 v1.40.
+	LDY.b $00				;> Request a specified number of tiles. Input parameter for call to MaxTile.
+	REP #$30				;> (As the index registers were 8-bit, this fills their high bytes with zeroes)
+	LDA.w #$0000			;> Highest priority. Input parameter for call to MaxTile. Otherwise, some tiles won't draw.
+	JMP main_request_maxtile
+
 main:
 	; Use the MaxTile system to request OAM slots. Needs SA-1 v1.40.
 	LDY.b $00				;> Request a specified number of tiles. Input parameter for call to MaxTile.
 	REP #$30				;> (As the index registers were 8-bit, this fills their high bytes with zeroes)
 	LDA.w #$0003			;> Lowest priority. Input parameter for call to MaxTile.
+.request_maxtile
 	JSL $0084B0				;\ Request MaxTile slots (does not modify scratch ram at the time of writing).
 							;| Returns 16-bit pointer to the OAM general buffer in $3100.
 							;/ Returns 16-bit pointer to the OAM attribute buffer in $3102.

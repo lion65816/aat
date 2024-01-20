@@ -27,7 +27,8 @@
 			; sprite data
 			!SPRITE_GRAVITY	= $04
 			!MAX_Y_SPEED	= $48 
-			!RISE_SPEED		= $D8
+			;!RISE_SPEED		= $D8	;\ PSI Ninja edit: Make Thwomp rise faster
+			!RISE_SPEED		= $C8		;/ to prevent the player from riding it upwards.
 			!TIME_TO_SHAKE	= $18
 			!SOUND_EFFECT	= $09 
 			!TIME_ON_GROUND	= $10

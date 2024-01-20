@@ -1,10 +1,16 @@
 init:
 	JSL DisableSideExit_init
+	JSR draw_sign_prep
+	JSL DrawSign_init			;> Input parameters are $00-$07.
 	RTL
 
 main:
 	JSL freezetimer_main
+	JSR draw_sign_prep
+	JSL DrawSign_main			;> Input parameters are $00-$07.
+	RTL
 
+draw_sign_prep:
 	;> Draw filter signs for mushroom, fire, and cape.
 	LDA #$11					;\ Request 17 tiles
 	STA $00						;| to draw the signs.
@@ -21,8 +27,7 @@ main:
 	STA $06						;|
 	LDA.b #TileProps>>16		;|
 	STA $07						;/
-	JSL DrawSign_main			;> Input parameters are $00-$07.
-	RTL
+	RTS
 
 TileCoord:						; YYXX
 	dw $B088,$A088				; Sign post
