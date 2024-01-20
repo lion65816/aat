@@ -44,7 +44,7 @@
 !PFlag = $1929|!addr	; 1 byte of free, unmodified RAM
 
 TableXSpeed:
-dw $0100
+dw $0200
 
 TableYSpeed:
 dw $0010
@@ -121,6 +121,12 @@ init:
 	LDA $01
 	STA !PFlag
 main:
+	LDA $010B|!addr
+	STA $0C
+	LDA $010C|!addr
+	ORA #$04
+	STA $0D
+	JSL MultipersonReset_main
 	LDA !PFlag
 	BEQ .end
 	LDA $13D4|!addr

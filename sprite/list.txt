@@ -42,7 +42,7 @@
 29 fire_snake_athletic.json
 2A baseballbat.cfg
 2B flamingbaseball.cfg
-2C DirectionalPlatform3.json
+2C single_scale.cfg
 2D chainchomp.json
 2E burnerh.json
 2F burnerv.json
