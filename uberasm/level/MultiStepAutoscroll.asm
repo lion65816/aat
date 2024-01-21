@@ -31,10 +31,10 @@
 ; TableStops. IT INTERRUPTS THE MULTI-STEP AUTOSCROLL UNTIL
 ; IT ENDS WITH A BEING 8-BIT AND NON-ZERO.
 ;========================================================
-!Loop = 1               ; Make the code loop (0 = off, 1 = on)
+!Loop = 0               ; Make the code loop (0 = off, 1 = on)
 
-!StepEntries = $0001	; Number of step entries
-!StopEntries = $0000	; Number of stop entries (put $0000 to disable stop function)
+!StepEntries = $0002	; Number of step entries
+!StopEntries = $0001	; Number of stop entries (put $0000 to disable stop function)
 
 !Timer = $13E6|!addr	; 2 consecutives bytes of free, unmodified RAM
 !Track = $1B97|!addr	; 2 consecutives bytes of free, unmodified RAM
@@ -44,16 +44,16 @@
 !PFlag = $1929|!addr	; 1 byte of free, unmodified RAM
 
 TableXSpeed:
-dw $0200
+dw $0200,$8001
 
 TableYSpeed:
-dw $0010
+dw $0020,$8001
 
 TableTime:
-dw $0000,$0020,$0030,$0040
+dw $0000,$0220
 
 TableStops:
-dw $0020
+dw $0B80
 
 ;----------------------------------------------------------------------------- CHECK PROGRESS CODE BELOW
 
@@ -68,44 +68,7 @@ db $C0,$C1,$C4,$C6,$C7,$C8,$E0
 !ListLength = $47 ; number of items in list in hex
 
 CheckProgress:
-    LDY.b #(!sprite_slots-1) ;\ Check if any sprites on screen
-    .loop;
-    LDA !14C8,y        ;|
-    CMP #$08           ;|
-    BNE .skip3
-    LDX.b #!ListLength
-    .loop2:
-    LDA !9E,y        ;\ Do not stop scrolling if sprite is
-    CMP IgnoreList,x   ;| in ignore list
-    BEQ .skip5          ;|
-    DEX                ;|
-    BPL .loop2          ;/
-    BRA .skip4
-    .skip5:
-    TYX                ;\ make sure it's not a custom sprite
-    LDA !7FAB10,x  ;| this will not ignore custom sprites
-    CMP #$02           ;|
-    BCC .skip3          ;/
-    .skip4:
-    LDA !14E0,y        ;\ make sure sprite is actually on screen (killable)
-    XBA                ;|
-    LDA !E4,y          ;|
-    REP #$20           ;|
-    SEC                ;|
-	SBC $1462|!addr    ;|
-    CMP #$0100         ;|
-    SEP #$20           ;|
-    BCS .skip3         ;|
-    LDA #$00           ;/
-    RTS
-    .skip3:
-    DEY                ;\ branch up if loop not finished
-    CPY #$00
-    BPL .loop          ;/
-    LDA.b #!Sound        ;\ Timer has run out
-    STA !SBank         ;| play sound effect
-    LDA #$01
-    RTS
+        RTS
 
 ;----------------------------------------------------------------------------- ACTUAL CODE BELOW (NO TOUCH)
 
