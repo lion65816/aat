@@ -5,6 +5,7 @@ load:
 	RTL
 
 init:
+	JSL DisableDeathCounter_init
 	RTL
 
 main:

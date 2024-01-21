@@ -1,4 +1,5 @@
 init:
+	JSL DisableDeathCounter_init
 	JSL DeathWarp_init
 	RTL
 

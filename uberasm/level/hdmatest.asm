@@ -5,6 +5,7 @@ load:
 	RTL
 
 init:
+	JSL DisableDeathCounter_init
 	JSL Layer2Horz_init
 	JSL Layer1Vert_init
 	RTL

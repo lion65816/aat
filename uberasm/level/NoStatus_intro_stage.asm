@@ -2,6 +2,10 @@ load:
 	JSL NoStatus_load
 	RTL
 
+init:
+	JSL DisableDeathCounter_init
+	RTL
+
 main:
 	; Disable L and R buttons.
 	LDA #%00000000 : STA $00

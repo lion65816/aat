@@ -6,6 +6,8 @@ if read1($00FFD5) == $23
 	!addr = $6000
 endif
 
+!freeram = $18BB|!addr	;> Free RAM flag to toggle whether or not the death counter should be updated.
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; this part is from Iceguy's Disable Score patch
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -94,6 +96,8 @@ NewScoreUpload:
 	RTL
 
 IncreaseDeaths:
+	LDA !freeram		;\ Don't update death counter
+	BNE +				;/ if flag is set.
 	PHX
 	LDA $010A|!addr
 	ASL
@@ -113,7 +117,7 @@ IncreaseDeaths:
 
 ;	LDA #$FF		; \ restore original code
 ;	STA $0DDA|!addr		; /
-
++
 	LDA #$09 : STA $71	;Restore (set animation to dying)
 
 	RTL

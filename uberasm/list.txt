@@ -138,7 +138,7 @@ level:
 0F8	BG_AutoScroll.asm
 0F9	leafspawn_uberASM.asm
 0FB	SimpleHP_ashspawn_uberASM.asm
-0FF  InitSpriteFacing.asm
+0FF	InitSpriteFacing.asm
 100	bonusmusic.asm
 101	LevelIntro.asm
 103	LevelIntro.asm
@@ -250,11 +250,11 @@ level:
 1A2	Layer2Smash_1A2.asm
 1A3	DisableA.asm
 1A4	freescrollbabey_1A4.asm
-1A5	InitSpriteFacing.asm
+1A5	InitSpriteFacing_with_reset.asm
 1A6	1A6Grad.asm
 1A7	BG_AutoScroll1A7.asm
 1A8	leafspawn_uberASM_1A8.asm
-1A9	InitSpriteFacing.asm
+1A9	InitSpriteFacing_with_reset.asm
 1AB	TeleportOnCoins.asm
 1B0	redswitch.asm
 1B1	redswitch.asm
