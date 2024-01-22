@@ -52,10 +52,10 @@
   "AsmFile": "volcano_lotus008.asm",
   "ActLike": 54,
   "Type": 1,
-  "Extra Property Byte 1": 128,
-  "Extra Property Byte 2": 64,
-  "Additional Byte Count (extra bit clear)": 3,
-  "Additional Byte Count (extra bit set)": 3,
+  "Extra Property Byte 1": 0,
+  "Extra Property Byte 2": 0,
+  "Additional Byte Count (extra bit clear)": 0,
+  "Additional Byte Count (extra bit set)": 0,
   "Map16": "",
   "Displays": [
     {

@@ -12,6 +12,8 @@ init:
     rtl
 
 main:
+    jsl overworld_map_names_main
+
     lda $13D9|!addr : cmp #$0A : bne +
     lda $1DE8|!addr : cmp #$06 : beq init
 +   inc !freeram

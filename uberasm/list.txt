@@ -72,7 +72,7 @@ level:
 07B	BG_AutoScroll7B.asm
 07D	craigdarroch.asm
 07E	FilterYoshi.asm
-07F	FilterYoshi.asm
+07F	FilterYoshi_SimpleHP.asm
 080	infinite_dream.asm
 082	FilterYoshi_freescrollbabey.asm
 084	DisableLeftLR.asm
@@ -320,8 +320,13 @@ level:
 ; 6 = Star World.
 overworld:
 ; Insert files here
+0  overworld_map_names.asm
+1  overworld_map_names.asm
+2  overworld_map_names.asm
+3  overworld_map_names.asm
 4  floating_ow.asm
-;0  test.asm
+5  overworld_map_names.asm
+6  overworld_map_names.asm
 
 ; Game mode list. Valid values: 00-FF.
 gamemode:

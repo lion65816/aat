@@ -36,7 +36,8 @@ volcano_lotus_tilemap:
 !pollen_number         := !pollen_number+$13
 
 print "INIT ",pc
-        LDA !7FAB58,x           ;Third extra byte
+        ;LDA !7FAB58,x	;> extra_byte_3
+        LDA #$40
         SEC
         SBC #$08
         STA !1594,x
@@ -79,7 +80,8 @@ volcano_lotus_main:
         BNE .ready_to_spawn
         LDA !1540,x
         BNE +
-        LDA !7FAB58,x
+        ;LDA !7FAB58,x	;> extra_byte_3
+        LDA #$40
         STA !1540,x
         INC !C2,x
 +       LSR
@@ -91,7 +93,8 @@ volcano_lotus_main:
 .not_flashing
         LDA !1540,x
         BNE +
-        LDA !7FAB4C,x
+        ;LDA !7FAB4C,x	;> extra_byte_2
+        LDA #$40
         STA !1540,x
         INC !C2,x
 +       LSR #3
@@ -102,7 +105,8 @@ volcano_lotus_main:
 .ready_to_spawn
         LDA !1540,x
         BNE +
-        LDA !7FAB40,x
+        ;LDA !7FAB40,x	;> extra_byte_1
+        LDA #$80
         STA !1540,x
         STZ !C2,x
 +       CMP !1594,x
