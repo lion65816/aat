@@ -71,6 +71,7 @@ patches
 	patch\patch\OWtileSounds.asm
 	patch\patch\DarkenPause.asm
 	patch\patch\m_sprites.asm
+	patch\patch\ExtendedSpriteDespawnRangeFix.asm
 ]
 -- patch\patch\ticking.asm
 -- patch\patch\bwram_plus.asm

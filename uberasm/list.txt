@@ -204,7 +204,7 @@ level:
 154	MallReset.asm
 155	BG_AutoScroll4.asm
 156	tank.asm
-157	FilterYoshi_freescrollbabey.asm
+157	FilterYoshi_freescrollbabey_InitSpriteFacing.asm
 159	RemoveYoshi.asm
 15B	craigdarroch.asm
 15D	whales_main.asm

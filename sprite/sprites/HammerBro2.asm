@@ -4,7 +4,7 @@
 ;; Description: Walks back and forth, frequently throwing hammers in Mario's
 ;; direction and jumps between blocks.
 
-!HammerNumber = $02         ; Extended sprite number (from list.txt) of the hammer (hammer.asm).
+!HammerNumber = $06         ; Extended sprite number (from list.txt) of the hammer (hammer.asm).
 
 !HammerSound = $00          ; Sound effect to play when throwing a hammer (set to $00 to disable).
 !HammerBank = $1DFC
@@ -164,7 +164,7 @@ Graphics:
     CLC : ADC #$F0                  ; hammer y position
     STA $0301|!Base2,y
 
-    LDA #$6D                        ; hammer tilemap
+    LDA #$26                        ; hammer tilemap
     STA $0302|!Base2,y
 
     LDX $02

@@ -31,6 +31,29 @@
 ; TableStops. IT INTERRUPTS THE MULTI-STEP AUTOSCROLL UNTIL
 ; IT ENDS WITH A BEING 8-BIT AND NON-ZERO.
 ;========================================================
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Aimed Bullet/Eerie Generator, by yoshicookiezeus
+;; based on mikeyk's generic.asm
+;;
+;; Continuously generates sprites at Mario's height from the direction
+;; he is facing.
+;;
+;; Uses first extra bit: NO
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    !SpriteToGen        = $1C   ; USE $1C for bullet bills, $38 for eeries
+    !TimeBetweenSpawns  = $7F   ; needs to be one less than a power of 2
+                                ; recommended: $7F for bills, $3F for eeries
+
+    !RAM_ScreenBndryXLo = $1A
+    !RAM_ScreenBndryXHi = $1B
+    !RAM_ScreenBndryYLo = $1C
+    !RAM_ScreenBndryYHi = $1D
+    !RAM_MarioDirection = #$01
+    !RAM_MarioYPos      = $96
+    !RAM_MarioYPosHi    = $97
+    !RAM_SpritesLocked  = $9D
+
 !Loop = 0               ; Make the code loop (0 = off, 1 = on)
 
 !StepEntries = $0002	; Number of step entries
@@ -84,6 +107,55 @@ init:
 	LDA $01
 	STA !PFlag
 main:
+    LDA $14                     ;\  if not time to spawn sprite
+    AND #!TimeBetweenSpawns     ; |
+    ORA !RAM_SpritesLocked      ; | or if sprites locked,
+    BNE .Return                 ;/  branch
+    JSL $02A9DE                 ;\  find empty sprite slot
+    BMI .Return                 ;/  if no slot found, return
+    TYX        
+    
+    LDA #!SpriteToGen           ;\  set new sprite number
+    STA !9E,x                   ;/
+    JSL $07F7D2                 ; reset sprite properties
+    LDA #$08                    ;\  set new sprite status
+    STA !14C8,x                 ;/
+
+JSL $07F7D2|!bank		;Initial table set
+JSL $01ACF9|!bank		;Random Number
+
+    PHA				;\
+AND #$7F			;|
+ADC #$20			;|
+ADC $1C				;|
+AND #$F0			;|Set sprite's Y Position
+STA !D8,x			;|
+LDA $1D				;|
+ADC #$00			;|
+STA !14D4,x			;|
+PLA				;/
+
+    LDA !RAM_MarioDirection     ;\ use the direction Mario is facing
+    TAY                         ;/ to determine sprite direction
+    LDA .OffsetXLo,y            ;\  use direction to determine x offset
+    CLC                         ; |
+    ADC !RAM_ScreenBndryXLo     ; | add screen position
+    STA !E4,x                   ; | and set as sprite x position
+    LDA !RAM_ScreenBndryXHi     ; |
+    ADC .OffsetXHi,y            ; |
+    STA !14E0,x                 ;/
+    if !SpriteToGen == $1C
+        LDA .Dir,y              ;\ set sprite direction
+        STA !C2,x               ;/
+        LDA #$09                ;\ play sound effect
+        STA $1DFC|!addr         ;/
+    endif
+    if !SpriteToGen == $38
+        LDA .SpeedX,y           ;\ set sprite speed
+        STA !B6,x               ;/
+    endif
+.Return:
+
 	LDA $010B|!addr
 	STA $0C
 	LDA $010C|!addr
@@ -134,6 +206,9 @@ endif
 	BCC .nonext		; /
     STZ !Timer
 	SEP #$30
+	        LDA #01
+        STA $9D
+
     if !Loop == 0
         STZ !PFlag		; if all steps finished, set flag
     else
@@ -142,7 +217,9 @@ endif
 	RTL	
 	.nonext:
 	SEP #$30
+	
 	.end:
+	
 	RTL
 
 	
@@ -268,4 +345,7 @@ endif
 	SEP #$20	; A back to 8-bit
 	RTS
 	
-	
+.OffsetXLo: db $F0,$FF
+.OffsetXHi: db $FF,$00
+.Dir:       db $00,$01
+.SpeedX:    db $10,$F0
