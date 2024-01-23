@@ -106,8 +106,8 @@ LBL_06:
 		    LDY !1528,x
 		    LDA WOWHEIGHT,y
 		    STA !AA,x
-		    LDA #!JUMP_SFX
-		    STA !JUMP_PORT
+		    ;LDA #!JUMP_SFX
+		    ;STA !JUMP_PORT
 		    %SubHorzPos()
 		    TYA
 		    STA !157C,x

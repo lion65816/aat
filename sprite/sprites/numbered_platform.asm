@@ -232,6 +232,7 @@ RTS
 Graphics:
 	LDA !15F6,x				; Properties
 	ORA $64					;
+	ORA #$0E				; AAT edit: Set to palette F.
 	STA $02					;
 
 	LDA !Standing,x			; Activated
