@@ -403,6 +403,6 @@ org $028B8C|!bank
 org $02F6DA|!bank
 	db $25					;> originally: $21
 
-; Disable Yoshi rescue message.
-org $01EC36|!bank
-	db $80					;> originally: $D0
+; Change Yoshi rescue message location.
+org $01EC2C
+LDA #$00 : NOP #2

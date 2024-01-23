@@ -2,7 +2,7 @@
 ; It will be used for the $FF level in the levels table (instead of checking for the level number).
 ci2_pipe_x_pos:     dw $0078
 ci2_pipe_y_pos:     dw $0058
-ci2_pipe_submap:    dw $03
+ci2_pipe_submap:    dw $00
 
 ; List of levels that have hardcoded paths ($FF = CI2 pipe).
 ; Use the level() function since level numbers are kinda weird in SMW.
@@ -83,11 +83,11 @@ paths:
 animation:
 .00_1:  	db 2,2,2,1,1,1,1
 .00_2:  	db 1,1,1,2,2,2,0
-.01_1:  	db 1,1
+.01_1:  	db 1,0
 .01_2:  	db 1,1
 .02_1:  	db 1,1,1,1,1
 .02_2:  	db 1,1,1,1,1
-.03_1:  	db 1,1,1
+.03_1:  	db 1,1,0
 .03_2:  	db 1,1,1
 .04_1:  	db 1,1,1,1,1,1,1 
 .04_2:  	db 1,1,1,1,1,1,1 
