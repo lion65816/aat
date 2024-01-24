@@ -12,12 +12,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;Wrench type:
-!BigWrench = 0		;if zero, the wrench will be small (Chuck baseball). if non-zero, it'll be big (Dry Bones bone).
+!BigWrench = 1		;if zero, the wrench will be small (Chuck baseball). if non-zero, it'll be big (Dry Bones bone).
 
 ;Tilemap defines:
 !Aiming = $E2		;body frame 1
 !Throwing = $E4		;body frame 2
-!Wrench16x16 = $80	;16x16 tile - used if !BigWrench is non-zero
+!Wrench16x16 = $C0	;16x16 tile - used if !BigWrench is non-zero
 !Wrench8x8 = $AD	;8x8 tile - used if !BigWrench is equal zero
 
 ;Wrench page/palette/properties, YXPPCCCT format

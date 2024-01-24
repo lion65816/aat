@@ -11,6 +11,26 @@
 ;Possible values: 0 = nothing happens, 1 = hurt player, 2 = kill player.
 !PitEffect = 2
 
+init:                         ; Code to be inserted INIT
+   	REP #$20                  ;\  16 bit mode
+   	LDA #$0000                ; | 
+   	STA $4330                 ; | 
+   	LDA #.BrightTable         ; | load high and low byte of table address
+   	STA $4332                 ; | 
+   	SEP #$20                  ; | back to 8 bit mode
+   	LDA.b #.BrightTable>>16   ; | load bank byte of table address
+   	STA $4334                 ; | 
+   	LDA #$08                  ; | 
+   	TSB $0D9F|!addr           ; | enable HDMA channel 3
+   	RTL                       ;/  
+
+.BrightTable:                 ; 
+   db $80 : db $09            ; 
+   db $80 : db $09            ; 
+   db $00                     ; 
+
+
+
 main:
 REP #$20		;16-bit A
 LDA $80			;load player's Y-pos within the screen
