@@ -66,8 +66,10 @@ db $88,$8A,$8C,$8E
 ; 16x16
 
 SmallTile:
-db $C0,$C2,$C4,$C6	; Unpressed
-db $C8,$CA,$CC,$CE	; Pressed
+db $A8,$C2,$C4,$C6	; Unpressed
+db $AA,$CA,$CC,$CE	; Pressed
+;db $C0,$C2,$C4,$C6	; Unpressed
+;db $C8,$CA,$CC,$CE	; Pressed
 
 
 ; RAM and label defines for readability, don't change!

@@ -114,7 +114,7 @@ level:
 0C2	reloadRoom3.asm
 0C4	reloadRoom3.asm
 0C5	NoStatus_intro_stage.asm
-0C6	reloadRoom3.asm
+0C6	freescrollbabey.asm
 0C7	NoStatus.asm
 0C8	PitCode2.asm
 0D0	jumpers_end.asm
