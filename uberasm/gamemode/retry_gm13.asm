@@ -25,15 +25,4 @@ main:
 	STA $0F30|!addr	; 2 seconds wrong
 
 
-	; Handle Iris palette with ExAnimation custom trigger.
-	LDA $0DB3|!addr
-	CMP #$00
-	BNE .Iris
-	LDA #$00
-	STA $7FC0FC
-	JML .Return
-.Iris
-	LDA #$01  ;Bit value
-	STA $7FC0FC
-.Return
 	RTL
