@@ -3,6 +3,9 @@
 !RAM_PlayerPalPtr = $418AFF
 !RAM_PalUpdateFlag = $418B02
 
+; Free RAM. Needs to be the same address in global_code.asm.
+!PaletteUsed = $18B7|!addr
+
 main:
 	LDA.b #grayscale_palette
 	STA !RAM_PlayerPalPtr
@@ -12,6 +15,7 @@ main:
 	STA !RAM_PlayerPalPtr+2
 	LDA #$01
 	STA !RAM_PalUpdateFlag
+	STA !PaletteUsed
 	RTL
 
 grayscale_palette:
