@@ -100,6 +100,11 @@ JSL WarpTest_main
     LDA #$0B
     STA $0100|!addr
 
+; Prevents Demo's/Iris' eye color from loading prematurely when switching on the overworld.
+; This is a temporary fix - it sometimes doesn't work.
+    LDA #$01
+    STA $18B7|!addr               ; Free RAM. Needs to be the same address used in global_code.asm.
+
 ;bro check
     LDA $0DB3|!addr	              ;If Mario, go to Luigi code.
 	BEQ Luigim

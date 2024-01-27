@@ -8,7 +8,7 @@
 
 incsrc EasyPropDefines.txt
 
-!HammerProp  = !PaletteB|!SP3SP4
+!HammerProp  = !PaletteA|!SP3SP4
 
 HammerTiles:
 	db $06,$26,$26,$06,$06,$26,$26,$06

@@ -4,7 +4,7 @@
 ;; Description: Walks back and forth, frequently throwing hammers in Mario's
 ;; direction and jumps between blocks.
 
-!HammerNumber = $06         ; Extended sprite number (from list.txt) of the hammer (hammer.asm).
+!HammerNumber = $07         ; Extended sprite number (from list.txt) of the hammer (hammer.asm).
 
 !HammerSound = $00          ; Sound effect to play when throwing a hammer (set to $00 to disable).
 !HammerBank = $1DFC

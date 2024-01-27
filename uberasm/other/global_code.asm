@@ -21,9 +21,9 @@ main:
 
 .Demo
 	; Prevents Iris' eye colors from loading prematurely when switching to her on the overworld.
-	LDA $0100|!addr
-	CMP #$0B
-	BEQ .IrisPal
+	;LDA $0100|!addr
+	;CMP #$0B
+	;BEQ .IrisPal
 .DemoPal
 	LDA #$83 ; Colour number. This is palette 0, colour 2.
 	STA $2121
@@ -47,9 +47,9 @@ main:
 
 .Iris
 	; Prevents Demo's eye colors from loading prematurely when switching to her on the overworld.
-	LDA $0100|!addr
-	CMP #$0B
-	BEQ .DemoPal
+	;LDA $0100|!addr
+	;CMP #$0B
+	;BEQ .DemoPal
 .IrisPal
 	LDA #$83 ; Colour number. This is palette 0, colour 2.
 	STA $2121

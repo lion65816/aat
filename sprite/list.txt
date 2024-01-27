@@ -224,4 +224,5 @@ EXTENDED:
 03 iceball.asm
 04 volcano_lotus_pollen.asm
 05 volcano_lotus_pollen101.asm
-06 Hammer_04.asm
+06 spikeball_shatter.asm
+07 Hammer_04.asm
