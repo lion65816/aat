@@ -73,7 +73,9 @@ patches
 	patch\patch\m_sprites.asm
 	patch\patch\ExtendedSpriteDespawnRangeFix.asm
 	patch\patch\banzai_palette.asm
+	patch\patch\castle_cutscene_hex_edits.asm
 	patch\patch\castle_cutscene_exgfx.asm
+	patch\patch\castle_cutscene_palettes.asm
 ]
 -- patch\patch\ticking.asm
 -- patch\patch\bwram_plus.asm

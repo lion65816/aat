@@ -38,13 +38,13 @@ freedata
 ; These are the tables you need to edit.
 ; Each one is indexed by cutscene number (1-7), same order as LM's Boss Sequence Levels dialog.
 fg1:
-    db $14,$14,$14,$14,$14,$14,$14
+    db $8B,$8F,$93,$97,$14,$9A,$14
 fg2:
-    db $17,$17,$17,$17,$17,$17,$17
+    db $8C,$90,$94,$98,$17,$9B,$17
 bg1:
-    db $19,$19,$19,$19,$19,$19,$19
+    db $8D,$91,$95,$99,$19,$9C,$19
 fg3:
-    db $85,$83,$83,$83,$83,$83,$83
+    db $8E,$92,$96,$8E,$2C,$8E,$2C
 sp1:
     db $00,$00,$00,$00,$00,$00,$00
 sp2:
@@ -52,7 +52,7 @@ sp2:
 sp3:
     db $13,$13,$13,$13,$13,$13,$13
 sp4:
-    db $84,$2D,$2D,$2D,$2D,$2D,$2D
+    db $2D,$83,$83,$2D,$2D,$2D,$2D
 
 ; Actual code. Don't edit from here if you don't know what you're doing!
 sprite_gfx:
