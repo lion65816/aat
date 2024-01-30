@@ -2,7 +2,7 @@
 
 !ShootAbove    = 0          ; Set to 1 to shoot even when the player is above the shooter
 
-!SoundEffect   = $01        ; Sound effect to play when shooting
+!SoundEffect   = $23        ; Sound effect to play when shooting
 !SoundBank     = $1DF9
 
 print "INIT ",pc

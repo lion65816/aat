@@ -36,6 +36,7 @@
 7C6:25 door_block1.asm
 7F0:130 thwompcrush.asm
 7F1:5 killsprite_lava.asm
+A72:100 laser_both.asm
 A8B:25 no_yoshi.asm
 A9B:25 no_yoshi.asm
 AAB:25 no_yoshi.asm
@@ -206,6 +207,13 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 1FFC:25 TTSL.asm
 2093:130 question_block.asm
 2300:25 noyoshiintro.asm
+26F4:130 sprite_solid.asm
+26F5:130 sprite_solid.asm
+26FA:130 sprite_solid.asm
+26FB:130 sprite_solid.asm
+26AC:25 ShakeGround.asm
+26AD:25 ShakeGround.asm
+26AE:25 ShakeGround.asm
 2B26:25 32x32Coins/Coin10UpLeft.asm
 2B27:25 32x32Coins/Coin10UpRight.asm
 2B36:25 32x32Coins/Coin10DownLeft.asm

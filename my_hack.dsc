@@ -244,6 +244,7 @@
 7c6	0	Password door number 1
 7f0	0	Thwomp Crush Block\nA block that shatters when hit by a Thwomp.
 7f1	0	Sprites touching this block will die as if by lava.
+a72	0	Activates the nearest laser shooter when touched by the player or a sprite.
 a8b	0	A block which destroys (Baby) Yoshi if touched.
 a9b	0	A block which destroys (Baby) Yoshi if touched.
 aab	0	A block which destroys (Baby) Yoshi if touched.
@@ -415,6 +416,13 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1ffc	0	A door.
 2093	0	Spawns sprite $BA.
 2300	0	noyoshiintro.asm
+26ac	0	
+26ad	0	
+26ae	0	
+26f4	0	A block that will act like tile 25 for Mario
+26f5	0	A block that will act like tile 25 for Mario
+26fa	0	A block that will act like tile 25 for Mario
+26fb	0	A block that will act like tile 25 for Mario
 2b26	0	32x32coin [up left][10coins]
 2b27	0	32x32coin [up right][10coins]
 2b36	0	32x32coin [down left][10coins]

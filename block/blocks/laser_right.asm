@@ -1,4 +1,4 @@
-!CustomShooter = $C0        ; Number of the custom shooter
+!CustomShooter = $C1        ; Number of the custom shooter
 
 db $37
 JMP MarioBelow : JMP MarioAbove : JMP MarioSide

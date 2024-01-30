@@ -157,14 +157,17 @@ BossBass_Main:
 	STA $0F		; /
 	STZ !1602,x	; display non-lunging frame
 	LDY !1594,x	; \
-	LDA !B6,x	;  | 
-	CLC		;  | 
-	ADC .yvel_limit,y; | 
-	BMI +		;  | accelerate y speed based on state
-	LDA .yaccel,y	;  | 
-	CLC		;  | 
-	ADC !AA,x	;  | 
-+	STA !AA,x	; /
+
+	LDA !AA,x
+	CLC
+	ADC .yaccel,y
+	STA !AA,x
+	CLC
+	ADC .yvel_limit2,y
+	BPL +
+	LDA .yvel_limit,y
+	STA !AA,x
++
 	LDA !1594,x	; \ index by eat state
 	JSL $0086DF|!BankB; /
 	dw .swimming
@@ -213,19 +216,30 @@ BossBass_Main:
 	STA !1594,x	; /
 
 	JSR WaterSplash	; display water splash
-+	LDY !157C,x	; \
-	LDA !1534,x	;  | 
++
+	LDA !157C,x	; \
+	LDY !1534,x	;  | 
 	BEQ +		;  | 
-	INY : INY	;  | 
-+	LDA !B6,x	;  | 
-	CLC		;  | accelerate sprite based on direction
-	ADC .xvel_limit,y; | 
-	BMI +		;  | 
-	LDA !B6,x	;  | 
-	CLC		;  | 
-	ADC .xaccel,y	;  | 
-	STA $B6,x	; /
-+	RTS		; 
+	ORA #$02
++
+	LDY !1504,x
+	BEQ +
+	ORA #$04
++
+	TAY
+	LDA !B6,x
+	CLC
+	ADC .xaccel,y
+	STA !B6,x
+	CLC
+	ADC .xvel_limit2,y
+	CMP #$A0
+	BCC +
+	LDA .xvel_limit,y
+	STA !B6,x
++
+	RTS
+
 .jumpingup
 	INC !1602,x	; lunging frame
 	REP #$20	; \
@@ -255,10 +269,18 @@ BossBass_Main:
 .yaccel
 	db $00,$02,$FE
 .yvel_limit
-	db $00,$30,$20
+	db $00,$18,$D8
+.yvel_limit2
+	db $00,$68,$28
 .xvel_limit
-	db $30,$50,$20,$60
-.xaccel	db $FC,$04,$FF,$01
+	db $D0,$30,$E0,$20
+	db $B8,$48,$E0,$20
+.xvel_limit2
+	db $30,$70,$20,$80
+	db $48,$58,$20,$80
+.xaccel
+	db $FC,$04,$FF,$01
+	db $FA,$06,$FF,$01
 .x_diff	db $10,$70
 
 WaterSplash:
@@ -368,12 +390,16 @@ SubGfx:	%GetDrawInfo()       ; sets y = OAM offset
 	BNE +
 	INY : INY
 +	TYA
-	PLY
 	STA $03
 	ASL : ASL
 	ADC $03
+	LDY !1504,x
+	BEQ +
+	CLC
+	ADC #$14
++
 	STA $03
-
+	PLY
 	PHX
 	LDX #$04
 -	PHX
@@ -448,6 +474,10 @@ SubGfx:	%GetDrawInfo()       ; sets y = OAM offset
 	db $E0,$E1,$E6,$E8,$F8
 	db $E0,$E1,$E4,$E9,$F9
 	db $E0,$E1,$E6,$E9,$F9
+	db $8B,$8C,$C4,$C8,$D8	;0F4
+	db $8B,$8C,$C6,$C8,$D8
+	db $8B,$8C,$C4,$C9,$D9
+	db $8B,$8C,$C6,$C9,$D9
 
 .tilemap2
 	db $67,$69
