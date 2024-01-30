@@ -95,9 +95,10 @@ level:
 0A4	flavor.asm
 0A6	SPECIAL.asm
 0AA	freescrollbabey.asm
-0A8  BG_AutoScroll4.asm
+0A8	SPECIAL_A8.asm
 0AC	FilterYoshi_1AC.asm
-0AD  ConstantAutoscrollAD.asm
+0AD	SPECIAL_AD.asm
+0AE	SPECIAL.asm
 0AF	special_smi2.asm
 0B0	DisableLR_freescrollbabey.asm
 0B1	purkinje_key.asm
@@ -130,6 +131,7 @@ level:
 0E3	Credits.asm
 0E4	Credits.asm
 0E5	Credits.asm
+0EC	SPECIAL.asm
 0F0	F0_scroll.asm
 0F2	freescrollbabey.asm
 0F3  MultiStepAutoscroll.asm
