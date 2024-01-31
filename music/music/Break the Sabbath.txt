@@ -1,0 +1,119 @@
+#amk 2
+$EF$5F$1f$1f
+$F1$06$3f$01
+
+#spc
+{
+#author "ZUN"
+#game "Lotus Land Story"
+#comment "Arranged by Trojan Horse"
+#title "Break the Sabbath"
+}
+
+#0 w225 t59
+
+#0	;A
+@4 v230 o4 l8 p12,40 y10
+d1<a1d1^2.e4f4.d4.a4^1e4.c4.a4g4.a4.>c4<
+a1d2a4gg16>c16<a1d2a4gg16>d16<a1d1e1f.g.>ce.g.a
+f4.e4.c4d1f4.e4.c4d4.<g4.>c4<a4.d4.a4.^2defa4.d4.>c<a4.g4fgad>
+d1^1^1d<a>aegfefd1^2.^8d16c16d1efgf32g32f16edce
+y8
+d1.^4e4f1.e4g4f1.e4c4d1.e2
+a1.a4>c4d1.e4g4f1.e4c4d1.c2
+[f1.d+2f1.g4d+4]2
+[g+1.a+2g+1.g4a+4]2
+(1)[d+2f+fd+d+^2r<a+>c+<a+>d+4a+4g+f+c+d+^2] r<a+>c+<a+>
+(1)<d+2
+
+#1	;B
+@17 v160 o2 l8 y8 p12,16
+$ed$fe$66
+[a1^1^1^2.g4f1^1g1^1]2
+[a1^1^1.g2f1^1g1^1]2
+[a1.^4g4f1.^4g4]4
+y10 o3
+[f1.^4d+4c+1.^4d+4]4
+o2
+[b>f+<b>f+c+g+c+d+4a+d+a+d+a+c+g+<]3
+b>f+<b>f+c+g+c+d+4a+d+a+d+2
+
+#2	;C
+@17 v160 o3 l8 y12 p12,16
+$ed$fe$66
+[d1^1^1^2.c4<a+1^1>c1^1]2
+[d1^1^1.c2<a+1^1>c1^1]2
+[d1.^4c4<a+1.^4>c4]4
+@16 v190 l16 p0,0
+(21)[o4 [[y15 f> y12 c y8 f y5 g+< y15 f> y12 c y8 f y5 g+<]]2 y15 f> y12c y5 g+< y15 f> y12 c y5 g+< y15 f> y5 g+< y15 f> y12 c y8 g+< y15 f y13 a+> y7 g y9 d+ y7 g]
+(21)7
+l8
+(22)[o4 y15d+ y12ff+ y10a+ y15d+ y12f> y7c+< y11g+ y10a+>y5ff+<y10a+>y5ff+<y11g+>y8c+<
+y15d+ y12ff+ y10a+ y15d+ y12f> y7c+< y11g+> y5f+f y8c+ y6d+< y10a+> y8c+< y12fy11g+
+y15d+ y12ff+ y10a+ y15d+ y12f> y7c+< y11g+ y10a+>y5ff+<y10a+>y5ff+<y11g+>y8c+<]
+o4 y15d+ y12ff+ y10a+ y15d+ y12f> y7c+< y11g+ y15d+y12fy8a+y15d+y12fy8a+y15d+y8a+
+
+#3	;D/G
+@16 v190 o3 l16
+(31)[o3 y15 defa> y12 defa> y8 defa> y5defa fed<a y8 fed<a y12 fed<a y15 fed<a>] (31)
+(32)[o3 y15 defafaea> y12 defa> y8 defa fed<a y12 fed<a y15 fedafed<a>] (32)
+(31)2(32)2
+(31)2(32)2
+(31)2(32)2
+@9 y10 v175
+(33)[ o5 d<aaa>d<a>ae d<aa>ad<a>dc d<aaa>d<a>ae d<aa>agec<g [[adddad>c<g add>c<adfe]]2 ]
+(33)3
+(34)[ o5 fcccfc>c<g fcc>c<fc>c<d+ fcccfc>c<gfcc>c<a+gd+<a+> [[c<fff>c<f>d+<a+> c<ff>d+c<fg+g]]2 ]
+(34)3
+@16 v140 o4 l8 r.
+(22)
+o4 y15d+ y12ff+ y10a+ y15d+ y12f> y7c+< y11g+ y15d+y12fy8a+y15d+y12fy8a+y15d+16
+
+#4	;E/H
+@16 v140 o3 l16 p0,0 r.
+(31)2(32)2
+(31)2
+(32) o3 y15 defafaea> y12 defa> y8 defa fed<a y12 fed<a y15 fedafed32
+@9 y10 v175
+(43)[o5 [[d<ag>d<ag>d<d]]8 [[aedaedad]]8 ]
+(43)
+@4 v200 l8 o3 y12 p12,40
+a1.^4>c4d1.c4e4d1.c4<a4a+1.>c2
+d1.d4e4f1.g4a+4a1.g4e4f1.e2
+[g+1.g2g+1.a+4g4]2>
+[c1.c+2c1.<a+4>c+4]2<
+(44)[a+2>d+c+<a+a+^2rf+a+f+a+4>f+4fc+<a+a+^2]rf+a+f+
+(44)<a+2
+
+#5	;RHY1 (snare/bass)
+o4 v245 l8
+[r1]15
+r2.@29c4
+(51)[ [[@21c4@29c4@21c4@29c4]]3 @29c.@29c.@29c@29c.@29c.@29c]
+(51)2 [@21c4@29c4@21c4@29c4]3 @21c4@29c4@21c16@29c16c@21c16@29c16c16c16
+l16
+(52)[ [[@21c8@29c8@21cc@29c8]]3 @21cccc@29cccc ]
+(52)3
+[@21c8@29c8@21cc@29c8 @21c@29c@21c@29c@21cc@29c8 @21c@29cc@21ccc@29c@21c cccc@29cccc]3
+(53)[@21c8@29c8@21cc@29c8 @21c@29c@21c@29c@21cc@29c8 @29cccccccccccccc@21c@29c]
+[@21c8@29c8@21cc@29c8@21c@29c@21c@29c@21cc@29c8 @29c8.@29c8.@29c8@29c8.@29c8.@29c8]7 
+(53)
+[@21c8@29c8@21cc@29c8]12
+@21c4@29c4@21c4@29c4r2.@29c4
+
+#6	;RHY2 (hihats)
+o5 v225 l16 @22
+[r1]7r2.cccc
+[cccccccc]16
+(61)[ [[@23c@22ccccccc]]6[[@23c@22cc@23c@22cc@23c8]]2 ]
+(61)2
+[@23c@22ccccccc]6 @22ccccccccccc8cccc
+(62)[ [[@22c8@23c8@22c8@23c8]]3 @22cc@23c@22c r4]
+(62)3
+[@22cc@23c@22cc8@23c8@22c8@23c8@22c8@23c8 @22c4c8@23c8@22cc@23c@22cr4]3
+(63)[@22cc@23c@22cc8@23c8@22c8@23c8@22c8@23c8 @22ccccccccccccc@23ccc]
+(64)[@22cc@23c@22cc8@23c8@22c8@23c8@22c8@23c8 [[@23c@22cc@23c@22cc@23c8]]2 ]
+(64)6
+(63)
+l8 [@22c@23c@22c@23c]12
+l16 @23c@22ccccccc @23c@22ccccccc cccccccc @23cccccccc

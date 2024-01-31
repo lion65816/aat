@@ -1,0 +1,119 @@
+; [Update 1.2 - 2020 January 2nd]
+; Small fix for correct loop.
+; Thanks to musicalman for the feedback.
+; [Update - 2019 December 29th]
+; A small error in Channel 4 was corrected.
+; [Orignal Comment]
+; An exciting opening stage music from the third person Mega Drive shoot-em-up, Panorama Cotton.
+; I ported this song as a tribute to the recently announced Cotton remake.
+; 2019 December 29th - Bak Sangwoo
+#amk 2
+
+#SPC
+{
+	#title "Stage 1 (The Land of Cotton)"
+	#game "Panorama Cotton"
+	#author "Kenichi Hirata"
+	#comment "Ported by Bak Sangwoo"
+	#length "auto"
+}
+
+#instruments
+{
+@14 $DF $C2 $B8 $07 $00; @30 Bass
+@21 $FF $F5 $00 $07 $00; @31 Drum 1
+@29 $FF $F0 $00 $02 $60; @32 Drum 2
+@4 $DA $A0 $00 $03 $00; @33 Main Violin
+@1 $F8 $A0 $00 $03 $00; @34 Sawtooth
+@13 $FF $F4 $B8 $03 $00; @35 Bell
+@22 $FF $E0 $00 $0A $00; @36 Tick
+}
+
+$F4 $02
+$EF $06 $1C $1C
+$F1 $08 $A0 $01
+
+"VolumeBass	= v240"
+"VolumeViolin	= v130"
+"VolumeBell	= v225"
+"VolumeGuitar	= v180"
+"VolumeSaw	= v160"
+"VolumePer	= v230"
+"VolumeTic	= v80"
+
+w175 t32
+#0
+/
+o1 @30 l16 VolumeBass
+(1)[ [[a]]8 [[g]]8 [[f]]8 [[g]]8
+[[f]]8 [[g]]8 [[a]]8 ggr8 f8 ] g8
+(1) > c8
+(2)[ [[d]]8 [[c]]8 <[[g]]8 ] > [c]8
+(2) rccc r4
+
+#1
+/
+@33 o4 l16 $DE $18 $0F $60 VolumeViolin
+[aa>cde8dcd<br4. ffa>cd8cd e8.f32e32d4
+c8<babar>d8.c<b>c<bga^2 r2]2
+>defdefd8 cdecdec8 <b>cd<b>cd<b>c e2
+fgafgaf8 efgefge8 defdefd8
+r2
+
+#2
+/
+@34 o4 $DE $09 $0F $60 VolumeSaw
+(4)[a2g2f2g2f4f8.g2a16^2 d16d16r8 c8] d8
+(4) g8
+a2g2d2b2 a2g2d2 r16g16g16g16 g16 r8.
+
+#3
+/
+@34 o4 $DE $09 $0F $60 VolumeSaw
+(5)[e2d2c2d2c4c8.d2e16^2 <g16g16r8 f8] g8
+(5) >c8
+d2c2<g2>g2 
+@33 VolumeViolin $DE $18 $0F $60
+>defdefd8 cdecdec8 <b>cd<b>cd<b8
+@34 VolumeSaw
+r16c16c16c16 c16 r8.
+
+#4
+/
+$DE $18 $0C $22 l16 VolumeTic
+(31)[@36c]9 r (31)8 r (31)8 r (31)7 r (31)12
+
+$F4$03
+(6)[@35 o4 r16 VolumeBell a16>c16d16e16d16c16<a16
+VolumeGuitar o3 @17 g16g16r8 f8] g8
+$F4$03
+
+VolumeTic (31)9 r (31)8 r (31)8 r (31)7 r (31)12
+
+$F4$03
+(6) >c8
+d2 c2 <g2 >c2 d2c2<g2 r16>c16c16c16c16 $F4$03 r8.
+
+#5
+/
+VolumePer
+(3)[o3 @31c8 o4 @32c8 o3 @31c16@31c16 o4 @32c8]7 o3 @31c16@31c16 o4 @32c8 o3 @31c8 o4 @32c8 o3
+(3)7 o3 @31c16@31c16 o4 @32c8 o3 @31c8 o4 @32c32@32c32@32c32@32c32
+(3)3 o3 @31c8 o4 @32c8 o3 @31c16@31c16 o4 @32c32@32c32@32c32@32c32
+(3)3 r16  o4 @32c16@32c16@32c16@32c16 o3 @31c32@31c32 o4 @32c8
+
+#6
+/
+o4 VolumeTic l16 $DE $09 $0F $60
+(30)[r2]6 (31)11 r @36c@36c@36c r
+(30)6 (31)21 r (31)8 r (31)8 r (31)8
+@34 VolumeSaw
+d2c2g2
+VolumeTic 
+r @36c@36c@36c@36c r8.
+
+#7
+/
+o4 VolumeTic
+(30)20
+r (31)8 r (31)14 r2

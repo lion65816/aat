@@ -1,7 +1,7 @@
 ; Speed (Self-explanatory)
 ; Valid values are 00, 01, 03, 07, 0F, 1F, 3F, 7F, and FF
 ; (being 00 the faster and FF the slower)
-	!Speed		= $00
+	!Speed		= $01
 	
 ; Direction (Self-explanatory)
 ; Valid values are !Left, !Right, !Up, !Down, !DiagUL, !DiagUR, !DiagDL, !DiagDR
@@ -17,9 +17,11 @@
 !Left = 0	:	!Right = 1	:	!Up = 2		:	!Down = 3
 !DiagUL = 4	:	!DiagUR = 5	:	!DiagDL = 6	:	!DiagDR = 7
 
+
+
 main:
 ; Disable L and R buttons.
-LDA #%00000000 : STA $00
+LDA #%00001111 : STA $00
 LDA #%00110000 : STA $01
 JSL DisableButton_main
 

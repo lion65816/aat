@@ -198,3 +198,5 @@ C2  Beanbean Fields.txt
 C3  Neutopia II - Sphere 1.txt
 C4  Green Plains.txt
 C5  Popful Mail (SFC) - Destiny.txt
+C6  Break the Sabbath.txt
+C7  Panorama Cotton Stage 1 (Version 1.21).txt

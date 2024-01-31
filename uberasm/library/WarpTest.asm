@@ -47,6 +47,9 @@ init:
     rtl
 
 main:
+	PHB	;library calls do not actually set Data Bank
+	PHK
+	PLB
     lda !Flag
     asl
     tax
@@ -58,6 +61,7 @@ main:
     stz $17             ;|
     stz $18             ;/
 .return
+	PLB
     rtl
 
 .Pointers:
@@ -82,7 +86,6 @@ Normal:
     lda !Flag
     inc
     sta !Flag
-    rep #$20
     jsr Warp
 .return
     rts
