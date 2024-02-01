@@ -44,13 +44,13 @@ PSwitchMain:
 	%change_map16()
 	SEP #$10
 if read1($008075) == $5C	; JML $xxxxxx
-	LDA #!Music_AMK
-	STA $1DFB|!addr
+	;LDA #!Music_AMK
+	;STA $1DFB|!addr
 else
 	LDA $0DDA|!addr	; If star is playing...
 	BMI .NoMusic
-	LDA #!Music
-	STA $1DFB|!addr
+	;LDA #!Music
+	;STA $1DFB|!addr
 .NoMusic
 endif
 	LDA #!SoundEffect

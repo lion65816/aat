@@ -17,12 +17,13 @@
 !Left = 0	:	!Right = 1	:	!Up = 2		:	!Down = 3
 !DiagUL = 4	:	!DiagUR = 5	:	!DiagDL = 6	:	!DiagDR = 7
 
-
+load:
+JSL NoStatus_load
+RTL
 
 main:
-; Disable L and R buttons.
-LDA #%00001111 : STA $00
-LDA #%00110000 : STA $01
+LDA #%11111111 : STA $00	;\ Disable all inputs.
+LDA #%11110000 : STA $01	;/
 JSL DisableButton_main
 
 JSL DisableSideExit_init
