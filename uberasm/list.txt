@@ -93,7 +93,9 @@ level:
 0A2	freescrollbabey.asm
 0A3	freescrollbabey.asm
 0A4	flavor.asm
+0A5	DisableSideExit.asm
 0A6	SPECIAL.asm
+0A7	DisableSideExit.asm
 0AA	freescrollbabey.asm
 0A8	SPECIAL_A8.asm
 0AC	FilterYoshi_1AC.asm
