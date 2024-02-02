@@ -485,6 +485,18 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 4372	0	
 438a	0	
 438b	0	
+4500	0	Super Mario Bros. - Overworld (Metal Version)
+4501	0	Pizza Tower - The Death That I Deservioli
+4502	0	That Japanese RS2 Final Battle Port
+4503	0	Wario Land 4 - Hurry Up!
+4504	0	Sword of Mana - Battle 2 ~ Courage and Pride From the Heart (Romancing Saga Style)
+4505	0	showdown_on_the_tower.txt
+4506	0	Yoshi's Safari - High Score
+4507	0	Rivals of Aether EX - Embers of a Burning Dystopia
+4508	0	Homestuck - Showtime
+4509	0	Popful Mail (SNES) - Destiny
+450a	0	Break the Sabbath.txt
+450b	0	Panorama Cotton - Stage 1 (The Land of Cotton)
 4a10	0	This button sets a manuel frame value to #$00.
 4a11	0	This button sets a manuel frame value to #$01.
 4a12	0	This Button sets a manuel frame value to #$02.
