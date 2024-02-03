@@ -37,11 +37,11 @@
 7F0:130 thwompcrush.asm
 7F1:5 killsprite_lava.asm
 A72:100 laser_both.asm
-A8B:25 no_yoshi.asm
-A9B:25 no_yoshi.asm
-AAB:25 no_yoshi.asm
-ABB:25 no_yoshi.asm
-ACC:25 no_yoshi.asm
+A8B:25 no_yoshi_keep_powerups.asm
+A9B:25 no_yoshi_keep_powerups.asm
+AAB:25 no_yoshi_keep_powerups.asm
+ABB:25 no_yoshi_keep_powerups.asm
+ACC:25 no_yoshi_keep_powerups.asm
 DA0:130 sprite_solid.asm
 DA1:130 mario_solid.asm
 E70-E71:25 killsprite.asm
