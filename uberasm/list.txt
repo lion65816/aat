@@ -41,7 +41,7 @@ level:
 033	SPECIAL.asm
 034	BG_AutoScroll4.asm
 035	BG_AutoScroll4.asm
-036	BG_AutoScroll4.asm
+036	BG_AutoScroll4_36.asm
 037	BG_AutoScroll4.asm
 038	BG_AutoScroll4.asm
 039	BG_AutoScroll4.asm
