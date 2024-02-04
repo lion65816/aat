@@ -55,6 +55,7 @@ EE1:25 one_way_up.asm
 EEB:25 instant_death.asm
 EEF:130 SSP_Tiles/pass_if_in_pipe.asm
 EFF:130 SSP_Tiles/pass_if_in_pipe.asm
+117A:130 kaizo_pit_hurt_death.asm
 117D:100 donutblk_upward.asm
 11D7:25 bounce_off.asm
 11D8:25 bounce_on.asm
