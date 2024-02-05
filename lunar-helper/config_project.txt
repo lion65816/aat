@@ -67,7 +67,6 @@ patches
 	patch\patch\more_hardcoded_paths.asm
 	patch\patch\OWMusic.asm
 	patch\patch\perlevel_mario_start.asm
-	patch\patch\YoshiSpriteInteractionsFix.asm
 	patch\patch\OWtileSounds.asm
 	patch\patch\DarkenPause.asm
 	patch\patch\m_sprites.asm
@@ -76,7 +75,9 @@ patches
 	patch\patch\castle_cutscene_hex_edits.asm
 	patch\patch\castle_cutscene_exgfx.asm
 	patch\patch\castle_cutscene_palettes.asm
+	patch\patch\BetterYoshiInteraction.asm
 ]
+-- patch\patch\YoshiSpriteInteractionsFix.asm
 -- patch\patch\ticking.asm
 -- patch\patch\bwram_plus.asm
 -- patch\patch\midway\multi_midway_1.7.asm

@@ -42,7 +42,6 @@ Main:
 	LDA $010C|!addr
 	ORA #$04
 	STA $0D
-	JSL MultipersonReset_main
 
 	LDA $9D
 	BEQ .Continue
