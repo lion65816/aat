@@ -176,7 +176,8 @@ gm14_end:
 ;=====================================
 
 !NumTilesMax = $1E		;> Full status bar ($1E = 30 tiles)
-!NumTilesMin = $0E		;> Minimal status bar ($0E = 14 tiles)
+!NumTilesMin = $04		;> Minimal status bar ($04 = 4 tiles)
+;!NumTilesMin = $0E		;> Minimal status bar ($0E = 14 tiles)
 !Offset = $1010			;> YYXX
 
 custom_bar:

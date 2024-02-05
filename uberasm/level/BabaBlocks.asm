@@ -3,6 +3,9 @@
 !RAM_PlayerPalPtr = $418AFF
 !RAM_PalUpdateFlag = $418B02
 
+; Free RAM. Needs to be the same address in global_code.asm.
+!PaletteUsed = $18B7|!addr
+
 load:
 	JSL HoldYoshi_load
 	RTL
@@ -47,6 +50,7 @@ main:
 .upload
 	LDA #$01
 	STA !RAM_PalUpdateFlag
+	STA !PaletteUsed
 .skip
 
 	JSL RequestRetry_main
@@ -54,13 +58,13 @@ main:
 	RTL
 
 demo_palette:
-	dw $092E,$1E3A,$2BBF,$6B9F
+	dw $0054,$023F,$0F3F,$6B9F
 	dw $259A,$4ADF,$318C,$62D4
 	dw $2422,$3CE3,$5584,$76A9
 	dw $7FD6
 
 fire_palette:
-	dw $092E,$1E3A,$2BBF,$6B9F
+	dw $0054,$023F,$0F3F,$6B9F
 	dw $259A,$4ADF,$318C,$62D4
 	dw $000C,$0011,$24BE,$465F
 	dw $7FFF

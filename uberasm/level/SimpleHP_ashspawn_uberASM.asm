@@ -31,17 +31,13 @@
 
 Init:
 	JSL SimpleHP_init
+
 	LDA #$01
 	STA $18B8|!addr
 RTL
 
 Main:
 	JSL SimpleHP_main
-	LDA $010B|!addr
-	STA $0C
-	LDA $010C|!addr
-	ORA #$04
-	STA $0D
 
 	LDA $9D
 	BEQ .Continue

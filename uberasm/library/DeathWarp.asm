@@ -675,7 +675,7 @@ upload_palettes:
 	TXA							;\ Need to double the index value, since we are using dw instead of db.
 	ASL							;|
 	TAX							;/
-	LDA BackgroundColor,X		;\ Change background color according to the current position in the table.
+	LDA.l BackgroundColor,X		;\ Change background color according to the current position in the table.
 	STA $0701|!addr				;/
 	SEP #$20
 
@@ -683,7 +683,7 @@ upload_palettes:
 	LDX !StartingColorCounter	;> Load the current index into the StartingColor table.
 	LDA #$0C					;\ $0682: number of bytes (=number of colors * 2) (12 bytes)
 	STA $0682|!addr				;/
-	LDA StartingColor,X			;\ $0683: starting color
+	LDA.l StartingColor,X		;\ $0683: starting color
 	STA $0683|!addr				;/
 	REP #$30
 
@@ -692,7 +692,7 @@ upload_palettes:
 	CPY #$000C					;\ Loop over the current palette row, adding one color at a time.
 	BEQ +						;|
 	LDX !ColorCounter			;|
-	LDA PaletteTable,X			;| End the loop once all 6 colors in the palette row have been added.
+	LDA.l PaletteTable,X		;| End the loop once all 6 colors in the palette row have been added.
 	STA $0684|!addr,Y			;| Note that the color counter is incremented by 2, since we are using dw instead of db.
 	INC !ColorCounter			;|
 	INC !ColorCounter			;|

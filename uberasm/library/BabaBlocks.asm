@@ -2,8 +2,6 @@
 !BlockSet = $140C|!addr		;> FreeRAM flag to tell us once a block has been set by the player.
 !Index = $18C5|!addr		;> Index into the Map16 block tables (16 bits).
 !Subject = $18C7|!addr		;> Starting address for "DEMO" ($18C7), "CATNIP" ($18C8), and "SHELL" ($18C9) property bytes.
-;!BlueSwitch = $18CA|!addr	;> Flag to draw the Blue Switch tiles.
-;!Catnip = $18CA|!addr		;> Catnip's index in the sprite tables.
 
 ; Starting addresses for the level's Map16 block tables (SA-1).
 !Map16TableLow = $40C800	;\ Low byte contains the block number on a given Map16 page.
@@ -13,29 +11,24 @@ init:
 	; Processor flags: A is 8-bit, X/Y are 8-bit.
 
 	LDA #$01		;\ Check the initial configuration of the level for active rules.
-	STA !BlockSet		;/
-	;STZ !BlockSet
+	STA !BlockSet	;/
 	RTL
 
 main:
 	; Processor flags: A is 8-bit, X/Y are 8-bit.
 
-;	LDA $1497|!addr		;\ If Demo's flashing animation is active, then do not process the rules.
-;	BEQ +			;| Not sure if this is needed for the below code block to work.
-;	JMP exit		;/ Note: Commented out because this prevents the block check from running if you pick up the blocks while hurt.
-;+
 	LDA $71			;\ If Demo is hurt (flashing), then activate the rules.
 	CMP #$01		;| This has the effect of keeping Demo's powerup status when Big, Fire, or Cape, but killing her when Small.
 	BNE +			;| However, the code might not be entirely correct. For example, Demo can be in a "hurt" state for a longer period than
 	LDA #$01		;| normal. This could be caused by longer level lengths (i.e., more tiles need to be checked).
-	STA !BlockSet		;/
+	STA !BlockSet	;/
 +
-	LDA $71			;\
-	CMP #$06		;| If Demo enters a vertical pipe, remove her reserve powerup.
+	LDA $71			;\ If Demo enters a vertical pipe, remove her reserve powerup.
+	CMP #$06		;|
 	BNE +			;|
-	STZ $0DC2|!addr		;/
+	STZ $0DC2|!addr	;/
 +
-	LDA !BlockSet		;\ Every frame, check if the player had just set down a block.
+	LDA !BlockSet	;\ Every frame, check if the player had just set down a block.
 	BNE +			;| If so, then initiate the Map16 block search.
 	JMP exit		;/ Else, exit the code.
 +
@@ -45,71 +38,68 @@ main:
 block_search:
 	; Processor flags: A is 16-bit, X/Y are 16-bit.
 
-	LDX !Index		;> Load the index into an indexing register.
-	SEP #$20		;> Set A to 8-bit, keeping the X/Y registers 16-bit.
+	LDX !Index				;> Load the index into an indexing register.
+	SEP #$20				;> Set A to 8-bit, keeping the X/Y registers 16-bit.
 	LDA !Map16TableHigh,X	;> Load the high byte of the Map16 block into the low byte of A.
-	XBA			;> Swap the low byte of A into its high byte.
+	XBA						;> Swap the low byte of A into its high byte.
 	LDA !Map16TableLow,X	;> Load the low byte of the Map16 block into the low byte of A.
-	REP #$20		;> Reset A to 16-bit.
+	REP #$20				;> Reset A to 16-bit.
 
-	CMP #$1602		;\ If the current block is an "IS" block, then start processing its rules.
-	BEQ process_rules	;/
+	CMP #$1602				;\ If the current block is an "IS" block, then start processing its rules.
+	BEQ process_rules		;/
 
-	CMP #$1609		;\
-	BNE +			;| Else, if we reached the end of the level (i.e., found the custom "end" block), then stop the search.
-	JMP change_state	;/
-	;JMP exit		;/
+	CMP #$1609				;\ Else, if we reached the end of the level (i.e., found the custom "end" block), then stop the search.
+	BNE +					;|
+	JMP change_state		;/
 +
-	JMP increment_loop	;> Else, continue to the next block.
+	JMP increment_loop		;> Else, continue to the next block.
 
 process_rules:
 	; Processor flags: A is 16-bit, X/Y are 16-bit.
 
 	; Process horizontal rules.
-	JSR get_index_left	;> Input: Index of the current block in !Index. Output: Index of the left block in A.
-	JSR get_subject		;> Input: Index of the left block in A. Output: Offset into the subject property byte table in Y.
-	JSR get_index_right	;> Input: Index of the current block in !Index. Output: Index of the right block in A.
-	JSR get_adjective	;> Input: Index of the right block in A. Output: Bit corresponding to a certain adjective in A.
+	JSR get_index_left		;> Input: Index of the current block in !Index. Output: Index of the left block in A.
+	JSR get_subject			;> Input: Index of the left block in A. Output: Offset into the subject property byte table in Y.
+	JSR get_index_right		;> Input: Index of the current block in !Index. Output: Index of the right block in A.
+	JSR get_adjective		;> Input: Index of the right block in A. Output: Bit corresponding to a certain adjective in A.
 	JSR set_property
 
 	; Process vertical rules.
-	JSR get_index_top	;> Input: Index of the current block in !Index. Output: Index of the top block in A.
-	JSR get_subject		;> Input: Index of the top block in A. Output: Offset into the subject property byte table in Y.
+	JSR get_index_top		;> Input: Index of the current block in !Index. Output: Index of the top block in A.
+	JSR get_subject			;> Input: Index of the top block in A. Output: Offset into the subject property byte table in Y.
 	JSR get_index_bottom	;> Input: Index of the current block in !Index. Output: Index of the bottom block in A.
-	JSR get_adjective	;> Input: Index of the bottom block in A. Output: Bit corresponding to a certain adjective in A.
+	JSR get_adjective		;> Input: Index of the bottom block in A. Output: Bit corresponding to a certain adjective in A.
 	JSR set_property
-
-	;BRA increment_loop
 
 increment_loop:
 	; Processor flags: A is 16-bit, X/Y are 16-bit.
 
-	INC !Index		;\ Increment the loop counter and continue the block search.
+	INC !Index			;\ Increment the loop counter and continue the block search.
 	JMP block_search	;/
 
 change_state:
 	; Processor flags: A is 16-bit, X/Y are 16-bit.
 
-	SEP #$20		;> Set A to 8-bit, keeping the X/Y registers 16-bit.
+	SEP #$20			;> Set A to 8-bit, keeping the X/Y registers 16-bit.
 
-	LDA !Subject+$0000	;\
-	AND #$08		;| If the adjective for "DEMO" is "YELLOW"...
-	CMP #$08		;|
+	LDA !Subject+$0000	;\ If the adjective for "DEMO" is "YELLOW"...
+	AND #$08			;|
+	CMP #$08			;|
 	BEQ demo_yellow		;/ ...then change state to Cape Demo.
 
-	LDA !Subject+$0000	;\
-	AND #$04		;| Else, if the adjective for "DEMO" is "RED"...
-	CMP #$04		;|
+	LDA !Subject+$0000	;\ Else, if the adjective for "DEMO" is "RED"...
+	AND #$04			;|
+	CMP #$04			;|
 	BEQ demo_red		;/ ...then change state to Fire Demo.
 
-	LDA !Subject+$0000	;\
-	AND #$02		;| Else, if the adjective for "DEMO" is "BLUE"...
-	CMP #$02		;|
+	LDA !Subject+$0000	;\ Else, if the adjective for "DEMO" is "BLUE"...
+	AND #$02			;|
+	CMP #$02			;|
 	BEQ demo_blue		;/ ...then change state to Big Demo.
 
-	LDA !Subject+$0000	;\
-	AND #$01		;| Else, if the adjective for "DEMO" is "GREEN"...
-	CMP #$01		;|
+	LDA !Subject+$0000	;\ Else, if the adjective for "DEMO" is "GREEN"...
+	AND #$01			;|
+	CMP #$01			;|
 	BEQ demo_green		;/ ...then change state to Green Demo. (Todo: Change to Iris graphics, or give Demo a green palette.)
 
 	BRA demo_small		;> Else, change state to Small Demo.
@@ -129,7 +119,7 @@ demo_blue:
 	STA $19
 	BRA +
 
-demo_green:			;> Todo: Change to Iris graphics, or give Demo a green palette.
+demo_green:				;> Todo: Change to Iris graphics, or give Demo a green palette.
 	LDA #$00
 	STA $19
 	BRA +
@@ -139,77 +129,77 @@ demo_small:
 	STA $19
 +
 	LDX #$0000
-	LDA !Subject+$0002	;\
-	AND #$02		;| If the adjective for "SWITCH" is "BLUE"...
-	CMP #$02		;|
+	LDA !Subject+$0002	;\ If the adjective for "SWITCH" is "BLUE"...
+	AND #$02			;|
+	CMP #$02			;|
 	BEQ switch_blue		;/ ...then change the tiles to that of a Blue Switch.
 
 	BRA switch_null		;> Else, change the tiles to that of a Null Switch.
 
 switch_blue:
 	PHB : PHK : PLB
-	REP #$20		;> Reset A to 16-bit.
-	LDA SwitchY,X		;\ Load the y-coordinate of the Null Switch tile currently indicated by X.
-	STA $98			;/
-	LDA SwitchX,X		;\ Load the x-coordinate of the Null Switch tile currently indicated by X.
-	STA $9A			;/
-	LDA SwitchBlue,X	;> Load the Map16 value of the Blue Switch tile currently indicated by X.
+	REP #$20			;> Reset A to 16-bit.
+	LDA.l SwitchY,X		;\ Load the y-coordinate of the Null Switch tile currently indicated by X.
+	STA $98				;/
+	LDA.l SwitchX,X		;\ Load the x-coordinate of the Null Switch tile currently indicated by X.
+	STA $9A				;/
+	LDA.l SwitchBlue,X	;> Load the Map16 value of the Blue Switch tile currently indicated by X.
 	JSR change_map16	;> With the (x,y)-coordinates and the Map16 value set, we can now update the Map16 to a Blue Switch tile.
-	SEP #$20		;> Set A to 8-bit.
+	SEP #$20			;> Set A to 8-bit.
 	PLB
 
-	INX #2			;\ If we didn't reach the end of the data table yet, then continue to change the Map16 blocks to the Blue Switch.
-	CPX #$0008		;| Note that we need to increment the index register twice, since we are using "dw" instead of "db" for the tables.
+	INX #2				;\ If we didn't reach the end of the data table yet, then continue to change the Map16 blocks to the Blue Switch.
+	CPX #$0008			;| Note that we need to increment the index register twice, since we are using "dw" instead of "db" for the tables.
 	BNE switch_blue		;/
 
 	BRA +
 
 switch_null:
 	PHB : PHK : PLB
-	REP #$20		;> Reset A to 16-bit.
-	LDA SwitchY,X		;\ Load the y-coordinate of the Blue Switch tile currently indicated by X.
-	STA $98			;/
-	LDA SwitchX,X		;\ Load the x-coordinate of the Blue Switch tile currently indicated by X.
-	STA $9A			;/
-	LDA SwitchNull,X	;> Load the Map16 value of the Null Switch tile currently indicated by X.
+	REP #$20			;> Reset A to 16-bit.
+	LDA.l SwitchY,X		;\ Load the y-coordinate of the Blue Switch tile currently indicated by X.
+	STA $98				;/
+	LDA.l SwitchX,X		;\ Load the x-coordinate of the Blue Switch tile currently indicated by X.
+	STA $9A				;/
+	LDA.l SwitchNull,X	;> Load the Map16 value of the Null Switch tile currently indicated by X.
 	JSR change_map16	;> With the (x,y)-coordinates and the Map16 value set, we can now update the Map16 to a Null Switch tile.
-	SEP #$20		;> Set A to 8-bit.
+	SEP #$20			;> Set A to 8-bit.
 	PLB
 
-	INX #2			;\ If we didn't reach the end of the data table yet, then continue to change the Map16 blocks to the Blue Switch.
-	CPX #$0008		;| Note that we need to increment the index register twice, since we are using "dw" instead of "db" for the tables.
+	INX #2				;\ If we didn't reach the end of the data table yet, then continue to change the Map16 blocks to the Blue Switch.
+	CPX #$0008			;| Note that we need to increment the index register twice, since we are using "dw" instead of "db" for the tables.
 	BNE switch_null		;/
 +
-	LDX #$0015		;> Initialize the number of sprite slots to search for Catnip (for SA-1, 0x15 = 21 slots, plus the zeroth slot).
+	LDX #$0015			;> Initialize the number of sprite slots to search for Catnip (for SA-1, 0x15 = 21 slots, plus the zeroth slot).
 
 catnip_search:
-	LDA !9E,X		;\
-	CMP #$35		;| Loop through all of the sprite slots until Catnip is found.
+	LDA !9E,X			;\ Loop through all of the sprite slots until Catnip is found.
+	CMP #$35			;|
 	BEQ catnip_found	;| When found, Catnip's index is in X.
-	CPX #$FFFF		;|
-	BEQ exit		;| Exit if no Catnip was found after all sprite slots have been searched (i.e., the index underflows).
-	DEX			;|
+	CPX #$FFFF			;|
+	BEQ exit			;| Exit if no Catnip was found after all sprite slots have been searched (i.e., the index underflows).
+	DEX					;|
 	BRA catnip_search	;/
 
 catnip_found:
-	LDA !Subject+$0001	;\
-	AND #$08		;| If the adjective for "CATNIP" is "YELLOW"...
-	CMP #$08		;|
+	LDA !Subject+$0001	;\ If the adjective for "CATNIP" is "YELLOW"...
+	AND #$08			;|
+	CMP #$08			;|
 	BEQ catnip_yellow	;/ ...then set Catnip's palette to yellow.
 
-	LDA !Subject+$0001	;\
-	AND #$04		;| Else, if the adjective for "CATNIP" is "RED"...
-	CMP #$04		;|
+	LDA !Subject+$0001	;\ Else, if the adjective for "CATNIP" is "RED"...
+	AND #$04			;|
+	CMP #$04			;|
 	BEQ catnip_red		;/ ...then set Catnip's palette to red.
 
-	LDA !Subject+$0001	;\
-	AND #$02		;| Else, if the adjective for "CATNIP" is "BLUE"...
-	CMP #$02		;|
+	LDA !Subject+$0001	;\ Else, if the adjective for "CATNIP" is "BLUE"...
+	AND #$02			;|
+	CMP #$02			;|
 	BEQ catnip_blue		;/ ...then set Catnip's palette to blue.
 
-	LDA !Subject+$0001	;\
-	AND #$01		;| Else, if the adjective for "CATNIP" is "GREEN"...
-	CMP #$01		;|
+	LDA !Subject+$0001	;\ Else, if the adjective for "CATNIP" is "GREEN"...
+	AND #$01			;|
+	CMP #$01			;|
 	BEQ catnip_green	;/ ...then set Catnip's palette to green.
 
 	BRA catnip_green	;> Else, set Catnip's palette to green by default.
@@ -238,10 +228,10 @@ catnip_green:
 exit:
 	; Processor flags: A is 16-bit, X/Y are 16-bit.
 
-	SEP #$30		;> Set A and the X/Y registers to 8-bit.
+	SEP #$30			;> Set A and the X/Y registers to 8-bit.
 	STZ !BlockSet		;> Zero out the "block is set" flag for the next run.
-	STZ !Subject+$0000	;\
-	STZ !Subject+$0001	;| Zero out the "DEMO", "CATNIP", and "SHELL" property bytes, too.
+	STZ !Subject+$0000	;\ Zero out the "DEMO", "CATNIP", and "SHELL" property bytes, too.
+	STZ !Subject+$0001	;|
 	STZ !Subject+$0002	;/
 	RTL
 
@@ -253,54 +243,54 @@ get_index_left:
 	; Preconditions: A is 16-bit, X/Y are 16-bit.
 	; Output: Index of the left block in A.
 
-	LDA !Index		;\
-	AND #$000F		;| Check if the block is on the leftmost screen boundary (i.e., index ends in zero).
+	LDA !Index		;\ Check if the block is on the leftmost screen boundary (i.e., index ends in zero).
+	AND #$000F		;|
 	BNE +			;/ If not, then the block is not on the leftmost screen boundary.
 
-	LDA !Index		;\
-	SEC			;| Else, need to subtract the entire screen offset from the index.
+	LDA !Index		;\ Else, need to subtract the entire screen offset from the index.
+	SEC				;|
 	SBC #$01A1		;|
-	RTS			;/
+	RTS				;/
 +
-	LDA !Index		;\
-	DEC A			;| If the block is not on the leftmost screen boundary, then we can just decrement the index.
-	RTS			;/
+	LDA !Index		;\ If the block is not on the leftmost screen boundary, then we can just decrement the index.
+	DEC A			;|
+	RTS				;/
 
 get_index_right:
 	; Preconditions: A is 16-bit, X/Y are 16-bit.
 	; Output: Index of the right block in A.
 
-	LDA !Index		;\
-	AND #$000F		;| Check if the block is on the rightmost screen boundary (i.e., index ends in 0xF).
+	LDA !Index		;\ Check if the block is on the rightmost screen boundary (i.e., index ends in 0xF).
+	AND #$000F		;|
 	CMP #$000F		;|
 	BNE +			;/ If not, then the block is not on the rightmost screen boundary.
 
-	LDA !Index		;\
-	CLC			;| Else, need to add the entire screen offset to the index.
+	LDA !Index		;\ Else, need to add the entire screen offset to the index.
+	CLC				;|
 	ADC #$01A1		;|
-	RTS			;/
+	RTS				;/
 +
-	LDA !Index		;\
-	INC A			;| If the block is not on the rightmost screen boundary, then we can just increment the index.
-	RTS			;/
+	LDA !Index		;\ If the block is not on the rightmost screen boundary, then we can just increment the index.
+	INC A			;|
+	RTS				;/
 
 get_index_top:
 	; Preconditions: A is 16-bit, X/Y are 16-bit.
 	; Output: Index of the top block in A.
 
-	LDA !Index		;\
-	SEC			;| Subtract the row offset from the index.
+	LDA !Index		;\ Subtract the row offset from the index.
+	SEC				;|
 	SBC #$0010		;|
-	RTS			;/
+	RTS				;/
 
 get_index_bottom:
 	; Preconditions: A is 16-bit, X/Y are 16-bit.
 	; Output: Index of the bottom block in A.
 
-	LDA !Index		;\
-	CLC			;| Add the row offset to the index.
+	LDA !Index		;\ Add the row offset to the index.
+	CLC				;|
 	ADC #$0010		;|
-	RTS			;/
+	RTS				;/
 
 get_subject:
 	; Preconditions: A is 16-bit, X/Y are 16-bit.
@@ -308,73 +298,73 @@ get_subject:
 	; Output: #$0001 in A if "DEMO", #$0002 in A if "CATNIP", #$0003 in A if "SHELL", #$0000 in A otherwise.
 	; Output: Offset into the subject property byte table in Y (#$0000 if "DEMO", #$0001 if "CATNIP", #$0002 if "SHELL", #$0003 otherwise).
 
-	TAX			;> Transfer the Map16 index in A to X.
-	SEP #$20		;> Set A to 8-bit, keeping the X/Y registers 16-bit.
+	TAX						;> Transfer the Map16 index in A to X.
+	SEP #$20				;> Set A to 8-bit, keeping the X/Y registers 16-bit.
 	LDA !Map16TableHigh,X	;> Load the high byte of the Map16 block into the low byte of A.
-	XBA			;> Swap the low byte of A into its high byte.
+	XBA						;> Swap the low byte of A into its high byte.
 	LDA !Map16TableLow,X	;> Load the low byte of the Map16 block into the low byte of A.
-	REP #$20		;> Reset A to 16-bit.
+	REP #$20				;> Reset A to 16-bit.
 
-	LDY #$0000		;\
+	LDY #$0000		;\ If "DEMO" block, then return #$0001 in A and #$0000 in Y.
 	CMP #$1601		;|
-	BNE +			;| If "DEMO" block, then return #$0001 in A and #$0000 in Y.
+	BNE +			;|
 	LDA #$0001		;|
-	RTS			;/
+	RTS				;/
 +
-	INY			;\
+	INY				;\ Else, if "CATNIP" block, return #$0002 in A and #$0001 in Y.
 	CMP #$1607		;|
-	BNE +			;| Else, if "CATNIP" block, return #$0002 in A and #$0001 in Y.
+	BNE +			;|
 	LDA #$0002		;|
-	RTS			;/
+	RTS				;/
 +
-	INY			;\
+	INY				;\ Else, if "SHELL" block, return #$0003 in A and #$0002 in Y.
 	CMP #$1608		;|
-	BNE +			;| Else, if "SHELL" block, return #$0003 in A and #$0002 in Y.
+	BNE +			;|
 	LDA #$0003		;|
-	RTS			;/
+	RTS				;/
 +
-	INY			;\
-	LDA #$0000		;| Else, return #$0000 in A and #$0003 in Y.
-	RTS			;/
+	INY				;\ Else, return #$0000 in A and #$0003 in Y.
+	LDA #$0000		;|
+	RTS				;/
 
 get_adjective:
 	; Preconditions: A is 16-bit, X/Y are 16-bit.
 	; Input: Map16 block index in A.
 
-	TAX			;> Transfer the Map16 index in A to X.
-	SEP #$20		;> Set A to 8-bit, keeping the X/Y registers 16-bit.
+	TAX						;> Transfer the Map16 index in A to X.
+	SEP #$20				;> Set A to 8-bit, keeping the X/Y registers 16-bit.
 	LDA !Map16TableHigh,X	;> Load the high byte of the Map16 block into the low byte of A.
-	XBA			;> Swap the low byte of A into its high byte.
+	XBA						;> Swap the low byte of A into its high byte.
 	LDA !Map16TableLow,X	;> Load the low byte of the Map16 block into the low byte of A.
-	REP #$20		;> Reset A to 16-bit.
+	REP #$20				;> Reset A to 16-bit.
 
-	CMP #$1604		;\
-	BNE +			;| If "GREEN" block, then return #$0001 in A (set bit 0).
+	CMP #$1604		;\ If "GREEN" block, then return #$0001 in A (set bit 0).
+	BNE +			;|
 	LDA #$0001		;|
-	RTS			;/
+	RTS				;/
 +
-	CMP #$1603		;\
-	BNE +			;| Else, if "BLUE" block, return #$0002 in A (set bit 1).
+	CMP #$1603		;\ Else, if "BLUE" block, return #$0002 in A (set bit 1).
+	BNE +			;|
 	LDA #$0002		;|
-	RTS			;/
+	RTS				;/
 +
-	CMP #$1605		;\
-	BNE +			;| Else, if "RED" block, return #$0004 in A (set bit 2).
+	CMP #$1605		;\ Else, if "RED" block, return #$0004 in A (set bit 2).
+	BNE +			;|
 	LDA #$0004		;|
-	RTS			;/
+	RTS				;/
 +
-	CMP #$1606		;\
-	BNE +			;| Else, if "YELLOW" block, return #$0008 in A (set bit 3).
+	CMP #$1606		;\ Else, if "YELLOW" block, return #$0008 in A (set bit 3).
+	BNE +			;|
 	LDA #$0008		;|
-	RTS			;/
+	RTS				;/
 +
 	LDA #$0000		;\ Else, return #$0000 in A (don't set any bits).
-	RTS			;/
+	RTS				;/
 
 set_property:
 	SEP #$20		;> Set A to 8-bit, keeping the X/Y registers 16-bit.
-	ORA !Subject,Y		;\ Set the bits in the subject's (Y) property byte based on their adjective (A).
-	STA !Subject,Y		;/
+	ORA !Subject,Y	;\ Set the bits in the subject's (Y) property byte based on their adjective (A).
+	STA !Subject,Y	;/
 	REP #$20		;> Reset A to 16-bit.
 	RTS
 
@@ -449,7 +439,7 @@ endif
 	STA $08
 	AND.w #$00F0
 	ASL #2			; 0000 00YY YY00 0000
-	XBA			; YY00 0000 0000 00YY
+	XBA				; YY00 0000 0000 00YY
 	STA $06
 	TXA
 	SEP #$20
