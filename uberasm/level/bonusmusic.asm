@@ -27,4 +27,10 @@ init:
 	BRA .store
 .store
 	STA $1DFB|!addr
+	
+	STZ $60
+	STZ $61
+	STZ $62
+	STZ $63
+	
 	RTL

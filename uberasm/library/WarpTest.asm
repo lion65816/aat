@@ -17,7 +17,7 @@
 
 !ButtonRAM      = $18
 !ButtonValue    = %00100000
-!OpenSFX        = $0E
+!OpenSFX        = $08
 !OpenSFXAddr    = $1DFC|!addr
 !GroundTime     = $01
 !MaxYSpeed      = $01
