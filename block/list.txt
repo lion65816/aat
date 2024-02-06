@@ -225,8 +225,7 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 2CF0:25 1-Up.asm
 2D8F:130 boost_up.asm
 2D8C:130 SpinJumpPass.asm
-31EA:25 ScreenExitTeleport.asm
-31FA:130 ScreenExitTeleport.asm
+31FA:130 ScreenExitTeleport2.asm
 3300:25 BlkMus1.asm
 3301:25 no_yoshi.asm
 3525:130 infinite_throwblk.asm

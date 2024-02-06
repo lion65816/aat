@@ -2,14 +2,16 @@
 ; Print overworld map names as sprite tiles.
 ;=========================================================
 
-!NumTiles = $12		;> 18 8x8 tiles
-!TileOrigin = $C65F	;> Reference coordinate (YYXX)
+!NumTiles = $20		;> 32 8x8 tiles: 16 on top, 16 on bottom
+!TileOrigin = $0770	;> Reference coordinate (YYXX)
 !TileProp = $3000	;> High byte contains the YXPPCCCT
 
 ;=================================
 ; Main routine
 ;=================================
 
+load:
+init:
 main:
 	LDX $0DB3|!addr
 	LDA $1F11|!addr,x
@@ -133,11 +135,26 @@ Draw:
 TileYX:
 !counter #= !NumTiles
 !tempcoordinate #= !TileOrigin
+while !counter > !NumTiles/2
+	dw !tempcoordinate
+	!tempcoordinate #= !tempcoordinate+$0008
+	!counter #= !counter-1
+endif
+!tempcoordinate #= !TileOrigin+$0800
 while !counter > 0
 	dw !tempcoordinate
 	!tempcoordinate #= !tempcoordinate+$0008
 	!counter #= !counter-1
 endif
+
+;TileYX:
+;!counter #= !NumTiles
+;!tempcoordinate #= !TileOrigin
+;while !counter > 0
+;	dw !tempcoordinate
+;	!tempcoordinate #= !tempcoordinate+$0008
+;	!counter #= !counter-1
+;endif
 
 ;=================================
 ; Defines to make it easier to
@@ -177,32 +194,46 @@ endif
 ; Map name data
 ;=================================
 
+;blank:
+;	dw !BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL
+;	dw !BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL
+
 blank:
-	dw !BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL
+	dw !__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+	dw !__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
 
 text1:
-	dw !F_,!o_,!o_,!d_,!__,!D_,!e_,!s_,!e_,!r_,!t_,!__,!I_,!s_,!l_,!a_,!n_,!d_
+	dw !__,!__,!F_,!o_,!o_,!d_,!__,!D_,!e_,!s_,!e_,!r_,!t_,!__,!__,!__
+	dw !__,!__,!__,!__,!__,!I_,!s_,!l_,!a_,!n_,!d_,!__,!__,!__,!__,!__
 
 text2:
-	dw !BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!H_,!e_,!a_,!v_,!e_,!n_
+	dw !__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+	dw !__,!__,!__,!__,!__,!H_,!e_,!a_,!v_,!e_,!n_,!__,!__,!__,!__,!__
 
 text3:
-	dw !BL,!BL,!BL,!BL,!O_,!n_,!e_,!__,!L_,!a_,!s_,!t_,!__,!T_,!h_,!i_,!n_,!g_
+	dw !__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+	dw !__,!O_,!n_,!e_,!__,!L_,!a_,!s_,!t_,!__,!T_,!h_,!i_,!n_,!g_,!__
 
 text4:
-	dw !BL,!R_,!e_,!s_,!o_,!r_,!t_,!__,!C_,!i_,!t_,!y_,!__,!B_,!a_,!n_,!f_,!f_
+	dw !__,!__,!R_,!e_,!s_,!o_,!r_,!t_,!__,!C_,!i_,!t_,!y_,!__,!__,!__
+	dw !__,!__,!__,!__,!__,!B_,!a_,!n_,!f_,!f_,!__,!__,!__,!__,!__,!__
 
 text5:
-	dw !BL,!BL,!BL,!BL,!T_,!h_,!e_,!__,!F_,!i_,!s_,!h_,!m_,!a_,!r_,!k_,!e_,!t_
+	dw !__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+	dw !__,!T_,!h_,!e_,!__,!F_,!i_,!s_,!h_,!m_,!a_,!r_,!k_,!e_,!t_,!__
 
 text6:
-	dw !BL,!BL,!BL,!BL,!T_,!h_,!e_,!__,!L_,!o_,!s_,!t_,!__,!W_,!o_,!o_,!d_,!s_
+	dw !__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+	dw !__,!T_,!h_,!e_,!__,!L_,!o_,!s_,!t_,!__,!W_,!o_,!o_,!d_,!s_,!__
 
 text7:
-	dw !BL,!BL,!BL,!BL,!BL,!N_,!E_,!G_,!A_,!T_,!I_,!V_,!E_,!__,!Z_,!O_,!N_,!E_
+	dw !__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+	dw !__,!N_,!E_,!G_,!A_,!T_,!I_,!V_,!E_,!__,!Z_,!O_,!N_,!E_,!__,!__
 
 text8:
-	dw !BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!BL,!D_,!e_,!__,!P_,!i_,!j_,!p_
+	dw !__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+	dw !__,!__,!__,!__,!D_,!e_,!__,!P_,!i_,!j_,!p_,!__,!__,!__,!__,!__
 
 text9:
-	dw !BL,!BL,!BL,!BL,!BL,!P_,!i_,!e_,!d_,!m_,!o_,!n_,!t_,!__,!H_,!i_,!l_,!l_
+	dw !__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+	dw !__,!P_,!i_,!e_,!d_,!m_,!o_,!n_,!t_,!__,!H_,!i_,!l_,!l_,!__,!__
