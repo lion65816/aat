@@ -177,3 +177,7 @@ db $D8,$28,$D9,$28,$DA,$28,$DB,$28,$DC,$28,$DD,$28,$DE,$28,$DF,$28
 db $58,$29,$59,$29,$5A,$29,$5B,$29,$5C,$29,$5D,$29,$5E,$29,$5F,$29
 
 db $FF
+
+; Change palette row for the Yoshi egg.
+org $0CD865|!bank
+db $2F			;> Originally: $21
