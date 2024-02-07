@@ -136,6 +136,7 @@ level:
 0E4	Credits.asm
 0E5	Credits.asm
 0EC	SPECIAL.asm
+0EE  SPECIAL_EE.asm
 0F0	F0_scroll.asm
 0F2	freescrollbabey.asm
 0F3  MultiStepAutoscroll.asm
@@ -216,7 +217,7 @@ level:
 159	RemoveYoshi.asm
 15B	craigdarroch.asm
 15D	whales_main.asm
-15E	FilterYoshi.asm
+15E	FilterYoshi_15E.asm
 15F	trivia.asm
 160	FilterYoshi.asm
 161	FilterYoshi.asm
