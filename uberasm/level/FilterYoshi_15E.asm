@@ -7,7 +7,7 @@ main:
 	LDA $1F28|!addr
 	;CMP #$00
 	BEQ .flag
-	LDA #$01  ;Bit value
+	LDA #$FF  ;Bit value
 	STA $7FC0FD
 	JML .ret
 	.flag
