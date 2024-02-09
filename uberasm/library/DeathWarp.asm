@@ -90,6 +90,7 @@ init:
 	STZ !DiedOnce
 	STZ !StartingColorCounter
 	STZ !ColorCounter
+	STZ $18CA|!addr				;> Need to zero out the high byte of !ColorCounter for when it's used in 16-bit mode.
 	STZ !PaletteFrames
 	STZ !RetryRequested
 	REP #$20
@@ -700,7 +701,7 @@ upload_palettes:
 	BRA -						;/
 +
 	SEP #$30
-	STZ $0690					;> 00 byte to mark the end of the color data
+	STZ $0690|!addr				;> 00 byte to mark the end of the color data
 	STZ $0680|!addr				;> $0680 = 0: upload from $0682
 	PLB
 	RTS
