@@ -27,7 +27,7 @@ level:
 01A	PressuredWater.asm
 01B	1B.asm
 01F	LevelIntro.asm
-020	leafspawn_uberASM.asm
+020	leafspawn_uberASM_20.asm
 021	LevelIntro.asm
 023	LevelIntroV2.asm
 02A	Thwompire2A.asm
