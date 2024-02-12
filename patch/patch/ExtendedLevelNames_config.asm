@@ -260,8 +260,8 @@ NameData:
  db "    watch out!     "
  db "  bad word ahead   "
  ;Level 12E
- db "                   "
- db "                   "
+ db "Augustus Broadsword"
+ db " Camp and Digsite  "
  ;Level 12F
  db " Where The Whales  "
  db "  Come To Rest    *"

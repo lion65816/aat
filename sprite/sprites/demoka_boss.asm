@@ -14,12 +14,13 @@
 !BossEnrageHP = $21		;> $32 = 50 HP, $20 = 32 HP, $05 = 5 HP
 !Cooldown = $14			;> $0F = 15 frames, $14 = 20 frames, $1E = 30 frames
 
-!BossCurrentHP = $18C5|!addr	;\
-!PhaseNumber = $18C6|!addr	;|
-!Animation = $18C7|!addr	;| Free RAM addresses.
-!Enraged = $18C8|!addr		;|
-!PhaseCounter = $18C9|!addr	;|
-!SpawnedBullets = $18CA|!addr	;/
+; Free RAM addresses.
+!BossCurrentHP = $18C5|!addr
+!PhaseNumber = $18C6|!addr
+!Animation = $18C7|!addr
+!Enraged = $18C8|!addr
+!PhaseCounter = $18C9|!addr
+!SpawnedBullets = $18CA|!addr
 
 ;=================================
 ; INIT and MAIN Wrappers
@@ -33,29 +34,29 @@ print "INIT ",pc
 	STZ !Enraged
 	STZ !PhaseCounter
 	STZ !SpawnedBullets
-	LDA #$FF		;\ Initialize the frame counter.
-	STA !154C,x		;/
+	LDA #$FF			;\ Initialize the frame counter.
+	STA !154C,x			;/
 
-	LDA #$02		;\ Initialize the first extra property byte of this custom sprite.
+	LDA #$02			;\ Initialize the first extra property byte of this custom sprite.
 	STA !7FAB28,x		;/ #$02 = the sprite follows the player
 
-	%SubHorzPos()		;\
-	TYA			;| Determine the sprite's initial horizontal direction.
-	STA $157C,x		;/
-	%SubVertPos()		;\
-	TYA			;| Determine the sprite's initial vertical direction.
-	STA $151C,x		;/
-	LDA #$01		;\ Force the sprite to face left, initially.
-	STA !157C,x		;/
+	%SubHorzPos()		;\ Determine the sprite's initial horizontal direction.
+	TYA					;|
+	STA $157C,x			;/
+	%SubVertPos()		;\ Determine the sprite's initial vertical direction.
+	TYA					;|
+	STA $151C,x			;/
+	LDA #$01			;\ Force the sprite to face left, initially.
+	STA !157C,x			;/
 	RTL
 
 print "MAIN ",pc
-	PHB			;\
-	PHK			;|
-	PLB			;| Main sprite function, just calls local subroutine.
-	JSR Boss		;|
-	PLB			;|
-	RTL			;/
+	PHB					;\ Main sprite function, just calls local subroutine.
+	PHK					;|
+	PLB					;|
+	JSR Boss			;|
+	PLB					;|
+	RTL					;/
 
 ;========================
 ; Main routine
@@ -63,18 +64,19 @@ print "MAIN ",pc
 
 Boss:
 	JSR Intro_Sequence	;> Phases 0-2
-	JSR Enrage		;> Phases 5-6
+	JSR Enrage			;> Phases 5-6
 	JSR Spawn_Bullets	;> Phases 7-8
 	JSR Death_Sequence	;> Phases 9-10
 
-	LDA !154C,x		;\
-	BNE +			;|
-	LDA !PhaseNumber	;| Every 255 frames,
-	CMP #$03		;| change the sprite's
-	BEQ .change_to_phase4	;| movement pattern.
-	CMP #$04		;|
-	BEQ .change_to_phase3	;|
-	BRA +			;/
+	; Every 255 frames, change the sprite's movement pattern.
+	LDA !154C,x
+	BNE +
+	LDA !PhaseNumber
+	CMP #$03
+	BEQ .change_to_phase4
+	CMP #$04
+	BEQ .change_to_phase3
+	BRA +
 .change_to_phase4
 	INC !PhaseNumber
 	INC !PhaseCounter
@@ -89,37 +91,37 @@ Boss:
 	BRA +
 +
 
-	LDA !PhaseNumber	;\
-	CMP #$03		;| Don't damage the sprite during the intro sequence.
+	LDA !PhaseNumber	;\ Don't damage the sprite during the intro sequence.
+	CMP #$03			;|
 	BCC .no_damage		;/
-	CMP #$05		;\
-	BEQ .no_damage		;| Nor during the enrage sequence.
-	CMP #$06		;|
+	CMP #$05			;\ Nor during the enrage sequence.
+	BEQ .no_damage		;|
+	CMP #$06			;|
 	BEQ .no_damage		;/
-	CMP #$09		;\
-	BEQ .no_damage		;| Nor during the death sequence.
-	CMP #$0A		;|
+	CMP #$09			;\ Nor during the death sequence.
+	BEQ .no_damage		;|
+	CMP #$0A			;|
 	BEQ .no_damage		;/
 
-	LDA !1540,x		;\ If the cooldown timer is not zero,
+	LDA !1540,x			;\ If the cooldown timer is not zero,
 	BNE .no_damage		;/ then the sprite cannot be damaged.
 	%FireballContact()	;\ Otherwise, check if a fireball made contact with the sprite.
 	BCC .no_damage		;/ If not, then do not damage the sprite.
 	DEC !BossCurrentHP	;> Otherwise, the sprite loses 1 HP.
 	LDA #!Cooldown		;\ Set the cooldown timer to give the
-	STA !1540,x		;/ sprite some invincibility frames.
-	LDA !BossCurrentHP	;\
-	BNE .no_damage		;|
-	LDA #$09		;| Start the death sequence when the
-	STA !PhaseNumber	;| boss has zero HP.
-	LDA #$FF		;|
-	STA !154C,x		;/
+	STA !1540,x			;/ sprite some invincibility frames.
+	LDA !BossCurrentHP	;\ Start the death sequence when the
+	BNE .no_damage		;| boss has zero HP.
+	LDA #$09			;|
+	STA !PhaseNumber	;|
+	LDA #$FF			;|
+	STA !154C,x			;/
 
 .no_damage
-	LDA !1540,x		;\ Draw the sprite graphics normally
+	LDA !1540,x			;\ Draw the sprite graphics normally
 	BEQ .draw_gfx		;/ if the cooldown timer is zero.
-	LSR			;\ Otherwise, draw the graphics every other frame to make the
-	AND #$01		;| sprite flicker, to indicate that it has been damaged.
+	LSR					;\ Otherwise, draw the graphics every other frame to make the
+	AND #$01			;| sprite flicker, to indicate that it has been damaged.
 	BNE .check_phase	;/
 
 .draw_gfx
@@ -154,35 +156,35 @@ Intro_Sequence:
 	BEQ .phase2
 	BNE .return
 .phase0
-	LDA !154C,x		;\
-	CMP #$60		;| For 159 frames, the boss rises
-	BEQ .change_to_phase1	;| up one pixel at a time.
-	DEC !D8,x		;|
-	BRA .return		;/
+	LDA !154C,x				;\ For 159 frames, the boss rises
+	CMP #$60				;| up one pixel at a time.
+	BEQ .change_to_phase1	;|
+	DEC !D8,x				;|
+	BRA .return				;/
 .change_to_phase1
 	LDA #$FF
 	STA !154C,x
 	INC !PhaseNumber
 .phase1
-	LDA !154C,x		;\
-	CMP #$80		;| For 127 frames, the boss
-	BEQ .change_to_phase2	;| waits in place.
-	BRA .return		;/
+	LDA !154C,x				;\ For 127 frames, the boss
+	CMP #$80				;| waits in place.
+	BEQ .change_to_phase2	;|
+	BRA .return				;/
 .change_to_phase2
 	LDA #$FF
 	STA !154C,x
 	INC !PhaseNumber
 .phase2
-	LDA !154C,x		;\
-	CMP #$80		;| For 127 frames, the boss
-	BEQ .change_to_phase3	;| does the winking pose.
-	JMP .return		;/
+	LDA !154C,x				;\ For 127 frames, the boss
+	CMP #$80				;| does the winking pose.
+	BEQ .change_to_phase3	;|
+	JMP .return				;/
 .change_to_phase3
-	LDA #$52		;\
-	STA $1DFB|!addr		;| Change the music and enter
-	LDA #$FF		;| the main AI loop.
-	STA !154C,x		;|
-	INC !PhaseNumber	;/
+	LDA #$52				;\ Change the music and enter
+	STA $1DFB|!addr			;| the main AI loop.
+	LDA #$FF				;|
+	STA !154C,x				;|
+	INC !PhaseNumber		;/
 .return
 	RTS
 
@@ -192,13 +194,13 @@ Intro_Sequence:
 ;=============================================
 
 X_Accel:
-	db $02,$FE,$06,$FA	;> The horizontal acceleration of the sprite.
+	db $02,$FE,$06,$FA		;> The horizontal acceleration of the sprite.
 Y_Accel:
-	db $02,$FE,$06,$FA	;> The vertical acceleration of the sprite.
+	db $02,$FE,$06,$FA		;> The vertical acceleration of the sprite.
 Max_X_Speed:
-	db $28,$D8,$38,$C8	;> The maximum horizontal speed of the sprite.
+	db $28,$D8,$38,$C8		;> The maximum horizontal speed of the sprite.
 Max_Y_Speed:
-	db $18,$E8,$28,$D8	;> The maximum vertical speed of the sprite.
+	db $18,$E8,$28,$D8		;> The maximum vertical speed of the sprite.
 
 Phase_3:
 	LDA !14C8,x
@@ -208,58 +210,58 @@ Phase_3:
 	JMP .return
 +
 
-	LDA $14			;\
-	CMP #$80		;|
-	BNE +			;|
-	LDA #$1A		;| Every 128 frames,
-	SEC			;| spawn a Homing Bullet.
-	STZ $00			;|
-	STZ $01			;|
-	STZ $02			;|
-	STZ $03			;|
-	%SpawnSprite2()		;/
+	LDA $14					;\ Every 128 frames,
+	CMP #$80				;| spawn a Homing Bullet.
+	BNE +					;|
+	LDA #$1A				;|
+	SEC						;|
+	STZ $00					;|
+	STZ $01					;|
+	STZ $02					;|
+	STZ $03					;|
+	%SpawnSprite2()			;/
 	TYX
-	LDA !166E,x		;\
-	AND #$CF		;| Can be killed with fireballs and cape.
-	STA !166E,x		;/
+	LDA !166E,x				;\ Can be killed with fireballs and cape.
+	AND #$CF				;|
+	STA !166E,x				;/
 +
 
-	JSL $01A7DC|!BankB	;> Process contact with the player.
+	JSL $01A7DC|!BankB		;> Process contact with the player.
 	BCC +
 	JSL $00F5B7|!BankB
 +
 
-	LDA $14			;\ only change speeds every fourth frame
-	AND #$03		;|
-	BNE .ApplySpeed		;/
+	LDA $14					;\ only change speeds every fourth frame
+	AND #$03				;|
+	BNE .ApplySpeed			;/
 
-	%SubHorzPos()		;\ 
-	TYA			;| Update the sprite's direction
-	STA !157C,x		;/ facing the player.
-	LDA !Enraged		;\
-	BEQ +			;| While enraged, increase the X speed.
-	INY #2			;/
+	%SubHorzPos()			;\ Update the sprite's direction
+	TYA						;| facing the player.
+	STA !157C,x				;/
+	LDA !Enraged			;\ While enraged, increase the X speed.
+	BEQ +					;|
+	INY #2					;/
 +
 	LDA !sprite_speed_x,x	;\ if max horizontal speed in the appropriate
-	CMP Max_X_Speed,y	;| direction achieved,
+	CMP Max_X_Speed,y		;| direction achieved,
 	BEQ .MaxXSpeedReached	;/ don't change horizontal speed
-	CLC			;\ else,
-	ADC X_Accel,y		;| accelerate in appropriate direction
+	CLC						;\ else,
+	ADC X_Accel,y			;| accelerate in appropriate direction
 	STA !sprite_speed_x,x	;/
 .MaxXSpeedReached
 	%SubVertPos()
-	LDA !Enraged		;\
-	BEQ +			;| While enraged, increase the Y speed.
-	INY #2			;/
+	LDA !Enraged			;\ While enraged, increase the Y speed.
+	BEQ +					;|
+	INY #2					;/
 +
 	LDA !sprite_speed_y,x	;\ if max vertical speed in the appropriate
-	CMP Max_Y_Speed,y	;| direction achieved,
-	BEQ .ApplySpeed		;/ don't change vertical speed
-	CLC			;\ else,
-	ADC Y_Accel,y		;| accelerate in appropriate direction
+	CMP Max_Y_Speed,y		;| direction achieved,
+	BEQ .ApplySpeed			;/ don't change vertical speed
+	CLC						;\ else,
+	ADC Y_Accel,y			;| accelerate in appropriate direction
 	STA !sprite_speed_y,x	;/
 .ApplySpeed
-	JSL $019138|!bank	;> Interact with blocks (or $01802A)
+	JSL $019138|!bank		;> Interact with blocks (or $01802A)
 	LDA !1588,x
 	AND #$03
 	BNE .x_collision
@@ -274,8 +276,8 @@ Phase_3:
 .y_collision
 	STZ !sprite_speed_y,x
 +
-	JSL $018022|!BankB	;> Update X position without gravity (apply X speed).
-	JSL $01801A|!BankB	;> Update Y position without gravity (apply Y speed).
+	JSL $018022|!BankB		;> Update X position without gravity (apply X speed).
+	JSL $01801A|!BankB		;> Update Y position without gravity (apply Y speed).
 .return
 	RTS
 
@@ -286,7 +288,7 @@ Phase_3:
 ;=============================================
 
 !DirCheckTime = $3F		;\ How many frames before checking if the player and sprite are facing in the same direction.
-				;/ Allowed values: 01,03,07,0F,1F,3F,7F,FF
+						;/ Allowed values: 01,03,07,0F,1F,3F,7F,FF
 
 XSpeeds:
 	db $18,$E8,$28,$D8
@@ -303,24 +305,24 @@ Phase_4:
 	LDA #$00
 	%SubOffScreen()
 
-	LDA $14			;\
-	CMP #$80		;|
-	BNE +			;|
-	LDA #$1A		;| Every 128 frames,
-	SEC			;| spawn a Homing Bullet.
-	STZ $00			;|
-	STZ $01			;|
-	STZ $02			;|
-	STZ $03			;|
+	LDA $14				;\ Every 128 frames,
+	CMP #$80			;| spawn a Homing Bullet.
+	BNE +				;|
+	LDA #$1A			;|
+	SEC					;|
+	STZ $00				;|
+	STZ $01				;|
+	STZ $02				;|
+	STZ $03				;|
 	%SpawnSprite2()		;/
 	TYX
-	LDA !166E,x		;\
-	AND #$CF		;| Can be killed with fireballs and cape.
-	STA !166E,x		;/
+	LDA !166E,x			;\ Can be killed with fireballs and cape.
+	AND #$CF			;|
+	STA !166E,x			;/
 +
 
 	JSL $01A7DC|!BankB	;\ Process contact with the player.
-	BCC +			;| If contact was made, then hurt the player.
+	BCC +				;| If contact was made, then hurt the player.
 	JSL $00F5B7|!BankB	;/
 +
 	LDA !7FAB28,x
@@ -361,21 +363,21 @@ Phase_4:
 
 .NoYCont
 	LDY !157C,x
-	LDA !Enraged		;\
-	BEQ +			;| While enraged, increase the X speed.
-	INY #2			;/
+	LDA !Enraged		;\ While enraged, increase the X speed.
+	BEQ +				;|
+	INY #2				;/
 +
 	LDA XSpeeds,y
 	STA !B6,x
 	LDY !151C,x
-	LDA !Enraged		;\
-	BEQ +			;| While enraged, increase the Y speed.
-	INY #2			;/
+	LDA !Enraged		;\ While enraged, increase the Y speed.
+	BEQ +				;|
+	INY #2				;/
 +
 	LDA YSpeeds,y
 	STA !AA,x
 
-	JSL $01802A		;> Update X/Y position, including gravity and block interaction.
+	JSL $01802A			;> Update X/Y position, including gravity and block interaction.
 .return:
 	RTS
 
@@ -403,13 +405,13 @@ Enrage:
 	BNE .return
 .phase5
 	STZ !SpawnedBullets	;> Reset this flag just in case the boss becomes enraged during phase 8.
-	LDA $14			;\
-	AND #$02		;| Play the coin SFX
-	BEQ +			;| every other frame.
-	LDA #$01		;|
+	LDA $14				;\ Play the coin SFX
+	AND #$02			;| every other frame.
+	BEQ +				;|
+	LDA #$01			;|
 	STA $1DFC|!addr		;|
-	BRA ++			;|
-+				;|
+	BRA ++				;|
++						;|
 	STZ $1DFC|!addr		;/
 ++
 	LDA !154C,x
@@ -466,13 +468,13 @@ Spawn_Bullets:
 .phase7
 	JSR BulletWarning
 
-	LDA $14			;\
-	AND #$02		;| Play the coin SFX
-	BEQ +			;| every other frame.
-	LDA #$01		;|
+	LDA $14				;\ Play the coin SFX
+	AND #$02			;| every other frame.
+	BEQ +				;|
+	LDA #$01			;|
 	STA $1DFC|!addr		;|
-	BRA ++			;|
-+				;|
+	BRA ++				;|
++						;|
 	STZ $1DFC|!addr		;/
 ++
 	LDA !154C,x
@@ -508,10 +510,10 @@ Spawn_Bullets:
 	BEQ +
 	DEX
 	BPL -
-	BRA ++			;> If no free slot found, then return.
+	BRA ++				;> If no free slot found, then return.
 +
-	LDA #$1C		;\
-	STA !9E,x		;| Spawn Bullet Bill.
+	LDA #$1C			;\ Spawn Bullet Bill.
+	STA !9E,x			;|
 	JSL $07F7D2|!BankB	;/
 	LDA #$01
 	STA !14C8,x
@@ -546,10 +548,10 @@ Spawn_Bullets:
 	BEQ +
 	DEX
 	BPL -
-	BRA ++			;> If no free slot found, then return.
+	BRA ++				;> If no free slot found, then return.
 +
-	LDA #$9F		;\
-	STA !9E,x		;| Spawn Banzai Bill.
+	LDA #$9F			;\ Spawn Banzai Bill.
+	STA !9E,x			;|
 	JSL $07F7D2|!BankB	;/
 	LDA #$01
 	STA !14C8,x
@@ -594,35 +596,35 @@ Death_Sequence:
 	JMP .return
 .phase9
 	PHX
-	LDX #!SprSize-3		;> Kill all bullets on the screen (skip the last two sprite slots).
+	LDX #!SprSize-3	;> Kill all bullets on the screen (skip the last two sprite slots).
 -
-	LDA !9E,x		;\
-	CMP #$9F		;| Check if the sprite is a Banzai Bill.
+	LDA !9E,x		;\ Check if the sprite is a Banzai Bill.
+	CMP #$9F		;|
 	BNE +			;/
-	LDA !14C8,x		;\
-	CMP #$08		;| If it's already killed, then branch.
+	LDA !14C8,x		;\ If it's already killed, then branch.
+	CMP #$08		;|
 	BCC +			;/
-	STZ $00			;\
-	STZ $01			;| Spawn a puff of smoke at the last position of the bullet.
-	LDA #$1B		;| The smoke lasts for 27 frames.
+	STZ $00			;\ Spawn a puff of smoke at the last position of the bullet.
+	STZ $01			;| The smoke lasts for 27 frames.
+	LDA #$1B		;|
 	STA $02			;|
 	LDA #$01		;|
-	%SpawnSmoke()		;/
+	%SpawnSmoke()	;/
 	LDA #$04		;\ Kill as if by a spinjump.
 	STA !14C8,x		;/
 +
-	LDA !7FAB9E,x		;\
-	CMP #$1A		;| Check if the sprite is a Homing Bill.
+	LDA !7FAB9E,x	;\ Check if the sprite is a Homing Bill.
+	CMP #$1A		;|
 	BNE +			;/
-	LDA !14C8,x		;\
-	CMP #$08		;| If it's already killed, then branch.
+	LDA !14C8,x		;\ If it's already killed, then branch.
+	CMP #$08		;|
 	BCC +			;/
-	STZ $00			;\
-	STZ $01			;| Spawn a puff of smoke at the last position of the bullet.
-	LDA #$1B		;| The smoke lasts for 27 frames.
+	STZ $00			;\ Spawn a puff of smoke at the last position of the bullet.
+	STZ $01			;| The smoke lasts for 27 frames.
+	LDA #$1B		;|
 	STA $02			;|
 	LDA #$01		;|
-	%SpawnSmoke()		;/
+	%SpawnSmoke()	;/
 	LDA #$04		;\ Kill as if by a spinjump.
 	STA !14C8,x		;/
 +
@@ -630,14 +632,14 @@ Death_Sequence:
 	BPL -
 	PLX
 
-	LDA $14			;\
-	AND #$02		;| Play the magic SFX
-	BEQ +			;| every other frame.
+	LDA $14			;\ Play the magic SFX
+	AND #$02		;| every other frame.
+	BEQ +			;|
 	LDA #$10		;|
-	STA $1DF9|!addr		;|
+	STA $1DF9|!addr	;|
 	BRA ++			;|
-+				;|
-	STZ $1DF9|!addr		;/
++					;|
+	STZ $1DF9|!addr	;/
 ++
 	LDA !154C,x
 	CMP #$80
@@ -654,15 +656,15 @@ Death_Sequence:
 	BRA .return
 .kill
 	LDA #$23		;\ Play Lemmy/Wendy fall SFX.
-	STA $1DF9|!addr		;/
+	STA $1DF9|!addr	;/
 	LDA #$02		;\ Kill as if by a shell.
 	STA !14C8,x		;/
 	LDA #$01		;\ Freeze the player on level end and enable boss sequence cutscene.
-	STA $13C6|!addr		;/
+	STA $13C6|!addr	;/
 	LDA #$FF		;\ Set level end timer.
-	STA $1493|!addr		;/
+	STA $1493|!addr	;/
 	LDA #$03		;\ Set the boss victory music.
-	STA $1DFB|!addr		;/
+	STA $1DFB|!addr	;/
 .return
 	RTS
 
@@ -671,49 +673,50 @@ Death_Sequence:
 ; Uses the MaxTile system to request OAM slots. Needs SA-1 v1.40.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-!NumWarningTiles = 3
+; Needs to be an even number of tiles because of how the bit table is set up.
+!NumWarningTiles = 4
 
 WarningYX:
-	dw $28F0,$68F0,$A8F0
+	dw $F8F0,$28F0,$68F0,$A8F0		;> Three warning indicators are shown (the first tile is drawn offscreen).
 
 BulletWarning:
-	LDY.b #$00+(!NumWarningTiles)		;> Request 3 tiles. Input parameter for call to MaxTile.
-	REP #$30				;> (As the index registers were 8-bit, this fills their high bytes with zeroes)
-	LDA.w #$0000				;> Maximum priority. Input parameter for call to MaxTile.
-	JSL $0084B0				;\ Request MaxTile slots (does not modify scratch ram at the time of writing).
-						;| Returns 16-bit pointer to the OAM general buffer in $3100.
-						;/ Returns 16-bit pointer to the OAM attribute buffer in $3102.
-	BCC +					;\ Carry clear: Failed to get OAM slots, abort.
-						;/ ...should never happen, since this will be executed before sprites, but...
+	LDY.b #$00+(!NumWarningTiles)	;> Request 3 tiles. Input parameter for call to MaxTile.
+	REP #$30						;> (As the index registers were 8-bit, this fills their high bytes with zeroes)
+	LDA.w #$0000					;> Maximum priority. Input parameter for call to MaxTile.
+	JSL $0084B0						;\ Request MaxTile slots (does not modify scratch ram at the time of writing).
+									;| Returns 16-bit pointer to the OAM general buffer in $3100.
+									;/ Returns 16-bit pointer to the OAM attribute buffer in $3102.
+	BCC +							;\ Carry clear: Failed to get OAM slots, abort.
+									;/ ...should never happen, since this will be executed before sprites, but...
 	PHX
 
-	LDX $3100				;> Main index (16-bit pointer to the OAM general buffer)
+	LDX $3100								;> Main index (16-bit pointer to the OAM general buffer)
 	LDY.w #$0000+((!NumWarningTiles-1)*2)	;> Loop index
 -
-	LDA WarningYX,y				;\ Load X and Y coordinates
-	STA $400000,x				;/
+	LDA WarningYX,y			;\ Load X and Y coordinates
+	STA $400000,x			;/
 	LDA $14
 	AND #$0004				;> Change the palette every four frames (flashing).
 	BEQ .palette1
-	LDA.w #$381D				;> High byte: YXPP CCCT, Low byte: Tile number
+	LDA.w #$381D			;> High byte: YXPP CCCT, Low byte: Tile number
 	BRA .palette2
 .palette1
-	LDA.w #$341D				;> High byte: YXPP CCCT, Low byte: Tile number
+	LDA.w #$341D			;> High byte: YXPP CCCT, Low byte: Tile number
 .palette2
 	STA $400002,x
 
-	INX #4					;\
-	DEY #2					;| Move to next slot and loop
+	INX #4					;\ Move to next slot and loop
+	DEY #2					;|
 	BPL -					;/
 
-	LDX $3102				;> Bit table index (16-bit pointer to the OAM attribute buffer)
+	LDX $3102							;> Bit table index (16-bit pointer to the OAM attribute buffer)
 	LDY.w #$0000+(!NumWarningTiles)/2-1	;> Loop index
-	LDA.w #$0000				;> Small (8x8) for both tiles
+	LDA.w #$0000						;> Small (8x8) for both tiles
 -
-	STA $400000,x				;> Store to both
+	STA $400000,x			;> Store to both
 
-	INX #2					;\
-	DEY					;| Loop to set the remaining OAM extra bits.
+	INX #2					;\ Loop to set the remaining OAM extra bits.
+	DEY						;|
 	BPL -					;/
 
 	PLX
@@ -741,200 +744,200 @@ Props:
 
 Graphics:
 	%GetDrawInfo()		;\ Returns sprite index in Y,
-				;| sprite X position (relative to the screen) in $00, and
-				;/ sprite Y position (relative to the screen) in $01.
+						;| sprite X position (relative to the screen) in $00, and
+						;/ sprite Y position (relative to the screen) in $01.
 
-	LDX #$08		;> Need to run this loop 9 times (upload 9 sprite tiles).
+	LDX #$08			;> Need to run this loop 9 times (upload 9 sprite tiles).
 -
 	PHX
 
-	LDA $01			;\
-	CLC			;| Store sprite's Y position in OAM.
-	ADC YDisp,x		;|
+	LDA $01				;\ Store sprite's Y position in OAM.
+	CLC					;|
+	ADC YDisp,x			;|
 	STA $0301|!Base2,y	;/
 
-	LDA XDisp,x		;\
-	STA $02			;| Save these to scratch RAM while we
-	LDA Props,x		;| check the sprite's direction.
-	STA $03			;/
+	LDA XDisp,x			;\ Save these to scratch RAM while we
+	STA $02				;| check the sprite's direction.
+	LDA Props,x			;|
+	STA $03				;/
 
 	LDX $15E9|!Base2	;> Load the sprite index.
-	LDA !157C,x		;\ If the sprite is facing left (!157C = #$01),
+	LDA !157C,x			;\ If the sprite is facing left (!157C = #$01),
 	BNE .no_flip		;/ then load the XDisp and Props bytes normally.
 
-	LDA $02			;\
-	BEQ +			;|
-	EOR #$E0		;| Otherwise, reverse the X direction draw
-+				;| order for non-zero tiles, and store
-	STA $02			;| sprite's X position in OAM.
-	LDA $00			;|
-	CLC			;|
-	ADC $02			;|
+	LDA $02				;\ Otherwise, reverse the X direction draw
+	BEQ +				;| order for non-zero tiles, and store
+	EOR #$E0			;| sprite's X position in OAM.
++						;|
+	STA $02				;|
+	LDA $00				;|
+	CLC					;|
+	ADC $02				;|
 	STA $0300|!Base2,y	;/
 
-	LDA $03			;\
-	EOR #$40		;| Flip the sprite's X direction in
-	ORA !15F6,x		;| YXPPCCCT, and store it in OAM.
-	ORA $64			;|
+	LDA $03				;\ Flip the sprite's X direction in
+	EOR #$40			;| YXPPCCCT, and store it in OAM.
+	ORA !15F6,x			;|
+	ORA $64				;|
 	STA $0303|!Base2,y	;/
-	LDA !Enraged		;\
-	CMP #$01		;| If the sprite is enraged (phase 5),
-	BEQ +			;| then skip to the palette flashing code.
-	CMP #$02		;| Otherwise, while enraged
-	BNE ++			;| (after reaching phase 6),
-	LDA $0303|!Base2,y	;| change the sprite's palette
-	DEC #$04		;| for the remainder of the
-	STA $0303|!Base2,y	;| fight.
-	BRA ++			;/
+	LDA !Enraged		;\ If the sprite is enraged (phase 5),
+	CMP #$01			;| then skip to the palette flashing code.
+	BEQ +				;| Otherwise, while enraged
+	CMP #$02			;| (after reaching phase 6),
+	BNE ++				;| change the sprite's palette
+	LDA $0303|!Base2,y	;| for the remainder of the
+	DEC #$04			;| fight.
+	STA $0303|!Base2,y	;|
+	BRA ++				;/
 +
-	LDA $14			;\
-	AND #$02		;| Every two frames, switch the
-	BEQ ++			;| palette from normal to
-	LDA $0303|!Base2,y	;| enraged to make it flash.
-	EOR #$04		;|
+	LDA $14				;\ Every two frames, switch the
+	AND #$02			;| palette from normal to
+	BEQ ++				;| enraged to make it flash.
+	LDA $0303|!Base2,y	;|
+	EOR #$04			;|
 	STA $0303|!Base2,y	;/
 ++
-	LDA !PhaseNumber	;\
-	CMP #$09		;| If the sprite is in predeath (phase 9),
-	BEQ +++			;| then skip to the palette flashing code.
-	CMP #$0A		;| Otherwise, while dying
-	BNE ++++		;| (after reaching phase 10),
-	LDA $0303|!Base2,y	;| change the sprite's palette
-	DEC #$04		;| for the remainder of the
-	STA $0303|!Base2,y	;| fight.
-	BRA ++++		;/
+	LDA !PhaseNumber	;\ If the sprite is in predeath (phase 9),
+	CMP #$09			;| then skip to the palette flashing code.
+	BEQ +++				;| Otherwise, while dying
+	CMP #$0A			;| (after reaching phase 10),
+	BNE ++++			;| change the sprite's palette
+	LDA $0303|!Base2,y	;| for the remainder of the
+	DEC #$04			;| fight.
+	STA $0303|!Base2,y	;|
+	BRA ++++			;/
 +++
-	LDA $14			;\
-	AND #$02		;| Every two frames, switch the
-	BEQ ++++		;| palette from enraged to
-	LDA $0303|!Base2,y	;| dying to make it flash.
-	EOR #$0C		;|
+	LDA $14				;\ Every two frames, switch the
+	AND #$02			;| palette from enraged to
+	BEQ ++++			;| dying to make it flash.
+	LDA $0303|!Base2,y	;|
+	EOR #$0C			;|
 	STA $0303|!Base2,y	;/
 ++++
 	BRA .check_animation
 
 .no_flip
-	LDA $00			;\
-	CLC			;| Store sprite's X position in OAM.
-	ADC $02			;|
+	LDA $00				;\ Store sprite's X position in OAM.
+	CLC					;|
+	ADC $02				;|
 	STA $0300|!Base2,y	;/
 
-	LDA $03			;\
-	ORA !15F6,x		;| Store sprite's YXPPCCCT in OAM.
-	ORA $64			;|
+	LDA $03				;\ Store sprite's YXPPCCCT in OAM.
+	ORA !15F6,x			;|
+	ORA $64				;|
 	STA $0303|!Base2,y	;/
-	LDA !Enraged		;\
-	CMP #$01		;| If the sprite is enraged (phase 5),
-	BEQ +			;| then skip to the palette flashing code.
-	CMP #$02		;| Otherwise, while enraged
-	BNE ++			;| (after reaching phase 6),
-	LDA $0303|!Base2,y	;| change the sprite's palette
-	DEC #$04		;| for the remainder of the
-	STA $0303|!Base2,y	;| fight.
-	BRA ++			;/
+	LDA !Enraged		;\ If the sprite is enraged (phase 5),
+	CMP #$01			;| then skip to the palette flashing code.
+	BEQ +				;| Otherwise, while enraged
+	CMP #$02			;| (after reaching phase 6),
+	BNE ++				;| change the sprite's palette
+	LDA $0303|!Base2,y	;| for the remainder of the
+	DEC #$04			;| fight.
+	STA $0303|!Base2,y	;|
+	BRA ++				;/
 +
-	LDA $14			;\
-	AND #$02		;| Every two frames, switch the
-	BEQ ++			;| palette from normal to
-	LDA $0303|!Base2,y	;| enraged to make it flash.
-	EOR #$04		;|
+	LDA $14				;\ Every two frames, switch the
+	AND #$02			;| palette from normal to
+	BEQ ++				;| enraged to make it flash.
+	LDA $0303|!Base2,y	;|
+	EOR #$04			;|
 	STA $0303|!Base2,y	;/
 ++
-	LDA !PhaseNumber	;\
-	CMP #$09		;| If the sprite is in predeath (phase 9),
-	BEQ +++			;| then skip to the palette flashing code.
-	CMP #$0A		;| Otherwise, while dying
-	BNE ++++		;| (after reaching phase 10),
-	LDA $0303|!Base2,y	;| change the sprite's palette
-	DEC #$04		;| for the remainder of the
-	STA $0303|!Base2,y	;| fight.
-	BRA ++++		;/
+	LDA !PhaseNumber	;\ If the sprite is in predeath (phase 9),
+	CMP #$09			;| then skip to the palette flashing code.
+	BEQ +++				;| Otherwise, while dying
+	CMP #$0A			;| (after reaching phase 10),
+	BNE ++++			;| change the sprite's palette
+	LDA $0303|!Base2,y	;| for the remainder of the
+	DEC #$04			;| fight.
+	STA $0303|!Base2,y	;|
+	BRA ++++			;/
 +++
-	LDA $14			;\
-	AND #$02		;| Every two frames, switch the
-	BEQ ++++		;| palette from enraged to
-	LDA $0303|!Base2,y	;| dying to make it flash.
-	EOR #$0C		;|
+	LDA $14				;\ Every two frames, switch the
+	AND #$02			;| palette from enraged to
+	BEQ ++++			;| dying to make it flash.
+	LDA $0303|!Base2,y	;|
+	EOR #$0C			;|
 	STA $0303|!Base2,y	;/
 ++++
 
 .check_animation
-	PLX			;\ Restore the loop counter, but store it to scratch RAM
-	STX $02			;/ in case its value needs to be manipulated further below.
+	PLX					;\ Restore the loop counter, but store it to scratch RAM
+	STX $02				;/ in case its value needs to be manipulated further below.
 	LDA !Animation		;\ When frame 32 is reached,
-	CMP #$20		;| repeat the animation frame
-	BNE +			;| draw cycle.
+	CMP #$20			;| repeat the animation frame
+	BNE +				;| draw cycle.
 	STZ !Animation		;/
 +
-	LDA !PhaseNumber	;\
-	CMP #$02		;|
-	BEQ .wink		;| Do the winking pose during
-	CMP #$05		;| the boss intro sequence,
-	BEQ .wink		;| while enraging, and during
-	CMP #$06		;| the bullet wall summoning.
-	BEQ .wink		;|
-	CMP #$07		;|
-	BEQ .wink		;|
-	CMP #$08		;|
-	BEQ .wink		;/
-	CMP #$09		;\
-	BEQ .predeath		;| Transform during the death sequence.
-	CMP #$0A		;|
-	BEQ .death		;/
-	BRA .normal		;> Otherwise, draw the regular frames.
+	LDA !PhaseNumber	;\ Do the winking pose during
+	CMP #$02			;| the boss intro sequence,
+	BEQ .wink			;| while enraging, and during
+	CMP #$05			;| the bullet wall summoning.
+	BEQ .wink			;|
+	CMP #$06			;|
+	BEQ .wink			;|
+	CMP #$07			;|
+	BEQ .wink			;|
+	CMP #$08			;|
+	BEQ .wink			;/
+	CMP #$09			;\ Transform during the death sequence.
+	BEQ .predeath		;|
+	CMP #$0A			;|
+	BEQ .death			;/
+	BRA .normal			;> Otherwise, draw the regular frames.
 .predeath
 	LDA $14
 	AND #$02
 	BEQ .normal
 .death
-	TXA			;\
-	CLC			;| Increment X by 45 to draw
-	ADC #$2D		;| animation frame 5.
-	TAX			;|
+	TXA					;\ Increment X by 45 to draw
+	CLC					;| animation frame 5.
+	ADC #$2D			;|
+	TAX					;|
 	BRA .store_tile		;/
 .wink
-	TXA			;\
-	CLC			;| Increment X by 36 to draw
-	ADC #$24		;| animation frame 4.
-	TAX			;|
+	TXA					;\ Increment X by 36 to draw
+	CLC					;| animation frame 4.
+	ADC #$24			;|
+	TAX					;|
 	BRA .store_tile		;/
 .normal
 	LDA !Animation		;\ For frames 0-7, draw
-	CMP #$08		;| animation frame 0.
+	CMP #$08			;| animation frame 0.
 	BCC .store_tile		;/
-	CMP #$10		;\ For frames 8-15, draw
-	BCC .frame1		;/ animation frame 1.
-	CMP #$18		;\ For frames 16-23, draw
-	BCC .frame2		;/ animation frame 2.
-	TXA			;\ Otherwise, for frames 24-31,
-	CLC			;| increment X by 27 to draw
-	ADC #$1B		;| animation frame 3.
-	TAX			;/
+	CMP #$10			;\ For frames 8-15, draw
+	BCC .frame1			;/ animation frame 1.
+	CMP #$18			;\ For frames 16-23, draw
+	BCC .frame2			;/ animation frame 2.
+	TXA					;\ Otherwise, for frames 24-31,
+	CLC					;| increment X by 27 to draw
+	ADC #$1B			;| animation frame 3.
+	TAX					;/
 	BRA .store_tile
 .frame1
-	TXA			;\
-	CLC			;| Increment X by 9 to draw
-	ADC #$09		;| animation frame 1.
-	TAX			;/
+	TXA					;\ Increment X by 9 to draw
+	CLC					;| animation frame 1.
+	ADC #$09			;|
+	TAX					;/
 	BRA .store_tile
 .frame2
-	TXA			;\
-	CLC			;| Increment X by 18 to draw
-	ADC #$12		;| animation frame 2.
-	TAX			;/
+	TXA					;\ Increment X by 18 to draw
+	CLC					;| animation frame 2.
+	ADC #$12			;|
+	TAX					;/
 .store_tile
 	LDA Tilemap,x		;\ Store sprite's tile number in OAM.
 	STA $0302|!Base2,y	;/
 
-	INY #4			;> Offset by four bytes to get the next OAM slot.
-	LDX $02			;> Restore the loop counter, in case it had been offset to calculate animation frame tiles.
-	DEX			;\
-	BMI +			;| Repeat the loop.
-	JMP -			;/
+	INY #4				;> Offset by four bytes to get the next OAM slot.
+	LDX $02				;> Restore the loop counter, in case it had been offset to calculate animation frame tiles.
+	DEX					;\ Repeat the loop.
+	BMI +				;|
+	JMP -				;/
 +
 	LDX $15E9|!Base2	;> Load the boss' sprite index.
-	LDY #$02		;> Needed for the final JSL (#$02 = size of OAM tiles is 16x16).
-	LDA #$08		;> Needed for the final JSL (write to 9 OAM slots, minus 1).
-	JSL $01B7B3		;> Finish OAM write caller subroutine.
+	LDY #$02			;> Needed for the final JSL (#$02 = size of OAM tiles is 16x16).
+	LDA #$08			;> Needed for the final JSL (write to 9 OAM slots, minus 1).
+	JSL $01B7B3			;> Finish OAM write caller subroutine.
 	INC !Animation		;> Increment the animation frame counter.
 	RTS

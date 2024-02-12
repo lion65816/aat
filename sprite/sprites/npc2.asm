@@ -29,6 +29,9 @@
         ; You shouldn't need to handle the details yourself, but if you're interested,
         ; the extra byte usage is documented at the bottom of this file.
 
+        ; AAT edits: Prints a "!" indicator if an NPC can be spoken to,
+        ; and the sprite priority can be specified in the first extra property byte.
+
 
 
 ; definitions
@@ -42,6 +45,7 @@
         !PowerupGivenFlag       = !1602,x
         !Frame                  = !1570,x
         !SolidContactOccurred   = !187B,x
+        !ShowIndicator          = $18CC|!addr   ;> AAT edit: Free RAM address.
 
         !WalkingTopLeftTile     = $00
         !JumpingTopLeftTile     = $04
@@ -163,6 +167,7 @@ print "MAIN ",pc
         %prepare_extra_bytes()
 
         STZ !SolidContactOccurred
+        STZ !ShowIndicator                      ;> AAT edit: By default, don't show the indicator.
 
         LDA $9D
         BNE .return
@@ -185,6 +190,11 @@ print "MAIN ",pc
 
 .return
 
+        REP #$20								;\ AAT edit: Only process NPCs off-screen in Level 12E.
+        LDA $010B|!addr                         ;| This allows NPCs spawned through UberASM code to not
+        CMP #$012E                              ;| despawn while too far off-screen.
+        BEQ ++                                  ;|
+        SEP #$20                                ;/
         %load_extra_byte(1)                     ; \
         AND #$01                                ;  | remove when off-screen
         BNE +                                   ;  | (unless it needs to remember giving a powerup,
@@ -194,6 +204,7 @@ print "MAIN ",pc
         ORA #$04                                ;  |
         STA !167A,x                             ;  |
 ++                                              ; /
+        SEP #$20                                ;> AAT edit
 
         %load_extra_byte(7)                     ; \
         AND #$40                                ;  |
@@ -611,7 +622,11 @@ endif
 .notSolid                                       ; /
 
         %safe_JSL($01A7DC|!BankB)               ; \  if not in contact with the player, don't show a message
-        BCC .noContact                          ; /
+        ;BCC .noContact                         ;  |
+        BCC +                                   ;  |
+        BRA .countAsContact                     ;  |
++                                               ;  |
+        JMP .noContact                          ; /
 
 .countAsContact
 
@@ -619,6 +634,8 @@ endif
         AND #$C0                                ;  | don't show a message if not set to
         BEQ .dontShowMessage                    ; /
 
+        LDA #$01                                ;\ AAT edit
+        STA !ShowIndicator                      ;/
         PHX : PHY                               ; \
         %load_extra_byte(7)                     ;  |
         AND #$0F                                ;  | show a message if the given button is pressed
@@ -712,8 +729,15 @@ Graphics:
 
         %load_extra_byte(7)
         AND #$30
-        CMP #$30 : BEQ .32x32
-        CMP #$10 : BEQ .16x16
+        ;CMP #$30 : BEQ .32x32                  ;\ AAT edit
+        ;CMP #$10 : BEQ .16x16                  ;|
+        CMP #$30                                ;|
+        BNE +                                   ;|
+        JMP .32x32                              ;|
++                                               ;|
+        CMP #$10                                ;|
+        BNE .16x32                              ;|
+        JMP .16x16                              ;/
 
 .16x32
 
@@ -743,10 +767,38 @@ Graphics:
         ORA $03
         STA $0303|!Base2,y
 
+        ;> AAT edit: Show the NPC message indicator when the player overlaps the NPC (use ExGFX18A in SP2).
+        LDA !ShowIndicator
+        BEQ +++
+        INY #4
+        PHY
+        %GetDrawInfo()
+        PLY
+        LDA $00
+        STA $0300|!Base2,y
+        LDA $01
+        SEC : SBC #$20
+        STA $0301|!Base2,y
+        LDA #$80
+        STA $0302|!Base2,y
+        LDA $14
+        AND #$04                                ;> Change the palette every four frames (flashing).
+        BEQ +
+        LDA #$38                                ;> YXPP CCCT = 0011 1000 = $38
+        BRA ++
++
+        LDA #$34                                ;> YXPP CCCT = 0011 0100 = $34
+++
+        STA $0303|!Base2,y
+        LDY #$02
+        LDA #$02
+        JSL $01B7B3|!BankB
+        BRA ++++
++++
         LDY #$02
         LDA #$01
         JSL $01B7B3|!BankB
-
+++++
         RTS
 
 
@@ -898,10 +950,50 @@ Graphics:
 
 +
 
+        ;> AAT edit: Show the NPC message indicator when the player overlaps the NPC (use ExGFX18A in SP2).
+        LDA !ShowIndicator
+        BEQ +++
+        INY #4
+        PHY
+        %GetDrawInfo()
+        PLY
+        REP #$20
+        LDA $010B|!addr                         ;\ Shift the indicator 8 pixels to the right
+        CMP #$000F                              ;| if sublevel 00F.
+        BEQ ..shift                             ;/
+        SEP #$20
+        LDA $00
+        CLC : ADC #$00
+        BRA ..store
+..shift
+        SEP #$20
+        LDA $00
+        CLC : ADC #$08
+..store
+        STA $0300|!Base2,y
+        LDA $01
+        SEC : SBC #$20
+        STA $0301|!Base2,y
+        LDA #$80
+        STA $0302|!Base2,y
+        LDA $14
+        AND #$04                                ;> Change the palette every four frames (flashing).
+        BEQ +
+        LDA #$38                                ;> YXPP CCCT = 0011 1000 = $38
+        BRA ++
++
+        LDA #$34                                ;> YXPP CCCT = 0011 0100 = $34
+++
+        STA $0303|!Base2,y
+        LDY #$02
+        LDA #$04
+        JSL $01B7B3|!BankB
+        BRA ++++
++++
         LDY #$02
         LDA #$03
         JSL $01B7B3|!BankB
-
+++++
         RTS
 
 

@@ -1,5 +1,5 @@
 load:
-	JSL NoStatus_load
+	JSL MinStatus_load
 	RTL
 
 init:
@@ -13,4 +13,9 @@ main:
 	JSL BossHPLevelD_main
 	JSL shmup_main
 	JSL fastbgscroll_main
+
+	; Disable select button.
+	LDA #%00100000 : STA $00
+	LDA #%00000000 : STA $01
+	JSL DisableButton_main
 	RTL

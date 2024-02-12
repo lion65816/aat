@@ -124,9 +124,10 @@ level:
 0C8	PitCode2.asm
 0C9	NoStatus_DisableInputs.asm
 0CA	NoStatus_DisableInputs.asm
+0CF	SPECIAL.asm
 0D0	jumpers_end.asm
 0D1	MWIVJS1.asm
-0DD	NoStatus.asm
+0DD	MinStatus.asm
 0DE	shmup_with_hp.asm
 0DF	shmup_with_hp.asm
 0E0	jumpers_end.asm
@@ -177,6 +178,7 @@ level:
 129	easy_going.asm
 12B	Gradient12B.asm
 12C	DisableLeftLR.asm
+12E	digsite.asm
 12F	whales_intro.asm
 130	LevelIntro.asm
 131	LevelIntro.asm

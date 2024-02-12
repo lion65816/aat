@@ -75,10 +75,10 @@ patches
 	patch\patch\castle_cutscene_hex_edits.asm
 	patch\patch\castle_cutscene_exgfx.asm
 	patch\patch\castle_cutscene_palettes.asm
-	patch\patch\BetterYoshiInteraction.asm
+	patch\patch\YoshiSpriteInteractionsFix.asm
 	patch\patch\overworld_map_names.asm
 ]
--- patch\patch\YoshiSpriteInteractionsFix.asm
+-- patch\patch\BetterYoshiInteraction.asm
 -- patch\patch\ticking.asm
 -- patch\patch\bwram_plus.asm
 -- patch\patch\midway\multi_midway_1.7.asm

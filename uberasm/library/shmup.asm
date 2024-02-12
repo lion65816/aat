@@ -12,19 +12,19 @@
 
 	!firespeedset1 = $1924|!addr	;\ Free RAM needed to ensure that active
 	!firespeedset2 = $1923|!addr	;/ fireballs' speed is only set once.
-	!PlayerCurrentHP = $58		;> Needs to be the same free RAM address as in SimpleHP.asm.
+	!PlayerCurrentHP = $58			;> Needs to be the same free RAM address as in SimpleHP.asm.
 
 init:
 	STZ !firespeedset1
 	STZ !firespeedset2
-	LDA #$1E		;\ Set the Green Star Block coin counter to 30.
+	LDA #$1E			;\ Set the Green Star Block coin counter to 30.
 	STA $0DC0|!addr		;/ Used to keep track of when to grant bonus HP.
 	RTL
 
 main:
-	LDA $71			;\
-	CMP #$09		;| Don't execute any of the following
-	BNE .continue		;| code if Demo dies.
+	LDA $71			;\ Don't execute any of the following
+	CMP #$09		;| code if Demo dies.
+	BNE .continue	;|
 	JMP .return		;/
 .continue
 	LDA #$02		;\ Demo always has a cape
@@ -34,10 +34,10 @@ main:
 	STZ $7D
 	STZ $03
 
-	LDA $1493|!addr		;\ During the level end sequence,
-	BEQ +			;| stop processing player inputs,
+	LDA $1493|!addr			;\ During the level end sequence,
+	BEQ +					;| stop processing player inputs,
 	;JMP .ammnostandanim	;| but keep Demo floating.
-	JMP .ammnoup		;/
+	JMP .ammnoup			;/
 +
 
 	LDA $15			; right pressed
@@ -96,7 +96,7 @@ main:
 	SBC #!shmupspd
 	STA $7D
 .ammnoup
-	STZ $73			; never ducking
+	STZ $73				; never ducking
 	STZ $13DF|!addr		;> Show Demo's broom
 	STZ $13E0|!addr		;> Demo's still frame
 	LDA $14A6|!addr		; let cape spin show through
@@ -105,15 +105,15 @@ main:
 .ammnoflyanim
 	LDA $1471|!addr		; fix platform stuffs
 	BNE .ammunplatf
-	LDA $7B			; no standstill while moving
+	LDA $7B				; no standstill while moving
 	BNE .ammnounplatf
-	LDA $77			; stand on ground
+	LDA $77				; stand on ground
 	AND #$04
 	BEQ .ammnounplatf
 .ammunplatf
-	;REP #$20		;\ Commented out to prevent Demo from sliding towards
-	;DEC $94		;| the left when grounded on a platform.
-	;SEP #$20		;/
+	;REP #$20			;\ Commented out to prevent Demo from sliding towards
+	;DEC $94			;| the left when grounded on a platform.
+	;SEP #$20			;/
 	LDA $14A6|!addr		; let cape spin show through
 	BNE .ammnostandanim
 	STZ $13E0|!addr
@@ -154,39 +154,39 @@ main:
 
 	; Faster fire (rewritten to account for fireballs in both directions)
 .firestatus1
-	LDA $1714|!addr		;\ Check status of first fireball.
-	CMP #$05		;| If the first fireball is not active,
+	LDA $1714|!addr			;\ Check status of first fireball.
+	CMP #$05				;| If the first fireball is not active,
 	BNE .resetfirestatus1	;/ then its speed may be set again.
-	LDA !firespeedset1	;\ Otherwise, if first fireball's speed already set,
-	BNE .firestatus2	;/ then skip to checking status of second fireball.
-	LDA $76			;\ If Demo is facing left,
-	BEQ .fireleft1		;/ then give the first fireball left speed.
-	LDA #$06		;> Otherwise, give the first fireball right speed.
+	LDA !firespeedset1		;\ Otherwise, if first fireball's speed already set,
+	BNE .firestatus2		;/ then skip to checking status of second fireball.
+	LDA $76					;\ If Demo is facing left,
+	BEQ .fireleft1			;/ then give the first fireball left speed.
+	LDA #$06				;> Otherwise, give the first fireball right speed.
 	BRA .firespeed1
 .fireleft1
-	LDA #$FA		;> Left fireball speed.
+	LDA #$FA			;> Left fireball speed.
 .firespeed1
 	STA $1750|!addr		;> Apply first fireball speed.
-	LDA #$01		;\ Set this free RAM flag to make sure that the first fireball
+	LDA #$01			;\ Set this free RAM flag to make sure that the first fireball
 	STA !firespeedset1	;/ does not have its speed changed when active.
 	BRA .firestatus2
 .resetfirestatus1
 	STZ !firespeedset1
 .firestatus2
-	LDA $1713|!addr		;\ Check status of second fireball.
-	CMP #$05		;| If the second fireball is not active,
+	LDA $1713|!addr			;\ Check status of second fireball.
+	CMP #$05				;| If the second fireball is not active,
 	BNE .resetfirestatus2	;/ then its speed may be set again.
-	LDA !firespeedset2	;\ Otherwise, if second fireball's speed already set,
-	BNE .firedone		;/ then we no longer have any fireball slots to check.
-	LDA $76			;\ If Demo is facing left,
-	BEQ .fireleft2		;/ then give the second fireball left speed.
-	LDA #$06		;> Otherwise, give the second fireball right speed.
+	LDA !firespeedset2		;\ Otherwise, if second fireball's speed already set,
+	BNE .firedone			;/ then we no longer have any fireball slots to check.
+	LDA $76					;\ If Demo is facing left,
+	BEQ .fireleft2			;/ then give the second fireball left speed.
+	LDA #$06				;> Otherwise, give the second fireball right speed.
 	BRA .firespeed2
 .fireleft2
-	LDA #$FA		;> Left fireball speed.
+	LDA #$FA			;> Left fireball speed.
 .firespeed2
 	STA $174F|!addr		;> Apply second fireball speed.
-	LDA #$01		;\ Set this free RAM flag to make sure that the second fireball
+	LDA #$01			;\ Set this free RAM flag to make sure that the second fireball
 	STA !firespeedset2	;/ does not have its speed changed when active.
 	BRA .firedone
 .resetfirestatus2
@@ -194,8 +194,8 @@ main:
 .firedone
 
 	LDA $1493|!addr		;\ During the level end sequence,
-	BEQ +			;| stop processing player inputs.
-	JMP .return		;/
+	BEQ +				;| stop processing player inputs.
+	JMP .return			;/
 +
 
 	; Control Override
@@ -236,32 +236,32 @@ main:
 	; Allow bullets to be killed by fireballs.
 	LDX #!SprSize-3		;> Skip the last two slots (otherwise, the tweaker properties may not work).
 -
-	LDA !9E,x		;\
-	CMP #$1C		;| Check if the sprite is a Bullet Bill.
+	LDA !9E,x		;\ Check if the sprite is a Bullet Bill.
+	CMP #$1C		;|
 	BNE +			;/
-	LDA !166E,x		;\
-	AND #$CF		;| Can be killed with fireballs and cape.
+	LDA !166E,x		;\ Can be killed with fireballs and cape.
+	AND #$CF		;|
 	STA !166E,x		;/
 +
-	LDA !9E,x		;\
-	CMP #$9F		;| Check if the sprite is a Banzai Bill.
+	LDA !9E,x		;\ Check if the sprite is a Banzai Bill.
+	CMP #$9F		;|
 	BNE +			;/
-	LDA !166E,x		;\
-	AND #$CF		;| Can be killed with fireballs and cape.
+	LDA !166E,x		;\ Can be killed with fireballs, but not cape.
+	AND #$EF		;|
 	STA !166E,x		;/
-	LDA !190F,x		;\
-	ORA #$08		;| Needs 5 fireballs to kill.
+	LDA !190F,x		;\ Needs 5 fireballs to kill.
+	ORA #$08		;|
 	STA !190F,x		;/
 +
-	LDA !7FAB9E,x		;\
-	CMP #$1A		;| Check if the sprite is a Homing Bill.
+	LDA !7FAB9E,x	;\ Check if the sprite is a Homing Bill.
+	CMP #$1A		;|
 	BNE +			;/
-	LDA !166E,x		;\
-	AND #$CF		;| Can be killed with fireballs and cape.
+	LDA !166E,x		;\ Can be killed with fireballs and cape.
+	AND #$CF		;|
 	STA !166E,x		;/
 +
-	;LDA !9E,x		;\
-	;CMP #$21		;| Check if the sprite is a Moving Coin.
+	;LDA !9E,x		;\ Check if the sprite is a Moving Coin.
+	;CMP #$21		;|
 	;BNE +			;/
 	;LDA #$01		;\ If so, freeze it in place.
 	;STA !C2,x		;/
@@ -270,15 +270,15 @@ main:
 	BPL -
 
 	; Get +1 HP for every five coins collected.
-	LDA $0DC0|!addr		;> Use the Green Star Block coin counter. Counts down every time a coin is collected.
-	;STA $0DBF|!addr	;> [Debug]
-	CMP #$1A		;\
-	BCS .return		;| If less than 26 coins, increment the player's HP.
+	LDA $0DC0|!addr			;> Use the Green Star Block coin counter. Counts down every time a coin is collected.
+	;STA $0DBF|!addr		;> [Debug]
+	CMP #$1A				;\ If less than 26 coins, increment the player's HP.
+	BCS .return				;|
 	INC !PlayerCurrentHP	;/
-	LDA #$0B		;\ Play the "item placed in reserve box" SFX.
-	STA $1DFC|!addr		;/
-	LDA #$1E		;\ Reset the coin counter to 30.
-	STA $0DC0|!addr		;/
+	LDA #$0B				;\ Play the "item placed in reserve box" SFX.
+	STA $1DFC|!addr			;/
+	LDA #$1E				;\ Reset the coin counter to 30.
+	STA $0DC0|!addr			;/
 
 .return
 	RTL

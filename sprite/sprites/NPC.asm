@@ -669,16 +669,18 @@ endif
 
         REP #$20
         LDA $010B|!addr                         ;\ AAT edit: Do not show the message;
-        CMP #$01AE                              ;| only teleport if sublevel 1AE.
-        BEQ +                                   ;/
-        SEP #$20
+        CMP #$01AE                              ;| only teleport if sublevel 1AE
+        BEQ +                                   ;| or level 12E.
+        CMP #$012E                              ;|
+        BEQ +                                   ;|
+        SEP #$20                                ;/
         LDA #$18                                ; \  set the message timer
         STA !MessageTimer                       ; /  which sets all the other stuff in motion
-        BRA .dontShowMessage
-+
-        SEP #$20
-        LDA #$09
-        STA !MessageTimer
+        BRA .dontShowMessage                    ;\ AAT edit
++                                               ;|
+        SEP #$20                                ;|
+        LDA #$09                                ;|
+        STA !MessageTimer                       ;/
 
 .dontShowMessage
 
@@ -733,11 +735,11 @@ Graphics:
 
         %load_extra_byte(7)
         AND #$30
-        ;CMP #$30 : BEQ .32x32
-        ;CMP #$10 : BEQ .16x16
-        CMP #$30                                ;\
+        ;CMP #$30 : BEQ .32x32                  ;\ AAT edit
+        ;CMP #$10 : BEQ .16x16                  ;|
+        CMP #$30                                ;|
         BNE +                                   ;|
-        JMP .32x32                              ;| AAT edit
+        JMP .32x32                              ;|
 +                                               ;|
         CMP #$10                                ;|
         BNE .16x32                              ;|
@@ -974,7 +976,9 @@ Graphics:
         PLY
         REP #$20
         LDA $010B|!addr                         ;\ Shift the indicator 8 pixels to the right
-        CMP #$000F                              ;| if sublevel 00F.
+        CMP #$000F                              ;| if sublevel 00F or 1EA.
+        BEQ ..shift                             ;|
+        CMP #$01EA                              ;|
         BEQ ..shift                             ;/
         SEP #$20
         LDA $00

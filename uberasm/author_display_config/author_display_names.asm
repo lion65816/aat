@@ -80,7 +80,7 @@ db "RoyKirbs             " ; 12A
 db "Bumpty               " ; 12B
 db "levelengine          " ; 12C
 db "tangy                " ; 12D
-db "                     " ; 12E
+db "PSI Ninja            " ; 12E
 db "Bumpty               " ; 12F
 db "WitherSnow           " ; 130
 db "4season              " ; 131
