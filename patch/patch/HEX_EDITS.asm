@@ -406,3 +406,15 @@ org $02F6DA|!bank
 ; Change Yoshi rescue message location.
 org $01EC2C
 LDA #$00 : NOP #2
+
+; width of door enterable region of the door (up to 0x10, default 0x08) 
+org $00F44B : db $10
+
+; offset of door enterable region, which is half of above (default 0x04)
+org $00F447 : db $05 
+
+; Allows play SFX when exiting horizontal pipes.
+org $00D24E
+	LDA $7D
+	NOP
+	NOP
