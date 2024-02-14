@@ -16,4 +16,5 @@
 %set_palette(2,level_006.mw3)
 %set_palette(3,level_11D.mw3)
 %set_palette(4,level_101.mw3)
-%set_palette(6,level_00D.mw3)
+%set_palette(6,level_12B.mw3)
+%set_palette(7,level_00D.mw3)

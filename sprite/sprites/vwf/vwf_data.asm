@@ -32,5 +32,5 @@ BinPtr:
 	incbin "vwf_data.bin"
 DataPtr:
 	dw BinPtr+$0,  BinPtr+$2DE,  BinPtr+$320,  BinPtr+$362,  BinPtr+$3A4,  BinPtr+$3E6,  BinPtr+$428,  BinPtr+$46A
-	dw BinPtr+$4AC,  BinPtr+$4EE,  BinPtr+$6B3,  BinPtr+$CBC
+	dw BinPtr+$4AC,  BinPtr+$4EE,  BinPtr+$6B3,  BinPtr+$CBC,  BinPtr+$162E
 RoutinePtr:

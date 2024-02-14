@@ -10,3 +10,4 @@
 09 postgame_boss.txt
 0A demoka.txt
 0B panda.txt
+0C broadsword.txt
