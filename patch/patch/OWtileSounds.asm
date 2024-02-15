@@ -11,8 +11,8 @@ if read1($00ffd5) == $23
 	!base = $6000
 endif
 
-!SFX1 = $29		;Sound effect used when entering a Level
-!Port1 = $1DFC		;Sound Bank used
+!SFX1 = $30		;Sound effect used when entering a Level
+!Port1 = $1DF9		;Sound Bank used
 
 !SFX2 = $04		;Sound effect used when using a Pipe
 !Port2 = $1DF9		;Sound Bank used

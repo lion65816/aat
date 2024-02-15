@@ -66,7 +66,7 @@ JSL WarpTest_main
     STA $0100|!addr
 
 ;sound effect
-	LDA #$14                    ;Transform Sound (change this if you want, I just liked it)
+	LDA #$38                    ;Transform Sound (change this if you want, I just liked it)
 	STA $1DFC|!addr
 
 ;swap players

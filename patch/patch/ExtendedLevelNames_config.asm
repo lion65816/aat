@@ -30,7 +30,7 @@ NameData:
  db "    R.A.O.C.O.W.   "
  ;Level 005
  db "The Emerald Winston"
- db "Bar and Restaurant "
+ db "Bar and Restaurant~"
  ;Level 006
  db "  Thwompire State  "
  db "     Building      "
@@ -60,7 +60,7 @@ NameData:
  db "    Moon Palace    "
  ;Level 00F
  db "                   "
- db " Lost Souls Dorms  "
+ db " Lost Souls Dorms ~"
  ;Level 010
  db "   The Beginning   "
  db "     of Spring     "
@@ -102,7 +102,7 @@ NameData:
  db "   DUCKMOUNTAIN    "
  ;Level 01D
  db "                   "
- db "  Temporal House   "
+ db "  Temporal House  ~"
  ;Level 01E
  db "                   "
  db "Aileron Moonbounce*"
@@ -138,7 +138,7 @@ NameData:
  db "       (WIP)       "
  ;Level 105
  db "  Rachel's Rebate  "
- db "    Rotorcraft     "
+ db "    Rotorcraft    ~"
  ;Level 106
  db "                   "
  db "  Horse Adventure  "
@@ -174,7 +174,7 @@ NameData:
  db "  in Green Forest *"
  ;Level 111
  db "                   "
- db "    Tim Hortons    "
+ db "    Tim Hortons   ~"
  ;Level 112
  db "                   "
  db "   Good Ol' Days   "
@@ -201,7 +201,7 @@ NameData:
  db "    All Winners!   "
  ;Level 11A
  db "       PUNT        "
- db "      RETURN       "
+ db "      RETURN      ~"
  ;Level 11B
  db "    FIGHT THE      "
  db "RED SWITCH PALACE! "
@@ -258,10 +258,10 @@ NameData:
  db "   Can't Go Back   "
  ;Level 12D
  db "    watch out!     "
- db "  bad word ahead   "
+ db "  bad word ahead  ~"
  ;Level 12E
  db "Augustus Broadsword"
- db " Camp and Digsite  "
+ db " Camp and Digsite ~"
  ;Level 12F
  db " Where The Whales  "
  db "  Come To Rest    *"
