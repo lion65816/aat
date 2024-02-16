@@ -506,6 +506,15 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 4a20	0	Solid if the corresponding switch is activated.
 4a21	0	Solid if the corresponding switch is activated.
 4a22	0	Solid if the corresponding switch is activated.
+4d5f	0	Shatters if Demo touches it from above or the side.
+4d6c	0	Correct password block.
+4d6d	0	Correct password block.
+4d6e	0	Correct password block.
+4d6f	0	Correct password block.
+4d7c	0	Incorrect password block.
+4d7d	0	Incorrect password block.
+4d7e	0	Incorrect password block.
+4d7f	0	Incorrect password block.
 5440	0	Teleports the player to level 1CB.
 55d0	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
 55d1	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi

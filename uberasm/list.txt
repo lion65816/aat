@@ -88,6 +88,7 @@ level:
 099	BG_AutoScroll99.asm
 09A	SPECIAL.asm
 09B	SPECIAL.asm
+09E	abcd.asm
 0A0	DisableLR_freescrollbabey.asm
 0A1	freescrollbabey.asm
 0A2	freescrollbabey.asm

@@ -2,9 +2,34 @@
 // Scene 1 //
 /////////////
 
-You found a missing page from Prof. Broadsword's sketchbook!
+Found a missing page from Uncle Broadsword's diary!
 [wait]
 [erase]
+[wait=30]
+
+/////////////
+// Scene 2 //
+/////////////
+
+[sprite=50]
+// Background
+(30,08,00,0F,big)(40,08,00,0F,big)(50,08,20,0F,big)(60,08,40,0F,big)(70,08,60,0F,big)(80,08,0E,0F,big)(90,08,2E,0F,big)(A0,08,4E,0F,big)(B0,08,00,0F,big)(C0,08,00,0F,big)
+(30,18,00,0F,big)(40,18,00,0F,big)(50,18,02,0F,big)(60,18,04,0F,big)(70,18,06,0F,big)(80,18,08,0F,big)(90,18,0A,0F,big)(A0,18,0C,0F,big)(B0,18,00,0F,big)(C0,18,00,0F,big)
+(30,28,00,0F,big)(40,28,00,0F,big)(50,28,22,0F,big)(60,28,24,0F,big)(70,28,26,0F,big)(80,28,28,0F,big)(90,28,2A,0F,big)(A0,28,2C,0F,big)(B0,28,00,0F,big)(C0,28,00,0F,big)
+(30,38,00,0F,big)(40,38,00,0F,big)(50,38,42,0F,big)(60,38,44,0F,big)(70,38,46,0F,big)(80,38,48,0F,big)(90,38,4A,0F,big)(A0,38,4C,0F,big)(B0,38,00,0F,big)(C0,38,00,0F,big)
+(30,48,00,0F,big)(40,48,00,0F,big)(50,48,62,0F,big)(60,48,64,0F,big)(70,48,66,0F,big)(80,48,68,0F,big)(90,48,6A,0F,big)(A0,48,6C,0F,big)(B0,48,00,0F,big)(C0,48,00,0F,big)
+[/sprite]
+[topic]Broadsword's notes[/topic]
+Log P
+[wait=30]
+[br]
+A hidden entrance, perhaps?
+[wait=30]
+[br]
+We may need to use some science to figure this out.
+[wait]
+[erase]
+[sprite=erase]
 [wait=30]
 
 [end=00]

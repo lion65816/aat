@@ -1,10 +1,8 @@
 !SprSize = $16			;> Number of SA-1 sprite slots ($16 = 22).
 !bank = $000000
 
-!npc_x_high = $02
+!npc_x_high = $04
 !npc_x_low = $80
-;!npc_x_high = $01
-;!npc_x_low = $F0
 !FreeRAM = $1908|!addr	;> Flag to only show Science's message once per level load.
 
 LoadIris:

@@ -297,6 +297,15 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 4A20:25 BlockBlue.asm
 4A21:25 BlockRed.asm
 4A22:25 BlockYellow.asm
+4D5F:130 shatter_mario_above_side.asm
+4D6C:124 password_correct.asm
+4D6D:11F password_correct.asm
+4D6E:126 password_correct.asm
+4D6F:127 password_correct.asm
+4D7C:124 password_incorrect.asm
+4D7D:11F password_incorrect.asm
+4D7E:126 password_incorrect.asm
+4D7F:127 password_incorrect.asm
 5440:25 teleport_to_1cb.asm
 55D0:25  25Water.asm
 55D1:25  25Water.asm
