@@ -1,0 +1,12 @@
+/////////////
+// Scene 1 //
+/////////////
+
+Found Uncle Broadsword's missing diary!
+[wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+
+[end=00]

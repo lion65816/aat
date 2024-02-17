@@ -11,3 +11,4 @@
 0A demoka.txt
 0B panda.txt
 0C broadsword.txt
+0D broadsword_diary.txt

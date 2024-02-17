@@ -5,6 +5,8 @@
 Found a missing page from Uncle Broadsword's diary!
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
 [wait=30]
 
 /////////////
@@ -19,16 +21,14 @@ Found a missing page from Uncle Broadsword's diary!
 (30,38,00,0F,big)(40,38,00,0F,big)(50,38,42,0F,big)(60,38,44,0F,big)(70,38,46,0F,big)(80,38,48,0F,big)(90,38,4A,0F,big)(A0,38,4C,0F,big)(B0,38,00,0F,big)(C0,38,00,0F,big)
 (30,48,00,0F,big)(40,48,00,0F,big)(50,48,62,0F,big)(60,48,64,0F,big)(70,48,66,0F,big)(80,48,68,0F,big)(90,48,6A,0F,big)(A0,48,6C,0F,big)(B0,48,00,0F,big)(C0,48,00,0F,big)
 [/sprite]
-[topic]Broadsword's thoughts[/topic]
-Log S
-[wait=30]
-[br]
+[topic]Log S[/topic]
 Close two eyes and keep one eye open?
 [wait=30]
 [br]
 What does that mean for a cyclops?
 [wait]
 [erase]
+[topic][/topic]
 [sprite=erase]
 [wait=30]
 

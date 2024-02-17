@@ -626,8 +626,10 @@ endif
 
         %load_extra_byte(1)                     ; \
         AND #$C0                                ;  | don't show a message if not set to
-        BEQ .dontShowMessage                    ; /
-
+        ;BEQ .dontShowMessage                   ; /
+        BNE +                                   ;\ AAT edit
+        JMP .dontShowMessage                    ;|
++                                               ;/
         LDA #$01                                ;\ AAT edit
         STA !ShowIndicator                      ;/
         PHX : PHY                               ; \
@@ -667,13 +669,22 @@ endif
 
 .showMessage
 
+        ; AAT edit: Do not show the message; only teleport if
+        ; sublevel is 19, B1, 123, 12E, or 1AE.
         REP #$20
-        LDA $010B|!addr                         ;\ AAT edit: Do not show the message;
-        CMP #$01AE                              ;| only teleport if sublevel 1AE
-        BEQ +                                   ;| or level 12E.
-        CMP #$012E                              ;|
-        BEQ +                                   ;|
-        SEP #$20                                ;/
+        LDA $010B|!addr
+        CMP #$0019
+        BEQ +
+        CMP #$00B1
+        BEQ +
+        CMP #$0123
+        BEQ +
+        CMP #$012E
+        BEQ +
+        CMP #$01AE
+        BEQ +
+        SEP #$20
+
         LDA #$18                                ; \  set the message timer
         STA !MessageTimer                       ; /  which sets all the other stuff in motion
         BRA .dontShowMessage                    ;\ AAT edit
