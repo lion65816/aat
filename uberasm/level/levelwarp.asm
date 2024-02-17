@@ -124,6 +124,7 @@ TableNames:
    db "RESORTCITY BANFF"
    db "NEGATIVE ZONE   "
    db "ONE LAST THING  "
+   db "GO BACK         "
    
    
 macro level(level, midway)
@@ -144,4 +145,5 @@ TableLevels:
    %secen($0045, 0)
    %secen($0046, 0)
    %secen($0047, 0)
+   %level($013D, 0)
 .end

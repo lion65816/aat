@@ -497,6 +497,15 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 4509	0	Popful Mail (SNES) - Destiny
 450a	0	Break the Sabbath.txt
 450b	0	Panorama Cotton - Stage 1 (The Land of Cotton)
+46d0	0	The top-left part of 32x32 switch
+46d1	0	The top-right part of 32x32 switch
+46d4	0	The top-left part of 32x32 switch
+46d5	0	The top-right part of 32x32 switch
+46d8	0	The top-left part of 32x32 switch
+46d9	0	The top-right part of 32x32 switch
+46dc	0	The top-left part of 32x32 switch
+46dd	0	The top-right part of 32x32 switch
+46ff	0	A ledge that can be passed through by tapping down, playing a sound effect.
 4a10	0	This button sets a manuel frame value to #$00.
 4a11	0	This button sets a manuel frame value to #$01.
 4a12	0	This Button sets a manuel frame value to #$02.

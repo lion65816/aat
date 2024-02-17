@@ -288,6 +288,15 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 4509:25 Song10.asm
 450A:25 Song11.asm
 450B:25 Song12.asm
+46FF:100 PassableLedgeSFX.asm
+46D0:130 Y32x32switch_UL.asm
+46D1:130 Y32x32switch_UR.asm
+46D4:130 G32x32switch_UL.asm
+46D5:130 G32x32switch_UR.asm
+46D8:130 B32x32switch_UL.asm
+46D9:130 B32x32switch_UR.asm
+46DC:130 R32x32switch_UL.asm
+46DD:130 R32x32switch_UR.asm
 4A10:25 ButtonSwitch_Blue.asm
 4A11:25 ButtonSwitch_Red.asm
 4A12:25 ButtonSwitch_Yellow.asm
