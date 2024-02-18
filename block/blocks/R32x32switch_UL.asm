@@ -20,8 +20,8 @@ endif
 
 !TopLeft	= $0025		;\The tiles the switch turns into when pressed.
 !TopRight	= $0025		;|must be 4 hex digits long.
-!BottomLeft	= $46A2		;|
-!BottomRight	= $46A3		;/
+!BottomLeft	= $46EE		;|
+!BottomRight	= $46EF		;/
 
 db $42
 JMP MarioBelow : JMP MarioAbove : JMP MarioSide : JMP SpriteV : JMP SpriteH

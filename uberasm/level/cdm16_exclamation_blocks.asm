@@ -46,6 +46,10 @@ if !SwitchFlags > 2
 	error "Error, \!CDM16Flag is an invalid value!"
 endif
 
+init:
+    stz $1411|!addr
+rtl
+
 main:
 	STZ $00
 	LDX #$03

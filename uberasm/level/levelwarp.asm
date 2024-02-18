@@ -39,16 +39,21 @@ main:
    STA $71              ; |
    STZ $89              ; |
    STZ $88              ; /
+   LDA #$29                    ;Transform Sound (change this if you want, I just liked it)
+   STA $1DFC|!addr
  
    RTL   
 +
 
+
    LDA $16              ; \
    AND #$03             ; |
    TAX                  ; | increase or decrease counter based on
+   
    LDA.l Add,x          ; | pushing left or right.
    CLC                  ; |
    ADC !Counter         ; /
+   
    
    CMP #$FF                                  ; \
    BNE +                                     ; |
@@ -58,10 +63,12 @@ main:
    BNE ++                                    ; |
    LDA #$00                                  ; /
 ++
-   STA !Counter         ; /
 
+   STA !Counter         ; /
+   
    PEA $7F|(main>>16<<8)
    PLB
+
 
    REP #$30          ; A,X,Y in 16bit mode
    LDY $837B         ; stripe index in Y
@@ -98,6 +105,7 @@ main:
    ;stripe terminator
    LDA #$FF
    STA $837D+4,y
+   
    
    ;update index and store back
    INY : INY

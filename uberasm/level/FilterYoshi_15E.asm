@@ -4,7 +4,7 @@ load:
 	RTL
 	
 main:
-	LDA $1F28|!addr
+	LDA $13D2|!addr
 	;CMP #$00
 	BEQ .flag
 	LDA #$FF  ;Bit value
