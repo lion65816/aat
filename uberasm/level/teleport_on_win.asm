@@ -24,6 +24,10 @@
 ; 1 = if getting 100 bonus stars, you'll be teleported anyway
 !SkipBonusGame = 1
 
+load:
+	JSL NoStatus_load
+RTL
+
 init:
     ; Code adapted from $0583B8 and $0585FF
     lda $1925|!addr     ;\
@@ -98,6 +102,9 @@ init:
 
 main:
     JSL freezetimer_main
+    LDA #%00100000 : STA $00
+    LDA #%00000000 : STA $01
+    JSL DisableButton_main
     lda $1434|!addr     ;\ If the level isn't ending, return.
     beq .return         ;/
 if !TeleportType == 1

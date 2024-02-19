@@ -201,3 +201,4 @@ C5  Popful Mail (SFC) - Destiny.txt
 C6  Break the Sabbath.txt
 C7  Panorama Cotton Stage 1 (Version 1.21).txt
 C8  park.txt
+C9  LittleMidnightSong.txt
