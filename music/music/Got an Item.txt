@@ -1,0 +1,86 @@
+﻿#amk 2
+
+#path "SD2"
+
+#spc
+{
+	#game	"Secret of Mana"
+	#title	"Got an Item"
+}
+
+#samples
+{
+#optimized
+	"sample_02.brr"
+	"sample_00.brr"
+	"sample_01.brr"
+}
+
+#instruments
+{
+	"sample_02.brr"	$FF $EC $A0 $0B $46	; @30
+	"sample_00.brr"	$FE $E8 $A0 $04 $C6	; @31
+	"sample_01.brr"	$FF $E8 $A0 $04 $00	; @32
+}
+
+$EF $FF $40 $40 
+$F1 $03 $00 $01
+
+? 
+
+#0  w220 t63
+
+r2 @30 v147 y10 o3 
+
+g16 a16 b16 > d16
+g=49 
+;
+
+
+#1 @31 v147 y10 o4 a+12 a+32. a+24 q2F a+12
+> q7F d+16. < q2F g+24.. r64 > c24..
+r96 q7F f=98
+
+
+
+#2 
+
+@31 v147 y10 o4 f12 f32. f24 q2F f12
+q7F a+16. q2F f24.. r64 a+24..
+r96 > q7F d=98
+
+
+#3 
+
+@31 v147 y10 o4 d12 d32. d24 q2F d12
+q7F g+16. q2F d+24.. r64 g+24..
+r96 q7F a+=98
+;
+
+
+#4 @0 v220 y10
+
+@31 v147 y10 o3 a+12 a+32. a+24 q2F a+12
+> q7F c16. < q2F g+24.. r64 > d+24..
+r96 q7F f=98
+
+#5 @0 v220 y10
+
+@32 v149 y10 o4 a+12 a+32. a+24 q2F a+12
+> q7F d+16. < q2F g+24.. r64 > c24..
+r96 q7F f=98
+
+
+#6 @0 v220 y10
+
+@32 v149 y10 o4 f12 f32. f24 q2F f12
+q7F a+16. q2F f24.. r64 a+24..
+r96 > q7F d=98
+
+
+
+#7 @0 v220 y10
+
+@32 v149 y10 o4 d12 d32. d24 q2F d12
+q7F g+16. q2F d+24.. r64 g+24..
+r96 q7F a+=98

@@ -130,9 +130,10 @@ I appreciate your enthusiasm!
 (30,38,E6,06,big)(40,38,E8,06,big)(50,38,EA,06,big)(60,38,E6,06,big)(70,38,E8,06,big)(80,38,EA,06,big)(90,38,E6,06,big)(A0,38,E8,06,big)(B0,38,EA,06,big)(C0,38,E6,06,big)
 (30,48,C2,08,big)(40,48,C2,08,big)(50,48,C2,08,big)(60,48,C2,08,big)(70,48,C2,08,big)(80,48,C2,08,big)(90,48,C2,08,big)(A0,48,C2,08,big)(B0,48,C2,08,big)(C0,48,C2,08,big)
 [/sprite]
+[music=CA]
 You have become meguca!
 [wait=30]
-You can now do magical things!
+[br]You can now do magical things!
 [wait]
 [br]Collect 5 coins to heal HP!
 [wait]

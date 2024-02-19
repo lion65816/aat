@@ -238,8 +238,8 @@
 14ED: 0130 { 1F7 2 --p  1F7 2 -yp  1FE 2 x-p  1FF 2 -yp }
 14EE: 0130 { 1FE 2 -yp  1FF 2 --p  1FF 2 -yp  1FE 2 x-p }
 14EF: 0130 { 1FE 2 --p  1FF 2 --p  1F8 2 --p  1F8 2 -yp }
-14F0: ~
-14F1: ~
+14F0: 00B4 { 0FF 2 ---  0FF 2 ---  0FF 2 ---  0AE 2 --- }
+14F1: 00B4 { 0FF 2 -y-  0FF 2 -y-  0AE 2 -y-  0FF 2 -y- }
 14F2: ~
 14F3: ~
 14F4: ~

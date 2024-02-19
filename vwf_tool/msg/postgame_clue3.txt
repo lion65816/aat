@@ -2,6 +2,7 @@
 // Scene 1 //
 /////////////
 
+[music=CA]
 Found a missing page from Uncle Broadsword's diary!
 [wait]
 [erase]
