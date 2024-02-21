@@ -180,13 +180,13 @@ B0  smb_metal.txt
 B1  Pizza Tower - The Death That I Deservioli.txt
 B2  Takeshi's Challenge - Main Theme.txt
 B3  mus_37.txt
-B4  Wario Land 4 - Hurry Up!.txt
+B4  Wario Land 4 - Hurry Up! (No Intro).txt
 B5  sd1-bt2.txt
 B6  showdown_on_the_tower.txt
 B7  26 High Score.txt
 B8  Chocolate Rain.txt
 B9  Rivals of Aether EX - Embers of a Burning Dystopia.txt
-BA  Homestuck - 'Showtime'.txt
+BA  liberation_sol21.txt
 BB  KiKi-12.txt
 BC  mus_a2mtovr1.txt
 BD  LB1 - Dungeon (3mix).txt
@@ -199,7 +199,7 @@ C3  Neutopia II - Sphere 1.txt
 C4  Green Plains.txt
 C5  Popful Mail (SFC) - Destiny.txt
 C6  Break the Sabbath.txt
-C7  Panorama Cotton Stage 1 (Version 1.21).txt
+C7  La-Mulana - Fearless Challenger.txt
 C8  park.txt
 C9  LittleMidnightSong.txt
 CA  Got an Item.txt

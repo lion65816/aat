@@ -1,0 +1,354 @@
+#amk 2 
+
+#path "liberation"
+
+;MIDI source: http://soleilmusique.web.fc2.com/music_index.html
+
+#spc
+{ 
+#title "Liberation ('sol_battle021.mid')"
+#game "soleil-musique"
+#author "soleil-musique"
+#comment "Ported by Anas"
+}
+
+#samples 
+{
+	"../optimized/00 SMW @0.brr"
+	"../optimized/01 SMW @1.brr"
+	"../optimized/02 SMW @2.brr"
+	"../optimized/03 SMW @3.brr"
+	"../optimized/04 SMW @4.brr"
+	"../optimized/05 SMW @8.brr"
+	"../optimized/06 SMW @22.brr"
+	"../optimized/07 SMW @5.brr"
+	"../optimized/08 SMW @6.brr"
+	"../EMPTY.brr"
+	"../optimized/0A SMW @9.brr"
+	"../optimized/0B SMW @10.brr"
+	"../optimized/0C SMW @13.brr"
+	"../EMPTY.brr"
+	"../optimized/0E SMW @29.brr"
+	"../EMPTY.brr"
+	"../optimized/10 SMW @12.brr"
+	"../EMPTY.brr"
+	"../optimized/12 SMW @15.brr"
+	"../optimized/13 SMW Thunder.brr"
+
+"lo_piano.brr"		; from Samples of Insanity
+
+"pi_2nd.brr"		;/
+"pi_3rd.brr"		;| low piano chords by me, based off of 'lo_piano.brr'
+"pi_4th.brr"		;\ for some reason I could only loop this one perfectly :(
+
+"LPi.brr"			; by 757/6646
+
+"rs3_bdrum_16k.brr"	; from Romancing SaGa 3, downgraded to 16 kHz
+
+"rnh_crash_16k.brr" ; from Rudra no Hihou, downgraded to 16 kHz
+
+"saw_2nd.brr"		;/
+"saw_3rd.brr"		;| 
+"saw_4th.brr"		;| 
+"str_2nd.brr"		;| ripped from WAV recordings of samples from original MIDI by me
+"str_3rd.brr"		;|
+"str_4th.brr"		;|
+"synth_bass.brr"	;\
+
+"@29+bdrum.brr"		; made by me
+}
+
+#instruments
+{
+"synth_bass.brr"		$BF $8C $00 $01 $80 ; @30
+"lo_piano.brr"			$FF $EE $00 $08 $00 ; @31 low piano
+"LPi.brr"				$FF $F1 $00 $03 $00 ; @32 med. piano 
+"rnh_crash_16k.brr" 	$8F $11 $A0 $03 $D4 ; @33 crash cymbal
+"saw_2nd.brr"			$FF $E0 $00 $01 $1B ; @34 saw, 2nd chord
+"saw_3rd.brr"			$FF $E0 $00 $01 $1B ; @35 saw, 3rd chord
+"saw_4th.brr"			$FF $E0 $00 $01 $1B ; @36 saw, 4th chord
+@29 					$0E $6A $7F $03 $00 ; @37 snare
+"rs3_bdrum_16k.brr" 	$FF $E0 $00 $07 $5A ; @38 
+"@29+bdrum.brr"			$0E $6A $7F $03 $00 ; @39 @29 + RS3 bass drum
+"str_2nd.brr"			$FF $E0 $00 $01 $4F ; @40 string, 2nd chord
+"str_3rd.brr"			$FF $E0 $00 $01 $50 ; @41 string, 3rd chord
+"str_4th.brr"			$FF $E0 $00 $01 $4F ; @42 string, 4th chord
+"pi_2nd.brr"			$FF $EE $00 $04 $00 ; @43 low piano, 2nd chord
+"pi_3rd.brr"			$FF $EE $00 $04 $00 ; @44 low piano, 3rd chord
+"pi_4th.brr"			$FF $EE $00 $04 $00 ; @45 low piano, 4th chord
+@22 					$FF $E0 $40 $07 $00 ; @46 closed hi-hat
+@13						$FF $EF $00 $06 $00 ; @47 electric piano
+}
+
+"bass=@30"
+"lop=@31"
+"medp=@32"
+"crash=y8 @33"
+"saw2nd=@34"
+"saw3rd=@35"
+"saw4th=@36"
+"snr=@37"
+"bdrum=@38"
+"bsnr=@39"
+"str2nd=@40"
+"str3rd=@41"
+"str4th=@42"
+"pi2nd=@43"
+"pi3rd=@44"
+"pi4th=@45 v155"
+"chat=y8 @46"
+"ep=@47"	
+"crash2=y12 @33"
+"crash3=y12 @33 $ED$74$E0"
+
+(!800)[$F4$09]
+(!801)[$ED$7F$F8]
+
+"ON=(!800,-1)(!801,3)"
+"OFF=(!800,0)(!801,0)"
+
+$EF$5E$30$30
+$F1$07$36$00
+$F4$02
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    1st channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#0 w215 v160 t66 bass
+r1 /o3 f1 g1 a1 a2 g2 
+f1 g1 a1 a8 r4 
+> c8 < a8 > c8 a8 e8 
+
+[[
+[< f16 f16 > f16 < f16]3 f16 a16 > c16 f16
+[< g16 g16 > g16 < g16]3 g16 b16 > d16 g16
+[< a16 a16 > a16 e16]3 < a16 > c16 e16 a16
+< a16 a16 > c16 < a16 a16 a16 > c16 e16
+<a16 > c16 e16 < a16 > a16 e16 c16 < a16]]10
+
+$F4$03 (15)[o2 y5 v125 lop r8 > c4 a4. < g4.
+> d4 medp b4. lop < g4.
+> c4 a4 a4] c1 r8
+
+(15) c8
+
+bass y10 v160 $F4$03 a2 g2 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    2nd channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#1 y5 
+
+r1 o2 ON
+/(1)[v125 lop a8 > c8 e8 a4 c8 < g4 
+b8 > d8 g8 medp b4 lop d8 < g4 
+a8 > c8 e8 a8 > medp c8 < lop a8 e8 c8] 
+
+< pi4th a4. > pi2nd c4. pi3rd e4
+ 
+(1) < pi4th a8 r4 > pi2nd c4. pi3rd e4 
+
+(14)[v125 < lop a4 > e4. c4. 
+< b4 > g4. d4.
+< a4 > e4 > medp c4 < lop e4]
+
+< pi4th a4. > pi2nd c4. pi3rd e4
+
+(14) < pi4th a4. > pi2nd c4. pi3rd e8 medp > y12 v100 e8 < y5 v125
+
+(1) < pi4th a4. > pi2nd c4. pi3rd e4
+ 
+(1)  
+(2)[< a8 > c8 e8 c8 a8 e8 c8 < a8] 
+ 
+(1) pi4th a4. > pi2nd c4. pi3rd e4 
+ 
+(1)(2) 
+
+[[(14) < pi4th a4. > pi2nd c4. pi3rd e4]]2
+
+[[(1) < pi4th a4. > pi2nd c4. pi3rd e4]]2
+
+(14) < pi4th a4. > pi2nd c4. pi3rd e4
+
+(14) < a8 > c8 e8 a8 < g4 b4 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    3rd channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#2 v100 r1 medp o6 ON y12
+/(3)[c8 < b8 g8 e4 e8 f8 g2
+g8 g8 f8 e8 d8 
+c8 d8 c8 < a4 a8 b8 > c2
+c8 e8 f8 e8 c8 
+< a4. b4. > c4 
+< b4 r4 g4 b4 
+> c4. a2^8] r1
+ 
+o5 y10 OFF v125
+(9)[saw3rd e16 saw2nd > c16 r8 < saw3rd b16 r8 > saw2nd c16 r8 
+< saw3rd b8 r16 > saw2nd c8 r16 c16 r8
+< saw3rd b16 r8] 
+(10)[> saw2nd c16 r8 < saw3rd b8 r16 > saw2nd c8 d8]
+
+(9)
+(11)[r16 saw2nd c16 r8 < saw3rd b8 a8 saw2nd g8]
+
+(9)(10)
+(12)[saw3rd e16 saw2nd > c16 r8 < saw3rd b16 r8 > saw2nd c16 r8 
+< saw3rd b8 r16 > saw2nd c8 r16 c16 c16 r16
+< saw3rd b16 b16 r16 > saw2nd c16 c16 r8 saw4th < a16 a16
+> saw2nd c16 c16 saw3rd e16 e16]
+
+medp y12 v100 o4 ON 
+e8 a8 > c8 e4 d8 c8 d2
+< b8 b8. > c8. d8 
+d4. c4. < b8 > c2
+ c8 < a8. b8. > c8 
+c4. < f4. > c8 < b2^8 
+b4 > d4 
+d4. c4. < b8 > c2^8 
+c8 < b8 > c8 d8 
+e4. c4. e4. 
+g4. f4 e4 
+e8 e4 d8 d4 c8 c4. 
+r8 c8 c8 c8 e8 e8
+g1
+e8. g8. b8 g8. b8. > d8 
+d4. c4. < b8 > c1^8
+
+o5 y10 OFF v125
+(9)(10)(9)(11)(9)(10)(12)
+
+y12 v100 o5 ON
+<< lop a8 medp > e8 > c8. a2.^16
+r8 a8 a8. g8. f8 
+e8. d8. c8 c8. < b8. a8 
+a4. > c8. c8 e8 a8. > c4. < f2^8 r4. 
+g8 g4 > d4 c1 r2^8
+
+<< c8 a8 e8 
+(3) >> c4. < b4. g4 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    4th channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#3 v100 r1 medp o5 ON y8
+/(4)[a8 g8 d8 r2 c2^8 r2
+e8 f8 e8 a4 r4 < e2
+> c8 r4. c8
+< c4. d4. e4 d4 r4
+< b4 > d4 
+e4. a2^8] r1
+ 
+(15) < c1 r8 (15) c1 >
+
+y8 o4 v100 medp c8 c8 e8 a8 > c4 r4 < g2
+r8 d8. e8. f8 
+f4. e4. d8 e2
+e8 c8. d8. e8 
+e4. c4. e8 g2^8 
+e4 g4 
+a4. e4. g8 a2^8 
+e8 d8 e8 f8 
+g4. e4. g4. 
+b4. a4 g4 
+g8 g4 f8 f4 e8 e4. 
+r8 e8. b8 > d8 d8 f16 
+c1
+<a8. > c8. d8 c8. d8. g8 
+g4. e4. d8 e1^8
+
+[[(15) << c1 r8]]2 r16
+
+y8 v100 medp > c8 a8 > e8 e2.^16
+r8 e8 f8. e8. d8 
+c8. < b8. a8 a8. g8. e8 
+e4. r8 a8 r4^16 > b16 g4. c2^8 r4. 
+d8 d4 g4 a1 r2^8.
+
+e8 > c8 a16
+(4) < c4. < b4. g4 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    5th channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#4 v100 ON o3 r1 /(5)[str3rd a1 b1 > str2nd c1 c2 str4th c2]
+< str3rd a1 b1 > str2nd c1 r2 str4th c2
+(5)9 
+< str3rd a1 b1 > str2nd c1 c2 str4th c2
+[[r1]]8
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    6th channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#5 o3 snr
+v50 $E8$C0$92 [[g16]]16 /bsnr g1 bdrum c1 c1 c8 snr
+v50 $E8$C0$92 [[g16]]9 bsnr g16 g8 g8 bdrum [[c4]]8 c8 
+v50 $E8$C0$92 [snr g16 g16 bsnr g8]3 g8 g2 
+bdrum c16 c8 c16 c8 c8 c4 
+
+(7)[snr g4 bdrum c4 snr g4 bdrum c4 snr g4 
+bdrum c4 snr g16 g8.
+bdrum c4 snr g4 bdrum c4 snr g4 bdrum c4 snr g4 
+bdrum c4 bsnr g16 g8 g16]
+(8)[bdrum c4 snr g4 bdrum c4 snr g4 bdrum c4 snr g4 
+bdrum c4 snr g16 g8. bdrum c8 snr]
+
+(16)[v35 $E8$FF$92 [[snr g16 g16 bsnr g8]]7 snr g16 g16]
+
+bdrum c4 (7) bdrum c4 (7) 
+
+bdrum c8 c8 snr g4 bdrum c4 snr g4 bdrum c4 snr g4 
+bdrum c4 snr g16 g8.
+bdrum c4 snr g4 bdrum c4 snr g4 bdrum c4 snr g4 
+bdrum c4 bsnr g16 g8 g16
+
+(8)(16)
+
+bdrum c4 (7)(8)(16)
+
+bdrum c4 (7)(8)(16)
+
+[[r1]]7
+
+v35 $E8$C0$92 [[g16]]16
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    7th channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#6 r1
+/[[r1]]8 o5 y10 v75
+
+[[
+ep (13)[e16 e16 > c16 < a16 e16 > c16 < a16]2  
+e16 c16 (13) e16 c16 e16 a16 > c16 c16 < a16 > c16 e16]]16
+
+v125 (9)(10)(9)(11)(9)(10)(12)
+
+[[r1]]8
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;    8th channel                                                                        ;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#7 r2 crash3 v180 o4 c2 /$F4$09
+crash c1 c1 c1 c2 crash3 c2 $F4$09
+crash2 c+4.  
+
+chat [[c4]]6 c8  
+crash2 c+4. chat c8 crash2 c+4. chat c2^8
+
+crash2 c+8. c+8. c+8
+
+[[
+[crash2 c+4. chat c4 c4 c4 c4 c4 c4 c8]3
+crash2 c+4. chat c8 crash2 c+4. chat c8 crash2 c+4 c+4 c+2]]5
+
+[[r1]]7 r2 crash3 c2

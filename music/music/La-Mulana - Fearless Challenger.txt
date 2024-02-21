@@ -1,0 +1,194 @@
+#amk 2
+
+#spc
+{
+	#title "Fearless Challenger"
+	#game "La-Mulana"
+	#author "Nigoro"
+	#comment "Ported by Dippy"
+}
+
+#path "fearlessch"
+
+#samples
+{
+	"../optimized/00 SMW @0.brr"
+	"../optimized/01 SMW @1.brr"
+	"../optimized/02 SMW @2.brr"
+	"../optimized/03 SMW @3.brr"
+	"../optimized/04 SMW @4.brr"
+	"../optimized/05 SMW @8.brr"
+	"../optimized/06 SMW @22.brr"
+	"../optimized/07 SMW @5.brr"
+	"../optimized/08 SMW @6.brr"
+	"../optimized/09 SMW @7.brr"
+	"../optimized/0A SMW @9.brr"
+	"../optimized/0B SMW @10.brr"
+	"../optimized/0C SMW @13.brr"
+	"../optimized/0D SMW @14.brr"
+	"../optimized/0E SMW @29.brr"
+	"../optimized/0F SMW @21.brr"
+	"../optimized/10 SMW @12.brr"
+	"../EMPTY.brr"
+	"../optimized/12 SMW @15.brr"
+	"../EMPTY.brr"
+	"cymbal.brr"		
+	"ff6timpani.brr"	
+	"ff6string.brr"		
+	"ff6trumpet.brr"		
+	"harp.brr"	
+	"piccolo.brr"
+	"power chord sus.brr"
+	"Kick.brr"
+	"Snare.brr"
+	"Closed Hi-Hat.brr"
+	"Electric Bass (Pick).brr"
+	"vibraphone.brr"
+	"tom.brr"
+	"choir soft.brr"
+	"loud lead.brr"
+}
+
+#instruments
+{
+	"cymbal.brr"				$9F $6E $00 $05 $00 	;@30
+	"ff6timpani.brr"			$8F $E0 $00 $02 $30 	;@31
+	"ff6string.brr"				$00 $00 $DA $03 $15		;@32
+	"ff6trumpet.brr"			$00 $00 $DE $06 $02 	;@33
+	"harp.brr"					$BF $B0 $00 $08 $00 	;@34
+	"piccolo.brr"				$00 $00 $DA $04 $00 	;@35
+	"power chord sus.brr" 		$AD $A6 $00 $03 $00 	;@36
+	"Kick.brr"          		$FF $E0 $00 $07 $A8 	;@37
+	"Snare.brr"         		$FF $E0 $00 $07 $A8 	;@38
+	"Closed Hi-Hat.brr" 		$FF $E0 $00 $07 $A8		;@39
+	"Electric Bass (Pick).brr" 	$FE $EE $00 $06 $40 	;@40
+	"vibraphone.brr" 			$8F $6F $00 $04 $00 	;@41
+	"tom.brr" 					$FF $F6 $00 $04 $00 	;@42
+	"choir soft.brr" 			$88 $A0 $00 $02 $00		;@43
+	"loud lead.brr" 			$FF $E8 $00 $02 $00		;@44 	
+}
+
+w143 t39 $F4 $02
+
+$EF $FF $1F $1F
+$F1 $05 $1A $01
+
+;Macros
+"K=@37c"
+"S=@38c"
+"H=@39c"
+
+
+#0 @32 o3 v150 y11
+d+4 $DD $0C $24 
+f^2 f6. e6. c6. d+1 r6. q7f f6. q7c e6. q7a c6. q7c g1 
+@36 v207 q7f $FA $03 $1F g+1 a+1 >  
+y08 v160 
+(2)[r4. q3f f16 f16 q7f f8 q3f f16 q7f f16 r4] $FA $02 $FE (2) $FA $02 $00 (2) (3)[r4. q3f d+16 d+16 q7f f8 q3f f16 q7f f16 r4]
+(2) $FA $02 $FE (2) $FA $02 $00 (2) (3)
+/ v160 (10)[ [[q7f f8 q3f f16 f16]]4 [[q7f g8 q3f g16 g16]]4]3 [q7f d+8 q3f d+16 d+16]4 [q7f f8 q3f f16 f16]4
+(10)3 [q7f f8 q3f f16 f16]8
+q7f (13)[c+8 q3f c+16 c+16 q7f c+8 c+4 c+16 r8. c+8] $FA $02 $02 (13) $FA $02 $FF (13) $FA $02 $00 (13)
+(13) $FA $02 $02 (13) $FA $02 $00 [q7f d8 q3f d16 d16]4 [q7f c8 q3f c16 c16]4 $FA $03 $00
+@33 v212 y09 > q7f
+[r8 f16 r8. f16 r16 f16 r8 d+8. f16 r16 r8 f16 r8. f16 r16 f16 r8 g+8. f16 r16]3 <
+c+8. f8. g+8 d+8. g8. a+8 f8. g+8. > c+8 < a+8. > d+8. g8 
+p18,16,32 f1 $E8 $C0 $6A ^1 $E8 $C0 $00 ^1 $DF r1
+@36 v160 q7f $FA $03 $1F o4 (2) $FA $02 $FE (2) $FA $02 $00 (2) (3)
+
+#1 @32 o4 v150 y11
+d+4 $DD $0C $24 f^4 ^4 @34 o5 v150 f6. v120 e6. v90 c6. v70 [d+48 e48]12 $E8 $60 $AA [d+48 e48]12
+r6. v150 f6. v120 e6. v90 c6. v70 [g48 g+48]12 $E8 $60 $AA [g48 g+48]12
+@35 < p12,24,32 v170 g+2 f12 g+12 a+12 > c12 < a+12 g+12 a+2 > q7a d+2 q76 f1^1 $DF r1^1
+@33 o5 y09 v212 q7f
+(17)[r8 f16 r8. f16 r16 f16 r8 d+8. f16 r16 r1 r8 f16 r8. f16 r16 f16 r8 g+8. f16 r16 r1]
+/ @35 < v171 p12,16,32 y10 
+(8)[f2^8 c16 r16 f16 r16 g+16 r16 g2 d+4 c4] (9)[f2.. c16 < a+16 > q5f c1]
+q7f (8) g+2^8 d+16 r16 g+16 r16 > c16 r16 < a+6 > c6 < a+6 g+4 g4
+(8)(9) f2 c6 b48 > c12.. < g+6 g2 f4 d+4 q3f f1 $E8 $C0 $00 ^1
+q7f p18,16,32 @44 v171
+(15)[c+4. > c4 $DD $0C $0C c+ c16 < r16 a+16 r16 g+16 r16] g4. g8 r8 d+4.
+c4. f4 $DD $0C $0C g f16 r16 d+16 r16 g16 r16 g+4 g8 f8 r8 g+4 g8
+(15) > d+4 c+8 c8 r8 < a+4. b2 g8. a8. b8 > c1 < v181
+(16)[g+16 g16 f16 r16 r2 a+16 g+16 g16 f16]3 g+8. f8. g+8 a+8. g+8. g8
+(16)2 c+8. f8. g+8 d+8. g8. a+8 f8. g+8. > c+8 < a+8. > d+8. g8
+f1 $E8 $C0 $6A ^1 $E8 $C0 $00 ^1 r1
+@33 o5 y09 v212 q7f (17)
+
+#2 @31 o3 v120 $E8 $30 $F7 $FA $03 $1F 
+f24 f24 f24 f24 f24 f24 f12 f12 f12
+[f2. f12 f12 f12 [[f8 c8 f8 c8]]2]2
+g+2. g+12 g+12 g+12 a+2 a+4 a+4 >
+$E2 $3D (5)[q7f K8 q78 H16 H16 q7f S8 q78 H16 H16]13 (19)[q7f K8 q78 H16 H16 q7f S8 @42 y08 g16 g16 y10 K8 y09 @42 g8. y11 e8. y12 c4 y10 S16 c8 c16]
+/ (5)15 q7f K8 q78 H16 H16 q7f S8 c16 c16 
+(5)15 S16 y08 @42 f8 g8 y10 g16 y11 c8 y10
+(5)15 @42 y08 f32 y09 f32 y10 f16 y11 d16 y12 c16 y10 S8 c16 c16
+(5)12 [y10 K8. @42 y08 e8. y12 c8]4 y10
+(5)13 (19)
+
+#3 @31 o3 v120 $E8 $30 $F7 r48
+f24 f24 f24 f24 f24 f48 @33 y09 v183 > 
+f12 f12 f12 f6. 
+@32 o5 v195 f6. q7c e6. q7a c6. q7c d+1 
+r6. q7f f6. q7c e6. q7a c6. q7c g1 
+q6c g+2. q7c g+12 g+12 g+12 a+1
+f1^1 $E8 $C0 $00 ^1 q7f v110 a+1
+@33 o5 y09 v202 q7f
+(4)[r8 c16 r8. c16 r16 c16 r8 c8. c16 r16] @32 v115 a+1 @33 v222 (4) @32 v115 g+8. g8. f8 g4 d+4
+/ [f1 d+2 g2 f2 g+2 g2 d+2 f2 g+2 a+1 g+2 f2 a+2 g+2]2
+@43 v145 < c+2. < a+4 > d+2. < a+4 > c2. < g+4 > c+2. c4 <
+c+4. > c+4 c8 < a+8 > c8 d+2 < a+2
+g2 b8. > d8. g8 g+2 g2
+@33 v212 >
+[r8 c16 r8. c16 r16 c16 r8 c8. c16 r16 r8 c16 r8. c16 r16 c16 r8 f8. c16 r16]3 << 
+@43 v160 $F4 $01 g+8. > c+8. f8 < a+8. > d+8. g8 c+8. f8. g+8 d+8. g8. $F4 $01 a+8 >
+c1 $E8 $C0 $60 ^1 $E8 $C0 $00 ^1 r1
+@33 o5 y09 v202 q7f
+(4) @32 v115 a+1 @33 v222 (4) @32 v115 g+8. g8. f8 g4 d+4
+
+#4 @33 y09 v183 o4 
+r4 c12 c12 c12 c6. 
+@32 o5 v185 y11 
+c6. < q7c b6. q7a g6. q7c a+1 >
+r6. c6. < q7c b6. q7a g6. q7c > d+1
+q6c f2. q7c f12 f12 f12 g1 < 
+q7f v175 
+(21)[f1 g2 a+2 g+1 g2 f4 d+4 f1 g2 a+2 g+16 g16 g+2^32^=2 f6 > c6 < a+8. > c8. < a+8 g+4 g4]
+/ v150 c1 d+1 c1 d+1 c1 d+1 d+1 f1
+c1 d+1 c1 d+1 c1 d+1 f1 f1 >
+v130 c+2. < a+4 > d+2. < a+4 > c2. < g+4 > c+2. c4 <
+c+4. > c+4 c8 < a+8 > c8 d+2 < a+2 b1 > c1 
+v150 [f2. d+4]3 g+2 g2 [f2. d+4]2 <
+y10 v170 g+8. > c+8. f8 < a+8. > d+8. g8 c+8. f8. g+8 d+8. g8. a+8 y11 <
+v150 (21)
+
+#5 @32 v237 o1
+r4 r6. f1^1^1^1 g+1 a+1
+@40 o3 v215
+(1)[f8 > f16 f16]4 < $FA $02 $FE (1)4 $FA $02 $FC (1)4 $FA $02 $FE (1)4
+$FA $02 $00 (1)4 $FA $02 $FE (1)4 $FA $02 $FC (1)4 (18)[$FA $02 $00 d+8 > d+16 d+16 < c8 > c16 c16 < d+8 > d+16 d+16 < g8 > g16 g16]
+/ (6)[f8 f16 f16 d+8 d+16 d+16 c+8 c+16 c+16 c8 c16 c16] (7)[d+8 d+16 d+16 c+8 c+16 c+16 c8 c16 c16 < a+8 a+16 a+16]
+(6)3 (7) > g+8 g+16 g+16 g8 g16 g16 f8 f16 f16 d+8 d+16 d+16 a+8 a+16 a+16 g+8 g+16 g+16 g8 g16 g16 d+8 d+16 d+16
+[[(6)(7)(6)2]]2
+(14)[c+8 c+16 c+16 c8 c16 c16 < a+8 a+16 a+16 g+8 g+16 g+16 > d+8 d+16 d+16 c+8 c+16 c+16 c8 c16 c16 < a+8 a+16 a+16 >]
+c8 c16 c16 < a+8 a+16 a+16 g+8 g+16 g+16 g8 g16 g16 > c+8 c+16 c+16 c8 c16 c16 < a+8 a+16 a+16 g+8 g+16 g+16
+(14) [b8 b16 b16]3 g8 g16 g16 > c8 c16 c16 < a+8 a+16 a+16 > d+8 d+16 d+16 c8 c16 c16
+(1)4 $FA $02 $FE (1)4 $FA $02 $FC (1)4 $FA $02 $FE (1)4
+$FA $02 $00 (1)4 $FA $02 $FE (1)4 $FA $02 $00 c+8. c+8. c+8 d+8. d+8. d+8 c+8. c+8. c+8 d+8. c8. d+8
+$FA $02 $00 (1)4 $FA $02 $FE (1)4 $FA $02 $FC (1)4 $FA $02 $FE (1)4
+$FA $02 $00 (1)4 $FA $02 $FE (1)4 $FA $02 $FC (1)4 (18)
+
+#7 @30 v240 o4 $FA $03 $2F 
+r4 r6. [c1 r2. r6.]2 c1 c1 
+[c1 [[r1]]3]2 / c1 [r1]7 [c1 [[r1]]7]2 c1 [r1]7
+c1 [r1]3 c1 [r1]3
+
+#6 @41    
+r4 r6. [r1]6
+(22)[v180 y12 $E8 $C0 $00 [[c16 c+16 d+16 f16]]4 r1 y08 v180 $E8 $C0 $00 [[c16 c+16 d+16 f16]]4 r1]2
+/ @41 y12 v180 (12)[ [[r1]]3 r4. c16 < a+16 > c8 > c16 < a+16 > c16 q7a c16 < q75 a+16] 
+[r1]3 r4..^8 q7f d+8 d+16 f16 g16 g+16 f16 d+16 
+(12) < [r1]2 r16 f16 g16 g+16 a+16 > c16 c+16 d+16 f16 g16 g+16 a+16 > c16 c+16 d+16 f16 g16 f1 <
+[r1]7 r2 c16 d+16 f16 g16 > c16 < a+16 g+16 g16
+[v180 $E8 $C0 $00 [[c16 c+16 d+16 f16]]4]6 [r1]6
+(22)

@@ -356,8 +356,8 @@ B2	0	Main Theme
 B2	1	Main Theme
 B3	0	RS3 =ラストバトル=
 B3	1	RS3 =ラストバトル=
-B4	0	Hurry Up!
-B4	1	Hurry Up!
+B4	0	Hurry Up! (No Intro)
+B4	1	Hurry Up! (No Intro)
 B5	0	Battle 2
 B5	1	Battle 2
 B6	0	showdown_on_the_tower
@@ -368,8 +368,8 @@ B8	0	Chocolate Rain
 B8	1	Chocolate Rain
 B9	0	Embers of a Burning Dystopia
 B9	1	Embers of a Burning Dystopia
-BA	0	Homestuck - 'Showtime'
-BA	1	Homestuck - 'Showtime'
+BA	0	Liberation ('sol_battle021.mid')
+BA	1	Liberation ('sol_battle021.mid')
 BB	0	Enchanted Forest
 BB	1	Enchanted Forest
 BC	0	mus_a2mtovr1
@@ -394,8 +394,8 @@ C5	0	Destiny
 C5	1	Destiny
 C6	0	Break the Sabbath
 C6	1	Break the Sabbath
-C7	0	Stage 1 (The Land of Cotton)
-C7	1	Stage 1 (The Land of Cotton)
+C7	0	Fearless Challenger
+C7	1	Fearless Challenger
 C8	0	Park
 C8	1	Park
 C9	0	Little Midnight Song

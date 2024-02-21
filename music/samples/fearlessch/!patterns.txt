@@ -1,0 +1,16 @@
+"cymbal.brr"		$9F $6E $00 $05 $00 $A4 $40 $40
+"ff6timpani.brr"	$8F $E0 $00 $02 $30 $A4 $40 $40
+"ff6string.brr"		$00 $00 $DA $03 $15 $A4 $40 $40
+"ff6trumpet.brr"	$00 $00 $DE $06 $02 $A4 $40 $40
+"ff6organ.brr"		$8E $E0 $00 $05 $EF $A4 $40 $40 
+"harp.brr"			$BF $B0 $00 $04 $00 $A4 $40 $40
+"piccolo.brr"		$00 $00 $DA $04 $00 $A4 $40 $40
+"power chord sus.brr" $AD $A6 $00 $03 $00 $A4 $40 $40
+"Kick.brr"          $FF $E0 $00 $07 $A8 $A4 $40 $40
+"Snare.brr"         $FF $E0 $00 $07 $A8 $A4 $40 $40
+"Closed Hi-Hat.brr" $FF $E0 $00 $07 $A8 $A4 $40 $40
+"Electric Bass (Pick).brr" $FE $EE $00 $06 $40 $A4 $40 $40
+"vibraphone.brr" $8F $6F $00 $04 $00 $A4 $40 $40
+"tom.brr" $FF $F6 $00 $06 $00 $A4 $40 $40
+"choir soft.brr" $88 $A0 $00 $02 $00 $A4 $40 $40
+"loud lead.brr" $FF $E8 $00 $02 $00 $A4 $40 $40
