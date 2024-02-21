@@ -3,7 +3,7 @@
 /////////////
 
 [sprite=58]
-// Uncle Broadsword
+// Uncle Broadsword (looking up and left)
 (48,2A,C8,42,big)(58,2A,C6,42,big)
 (48,3A,A8,42,big)(58,3A,A6,42,big)
 // Demo and Iris
@@ -33,7 +33,7 @@ Hey, Uncle B.!
 // Uncle Broadsword
 (48,2A,86,02,big)(58,2A,88,02,big)
 (48,3A,A6,02,big)(58,3A,A8,02,big)
-// Demo and Iris
+// Demo (happy) and Iris
 (80,2A,84,0C,big)(98,2A,82,0E,big)
 (80,3A,A0,0C,big)(98,3A,A2,0E,big)
 // Background
@@ -60,7 +60,7 @@ Demo! [wait=30].[wait=30].[wait=30].[wait=30]Eilish![wait=30] How are my lovely 
 // Uncle Broadsword
 (48,2A,86,02,big)(58,2A,88,02,big)
 (48,3A,A6,02,big)(58,3A,A8,02,big)
-// Demo and Iris
+// Demo (happy) and Iris (annoyed)
 (80,2A,84,0C,big)(98,2A,A4,0E,big)
 (80,3A,A0,0C,big)(98,3A,A2,0E,big)
 // Background
@@ -128,11 +128,11 @@ That's a bummer.[wait=30] Anyway, how's the excavation going?[wait=30] We've bar
 /////////////
 
 [sprite=60]
-// Uncle Broadsword
+// Uncle Broadsword (sword pose)
 (68,1A,AE,02,big)
 (48,2A,CA,02,big)(58,2A,CC,02,big)(68,2A,CE,02,big)
 (48,3A,EA,02,big)(58,3A,EC,02,big)
-// Demo and Iris
+// Demo and Iris (both looking up)
 (80,2A,E0,0C,big)(98,2A,E2,0E,big)
 (80,3A,A0,0C,big)(98,3A,A2,0E,big)
 // Background
@@ -157,6 +157,33 @@ Absolutely smashing![wait=30] I'm on the verge of a major discovery!
 
 [sprite=58]
 // Uncle Broadsword
+(48,2A,86,02,big)(58,2A,88,02,big)
+(48,3A,A6,02,big)(58,3A,A8,02,big)
+// Demo and Iris
+(80,2A,80,0C,big)(98,2A,82,0E,big)
+(80,3A,A0,0C,big)(98,3A,A2,0E,big)
+// Background
+(30,08,00,05,big)(40,08,06,05,big)(50,08,08,05,big)(60,08,0A,05,big)(70,08,0C,05,big)(80,08,0E,05,big)(90,08,20,05,big)(A0,08,22,05,big)(B0,08,22,05,big)(C0,08,22,05,big)
+(30,18,00,05,big)(40,18,00,05,big)(50,18,00,05,big)(60,18,00,05,big)(70,18,06,05,big)(80,18,00,05,big)(90,18,0A,05,big)(A0,18,0E,05,big)(B0,18,20,05,big)(C0,18,2C,05,big)
+(30,28,02,05,big)(40,28,06,05,big)(50,28,00,05,big)(60,28,00,05,big)(70,28,00,05,big)(80,28,08,05,big)(90,28,06,05,big)(A0,28,26,05,big)(B0,28,28,05,big)(C0,28,2A,05,big)
+(30,38,2E,05,big)(40,38,48,05,big)(50,38,4A,05,big)(60,38,4C,05,big)(70,38,4A,05,big)(80,38,4E,05,big)(90,38,6C,05,big)(A0,38,6E,05,big)(B0,38,C2,04,big)(C0,38,C4,04,big)
+(30,48,68,07,big)(40,48,6A,07,big)(50,48,68,07,big)(60,48,6A,07,big)(70,48,68,07,big)(80,48,6A,07,big)(90,48,68,07,big)(A0,48,6A,07,big)(B0,48,68,07,big)(C0,48,6A,07,big)
+[/sprite]
+[font color=3]
+[topic]Uncle Broadsword[/topic]
+We've already unearthed much of these ruins, and I believe there are still more treasures waiting to be found.[wait=30] You're welcome to have a look inside!
+[wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+
+/////////////
+// Scene 7 //
+/////////////
+
+[sprite=58]
+// Uncle Broadsword (sad)
 (48,2A,8A,02,big)(58,2A,8C,02,big)
 (48,3A,AA,02,big)(58,3A,AC,02,big)
 // Demo and Iris
@@ -184,15 +211,15 @@ If it makes you feel any better, we'll try to find your notebook while we go and
 [wait=30]
 
 /////////////
-// Scene 7 //
+// Scene 8 //
 /////////////
 
 [sprite=60]
-// Uncle Broadsword
+// Uncle Broadsword (sword pose)
 (68,1A,AE,02,big)
 (48,2A,CA,02,big)(58,2A,CC,02,big)(68,2A,CE,02,big)
 (48,3A,EA,02,big)(58,3A,EC,02,big)
-// Demo and Iris
+// Demo and Iris (annoyed)
 (80,2A,80,0C,big)(98,2A,A4,0E,big)
 (80,3A,A0,0C,big)(98,3A,A2,0E,big)
 // Background
@@ -212,14 +239,14 @@ Marvelous, Irma!
 [wait=30]
 
 /////////////
-// Scene 8 //
+// Scene 9 //
 /////////////
 
 [sprite=58]
-// Uncle Broadsword
+// Uncle Broadsword (looking up and left)
 (68,2A,C8,42,big)(78,2A,C6,42,big)
 (68,3A,A8,42,big)(78,3A,A6,42,big)
-// Demo and Iris
+// Demo and Iris (both looking up)
 (A0,2A,E0,0C,big)(B8,2A,E2,0E,big)
 (A0,3A,A0,0C,big)(B8,3A,A2,0E,big)
 // Background
@@ -239,14 +266,14 @@ Last I recall, it was with me on a visit to another archaeological site.[wait=30
 [wait=30]
 
 /////////////
-// Scene 9 //
+// Scene 10 //
 /////////////
 
 [sprite=58]
 // Uncle Broadsword
 (48,2A,86,02,big)(58,2A,88,02,big)
 (48,3A,A6,02,big)(58,3A,A8,02,big)
-// Demo and Iris
+// Demo (happy) and Iris
 (80,2A,84,0C,big)(98,2A,82,0E,big)
 (80,3A,A0,0C,big)(98,3A,A2,0E,big)
 // Background

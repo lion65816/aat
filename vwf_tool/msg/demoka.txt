@@ -135,6 +135,8 @@ You have become meguca!
 [wait=30]
 [br]You can now do magical things!
 [wait]
+[br]Hold L/R to lock your direction!
+[wait]
 [br]Collect 5 coins to heal HP!
 [wait]
 [erase]

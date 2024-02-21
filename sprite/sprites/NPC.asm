@@ -670,21 +670,30 @@ endif
 .showMessage
 
         ; AAT edit: Do not show the message; only teleport if
-        ; sublevel is 19, B1, 123, 12E, or 1AE.
+        ; sublevel is 19, 82, B1, 123, 12E, or 1AE.
         REP #$20
         LDA $010B|!addr
         CMP #$0019
+        BEQ +
+        CMP #$0082
         BEQ +
         CMP #$00B1
         BEQ +
         CMP #$0123
         BEQ +
-        CMP #$012E
-        BEQ +
+        CMP #$012E                              ;\ Special check for Level 12E.
+		BNE .skip                               ;| Talking to custom sprite A4
+		SEP #$20	                            ;| activates a VWF cutscene, but
+		LDX $15E9|!addr                         ;| talking to custom sprite 9A
+		LDA !7FAB9E,x                           ;| displays a normal message box.
+		CMP #$9A                                ;|
+		BEQ .normal                             ;|
+		BRA +                                   ;/
+.skip
         CMP #$01AE
         BEQ +
         SEP #$20
-
+.normal
         LDA #$18                                ; \  set the message timer
         STA !MessageTimer                       ; /  which sets all the other stuff in motion
         BRA .dontShowMessage                    ;\ AAT edit
@@ -988,17 +997,25 @@ Graphics:
         REP #$20
         LDA $010B|!addr                         ;\ Shift the indicator 8 pixels to the right
         CMP #$000F                              ;| if sublevel 00F or 1EA.
-        BEQ ..shift                             ;|
+        BEQ ..shift_right                       ;|
         CMP #$01EA                              ;|
-        BEQ ..shift                             ;/
+        BEQ ..shift_right                       ;/
         SEP #$20
+		LDA !7FAB9E,x                           ;\ Shift the indicator 8 pixels to the left
+		CMP #$9A                                ;| if custom sprite 9A (as opposed to A4).
+		BEQ ..shift_left                        ;/ Note: Hard coded specifically for Level 12E.
         LDA $00
         CLC : ADC #$00
         BRA ..store
-..shift
+..shift_right
         SEP #$20
         LDA $00
         CLC : ADC #$08
+		BRA ..store
+..shift_left
+        SEP #$20
+        LDA $00
+        SEC : SBC #$08
 ..store
         STA $0300|!Base2,y
         LDA $01

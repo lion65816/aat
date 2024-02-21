@@ -203,3 +203,5 @@ C7  La-Mulana - Fearless Challenger.txt
 C8  park.txt
 C9  LittleMidnightSong.txt
 CA  Got an Item.txt
+CB  Dead-End Chaos Theatre.txt
+CC  Trick and Magic.txt

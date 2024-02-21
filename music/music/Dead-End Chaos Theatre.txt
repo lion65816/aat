@@ -1,0 +1,186 @@
+#amk 2
+
+; SPC Generator Info
+#SPC
+{
+    #author  "Keiichi Suzuki, Hirokazu Tanaka, Akio Ohmori, Ritsuo Kamimura"
+    #title   "Dead-End Chaos Theatre"
+    #game    "Earthbound"
+    #comment "Ported by Ahrion"
+}
+
+#path "ChaosTheatre"
+
+#samples
+{
+	#default
+	"Cursor.brr"
+	"Nylon Guitar.brr"
+	"Woodblock.brr"
+}
+
+#instruments
+{
+	"Cursor.brr"		$FF $E0 $7F $07 $A0 ; @30
+	"Nylon Guitar.brr"	$FF $F0 $7F $06 $00 ; @31
+	"Woodblock.brr"		$8F $E0 $7F $04 $90 ; @32
+}
+
+w141
+t18
+
+
+"Cursor = v145"
+"Woodblock = v239"
+"Guitar31 = v107"
+"Guitar41 = v227"
+"Guitar42 = v205"
+"Guitar51 = v209"
+"Guitar61 = v188"
+
+
+; Echo 
+$EF $7C $66 $66
+$F1 $02 $09 $01
+$F5 $34 $33 $00 $D9 $E5 $01 $FC $EB
+
+
+; +---------------------+
+; |     Channel #0	|
+; |     Cursor		|
+; +---------------------+
+
+#0
+o4
+
+@30 q6E Cursor
+(11)[y3 r8 c4 c4 c4 c4 c4 c4 c4 c4 c4 c4 c4 c8 r1]
+r4^16 << y19 g=4 < g=32 r8 y3 >>> c4 c4 c8 q62 c=8 q64 c=8 q66 c=8 q68 c=8 q6A c=8 q6E c=8 r8 c4 c4 c4 c8
+(11) 
+
+
+
+; +---------------------+
+; |     Channel #1	|
+; |     Woodblock	|
+; +---------------------+
+
+#1
+o2
+
+@32 Woodblock
+(21)[y15 q6F c4 q6B c2 c4 q6F c4 q6B c4 q6F c4 q6B c4 q6F c2 c4 q6B c4 q6F c2 c4 q6B c4]
+y1 r8.. > q6D c64 y10 >>> c=5 <<<< y1 c=46 y15 c4 c4 c8 c16 c16 q65 c=8 c=8 q67 c=8 q69 c=8 q6B c=8 q6D c=8 q6F c4 c4 c8 c=8 c=8 c=8 c8 c8
+(21)
+
+
+
+; +---------------------+
+; |     Channel #2	|
+; |     Guitar		|
+; +---------------------+
+
+#2
+o1
+
+@31 Guitar61 $EE $0A
+
+(71)[y13 q6F e=16 q3A e=8]16
+$FA $02 $05
+(71)8
+$FA $02 $00
+(71)8
+
+r8^96 > q6F b=70 r2 < q6D b=8 q38 b=8 q68 b=8 q3D b=8 q66 b32. q36 b=8 q6F b=8 q34 b=7 q36 b=8 q38 b=8 q3A b=8 q3F b=8
+
+(71)24
+$FA $02 $05
+(71)8
+$FA $02 $00
+(71)8
+
+
+
+; +---------------------+
+; |     Channel #3	|
+; |     Guitar		|
+; +---------------------+
+
+#3
+o3
+
+@31 $EE $0A $DE $1C $1D $46
+(41)[r2^8 y10 q7F Guitar42 $EB $01 $14 $02 d8 d=16 $EB $00 $00 $00 d=8 < $EC $01 $08 $FE a=16 $EC $01 $02 $02 g4 Guitar42 e4^32^96 r2^16^64^192 > Guitar41 q1F $EB $01 $0d $03 d=20 r=84 q7F $EB $01 $14 $02 d8 d=16 $EB $00 $00 $00 d=8 $EC $01 $08 $02 a=16 $EC $01 $04 $FF g+4 < $EC $01 $05 $01 d4^32^96 r2 >]
+
+$EB $01 $0C $01 r32. y18 q6F b=16 $EB $00 $00 $00 b=8 a=8 f+=8 e=8 r=39 < $EB $01 $14 $02 q7F b8 b8 b16^64^192 $EB $00 $00 $00 a=8 $EC $01 $03 $01 f+=8 e=8 f+=8 > $EB $01 $0C $01 q5F e8 r8 q6F $EB $01 $0C $03 g+8 r1^8
+
+(41)
+
+
+
+; +---------------------+
+; |     Channel #4	|
+; |     Guitar		|
+; +---------------------+
+
+#4
+o2
+
+@31 Guitar51 $EE $0A $DE $0C $20 $1E
+
+(51)[r96 y8
+[[q6B e=16 q49 e=8]]7 q6B e=16 q49 e32]2 
+
+$FA $02 $05
+(51)
+$FA $02 $00
+(51)
+
+> r8 q6B c4. r2^96 < b=8 q45 b=8 q65 b=8 q49 b=7 q65 b=8 q45 b=9 r=8 q43 b=9 q45 b=8 q4D b=7 q49 b=8 q4F b32
+
+(51)3
+$FA $02 $05
+(51)
+$FA $02 $00
+(51)
+
+
+
+; +---------------------+
+; |     Channel #5	|
+; |     Guitar		|
+; +---------------------+
+
+#5
+o1
+
+@31 Guitar61 $EE $0A $DE $19 $1E $1E
+
+(61)[r192 y11 q6F b=16 q4A b=8 > q6F c+=16 < q4A b=8 > q6F d=16 < q4A b=8 > q6F c+=16 < q4A b=7]4
+$FA $02 $05
+(61)2
+$FA $02 $00
+(61)2
+
+> r8^192 q6F f=71 r2^192 f+=8 q49 f+=8 q66 f+=8 q4A f+=8 q66 a=8 q45 f+=8 r=8 f+=8 q49 f+=8 q4F f+=8 q4D f+=8 q4F f+=7 <
+
+(61)6
+$FA $02 $05
+(61)2
+$FA $02 $00
+(61)2
+
+
+
+; +---------------------+
+; |     Channel #6	|
+; |     Guitar		|
+; +---------------------+
+
+#6
+o3
+
+@31 Guitar31 y2 $EE $0A $DE $1C $1D $46
+[[r2]]8 r=27
+q6F g+=69 r=4 < q7F $EB $01 $14 $02 b8 b8 b=16 $EB $00 $00 $00 a=8 $EC $01 $03 $01 f+=8 e=8 f+=8 > $EB $01 $0c $01 q5F e8 r8 $EB $01 $0c $03 g+16. $EB $00 $00 $00
+[[r2]]10 r8^96

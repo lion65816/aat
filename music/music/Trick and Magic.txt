@@ -1,0 +1,163 @@
+#amk 2 $F4$02 w210 t57
+#spc
+{
+	#title "Trick and Magic"
+	#game "Phoenix Wright: Ace Attorney - Justice for All"
+	#author "Naoto Tanaka / Capcom"
+	#length "0:48"
+}
+#path "TrickMagic"
+#samples
+{
+	#default
+	"Danger Hit.brr"
+}
+#instruments
+{
+	@13 $BF $98 $00 $03 $00
+	@3 $FF $F6 $B8 $03 $00
+	"Danger Hit.brr" $FF $F3 $00 $0A $90
+	n1F $CF $FE $00 $00 $00 ;closed hat
+	n1F $FF $96 $00 $00 $00 ;open hat
+}
+
+; ------------------------
+
+"∑Z=v200y10"
+"∑X=v180y0"
+"∑C=v180y20"
+
+"∑A=q7F"
+"∑S=q79"
+"∑G=q7C"
+
+"∑V=v180y9"
+"∑B=v160y0"
+
+"∑D=q7B"
+"∑F=q76"
+
+"∑1=q7F"
+"∑2=q79"
+"∑3=q75"
+
+"≈P = y10@34c@33"
+"≈Z = y20c16y0c16y20"
+
+"≈K = ∑1c∑2c∑3c"
+"≈L = ∑1c∑2c∑1c∑2c∑3c"
+
+;$EF $EF $20 $20
+;$F1 $04 $15 $01
+
+$EF $0F $30 $30
+$F1 $04 $20 $01
+
+; ------------------------
+
+#0 @30 o4 l16
+(0)[
+∑A ∑Zc+∑Xc+ ∑Zc+∑Xc+ ∑S ∑Zg+∑Xg+ ∑A ∑Zc+∑Xc+ ∑Zc+∑Xc+ > ∑S ∑Zc+∑Xc+ < ∑Zg+∑Xg+ ∑Zg+∑Xg+
+∑Zg+∑Xg+ > ∑Zc+∑Xc+ ∑Zc+∑Xc+ ∑Zg+∑Xg+ ∑Zg+∑Xg+ ∑Zc+∑Xc+ ∑Zc+∑Xc+ < ∑Zg+∑Xg+
+]2
+/
+(0)4
+h1
+[
+∑A ∑Zc+∑Xc+ ∑Zc+∑Xc+ ∑S ∑Zg+∑Xg+ ∑A ∑Zc+∑Xc+ ∑Zc+∑Xc+ > ∑S ∑Zc+∑Xc+ < ∑Zg+∑Xg+ ∑Zg+∑Xg+
+∑Zg+∑Xg+ > ∑Zc+∑Xc+ ∑Zc+∑Xc+ ∑Zg+∑Xg+ ∑Zg+∑Xg+ ∑Zc+∑Xc+ ∑Zc+∑Xc+ < ∑Zg+∑Xg+
+]4
+h2
+[
+∑A ∑Zc+∑Xc+ ∑Zc+∑Xc+ ∑S ∑Zg+∑Xg+ ∑A ∑Zc+∑Xc+ ∑Zc+∑Xc+ > ∑S ∑Zc+∑Xc+ < ∑Zg+∑Xg+ ∑Zg+∑Xg+
+∑Zg+∑Xg+ > ∑Zc+∑Xc+ ∑Zc+∑Xc+ ∑Zg+∑Xg+ ∑Zg+∑Xg+ ∑Zc+∑Xc+ ∑Zc+∑Xc+ < ∑Zg+∑Xg+
+]4
+
+; ------------------------
+
+#1 @30 o3 l16
+(1)[
+∑G∑Zg+∑A∑Cg+ ∑G∑Zg+∑A∑Cg+ > ∑Zc+∑Cc+ < ∑G∑Zg+∑A∑Cg+ ∑G∑Zg+∑A∑Cg+ > ∑S∑Zg+∑C∑Cg+ ∑A∑Zc+∑Cc+ ∑Zc+∑Cc+
+∑Zc+∑Cc+ ∑S∑Zg+∑Cg+ ∑Zg+∑Cg+ > ∑Zc+∑Cc+ ∑Zc+∑Cc+ < ∑Zg+∑Cg+ ∑Zg+∑Cg+ ∑A∑Zc+∑Cc+ <
+]2
+/
+(1)4
+h1
+[
+∑G∑Zg+∑A∑Cg+ ∑G∑Zg+∑A∑Cg+ > ∑Zc+∑Cc+ < ∑G∑Zg+∑A∑Cg+ ∑G∑Zg+∑A∑Cg+ > ∑S∑Zg+∑C∑Cg+ ∑A∑Zc+∑Cc+ ∑Zc+∑Cc+
+∑Zc+∑Cc+ ∑S∑Zg+∑Cg+ ∑Zg+∑Cg+ > ∑Zc+∑Cc+ ∑Zc+∑Cc+ < ∑Zg+∑Cg+ ∑Zg+∑Cg+ ∑A∑Zc+∑Cc+ <
+]4
+h2
+[
+∑G∑Zg+∑A∑Cg+ ∑G∑Zg+∑A∑Cg+ > ∑Zc+∑Cc+ < ∑G∑Zg+∑A∑Cg+ ∑G∑Zg+∑A∑Cg+ > ∑S∑Zg+∑C∑Cg+ ∑A∑Zc+∑Cc+ ∑Zc+∑Cc+
+∑Zc+∑Cc+ ∑S∑Zg+∑Cg+ ∑Zg+∑Cg+ > ∑Zc+∑Cc+ ∑Zc+∑Cc+ < ∑Zg+∑Cg+ ∑Zg+∑Cg+ ∑A∑Zc+∑Cc+ <
+]4
+
+; ------------------------
+
+#2 @31 o3 l16
+(2)[
+∑D ∑Vg+∑Bc+ ∑Vg+∑Bc+ > ∑Vc+<∑B∑Fg+ ∑D ∑Vg+∑Bc+ ∑Vg+∑Bc+ > ∑F ∑Vg+∑Bc+ ∑D∑Vc+∑F∑B<g+> ∑D∑Vc+∑F∑B<g+>
+∑D∑Vc+∑F∑B<g+> ∑F ∑Vg+∑Bc+ ∑Vg+∑Bc+ > ∑Vc+∑B<g+> ∑Vc+∑B<g+ ∑Vg+∑Bc+ ∑Vg+∑Bc+ ∑D∑Vc+∑F∑B<g+
+]2
+/
+(2)4
+h1
+[
+∑D ∑Vg+∑Bc+ ∑Vg+∑Bc+ > ∑Vc+<∑B∑Fg+ ∑D ∑Vg+∑Bc+ ∑Vg+∑Bc+ > ∑F ∑Vg+∑Bc+ ∑D∑Vc+∑F∑B<g+> ∑D∑Vc+∑F∑B<g+>
+∑D∑Vc+∑F∑B<g+> ∑F ∑Vg+∑Bc+ ∑Vg+∑Bc+ > ∑Vc+∑B<g+> ∑Vc+∑B<g+ ∑Vg+∑Bc+ ∑Vg+∑Bc+ ∑D∑Vc+∑F∑B<g+
+]4
+h2
+[
+∑D ∑Vg+∑Bc+ ∑Vg+∑Bc+ > ∑Vc+<∑B∑Fg+ ∑D ∑Vg+∑Bc+ ∑Vg+∑Bc+ > ∑F ∑Vg+∑Bc+ ∑D∑Vc+∑F∑B<g+> ∑D∑Vc+∑F∑B<g+>
+∑D∑Vc+∑F∑B<g+> ∑F ∑Vg+∑Bc+ ∑Vg+∑Bc+ > ∑Vc+∑B<g+> ∑Vc+∑B<g+ ∑Vg+∑Bc+ ∑Vg+∑Bc+ ∑D∑Vc+∑F∑B<g+
+]4
+
+; ------------------------
+
+#3 @21 o4 h4 l8 v250
+[[ ≈K r^1^4 ≈L r^1. ]]2
+/[ ≈Kr^4 ≈Lr^4 ≈Kr^2 ≈Lr^2 ]2
+[[ [≈Kr]3 r4 ≈L [r≈K]2 r2 ∑1c ]]2
+[ ≈Lr4 ∑1c≈K r^2 ]2
+
+; ------------------------
+
+#4 @33 o4 l8 v120 y10
+[[ r4 [cr^4]2cr^2. [cr^4]3c @34 c @33]]2
+/[[ [cc≈Pc4c4≈Pc4≈Pc4]c^4 *cc≈P ]]2
+[[ [≈Zc ≈P ≈Zcc≈Z ≈P cc ≈P c≈Zc]c ≈P * ≈P≈P ]]2
+[≈Zcr≈Z ≈P ccr4c ≈P ≈Zcr]≈P r * cr4
+
+; ------------------------
+
+#5 @32 o3 l8 v170 y10
+[r2]8
+/c2.c2.<a+8>f4.<f1>
+[r2]10
+c+2.c+2.<b8>f+4.<f+1>
+[r2]10
+d2.d2.c8g4.<g1>
+[r2]10
+
+; ------------------------
+
+#6 @32 o3 l8 v100 y20
+[r2]8 /r4
+c2.c2.<a+8>f4.<f1>
+[r2]10
+c+2.c+2.<b8>f+4.<f+1>
+[r2]10
+d2.d2.c8g4.<g1>
+[r2]10
+
+; ------------------------
+
+#7 @32 o3 l8 v70 y0
+[r2]8 /r2
+c2.c2.<a+8>f4.<f1>
+[r2]10
+c+2.c+2.<b8>f+4.<f+1>
+[r2]10
+d2.d2.c8g4.<g1>
+[r2]10

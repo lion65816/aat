@@ -22,11 +22,22 @@ init:
 	RTL
 
 main:
-	LDA $71			;\ Don't execute any of the following
-	CMP #$09		;| code if Demo dies.
-	BNE .continue	;|
-	JMP .return		;/
+	LDA $71				;\ Don't execute any of the following
+	CMP #$09			;| code if Demo dies.
+	BNE .continue		;|
+	JMP .coin_counter	;/
 .continue
+	LDA $17			;\ Branch if not pressing R.
+	AND #$10		;|
+	BEQ +			;/
+	LDA #$01		;\ Lock Demo facing right if R is held.
+	STA $76			;/
++
+	LDA $17			;\ Branch if not pressing L.
+	AND #$20		;|
+	BEQ +			;/
+	STZ $76			;> Lock Demo facing left if L is held.
++
 	LDA #$02		;\ Demo always has a cape
 	STA $19			;/
 
@@ -195,7 +206,7 @@ main:
 
 	LDA $1493|!addr		;\ During the level end sequence,
 	BEQ +				;| stop processing player inputs.
-	JMP .return			;/
+	JMP .coin_counter	;/
 +
 
 	; Control Override
@@ -271,14 +282,87 @@ main:
 
 	; Get +1 HP for every five coins collected.
 	LDA $0DC0|!addr			;> Use the Green Star Block coin counter. Counts down every time a coin is collected.
-	;STA $0DBF|!addr		;> [Debug]
 	CMP #$1A				;\ If less than 26 coins, increment the player's HP.
-	BCS .return				;|
+	BCS .coin_counter		;|
 	INC !PlayerCurrentHP	;/
 	LDA #$0B				;\ Play the "item placed in reserve box" SFX.
 	STA $1DFC|!addr			;/
 	LDA #$1E				;\ Reset the coin counter to 30.
 	STA $0DC0|!addr			;/
-
+.coin_counter
+	LDA $0DC0|!addr		;\ Load coin counter into scratch RAM.
+	STA $00				;| Zero out the high byte for 16-bit arithmetic.
+	STZ $01				;/
+	LDY.b #$02			;> Request 2 tiles to draw.
+	REP #$30			;> (As the index registers were 8-bit, this fills their high bytes with zeroes)
+	LDA.w #$0000		;> Maximum priority. Input parameter for call to MaxTile.
+	JSL $0084B0			;\ Request MaxTile slots (does not modify scratch ram at the time of writing).
+						;| Returns 16-bit pointer to the OAM general buffer in $3100.
+						;/ Returns 16-bit pointer to the OAM attribute buffer in $3102.
+	BCC .return			;\ Carry clear: Failed to get OAM slots, abort.
+						;/ ...should never happen, since this will be executed before sprites, but...
+	JSR draw_coin_counter
 .return
+	SEP #$30
 	RTL
+
+;=================================
+; Draw coin counter (sprite-based,
+; make sure the graphics are in
+; the appropriate places in SP2)
+;=================================
+
+draw_coin_counter:
+	PHB
+	PHK
+	PLB
+
+	; OAM table
+	LDX $3100			;> Main index (16-bit pointer to the OAM general buffer)
+	LDA.w #$02			;\ Calculate loop index
+	DEC					;| and store in Y.
+	ASL					;|
+	TAY					;/
+-
+	LDA TileCoord,y		;\ Load tile X and Y coordinates
+	STA $400000,x		;/
+
+	LDA TileProps,y		;> Load tile properties.
+	CMP #$3082			;\ Branch if not the actual counter tile.
+	BNE +				;/
+	LDA $00				;\ Calculate the offset of the counter
+	SEC					;| tile based on the coin counter.
+	SBC #$0019			;|
+	ASL					;|
+	STA $00				;|
+	LDA #$3080			;|
+	CLC					;|
+	ADC $00				;/
++
+	STA $400002,x
+
+	INX #4				;\ Move to next slot and loop
+	DEY #2				;|
+	BPL -				;/
+
+	; OAM extra bits
+	LDX $3102			;> Bit table index (16-bit pointer to the OAM attribute buffer)
+	LDA.w #$02			;\ Calculate loop index
+	DEC #2				;| and store in Y.
+	TAY					;/
+-
+	LDA #$0202			;\ Store extra bits for two tiles at a time.
+	STA $400000,x		;/ 
+
+	INX #2				;\ Loop to set the remaining OAM extra bits.
+	DEY #2				;|
+	BPL -				;/
+
+	PLB
+	RTS
+
+TileCoord:				; YYXX
+	dw $5804,$5814		; Draw directly below the HP meter.
+
+TileProps:				; High byte = YXPPCCCT, low byte = tile number
+	dw $3080,$3082		; The second tile will change depending on coin count.

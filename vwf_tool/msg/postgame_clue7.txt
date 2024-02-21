@@ -14,6 +14,7 @@ Found a missing page from Uncle Broadsword's diary!
 // Scene 2 //
 /////////////
 
+[music=CC]
 [sprite=50]
 // Background
 (30,08,00,0F,big)(40,08,00,0F,big)(50,08,20,0F,big)(60,08,40,0F,big)(70,08,60,0F,big)(80,08,0E,0F,big)(90,08,2E,0F,big)(A0,08,4E,0F,big)(B0,08,00,0F,big)(C0,08,00,0F,big)
