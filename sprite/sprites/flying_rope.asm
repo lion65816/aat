@@ -70,8 +70,8 @@ db $CE,$AC,$AC,$AC,$AC,$AC,$AC,$AC,$AC
 
 !BottomRopeTile = $CC
 
-!MotorTileProp = $37
-!RopeTileProp = $37
+!MotorTileProp = $33
+!RopeTileProp = $33
 
 SmokeXOffset:
 db $F8,$00

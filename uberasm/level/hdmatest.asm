@@ -22,5 +22,6 @@ main:
 	STA $71				;| ...then teleport Demo.
 	STZ $89				;| Change if you want (Because it uses the current screen exit dunno if you want that)
 	STZ $88				;/
+	STZ $1496|!addr
 .return
 	RTL

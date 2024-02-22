@@ -14,4 +14,4 @@ Mario:
 Nothing:
 RTL
 
-	print "Panorama Cotton - Stage 1 (The Land of Cotton)"
+	print "La-Mulana - Fearless Challenger"

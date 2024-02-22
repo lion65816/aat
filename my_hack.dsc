@@ -466,6 +466,9 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 391b	0	A block that acts like a mid-air suspended Spiny.
 391c	0	A block that acts like a mid-air suspended Spiny.
 393f	0	Adds #$01 lives one by one and then disappears in a glitter
+40b6	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+40b7	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
+40b8	0	
 4103	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
 4104	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
 4106	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
@@ -493,10 +496,10 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 4505	0	showdown_on_the_tower.txt
 4506	0	Yoshi's Safari - High Score
 4507	0	Rivals of Aether EX - Embers of a Burning Dystopia
-4508	0	Homestuck - Showtime
+4508	0	soleil-musique - Liberation ('sol_battle021.mid')
 4509	0	Popful Mail (SNES) - Destiny
 450a	0	Break the Sabbath.txt
-450b	0	Panorama Cotton - Stage 1 (The Land of Cotton)
+450b	0	La-Mulana - Fearless Challenger
 46d0	0	The top-left part of 32x32 switch
 46d1	0	The top-right part of 32x32 switch
 46d4	0	The top-left part of 32x32 switch
