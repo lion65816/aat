@@ -269,6 +269,7 @@ level:
 1A8	leafspawn_uberASM_1A8.asm
 1A9	InitSpriteFacing_with_reset.asm
 1AB	TeleportOnCoins.asm
+1AD	SPECIAL.asm
 1B0	redswitch.asm
 1B1	redswitch.asm
 1B2	redswitch.asm
