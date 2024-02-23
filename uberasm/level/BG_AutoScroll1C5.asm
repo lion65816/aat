@@ -18,8 +18,13 @@
 !DiagUL = 4	:	!DiagUR = 5	:	!DiagDL = 6	:	!DiagDR = 7
 
 load:
-JSL NoStatus_load
-RTL
+	STZ $1A
+	STZ $1462|!addr
+	LDA $95
+	STA $1B
+	STA $1463|!addr
+	JSL NoStatus_load
+	RTL
 
 main:
 LDA #%11111111 : STA $00	;\ Disable all inputs.
