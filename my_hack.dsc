@@ -527,6 +527,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 4d7d	0	Incorrect password block.
 4d7e	0	Incorrect password block.
 4d7f	0	Incorrect password block.
+4ef0	0	A question mark block which spawns a Map16 tile $6E.
 5440	0	Teleports the player to level 1CB.
 55d0	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi
 55d1	0	A block that will act like tile 2 for sprites, but not Mario's fireballs, Yoshi and Baby Yoshi

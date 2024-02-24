@@ -318,6 +318,7 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 4D7D:11F password_incorrect.asm
 4D7E:126 password_incorrect.asm
 4D7F:127 password_incorrect.asm
+4EF0:130 question_mark/question_block_block.asm
 5440:25 teleport_to_1cb.asm
 55D0:25  25Water.asm
 55D1:25  25Water.asm

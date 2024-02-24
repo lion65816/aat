@@ -301,6 +301,7 @@ level:
 1D8	BabaBlocks.asm
 1DA	BabaBlocks.asm
 1DC	RemoveYoshi.asm
+1DE  teleport_on_win.asm
 1DF  teleport_on_win.asm
 1E0	SPECIAL.asm
 1E1	mall_floor1.asm
