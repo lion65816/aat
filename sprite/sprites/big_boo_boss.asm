@@ -14,7 +14,7 @@
                     !TILE2 = $0020           ; Door Part tile
                     !TILE3 = $0130           ; Cement block tile
 
-		    !Music = $04	     ; Music that plays after defeating boss. (AAT edit)
+		    !Music = $05	     ; Music that plays after defeating boss. (AAT edit)
 
 		    !BossHurts = 0	     ;0 = boss doesn't hurt. 1 = boss hurts when not stunned. 2 = boss always hurts.
 
