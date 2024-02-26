@@ -8,7 +8,7 @@ sa1rom
 
 !NumTiles = $08		;> 8 16x16 tiles
 !TileOrigin = $0770	;> Reference coordinate (YYXX)
-!TileProp = $3000	;> High byte contains the YXPPCCCT
+!TileProp = $3E00	;> High byte contains the YXPPCCCT
 
 ; Hijack routine that draws the overworld border.
 ; Source: https://smwc.me/866356
@@ -28,13 +28,13 @@ overworld_map_names:
 	LDA $0DDA|!addr		;> Base the offset on the music currently playing on the overworld.
 	CMP #$C0
 	BNE +
-	LDA #$40			;\ Use the third row of 16x16 tiles if track $C0 is playing.
+	LDA #$40			;\ Use the third row of 16x16 tiles if track $C0 is playing (for One Last Thing).
 	STA $03				;/
 	BRA ++
 +
 	CMP #$C1
 	BNE ++
-	LDA #$20			;\ Use the second row of 16x16 tiles if track $C1 is playing.
+	LDA #$20			;\ Use the second row of 16x16 tiles if track $C1 is playing (for Cosmic Heaven).
 	STA $03				;/
 ++
 
