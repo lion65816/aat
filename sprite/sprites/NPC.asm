@@ -670,7 +670,7 @@ endif
 .showMessage
 
         ; AAT edit: Do not show the message; only teleport if
-        ; sublevel is 19, 82, B1, 123, 12E, or 1AE.
+        ; sublevel is 19, 82, B1, 123, 12E, 1AE, or 1DE.
         REP #$20
         LDA $010B|!addr
         CMP #$0019
@@ -691,6 +691,8 @@ endif
 		BRA +                                   ;/
 .skip
         CMP #$01AE
+        BEQ +
+        CMP #$01DE
         BEQ +
         SEP #$20
 .normal
