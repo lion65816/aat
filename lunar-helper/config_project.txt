@@ -77,7 +77,6 @@ patches
 	patch\patch\castle_cutscene_palettes.asm
 	patch\patch\YoshiSpriteInteractionsFix.asm
 	patch\patch\overworld_map_names.asm
-	patch\patch\red_path_fade.asm
 ]
 -- patch\patch\BetterYoshiInteraction.asm
 -- patch\patch\ticking.asm
@@ -85,6 +84,7 @@ patches
 -- patch\patch\midway\multi_midway_1.7.asm
 -- patch\patch\999.asm
 -- patch\patch\remove_statusbar_toggled.asm
+-- patch\patch\red_path_fade.asm
 
  -- rom paths
 clean = SMW_clean.smc

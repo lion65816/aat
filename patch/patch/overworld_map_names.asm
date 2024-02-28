@@ -6,6 +6,10 @@ sa1rom
 !addr = $6000
 !bank = $000000
 
+; Needs to be the same free RAM address used in OWMusic.asm.
+; $0DDA|!addr is not used, because it gets cleared when switching between Demo and Iris.
+!FreeRAM = $18E6|!addr	
+
 !NumTiles = $08		;> 8 16x16 tiles
 !TileOrigin = $0770	;> Reference coordinate (YYXX)
 !TileProp = $3E00	;> High byte contains the YXPPCCCT
@@ -25,7 +29,11 @@ overworld_map_names:
 	; Determine which row of logos to load (relevant for the main map).
 	STZ $03				;\ By default, the offset is zero (first row).
 	STZ $04				;/
-	LDA $0DDA|!addr		;> Base the offset on the music currently playing on the overworld.
+	LDA $13D9|!addr		;\ Don't draw the logo while star warping or switching between submaps.
+	BEQ .load_blank		;|
+	CMP #$0A			;|
+	BEQ .load_blank		;/
+	LDA !FreeRAM		;> Base the offset on the music currently playing on the overworld.
 	CMP #$C0
 	BNE +
 	LDA #$40			;\ Use the third row of 16x16 tiles if track $C0 is playing (for One Last Thing).
@@ -38,11 +46,16 @@ overworld_map_names:
 	STA $03				;/
 ++
 
-	; Load the 24-bit address of the logo tilemap.
+	; Load the 24-bit address of the logo/blank tilemaps.
 	LDA.b #logo      : STA $00
 	LDA.b #logo>>8   : STA $01
 	LDA.b #logo>>16  : STA $02
-
+	BRA +
+.load_blank
+	LDA.b #blank     : STA $00
+	LDA.b #blank>>8  : STA $01
+	LDA.b #blank>>16 : STA $02
++
 	; Use the MaxTile system to request OAM slots. Needs SA-1 v1.40.
 	LDY.b #$00+(!NumTiles)	;> Input parameter for call to MaxTile.
 	REP #$30				;> (As the index registers were 8-bit, this fills their high bytes with zeroes)
@@ -121,3 +134,6 @@ endif
 
 logo:
 	dw $0080,$0082,$0084,$0086,$0088,$008A,$008C,$008E
+
+blank:
+	dw $00E0,$00E0,$00E0,$00E0,$00E0,$00E0,$00E0,$00E0
