@@ -643,8 +643,10 @@ endif
         AND ($00)                               ;  |
         PLY : PLX                               ;  |
         CMP #$00                                ;  |
-        BEQ .dontShowMessage                    ; /
-
+        ;BEQ .dontShowMessage                   ; /
+        BNE +                                   ;\ AAT edit
+        JMP .dontShowMessage                    ;/
++
         LDA $00 : PHA                           ; \
         LDA !7FAB9E,x : STA $00                 ;  |
         LDX #!SprSize-1                         ;  | if any other NPC sprite
@@ -670,9 +672,11 @@ endif
 .showMessage
 
         ; AAT edit: Do not show the message; only teleport if
-        ; sublevel is 19, 82, B1, 123, 12E, 1AE, or 1DE.
+        ; sublevel is 17, 19, 82, B1, 123, 12E, 15F, 1AE, or 1DE.
         REP #$20
         LDA $010B|!addr
+        CMP #$0017
+        BEQ +
         CMP #$0019
         BEQ +
         CMP #$0082
@@ -690,6 +694,8 @@ endif
 		BEQ .normal                             ;|
 		BRA +                                   ;/
 .skip
+        CMP #$015F
+        BEQ +
         CMP #$01AE
         BEQ +
         CMP #$01DE
@@ -998,7 +1004,9 @@ Graphics:
         PLY
         REP #$20
         LDA $010B|!addr                         ;\ Shift the indicator 8 pixels to the right
-        CMP #$000F                              ;| if sublevel 00F or 1EA.
+        CMP #$000F                              ;| if sublevel 00F, 15F, or 1EA.
+        BEQ ..shift_right                       ;|
+        CMP #$015F                              ;|
         BEQ ..shift_right                       ;|
         CMP #$01EA                              ;|
         BEQ ..shift_right                       ;/

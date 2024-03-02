@@ -1,0 +1,1304 @@
+[asm=always]
+LDA $14
+AND #$0F
+STA $18C5
+RTL
+[/asm]
+
+/////////////
+// Scene 1 //
+/////////////
+
+[sprite=60]
+// Nevada
+(48,1A,84,02,big)(58,1A,86,02,big)
+(48,2A,A4,02,big)(58,2A,A6,02,big)
+(48,3A,C4,02,big)(58,3A,C6,02,big)
+// Demo and Iris
+(80,2A,80,0C,big)(98,2A,82,0E,big)
+(80,3A,A0,0C,big)(98,3A,A2,0E,big)
+// Background
+(30,08,88,04,big)(40,08,88,04,big)(50,08,A8,04,big)(60,08,AA,04,big)(70,08,88,04,big)(80,08,88,04,big)(90,08,88,04,big)(A0,08,88,04,big)(B0,08,88,04,big)(C0,08,88,04,big)
+(30,18,88,04,big)(40,18,88,04,big)(50,18,88,04,big)(60,18,88,04,big)(70,18,88,04,big)(80,18,88,04,big)(90,18,88,04,big)(A0,18,A8,04,big)(B0,18,8C,04,big)(C0,18,88,04,big)
+(30,28,88,04,big)(40,28,8A,04,big)(50,28,8C,04,big)(60,28,88,04,big)(70,28,88,04,big)(80,28,88,04,big)(90,28,88,04,big)(A0,28,88,04,big)(B0,28,88,04,big)(C0,28,88,04,big)
+(30,38,88,04,big)(40,38,88,04,big)(50,38,88,04,big)(60,38,88,04,big)(70,38,88,04,big)(80,38,88,04,big)(90,38,88,04,big)(A0,38,88,04,big)(B0,38,88,04,big)(C0,38,88,04,big)
+(30,48,AC,04,big)(40,48,AE,04,big)(50,48,AC,04,big)(60,48,AE,04,big)(70,48,AC,04,big)(80,48,AE,04,big)(90,48,AC,04,big)(A0,48,AE,04,big)(B0,48,AC,04,big)(C0,48,AE,04,big)
+[/sprite]
+[font color=3]
+[topic]Nevada[/topic]
+Hi Demo and Iris![wait][br]
+Good to see you make it out to my weekly trivia night this time![wait][br]
+Glad you're able to be here.[wait=30] I'm starting soon.[wait]
+[erase]
+You get a 1-Up for each correct answer.[wait][br]
+You win a special prize for 6 correct answers in a row![wait][br]
+[pad left=24]
+Do you want to play?[br]
+[wait=30]
+Yes[br]
+No
+[pad left=8]
+[branch=yes,no]
+[erase][label=yes]
+Great![wait][br]
+[jump=q1]
+[erase][label=no]
+Okay.[wait=30] See ya![wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+[end=00]
+
+////////////////
+// Question 1 //
+////////////////
+
+[erase][label=q1]
+[topic]Question 1[/topic]
+[compare=4018C5,equal,00,q10,p11]
+[erase][label=p11]
+[compare=4018C5,equal,01,q11,p12]
+[erase][label=p12]
+[compare=4018C5,equal,02,q12,p13]
+[erase][label=p13]
+[compare=4018C5,equal,03,q13,p14]
+[erase][label=p14]
+[compare=4018C5,equal,04,q14,p15]
+[erase][label=p15]
+[compare=4018C5,equal,05,q15,p16]
+[erase][label=p16]
+[compare=4018C5,equal,06,q16,p17]
+[erase][label=p17]
+[compare=4018C5,equal,07,q17,p18]
+[erase][label=p18]
+[compare=4018C5,equal,08,q18,p19]
+[erase][label=p19]
+[compare=4018C5,equal,09,q19,p1A]
+[erase][label=p1A]
+[compare=4018C5,equal,0A,q1A,p1B]
+[erase][label=p1B]
+[compare=4018C5,equal,0B,q1B,p1C]
+[erase][label=p1C]
+[compare=4018C5,equal,0C,q1C,p1D]
+[erase][label=p1D]
+[compare=4018C5,equal,0D,q1D,p1E]
+[erase][label=p1E]
+[compare=4018C5,equal,0E,q1E,p1F]
+[erase][label=p1F]
+[compare=4018C5,equal,0F,q1F,q10]
+
+[erase][label=q10]
+[pad left=24]
+What is the main ingredient of cake?[wait][br]
+Water[br]
+Cheese[br]
+Flour[br]
+Sugar
+[pad left=8]
+[branch=q1N,q1N,q1Y,q1N]
+
+[erase][label=q11]
+[pad left=24]
+Who won the 1993 Stanley Cup?[wait][br]
+Montreal[br]
+Los Angeles[br]
+Hartford[br]
+Calgary
+[pad left=8]
+[branch=q1Y,q1N,q1N,q1N]
+
+[erase][label=q12]
+[pad left=24]
+Whose portrait is on the 2018 10 dollar CDN bill?[wait][br]
+Wilfrid Laurier[br]
+Viola Desmond[br]
+Terry Fox[br]
+Tommy Douglas
+[pad left=8]
+[branch=q1N,q1Y,q1N,q1N]
+
+[erase][label=q13]
+[pad left=24]
+Where was Expo 67 held?[wait][br]
+Moscow[br]
+Monaco[br]
+Madrid[br]
+Montreal
+[pad left=8]
+[branch=q1N,q1N,q1N,q1Y]
+
+[erase][label=q14]
+[pad left=24]
+What is the capital of Vietnam?[wait][br]
+Hanoi[br]
+Ho Chi Minh City[br]
+Can Tho[br]
+Haiphong
+[pad left=8]
+[branch=q1Y,q1N,q1N,q1N]
+
+[erase][label=q15]
+[pad left=24]
+When is Saint-Jean-Baptiste Day?[wait][br]
+July 1[br]
+June 24[br]
+May 25[br]
+September 30
+[pad left=8]
+[branch=q1N,q1Y,q1N,q1N]
+
+[erase][label=q16]
+[pad left=24]
+What is the official language of French Guiana?[wait][br]
+French[br]
+English[br]
+Guianese[br]
+Spanish
+[pad left=8]
+[branch=q1Y,q1N,q1N,q1N]
+
+[erase][label=q17]
+[pad left=24]
+Who was the first Deputy Prime Minister of Canada?[wait][br]
+Ellen Fairclough[br]
+Allan MacEachen[br]
+Paul Hellyer[br]
+Erik Nielsen
+[pad left=8]
+[branch=q1N,q1Y,q1N,q1N]
+
+[erase][label=q18]
+[pad left=24]
+What year did Stevie Wonder not win the Grammy Award for Album of the Year?[wait][br]
+1974[br]
+1975[br]
+1976[br]
+1977
+[pad left=8]
+[branch=q1N,q1N,q1Y,q1N]
+
+[erase][label=q19]
+[pad left=24]
+Which of these did not release in 1987?[wait][br]
+PC Engine[br]
+Amiga 500[br]
+MT-32[br]
+Game Boy
+[pad left=8]
+[branch=q1N,q1N,q1N,q1Y]
+
+[erase][label=q1A]
+[pad left=24]
+What is the largest city of Portugal?[wait][br]
+Lisbon[br]
+Porto[br]
+Sintra[br]
+Braga
+[pad left=8]
+[branch=q1Y,q1N,q1N,q1N]
+
+[erase][label=q1B]
+[pad left=24]
+Strong Cape Breton winds are commonly called:[wait][br]
+Chinooks[br]
+Tornadoes[br]
+Les Suetes[br]
+Farts
+[pad left=8]
+[branch=q1N,q1N,q1Y,q1N]
+
+[erase][label=q1C]
+[pad left=24]
+This was not released for arcade:[wait][br]
+Professor Pac-Man[br]
+Pac-Man 2[br]
+Pac-Man VR[br]
+Super Pac-Man
+[pad left=8]
+[branch=q1N,q1Y,q1N,q1N]
+
+[erase][label=q1D]
+[pad left=24]
+The Viking Award is given annually to the top ????? hockey player:[wait][br]
+Finnish[br]
+Danish[br]
+Swedish[br]
+Norwegian
+[pad left=8]
+[branch=q1N,q1N,q1Y,q1N]
+
+[erase][label=q1E]
+[pad left=24]
+Who was the main antagonist of Super Talking Time Bros.?[wait][br]
+Zbambabar[br]
+Bowser[br]
+Mario[br]
+Percy
+[pad left=8]
+[branch=q1N,q1N,q1N,q1Y]
+
+[erase][label=q1F]
+[pad left=24]
+What snooker ball is worth 5 points?[wait][br]
+Blue[br]
+Yellow[br]
+Red[br]
+Green
+[pad left=8]
+[branch=q1Y,q1N,q1N,q1N]
+
+[erase][label=q1Y]
+Correct![wait]
+[jump=q2]
+[erase][label=q1N]
+Sorry![wait]
+[jump=lose]
+
+////////////////
+// Question 2 //
+////////////////
+
+[erase][label=q2]
+[topic]Question 2[/topic]
+[compare=4018C5,equal,00,q20,p21]
+[erase][label=p21]
+[compare=4018C5,equal,01,q21,p22]
+[erase][label=p22]
+[compare=4018C5,equal,02,q22,p23]
+[erase][label=p23]
+[compare=4018C5,equal,03,q23,p24]
+[erase][label=p24]
+[compare=4018C5,equal,04,q24,p25]
+[erase][label=p25]
+[compare=4018C5,equal,05,q25,p26]
+[erase][label=p26]
+[compare=4018C5,equal,06,q26,p27]
+[erase][label=p27]
+[compare=4018C5,equal,07,q27,p28]
+[erase][label=p28]
+[compare=4018C5,equal,08,q28,p29]
+[erase][label=p29]
+[compare=4018C5,equal,09,q29,p2A]
+[erase][label=p2A]
+[compare=4018C5,equal,0A,q2A,p2B]
+[erase][label=p2B]
+[compare=4018C5,equal,0B,q2B,p2C]
+[erase][label=p2C]
+[compare=4018C5,equal,0C,q2C,p2D]
+[erase][label=p2D]
+[compare=4018C5,equal,0D,q2D,p2E]
+[erase][label=p2E]
+[compare=4018C5,equal,0E,q2E,p2F]
+[erase][label=p2F]
+[compare=4018C5,equal,0F,q2F,q20]
+
+[erase][label=q20]
+[pad left=24]
+What is the real name of the Youtuber raocow?[wait][br]
+Shaun Appleton[br]
+Jon Wheeler[br]
+Samuel Tanguay[br]
+John Brandstetter
+[pad left=8]
+[branch=q2N,q2N,q2Y,q2N]
+
+[erase][label=q21]
+[pad left=24]
+Who was Johnny Turbo's sidekick?[wait][br]
+Allen[br]
+Tony[br]
+Mario[br]
+Paul
+[pad left=8]
+[branch=q2N,q2Y,q2N,q2N]
+
+[erase][label=q22]
+[pad left=24]
+Who won the most gold medals at the 2010 Winter Olympics?[wait][br]
+Germany[br]
+Canada[br]
+Norway[br]
+Sonic
+[pad left=8]
+[branch=q2N,q2Y,q2N,q2N]
+
+[erase][label=q23]
+[pad left=24]
+Phobophobia is the fear of:[wait][br]
+Phobos[br]
+Everything[br]
+Fear[br]
+Hate
+[pad left=8]
+[branch=q2N,q2N,q2Y,q2N]
+
+[erase][label=q24]
+[pad left=24]
+This song is not by Five Iron Frenzy:[wait][br]
+Pootermobile[br]
+These Are Not My Pants[br]
+Oh, Canada[br]
+Space Robot Five
+[pad left=8]
+[branch=q2N,q2N,q2N,q2Y]
+
+[erase][label=q25]
+[pad left=24]
+Who won Best Male Vocalist at the 1994 Juno Awards?[wait][br]
+Roch Voisine[br]
+Stef Carse[br]
+Snow[br]
+Mario Pelchat
+[pad left=8]
+[branch=q2Y,q2N,q2N,q2N]
+
+[erase][label=q26]
+[pad left=24]
+Where was the 1970 World Cup held?[wait][br]
+Brazil[br]
+Mexico[br]
+Japan[br]
+Iran
+[pad left=8]
+[branch=q2N,q2Y,q2N,q2N]
+
+[erase][label=q27]
+[pad left=24]
+The study of angles is:[wait][br]
+Calculus[br]
+Algebra[br]
+Trigonometry[br]
+Geometry
+[pad left=8]
+[branch=q2N,q2N,q2Y,q2N]
+
+[erase][label=q28]
+[pad left=24]
+Who wrote the hit single Fannie Mae?[wait][br]
+Buster Brown[br]
+Gene Summers[br]
+Magic Slim[br]
+James Brown
+[pad left=8]
+[branch=q2Y,q2N,q2N,q2N]
+
+[erase][label=q29]
+[pad left=24]
+Which sport uses stones and a house?[wait][br]
+Shuffleboard[br]
+Curling[br]
+Lawn Bowling[br]
+Snooker
+[pad left=8]
+[branch=q2N,q2Y,q2N,q2N]
+
+[erase][label=q2A]
+[pad left=24]
+What is the chemical compound for hydrogen peroxide?[wait][br]
+HCN[br]
+HCIO[br]
+HF[br]
+H2O2
+[pad left=8]
+[branch=q2N,q2N,q2N,q2Y]
+
+[erase][label=q2B]
+[pad left=24]
+When was the first Eurovision held?[wait][br]
+1951[br]
+1952[br]
+1956[br]
+1958
+[pad left=8]
+[branch=q2N,q2N,q2Y,q2N]
+
+[erase][label=q2C]
+[pad left=24]
+What is the currency of Norway?[wait][br]
+Krone[br]
+Euro[br]
+Dollar[br]
+Franc
+[pad left=8]
+[branch=q2Y,q2N,q2N,q2N]
+
+[erase][label=q2D]
+[pad left=24]
+Pb is the chemical symbol for:[wait][br]
+Phosphorus[br]
+Silver[br]
+Plubonium[br]
+Lead
+[pad left=8]
+[branch=q2N,q2N,q2N,q2Y]
+
+[erase][label=q2E]
+[pad left=24]
+What is vichyssoise?[wait][br]
+Soup[br]
+Ramen[br]
+Stew[br]
+Pasta
+[pad left=8]
+[branch=q2Y,q2N,q2N,q2N]
+
+[erase][label=q2F]
+[pad left=24]
+Who was the second emperor of Rome?[wait][br]
+Marcus Aurelius[br]
+Tiberius[br]
+Nero[br]
+John Cena
+[pad left=8]
+[branch=q2N,q2Y,q2N,q2N]
+
+[erase][label=q2Y]
+Ding ding ding![wait]
+[jump=q3]
+[erase][label=q2N]
+Sorry![wait]
+[jump=lose]
+
+////////////////
+// Question 3 //
+////////////////
+
+[erase][label=q3]
+[topic]Question 3[/topic]
+[compare=4018C5,equal,00,q30,p31]
+[erase][label=p31]
+[compare=4018C5,equal,01,q31,p32]
+[erase][label=p32]
+[compare=4018C5,equal,02,q32,p33]
+[erase][label=p33]
+[compare=4018C5,equal,03,q33,p34]
+[erase][label=p34]
+[compare=4018C5,equal,04,q34,p35]
+[erase][label=p35]
+[compare=4018C5,equal,05,q35,p36]
+[erase][label=p36]
+[compare=4018C5,equal,06,q36,p37]
+[erase][label=p37]
+[compare=4018C5,equal,07,q37,p38]
+[erase][label=p38]
+[compare=4018C5,equal,08,q38,p39]
+[erase][label=p39]
+[compare=4018C5,equal,09,q39,p3A]
+[erase][label=p3A]
+[compare=4018C5,equal,0A,q3A,p3B]
+[erase][label=p3B]
+[compare=4018C5,equal,0B,q3B,p3C]
+[erase][label=p3C]
+[compare=4018C5,equal,0C,q3C,p3D]
+[erase][label=p3D]
+[compare=4018C5,equal,0D,q3D,p3E]
+[erase][label=p3E]
+[compare=4018C5,equal,0E,q3E,p3F]
+[erase][label=p3F]
+[compare=4018C5,equal,0F,q3F,q30]
+
+[erase][label=q30]
+[pad left=24]
+Who won the 1990 Nobel Peace Prize?[wait][br]
+Gorbachev[br]
+Mandela[br]
+Chavez[br]
+Kohl
+[pad left=8]
+[branch=q3Y,q3N,q3N,q3N]
+
+[erase][label=q31]
+[pad left=24]
+In 1636, this university was founded:[wait][br]
+Yale[br]
+Stanford[br]
+Harvard[br]
+Cornell
+[pad left=8]
+[branch=q3N,q3N,q3Y,q3N]
+
+[erase][label=q32]
+[pad left=24]
+Sammy Davis Jr. died of what cancer in 1990?[wait][br]
+Bone[br]
+Throat[br]
+Liver[br]
+Skin
+[pad left=8]
+[branch=q3N,q3Y,q3N,q3N]
+
+[erase][label=q33]
+[pad left=24]
+Mahatma Gandhi was cremated in:[wait][br]
+1945[br]
+1948[br]
+1952[br]
+1959
+[pad left=8]
+[branch=q3N,q3Y,q3N,q3N]
+
+[erase][label=q34]
+[pad left=24]
+Sonny Bono was elected mayor of:[wait][br]
+Needles[br]
+Fresno[br]
+Inglewood[br]
+Palm Springs
+[pad left=8]
+[branch=q3N,q3N,q3N,q3Y]
+
+[erase][label=q35]
+[pad left=24]
+Which company trademarked Ethernet?[wait][br]
+Intel[br]
+Xerox[br]
+Bell Labs[br]
+IBM
+[pad left=8]
+[branch=q3N,q3Y,q3N,q3N]
+
+[erase][label=q36]
+[pad left=24]
+What is the holiest day in Judaism?[wait][br]
+Yom Kippur[br]
+Passover[br]
+Sukkot[br]
+Bar Mitzvah
+[pad left=8]
+[branch=q3Y,q3N,q3N,q3N]
+
+[erase][label=q37]
+[pad left=24]
+San Marino has two of these heads of state:[wait][br]
+Presidents[br]
+Supreme Leaders[br]
+Captains Regent[br]
+Co-Chairs
+[pad left=8]
+[branch=q3N,q3N,q3Y,q3N]
+
+[erase][label=q38]
+[pad left=24]
+Which of these is not a current NHL team mascot?[wait][br]
+Youppi![br]
+Gritty[br]
+Mick E. Moose[br]
+Pucky the Whale
+[pad left=8]
+[branch=q3N,q3N,q3N,q3Y]
+
+[erase][label=q39]
+[pad left=24]
+Which film did not release in the '90s?[wait][br]
+Home Alone[br]
+Home Movies[br]
+Home Fries[br]
+Home Team
+[pad left=8]
+[branch=q3N,q3Y,q3N,q3N]
+
+[erase][label=q3A]
+[pad left=24]
+Mork and Mindy was a spinoff of:[wait][br]
+Happy Days[br]
+The Addams Family[br]
+ALF[br]
+The Jetsons
+[pad left=8]
+[branch=q3Y,q3N,q3N,q3N]
+
+[erase][label=q3B]
+[pad left=24]
+Who won Super Bowl I in 1967?[wait][br]
+Raiders[br]
+Packers[br]
+Chiefs[br]
+Jets
+[pad left=8]
+[branch=q3N,q3Y,q3N,q3N]
+
+[erase][label=q3C]
+[pad left=24]
+Poem by Elinor Wylie, Address to:[wait][br]
+Edinburgh[br]
+The Devil[br]
+A Haggis[br]
+My Soul
+[pad left=8]
+[branch=q3N,q3N,q3N,q3Y]
+
+[erase][label=q3D]
+[pad left=24]
+What is mead made from?[wait][br]
+Honey[br]
+Apple[br]
+Pear[br]
+Corn
+[pad left=8]
+[branch=q3Y,q3N,q3N,q3N]
+
+[erase][label=q3E]
+[pad left=24]
+Who played Popeye in the 1980 film?[wait][br]
+Robert De Niro[br]
+Bill Murray[br]
+Robin Williams[br]
+Lou Ferrigno
+[pad left=8]
+[branch=q3N,q3N,q3Y,q3N]
+
+[erase][label=q3F]
+[pad left=24]
+Sodium hydrogen bicarbonate, AKA:[wait][br]
+Carbonated water[br]
+Cream of tartar[br]
+Baking soda[br]
+Salt
+[pad left=8]
+[branch=q3N,q3N,q3Y,q3N]
+
+[erase][label=q3Y]
+Righty-o![wait]
+[jump=q4]
+[erase][label=q3N]
+Sorry![wait]
+[jump=lose]
+
+////////////////
+// Question 4 //
+////////////////
+
+[erase][label=q4]
+[topic]Question 4[/topic]
+[compare=4018C5,equal,00,q40,p41]
+[erase][label=p41]
+[compare=4018C5,equal,01,q41,p42]
+[erase][label=p42]
+[compare=4018C5,equal,02,q42,p43]
+[erase][label=p43]
+[compare=4018C5,equal,03,q43,p44]
+[erase][label=p44]
+[compare=4018C5,equal,04,q44,p45]
+[erase][label=p45]
+[compare=4018C5,equal,05,q45,p46]
+[erase][label=p46]
+[compare=4018C5,equal,06,q46,p47]
+[erase][label=p47]
+[compare=4018C5,equal,07,q47,p48]
+[erase][label=p48]
+[compare=4018C5,equal,08,q48,p49]
+[erase][label=p49]
+[compare=4018C5,equal,09,q49,p4A]
+[erase][label=p4A]
+[compare=4018C5,equal,0A,q4A,p4B]
+[erase][label=p4B]
+[compare=4018C5,equal,0B,q4B,p4C]
+[erase][label=p4C]
+[compare=4018C5,equal,0C,q4C,p4D]
+[erase][label=p4D]
+[compare=4018C5,equal,0D,q4D,p4E]
+[erase][label=p4E]
+[compare=4018C5,equal,0E,q4E,p4F]
+[erase][label=p4F]
+[compare=4018C5,equal,0F,q4F,q40]
+
+[erase][label=q40]
+[pad left=24]
+Who wrote David Copperfield?[wait][br]
+Charles Dickens[br]
+David Copperfield[br]
+Lewis Carroll[br]
+H. G. Wells
+[pad left=8]
+[branch=q4Y,q4N,q4N,q4N]
+
+[erase][label=q41]
+[pad left=24]
+In Chrono Trigger, who is the Master of War?[wait][br]
+Gaspar[br]
+Lavos[br]
+Spekkio[br]
+Dalton
+[pad left=8]
+[branch=q4N,q4N,q4Y,q4N]
+
+[erase][label=q42]
+[pad left=24]
+Who is the Greek god of love?[wait][br]
+Cupid[br]
+Eros[br]
+Uranus[br]
+Aion
+[pad left=8]
+[branch=q4N,q4Y,q4N,q4N]
+
+[erase][label=q43]
+[pad left=24]
+Tupperware was invented by:[wait][br]
+Earl Tupper[br]
+Ron Popeil[br]
+Jessie Littleton[br]
+Ken Wood
+[pad left=8]
+[branch=q4Y,q4N,q4N,q4N]
+
+[erase][label=q44]
+[pad left=24]
+A scuttlebutt holds:[wait][br]
+Piss[br]
+Tobacco[br]
+Water[br]
+Gunpowder
+[pad left=8]
+[branch=q4N,q4N,q4Y,q4N]
+
+[erase][label=q45]
+[pad left=24]
+Mexican dish of meat in a crisp, folded tortilla:[wait][br]
+Taco[br]
+Burrito[br]
+Nacho[br]
+Enchilada
+[pad left=8]
+[branch=q4Y,q4N,q4N,q4N]
+
+[erase][label=q46]
+[pad left=24]
+Who wrote the book A Clockwork Orange?[wait][br]
+Asimov[br]
+Burgess[br]
+Kubrick[br]
+Milne
+[pad left=8]
+[branch=q4N,q4Y,q4N,q4N]
+
+[erase][label=q47]
+[pad left=24]
+What film features the song Born Free?[wait][br]
+Mary Poppins[br]
+2001[br]
+Ben-Hur[br]
+Born Free
+[pad left=8]
+[branch=q4N,q4N,q4N,q4Y]
+
+[erase][label=q48]
+[pad left=24]
+Total number of balls in snooker:[wait][br]
+10[br]
+16[br]
+22[br]
+24
+[pad left=8]
+[branch=q4N,q4N,q4Y,q4N]
+
+[erase][label=q49]
+[pad left=24]
+Kind of nut with a green kernel:[wait][br]
+Pecan[br]
+Cashew[br]
+Breadnut[br]
+Pistachio
+[pad left=8]
+[branch=q4N,q4N,q4N,q4Y]
+
+[erase][label=q4A]
+[pad left=24]
+What US place means Green Mountain?[wait][br]
+Vermont[br]
+Wisconsin[br]
+Bowling Green[br]
+Tanque Verde
+[pad left=8]
+[branch=q4Y,q4N,q4N,q4N]
+
+[erase][label=q4B]
+[pad left=24]
+1986 film: Howard the ?????[wait][br]
+Pig[br]
+Duck[br]
+Horse[br]
+Dog
+[pad left=8]
+[branch=q4N,q4Y,q4N,q4N]
+
+[erase][label=q4C]
+[pad left=24]
+In 1931, Nevada legalized:[wait][br]
+Alcohol[br]
+Cannabis[br]
+Gambling[br]
+Nudity
+[pad left=8]
+[branch=q4N,q4N,q4Y,q4N]
+
+[erase][label=q4D]
+[pad left=24]
+What is the capital of Luxembourg?[wait][br]
+Luxembourg[br]
+Differdange[br]
+Olm[br]
+Soup
+[pad left=8]
+[branch=q4Y,q4N,q4N,q4N]
+
+[erase][label=q4E]
+[pad left=24]
+What is the governing body of F1?[wait][br]
+WAR[br]
+CART[br]
+FIA[br]
+SIAR
+[pad left=8]
+[branch=q4N,q4N,q4Y,q4N]
+
+[erase][label=q4F]
+[pad left=24]
+What was the last year the UK hanged someone?[wait][br]
+1948[br]
+1951[br]
+1964[br]
+1992
+[pad left=8]
+[branch=q4N,q4N,q4Y,q4N]
+
+[erase][label=q4Y]
+Nice![wait]
+[jump=q5]
+[erase][label=q4N]
+Sorry![wait]
+[jump=lose]
+
+////////////////
+// Question 5 //
+////////////////
+
+[erase][label=q5]
+[topic]Question 5[/topic]
+[compare=4018C5,equal,00,q50,p51]
+[erase][label=p51]
+[compare=4018C5,equal,01,q51,p52]
+[erase][label=p52]
+[compare=4018C5,equal,02,q52,p53]
+[erase][label=p53]
+[compare=4018C5,equal,03,q53,p54]
+[erase][label=p54]
+[compare=4018C5,equal,04,q54,p55]
+[erase][label=p55]
+[compare=4018C5,equal,05,q55,p56]
+[erase][label=p56]
+[compare=4018C5,equal,06,q56,p57]
+[erase][label=p57]
+[compare=4018C5,equal,07,q57,p58]
+[erase][label=p58]
+[compare=4018C5,equal,08,q58,p59]
+[erase][label=p59]
+[compare=4018C5,equal,09,q59,p5A]
+[erase][label=p5A]
+[compare=4018C5,equal,0A,q5A,p5B]
+[erase][label=p5B]
+[compare=4018C5,equal,0B,q5B,p5C]
+[erase][label=p5C]
+[compare=4018C5,equal,0C,q5C,p5D]
+[erase][label=p5D]
+[compare=4018C5,equal,0D,q5D,p5E]
+[erase][label=p5E]
+[compare=4018C5,equal,0E,q5E,p5F]
+[erase][label=p5F]
+[compare=4018C5,equal,0F,q5F,q50]
+
+[erase][label=q50]
+[pad left=24]
+What was the last SNES game released in North America?[wait][br]
+Madden NFL 98[br]
+Frogger[br]
+Space Invaders[br]
+ASMT
+[pad left=8]
+[branch=q5N,q5Y,q5N,q5N]
+
+[erase][label=q51]
+[pad left=24]
+What aws the last Wii game released in North America?[wait][br]
+FIFA 15[br]
+Just Dance 2017[br]
+Just Dance 2020[br]
+Karaoke Joysound
+[pad left=8]
+[branch=q5N,q5N,q5Y,q5N]
+
+[erase][label=q52]
+[pad left=24]
+When was the last PC Engine game released in Japan?[wait][br]
+1994[br]
+1995[br]
+1997[br]
+1999
+[pad left=8]
+[branch=q5N,q5N,q5N,q5Y]
+
+[erase][label=q53]
+[pad left=24]
+Chop suey is not a:[wait][br]
+Song[br]
+Font[br]
+Video game[br]
+Martial art
+[pad left=8]
+[branch=q5N,q5N,q5N,q5Y]
+
+[erase][label=q54]
+[pad left=24]
+According to The Beatles, what colour was Lucy's sky?[wait][br]
+Tangerine[br]
+Marmalade[br]
+Yellow and green[br]
+Diamond blue
+[pad left=8]
+[branch=q5N,q5Y,q5N,q5N]
+
+[erase][label=q55]
+[pad left=24]
+What color is cochineal?[wait][br]
+Red[br]
+Green[br]
+Blue[br]
+Yellow
+[pad left=8]
+[branch=q5Y,q5N,q5N,q5N]
+
+[erase][label=q56]
+[pad left=24]
+When were the Ides of March?[wait][br]
+1st[br]
+13th[br]
+15th[br]
+20th
+[pad left=8]
+[branch=q5N,q5N,q5Y,q5N]
+
+[erase][label=q57]
+[pad left=24]
+A cord is a measurement of:[wait][br]
+Rope[br]
+Wood[br]
+Wheat[br]
+Brandy
+[pad left=8]
+[branch=q5N,q5Y,q5N,q5N]
+
+[erase][label=q58]
+[pad left=24]
+In 1958, Harvard Bridge was measured in:[wait][br]
+Biblical miles[br]
+Altuves[br]
+Inches[br]
+Smoots
+[pad left=8]
+[branch=q5N,q5N,q5N,q5Y]
+
+[erase][label=q59]
+[pad left=24]
+What is the musical term for a fast tempo?[wait][br]
+Moins[br]
+Largo[br]
+Allegro[br]
+Forte
+[pad left=8]
+[branch=q5N,q5N,q5Y,q5N]
+
+[erase][label=q5A]
+[pad left=24]
+Prunes are made by drying:[wait][br]
+Plums[br]
+Figs[br]
+Grapes[br]
+Apricots
+[pad left=8]
+[branch=q5Y,q5N,q5N,q5N]
+
+[erase][label=q5B]
+[pad left=24]
+Which of these was never an Olympic demonstration sport?[wait][br]
+Ski ballet[br]
+Military patrol[br]
+Roller hockey[br]
+Street luge
+[pad left=8]
+[branch=q5N,q5N,q5N,q5Y]
+
+[erase][label=q5C]
+[pad left=24]
+Vodka and tomato juice make:[wait][br]
+Caesar[br]
+Bloody Mary[br]
+Red Russian[br]
+Mexikaner
+[pad left=8]
+[branch=q5N,q5Y,q5N,q5N]
+
+[erase][label=q5D]
+[pad left=24]
+What does a cobbler mend?[wait][br]
+Cobblestones[br]
+Upholstery[br]
+Shoes[br]
+Leather garments
+[pad left=8]
+[branch=q5N,q5N,q5Y,q5N]
+
+[erase][label=q5E]
+[pad left=24]
+What is the distance of the Men's Olympic Biathlon?[wait][br]
+15 km[br]
+20 km[br]
+30 km[br]
+41 km
+[pad left=8]
+[branch=q5N,q5Y,q5N,q5N]
+
+[erase][label=q5F]
+[pad left=24]
+Jun'ya Ota created this popular Japanese franchise:[wait][br]
+Silfade[br]
+Touhou Project[br]
+Bakusho Mondai[br]
+Mashin Hero Wataru
+[pad left=8]
+[branch=q5N,q5Y,q5N,q5N]
+
+[erase][label=q5Y]
+Just one more![wait]
+[jump=q6]
+[erase][label=q5N]
+Sorry![wait]
+[jump=lose]
+
+////////////////
+// Question 6 //
+////////////////
+
+[erase][label=q6]
+[topic]Question 6[/topic]
+[compare=4018C5,equal,00,q60,p61]
+[erase][label=p61]
+[compare=4018C5,equal,01,q61,p62]
+[erase][label=p62]
+[compare=4018C5,equal,02,q62,p63]
+[erase][label=p63]
+[compare=4018C5,equal,03,q63,p64]
+[erase][label=p64]
+[compare=4018C5,equal,04,q64,p65]
+[erase][label=p65]
+[compare=4018C5,equal,05,q65,p66]
+[erase][label=p66]
+[compare=4018C5,equal,06,q66,p67]
+[erase][label=p67]
+[compare=4018C5,equal,07,q67,p68]
+[erase][label=p68]
+[compare=4018C5,equal,08,q68,p69]
+[erase][label=p69]
+[compare=4018C5,equal,09,q69,p6A]
+[erase][label=p6A]
+[compare=4018C5,equal,0A,q6A,p6B]
+[erase][label=p6B]
+[compare=4018C5,equal,0B,q6B,p6C]
+[erase][label=p6C]
+[compare=4018C5,equal,0C,q6C,p6D]
+[erase][label=p6D]
+[compare=4018C5,equal,0D,q6D,p6E]
+[erase][label=p6E]
+[compare=4018C5,equal,0E,q6E,p6F]
+[erase][label=p6F]
+[compare=4018C5,equal,0F,q6F,q60]
+
+[erase][label=q60]
+[pad left=24]
+What sport did Rod Laver play?[wait][br]
+Cricket[br]
+Golf[br]
+Rugby[br]
+Tennis
+[pad left=8]
+[branch=q6N,q6N,q6N,q6Y]
+
+[erase][label=q61]
+[pad left=24]
+Where is starboard on a ship?[wait][br]
+Front[br]
+Right side[br]
+Back[br]
+Left side
+[pad left=8]
+[branch=q6N,q6Y,q6N,q6N]
+
+[erase][label=q62]
+[pad left=24]
+Who was Julius Henry Marx?[wait][br]
+Groucho[br]
+Chico[br]
+Harpo[br]
+Zeppo
+[pad left=8]
+[branch=q6Y,q6N,q6N,q6N]
+
+[erase][label=q63]
+[pad left=24]
+What was the name of the pizza joint in Trailer Park Boys?[wait][br]
+Dominos[br]
+Pizza Delight[br]
+Randy's[br]
+King of Donair
+[pad left=8]
+[branch=q6N,q6N,q6N,q6Y]
+
+[erase][label=q64]
+[pad left=24]
+In poker, what are 5 cards of the same suit called?[wait][br]
+Full house[br]
+Straight[br]
+Flush[br]
+Kicker
+[pad left=8]
+[branch=q6N,q6N,q6Y,q6N]
+
+[erase][label=q65]
+[pad left=24]
+Au is the chemical symbol for:[wait][br]
+Aluminium[br]
+Gold[br]
+Silver[br]
+Radon
+[pad left=8]
+[branch=q6N,q6Y,q6N,q6N]
+
+[erase][label=q66]
+[pad left=24]
+When was Live Aid?[wait][br]
+1979[br]
+1985[br]
+1988[br]
+1990
+[pad left=8]
+[branch=q6N,q6Y,q6N,q6N]
+
+[erase][label=q67]
+[pad left=24]
+Rickets is caused by lack of:[wait][br]
+Vitamin D[br]
+Vitamin C[br]
+Vitamin B12[br]
+Vitamin B2
+[pad left=8]
+[branch=q6Y,q6N,q6N,q6N]
+
+[erase][label=q68]
+[pad left=24]
+Campanology is the study of:[wait][br]
+Camps[br]
+Bells[br]
+Mushrooms[br]
+Tinnitus
+[pad left=8]
+[branch=q6N,q6Y,q6N,q6N]
+
+[erase][label=q69]
+[pad left=24]
+A 90 degree angle is:[wait][br]
+Oblique[br]
+Acute[br]
+Straight[br]
+Right
+[pad left=8]
+[branch=q6N,q6N,q6N,q6Y]
+
+[erase][label=q6A]
+[pad left=24]
+How many hours is the Le Mans race?[wait][br]
+12[br]
+16[br]
+24[br]
+48
+[pad left=8]
+[branch=q6N,q6N,q6Y,q6N]
+
+[erase][label=q6B]
+[pad left=24]
+What does hepatitis affect?[wait][br]
+Liver[br]
+Lungs[br]
+Pancreas[br]
+Intestines
+[pad left=8]
+[branch=q6Y,q6N,q6N,q6N]
+
+[erase][label=q6C]
+[pad left=24]
+What unit measures pressure?[wait][br]
+Newton[br]
+Pascal[br]
+Weber[br]
+Lux
+[pad left=8]
+[branch=q6N,q6Y,q6N,q6N]
+
+[erase][label=q6D]
+[pad left=24]
+How many zeros are in a googol?[wait][br]
+50[br]
+100[br]
+225[br]
+1000
+[pad left=8]
+[branch=q6N,q6Y,q6N,q6N]
+
+[erase][label=q6E]
+[pad left=24]
+Who invented the difference engine?[wait][br]
+Turing[br]
+Babbage[br]
+Lovelace[br]
+Atwood
+[pad left=8]
+[branch=q6N,q6Y,q6N,q6N]
+
+[erase][label=q6F]
+[pad left=24]
+This Quebec children's show first aired in 1977:[wait][br]
+Telefrancais![br]
+Chez Helene[br]
+Passe-Partout[br]
+Le Telejournal
+[pad left=8]
+[branch=q6N,q6N,q6Y,q6N]
+
+[erase][label=q6Y]
+Congratulations![wait=30] You win![wait]
+[jump=win]
+[erase][label=q6N]
+Sorry![wait]
+[jump=lose]
+
+/////////
+// Win //
+/////////
+
+[erase][label=win]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+[end=01]
+
+
+//////////
+// Lose //
+//////////
+
+[erase][label=lose]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+[end=00]
