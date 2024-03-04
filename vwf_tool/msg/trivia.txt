@@ -249,9 +249,15 @@ Green
 [branch=q1Y,q1N,q1N,q1N]
 
 [erase][label=q1Y]
+[sfx 1DFC=05]
+//[asm=once]
+//INC $0DBE
+//RTL
+//[/asm]
 Correct![wait]
 [jump=q2]
 [erase][label=q1N]
+[sfx 1DFC=2A]
 Sorry![wait]
 [jump=lose]
 
@@ -454,9 +460,11 @@ John Cena
 [branch=q2N,q2Y,q2N,q2N]
 
 [erase][label=q2Y]
+[sfx 1DFC=05]
 Ding ding ding![wait]
 [jump=q3]
 [erase][label=q2N]
+[sfx 1DFC=2A]
 Sorry![wait]
 [jump=lose]
 
@@ -659,9 +667,11 @@ Salt
 [branch=q3N,q3N,q3Y,q3N]
 
 [erase][label=q3Y]
+[sfx 1DFC=05]
 Righty-o![wait]
 [jump=q4]
 [erase][label=q3N]
+[sfx 1DFC=2A]
 Sorry![wait]
 [jump=lose]
 
@@ -864,9 +874,11 @@ What was the last year the UK hanged someone?[wait][br]
 [branch=q4N,q4N,q4Y,q4N]
 
 [erase][label=q4Y]
+[sfx 1DFC=05]
 Nice![wait]
 [jump=q5]
 [erase][label=q4N]
+[sfx 1DFC=2A]
 Sorry![wait]
 [jump=lose]
 
@@ -1069,9 +1081,11 @@ Mashin Hero Wataru
 [branch=q5N,q5Y,q5N,q5N]
 
 [erase][label=q5Y]
+[sfx 1DFC=05]
 Just one more![wait]
 [jump=q6]
 [erase][label=q5N]
+[sfx 1DFC=2A]
 Sorry![wait]
 [jump=lose]
 
@@ -1274,9 +1288,11 @@ Le Telejournal
 [branch=q6N,q6N,q6Y,q6N]
 
 [erase][label=q6Y]
+[sfx 1DFC=05]
 Congratulations![wait=30] You win![wait]
 [jump=win]
 [erase][label=q6N]
+[sfx 1DFC=2A]
 Sorry![wait]
 [jump=lose]
 
