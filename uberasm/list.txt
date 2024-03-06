@@ -94,9 +94,9 @@ level:
 0A2	freescrollbabey.asm
 0A3	freescrollbabey.asm
 0A4	flavor.asm
-0A5	DisableSideExit.asm
+0A5	ashspawn_uberASM.asm
 0A6	SPECIAL.asm
-0A7	DisableSideExit.asm
+0A7	ashspawn_uberASM.asm
 0AA	freescrollbabey.asm
 0A8	SPECIAL_A8.asm
 0AC	FilterYoshi_1AC.asm
@@ -258,6 +258,7 @@ level:
 181	Elevator.asm
 183	SPECIAL.asm
 193  Lightning2.asm
+19C	ashspawn_uberASM.asm
 1A0	FilterYoshi.asm
 1A1	SPECIAL.asm
 1A2	Layer2Smash_1A2.asm

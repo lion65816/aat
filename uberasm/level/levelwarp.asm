@@ -14,6 +14,15 @@ init:
    RTL
 
 main:
+   LDA $15
+   CMP #%00000001
+   BEQ .sfx
+   CMP #%00000010
+   BNE .cont
+   .sfx
+   LDA #$23
+   STA $1DFC|!addr
+   .cont
    LDA #$0B             ; \ Freeze the player
    STA $71              ; /
 

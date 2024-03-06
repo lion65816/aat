@@ -4,6 +4,7 @@
 !PaletteUsed = $18B7|!addr
 
 load:
+	STZ $1477|!addr
 	rts
 init:
 	rts
@@ -69,8 +70,18 @@ main:
 	STA $2122 ; Format = -bbbbbgg gggrrrrr
 	LDA #$72 ; High byte
 	STA $2122
+	
 
 .Return
+	LDA $1477|!addr
+	CMP #$01
+	BNE +
+	JSL GrayscalePalette_main
+	+
+	CMP #$02
+	BNE ++
+	JSL InvertPalette_main
+	++
 	rts
 ;nmi:
 ;	rts

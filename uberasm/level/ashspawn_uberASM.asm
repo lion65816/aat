@@ -32,6 +32,7 @@
 Init:
 	LDA #$01
 	STA $18B8|!addr
+	JSL DisableSideExit_init
 RTL
 
 Main:

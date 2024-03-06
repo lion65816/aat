@@ -2,6 +2,8 @@ load:
 	JSL NoStatus_load
 	LDA #$01			;\ Always keep Demo big.
 	STA $19				;/
+	LDA #$01
+	STA $1477|!addr
 	RTL
 
 init:
@@ -11,7 +13,7 @@ init:
 	RTL
 
 main:
-	JSL GrayscalePalette_main
+	
 	JSL Layer2Horz_main
 	JSL Layer1Vert_main
 	STZ $0DC2|!addr		;> Remove item reserve.
@@ -24,4 +26,8 @@ main:
 	STZ $88				;/
 	STZ $1496|!addr
 .return
+	RTL
+
+status_bar:
+	;JSL GrayscalePalette_main
 	RTL
