@@ -142,7 +142,7 @@ level:
 0EE  SPECIAL_EE.asm
 0F0	F0_scroll.asm
 0F2	freescrollbabey.asm
-0F3  MultiStepAutoscroll.asm
+0F3	MultiStepAutoscroll.asm
 0F4	0F4.asm
 0F5	smario.asm
 0F6	ashspawn_uberASM_Reset.asm
@@ -324,7 +324,7 @@ level:
 1EF	elevator_shaft.asm
 1F0	elevator_shaft.asm
 1F1	elevator_shaft.asm
-1F5  1F5.asm
+1F5	1F5.asm
 1F6	hdmatest_freescrollbabey.asm
 1F7	hdmatest_freescrollbabey.asm
 1F8	hdmatest_freescrollbabey.asm

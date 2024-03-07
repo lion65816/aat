@@ -1,16 +1,35 @@
 ; Note that since global code is a single file, all code below should return with RTS.
 
-; Free RAM. Needs to be the same address used in UberASM that uploads custom player palettes.
-!PaletteUsed = $18B7|!addr
+; Free RAM addresses. 
+!CustomPalette = $1477|!addr	;> Activate certain custom palettes. Needed so that palettes don't change while dying or reading messages.
+!PaletteUsed = $18B7|!addr		;> Needs to be the same address used in UberASM that uploads custom player palettes.
 
 load:
-	STZ $1477|!addr
-	rts
-init:
-	rts
-main:
-	jsl mario_exgfx_main
+	STZ !CustomPalette
+	RTS
 
+init:
+	RTS
+
+main:
+	JSL mario_exgfx_main
+
+	; Handle custom palette for intro stage.
+	LDA !CustomPalette
+	CMP #$01
+	BNE +
+	JSL GrayscalePalette_main
++
+	; Handle custom palette for Level 125 secret path.
+	CMP #$02
+	BNE +
+	JSL InvertPalette_main
++
+	; Handle custom palette for Level 121 if the player is Iris.
+	CMP #$03
+	BNE +
+	JSL BlueIrisPalette_main
++
 	; Skip if a level is already uploading custom player palettes.
 	LDA !PaletteUsed
 	BNE .Return
@@ -70,18 +89,6 @@ main:
 	STA $2122 ; Format = -bbbbbgg gggrrrrr
 	LDA #$72 ; High byte
 	STA $2122
-	
 
 .Return
-	LDA $1477|!addr
-	CMP #$01
-	BNE +
-	JSL GrayscalePalette_main
-	+
-	CMP #$02
-	BNE ++
-	JSL InvertPalette_main
-	++
-	rts
-;nmi:
-;	rts
+	RTS

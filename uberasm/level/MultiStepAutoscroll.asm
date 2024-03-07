@@ -59,12 +59,12 @@
 !StepEntries = $0002	; Number of step entries
 !StopEntries = $0001	; Number of stop entries (put $0000 to disable stop function)
 
-!Timer = $13E6|!addr	; 2 consecutives bytes of free, unmodified RAM
-!Track = $1B97|!addr	; 2 consecutives bytes of free, unmodified RAM
-!FPosX = $1923|!addr	; 1 byte of free, unmodified RAM
-!FPosY = $1924|!addr	; 1 byte of free, unmodified RAM
-!CalcA = $1926|!addr	; 2 consecutives bytes of scratch RAM
-!PFlag = $1929|!addr	; 1 byte of free, unmodified RAM
+!Timer = $18C5|!addr	; 2 consecutives bytes of free, unmodified RAM
+!Track = $18C7|!addr	; 2 consecutives bytes of free, unmodified RAM
+!FPosX = $18C9|!addr	; 1 byte of free, unmodified RAM
+!FPosY = $18CA|!addr	; 1 byte of free, unmodified RAM
+!CalcA = $18CB|!addr	; 2 consecutives bytes of scratch RAM
+!PFlag = $1908|!addr	; 1 byte of free, unmodified RAM
 
 TableXSpeed:
 dw $0200,$8001
@@ -99,12 +99,12 @@ init:
 	STZ $1411|!addr
 	STZ $1412|!addr
 	REP #$20
-	STZ !Track
 	STZ !Timer
+	STZ !Track
+	SEP #$20
 	STZ !FPosX
 	STZ !FPosY
-	SEP #$20
-	LDA $01
+	LDA #$01
 	STA !PFlag
 main:
     LDA $14                     ;\  if not time to spawn sprite

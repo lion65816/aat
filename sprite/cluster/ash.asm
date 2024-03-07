@@ -68,7 +68,17 @@ Main:                   ;The code always starts at this label in all sprites.
     TAY
     LDA AshTiles,y
     STA $0F
-    
+    REP #$20                ;\ AAT edits:
+    LDA $010B|!addr         ;| Remap the ash tiles specifically for
+    CMP #$000A              ;| the No-Yoshi intro of SPECIAL.
+    BNE +                   ;|
+    SEP #$20                ;|
+    LDA $0F                 ;|
+    CLC                     ;|
+    ADC #$20                ;|
+    STA $0F                 ;|
++                           ;|
+    SEP #$20                ;/
     LDY.w OAMIndices,x      ; Get OAM index.
     LDA !YPos,x             ; \ Copy Y position relative to screen Y to OAM Y.
     SEC                     ;  |
