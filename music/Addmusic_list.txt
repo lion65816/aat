@@ -7,7 +7,7 @@ Globals:
 06  iris_death.txt
 07  originals/07 Keyhole.txt
 08  originals/08 Iris Out.txt
-09  originals/09 Bonus End.txt
+09  bonusend.txt
 
 Locals:
 0A  originals/10 Piano.txt

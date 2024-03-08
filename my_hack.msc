@@ -14,8 +14,8 @@
 07	1	Keyhole
 08	0	Iris Out
 08	1	Iris Out
-09	0	Bonus Game Clear
-09	1	Bonus Game Clear
+09	0	bonusend
+09	1	bonusend
 0A	0	Piano
 0A	1	Piano
 0B	0	Here We Go!
