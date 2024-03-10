@@ -589,8 +589,10 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 61df	0	conveyer move right fast
 6262	0	A door that uses a specific screen exit.
 6263	0	A door that uses a specific screen exit.
+6264	0	
 6272	0	A door that uses a specific screen exit.
 6273	0	A door that uses a specific screen exit.
+6274	0	
 6282	0	A door that uses a specific screen exit.
 6283	0	A door that uses a specific screen exit.
 6292	0	A door that uses a specific screen exit.

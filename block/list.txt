@@ -411,6 +411,8 @@ R56C0-56D1:130 question_mark/giant_question_block_single.asm
 644E:25 ClapSE.asm
 644F:25 ClapSE.asm
 645D:25 5up.asm
+6264:25 YoshiTongueSF.asm
+6274:25 YoshiTongueSF.asm
 6493:130 customvpipe_left.asm
 6494:130 customvpipe_right.asm
 68E3:130 sprite_solid.asm
