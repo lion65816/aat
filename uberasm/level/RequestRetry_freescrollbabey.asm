@@ -1,10 +1,9 @@
+!screen_num = $0D
+
 init:
-	LDA #$01
-	STA $140B|!addr
+	JSL freescrollbabey_init
 	JSL RequestRetry_init
 	RTL
-
-!screen_num = $0D
 
 main:
     LDA ($19B8+!screen_num)|!addr
@@ -12,5 +11,7 @@ main:
     LDA ($19D8+!screen_num)|!addr
     STA $0D
     JSL MultipersonReset_main
-	JSL RequestRetry_main
+
+	LDA #%00110000 : STA $00	;\ Retry if pressing L+R.
+	JSL RequestRetry_main		;/
 	RTL

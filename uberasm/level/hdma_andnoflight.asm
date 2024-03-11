@@ -1,3 +1,8 @@
+; Needs to be the same free RAM address as in RequestRetry.asm.
+!RetryRequested = $18D8|!addr
+
+!screen_num = $0D
+
 macro call_library(i)
 	PHB
 	LDA.b #<i>>>16
@@ -8,16 +13,18 @@ macro call_library(i)
 endmacro
 
 init:         	; CURRENTLY HAS THE INIT CODE FOR THE HDMA (MODIFY IF ADDING OTHER FILES)
-   LDA #$17    ;\  BG1, BG2, BG3, OBJ on main screen (TM)
-   STA $212C   ; | 
-   LDA #$00    ; | 0 on main screen should use windowing. (TMW)
-   STA $212E   ;/  
-   LDA #$00    ;\  0 on sub screen (TS)
-   STA $212D   ; | 
-   LDA #$00    ; | 0 on sub screen should use windowing. (TSW)
-   STA $212F   ;/  
-   LDA #$77    ; BG1, BG2, BG3, OBJ, Backdrop, Half for color math
-   STA $40     ;/  mirror of $2131
+	JSL RequestRetry_init
+
+	LDA #$17    ;\  BG1, BG2, BG3, OBJ on main screen (TM)
+	STA $212C   ; | 
+	LDA #$00    ; | 0 on main screen should use windowing. (TMW)
+	STA $212E   ;/  
+	LDA #$00    ;\  0 on sub screen (TS)
+	STA $212D   ; | 
+	LDA #$00    ; | 0 on sub screen should use windowing. (TSW)
+	STA $212F   ;/  
+	LDA #$77    ; BG1, BG2, BG3, OBJ, Backdrop, Half for color math
+	STA $40     ;/  mirror of $2131
 
 	REP #$20
 	LDA #$3200
@@ -64,16 +71,22 @@ init:         	; CURRENTLY HAS THE INIT CODE FOR THE HDMA (MODIFY IF ADDING OTHE
    db $08 : db $3D   ; 
    db $06 : db $3E   ; 
    db $00            ; 
-   
-!screen_num = $0D
+
 main:         ; CURRENTLY HAS THE MAIN CODE FROM THE DISABLE FLIGHT FILE
-
-    LDA ($19B8+!screen_num)|!addr
-    STA $0C
-    LDA ($19D8+!screen_num)|!addr
-    STA $0D
-    JSL MultipersonReset_main
-
 	STZ $149F|!addr
-	RTL
 
+	; Exit out of the room with a special button combination (A+X+L+R).
+	LDA #%11110000 : STA $00
+	JSL RequestRetry_main
+	LDA !RetryRequested
+	BNE .return
+
+	; Otherwise, the room will reload upon death.
+	LDA $010B|!addr
+	STA $0C
+	LDA $010C|!addr
+	ORA #$04
+	STA $0D
+	JSL MultipersonReset_main
+.return
+	RTL

@@ -1,20 +1,55 @@
-???: We are pleased to receive you, Demo, lithe, loathesome lingerer from afar. Your visit was not easy to arrange. Great things never are. Oh how we admire you.
+/////////////
+// Scene 1 //
+/////////////
+
+[sprite=4]
+// Demo and Iris
+(30,2A,80,0E,big)(48,2A,82,0C,big)
+(30,3A,A0,0E,big)(48,3A,A2,0C,big)
+[/sprite]
+[font color=2]
+[topic]???[/topic]
+We are pleased to receive you, Demo, lithe, loathesome lingerer from afar.[wait=30] Your visit was not easy to arrange.[wait=30] Great things never are.[wait=30] Oh how we admire you.
 [wait]
 [erase]
+[font color=1]
+[topic]Demo[/topic]
+Wait a second...[wait=30] Did someone cross the streams again?
+[wait]
+[erase]
+[wait=30]
+[font color=2]
+[topic]???[/topic]
+It shall never be the same.[wait=30] Your arrival has set things in motion.[wait=30] Awesome things.
+[wait]
+[br]Acquiring such alien acumen has enabled us.[wait=30] Energized us.[wait=30] Enlightened us.[wait=30] Your device has set us free!
+[wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
 [wait=30]
 
-DEMO: Wait a second... Did someone cross the streams again?
+/////////////
+// Scene 2 //
+/////////////
+
+[sprite=20]
+// Demo and Iris
+(30,2A,A4,0E,big)(48,2A,84,0C,big)
+(30,3A,A0,0E,big)(48,3A,A2,0C,big)
+// Parrot Boom Boom
+(90,0A,88,02,big)(A0,0A,8A,02,big)(B0,0A,8C,02,big)(C0,0A,8E,02,big)
+(90,1A,A8,02,big)(A0,1A,AA,02,big)(B0,1A,AC,02,big)(C0,1A,AE,02,big)
+(90,2A,C8,02,big)(A0,2A,CA,02,big)(B0,2A,CC,02,big)(C0,2A,CE,02,big)
+(90,3A,E8,02,big)(A0,3A,EA,02,big)(B0,3A,EC,02,big)(C0,3A,EE,02,big)
+[/sprite]
+[font color=1]
+[topic]Demo and Iris[/topic]
+.[wait=30].[wait=30].
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
 [wait=30]
 
-???: It shall never be the same. Your arrival has set things in motion. Awesome things. Acquiring such alien acumen has enabled us. Energized us. Enlightened us. Your device has set us free!
-
-[wait]
-[erase]
-[wait=30]
-(Parrot Boom Boom Reveal)
-[wait]
-[erase]
-[wait=30]
 [end=00]

@@ -1,3 +1,6 @@
+; Needs to be the same free RAM address as in RequestRetry.asm.
+!RetryRequested = $18D8|!addr
+
 !FreeRAM	= $18B4|!addr
 !BossBass	= $30
 
@@ -7,6 +10,8 @@ XSpd:
 db $FA,$FB,$FC,$FD
 
 init:
+	JSL RequestRetry_init
+
 	LDX #!sprite_slots
 -
 	LDA !extra_bits,x
@@ -76,10 +81,18 @@ main:
 	ADC.b #$00
 	STA.w !14E0,X
 .ret
+	; Exit out of SPECIAL rooms with a special button combination (A+X+L+R).
+	LDA #%11110000 : STA $00
+	JSL RequestRetry_main
+	LDA !RetryRequested
+	BNE .return
+
+	; Otherwise, the SPECIAL rooms will reload upon death.
 	LDA $010B|!addr
 	STA $0C
 	LDA $010C|!addr
 	ORA #$04
 	STA $0D
 	JSL MultipersonReset_main
+.return
 	RTL

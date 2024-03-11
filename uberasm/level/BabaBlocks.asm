@@ -23,6 +23,7 @@ main:
 	LDA #$01					;| switch the translevel number.
 	STA $1F2C|!addr				;/ It is restored next frame.
 +
-	JSL RequestRetry_main
+	LDA #%00110000 : STA $00	;\ Retry if pressing L+R.
+	JSL RequestRetry_main		;/
 	JSL BabaBlocks_main
 	RTL

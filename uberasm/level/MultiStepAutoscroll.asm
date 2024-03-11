@@ -66,6 +66,9 @@
 !CalcA = $18CB|!addr	; 2 consecutives bytes of scratch RAM
 !PFlag = $1908|!addr	; 1 byte of free, unmodified RAM
 
+; Needs to be the same free RAM address as in RequestRetry.asm.
+!RetryRequested = $18D8|!addr
+
 TableXSpeed:
 dw $0200,$8001
 
@@ -96,6 +99,8 @@ CheckProgress:
 ;----------------------------------------------------------------------------- ACTUAL CODE BELOW (NO TOUCH)
 
 init:
+	JSL RequestRetry_init
+
 	STZ $1411|!addr
 	STZ $1412|!addr
 	REP #$20
@@ -155,13 +160,20 @@ PLA				;/
         STA !B6,x               ;/
     endif
 .Return:
+    ; Exit out of SPECIAL rooms with a special button combination (A+X+L+R).
+    LDA #%11110000 : STA $00
+    JSL RequestRetry_main
+    LDA !RetryRequested
+    BNE .end
 
-	LDA $010B|!addr
-	STA $0C
-	LDA $010C|!addr
-	ORA #$04
-	STA $0D
-	JSL MultipersonReset_main
+    ; Otherwise, the SPECIAL rooms will reload upon death.
+    LDA $010B|!addr
+    STA $0C
+    LDA $010C|!addr
+    ORA #$04
+    STA $0D
+    JSL MultipersonReset_main
+
 	LDA !PFlag
 	BEQ .end
 	LDA $13D4|!addr

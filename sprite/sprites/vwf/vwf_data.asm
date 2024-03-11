@@ -32,7 +32,7 @@ BinPtr:
 	incbin "vwf_data.bin"
 DataPtr:
 	dw BinPtr+$0,  BinPtr+$2DE,  BinPtr+$447,  BinPtr+$591,  BinPtr+$6F3,  BinPtr+$858,  BinPtr+$992,  BinPtr+$AF7
-	dw BinPtr+$C57,  BinPtr+$DB7,  BinPtr+$F7C,  BinPtr+$15A9,  BinPtr+$1F1B,  BinPtr+$2DA5,  BinPtr+$2DD7
+	dw BinPtr+$C57,  BinPtr+$DB7,  BinPtr+$FF8,  BinPtr+$1625,  BinPtr+$1F97,  BinPtr+$2E21,  BinPtr+$2E53
 RoutinePtr:
 	dw Routine00
 Routine00:

@@ -667,8 +667,21 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 7274	0	
 7279	0	Disables horizontal scrolling at an exact position.
 727c	0	Disables horizontal scrolling at an exact position.
+727f	0	A block that will act like tile 25 for sprites
 7288	0	Disables horizontal scrolling at an exact position.
+728f	0	A block that will act like tile 25 for sprites
 7298	0	Disables horizontal scrolling at an exact position.
+729f	0	A block that will act like tile 25 for sprites
+72fc	0	A block that will act like tile 25 for sprites
+72fd	0	A block that will act like tile 25 for sprites
+72fe	0	A block that will act like tile 25 for sprites
+745a	0	A block that will act like tile 25 for sprites
+745b	0	A block that will act like tile 25 for sprites
+745c	0	A block that will act like tile 25 for Mario
+746a	0	A block that will act like tile 25 for sprites
+746b	0	A block that will act like tile 25 for sprites
+747a	0	A block that will act like tile 25 for sprites
+747b	0	A block that will act like tile 25 for sprites
 7f09	0	
 7f66	0	
 7f6d	0	conveyer move left fast

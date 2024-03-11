@@ -117,7 +117,12 @@ function offset(addr,x) = (addr)+(4*(!layer-1))+(2*(x))
 !speed       #= offset($1446|!addr,!direction)
 !fraction    #= offset($144E|!addr,!direction)
 
+; Needs to be the same free RAM address as in RequestRetry.asm.
+!RetryRequested = $18D8|!addr
+
 init:
+    jsl RequestRetry_init
+
     stz !phase
     stz !timer
 
@@ -133,6 +138,14 @@ endif
     rtl
 
 main:
+	; Exit out of SPECIAL rooms with a special button combination (A+X+L+R).
+    lda #%11110000 : sta $00
+    jsl RequestRetry_main
+    lda !RetryRequested
+    beq +
+    jmp .return
++
+    ; Otherwise, the SPECIAL rooms will reload upon death.
     lda $010B|!addr
     sta $0C
     lda $010C|!addr

@@ -28,6 +28,9 @@ if (((read1($0FF0B4)-'0')*100)+((read1($0FF0B4+2)-'0')*10)+(read1($0FF0B4+3)-'0'
 endif
 
 LRReset:
+    LDA $71             ;\ AAT edit:
+    CMP #$09            ;| Prevent resetting while dying.
+    BEQ .return         ;/
 if !resetLR
     LDA $17
     AND #$30
