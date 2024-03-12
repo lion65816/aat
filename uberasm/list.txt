@@ -62,11 +62,11 @@ level:
 068	craigdarroch.asm
 069	craigdarroch.asm
 06A	trivia.asm
-06B	trivia.asm
-06C	trivia.asm
-06D	trivia.asm
-06E	trivia.asm
-06F	trivia.asm
+06B	trivia_win01.asm
+06C	trivia_win02.asm
+06D	trivia_win04.asm
+06E	trivia_win08.asm
+06F	trivia_win16.asm
 074	Autoscroll74.asm
 07A	BG_AutoScroll7A.asm
 07B	BG_AutoScroll7B.asm
@@ -129,6 +129,7 @@ level:
 0CF	SPECIAL.asm
 0D0	jumpers_end.asm
 0D1	MWIVJS1.asm
+0DC	trivia_win32.asm
 0DD	MinStatus.asm
 0DE	shmup_with_hp.asm
 0DF	shmup_with_hp.asm

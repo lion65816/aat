@@ -1,0 +1,67 @@
+#am4
+;Plok! - Boss (rather obvious lol)
+;Ported by Wyatt Croucher
+
+;[insert evil laugh here]
+
+#spc {
+	#author "Tim Follin, Geoff Follin"
+	#title "Boss"
+	#game "Plok!"
+	#comment "Ported by Wyatt"
+}
+
+	$ED $80 $6D $2B
+	$ED $80 $7D $00
+	$F0
+
+w220
+#0 t45
+$EF $3F $00 $00 $F1 $04 $00 $01 
+v0c24
+$EF $3F $0F $0F $F1 $04 $74 $01 
+l1v180@6$ED$23$A8
+r1^1p15,128
+o4[f<b>]4cc+dl16$ED$4F$A8[d+]8>[c]8
+t49/v255<[@26c@22c@22c@22c]32
+t51@26c[@22c]23[<@10c>@22ccc]98
+[<@10c>@22ccc@29c@22ccc]16
+#1@0r24
+r1^1p15,128o4f1f+2b2b+2g+2b1>c2f2d2c-2c2<g+2f+1
+>c2^4c+4<c2^4c+4>c2^4c+4<l8cb+cb+l16cb+cb+l32[cb+]4
+/p0,0l16@8[o1ffffffffffffd+d+f+f+]8r1^1
+v180@6$ED$23$A8 p15,128l1o3
+a+^1>c^1d^1fa
+d^1a^1g^1f^1d+^1c+^1c^1<a^1>
+d^1^1^1@6p0,0o1l16
+@8v255[ffff>ccd+d+<]8
+#2@6r24
+r1o1f1>l2[fcc-f+]4
+l16>[cccccccccccc<a+a+>c+c+]4<
+/@14[ffffffffffffd+d+f+f+]8
+fr^8^4^2^1
+[ggggggggggggffg+g+]24
+[gggg>ddff<]8
+[ffff>ccd+d+<]8
+#3r24l1v180@6$ED$23$A8
+r1^1p15,128
+o4[g+d]4eff+l16$ED$4F$A8[g]8>[e]8
+/l1r[^1]9
+$ED$23$A8o3g^1g+^1a+^1>c+f
+<a+^1>f^1d+^1c+^1<b^1a^1g+^1f^1
+a+^1^1^1r[^1]3
+#4r24
+l4o3[@10o1g>g<g>g8d8]10>
+t47[@21c]14<l16[@10c]8>
+p0,0
+/r1[^1]9
+@8o1[ggggggggggggffg+g+]24
+[gggg>ddff<]8
+r1[^1]3
+#5r24l1v180@6$ED$23$A8 
+r1^1p15,128
+o3[>c<f+]4gg+al16$ED$4F$A8[a+]8>[g]8
+/l1r[^1]9<
+$ED$23$A8 d^1d+^1f^1a+b+
+f^1b+^1a+^1g+^1f+^1e^1d+^1c^1
+f^1^1^1r[^1]3

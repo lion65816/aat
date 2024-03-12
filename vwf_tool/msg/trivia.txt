@@ -27,10 +27,10 @@ RTL
 [font color=3]
 [topic]Nevada[/topic]
 Hi Demo and Iris![wait][br]
-Good to see you make it out to my weekly trivia night this time![wait][br]
-Glad you're able to be here.[wait=30] I'm starting soon.[wait]
+Good to see you make it out to my weekly trivia night this time![wait=30] I'm starting soon.[wait]
 [erase]
-You get a 1-Up for each correct answer.[wait][br]
+If you answer the first question correctly, you win a 1-Up.[wait][br]
+Then, your winnings double if you get the next question right.[wait][br]
 You win a special prize for 6 correct answers in a row![wait][br]
 [pad left=24]
 Do you want to play?[br]
@@ -250,16 +250,17 @@ Green
 
 [erase][label=q1Y]
 [sfx 1DFC=05]
-//[asm=once]
-//INC $0DBE
-//RTL
-//[/asm]
 Correct![wait]
 [jump=q2]
 [erase][label=q1N]
 [sfx 1DFC=2A]
 Sorry![wait]
-[jump=lose]
+[erase][label=lose]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+[end=01]
 
 ////////////////
 // Question 2 //
@@ -466,7 +467,12 @@ Ding ding ding![wait]
 [erase][label=q2N]
 [sfx 1DFC=2A]
 Sorry![wait]
-[jump=lose]
+[erase][label=lose]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+[end=02]
 
 ////////////////
 // Question 3 //
@@ -673,7 +679,12 @@ Righty-o![wait]
 [erase][label=q3N]
 [sfx 1DFC=2A]
 Sorry![wait]
-[jump=lose]
+[erase][label=lose]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+[end=03]
 
 ////////////////
 // Question 4 //
@@ -880,7 +891,12 @@ Nice![wait]
 [erase][label=q4N]
 [sfx 1DFC=2A]
 Sorry![wait]
-[jump=lose]
+[erase][label=lose]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+[end=04]
 
 ////////////////
 // Question 5 //
@@ -1087,7 +1103,12 @@ Just one more![wait]
 [erase][label=q5N]
 [sfx 1DFC=2A]
 Sorry![wait]
-[jump=lose]
+[erase][label=lose]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+[end=05]
 
 ////////////////
 // Question 6 //
@@ -1294,7 +1315,12 @@ Congratulations![wait=30] You win![wait]
 [erase][label=q6N]
 [sfx 1DFC=2A]
 Sorry![wait]
-[jump=lose]
+[erase][label=lose]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+[end=06]
 
 /////////
 // Win //
@@ -1305,16 +1331,4 @@ Sorry![wait]
 [topic][/topic]
 [sprite=erase]
 [wait=30]
-[end=01]
-
-
-//////////
-// Lose //
-//////////
-
-[erase][label=lose]
-[erase]
-[topic][/topic]
-[sprite=erase]
-[wait=30]
-[end=00]
+[end=07]
