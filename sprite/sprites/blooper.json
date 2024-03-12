@@ -33,11 +33,11 @@
     "Inedible": false,
     "Stay in Yoshi's mouth": false,
     "Weird ground behaviour": false,
-    "Don't interact with other sprites": true,
+    "Don't interact with other sprites": false,
     "Don't change direction if touched": true,
     "Don't turn into coin when goal passed": false,
     "Spawn a new sprite": false,
-    "Don't interact with objects": true
+    "Don't interact with objects": false
   },
   "$190F": {
     "Make platform passable from below": false,
@@ -56,7 +56,7 @@
   "Extra Property Byte 2": 0,
   "Additional Byte Count (extra bit clear)": 0,
   "Additional Byte Count (extra bit set)": 0,
-  "Map16": "",
+  "Map16": "GQzrDRkM600AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADqDfoN6k36TQ==",
   "Displays": [
     {
       "Description": "A Blooper from SMB1. SP4=BD",
@@ -64,13 +64,13 @@
       "Tiles": [
         {
           "X offset": 0,
-          "Y offset": -16,
-          "map16 tile": 106
+          "Y offset": 0,
+          "map16 tile": 784
         },
         {
           "X offset": 0,
-          "Y offset": 0,
-          "map16 tile": 106
+          "Y offset": -16,
+          "map16 tile": 768
         }
       ],
       "X": 0,
