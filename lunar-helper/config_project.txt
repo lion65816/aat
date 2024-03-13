@@ -77,6 +77,7 @@ patches
 	patch\patch\castle_cutscene_palettes.asm
 	patch\patch\YoshiSpriteInteractionsFix.asm
 	patch\patch\overworld_map_names.asm
+	patch\patch\save_everything.asm
 ]
 -- patch\patch\BetterYoshiInteraction.asm
 -- patch\patch\ticking.asm

@@ -1,6 +1,10 @@
 !Mall_SRAM = $41C7EA,x	;> Index SRAM by save file (initialized in the deathcounter.asm patch).
 
 ; Set manual triggers when the corresponding mall floors are cleared.
+
+load:
+	JSL FilterYoshi_load
+	RTL
 main:
 	LDA $010A|!addr
 	TAX

@@ -2,6 +2,10 @@
 ; Thunder version 2.0, by Mattrizzle, original version by Ghettoyouth
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+load:
+	JSL FilterYoshi_load
+	RTL
+	
 main:
 		PHX
 		LDX.W $0681|!addr

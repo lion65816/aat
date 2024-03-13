@@ -6,28 +6,43 @@
 ; Each line is formatted as follows:
 ;  dl $XXXXXX : dw $YYYY
 ; where:
-;  $XXXXXX = what RAM address to save. Make sure it's always 3 bytes long (i.e. use $7E0019 instead of $19 or $0019).
+;  $XXXXXX = what RAM address to save. Make sure it's always 3 bytes long (i.e. use $400019 instead of $19 or $0019).
 ;  $YYYY = how many bytes to save at that address (remove the $ to use a decimal value).
-; For example, adding "dl $7E1F3C : dw 12" will make the 1-Up checkpoints for all levels save.
+; For example, adding "dl $401F3C : dw 12" will make the 1-Up checkpoints for all levels save.
 ; Make sure to always put a colon between the two elements!
 ; The addresses you put under ".not_game_over" will be saved like usual, but they won't be reloaded from SRAM when getting a game over.
 ; This can be useful if you want some things to retain even if the player got a game over before being able to save them.
 ;
 ; Note: for each address you add here, you need to add the default values in the sram_defaults table below.
-; Note: if using SA-1, for addresses in $7E0000-$7E1FFF you must change the bank to $40 ($400000-$401FFF).
+; Note: if using SA-1, for addresses in $400000-$401FFF you must change the bank to $40 ($400000-$401FFF).
 ;       Additionally, a lot of other addresses might be remapped to different locations (see SA-1 docs for more info).
-; Note: if using FastROM, using $000000-$001FFF instead of $7E0000-$7E1FFF will make the save/load process a bit faster.
+; Note: if using FastROM, using $000000-$001FFF instead of $400000-$401FFF will make the save/load process a bit faster.
 
 save:
     dl !ram_checkpoint    : dw 192
     ; Feel free to add your own stuff here.
     dl $401F2F            : dw 12  ; "All 5 Dragon Coins collected" flags.
     dl $40A660            : dw 768 ; "Individual Dragon Coins Save" RAM.
+    dl $400EF8            : dw $0001 ;catnip rescued flag
+    dl $401F2D            : dw $0001 ; bonus music
+ 
     
-    
-
 .not_game_over:
     dl !ram_death_counter : dw 5
+                dl $3019 : dw $0001 ;Mario's Powerup
+                dl $400DB9 : dw $0001 ;Luigi's Powerup
+                dl $400DC2 : dw $0001 ;Mario's Item Box
+                dl $400DBD : dw $0001 ;Luigi's Item Box
+                dl $400DBE : dw $0001 ;Mario's Lives
+                dl $400DB5 : dw $0001 ;Luigi's Lives
+                dl $4013C7 : dw $0001 ;Mario's Yoshi Color
+                dl $400DBB : dw $0001 ;Luigi's Yoshi Color
+                dl $400DBF : dw $0001 ;Mario's Coins
+                dl $400DB7 : dw $0001 ;Luigi's Coins
+                dl $400F48 : dw $0001 ;Mario's Bonus
+                dl $400F49 : dw $0001 ;Luigi's Bonus
+                dl $400DC1 : dw $0001 ;Yoshi Overworld
+
     ; Feel free to add your own stuff here.
     
     
@@ -58,12 +73,26 @@ sram_defaults:
     ; Feel free to add your own stuff here.
     rep 12 : db $00    ; Default values for "All 5 Dragon Coins collected" flags.
     rep 384 : dw $00C0 ; Default values for "Individual Dragon Coins Save" RAM.
-    
-    
-
+    db $00
+    db $00
+        
 .not_game_over:
     ; Initial death counter value (don't edit this!).
     rep 5 : db $00
+    db $00
+    db $00
+    db $00
+    db $00
+    db $02
+    db $02
+    db $00
+    db $00
+    db $00
+    db $00
+    db $00
+    db $00
+    db $00
+
     ; Feel free to add your own stuff here.
     
     

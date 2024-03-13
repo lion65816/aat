@@ -97,6 +97,7 @@ level:
 0A5	ashspawn_uberASM_DisableSideExit.asm
 0A6	SPECIAL.asm
 0A7	ashspawn_uberASM_DisableSideExit.asm
+0A9 	FilterYoshi.asm
 0AA	freescrollbabey.asm
 0A8	SPECIAL_A8.asm
 0AC	SPECIAL.asm
@@ -257,8 +258,16 @@ level:
 17E	FilterYoshi.asm
 180	Elevator.asm
 181	Elevator.asm
-183	SPECIAL.asm
+183	FUNKY.asm
 193  Lightning2.asm
+194	FilterYoshi.asm
+195	FilterYoshi.asm
+196	FilterYoshi.asm
+197	FilterYoshi.asm
+198	FilterYoshi.asm
+199	FilterYoshi.asm
+19A	FilterYoshi.asm
+19B	FilterYoshi.asm
 19C	ashspawn_uberASM_DisableSideExit.asm
 1A0	FilterYoshi.asm
 1A1	SPECIAL.asm
@@ -316,6 +325,7 @@ level:
 1E4	mall_floor4.asm
 1E5	mall_floor5.asm
 1E6	mall_floor6.asm
+1E7  	FilterYoshi.asm
 1E8	FilterYoshi.asm
 1E9	mall_floor7.asm
 1EB	elevator_shaft.asm
