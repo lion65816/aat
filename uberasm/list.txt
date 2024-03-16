@@ -145,7 +145,7 @@ level:
 0EE	SPECIAL_EE.asm
 0F0	F0_scroll.asm
 0F2	freescrollbabey.asm
-0F3	MultiStepAutoscroll.asm
+0F3	FG_AutoScroll.asm
 0F4	0F4.asm
 0F5	smario.asm
 0F6	ashspawn_uberASM_Reset.asm

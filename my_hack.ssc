@@ -241,3 +241,7 @@ BE 0020 An awesome Mechakoopa that behaves like the original, shoots a projectil
 BE 0022 0,0,497 0,-16,498 16,-16,499 16,0,49A 14,0,49B
 BE 0030 An awesome Mechakoopa that behaves like the original, shoots a projectile, shoots lightning, or explodes when stunned. This version flies too!
 BE 0032 0,0,497 0,-16,498 16,-16,499 16,0,49A 14,0,49B 8,16,49C 16,16,49C
+D2 0020 This generator spawns bullet bills that only appear from the right side of the screen.
+D2 0022 0,0,25 8,-16,25 0,-8,114 8,16,25
+D2 0030 This generator spawns bullet bills that only appear from the left side of the screen.
+D2 0032 8,-8,114 0,0,49D -8,-16,49D -8,16,49D

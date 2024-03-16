@@ -204,6 +204,7 @@ CE EerieShooter.cfg
 
 D0 gusty_generator.cfg
 D1 no_spin_sfx.cfg
+D2 OneSided_BulletBillGen.json
 
 CLUSTER:
 00 cluster_sparkle.asm

@@ -83,8 +83,8 @@ sram_defaults:
     db $00
     db $00
     db $00
-    db $02
-    db $02
+    db $0F
+    db $0F
     db $00
     db $00
     db $00
