@@ -21,31 +21,27 @@
 save:
     dl !ram_checkpoint    : dw 192
     ; Feel free to add your own stuff here.
-    dl $401F2F            : dw 12  ; "All 5 Dragon Coins collected" flags.
-    dl $40A660            : dw 768 ; "Individual Dragon Coins Save" RAM.
-    dl $400EF8            : dw $0001 ;catnip rescued flag
+    dl $401F2F            : dw 12    ; "All 5 Dragon Coins collected" flags.
+    dl $40A660            : dw 768   ; "Individual Dragon Coins Save" RAM.
+    dl $400EF8            : dw $0001 ; catnip rescued flag
     dl $401F2D            : dw $0001 ; bonus music
- 
-    
+
 .not_game_over:
     dl !ram_death_counter : dw 5
-                dl $3019 : dw $0001 ;Mario's Powerup
-                dl $400DB9 : dw $0001 ;Luigi's Powerup
-                dl $400DC2 : dw $0001 ;Mario's Item Box
-                dl $400DBD : dw $0001 ;Luigi's Item Box
-                dl $400DBE : dw $0001 ;Mario's Lives
-                dl $400DB5 : dw $0001 ;Luigi's Lives
-                dl $4013C7 : dw $0001 ;Mario's Yoshi Color
-                dl $400DBB : dw $0001 ;Luigi's Yoshi Color
-                dl $400DBF : dw $0001 ;Mario's Coins
-                dl $400DB7 : dw $0001 ;Luigi's Coins
-                dl $400F48 : dw $0001 ;Mario's Bonus
-                dl $400F49 : dw $0001 ;Luigi's Bonus
-                dl $400DC1 : dw $0001 ;Yoshi Overworld
-
     ; Feel free to add your own stuff here.
-    
-    
+    dl $003019            : dw $0001 ; Mario's Powerup
+    dl $400DB9            : dw $0001 ; Luigi's Powerup
+    dl $400DC2            : dw $0001 ; Mario's Item Box
+    dl $400DBD            : dw $0001 ; Luigi's Item Box
+    dl $400DBE            : dw $0001 ; Mario's Lives
+    dl $400DB5            : dw $0001 ; Luigi's Lives
+    dl $4013C7            : dw $0001 ; Mario's Yoshi Color
+    dl $400DBB            : dw $0001 ; Luigi's Yoshi Color
+    dl $400DBF            : dw $0001 ; Mario's Coins
+    dl $400DB7            : dw $0001 ; Luigi's Coins
+    dl $400F48            : dw $0001 ; Mario's Bonus
+    dl $400F49            : dw $0001 ; Luigi's Bonus
+    dl $400DC1            : dw $0001 ; Yoshi Overworld
 
 ; Here you specify the default values of the addresses you want to save, for when a new save file is started.
 ; You can do "db $XX,$XX,..." for 1 byte values, "dw $XXXX,$XXXX,..." for 2 bytes values and "dl $XXXXXX,$XXXXXX,..." for 3 bytes values.
@@ -75,24 +71,21 @@ sram_defaults:
     rep 384 : dw $00C0 ; Default values for "Individual Dragon Coins Save" RAM.
     db $00
     db $00
-        
+
 .not_game_over:
     ; Initial death counter value (don't edit this!).
     rep 5 : db $00
-    db $00
-    db $00
-    db $00
-    db $00
-    db $0F
-    db $0F
-    db $00
-    db $00
-    db $00
-    db $00
-    db $00
-    db $00
-    db $00
-
     ; Feel free to add your own stuff here.
-    
-    
+    db $00             ; Default value for Mario's Powerup
+    db $00             ; Default value for Luigi's Powerup
+    db $00             ; Default value for Mario's Item Box
+    db $00             ; Default value for Luigi's Item Box
+    db $0E             ; Default value for Mario's Lives
+    db $0E             ; Default value for Luigi's Lives
+    db $00             ; Default value for Mario's Yoshi Color
+    db $00             ; Default value for Luigi's Yoshi Color
+    db $00             ; Default value for Mario's Coins
+    db $00             ; Default value for Luigi's Coins
+    db $00             ; Default value for Mario's Bonus
+    db $00             ; Default value for Luigi's Bonus
+    db $00             ; Default value for Yoshi Overworld
