@@ -126,6 +126,7 @@ level:
 0C8	PitCode2.asm
 0C9	NoStatus_DisableInputs.asm
 0CA	NoStatus_DisableInputs.asm
+0CC  SPECIAL_CC.asm
 0CD	0CD.asm
 0CE	SPECIAL.asm
 0CF	SPECIAL.asm

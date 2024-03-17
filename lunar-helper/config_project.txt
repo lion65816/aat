@@ -78,6 +78,7 @@ patches
 	patch\patch\YoshiSpriteInteractionsFix.asm
 	patch\patch\overworld_map_names.asm
 	patch\patch\save_everything.asm
+	patch\patch\revealspeed.asm
 ]
 -- patch\patch\BetterYoshiInteraction.asm
 -- patch\patch\ticking.asm
