@@ -137,7 +137,7 @@ TableNames:
    db "PIEDMONT HILL   "
    db "THE FISHMARKET  "
    db "THE LOST WOODS  "
-   db "CZECHOSLOVAKIA  "
+   db "COSMIC HEAVEN   "
    db "RESORTCITY BANFF"
    db "NEGATIVE ZONE   "
    db "ONE LAST THING  "

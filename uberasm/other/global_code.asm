@@ -33,11 +33,18 @@ main:
 	; Skip if a level is already uploading custom player palettes.
 	LDA !PaletteUsed
 	BNE .Return
+	
+	LDA $0100|!addr
+	CMP #$01
+	BEQ .Test
+	CMP #$02
+	BEQ .Test
 
 	; Handle Iris palette with ExAnimation custom trigger.
 	LDA $0DB3|!addr 
 	CMP #$00
 	BNE .Iris
+	
 
 .Demo
 	; Prevents Iris' eye colors from loading prematurely when switching to her on the overworld.
@@ -89,6 +96,23 @@ main:
 	STA $2122 ; Format = -bbbbbgg gggrrrrr
 	LDA #$72 ; High byte
 	STA $2122
+	JML .Return
 
 .Return
+	RTS
+	
+.Test
+	;Handle "Hey There Everyone!"
+	LDA #$84 ; Colour number. This is palette 0, colour 2.
+	STA $2121
+	LDA #$4D ; Low byte of SNES RGB
+	STA $2122 ; Format = -bbbbbgg gggrrrrr
+	LDA #$37 ; High byte
+	STA $2122
+	LDA #$85 ; Colour number. This is palette 0, colour 2.
+	STA $2121
+	LDA #$EC ; Low byte of SNES RGB
+	STA $2122 ; Format = -bbbbbgg gggrrrrr
+	LDA #$33 ; High byte
+	STA $2122
 	RTS
