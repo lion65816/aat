@@ -827,6 +827,24 @@ Graphics:
 
 .32x32
 
+        ; AAT edit: Use SP1/SP2 if in sublevel E1.
+        ; Otherwise, use SP3/SP4.
+        REP #$20
+        LDA $010B|!addr
+        CMP #$00E1
+        BNE +
+        SEP #$20
+        LDA $03
+        ORA #$30
+        STA $03
+        BRA ++
++
+        SEP #$20
+        LDA $03
+        ORA #$31
+        STA $03
+++
+
         %GetDrawInfo()
 
         LDA !157C,x
@@ -842,8 +860,9 @@ Graphics:
         STA $0301|!Base2,y
         LDA !Frame
         STA $0302|!Base2,y
-        LDA #$31
-        ORA $03
+        ;LDA #$31
+        ;ORA $03
+        LDA $03                                 ;> AAT edit
         STA $0303|!Base2,y
 
         INY #4
@@ -856,8 +875,9 @@ Graphics:
         LDA !Frame
         CLC : ADC #$20
         STA $0302|!Base2,y
-        LDA #$31
-        ORA $03
+        ;LDA #$31
+        ;ORA $03
+        LDA $03                                 ;> AAT edit
         STA $0303|!Base2,y
 
         INY #4
@@ -871,8 +891,9 @@ Graphics:
         LDA !Frame
         CLC : ADC #$02
         STA $0302|!Base2,y
-        LDA #$31
-        ORA $03
+        ;LDA #$31
+        ;ORA $03
+        LDA $03                                 ;> AAT edit
         STA $0303|!Base2,y
 
         INY #4
@@ -885,8 +906,9 @@ Graphics:
         LDA !Frame
         CLC : ADC #$22
         STA $0302|!Base2,y
-        LDA #$31
-        ORA $03
+        ;LDA #$31
+        ;ORA $03
+        LDA $03                                 ;> AAT edit
         STA $0303|!Base2,y
 
         JMP +
@@ -902,8 +924,9 @@ Graphics:
         LDA !Frame
         CLC : ADC #$02
         STA $0302|!Base2,y
-        LDA #$31
-        ORA $03
+        ;LDA #$31
+        ;ORA $03
+        LDA $03                                 ;> AAT edit
         STA $0303|!Base2,y
 
         INY #4
@@ -916,8 +939,9 @@ Graphics:
         LDA !Frame
         CLC : ADC #$22
         STA $0302|!Base2,y
-        LDA #$31
-        ORA $03
+        ;LDA #$31
+        ;ORA $03
+        LDA $03                                 ;> AAT edit
         STA $0303|!Base2,y
 
         INY #4
@@ -930,8 +954,9 @@ Graphics:
         STA $0301|!Base2,y
         LDA !Frame
         STA $0302|!Base2,y
-        LDA #$31
-        ORA $03
+        ;LDA #$31
+        ;ORA $03
+        LDA $03                                 ;> AAT edit
         STA $0303|!Base2,y
 
         INY #4
@@ -944,8 +969,9 @@ Graphics:
         LDA !Frame
         CLC : ADC #$20
         STA $0302|!Base2,y
-        LDA #$31
-        ORA $03
+        ;LDA #$31
+        ;ORA $03
+        LDA $03                                 ;> AAT edit
         STA $0303|!Base2,y
 
 +
