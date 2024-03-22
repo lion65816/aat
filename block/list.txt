@@ -197,6 +197,7 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 1C90:130 sprite_solid_coin_pass.asm
 1D0E:130 weak_break_block.asm
 1D0F:130 donutblk_solid.asm
+1E2F:25 screentele.asm
 1F18:25 touchdown.asm
 1F1B:130 addtimetouch.asm
 1F26:25 keyholeblock.asm

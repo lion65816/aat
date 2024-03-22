@@ -406,6 +406,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1c90	0	A block that will act like tile 25 for Moving Coins
 1d0e	0	weak_break_block.asm
 1d0f	0	A Donut Lift, which will fall shortly after being stepped on.
+1e2f	0	Teleports the player using a specific screen exit.
 1f18	0	A block that, when touched by the player, will change the background music to a new value and then destroy itself.
 1f1b	0	Adds 20 seconds to the clock and shatters
 1f26	0	Ends the level via keyhole exit if touched while carrying a key, or if touched while riding a Yoshi with a key in its mouth.
