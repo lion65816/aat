@@ -21,7 +21,7 @@ main:
 	CMP #$16
 	BNE .return
 	REP #$20
-	LDA #$00B4
+	LDA #$00DB
 	JSR teleport
 .return
 	RTL

@@ -108,7 +108,7 @@ level:
 0B1	purkinje_key.asm
 0B2	purkinje_secret.asm
 0B3	purkinje_no_flowers.asm
-0B4	NoStatus.asm
+0B4	NoStatus_DisableLR.asm
 0B5	whales_main.asm
 0B6	whales_main.asm
 0B8	whales_end.asm
@@ -132,6 +132,7 @@ level:
 0CF	SPECIAL.asm
 0D0	jumpers_end.asm
 0D1	MWIVJS1.asm
+0DB	NoStatus_DisableLR.asm
 0DC	trivia_win32.asm
 0DD	MinStatus.asm
 0DE	shmup_with_hp.asm
