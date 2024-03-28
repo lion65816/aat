@@ -2,8 +2,25 @@
 // Scene 1 //
 /////////////
 
-[music=CA]
-Found a missing page from Uncle Broadsword's diary!
+[sprite=62]
+// Demo and Iris
+(70,2A,80,02,big)(88,2A,82,04,big)
+(70,3A,A0,02,big)(88,3A,A2,04,big)
+// Background
+(30,08,80,0D,big)(40,08,82,0D,big)(50,08,84,0D,big)(60,08,80,0D,big)(70,08,82,0D,big)(80,08,84,0D,big)(90,08,8A,0A,big)(A0,08,8A,0A,big)(B0,08,8E,08,big)(C0,08,8C,08,big)
+(30,18,A0,0D,big)(40,18,A2,0D,big)(50,18,A4,0D,big)(60,18,A0,0D,big)(70,18,A2,0D,big)(80,18,A4,0D,big)(90,18,AA,0A,big)(A0,18,AA,0A,big)(B0,18,8E,08,big)(C0,18,AC,08,big)
+(30,28,C0,0D,big)(40,28,C2,0D,big)(50,28,C4,0D,big)(60,28,C0,0D,big)(70,28,C2,0D,big)(80,28,C4,0D,big)(90,28,84,0C,big)(A0,28,86,0C,big)(B0,28,88,0C,big)(C0,28,AC,08,big)
+(30,38,E0,0D,big)(40,38,E2,0D,big)(50,38,E4,0D,big)(60,38,E0,0D,big)(70,38,E2,0D,big)(80,38,E4,0D,big)(90,38,A4,0C,big)(A0,38,A6,0C,big)(B0,38,A8,0C,big)(C0,38,AC,08,big)
+(30,48,E6,0C,big)(40,48,E6,0C,big)(50,48,E6,0C,big)(60,48,E6,0C,big)(70,48,E6,0C,big)(80,48,E6,0C,big)(90,48,E6,0C,big)(A0,48,E6,0C,big)(B0,48,E8,0C,big)(C0,48,EA,08,big)
+// Behind the fridge
+(50,08,8C,08,big)(80,08,8E,08,big)
+(50,18,AC,08,big)(80,18,8E,08,big)
+(50,28,CC,08,big)(80,28,8E,08,big)
+(50,38,EC,08,big)(80,38,8E,08,big)
+[/sprite]
+[font color=1]
+[topic]Demo[/topic]
+It's a long shot, but maybe this fridge has some ingredients we can use.
 [wait]
 [erase]
 [topic][/topic]
@@ -12,6 +29,65 @@ Found a missing page from Uncle Broadsword's diary!
 
 /////////////
 // Scene 2 //
+/////////////
+
+[sprite=62]
+// Demo and Iris
+(70,2A,C2,02,big)(88,2A,82,04,big)
+(70,3A,E2,02,big)(88,3A,A2,04,big)
+// Background
+(30,08,80,0D,big)(40,08,82,0D,big)(50,08,84,0D,big)(60,08,80,0D,big)(70,08,82,0D,big)(80,08,84,0D,big)(90,08,8A,0A,big)(A0,08,8A,0A,big)(B0,08,8E,08,big)(C0,08,8C,08,big)
+(30,18,A0,0D,big)(40,18,A2,0D,big)(50,18,A4,0D,big)(60,18,A0,0D,big)(70,18,AE,0C,big)(80,18,A4,0D,big)(90,18,AA,0A,big)(A0,18,AA,0A,big)(B0,18,8E,08,big)(C0,18,AC,08,big)
+(30,28,C0,0D,big)(40,28,C2,0D,big)(50,28,C4,0D,big)(60,28,C0,0D,big)(70,28,CE,0C,big)(80,28,C4,0D,big)(90,28,84,0C,big)(A0,28,86,0C,big)(B0,28,88,0C,big)(C0,28,AC,08,big)
+(30,38,E0,0D,big)(40,38,E2,0D,big)(50,38,E4,0D,big)(60,38,E0,0D,big)(70,38,EE,0C,big)(80,38,E4,0D,big)(90,38,A4,0C,big)(A0,38,A6,0C,big)(B0,38,A8,0C,big)(C0,38,AC,08,big)
+(30,48,E6,0C,big)(40,48,E6,0C,big)(50,48,E6,0C,big)(60,48,E6,0C,big)(70,48,E6,0C,big)(80,48,E6,0C,big)(90,48,E6,0C,big)(A0,48,E6,0C,big)(B0,48,E8,0C,big)(C0,48,EA,08,big)
+// Behind the fridge
+(50,08,8C,08,big)(80,08,8E,08,big)
+(50,18,AC,08,big)(80,18,8E,08,big)
+(50,28,CC,08,big)(80,28,8E,08,big)
+(50,38,EC,08,big)(80,38,8E,08,big)
+[/sprite]
+[font color=1]
+[topic]Demo[/topic]
+.[wait=30].[wait=30].[wait=30]Eh?[wait=30] What's this?
+[wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+
+/////////////
+// Scene 3 //
+/////////////
+
+[music=CA]
+[sprite=61]
+// Page
+(68,28,E4,06,big)
+// Demo and Iris
+(50,2A,C4,02,big)(88,2A,E0,04,big)
+(50,3A,A0,02,big)(88,3A,A2,04,big)
+// Background
+(30,08,80,0D,big)(40,08,86,0D,big)(50,08,88,0D,big)(60,08,8A,0D,big)(70,08,8C,0D,big)(80,08,8E,0D,big)(90,08,8A,0A,big)(A0,08,8A,0A,big)(B0,08,8E,08,big)(C0,08,8C,08,big)
+(30,18,A0,0D,big)(40,18,A6,0D,big)(50,18,A8,0D,big)(60,18,AA,0D,big)(70,18,AC,0D,big)(80,18,AE,0D,big)(90,18,AA,0A,big)(A0,18,AA,0A,big)(B0,18,8E,08,big)(C0,18,AC,08,big)
+(30,28,C0,0D,big)(40,28,C6,0D,big)(50,28,C8,0D,big)(60,28,CA,0D,big)(70,28,CC,0D,big)(80,28,CE,0D,big)(90,28,84,0C,big)(A0,28,86,0C,big)(B0,28,88,0C,big)(C0,28,AC,08,big)
+(30,38,E0,0D,big)(40,38,E6,0D,big)(50,38,E8,0D,big)(60,38,EA,0D,big)(70,38,EC,0D,big)(80,38,EE,0D,big)(90,38,A4,0C,big)(A0,38,A6,0C,big)(B0,38,A8,0C,big)(C0,38,AC,08,big)
+(30,48,E6,0C,big)(40,48,E6,0C,big)(50,48,E6,0C,big)(60,48,E6,0C,big)(70,48,E6,0C,big)(80,48,E6,0C,big)(90,48,E6,0C,big)(A0,48,E6,0C,big)(B0,48,E8,0C,big)(C0,48,EA,08,big)
+// Behind the fridge
+(50,08,8C,08,big)(80,08,8E,08,big)
+(50,18,AC,08,big)(80,18,8E,08,big)
+(80,28,8E,08,big)
+(80,38,8E,08,big)
+[/sprite]
+Found a missing page from Uncle Broadsword's diary!
+[wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+
+/////////////
+// Scene 3 //
 /////////////
 
 [music=CC]
@@ -23,6 +99,7 @@ Found a missing page from Uncle Broadsword's diary!
 (30,38,00,0F,big)(40,38,00,0F,big)(50,38,42,0F,big)(60,38,44,0F,big)(70,38,46,0F,big)(80,38,48,0F,big)(90,38,4A,0F,big)(A0,38,4C,0F,big)(B0,38,00,0F,big)(C0,38,00,0F,big)
 (30,48,00,0F,big)(40,48,00,0F,big)(50,48,62,0F,big)(60,48,64,0F,big)(70,48,66,0F,big)(80,48,68,0F,big)(90,48,6A,0F,big)(A0,48,6C,0F,big)(B0,48,00,0F,big)(C0,48,00,0F,big)
 [/sprite]
+[font color=2]
 [topic]Log S[/topic]
 Close two eyes and keep one eye open?
 [wait=30]
