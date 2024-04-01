@@ -399,6 +399,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1982	0	Print the room/author names for sublevel 154.
 1983	0	Print the room/author names for sublevel 154.
 19ff	0	Erase the room/author names.
+1a8f	0	Fade out the music.
 1b90	0	Acts as 25 if a specific switch is active.
 1b91	0	Acts as 25 if a specific switch isn't active.
 1b92	0	Displays level message 1.

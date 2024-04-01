@@ -190,6 +190,7 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 1982:20 final_castle_door_154.asm
 1983:20 final_castle_door_154.asm
 19FF:25 final_castle_door_erase.asm
+1A8F:25 fade_out_music.asm
 1B90:130 switch_act - OFF.asm
 1B91:130 switch_act.asm
 1B92:130 4season_msg.asm

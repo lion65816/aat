@@ -132,6 +132,8 @@ level:
 0CF	SPECIAL.asm
 0D0	jumpers_end.asm
 0D1	MWIVJS1.asm
+0D4	SPECIAL_NoStatus_HorzWrap.asm
+0D5	SPECIAL.asm
 0DB	NoStatus_DisableLR.asm
 0DC	trivia_win32.asm
 0DD	MinStatus.asm
