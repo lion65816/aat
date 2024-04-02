@@ -1,0 +1,217 @@
+#define KEY 1	;<- THIS VALUE IS EDITABLE
+
+;;; KEY can be 2 possible values:
+;;; 1 - the way I intended the remix to be
+;;; 0 - the pitch used in the original song
+
+#amk 2
+#spc
+{
+#game "Holy Order Sol"
+#title "Madness Fortress"
+#length "2:07"
+#comment "Remix:Holy Order Sol|MML:Wakana"
+}
+#instruments
+{
+@1	$FA$E1$00$03$00	;@30 strings
+@8	$9F$80$00$1E$00 ;@31 bass
+@4	$98$8F$00$03$00 ;@32 main
+
+#if KEY == 1
+	@21	$FF$E0$00$05$00 ;@33 bum
+	@10	$FF$E0$00$05$00 ;@34 pem
+#endif
+
+#if KEY == 0
+	@21	$FF$E0$00$05$80 ;@33 bum
+	@10	$FF$E0$00$05$80 ;@34 pem
+#endif
+
+n1c	$FF$F0$00$00$00 ;@35 cym
+@6	$9F$2C$00$03$00 ;@36 piano
+@2	$8F$29$00$03$08 ;@37 bell?
+
+#if KEY == 1
+	@23	$FF$F0$00$0A$00 ;@38 ts
+#endif
+
+#if KEY == 0
+	@23	$FF$F0$00$0A$80 ;@38 ts
+#endif
+
+@13	$F6$E9$00$03$00 ;@39 warm pads
+@9	$FF$F2$00$02$AD	;@40 end piano
+}
+
+"bum= @33 v200 "
+"pem= @34 v150 "
+"cym= @35 v70 "
+"ts= @38 v150 "
+
+#if KEY == 1
+	$e4$01
+#endif
+
+$f4$02
+$ef$00$28$28
+$f1$08$C0$01
+
+#0 w220 t56
+
+;string
+@30 v130 y9 o4
+(001)[f1f1c+1<a+2>c2]2
+/$e3$01$38
+@30 v130 $e5$00$00$00
+[f1f1c+1<a+2>c2
+f1f1c+1c2e2]3
+
+@39 v160 $e5$00$0F$39 (001)2
+
+
+
+#1
+
+;string
+@30 v130 y10 o4
+(100)[c1c1<a+1g2g2>]2
+/
+@30 v130 $e5$00$00$00
+
+[c1c1<a+1g2g2 >c1c1<a+1g+2>c2]3
+
+@39 v160 $e5$00$0E$34  (100)2
+
+[r2]255
+
+#2
+
+;string
+@30 v130 y11 o3
+(200)[g+1g+1f1d2e2]2
+/
+@30 v130 $e5$00$00$00
+
+[g+1g+1f1 d2e2 g+1g+1f1 d+2g2]3
+
+@39 v160 $e5$00$0C$30  (200)2
+
+
+[r2]255
+
+#3
+;BASS
+@31 v220 o2 y10 l16
+[ [[c8.fc8ff]]4 <[[a+8.>c+<a+8>c+c+]]2 < g8.a+g8a+a+>c8.<g>c8<gg]2
+$f4$03 / $f4$03 @31 v220
+>
+[ [[c8.fc8ff]]4 <[[a+8.>c+<a+8>c+c+]]2 < g8.a+g8a+a+>c8.<g>c8<gg>
+  [[c8.fc8ff]]4 <[[a+8.>c+<a+8>c+c+]]2 < g8.a+g8a+a+>e8.ce8ce ]3
+$f4$03
+cym c1^1^1^1 c1^1^1 $ed$71$e0 c1
+
+[r2]255
+
+#4
+;MAIN
+@32 v140 o4 $DE$18$0C$40 $f4$03 y9
+[f1f1c+1<a+2>c2]2
+/
+[cym o3 y10 c4 @32
+v140 o5 y11
+d+4 c4<g4g+4.. $ed$7f$f5 ^16 $f4$09
+>c4 <g8g+8 a+4.. $ed$7f$f5 ^8. $f4$09 > v130
+a+8>c8<a+8 g+2 g2]2
+
+cym o3 y10 c4
+@32 v140 o4 y11
+f4>c4f4c+2c2
+v130 a+4{g+8g+8g+8}a+4{g+8g+8g+8}a+4{g+8g+8g+8}a+8>c+8c8. $ed$7f$f5 ^16 $f4$09
+cym o3 y10 c4
+v140 o4 y11
+@32 f4g+4>c4<a+2g+2>
+v130
+g4{f8f8f8}g4{f8f8f8}g4{g8g+8 q3f f8 q7f}g4.. $ed$7f$f5 ^16 $f4$09
+
+cym o3 y10 c8.
+y8 @36 v150 < $fa$02$0c ;;PIANO PART
+>>(400)[{d+32f32g32}g+4.g8f8d+8f8 q77 <f8> q7f c2.]
+(401)[c+8d+8f8 q77 <f8 q7c a+8 q7f >f8c+8f8g4. {c+32f32g32}g+8. g8f8d+8]
+
+f8.  (400)
+(402)[d+8f8g4. g8g+8a+8f2g2]
+
+o2 $fa$02$00 l8 v150 @40
+[[ [g+>f>cg+>f<g+c<f]2
+<f>c+a+>f>c+<f<a+c+ <g>da+>g<<g>e>cg ]]2
+
+
+[r2]255
+
+#5
+;MAIN
+$f4$03
+[
+cym c1r1
+@32 $ed$7a$ec v100 y11 o5 $DE$18$0B$48
+c+1<a+2>c2]2
+/ $f4$03
+o4 y10 $DF l16
+[pem c8.c c4 c q7c c q77 c q7c c q7f c8 c q77 c q7f
+c8.cc8c8 c q7c c q77 c q7c c q7f c q7c c q7a c q77 c q7f]12
+
+@40 v150 o3 l8 y8 $f4$03 r16
+(500)[cg+>f>cc<f<g+<c]2
+(501)[a+>f>c+a+a+c+<f<a+] (502)[a+>g>da+<cg>e>c]
+(500)2
+(501) $e3$F0$10 (502)
+
+[r2]255
+
+#6
+;hard perc
+o4 l16
+bum [c4]8 pemc4 bumc4c4c4 pemc q7c c q7a c q78 c q7f c4 c q7c c q7a c q77 c q7f c q7c c q7a c q77 c
+q7f pemc4 bum[c4]13 pem $e8$50$30 [{c16}]6 $e8$30$A0 *6
+/
+$f4$03
+@36 v110 o5 l8 y8
+[f<f>d+<c>c<fgfcfg+f>c<fcg+a+c+<a+f>a+c+<a+f>g+c<g+>cgecg]2
+[fcf<g+>f>c<fcf>c+<fc+fcf>c<a+c+<a+>c+a+c+<a+f>a+<a+>g+>c+c<a+g+e]2
+
+r1r1 y10
+(401) f1^1 (402)
+
+[pem r1]7 $f4$03 v50 $e8$70$96 [{c16}]99
+
+[r2]255
+
+#7
+;bell
+@37 o4 v150 $f4$03
+(700)[
+[[
+$DC$80$13 f4 
+$DC$80$01 ^4
+$DC$80$13 ^4
+$DC$80$01 ^4]]3
+
+$DC$80$13 f4
+$DC$80$01 ^4
+
+$DC$80$13 e4
+$DC$80$01 ^4
+]2
+/
+[
+[[@32 v115 o4 y10 r2]]5
+r8 a+8>c8<a+8g+2g2 ]2
+r1r1 a+4{g+8g+8g+8}a+4{g+8g+8g+8}a+4{g+8g+8g+8}a+8>c+8c8.r16
+r1r1 <g4{f8f8f8}g4{f8f8f8}g4{g8g+8 q3f f8 q7f}g4..r16
+
+@37 v150
+(700)4
+
+[r2]255
+

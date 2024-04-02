@@ -293,6 +293,7 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 4509:25 Song10.asm
 450A:25 Song11.asm
 450B:25 Song12.asm
+450C:25 Song13.asm
 46FF:100 PassableLedgeSFX.asm
 46D0:130 Y32x32switch_UL.asm
 46D1:130 Y32x32switch_UR.asm

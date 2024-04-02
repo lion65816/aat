@@ -502,6 +502,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 4509	0	Popful Mail (SNES) - Destiny
 450a	0	Break the Sabbath.txt
 450b	0	La-Mulana - Fearless Challenger
+450c	0	Super Mario World - Madness Fortress (Remix)
 46d0	0	The top-left part of 32x32 switch
 46d1	0	The top-right part of 32x32 switch
 46d4	0	The top-left part of 32x32 switch
