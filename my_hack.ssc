@@ -18,6 +18,10 @@
 0B 0022 0,0,40F 0,-16,40E -8,0,410
 0D 0020 This sprite will pick up block 12E or any block set to act like 12E (by default)
 0D 0022 0,0,C7
+12 0020 A dry bones that throws bones and follows Mario, but will walk off ledge edges. He'll fall apart if Mario jumps on him, but will reassemble a few seconds later.
+12 0022 0,1,207 0,-11,206 -8,-15,36
+12 0030 A dry bones that will stay on ledges, but doesn't throw any bones unless the level you entered from the overworld is level 10D. He'll fall apart if Mario jumps on him, but will reassemble a few seconds later.
+12 0032 0,1,46 -8,-14,36
 14 0020 Main sprite that loads the game loop for VWF Cutscene Tool.
 
 14 0022 0,0,*Game\nloop\nsprite*
