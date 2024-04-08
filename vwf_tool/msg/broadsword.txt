@@ -296,4 +296,4 @@ We'll keep our eyes peeled.[wait=30] Later, Unc!
 [sprite=erase]
 [wait=30]
 
-[end=03]
+[end=goal]
