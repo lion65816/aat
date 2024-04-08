@@ -78,6 +78,7 @@ patches
 	patch\patch\overworld_map_names.asm
 	patch\patch\save_everything.asm
 	patch\patch\revealspeed.asm
+	patch\patch\custom_intro_march.asm
 ]
 -- patch\patch\blockmask.asm
 -- patch\patch\BetterYoshiInteraction.asm
