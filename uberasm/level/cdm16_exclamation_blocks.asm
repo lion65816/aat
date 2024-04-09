@@ -17,7 +17,7 @@
 ; !Regular: Flags set when corresponding switches are pressed and clear when not
 ; !Inverted: Flags clear when corresponding switches are pressed and set when not
 ; !Both: Lower four flags contain the bits for the pressed switches and upper four flags for the unpressed ones
-!SwitchFlags = !Both
+!SwitchFlags = !Regular
 
 ; The conditional direct Map16 flags to affect. Each switch reserves one flag in the order
 ; green (+0), yellow (+1), blue (+2) and red (+3).
@@ -26,6 +26,7 @@
 ; Note that for internal limitations, you can only enter multiples of 4 except if !SwitchFlags
 ; is set to !Both in which you need to use a multiple of eight instead.
 !CDM16Flags = $10
+!CDM16Flags2 = $20
 
 
 ; Internal defines, do not change!
@@ -36,6 +37,8 @@
 
 !CDM16Ram #= $7FC060+(!CDM16Flags>>3)
 !CDM16Upper #= !CDM16Flags&$4
+!CDM16Ram2 #= $7FC060+(!CDM16Flags>>3)
+!CDM16Upper2 #= !CDM16Flags2&$4
 
 if !SwitchFlags == !Both && !CDM16Flags&7 > 0
 	warn "\!CDM16Flag is not divisible by 8, rounding down to nearest multiple of 8."
@@ -85,4 +88,39 @@ else
 	endif
 endif
 	STA !CDM16Ram
+	
+	STZ $00
+	LDX #$03
+-	LDA $0DC3|!addr,x
+	LSR
+	ROL $00
+	DEX
+	BPL -
+if !SwitchFlags == !Both
+	LDA $00
+	ASL #4
+	ORA $00
+	EOR #$F0
+	STA !CDM16Ram2
+else
+	if !CDM16Upper2
+		LDA $00
+		ASL #4
+		STA $00
+		LDA !CDM16Ram2
+		AND #$0F
+		ORA $00
+		if !SwitchFlags == !Inverted
+			EOR #$F0
+		endif
+	else
+		LDA !CDM16Ram2
+		AND #$F0
+		ORA $00
+		if !SwitchFlags == !Inverted
+			EOR #$0F
+		endif
+	endif
+endif
+	STA !CDM16Ram2
 RTL

@@ -25,6 +25,7 @@ save:
     dl $40A660            : dw 768   ; "Individual Dragon Coins Save" RAM.
     dl $400EF8            : dw $0001 ; catnip rescued flag
     dl $401F2D            : dw $0001 ; bonus music
+    dl $400DC3            : dw $0004 ; Switch Palace Beaten Flag
 
 .not_game_over:
     dl !ram_death_counter : dw 5
@@ -71,6 +72,7 @@ sram_defaults:
     rep 384 : dw $00C0 ; Default values for "Individual Dragon Coins Save" RAM.
     db $00
     db $00
+    db $00,$00,$00,$00
 
 .not_game_over:
     ; Initial death counter value (don't edit this!).

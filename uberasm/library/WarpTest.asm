@@ -41,12 +41,26 @@ DestinationSubmap:
 !OptionsCounter = !FreeRAM+4  ; 1 byte
 !MenuEntries    = !FreeRAM+5  ; !NumOptions+1 bytes
 
+; taken from https://www.smwcentral.net/?p=section&a=details&id=16897
+
+!Event = $07 ; <-- CHANGE THIS to the event number you want
+
 init:
     lda #$00
     sta !Flag
     rtl
 
 main:
+; these are just calculations, don't touch them
+!EventIndex = (!Event>>3)
+!EventBit = 1<<(7-(!Event&7))
+!EventRAM = $1F02+!EventIndex|!addr
+
+LDA !EventRAM
+AND #!EventBit
+BNE +
+RTL
++
 	PHB	;library calls do not actually set Data Bank
 	PHK
 	PLB

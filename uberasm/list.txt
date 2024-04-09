@@ -56,6 +56,7 @@ level:
 053	PressuredWater.asm
 054	PressuredWater.asm
 055	PressuredWater.asm
+057  057.asm
 05E	crithania_autoscroll.asm
 060	DisableLR_freescrollbabey.asm
 066	Gradient66.asm
@@ -318,7 +319,7 @@ level:
 1D3	BabaBlocks.asm
 1D4	BabaBlocks.asm
 1D5	BabaBlocks.asm
-1D7	BabaBlocks.asm
+1D7	BabaBlocks1D7.asm
 1D8	BabaBlocks.asm
 1DA	BabaBlocks.asm
 1DC	RemoveYoshi.asm
