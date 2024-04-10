@@ -12,7 +12,23 @@ init:
 	RTS
 
 main:
-	JSL mario_exgfx_main
+	;Reset Lives after Continuing
+	LDA $13C9|!addr
+	BEQ +++
+	LDA $0DB4|!addr
+	BNE +
+	LDA #$0E
+	STA $0DB4|!addr
++	LDA $0DB5|!addr
+	BNE ++
+	LDA #$0E
+	STA $0DB5|!addr
+++	LDA $0DBE|!addr
+	;BNE +++
+	LDA #$0E
+	STA $0DBE|!addr	
+
++++	JSL mario_exgfx_main
 
 	; Handle custom palette for intro stage.
 	LDA !CustomPalette
