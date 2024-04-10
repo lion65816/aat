@@ -8,6 +8,8 @@ main:
 	;...or codes here before the RTL.
 ;	LDA #$7F			;\ Make the player invincible.
 ;	STA $1497|!addr		;/ (Testing purposes.)
+
+	; Wiggler Interaction Fix
 	LDX #!sprite_slots-1
 .loop
 	LDY !sprite_misc_154c,x
@@ -20,6 +22,7 @@ main:
 	TYA
 	STA !sprite_misc_154c,x
 	DEX : BPL .loop
+
 	RTL
 
 nmi:

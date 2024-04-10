@@ -29,10 +29,18 @@ overworld_map_names:
 	; Determine which row of logos to load (relevant for the main map).
 	STZ $03				;\ By default, the offset is zero (first row).
 	STZ $04				;/
-	LDA $13D9|!addr		;\ Don't draw the logo while star warping or switching between submaps.
-	BEQ .load_blank		;|
-	CMP #$0A			;|
+	LDA $13D9|!addr		;\ If the overworld process is zero, check for special cases first.
+	BEQ .other_checks	;/
+	CMP #$0A			;\ Don't draw the logo while switching between submaps.
 	BEQ .load_blank		;/
+	BRA +
+.other_checks
+	LDA $13C9|!addr		;\ Draw the logo while the game over "Continue/End" menu is onscreen.
+	BNE +				;/ Note: The palette will appear darkened (to be fixed).
+	LDA $1439|!addr		;\ Draw the logo while the Switch Palace blocks are being spawned on the overworld.
+	BNE +				;/ Note: This address is not cleared afterwards (to be fixed).
+	BRA .load_blank		;> Otherwise, don't draw the logo (i.e., the player is star warping).
++
 	LDA !FreeRAM		;> Base the offset on the music currently playing on the overworld.
 	CMP #$C0
 	BNE +
