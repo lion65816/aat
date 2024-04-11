@@ -46,6 +46,14 @@ if !SwitchFlags > 2
 	error "Error, \!CDM16Flag is an invalid value!"
 endif
 
+load:
+	STZ $1A
+	STZ $1462|!addr
+	LDA $95
+	STA $1B
+	STA $1463|!addr
+	RTL
+	
 init:
     stz $1411|!addr
 rtl
@@ -87,23 +95,22 @@ endif
 	STA !CDM16Ram
 	
 	LDA $0DC3|!addr
-	CMP #$00
 	BEQ +
 	LDA #$01 : STA $7FC072
 +
 	LDA $0DC4|!addr
-	CMP #$00
 	BEQ +
 	LDA #$01 : STA $7FC073
 +
 	LDA $0DC5|!addr
-	CMP #$00
 	BEQ +
 	LDA #$01 : STA $7FC074
 +
 	LDA $0DC6|!addr
-	CMP #$00
 	BEQ +
 	LDA #$01 : STA $7FC075
 +
-	RTL
+	LDA $95		
+	BNE +		
+	stz $1412|!addr
++	RTL

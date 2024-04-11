@@ -298,6 +298,7 @@ level:
 1B7	redswitch.asm
 1B8	redswitch.asm
 1B9	redswitch.asm
+1BA  1BA.asm
 1BB	ashspawn_uberASM_DisableSideExit.asm
 1BC	ashspawn_uberASM_DisableSideExit.asm
 1BD	ashspawn_uberASM_DisableSideExit.asm

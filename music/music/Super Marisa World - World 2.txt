@@ -27,11 +27,11 @@ $F1$05$20$00
 (!800)[$ED$3F$6D]
 (!801)[$ED$7F$F6]
 
-#0 w237 t66
+#0 w255 t66
 $FA $03 $70
 @3 v255 o4
 $ED$5C$4F
-$DB$0B
+$DB$0A
 
 l8 [gab]3>c+ v241 d+e $ED$5C$2F f+4.
 $ED$5C$4F v255 <f+[gab]2ga4> $ED$5C$2F v241 a4f+4< v255
@@ -41,7 +41,7 @@ dg+a2.c+g/(1)[g+2.<b>ef+4d+2.r2.dg+a2.c+gg+2.<b>e]
 f+4bf+b2.r2
 dg+a2.c+g(1)d+2.r4.
 
-@2 v127 <g+>e4a l16 f+8 ^4 $DD$00$3C c+r8 ;f+8 ^4 $DD$00$3C$A5 r8 OR f+8 ^4 $DD$00$3C c+16r
+@2 v127 <g+>d+4 $DD$00$0C e a l16 f+8 ^4 $DD$00$3C c+r8
 
 @3 v240 $ED$5C$4F l8 bf+4>d+<b4bf+bg+4>ed+<b4<a+16b16>dd+f+dd+g+2c+<b>ef+c+<bf+4.
 <f+16b16>>d+16b16>d+4d+c+<b16a+16ag+bg+e<a+16b16>gf+d+16<b16f+4>bg+>d+4<c+16d16c+16d16c+4.
@@ -55,7 +55,7 @@ c+4c+<f+4f+f+4f+4>c+4c+<f+f+4>c+ v234 <f+4>c+f+4c+4f+c+f+4.r v179 c+< v214 b v25
 
 #1
 $FA $03 $5B
-@0 v048 o5
+@0 v052 o5
 $ED$0D$EB
 $DB$0B
 $DE$0C$C0$24
@@ -109,11 +109,11 @@ d+4r4.<b4rb4r2..g4.f+12e24d4.g12g+24a4ra12b24a4r4 f+bf+4<b>>f+4r[f+r]2f+16r16f+4
 #3
 $FA $03 $50
 @16 v113 o4
-$DB$08
+$DB$0C
 (!800,-1)
 (!801,3)
 
-[gab]3d+ef+f+^4r[gab]2ga4>[c+4]2 v107 r<ba+ara4r4./r4b4r4.c+4<b4> v115 f+4rf+4a4a< v130 a>c+f+<a4 v90 >d4r v107
+[gab]3d+ef+f+^4r[gab]2ga4>[c+4]2 v107 r<b $DB$0B a+ $DB$0A ara4r4./r4b4r4.c+4<b4> v115 f+4rf+4a4a< v130 a>c+f+<a4 v90 >d4r v107
 a4rf+4r4b4r4.c+4r^2f+4r2.>dc+<b4af+af+g+ar4<g+r2..>f+4< v141 b16>c+16dc+<b> v107 a4rf+4aera4ra4r^2c+r4.<b>c+d+4r2..e>c+4f+ l16 d+8 ^4 $DD$00$3C$AE <r8
 
 l8 [r1]2f+rgrg+4r1^4>d+<b4>f+d+4r4d+<b4>g+e4r4d+r4.<g+4r1^4 v113 f+4f+r2<b>f+4f+f+4rd+rdrgr4g4r^4^1f+r4f+4r^2d+f+4f16f+16grf+re4r4arg+gf+fed+4f+4r^2
@@ -121,16 +121,16 @@ d+4d+4<b>f+4e<b4>gd16r16dg4rc+4ar16e16e>c+4<b4rd+ef+4d+f+4d+d+f+bf+bad4.r<a4.r>e
 
 #4
 $FA $03 $4A
-@8 v181 o2
+@8 v186 o2
 $ED$2F$26
-$DB$0C
+$DB$0B
 [r1]3r2.ed+d4raa4r/dc+4rg+g+4rc+<b4r>f+4$DD$18$3C$8E ^8 r<ba4r>ee4r<a>
 d4rg+a4rdc+4rgg+4rc+<b4>rff+4r<b>c+4rg+
 
 @14 v209
 f+r<f+r>
 
-@8 v181
+@8 v186
 d4ra4.rdc+4rg+4.rc+<b4>rff+4r<ba4>ree.$DD$0C$24$8D ^16<a4>d4raa4rc+c+4rg+g+4rc+<b4>rgf+4r<b>c+4rg+f+.$DD$0C$24$8F ^16<f+4
 v207 b4r>f+4r<f+4g+4r>d+<g+4g4f+4rf+16g16g+4rg+>c+4rf+4r<f+4b4r>f+4r<a+ag+4r>d+<g+4g4f+4b4g+4rg+>c+4r<f+4r4b
 b4r>f+4r<brb4r>f+4r<f+rg4r>d4r<gra4r>e4r<aa+b4r>f+rf+4<b4r4>f+4r<b4g4r>dd4r<ga4r>ee4r<ab>c+d+f+4r<brb4r>f+16g16f+4<f+r
@@ -139,30 +139,30 @@ g4r>d4r<gra4r>e4r<aa+b4r>f+rf+.$DD$0C$24$8F ^16<b4r4>f+<b4a4g4rb12>c+24d4r<ga4r>
 
 #5
 $FA $03 $52
-@21 o3 v153
-$DB$0A
-l8 br [@23 >f<@21br]4 @29 v146 >c+4< v153 @21 br [@23 >f<@21br]2 @23 >f @29 v146 [c+4]2 [c+16]3 c+r16< v153
-@21 br @23 >f< @21 bbr @23 >f< / @21 b [br @23 >f< @21 b]3 b @10 >f+ @23 f< @21 b @10 >f+r @23 f< @21 b [br @23 >f< @21 b]6
-b @10 >f+ @23 f< @21 b @10 >f+r @23 f @10 f+r @29 v146 [c+16]2c+ < [a16]2a > v153 @23 rf< @21 b [br @23 >f< @21 b]4 [b]5 r @23 >f< @21 b[br]2 [br @23 >f< @21 b]5
-rb @23 >f< @21 [b]6 @29 v146 >c+ <a16ar16
-@30 v139 a+2 ;cymbal
->@10 v153 f @12 < [e16]2 [c+16]2 < [a+16]2>
-@30 v139 a+2 ;cymbal
->@10 v153 f @12 << [a+16]2 [g16]2 [e16]2 > [@21 br @23 >fr<]2 @21 b @12 < [e16]2e>[e16]2e<[a+16]2a+[g16]2>
-@30 v139 a+2 ;cymbal
->@10 v153 f @12 < [a+16]2 [g16]2 [e16]2
-@30 v139 a+2 ;cymbal
->@10 v153 f @12 << [e16]2 [c+16]2 < [a+16]2 >> @21 br @23 >fr4.fr
-@30 v139 <a+4.> ;cymbal
-@29 v146 [c+]3 [c+16]4< v162
-[@21 br @29 v146 >c+< v162 @21 bbr @29 v146 >c+r< v162]3 @21 br @29 v146 >c+< v162 @21 bb @29 v146 >c+<g16gr16 v162
-@21 br @29 v146 >c+< v162 @21 bbb @29 v146 >c+< v162 @21 br4 @29 v146 >c+< v162 @21 bbr @29 v146 >c+r16<a16 v162
-@21 br @29 v146 >c+< v162 @21 bbr @29 v146 >c+r< v162 @21 br @29 v146 >c+< v162 @21 bb @29 v146 >[c+16]2c+< v162
-@21 [b16]2br @29 v146 >c+r16< v162 @21 b16bb @29 v146 >c+< v162 @21 bbr16b16 @29 v146 >c+< v162 @21 bbr16b16 @29 v146 >c+r< v162
-@21 br @29 v146 >c+< v162 @21 [b]3 @29 v146 >c+r16<a16 v162 @21 bb @29 v146 >c+< v162 @21 [b16]2[b]2 @29 v146 >c+< v162 @21 b16 @29 v146 >c+16< v162
-@21 br @29 v146 >c+r16< v162 @21 b16[b]2 @29 v146 >c+< v162 @21 brb @29 v146 >c+16< v162 @21 b16[b]2r16b16 @29 v146 >c+< v162 @21 b16br8.
-[@29 v146 >c+< v162 @21 [[b]]2r]3 v153 [@23 >f< @21 [[b]]2r @23 >f< @21 br4]3 [@23 >f< @21 br4]2 @29 v146 >c+r< v153
-@21 br @23 >f< @21 bbr @23 >f<
+@21 o3 v163
+$DB$0B
+l8 br [@23 $DB$08 >f< @21 $DB$0B br]4 @29 $DB$09 v156 >c+4< v163 @21 $DB$0B br [@23 $DB$08 >f< @21 $DB$0B br]2 @23 $DB$08 >f @29 $DB$09 v156 [c+4]2 [c+16]3 c+r16< v163
+@21 $DB$0B br @23 $DB$08 >f< @21 $DB$0B bbr @23 $DB$08 >f< / @21 $DB$0B b [br @23 $DB$08 >f< @21 $DB$0B b]3 b @10 $DB$0C >f+ @23 $DB$08 f< @21 $DB$0B b @10 $DB$0C >f+r @23 $DB$08 f< @21 $DB$0B b [br @23 $DB$08 >f< @21 $DB$0B b]6
+b @10 $DB$0C >f+ @23 $DB$08 f< @21 $DB$0B b @10 $DB$0C >f+r @23 $DB$08 f @10 $DB$0C f+r @29 $DB$09 v156 [c+16]2c+ < [a16]2a > v163 @23 $DB$08 rf< @21 $DB$0B b [br @23 $DB$08 >f< @21 $DB$0B b]4 [b]5 r @23 $DB$08 >f< @21 $DB$0B b[br]2 [br @23 $DB$08 >f< @21 $DB$0B b]5
+rb @23 $DB$08 >f< @21 $DB$0B [b]6 @29 $DB$09 v156 >c+ <a16ar16
+@30 v149 a+2 ;cymbal
+>@10 $DB$0C v163 f @12 < [e16]2 [c+16]2 < [a+16]2>
+@30 v149 a+2 ;cymbal
+>@10 v163 f @12 $DB$08 << [a+16]2 [g16]2 [e16]2 > [@21 $DB$0B br @23 $DB$08 >fr<]2 @21 $DB$0B b @12 $DB$0C < [e16]2e> $DB$08 [e16]2e< $DB$0C [a+16]2a+ $DB$08 [g16]2>
+@30 v149 a+2 ;cymbal
+>@10 $DB$0C v163 f @12 < [a+16]2 [g16]2 [e16]2
+@30 v149 a+2 ;cymbal
+>@10 v163 f @12 $DB$08 << [e16]2 [c+16]2 < [a+16]2 >> @21 $DB$0B br @23 $DB$08 >fr4.fr
+@30 $DB$08 v149 <a+4.> ;cymbal
+@29 $DB$09 v156 [c+]3 [c+16]4< v172
+[@21 $DB$0B br @29 $DB$09 v156 >c+< v172 @21 $DB$0B bbr @29 $DB$09 v156 >c+r< v172]3 @21 $DB$0B br @29 $DB$09 v156 >c+< v172 @21 $DB$0B bb @29 $DB$09 v156 >c+< $DB$08 f16fr16 v172
+@21 $DB$0B br @29 $DB$09 v156 >c+< v172 @21 $DB$0B bbb @29 $DB$09 v156 >c+< v172 @21 $DB$0B br4 @29 $DB$09 v156 >c+< v172 @21 $DB$0B bbr @29 $DB$09 v156 >c+r16<a16 v172
+@21 $DB$0B br @29 $DB$09 v156 >c+< v172 @21 $DB$0B bbr @29 $DB$09 v156 >c+r< v172 @21 $DB$0B br @29 $DB$09 v156 >c+< v172 @21 $DB$0B bb @29 $DB$09 v156 >[c+16]2c+< v172
+@21 $DB$0B [b16]2br @29 $DB$09 v156 >c+r16< v172 @21 $DB$0B b16bb @29 $DB$09 v156 >c+< v172 @21 $DB$0B bbr16b16 @29 $DB$09 v156 >c+< v172 @21 $DB$0B bbr16b16 @29 $DB$09 v156 >c+r< v172
+@21 $DB$0B br @29 $DB$09 v156 >c+< v172 @21 $DB$0B [b]3 @29 $DB$09 v156 >c+r16<a16 v172 @21 $DB$0B bb @29 $DB$09 v156 >c+< v172 @21 $DB$0B [b16]2[b]2 @29 $DB$09 v156 >c+< v172 @21 $DB$0B b16 @29 $DB$09 v156 >c+16< v172
+@21 $DB$0B br @29 $DB$09 v156 >c+r16< v172 @21 $DB$0B b16[b]2 @29 $DB$09 v156 >c+< v172 @21 $DB$0B brb @29 $DB$09 v156 >c+16< v172 @21 $DB$0B b16[b]2r16b16 @29 $DB$09 v156 >c+< v172 @21 $DB$0B b16br8.
+[@29 $DB$09 v156 >c+< v172 @21 $DB$0B [[b]]2r]3 v163 [@23 $DB$08 >f< @21 $DB$0B [[b]]2r @23 $DB$08 >f< @21 $DB$0B br4]3 [@23 $DB$08 >f< @21 $DB$0B br4]2 @29 $DB$09 v156 >c+r< v163
+@21 $DB$0B br @23 $DB$08 >f< @21 $DB$0B bbr @23 $DB$08 >f<
 
 #6
 $FA $03 $5B

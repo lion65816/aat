@@ -1,7 +1,7 @@
 	
 main:
 	LDA $0DC3|!addr
-	BEQ .ret
+	BNE .ret
 	INC $1F2E|!addr
 	LDA #$01
 	STA $0DC3|!addr

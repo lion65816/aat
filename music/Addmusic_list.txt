@@ -153,7 +153,7 @@ Locals:
 96  Ballet Of The Ghost Girl's Ship.txt
 97  Calamari Inkantation.txt
 98  Tomboyish Girl in Love.txt
-99  Super Marisa World Boss.txt
+99  itazura.txt
 9A  HeatInsideTheFire.txt
 9B  amnf-v04.txt
 9C  FactoryAmb.txt
@@ -210,3 +210,4 @@ CF  Invincible (Full Version).txt
 D0  SB2BGM5.txt
 D1  plok-boss.txt
 D2  madnessU.txt
+D3  Wildlands.txt

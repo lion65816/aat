@@ -1,0 +1,320 @@
+#amk 2
+
+#SPC
+{
+#title "Staking Your Life On A Prank"
+#game "Y. D. ~ Touhou Sangetsusei"
+#author "ZUN"
+#comment "Steak? But I'm vegetarian!"
+}
+
+#samples
+{
+#default
+}
+
+#instruments
+{
+@6 $FC $F0 $00 $06 $00	;@30 ;@7 $FB $F0 $00 $06 $00	;@30
+@8 $FF $EF $00 $1E $00	;@31
+@1 $AE $D0 $00 $06 $00	;@32
+@4 $DC $D2 $00 $06 $00	;@33
+@4 $DC $EC $00 $06 $00	;@34
+@21 $FF $E0 $00 $04 $00	;@35
+n1e $FE $13 $00 $00 $00	;@36
+n1b $FE $10 $00 $00 $00	;@37
+@23 $FF $E0 $00 $04 $00	;@38
+@29 $AB $EA $00 $03 $7F	;@39
+@2 $FE $F0 $00 $03 $00	;@40
+@13 $FE $F2 $00 $06 $00 ;@9 $FF $E0 $00 $05 $5E	;@41
+@1 $EE $E9 $00 $06 $00	;@42
+@2 $FF $F0 $00 $03 $00	;@43
+}
+
+
+"M=@35 q7f"
+"J=@36 q73"
+"Cym=@37 q73"
+"K=@38 q77"
+"S=@39 q7e"
+"Q=@43 q78"
+"_=o6 c=6 $DD $00 $06 <<< c r=6 o4"
+
+"TrumpetVib=p8,6,24"
+"SawVib=p8,4,24"
+
+
+
+"V00=v000" "V01=v040" "V02=v050" "V03=v055" "V04=v060" "V05=v070" "V06=v075" "V07=v080" "V08=v085" "V09=v090" "V10=v095" "V11=v100" "V12=v105" "V13=v110" "V14=v113" "V15=v117" "V16=v120" "V17=v123" "V18=v127" "V19=v130" "V20=v133" "V21=v137" "V22=v140" "V23=v142" "V24=v145" "V25=v148" "V26=v150" "V27=v153" "V28=v155" "V29=v158" "V30=v160" "V31=v163" "V32=v167" "V33=v170" "V34=v172" "V35=v174" "V36=v176" "V37=v178" "V38=v180" "V39=v183" "V40=v185" "V41=v187" "V42=v190" "V43=v193" "V44=v195" "V45=v197" "V46=v200" "V47=v202" "V48=v204" "V49=v206" "V50=v208" "V51=v210" "V52=v212" "V53=v214" "V54=v216" "V55=v217" "V56=v220" "V57=v222" "V58=v223" "V59=v224" "V60=v226" "V61=v228" "V62=v230" "V63=v232" "V64=v234"
+
+"30vol=V32"
+"TrumpetVol=V18"
+"BassVol=V48"
+"SawVol=V40"
+"PianoVol=V28"
+
+#0 w180 t63 $F4 $02 /
+
+$EF $13 $20 $D0
+$F1 $09 $D0 $01
+
+@30 30vol o3 l8 y12 $DF
+[[ $FA $02 $00 (0)[eer>cr<bra+
+eee>c4<b4a+]
+$FA $02 $01 (0) ]]2
+
+$FA $02 $00
+
+@34 TrumpetVol l8 o4 y11 TrumpetVib
+(1)[cc r16.d32d+4f4g	;10
+ccr<a+4ga+>c	;11
+cc r16.d32d+4dc<g>c2^8. <b48a+48a48 a+>c]2
+
+@42 o4 SawVol SawVib
+(2)[cc rd+4f4g	;10
+ccr<a+4ga+>c	;11
+cc] r16.d32d+4dc<g>c2^8. <b48a+48a48 a+>c
+
+(2) (3)[rd+4dc<g>c2^16] <b48a+48a48 g+gf+
+
+
+@30 30vol o3 l8 y12 $DF
+[[ $FA $02 $01 (0)
+$FA $02 $02 (0) ]]2
+
+$FA $02 $01
+@34 TrumpetVol l8 o4 y11 TrumpetVib
+(1)2
+
+@42 o4 SawVol l8
+(1)
+(55)[cc r16.d32d+4f4g	;10
+ccr<a+4ga+>c	;11
+cc rd+4dc<g>c2^8] $FA $02 $00 <g8f+8f8	;49
+
+
+;[[r2]]255
+
+
+
+#1
+@30 30vol o2 l8 y8 $DF
+[[ $FA$02$00 (100)[bb>rererd+<
+bbb>e4e4d+]
+$FA$02$01 (100) ]]2
+
+$FA $02 $00
+@34 TrumpetVol o3 l8 y9 TrumpetVib
+(168)[g+g+ r16.b32>c4d4d+	;10
+<ggrf4d+d4	;11
+d+d+ r16.b32>c4<a+gd+d+2^8. d48c+48c48 gg]2	;13
+
+@42 o3 SawVol SawVib
+(202)[g+g+ r>c4d4d+	;10
+<ggrf4d+d4	;11
+d+d+] r16.b32>c4<a+gd+d+2^8. d48c+48c48 gg
+
+(202) r>c4<a+gd+d+2^16 d48c+48c48  d+dc+
+
+
+@30 30vol o2 l8 y8 $DF
+[[ $FA$02$01 (100)
+$FA$02$02 (100) ]]2
+
+$FA $02 $01
+@34 TrumpetVol o3 l8 y9 TrumpetVib
+(168)2
+@42 o3 SawVol SawVib l8
+(168)
+g+g+ r16.b32>c4d4d+	;10
+<ggrf4d+d4	;11
+d+d+ r>c4<a+gd+d+2^8
+$FA $02 $00 d+8d8c+8
+
+;[[r2]]255
+
+
+
+#2
+
+@31 BassVol o2 l8 y12
+[[ $FA $02 $00 (200)[eerf4e4d+]2	;2
+$FA $02 $01 (200)2 ]]2
+ 
+$FA $02 $00
+o2 l16
+(211)[g+8>cr<g+8>c<g+ d+8>c<g+ d+8>c8<	;10
+gr>cr< d+g>c8< gd+>c8< d+g>c8	;11
+<c8>cr< c8>c<g+< a+8r>ff8>y10dd+y12	;12
+<d+8>c<gd+g>cr< gd+>cr<d+8>c8]4	;13
+
+[[ $FA $02 $01 (200)2	;2
+$FA $02 $02 (200)2 ]]2
+
+$FA $02 $00
+[o1 l8 earaeaea	;34
+g+g+r l16 >c+c+c+rc+rc+rc+r	;35
+<e8ar e8arf+8rbb8r8	;36
+l12 c+g+c+ g+l16c+g+r=8 g+g+g+rg+rg+r]2	;37
+
+$FA $02 $01
+(211)2
+
+;[[r2]]255
+
+
+
+#3
+
+@31 BassVol o1 l8 y8
+[[ $FA $02 $00 (300)[bbr>c4<b4a+]2	;2
+$FA $02 $01 (300)2 ]]2
+
+$FA $02 $00
+o2 l16
+
+(311)[d+8g+r d+8g+d+ c8g+d+ c8g+8	;10
+crgr cd+g8 d+cg8 cd+g8	;11
+<g+8>g+r< g+8>g+d+< f8ra+a+8r8	;12
+>c8gd+ cd+gr d+cgr c8g8]4	;13
+
+
+[[ $FA $02 $01 (300)2	;2
+$FA $02 $02 (300)2 ]]2
+
+$FA $02 $00
+[o1 a8>c+8r8c+e<a8>c+e<a8>c+8	;34
+c+8c+8 c+<g+g+rg+>c+<g+rg+>c+<g+r	;35
+l16 a8>c+r< a8>c+e< b8r>f+f+8>d+e	;36
+<<l12 g+>c+<g+> c+l16<g+>c+r=8 c+c+c+rc+rc+r]2	;37
+
+$FA $02 $01 (311)2
+
+;[[r2]]255
+
+
+
+#4 V16 o3 @32 l8 $FA $02 $00
+(400)[eereeer4
+eeeee16e16er4]	;3
+$FA $02 $01 (400)
+$FA $02 $00
+
+(401)[@33 V16 o2 l2 TrumpetVib
+b>c<b>c cc+c4^8
+@34 V24 l8 c+fefg]	;9
+
+[[r2]]8
+@41 PianoVol $DF
+(1)
+[[r2]]8
+(2)(3)r4..
+
+ V16 o3 @32 l8
+$FA $02 $01 (400)
+$FA $02 $02 (400)
+$FA $02 $01 (401)
+
+$FA $02 $00 l16 o4
+@41 PianoVol (470)[ r2^8 ef+4b>	;34
+c+8c+8c+8e8 d+<bg+b> d+4<	;35
+g+f+g+b f+ef+b f+ed+e e32b32 l64 a+ag+g f+fed+ dc+c<b	;36
+l12 >c+<b>c+< g+bg+ f+ef+ g+8g+8]	;37
+$FA $02 $01 (1)
+$FA $02 $00 (470)
+
+$FA $02 $01
+(55)
+r=72
+
+;[[r2]]255
+
+
+
+#5
+V40 o4 l16
+Mc8c4Jc4c4c8	;2
+Mc8c4Jc4Jc4c8	;3
+Kcccc [[Mc8Jc8]]3
+Mc8c8 [[Mc8Jc8]]3
+
+(500)[@38q77c q76c q75c q74c]16
+
+(501)[@38q77c q76c y7Jcy10 @38q74c]64
+
+(500)32
+
+(500)32
+(501)32
+
+;[[r2]]255
+
+
+
+#6
+V40 o4 l16
+Cymc4. r2^8
+@37 c4. r4 Kccc4	;3
+Cym c4 Kc8 r2 Sc8	;4
+Cym c4. r4 Sc8c4
+
+(600)[Cymc4Sc8.Mc c4Sc4]3
+(601)[Cymc4Sc8.cc8c8c8c8]	;9
+
+
+[[Cymc4Sc4Mc4Sc8.Mc	;10
+c4Sc4Mc4Sc8.Mc	;11
+
+(666)[Cymc4Sc4Mc8.Scc8.Mc]	;12
+(667)[c4Sc4Mc4ScccMc] ]]4	;13
+
+(600)3
+Cymc4Sc8.Mcc8Sccc8c8	;29
+(600)3
+(601)
+
+Cymc4 Q_ r2^16 Mcc4^16 Q_r Mcc8.ccc8 Q_r	;35
+Cymc4 Q_ r4^16 Q_ r8. Mcc	;36
+Q_r4.. Mccc8 Q___Sc	;37
+
+Cymc8 Q_r8._r8._r8._Mc	;38
+Q_r_r8. _Mc8. Q_McQ___r	;39
+Cymc8 Q_r8._r8._r8. Mcc	;40
+Q_r4^16_r ScccQ_ScQ_r_	;41
+
+[[(666)
+Mc4Sc4Mc4Sc8.Mc
+(666)
+(667)]]2
+
+;[[r2]]255
+
+
+
+
+#7
+
+r1^1 $FA $02 $00
+V40 o4 l16
+Mc8c8r2.
+r2^8 Kccc4	;5
+
+$F4 $03 q7f
+V16 o3 @32 l8
+(400)
+$FA $02 $01 (400)
+
+$FA $02 $00
+(777)[@40 V13 o3
+$E5 $0C $10 $13 $DE $00 $02 $14
+r4 g+1c1g+2.>c1]4
+
+[[r2]]8
+V16 o3 @32 l8 $DF $E5 $00 $00 $00
+$FA $02 $01 (400)
+$FA $02 $02 (400)
+
+$FA $02 $01 (777)4
+
+;[[r2]]255
+

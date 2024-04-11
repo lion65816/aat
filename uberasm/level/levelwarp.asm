@@ -135,12 +135,12 @@ Add:
 ; Use capital letters only
 TableNames:
    db "PIEDMONT HILL   "
-   db "THE FISHMARKET  "
-   db "THE LOST WOODS  "
-   db "COSMIC HEAVEN   "
-   db "RESORTCITY BANFF"
-   db "NEGATIVE ZONE   "
-   db "ONE LAST THING  "
+   db "THE FISHMARKET  " ;Event 57
+   db "THE LOST WOODS  " ;Event 16
+   db "COSMIC HEAVEN   " ;Event 1F
+   db "RESORTCITY BANFF" ;Event 3C
+   db "NEGATIVE ZONE   " ;Event 61
+   db "ONE LAST THING  " ;Event 6B
    db "GO BACK         "
    
    

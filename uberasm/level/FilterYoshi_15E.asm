@@ -10,7 +10,7 @@ main:
 	LDA #$FF  ;Bit value
 	STA $7FC0FD
 	LDA $0DC4|!addr
-	BEQ .ret
+	BNE .ret
 	INC $1F2E|!addr
 	LDA #$01
 	STA $0DC4|!addr
