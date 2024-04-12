@@ -118,12 +118,12 @@ db $45,$45,$05,$05		; changed palette from B to A
 db $85,$85,$C5,$C5		; (YXPPCCCT: $x7 -> $x5)
 
 ; File select
-org $05B7F1|!bank ; demo a
-	db $7C,$30,$73,$31,$76,$31,$83,$30,$FC,$38,$71,$31,$FC,$38
-org $05B815|!bank ; demo b
-	db $7C,$30,$73,$31,$76,$31,$83,$30,$FC,$38,$2C,$31,$FC,$38
-org $05B839|!bank ; demo c
-	db $7C,$30,$73,$31,$76,$31,$83,$30,$FC,$38,$2D,$31,$FC,$38
+;org $05B7F1|!bank ; demo a
+;	db $7C,$30,$73,$31,$76,$31,$83,$30,$FC,$38,$71,$31,$FC,$38
+;org $05B815|!bank ; demo b
+;	db $7C,$30,$73,$31,$76,$31,$83,$30,$FC,$38,$2C,$31,$FC,$38
+;org $05B839|!bank ; demo c
+;	db $7C,$30,$73,$31,$76,$31,$83,$30,$FC,$38,$2D,$31,$FC,$38
 
 ; status bar rejiggering
 org $008C89|!bank
@@ -418,3 +418,30 @@ org $00D24E
 	LDA $7D
 	NOP
 	NOP
+; Allow re-entering any castle without L+R
+org $049199
+    NOP #6
+    
+; Activate Unused Yoshi Dust
+org $028BB4
+db $B9
+
+; Skip Player Select Menu
+ORG $009DFA
+	INC $0100
+	BRA +
+	
+ORG $009E0B
+	+
+	LDX.b #$00
+	
+ORG $05B872
+	db $FF
+
+; Change "Nintendo Presents" Timer
+org $0093C5
+    lda.b #$60
+    
+; Dino-Rhino Stuck Against Walls Fix
+org $039C6F
+    db $FF,$01
