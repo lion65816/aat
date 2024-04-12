@@ -625,9 +625,10 @@ def create(output_path):
             w += 1
             total_bin_data.extend(data)
         data_offsets.pop()
-        with open('vwf_data.bin', 'wb') as b:
+        filename = output_path[:output_path.rindex('.')] + '.bin'
+        with open(filename, 'wb') as b:
             b.write(bytes(total_bin_data))
-        ptr = 'BinPtr:\n\tincbin "vwf_data.bin"\nDataPtr:'
+        ptr = 'BinPtr:\n\tincbin "' + filename + '"\nDataPtr:'
         for i in range(len(num_used.keys())):
             if (i & 7) == 0:
                 ptr += '\n\tdw'

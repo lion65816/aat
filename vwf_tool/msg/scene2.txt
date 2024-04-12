@@ -1,0 +1,132 @@
+[font color=1]
+[topic]Demo[/topic]
+So where's the grocery store?[wait=30] We're pretty far from the cabin now.
+[wait]
+[erase]
+[font color=3]
+[topic]Mystery Person[/topic]
+HEY![wait=30] Check it out![wait=30] Don't miss out on this SWEET deal!
+[wait]
+[erase]
+[font color=2]
+[topic]Iris[/topic]
+Maybe that loudmouth knows.
+[wait]
+[erase]
+[font color=1]
+[topic]Demo[/topic]
+Excuse me, do you know where the nearest grocery store-
+[wait]
+[erase]
+[font color=3]
+[topic]Rachel[/topic]
+Howdy![wait=30] I'm Rachel, pilot and mechanic extraordinaire![wait=30] You don't look like you're from 'round these parts![wait=30] Say, what are your names?
+[wait]
+[erase]
+[font color=1]
+[topic]Demo[/topic]
+I'm Demo, and the tall one is Iris.[wait=30] We're just visiting and we're looking for-
+[wait]
+[erase]
+[font color=3]
+[topic]Rachel[/topic]
+Transportation?[wait=30] Then you're in luck![wait=30] See these jets?[wait=30] I'm renting them out CHEAP![wait=30] These babies are sleek, fast, certified green, and positively GLEAMING!
+[wait]
+[erase]
+[font color=2]
+[topic]Iris[/topic]
+Look,
+[wait]
+[erase]
+[font color=2]
+[topic]Iris[/topic]
+We really need to find a grocery store.[wait=30] If you can't help us with that, then we're leaving.
+[wait]
+[erase]
+[font color=3]
+[topic]Rachel[/topic]
+Howdy![wait=30] Sorry girls, I've no clue myself.[wait=30] But there's probably one in the city east of here.
+[wait]
+[erase]
+[font color=1]
+[topic]Demo[/topic]
+*sigh* We have to walk even further?
+[wait]
+[erase]
+[font color=3]
+[topic]Rachel[/topic]
+Actually, there's a shopping mall that's a bit closer.[wait=30] There might be a grocery store inside.[wait=30] You'd have to pass through the Purrtal, though.
+[wait]
+[erase]
+[font color=2]
+[topic]Iris[/topic]
+.[wait=30].[wait=30].[wait=30]The what?
+[wait]
+[erase]
+[font color=3]
+[topic]Rachel[/topic]
+The Purrtal.[wait=30] It's our link to the interdimensional nexus, where beings from all walks of time and space can come together.[wait=30] So naturally, it was the perfect place to build a shopping mall.
+[wait]
+[erase]
+[font color=1]
+[topic]Demo[/topic]
+Jee [sic], this got heavy real quickly.
+[wait]
+[erase]
+[font color=2]
+[topic]Iris[/topic]
+Wait, so you're telling us that we may have to travel across dimensions...[wait=30] just to buy some food?!
+[wait]
+[erase]
+[font color=3]
+[topic]Rachel[/topic]
+Well, it's not that simple.[wait=30] Y'see, the Purrtal only lets locals pass through, and it doesn't take kindly to outsiders.
+[wait]
+[erase]
+[font color=2]
+[topic]Iris[/topic]
+I guess we'll have to try.[wait=30] We don't have many options here.
+[wait]
+[erase]
+[font color=3]
+[topic]Rachel[/topic]
+Say, if you're headed in that direction, could you check up on a dear friend of mine?[wait=30] They started working at the mall a few days ago, but I haven't heard from them since.[wait=30] I'm getting worried...
+[wait]
+[erase]
+[font color=1]
+[topic]Demo[/topic]
+Sure, we can do a wellness check for you.
+[wait]
+[erase]
+[font color=3]
+[topic]Rachel[/topic]
+Super![wait=30] Tell you what.[wait=30] Fly back with me to my place, free of charge![wait=30] I've got something special that can help you on your journey.
+[wait]
+[erase]
+[font color=3]
+[topic]Rachel[/topic]
+Plus, I also moonlight as a tour guide![wait=30] So I can give you the deets on any location you visit.
+[wait]
+[erase]
+[font color=2]
+[topic]Iris[/topic]
+...If you're so knowledgeable about this place, then how do you not know for sure where the nearest grocery store is?
+[wait]
+[erase]
+[font color=3]
+[topic]Rachel[/topic]
+It's all about the online delivery, baby![wait=30] Seriously, who shops for food in person anymore?
+[wait]
+[erase]
+[font color=3]
+[topic]Rachel[/topic]
+Oh![wait=30] Before I forget, here's my business card.[wait=30] Hop on board, and strap in tight!
+[wait]
+[erase]
+[font color=3]
+[topic]RACHEL'S REBATE ROTORCRAFT[/topic]
+"Your quick ticket 'round the isles!"[wait=30][br]
+Open 24/7 except for Tuesdays at 11:30 AM-12:30 PM[wait=30][br]
+Admission FREE with ownership of business card![wait=30] (hey, look at that, that's you!)
+[wait]
+[erase]

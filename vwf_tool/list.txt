@@ -13,4 +13,3 @@
 0C broadsword.txt
 0D broadsword_diary.txt
 0E trivia.txt
-0F scene2.25.txt

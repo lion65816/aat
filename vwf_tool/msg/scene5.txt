@@ -1,0 +1,83 @@
+[font color=3]
+[topic]Windrose[/topic]
+>[wait=30] WISH CONFLICT RESOLUTION CONTINGENCY[wait=30] :[wait=30] SUCCESS
+[wait]
+[erase]
+[font color=2]
+[topic]Iris[/topic]
+Are we good here?
+[wait]
+[erase]
+[font color=3]
+[topic]Windrose[/topic]
+>[wait=30] PREVIOUS WISH:[wait=30] =[wait=30] VOIDED[wait=30][br]
+>[wait=30] NEW WISH:[wait=30] =[wait=30] "I WISH THE ENTIRE MALL COULD GO BACK TO NORMAL"[wait=30][br]
+>[wait=30] IS THIS CORRECT?
+[wait]
+[erase]
+[font color=1]
+[topic]Demo[/topic]
+Can I get a "pretty please" at the end?
+[wait]
+[erase]
+[font color=3]
+[topic]Windrose[/topic]
+>[wait=30] NEW WISH:[wait=30] =[wait=30] "I WISH THE ENTIRE MALL COULD GO BACK TO NORMAL. CAN I GET A PRETTY PLEASE AT THE END."[wait=30][br]
+>[wait=30] NEW WISH:[wait=30] =[wait=30] GRANTED[wait=30]
+[wait]
+[erase]
+[font color=2]
+[topic]Iris[/topic]
+Ugh.[wait=30] I really wish that thing would just shut up and disappear for good.
+[wait]
+[erase]
+[font color=3]
+[topic]Windrose[/topic]
+Okay.
+[wait]
+[erase]
+[font color=1]
+[topic]Demo and Iris[/topic]
+.[wait=30].[wait=30].
+[wait]
+[erase]
+[font color=1]
+[topic]Demo[/topic]
+Well, that was sudden and anticlimactic.
+[wait]
+[erase]
+[font color=2]
+[topic]Iris[/topic]
+.[wait=30].[wait=30].[wait=30]Yeah, didn't expect that one to actually get through.
+[wait]
+[erase]
+[font color=2]
+[topic]Iris[/topic]
+Anyway, it's for the best.[wait=30] Too dangerous to keep something like that around here.
+[wait]
+[erase]
+[font color=1]
+[topic]Demo[/topic]
+So, does this mean that Stocking Day is[wait=30].[wait=30].[wait=30].[wait=30] CANCELED?!
+[wait]
+[erase]
+[font color=2]
+[topic]Iris[/topic]
+Nonsense, Demo.[wait=30] We don't need some big, dumb wishing machine to celebrate.[wait=30] Stocking Day is more about spending time with family, after all.
+[wait]
+[erase]
+[font color=1]
+[topic]Demo[/topic]
+Wow, that sounded really corny.[wait=30] But also[wait=30].[wait=30].[wait=30].[wait=30] kind of sweet?
+[wait]
+[erase]
+[font color=2]
+[topic]Iris[/topic]
+.[wait=30].[wait=30].[wait=30]Whatever.
+[wait]
+[erase]
+[font color=2]
+[topic]Iris[/topic]
+Now if you'll excuse me, I'm gonna go buy some vegetables already.[wait=30] Stocking Day dinner won't cook itself.
+[wait]
+[erase]

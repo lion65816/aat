@@ -1,0 +1,25 @@
+[font color=3]
+[topic]Purrtal[/topic]
+NYAA![wait=30] DEFEAT THE FOUR SCOURGES OF THE ISLAND THAT EACH HOLD:
+[wait]
+[erase]
+[font color=1]
+[topic]Demo[/topic]
+We defeated them and stole their items, too.[wait=30] Is this good enough?
+[wait]
+[erase]
+[font color=3]
+[topic]Purrtal[/topic]
+YOU DIDN'T HAVE TO ROB THEM.[wait=30] JUST DEFEAT THEM.
+[wait]
+[erase]
+[font color=3]
+[topic]Purrtal[/topic]
+IN ANY CASE, YOU OUTSIDERS HAVE PROVEN YOURSELVES WORTHY![wait=30] THE PATH TO THE NEXUS SHALL OPEN FOR YOU.[wait=30] NYAA!
+[wait]
+[erase]
+[font color=2]
+[topic]Iris[/topic]
+Well, this is our last chance to save Stocking Day.[wait=30] Here goes nothing...
+[wait]
+[erase]

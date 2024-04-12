@@ -1,4 +1,4 @@
-00 ClassicGoomba.json
+00 vwf/vwf_data2.json
 01 piranha_venus.json
 02 big_boo_boss.cfg
 03 mad_thwomp.cfg

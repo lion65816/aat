@@ -1,5 +1,5 @@
-00 0020 Undefined Sprite
-00 0022 0,0,0
+00 0020 Loads VWF Cutscene Message Based on X, Y position
+00 0022 0,0,10B
 01 0020 Piranha Plant or Venus Fire Trap
 01 0022 8,0,C8
 04 0020 Baby Yoshi\n\nExtra Bytes (all 00 for vanilla)\n1 : Palette - 00(green), 01(red), 02(blue), 03(yellow)\n2 : Hunger (eats before growing)\n3 : Powerup eat value\n4 : Hop speed (80+ = no hops)
@@ -124,19 +124,19 @@ Add 40 to make it stun and 80 to make it spawn shockwaves.
 54 0030 A Homing Horizontal Thwomp that goes right, then returns to it's original position.
 54 0032 -4,0,34 12,0,35 -4,16,44 12,16,45
 57 0020 Actually 5 different sprites in one. Extra Byte 1 setting 00 is the Fortress Boss, 01 is a missile that shoots up then back down at the player, 02 is a mini castle, 03 is a bolder that creates chuck rocks when landing on the ground, and 04 is a pencil that goes up once and then down to destroy itself.
-57 0022 0,-8,43E
+57 0022 0,-8,44E
 58 0030 A rubber duck that functions like a springboard. Floats in water if sprite buoyancy is enabled and cannot be held.
 58 0032 0,0,0
 59 0020 Undefined Sprite
 59 0022 0,0,0
 5A 0020 A Hammer Bro from Super Mario Bros. 3. It walks back and forth and sometimes jumps high between blocks. It frequently throws hammers in Mario's direction.
-5A 0022 0,-16,44E 0,0,44F 8,-16,450
+5A 0022 0,-16,44F 0,0,450 8,-16,451
 5B 0020 A timed ON/OFF switch that when hit from below, will flip the ON/OFF switch for a set duration of time before reverting.
-5B 0022 0,0,451
+5B 0022 0,0,452
 61 0020 A numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
-61 0022 0,0,452 16,0,453 0,16,454 16,16,455 8,8,458
+61 0022 0,0,453 16,0,454 0,16,455 16,16,456 8,8,459
 61 0030 A small numbered platform which can be jumped on for a limited amount of times. Set the amount which can be jumped on with the first extra byte.
-61 0032 0,0,45C
+61 0032 0,0,45D
 6A 0020 A cluster bullet sprite shooter with lots of customization options. A summary of each extra byte is included here, but check the asm file for more detailed descriptions and examples.\nExtra Bit: Aim at player if set. Clear now.\nExtra Byte 1: Reserved for future expansion.\nExtra Byte 2: Rate at which bullets are shot.\nExtra Byte 3: Speed at which bullets are shot.\nExtra Byte 4: Angle of shot (irrelevant if aiming).\nExtra Byte 5: Offset from global timer.\nExtra Byte 6: Parameter, ASM file has details.\nExtra Byte 7: Time for bullet to stay on screen.\nExtra Byte 8: How many bullets can be shot.\nExtra Byte 9: Sprite number to attach to.\nExtra Byte 10: Y/X offset from host sprite.\nExtra Byte 11: Reserved for future expansion.\nExtra Byte 12: Reserved for future expansion.
 6A 0022 0,0,0
 6A 0030 A cluster bullet sprite shooter with lots of customization options. A summary of each extra byte is included here, but check the asm file for more detailed descriptions and examples.\nExtra Bit: Aim at player if set. Set now.\nExtra Byte 1: Reserved for future expansion.\nExtra Byte 2: Rate at which bullets are shot.\nExtra Byte 3: Speed at which bullets are shot.\nExtra Byte 4: Angle of shot (irrelevant if aiming).\nExtra Byte 5: Offset from global timer.\nExtra Byte 6: Parameter, ASM file has details.\nExtra Byte 7: Time for bullet to stay on screen.\nExtra Byte 8: How many bullets can be shot.\nExtra Byte 9: Sprite number to attach to.\nExtra Byte 10: Y/X offset from host sprite.\nExtra Byte 11: Reserved for future expansion.\nExtra Byte 12: Reserved for future expansion.
@@ -144,7 +144,7 @@ Add 40 to make it stun and 80 to make it spawn shockwaves.
 71 0020 Undefined Sprite
 71 0022 0,0,0
 72 0020 This egg bounced on predetermined angles based on steepness.
-72 0022 0,0,460
+72 0022 0,0,461
 74 0020 This is a POW/P-switch, which will be blue or silver depending on the extra bit. It's currently set to be blue. Without a patch, custom sprites are not preserved across sublevels, so if you take this through a pipe/door it will become a vanilla P-switch.
 74 0022 0,1,55
 74 0030 This is a POW/P-switch, which will be blue or silver depending on the extra bit. It's currently set to be silver. As of this writing, PIXI does not preserve custom sprite status across sublevels, so if you take this through a pipe/door it will become a vanilla P-switch.
@@ -170,23 +170,23 @@ Add 40 to make it stun and 80 to make it spawn shockwaves.
 7F 0030 A Red Multi Bounce Shell which spawns kicked towards Mario.\nThe first extra byte determines the number of bounces before it disappears (0A = infinite bounces).\nThe second extra byte determines the spawn X speed.
 7F 0032 0,0,31 0,0,10A 8,0,10A
 85 0020 A "Kun" beta sprite that can follow walls, and disappear in a puff of smoke when touched. This one will walk back and forth.
-85 0022 4,0,461
+85 0022 4,0,462
 85 0030 A "Kun" beta sprite that can follow walls, and disappear in a puff of smoke when touched. This one will follow walls.
-85 0032 4,0,462
+85 0032 4,0,463
 86 0020 Undefined Sprite
 86 0022 0,0,0
 87 0020 Extra bit: Homing
 87 0022 0,0,0
 8A 0020 This is a fire snake from SMB3 that jumps towards the player slowly. Weapons or a star can defeat it.
-8A 0022 0,0,463
+8A 0022 0,0,464
 8C 0020 Once on screen, it will cause custom cluster sprites to appear, which is set via extra byte (purely decorative)
 8C 0022 0,0,*Cluster Spawner*
 8F 0020 A shell that won't interact with other sprites.\nExtra Byte 1: Palette number.\nExtra Byte 2: Base kick speed.
-8F 0022 0,1,464
+8F 0022 0,1,465
 90 0020 A SMW Banzai Bill that faces left.
 90 0022 0,0,180 16,0,181 32,0,182 48,0,183 0,16,190 16,16,191 0,32,1A0 16,32,1A1 32,16,192 32,32,1A2 0,48,1B0 16,48,1B1 32,48,1B2 48,16,193 48,32,1A3 48,48,1B3
 90 0030 A SMW Banzai Bill that faces right.
-90 0032 0,0,465 16,0,467 0,48,468 16,48,46A 16,16,469 16,32,469 0,16,466 0,32,466 32,0,46B 48,0,46C 32,32,46F 48,32,470 32,16,46D 48,16,46E 32,48,471 48,48,472
+90 0032 0,0,466 16,0,468 0,48,469 16,48,46B 16,16,46A 16,32,46A 0,16,467 0,32,467 32,0,46C 48,0,46D 32,32,470 48,32,471 32,16,46E 48,16,46F 32,48,472 48,48,473
 91 0020 Angry Sun. SP4=98. Waits a while until Mario gets in a certain screen, and starts spinning in circles and swinging downwards at Mario while locked on the screen horizontally. Extra Property Byte 1 indicates what screen it starts attacking from.
 91 0022 0,-16,1D1 0,0,1E1
 91 0030 Happy Moon. SP4=98. Waits a while until Mario gets in a certain screen, and starts spinning in circles and swinging downwards at Mario while locked on the screen horizontally. Touching it will cause it to instantly kill all sprites that are not set to "Invincible to star/cape/fire/bouncing blk". Extra Property Byte 1 indicates what screen it starts diving from.
@@ -194,21 +194,21 @@ Add 40 to make it stun and 80 to make it spawn shockwaves.
 92 0020 Undefined Sprite
 92 0022 0,0,0
 93 0020 A "Not Homing" Thwomp that detects walls.
-93 0022 -4,0,473 12,0,474 -4,16,475 12,16,476
+93 0022 -4,0,474 12,0,475 -4,16,476 12,16,477
 93 0030 A "Not Homing" Thwomp that detects walls. This one moves horizontally faster.
-93 0032 -4,0,477 12,0,478 -4,16,479 12,16,47A
+93 0032 -4,0,478 12,0,479 -4,16,47A 12,16,47B
 95 0020 A lone suit that belonged to someone from long ago.
-95 0022 -12,-8,47B 4,-8,47C -12,0,47D 4,0,47E
+95 0022 -12,-8,47C 4,-8,47D -12,0,47E 4,0,47F
 96 0020 Uses 8 extra bytes which determine the sprites in the stack from bottom to top (FF for an empty slot).  Use the Lunar Magic numbers for shells (DA-DE).\nThe 9th extra byte marks each sprite in the stack as a custom sprite. The bits are in order from left to right with left being the bottom of the stack (so 80 would make just the bottom a custom sprite).\nThe 10th extra byte is the same, but for the extra bit.
 96 0022 0,0,0
 9C 0020 Fryguy. He moves around the room while throwing fireballs. He can be hit with thrown items or star power. After getting defeated, he splits into Mini Fryguys.
-9C 0022 0,-16,47F 16,-16,480 0,0,481 16,0,482 8,-2,483
+9C 0022 0,-16,480 16,-16,481 0,0,482 16,0,483 8,-2,484
 9C 0030 Fryguy. He moves around the room very fast while throwing fireballs very frequently. He can be hit with thrown items or star power. After getting defeated, he splits into Mini Fryguys.
-9C 0032 0,-16,47F 16,-16,480 0,0,481 16,0,482 8,-2,484
+9C 0032 0,-16,480 16,-16,481 0,0,482 16,0,483 8,-2,485
 9E 0020 A Fire Magikoopa that shoots 1 fireball.
-9E 0022 0,1,485 0,17,486 0,0,B6
+9E 0022 0,1,486 0,17,487 0,0,B6
 9E 0030 A Fire Magikoopa that shoots 3 fireballs.
-9E 0032 0,1,485 0,17,486 0,0,B6 8,-4,B6 -4,8,B6
+9E 0032 0,1,486 0,17,487 0,0,B6 8,-4,B6 -4,8,B6
 A0 0020 A dry bones that throws bones and follows Mario, but will walk off ledge edges. He'll fall apart if Mario jumps on him, but will reassemble a few seconds later.
 A0 0022 0,1,207 0,-11,206 -8,-15,36
 A0 0030 A dry bones that will stay on ledges, but doesn't throw any bones unless the level you entered from the overworld is level 10D. He'll fall apart if Mario jumps on him, but will reassemble a few seconds later.
@@ -216,21 +216,21 @@ A0 0032 0,1,46 -8,-14,36
 A7 0020 spike(smm2 style)
 Extra Bits - wing flag
 Extra Byte1 - throw speed
-A7 0022 0,2,487 0,-12,488
+A7 0022 0,2,488 0,-12,489
 A7 0030 spike+wing(smm2 style)
 Extra Bits - wing flag
 Extra Byte1 - throw speed
-A7 0032 0,2,487 0,-12,488 12,-8,7
+A7 0032 0,2,488 0,-12,489 12,-8,7
 A8 0020 --- spike ball ---
 Extra Byte1:
 start x speed ($00-$7F)
 Extra Byte2
 start y speed ($00-$FF)
-A8 0022 0,0,489
+A8 0022 0,0,48A
 B1 0020 Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and that's it. It's the freezy type.
-B1 0022 0,0,48B -16,0,48A 16,0,48C 16,-16,48F 0,-16,48E -16,-16,48D 16,-32,492 0,-32,491 -16,-32,490 -8,-24,493 16,-20,495 16,-4,494
+B1 0022 0,0,48C -16,0,48B 16,0,48D 16,-16,490 0,-16,48F -16,-16,48E 16,-32,493 0,-32,492 -16,-32,491 -8,-24,494 16,-20,496 16,-4,495
 B1 0030 Bowser's Bowling Ball or Big Steely that falls from above, moving towards Mario in a horizontal position and this one is a ground detector also. It's the freezy type.
-B1 0032 -16,0,48A 0,0,48B 16,0,48C -16,-16,48D 0,-16,48E 16,-16,48F -16,-32,490 0,-32,491 16,-32,492 -8,-24,493 12,0,495 -4,0,494
+B1 0032 -16,0,48B 0,0,48C 16,0,48D -16,-16,48E 0,-16,48F 16,-16,490 -16,-32,491 0,-32,492 16,-32,493 -8,-24,494 12,0,496 -4,0,495
 B2 0020 Undefined Sprite
 B2 0022 0,0,0
 B3 0020 Undefined Sprite
@@ -242,10 +242,10 @@ B5 0032 8,-16,2D 8,0,68
 B7 0020 Disassembly of Sprite 54
 B7 0022 8,8,128 24,8,129 40,8,12A 8,24,138 8,40,148 24,40,149 40,40,14A 40,24,13A 24,24,139
 BE 0020 An awesome Mechakoopa that behaves like the original, shoots a projectile, shoots lightning, or explodes when stunned.
-BE 0022 0,0,496 0,-16,497 16,-16,498 16,0,499 14,0,49A
+BE 0022 0,0,497 0,-16,498 16,-16,499 16,0,49A 14,0,49B
 BE 0030 An awesome Mechakoopa that behaves like the original, shoots a projectile, shoots lightning, or explodes when stunned. This version flies too!
-BE 0032 0,0,496 0,-16,497 16,-16,498 16,0,499 14,0,49A 8,16,49B 16,16,49B
+BE 0032 0,0,497 0,-16,498 16,-16,499 16,0,49A 14,0,49B 8,16,49C 16,16,49C
 D2 0020 This generator spawns bullet bills that only appear from the right side of the screen.
 D2 0022 0,0,25 8,-16,25 0,-8,114 8,16,25
 D2 0030 This generator spawns bullet bills that only appear from the left side of the screen.
-D2 0032 8,-8,114 0,0,49C -8,-16,49C -8,16,49C
+D2 0032 8,-8,114 0,0,49D -8,-16,49D -8,16,49D
