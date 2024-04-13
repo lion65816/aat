@@ -98,9 +98,9 @@ level:
 0A5	ashspawn_uberASM_DisableSideExit.asm
 0A6	SPECIAL.asm
 0A7	ashspawn_uberASM_DisableSideExit.asm
+0A8	SPECIAL_A8.asm
 0A9 	FilterYoshi.asm
 0AA	freescrollbabey.asm
-0A8	SPECIAL_A8.asm
 0AC	SPECIAL.asm
 0AD	SPECIAL_AD.asm
 0AE	SPECIAL.asm
@@ -128,14 +128,17 @@ level:
 0C8	PitCode2.asm
 0C9	NoStatus_DisableInputs.asm
 0CA	NoStatus_DisableInputs.asm
-0CC  SPECIAL_CC.asm
+0CC	SPECIAL_CC.asm
 0CD	0CD.asm
 0CE	SPECIAL.asm
 0CF	SPECIAL.asm
 0D0	jumpers_end.asm
 0D1	MWIVJS1.asm
+0D3	SPECIAL.asm
 0D4	SPECIAL_NoStatus_HorzWrap.asm
 0D5	SPECIAL.asm
+0D6	SPECIAL.asm
+0D8	SPECIAL.asm
 0DB	NoStatus_DisableLR.asm
 0DC	trivia_win32.asm
 0DD	MinStatus.asm
@@ -266,7 +269,8 @@ level:
 180	Elevator.asm
 181	Elevator.asm
 183	FUNKY.asm
-193  Lightning2.asm
+192	FilterYoshi.asm
+193	Lightning2.asm
 194	FilterYoshi.asm
 195	FilterYoshi.asm
 196	FilterYoshi.asm
@@ -288,6 +292,7 @@ level:
 1A9	SPECIAL_InitSpriteFacing.asm
 1AB	TeleportOnCoins.asm
 1AD	SPECIAL.asm
+1AF	SPECIAL.asm
 1B0	redswitch.asm
 1B1	redswitch.asm
 1B2	redswitch.asm

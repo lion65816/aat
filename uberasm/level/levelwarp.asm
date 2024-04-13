@@ -1,4 +1,4 @@
-; Level Warp Dispaly
+; Level Warp Display
 ; by JackTheSpades
 
 !Counter = $58    ;needs to be DB or Long (2 or 6 digits, not 4)
@@ -14,8 +14,10 @@ table table.txt
 !EventBit4 = 1<<(7-($3C&7))         ;/ to access Level 111: Tim Hortons
 !EventRAM5 = $1F02+($61>>3)|!addr   ;\ Beat Level 125: The Purkinje Tree Ruins (secret exit)
 !EventBit5 = 1<<(7-($61&7))         ;/ to access Level 01D: Temporal House
-!EventRAM6 = $1F02+($6C>>3)|!addr   ;\ Beat Level 126: Switching Difficulties (secret exit)
-!EventBit6 = 1<<(7-($6C&7))         ;/ to access Level 00F: Lost Souls Dorms
+!EventRAM6a = $1F02+($6C>>3)|!addr  ;\ Beat Level 126: Switching Difficulties (secret exit)
+!EventBit6a = 1<<(7-($6C&7))        ;/ to access Level 00F: Lost Souls Dorms
+!EventRAM6b = $1F02+($6D>>3)|!addr  ;\ Beat Level 013: Tank ga Warui
+!EventBit6b = 1<<(7-($6D&7))        ;/ to access Level 00F: Lost Souls Dorms
 
 load:
    JSL NoStatus_load
@@ -32,14 +34,14 @@ main:
    BEQ .sfx
    CMP #%00000010
    BNE .cont
-   .sfx
+.sfx
    LDA #$23
    STA $1DFC|!addr
-   .cont
+.cont
    LDA #$0B             ; \ Freeze the player
    STA $71              ; /
 
-   LDA $16              ; \
+   LDA $16              ; \ 
    ORA $18              ; | branch if neither A nor B is being pressed
    BPL +                ; /
    BRA .check_event
@@ -87,8 +89,11 @@ main:
 +
    CMP #$06
    BNE +
-   LDA !EventRAM6
-   AND #!EventBit6
+   LDA !EventRAM6a
+   AND #!EventBit6a
+   BNE .skip
+   LDA !EventRAM6b  ;\ Need this check also, since two
+   AND #!EventBit6b ;/ levels unlock Lost Souls Dorms.
    BNE .skip
    BRA .invalid
 +
@@ -100,16 +105,16 @@ main:
    RTL
 
 .skip
-   REP #$30             ; \
+   REP #$30             ; \ 
    LDA !Counter         ; |
    AND #$00FF           ; |
    ASL                  ; | Get level to teleoprt to.
    TAX                  ; |
    LDA.l TableLevels,x  ; |
    SEP #$30             ; /
-   
+
    ;warp
-   LDX $95              ; \
+   LDX $95              ; \ 
    STA $19B8|!addr,x    ; |
    XBA                  ; | Teleport the player to level.
    ORA #$04             ; |
@@ -120,21 +125,18 @@ main:
    STZ $88              ; /
    LDA #$29                    ;Transform Sound (change this if you want, I just liked it)
    STA $1DFC|!addr
- 
-   RTL   
+
+   RTL
 ++
 
-
-   LDA $16              ; \
+   LDA $16              ; \ 
    AND #$03             ; |
    TAX                  ; | increase or decrease counter based on
-   
    LDA.l Add,x          ; | pushing left or right.
    CLC                  ; |
    ADC !Counter         ; /
-   
-   
-   CMP #$FF                                  ; \
+
+   CMP #$FF                                  ; \ 
    BNE +                                     ; |
    LDA.b #(TableLevels_end-TableLevels)/2-1  ; |
    BRA ++                                    ; | Limit A to [0, n) with n being the number of
@@ -142,116 +144,159 @@ main:
    BNE ++                                    ; |
    LDA #$00                                  ; /
 ++
+   STA !Counter
 
-   STA !Counter         ; /
-   
-   PEA $7F|(main>>16<<8)
-   PLB
-
-
-   REP #$30          ; A,X,Y in 16bit mode
-   LDY $837B         ; stripe index in Y
-      
-   ;sripe upload header
-   LDA #$0258        ; layer 3, 
-   STA $837D+0,y     ;
-   LDA #$1F00        ; uploading 32 bytes of data
-   STA $837D+2,y     ;
-      
-   ;get table offset in X
-   LDA !Counter
-   AND #$00FF
-   ASL #4
-   TAX
-   SEP #$20
-   
-   ;loop counter
-   LDA #$0F
-   STA $00
-   
-.loop
-
-   LDA !Counter
-   ;BEQ .load_revealed
+   ; Reveal the names only if the rest area for the corresponding world is unlocked.
    CMP #$01
    BNE +
    LDA !EventRAM1
    AND #!EventBit1
    BNE .load_revealed
-   BRA .load_hidden
+   JMP .load_hidden
 +
    CMP #$02
    BNE +
    LDA !EventRAM2
    AND #!EventBit2
    BNE .load_revealed
-   BRA .load_hidden
+   JMP .load_hidden
 +
    CMP #$03
    BNE +
    LDA !EventRAM3
    AND #!EventBit3
    BNE .load_revealed
-   BRA .load_hidden
+   JMP .load_hidden
 +
    CMP #$04
    BNE +
    LDA !EventRAM4
    AND #!EventBit4
    BNE .load_revealed
-   BRA .load_hidden
+   JMP .load_hidden
 +
    CMP #$05
    BNE +
    LDA !EventRAM5
    AND #!EventBit5
    BNE .load_revealed
-   BRA .load_hidden
+   JMP .load_hidden
 +
    CMP #$06
    BNE +
-   LDA !EventRAM6
-   AND #!EventBit6
+   LDA !EventRAM6a
+   AND #!EventBit6a
    BNE .load_revealed
-   BRA .load_hidden
+   LDA !EventRAM6b      ;\ Need this check also, since two
+   AND #!EventBit6b     ;/ levels unlock Lost Souls Dorms.
+   BNE .load_revealed
+   JMP .load_hidden
 +
 
-.load_hidden
-   LDA.l TableNamesHidden,x
-   BRA +
 .load_revealed
+   PEA $7F|(main>>16<<8)
+   PLB
+
+   REP #$30          ; A,X,Y in 16bit mode
+   LDY $837B         ; stripe index in Y
+
+   ;stripe upload header
+   LDA #$0258        ; layer 3, 
+   STA $837D+0,y     ;
+   LDA #$1F00        ; uploading 32 bytes of data
+   STA $837D+2,y     ;
+
+   ;get table offset in X
+   LDA !Counter
+   AND #$00FF
+   ASL #4
+   TAX
+   SEP #$20
+
+   ;loop counter
+   LDA #$0F
+   STA $00
+
+.loop1
    LDA.l TableNames,x   ; \ 
-+                       ; |
    STA $837D+4,y        ; | Write letter to stripe upload
    LDA #$38             ; | yxpccctt = 0011-1000
    STA $837D+5,y        ; /
-   
+
    INX
    INY : INY
-   
+
    DEC $00
-   BPL .loop
-   
+   BPL .loop1
+
    ;stripe terminator
    LDA #$FF
    STA $837D+4,y
-   
-   
+
    ;update index and store back
    INY : INY
    INY : INY
    STY $837B
-   
-   PLB   
+
+   PLB
    SEP #$10
-   
+
    RTL
-   
+
+.load_hidden
+   PEA $7F|(main>>16<<8)
+   PLB
+
+   REP #$30          ; A,X,Y in 16bit mode
+   LDY $837B         ; stripe index in Y
+
+   ;stripe upload header
+   LDA #$0258        ; layer 3, 
+   STA $837D+0,y     ;
+   LDA #$1F00        ; uploading 32 bytes of data
+   STA $837D+2,y     ;
+
+   ;get table offset in X
+   LDA !Counter
+   AND #$00FF
+   ASL #4
+   TAX
+   SEP #$20
+
+   ;loop counter
+   LDA #$0F
+   STA $00
+
+.loop2
+   LDA.l TableNamesHidden,x   ; \ 
+   STA $837D+4,y        ; | Write letter to stripe upload
+   LDA #$38             ; | yxpccctt = 0011-1000
+   STA $837D+5,y        ; /
+
+   INX
+   INY : INY
+
+   DEC $00
+   BPL .loop2
+
+   ;stripe terminator
+   LDA #$FF
+   STA $837D+4,y
+
+   ;update index and store back
+   INY : INY
+   INY : INY
+   STY $837B
+
+   PLB
+   SEP #$10
+
+   RTL
+
 ;values to add when pressing left or right
 Add:
    db $00, $01, $FF, $00
-   
-   
+
 ; Names, always 16 byte
 ; Use capital letters only
 TableNames:
@@ -264,8 +309,6 @@ TableNames:
    db "ONE LAST THING  " ;Event 6B
    db "GO BACK         "
 
-; Names, always 16 byte
-; Use capital letters only
 TableNamesHidden:
    db "PIEDMONT HILL   "
    db "?????           " ;Event 57
@@ -275,8 +318,7 @@ TableNamesHidden:
    db "?????           " ;Event 61
    db "?????           " ;Event 6B
    db "GO BACK         "
-   
-   
+
 macro level(level, midway)
    dw <level>|(<midway><<11)
 endmacro
@@ -284,7 +326,7 @@ endmacro
 macro secen(num, water)
    dw <num>&$FF|((<num>&$F00)<<12)|(<water><<11)|$200
 endmacro
-   
+
 ; note, add $800 to go to midpoint (needs seperate midpoint settings enabled)
 ; or see https://www.smwcentral.net/?p=nmap&m=smwram#7E19D8 for more details on the high byte.
 TableLevels:
