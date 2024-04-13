@@ -445,3 +445,20 @@ org $0093C5
 ; Dino-Rhino Stuck Against Walls Fix
 org $039C6F
     db $FF,$01
+    
+; Disable Title Screen Colors
+org $009A9E
+BRA +
+org $009AA4
++
+
+; Don't Erase Sprites on File Select
+org $009C9F
+    nop #4
+    
+; Dim screen brightness on File Select similar to Erase File screen
+org $009CD4
+    dw $39C9
+
+org $009CD7
+    db $60
