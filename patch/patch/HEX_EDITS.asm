@@ -116,6 +116,9 @@ db $09				; change palette from 8 to C (YXPPCCCT $x1 -> $x9)
 org $02A2E7|!bank			;change hammer extended GFX from B to A
 db $45,$45,$05,$05		; changed palette from B to A
 db $85,$85,$C5,$C5		; (YXPPCCCT: $x7 -> $x5)
+ORG $07F47D|!bank		;Flying Mushroom
+db $2A				;change palette from 8 to D (green)
+
 
 ; File select
 ;org $05B7F1|!bank ; demo a
@@ -440,7 +443,7 @@ ORG $05B872
 
 ; Change "Nintendo Presents" Timer
 org $0093C5
-    lda.b #$60
+    lda.b #$80
     
 ; Dino-Rhino Stuck Against Walls Fix
 org $039C6F

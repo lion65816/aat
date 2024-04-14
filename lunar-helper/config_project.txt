@@ -79,6 +79,7 @@ patches
 	patch\patch\save_everything.asm
 	patch\patch\revealspeed.asm
 	patch\patch\custom_intro_march.asm
+	patch\patch\side_exit_goal.asm
 ]
 -- patch\patch\blockmask.asm
 -- patch\patch\BetterYoshiInteraction.asm
@@ -137,6 +138,7 @@ build_order
                             -- are not explicitly mentioned in this build order
 
     PIXI                    -- Insert custom sprites
+    patch\patch\side_exit_goal.asm -- Requires PIXI to be run first
     Levels                  -- Insert all levels
 
     PIXI                    -- Uncomment this if you're using Lunar Magic 3.31 or higher

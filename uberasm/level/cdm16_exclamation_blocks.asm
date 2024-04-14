@@ -56,6 +56,49 @@ load:
 	
 init:
     stz $1411|!addr
+    	LDA $0DC3|!addr
+	BEQ +
+	LDA #$01 : STA $7FC072
+	LDA #$01 : STA $7FC07A
++
+	LDA $0DC4|!addr
+	BEQ +
+	LDA #$01 : STA $7FC073
+	LDA #$01 : STA $7FC07B
++
+	LDA $0DC5|!addr
+	BEQ +
+	LDA #$01 : STA $7FC074
+	LDA #$01 : STA $7FC07C
++
+	LDA $0DC6|!addr
+	BEQ +
+	LDA #$01 : STA $7FC075
+	LDA #$01 : STA $7FC07D
++
+	LDA $1F27|!addr
+	BEQ +
+	LDA #$01 : STA $7FC070
+	LDA #$01 : STA $7FC078
++
+	LDA $1F28|!addr
+	BEQ +
+	LDA #$01 : STA $7FC071
+	LDA #$01 : STA $7FC079
++
+	LDA $1F29|!addr
+	BEQ +
+	LDA #$01 : STA $7FC076
+	LDA #$01 : STA $7FC07E
++
+	LDA $1F2A|!addr
+	BEQ +
+	LDA #$01 : STA $7FC077
+	LDA #$01 : STA $7FC07F
++
+	LDA $95		
+	BNE +		
+	stz $1412|!addr
 rtl
 
 main:
@@ -97,18 +140,42 @@ endif
 	LDA $0DC3|!addr
 	BEQ +
 	LDA #$01 : STA $7FC072
+	LDA #$01 : STA $7FC07A
 +
 	LDA $0DC4|!addr
 	BEQ +
 	LDA #$01 : STA $7FC073
+	LDA #$01 : STA $7FC07B
 +
 	LDA $0DC5|!addr
 	BEQ +
 	LDA #$01 : STA $7FC074
+	LDA #$01 : STA $7FC07C
 +
 	LDA $0DC6|!addr
 	BEQ +
 	LDA #$01 : STA $7FC075
+	LDA #$01 : STA $7FC07D
++
+	LDA $1F27|!addr
+	BEQ +
+	LDA #$01 : STA $7FC070
+	LDA #$01 : STA $7FC078
++
+	LDA $1F28|!addr
+	BEQ +
+	LDA #$01 : STA $7FC071
+	LDA #$01 : STA $7FC079
++
+	LDA $1F29|!addr
+	BEQ +
+	LDA #$01 : STA $7FC076
+	LDA #$01 : STA $7FC07E
++
+	LDA $1F2A|!addr
+	BEQ +
+	LDA #$01 : STA $7FC077
+	LDA #$01 : STA $7FC07F
 +
 	LDA $95		
 	BNE +		
