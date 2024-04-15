@@ -1,10 +1,25 @@
+// Demo's and Iris' facial expressions are in ExGFX299.
+// Set AN2 to ExGFX299, and use the following ExAnimation manual trigger slots:
+// Slot 00, frame 00: Demo (facing right, normal)        Slot 08, frame 00: Iris (facing right, normal)
+// Slot 00, frame 01: Demo (facing right, looking up)    Slot 08, frame 01: Iris (facing right, looking up)
+// Slot 00, frame 02: Demo (facing right, annoyed)       Slot 08, frame 02: Iris (facing right, annoyed)
+// Slot 00, frame 03: Demo (facing right, happy)
+// Slot 00, frame 04: Demo (facing right, shocked)
+// Slot 00, frame 08: Demo (facing left, normal)         Slot 08, frame 08: Iris (facing left, normal)
+// Slot 00, frame 09: Demo (facing left, looking up)     Slot 08, frame 09: Iris (facing left, looking up)
+// Slot 00, frame 0A: Demo (facing left, annoyed)        Slot 08, frame 0A: Iris (facing left, annoyed)
+// Slot 00, frame 0B: Demo (facing left, happy)
+// Slot 00, frame 0C: Demo (facing left, shocked)
+
 /////////////
 // Scene 1 //
 /////////////
 
+[exani manual=slot 0, frame 0] // Demo (facing right, normal)
+[exani manual=slot 8, frame 9] // Iris (facing left, looking up)
 [sprite=53]
-// Demo and Iris (looking up)
-                                                            (68,2A,80,02,big)                         (90,2A,84,04,big)
+// Demo and Iris
+                                                            (68,2A,80,02,big)                         (90,2A,82,04,big)
                                                             (68,3A,A0,02,big)                         (90,3A,A2,04,big)
 // Ladder
                                                                     (70,08,86,0C,big)
@@ -32,8 +47,8 @@ This place looks familiar, but I can't quite put my leg on it...
 // Scene 2 //
 /////////////
 
-[exani manual=slot 0, frame 1] // Iris (normal)
-[exani manual=slot 1, frame 1] // Demo (annoyed)
+[exani manual=slot 0, frame 2] // Demo (facing right, annoyed)
+[exani manual=slot 8, frame 8] // Iris (facing left, normal)
 [font color=1]
 [topic]Demo[/topic]
 How could you forget, sis?[wait=30] Uncle B. used to take us here to celebrate Stockings Day past!

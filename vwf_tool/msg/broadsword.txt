@@ -1,7 +1,22 @@
+// Demo's and Iris' facial expressions are in ExGFX299.
+// Set AN2 to ExGFX299, and use the following ExAnimation manual trigger slots:
+// Slot 00, frame 00: Demo (facing right, normal)        Slot 08, frame 00: Iris (facing right, normal)
+// Slot 00, frame 01: Demo (facing right, looking up)    Slot 08, frame 01: Iris (facing right, looking up)
+// Slot 00, frame 02: Demo (facing right, annoyed)       Slot 08, frame 02: Iris (facing right, annoyed)
+// Slot 00, frame 03: Demo (facing right, happy)
+// Slot 00, frame 04: Demo (facing right, shocked)
+// Slot 00, frame 08: Demo (facing left, normal)         Slot 08, frame 08: Iris (facing left, normal)
+// Slot 00, frame 09: Demo (facing left, looking up)     Slot 08, frame 09: Iris (facing left, looking up)
+// Slot 00, frame 0A: Demo (facing left, annoyed)        Slot 08, frame 0A: Iris (facing left, annoyed)
+// Slot 00, frame 0B: Demo (facing left, happy)
+// Slot 00, frame 0C: Demo (facing left, shocked)
+
 /////////////
 // Scene 1 //
 /////////////
 
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[exani manual=slot 8, frame 8] // Iris (facing left, normal)
 [sprite=58]
 // Uncle Broadsword (looking up and left)
 (48,2A,C8,42,big)(58,2A,C6,42,big)
@@ -23,66 +38,12 @@ Hey, Uncle B.!
 [erase]
 [topic][/topic]
 [sprite=erase]
+[exani manual=slot 0, frame B] // Demo (facing left, happy)
+[exani manual=slot 8, frame 8] // Iris (facing left, normal)
 [wait=30]
 
 /////////////
 // Scene 2 //
-/////////////
-
-[sprite=58]
-// Uncle Broadsword
-(48,2A,86,02,big)(58,2A,88,02,big)
-(48,3A,A6,02,big)(58,3A,A8,02,big)
-// Demo (happy) and Iris
-(80,2A,84,0C,big)(98,2A,82,0E,big)
-(80,3A,A0,0C,big)(98,3A,A2,0E,big)
-// Background
-(30,08,00,05,big)(40,08,02,05,big)(50,08,04,05,big)(60,08,06,05,big)(70,08,00,05,big)(80,08,02,05,big)(90,08,04,05,big)(A0,08,06,05,big)(B0,08,00,05,big)(C0,08,02,05,big)
-(30,18,08,05,big)(40,18,08,05,big)(50,18,08,05,big)(60,18,08,05,big)(70,18,08,05,big)(80,18,08,05,big)(90,18,08,05,big)(A0,18,08,05,big)(B0,18,08,05,big)(C0,18,08,05,big)
-(30,28,0A,05,big)(40,28,0A,05,big)(50,28,0A,05,big)(60,28,0A,05,big)(70,28,0A,05,big)(80,28,0A,05,big)(90,28,0A,05,big)(A0,28,0A,05,big)(B0,28,0A,05,big)(C0,28,0A,05,big)
-(30,38,0C,05,big)(40,38,0E,05,big)(50,38,0C,05,big)(60,38,0E,05,big)(70,38,0C,05,big)(80,38,0E,05,big)(90,38,0C,05,big)(A0,38,0E,05,big)(B0,38,0C,05,big)(C0,38,0E,05,big)
-(30,48,68,07,big)(40,48,6A,07,big)(50,48,68,07,big)(60,48,6A,07,big)(70,48,68,07,big)(80,48,6A,07,big)(90,48,68,07,big)(A0,48,6A,07,big)(B0,48,68,07,big)(C0,48,6A,07,big)
-[/sprite]
-[font color=3]
-[topic]Uncle Broadsword[/topic]
-Demo! [wait=30].[wait=30].[wait=30].[wait=30]Eilish![wait=30] How are my lovely nieces?
-[wait]
-[erase]
-[topic][/topic]
-[sprite=erase]
-[wait=30]
-
-/////////////
-// Scene 3 //
-/////////////
-
-[sprite=58]
-// Uncle Broadsword
-(48,2A,86,02,big)(58,2A,88,02,big)
-(48,3A,A6,02,big)(58,3A,A8,02,big)
-// Demo (happy) and Iris (annoyed)
-(80,2A,84,0C,big)(98,2A,A4,0E,big)
-(80,3A,A0,0C,big)(98,3A,A2,0E,big)
-// Background
-(30,08,00,05,big)(40,08,02,05,big)(50,08,04,05,big)(60,08,06,05,big)(70,08,00,05,big)(80,08,02,05,big)(90,08,04,05,big)(A0,08,06,05,big)(B0,08,00,05,big)(C0,08,02,05,big)
-(30,18,08,05,big)(40,18,08,05,big)(50,18,08,05,big)(60,18,08,05,big)(70,18,08,05,big)(80,18,08,05,big)(90,18,08,05,big)(A0,18,08,05,big)(B0,18,08,05,big)(C0,18,08,05,big)
-(30,28,0A,05,big)(40,28,0A,05,big)(50,28,0A,05,big)(60,28,0A,05,big)(70,28,0A,05,big)(80,28,0A,05,big)(90,28,0A,05,big)(A0,28,0A,05,big)(B0,28,0A,05,big)(C0,28,0A,05,big)
-(30,38,0C,05,big)(40,38,0E,05,big)(50,38,0C,05,big)(60,38,0E,05,big)(70,38,0C,05,big)(80,38,0E,05,big)(90,38,0C,05,big)(A0,38,0E,05,big)(B0,38,0C,05,big)(C0,38,0E,05,big)
-(30,48,68,07,big)(40,48,6A,07,big)(50,48,68,07,big)(60,48,6A,07,big)(70,48,68,07,big)(80,48,6A,07,big)(90,48,68,07,big)(A0,48,6A,07,big)(B0,48,68,07,big)(C0,48,6A,07,big)
-[/sprite]
-[font color=2]
-[topic]Iris[/topic]
-.[wait=30].[wait=30].
-[wait]
-[br]Never change, uncle.
-[wait]
-[erase]
-[topic][/topic]
-[sprite=erase]
-[wait=30]
-
-/////////////
-// Scene 4 //
 /////////////
 
 [sprite=58]
@@ -99,6 +60,33 @@ Demo! [wait=30].[wait=30].[wait=30].[wait=30]Eilish![wait=30] How are my lovely 
 (30,38,0C,05,big)(40,38,0E,05,big)(50,38,0C,05,big)(60,38,0E,05,big)(70,38,0C,05,big)(80,38,0E,05,big)(90,38,0C,05,big)(A0,38,0E,05,big)(B0,38,0C,05,big)(C0,38,0E,05,big)
 (30,48,68,07,big)(40,48,6A,07,big)(50,48,68,07,big)(60,48,6A,07,big)(70,48,68,07,big)(80,48,6A,07,big)(90,48,68,07,big)(A0,48,6A,07,big)(B0,48,68,07,big)(C0,48,6A,07,big)
 [/sprite]
+[font color=3]
+[topic]Uncle Broadsword[/topic]
+Demo![wait=30] ...[wait=30]Eilish![wait=30] How are my lovely nieces?
+[wait]
+[erase]
+[topic][/topic]
+[wait=30]
+
+/////////////
+// Scene 3 //
+/////////////
+
+[exani manual=slot 8, frame A] // Iris (facing left, annoyed)
+[font color=2]
+[topic]Iris[/topic]
+...[wait=30]Never change, uncle.
+[wait]
+[erase]
+[topic][/topic]
+[wait=30]
+
+/////////////
+// Scene 4 //
+/////////////
+
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[exani manual=slot 8, frame 8] // Iris (facing left, normal)
 [font color=1]
 [topic]Demo[/topic]
 We're actually on a food run for holiday dinner.[wait=30] Do you know any grocery stores nearby?

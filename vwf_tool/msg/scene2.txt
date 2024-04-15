@@ -1,8 +1,68 @@
+// Demo's and Iris' facial expressions are in ExGFX299.
+// Set AN2 to ExGFX299, and use the following ExAnimation manual trigger slots:
+// Slot 00, frame 00: Demo (facing right, normal)        Slot 08, frame 00: Iris (facing right, normal)
+// Slot 00, frame 01: Demo (facing right, looking up)    Slot 08, frame 01: Iris (facing right, looking up)
+// Slot 00, frame 02: Demo (facing right, annoyed)       Slot 08, frame 02: Iris (facing right, annoyed)
+// Slot 00, frame 03: Demo (facing right, happy)
+// Slot 00, frame 04: Demo (facing right, shocked)
+// Slot 00, frame 08: Demo (facing left, normal)         Slot 08, frame 08: Iris (facing left, normal)
+// Slot 00, frame 09: Demo (facing left, looking up)     Slot 08, frame 09: Iris (facing left, looking up)
+// Slot 00, frame 0A: Demo (facing left, annoyed)        Slot 08, frame 0A: Iris (facing left, annoyed)
+// Slot 00, frame 0B: Demo (facing left, happy)
+// Slot 00, frame 0C: Demo (facing left, shocked)
+
+/////////////
+// Scene 1 //
+/////////////
+
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[sprite=60]
+// Demo and Iris
+                                                            (68,2A,82,04,big)                         (90,2A,80,02,big)
+                                                            (68,3A,A2,44,big)                         (90,3A,A0,02,big)
+// Clouds
+                                                                                                               (98,08,60,0A,big)(A8,08,62,0A,big)(B8,08,64,0A,big)
+                                  (50,38,60,0A,big)(60,38,62,0A,big)(70,38,64,0A,big)
+// Background
+(30,08,E6,08,big)(40,08,E8,08,big)(50,08,EA,08,big)(60,08,0A,08,big)(70,08,0C,08,big)(80,08,0E,08,big)(90,08,E0,08,big)(A0,08,E0,08,big)(B0,08,E0,08,big)(C0,08,E0,08,big)
+(30,18,24,08,big)(40,18,26,08,big)(50,18,28,08,big)(60,18,2A,08,big)(70,18,4E,08,big)(80,18,2E,08,big)(90,18,E0,08,big)(A0,18,E0,08,big)(B0,18,A4,08,big)(C0,18,A6,08,big)
+(30,28,6C,08,big)(40,28,46,08,big)(50,28,48,08,big)(60,28,4A,08,big)(70,28,4C,08,big)(80,28,E0,08,big)(90,28,E0,08,big)(A0,28,E0,08,big)(B0,28,C4,08,big)(C0,28,C6,08,big)
+(30,38,E0,08,big)(40,38,E0,08,big)(50,38,E0,08,big)(60,38,E0,08,big)(70,38,E0,08,big)(80,38,E0,08,big)(90,38,E0,08,big)(A0,38,E0,08,big)(B0,38,E0,08,big)(C0,38,E0,08,big)
+(30,48,66,0C,big)(40,48,66,0C,big)(50,48,66,0C,big)(60,48,66,0C,big)(70,48,66,0C,big)(80,48,66,0C,big)(90,48,66,0C,big)(A0,48,66,0C,big)(B0,48,66,0C,big)(C0,48,66,0C,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
 So where's the grocery store?[wait=30] We're pretty far from the cabin now.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 0] // Demo (facing right, normal)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[wait=30]
+
+/////////////
+// Scene 2 //
+/////////////
+
+[sprite=61]
+// Demo and Iris
+         (38,2A,82,04,big)                         (60,2A,80,02,big)
+         (38,3A,A2,44,big)                         (60,3A,A0,42,big)
+// Rachel
+                                                                                                                                                         (C0,2A,C2,06,big)
+                                                                                                                                                         (C0,3A,E2,06,big)
+// Clouds
+                                                            (68,08,60,0A,big)(78,08,62,0A,big)(88,08,64,0A,big)
+(30,38,62,0A,big)(40,38,64,0A,big)
+// Background
+(30,08,0A,08,big)(40,08,0C,08,big)(50,08,0E,08,big)(60,08,E0,08,big)(70,08,E0,08,big)(80,08,E0,08,big)(90,08,E0,08,big)(A0,08,88,08,big)(B0,08,8A,08,big)(C0,08,8C,08,big)
+(30,18,2A,08,big)(40,18,4E,08,big)(50,18,2E,08,big)(60,18,E0,08,big)(70,18,E0,08,big)(80,18,A4,08,big)(90,18,A6,08,big)(A0,18,A8,08,big)(B0,18,AA,08,big)(C0,18,AC,08,big)
+(30,28,4A,08,big)(40,28,4C,08,big)(50,28,E0,08,big)(60,28,E0,08,big)(70,28,E0,08,big)(80,28,C4,08,big)(90,28,C6,08,big)(A0,28,C8,08,big)(B0,28,CA,08,big)(C0,28,CC,08,big)
+(30,38,E0,08,big)(40,38,E0,08,big)(50,38,E0,08,big)(60,38,E0,08,big)(70,38,E0,08,big)(80,38,E0,08,big)(90,38,E0,08,big)(A0,38,68,0C,big)(B0,38,6A,0C,big)(C0,38,E0,08,big)
+(30,48,66,0C,big)(40,48,66,0C,big)(50,48,66,0C,big)(60,48,66,0C,big)(70,48,66,0C,big)(80,48,66,0C,big)(90,48,66,0C,big)(A0,48,66,0C,big)(B0,48,66,0C,big)(C0,48,66,0C,big)
+[/sprite]
 [font color=3]
 [topic]Mystery Person[/topic]
 HEY![wait=30] Check it out![wait=30] Don't miss out on this SWEET deal!
@@ -13,6 +73,35 @@ HEY![wait=30] Check it out![wait=30] Don't miss out on this SWEET deal!
 Maybe that loudmouth knows.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 0] // Demo (facing right, normal)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[wait=30]
+
+/////////////
+// Scene 3 //
+/////////////
+
+[sprite=61]
+// Demo and Iris
+                 (40,2A,82,04,big)                 (60,2A,80,02,big)
+                 (40,3A,A2,44,big)                 (60,3A,A0,42,big)
+// Rachel
+                                                                                                                       (A0,2A,C2,06,big)
+                                                                                                                       (A0,3A,E2,06,big)
+// Jet (underside)
+                                                                                                                                                         (C0,38,EE,08,big)
+// Clouds
+                          (48,08,60,0A,big)(58,08,62,0A,big)(68,08,64,0A,big)
+                                                                                                                                        (B0,38,60,0A,big)(C0,38,62,0A,big)
+// Background
+(30,08,0E,08,big)(40,08,E0,08,big)(50,08,E0,08,big)(60,08,E0,08,big)(70,08,E0,08,big)(80,08,88,08,big)(90,08,8A,08,big)(A0,08,8C,08,big)(B0,08,8E,08,big)(C0,08,8E,08,big)
+(30,18,2E,08,big)(40,18,E0,08,big)(50,18,E0,08,big)(60,18,A4,08,big)(70,18,A6,08,big)(80,18,A8,08,big)(90,18,AA,08,big)(A0,18,AC,08,big)(B0,18,AE,08,big)(C0,18,20,08,big)
+(30,28,E0,08,big)(40,28,E0,08,big)(50,28,E0,08,big)(60,28,C4,08,big)(70,28,C6,08,big)(80,28,C8,08,big)(90,28,CA,08,big)(A0,28,CC,08,big)(B0,28,CE,08,big)(C0,28,40,08,big)
+(30,38,E0,08,big)(40,38,E0,08,big)(50,38,E0,08,big)(60,38,E0,08,big)(70,38,E0,08,big)(80,38,68,0C,big)(90,38,6A,0C,big)(A0,38,E0,08,big)(B0,38,E0,08,big)
+(30,48,66,0C,big)(40,48,66,0C,big)(50,48,66,0C,big)(60,48,66,0C,big)(70,48,66,0C,big)(80,48,66,0C,big)(90,48,66,0C,big)(A0,48,66,0C,big)(B0,48,66,0C,big)(C0,48,66,0C,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
 Excuse me, do you know where the nearest grocery store-
@@ -33,21 +122,32 @@ I'm Demo, and the tall one is Iris.[wait=30] We're just visiting and we're looki
 Transportation?[wait=30] Then you're in luck![wait=30] See these jets?[wait=30] I'm renting them out CHEAP![wait=30] These babies are sleek, fast, certified green, and positively GLEAMING!
 [wait]
 [erase]
+
+/////////////
+// Scene 4 //
+/////////////
+
+[exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
 Look,
 [wait]
 [erase]
-[font color=2]
-[topic]Iris[/topic]
 We really need to find a grocery store.[wait=30] If you can't help us with that, then we're leaving.
 [wait]
 [erase]
 [font color=3]
 [topic]Rachel[/topic]
-Howdy![wait=30] Sorry girls, I've no clue myself.[wait=30] But there's probably one in the city east of here.
+Sorry girls, I've no clue myself.[wait=30] But there's probably one in the city east of here.
 [wait]
 [erase]
+
+/////////////
+// Scene 5 //
+/////////////
+
+[exani manual=slot 0, frame 2] // Demo (facing right, annoyed)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
 [font color=1]
 [topic]Demo[/topic]
 *sigh* We have to walk even further?
@@ -58,9 +158,15 @@ Howdy![wait=30] Sorry girls, I've no clue myself.[wait=30] But there's probably 
 Actually, there's a shopping mall that's a bit closer.[wait=30] There might be a grocery store inside.[wait=30] You'd have to pass through the Purrtal, though.
 [wait]
 [erase]
+
+/////////////
+// Scene 6 //
+/////////////
+
+[exani manual=slot 0, frame 0] // Demo (facing right, normal)
 [font color=2]
 [topic]Iris[/topic]
-.[wait=30].[wait=30].[wait=30]The what?
+...[wait=30]The what?
 [wait]
 [erase]
 [font color=3]
@@ -70,9 +176,15 @@ The Purrtal.[wait=30] It's our link to the interdimensional nexus, where beings 
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-Jee [sic], this got heavy real quickly.
+Jee (sic), this got heavy real quickly.
 [wait]
 [erase]
+
+/////////////
+// Scene 7 //
+/////////////
+
+[exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
 Wait, so you're telling us that we may have to travel across dimensions...[wait=30] just to buy some food?!
@@ -83,6 +195,12 @@ Wait, so you're telling us that we may have to travel across dimensions...[wait=
 Well, it's not that simple.[wait=30] Y'see, the Purrtal only lets locals pass through, and it doesn't take kindly to outsiders.
 [wait]
 [erase]
+
+/////////////
+// Scene 8 //
+/////////////
+
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
 [font color=2]
 [topic]Iris[/topic]
 I guess we'll have to try.[wait=30] We don't have many options here.
@@ -103,30 +221,63 @@ Sure, we can do a wellness check for you.
 Super![wait=30] Tell you what.[wait=30] Fly back with me to my place, free of charge![wait=30] I've got something special that can help you on your journey.
 [wait]
 [erase]
-[font color=3]
-[topic]Rachel[/topic]
 Plus, I also moonlight as a tour guide![wait=30] So I can give you the deets on any location you visit.
 [wait]
 [erase]
+
+/////////////
+// Scene 9 //
+/////////////
+
+[exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
-...If you're so knowledgeable about this place, then how do you not know for sure where the nearest grocery store is?
+...[wait=30]If you're so knowledgeable about this place, then how do you not know for sure where the nearest grocery store is?
 [wait]
 [erase]
+
+//////////////
+// Scene 10 //
+//////////////
+
+[exani manual=slot 0, frame 2] // Demo (facing right, annoyed)
 [font color=3]
 [topic]Rachel[/topic]
 It's all about the online delivery, baby![wait=30] Seriously, who shops for food in person anymore?
 [wait]
 [erase]
-[font color=3]
-[topic]Rachel[/topic]
+
+[exani manual=slot 0, frame 0] // Demo (facing right, normal)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
 Oh![wait=30] Before I forget, here's my business card.[wait=30] Hop on board, and strap in tight!
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+
+//////////////
+// Scene 11 //
+//////////////
+
+[sprite=50]
+// Background
+(30,08,00,0F,big)(40,08,02,0F,big)(50,08,04,0F,big)(60,08,06,0F,big)(70,08,08,0F,big)(80,08,0A,0F,big)(90,08,0C,0F,big)(A0,08,0E,0F,big)(B0,08,80,0F,big)(C0,08,82,0F,big)
+(30,18,20,0F,big)(40,18,22,0F,big)(50,18,24,0F,big)(60,18,26,0F,big)(70,18,28,0F,big)(80,18,2A,0F,big)(90,18,2C,0F,big)(A0,18,2E,0F,big)(B0,18,A0,0F,big)(C0,18,A2,0F,big)
+(30,28,40,0F,big)(40,28,42,0F,big)(50,28,44,0F,big)(60,28,46,0F,big)(70,28,48,0F,big)(80,28,4A,0F,big)(90,28,4C,0F,big)(A0,28,4E,0F,big)(B0,28,C0,0F,big)(C0,28,C2,0F,big)
+(30,38,60,0F,big)(40,38,62,0F,big)(50,38,64,0F,big)(60,38,66,0F,big)(70,38,68,0F,big)(80,38,6A,0F,big)(90,38,6C,0F,big)(A0,38,6E,0F,big)(B0,38,E0,0F,big)(C0,38,E2,0F,big)
+(30,48,84,0F,big)(40,48,86,0F,big)(50,48,88,0F,big)(60,48,8A,0F,big)(70,48,8C,0F,big)(80,48,8E,0F,big)(90,48,A4,0F,big)(A0,48,A6,0F,big)(B0,48,A8,0F,big)(C0,48,AA,0F,big)
+[/sprite]
 [font color=3]
 [topic]RACHEL'S REBATE ROTORCRAFT[/topic]
 "Your quick ticket 'round the isles!"[wait=30][br]
 Open 24/7 except for Tuesdays at 11:30 AM-12:30 PM[wait=30][br]
-Admission FREE with ownership of business card![wait=30] (hey, look at that, that's you!)
+Admission FREE with ownership of business card![wait=30][br]
+(hey, look at that, that's you!)
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+
+[end=00]

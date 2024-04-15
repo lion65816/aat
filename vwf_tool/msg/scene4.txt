@@ -1,14 +1,70 @@
+// Demo's and Iris' facial expressions are in ExGFX299.
+// Set AN2 to ExGFX299, and use the following ExAnimation manual trigger slots:
+// Slot 00, frame 00: Demo (facing right, normal)        Slot 08, frame 00: Iris (facing right, normal)
+// Slot 00, frame 01: Demo (facing right, looking up)    Slot 08, frame 01: Iris (facing right, looking up)
+// Slot 00, frame 02: Demo (facing right, annoyed)       Slot 08, frame 02: Iris (facing right, annoyed)
+// Slot 00, frame 03: Demo (facing right, happy)
+// Slot 00, frame 04: Demo (facing right, shocked)
+// Slot 00, frame 08: Demo (facing left, normal)         Slot 08, frame 08: Iris (facing left, normal)
+// Slot 00, frame 09: Demo (facing left, looking up)     Slot 08, frame 09: Iris (facing left, looking up)
+// Slot 00, frame 0A: Demo (facing left, annoyed)        Slot 08, frame 0A: Iris (facing left, annoyed)
+// Slot 00, frame 0B: Demo (facing left, happy)
+// Slot 00, frame 0C: Demo (facing left, shocked)
+
+/////////////
+// Scene 1 //
+/////////////
+
+[exani manual=slot 0, frame 9] // Demo (facing left, looking up)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[sprite=54]
+// Demo and Iris
+                                                            (68,2A,82,04,big)                         (90,2A,80,02,big)
+                                                            (68,3A,A2,44,big)                         (90,3A,A0,02,big)
+// Background
+(30,08,8C,06,big)(40,08,8C,06,big)(50,08,8C,06,big)(60,08,8C,06,big)(70,08,8C,06,big)(80,08,8C,06,big)(90,08,8C,06,big)(A0,08,8C,06,big)(B0,08,8C,06,big)(C0,08,8C,06,big)
+(30,18,AC,06,big)(40,18,AC,06,big)(50,18,AC,06,big)(60,18,AC,06,big)(70,18,AC,06,big)(80,18,AC,06,big)(90,18,AC,06,big)(A0,18,AC,06,big)(B0,18,AC,06,big)(C0,18,AC,06,big)
+(30,28,CC,06,big)(40,28,CC,06,big)(50,28,CC,06,big)(60,28,CC,06,big)(70,28,CC,06,big)(80,28,CC,06,big)(90,28,CC,06,big)(A0,28,CC,06,big)(B0,28,CC,06,big)(C0,28,CC,06,big)
+(30,38,EC,06,big)(40,38,EC,06,big)(50,38,EC,06,big)(60,38,EC,06,big)(70,38,EC,06,big)(80,38,EC,06,big)(90,38,EC,06,big)(A0,38,EC,06,big)(B0,38,EC,06,big)(C0,38,EC,06,big)
+(30,48,8E,0A,big)(40,48,8E,0A,big)(50,48,8E,0A,big)(60,48,8E,0A,big)(70,48,8E,0A,big)(80,48,8E,0A,big)(90,48,8E,0A,big)(A0,48,8E,0A,big)(B0,48,8E,0A,big)(C0,48,8E,0A,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
-Whoa! Not what I was expecting on the other side.
+Whoa![wait=30] Not what I was expecting on the other side.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 4] // Demo (facing right, shocked)
+[exani manual=slot 8, frame 1] // Iris (facing right, looking up)
+[wait=30]
+
+/////////////
+// Scene 2 //
+/////////////
+
+[sprite=64]
+// Demo and Iris
+(30,2A,82,04,big)                          (58,2A,80,02,big)
+(30,3A,A2,44,big)                          (58,3A,A0,42,big)
+// Windrose
+                                                                                              (88,08,84,08,big)(98,08,86,08,big)(A8,08,88,08,big)(B8,08,8A,08,big)
+                                                                                              (88,18,A4,08,big)(98,18,A6,08,big)(A8,18,A8,08,big)(B8,18,AA,08,big)
+                                                                                              (88,28,C4,08,big)(98,28,C6,08,big)(A8,28,C8,08,big)(B8,28,CA,08,big)
+                                                                                              (88,38,E4,08,big)(98,38,E6,08,big)(A8,38,E8,08,big)(B8,38,EA,08,big)
+// Background
+(30,08,8C,06,big)(40,08,8C,06,big)(50,08,8C,06,big)(60,08,8C,06,big)(70,08,8C,06,big)(80,08,8C,06,big)(90,08,8C,06,big)(A0,08,8C,06,big)(B0,08,8C,06,big)(C0,08,8C,06,big)
+(30,18,AC,06,big)(40,18,AC,06,big)(50,18,AC,06,big)(60,18,AC,06,big)(70,18,AC,06,big)(80,18,AC,06,big)                                                   (C0,18,AC,06,big)
+(30,28,CC,06,big)(40,28,CC,06,big)(50,28,CC,06,big)(60,28,CC,06,big)(70,28,CC,06,big)(80,28,CC,06,big)                                                   (C0,28,CC,06,big)
+(30,38,EC,06,big)(40,38,EC,06,big)(50,38,EC,06,big)(60,38,EC,06,big)(70,38,EC,06,big)(80,38,EC,06,big)(90,38,EC,06,big)(A0,38,EC,06,big)(B0,38,EC,06,big)(C0,38,EC,06,big)
+(30,48,8E,0A,big)(40,48,8E,0A,big)(50,48,8E,0A,big)(60,48,8E,0A,big)(70,48,8E,0A,big)(80,48,8E,0A,big)(90,48,8E,0A,big)(A0,48,8E,0A,big)(B0,48,8E,0A,big)(C0,48,8E,0A,big)
+[/sprite]
 [font color=3]
 [topic]?????[/topic]
->[wait=30] SCANNING LOCATION[wait=30] .[wait=30].[wait=30].[wait=30][br]
->[wait=30] SENTIENT LIFE-FORM DETECTED[wait=30] .[wait=30].[wait=30].[wait=30][br]
->[wait=30] SENTIENT LIFE-FORM DETECTED[wait=30] .[wait=30].[wait=30].[wait=30][br]
->[wait=30] STATE QUERY[wait=30] ?[wait=30] :[wait=30]
+$[wait=30] SCANNING LOCATION[wait=30] .[wait=30].[wait=30].[wait=30][br]
+$[wait=30] SENTIENT LIFE-FORM DETECTED[wait=30] .[wait=30].[wait=30].[wait=30][br]
+$[wait=30] SENTIENT LIFE-FORM DETECTED[wait=30] .[wait=30].[wait=30].[wait=30][br]
+$[wait=30] STATE QUERY[wait=30] ?[wait=30] :[wait=30]
 [wait]
 [erase]
 [font color=2]
@@ -18,20 +74,78 @@ Is this the "washing machine" that Clerk was talking about?
 [erase]
 [font color=3]
 [topic]?????[/topic]
->[wait=30] QUERY :[wait=30] "IS THIS THE WASHING MACHINE THAT CLERK WAS TALKING ABOUT ?"[wait=30] =[wait=30] KINDA[wait=30][br]
->[wait=30] STATE QUERY[wait=30] ?[wait=30] :[wait=30]
+$[wait=30] QUERY :[wait=30] "IS THIS THE WASHING MACHINE THAT CLERK WAS TALKING ABOUT ?"[wait=30] =[wait=30] KINDA[wait=30][br]
+$[wait=30] STATE QUERY[wait=30] ?[wait=30] :[wait=30]
 [wait]
 [erase]
+
+/////////////
+// Scene 3 //
+/////////////
+
+[exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
 I wasn't talking to you.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[wait=30]
+
+/////////////
+// Scene 4 //
+/////////////
+
+[sprite=64]
+// Demo and Iris
+(30,2A,82,04,big)                          (58,2A,80,02,big)
+(30,3A,A2,44,big)                          (58,3A,A0,02,big)
+// Windrose
+                                                                                              (88,08,84,08,big)(98,08,86,08,big)(A8,08,88,08,big)(B8,08,8A,08,big)
+                                                                                              (88,18,A4,08,big)(98,18,A6,08,big)(A8,18,A8,08,big)(B8,18,AA,08,big)
+                                                                                              (88,28,C4,08,big)(98,28,C6,08,big)(A8,28,C8,08,big)(B8,28,CA,08,big)
+                                                                                              (88,38,E4,08,big)(98,38,E6,08,big)(A8,38,E8,08,big)(B8,38,EA,08,big)
+// Background
+(30,08,8C,06,big)(40,08,8C,06,big)(50,08,8C,06,big)(60,08,8C,06,big)(70,08,8C,06,big)(80,08,8C,06,big)(90,08,8C,06,big)(A0,08,8C,06,big)(B0,08,8C,06,big)(C0,08,8C,06,big)
+(30,18,AC,06,big)(40,18,AC,06,big)(50,18,AC,06,big)(60,18,AC,06,big)(70,18,AC,06,big)(80,18,AC,06,big)                                                   (C0,18,AC,06,big)
+(30,28,CC,06,big)(40,28,CC,06,big)(50,28,CC,06,big)(60,28,CC,06,big)(70,28,CC,06,big)(80,28,CC,06,big)                                                   (C0,28,CC,06,big)
+(30,38,EC,06,big)(40,38,EC,06,big)(50,38,EC,06,big)(60,38,EC,06,big)(70,38,EC,06,big)(80,38,EC,06,big)(90,38,EC,06,big)(A0,38,EC,06,big)(B0,38,EC,06,big)(C0,38,EC,06,big)
+(30,48,8E,0A,big)(40,48,8E,0A,big)(50,48,8E,0A,big)(60,48,8E,0A,big)(70,48,8E,0A,big)(80,48,8E,0A,big)(90,48,8E,0A,big)(A0,48,8E,0A,big)(B0,48,8E,0A,big)(C0,48,8E,0A,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
 Wait sis, maybe we can get some info out of it.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 1] // Demo (facing right, looking up)
+[exani manual=slot 8, frame 1] // Iris (facing right, looking up)
+[wait=30]
+
+/////////////
+// Scene 5 //
+/////////////
+
+[sprite=64]
+// Demo and Iris
+(30,2A,82,04,big)                          (58,2A,80,02,big)
+(30,3A,A2,44,big)                          (58,3A,A0,42,big)
+// Windrose
+                                                                                              (88,08,84,08,big)(98,08,86,08,big)(A8,08,88,08,big)(B8,08,8A,08,big)
+                                                                                              (88,18,A4,08,big)(98,18,A6,08,big)(A8,18,A8,08,big)(B8,18,AA,08,big)
+                                                                                              (88,28,C4,08,big)(98,28,C6,08,big)(A8,28,C8,08,big)(B8,28,CA,08,big)
+                                                                                              (88,38,E4,08,big)(98,38,E6,08,big)(A8,38,E8,08,big)(B8,38,EA,08,big)
+// Background
+(30,08,8C,06,big)(40,08,8C,06,big)(50,08,8C,06,big)(60,08,8C,06,big)(70,08,8C,06,big)(80,08,8C,06,big)(90,08,8C,06,big)(A0,08,8C,06,big)(B0,08,8C,06,big)(C0,08,8C,06,big)
+(30,18,AC,06,big)(40,18,AC,06,big)(50,18,AC,06,big)(60,18,AC,06,big)(70,18,AC,06,big)(80,18,AC,06,big)                                                   (C0,18,AC,06,big)
+(30,28,CC,06,big)(40,28,CC,06,big)(50,28,CC,06,big)(60,28,CC,06,big)(70,28,CC,06,big)(80,28,CC,06,big)                                                   (C0,28,CC,06,big)
+(30,38,EC,06,big)(40,38,EC,06,big)(50,38,EC,06,big)(60,38,EC,06,big)(70,38,EC,06,big)(80,38,EC,06,big)(90,38,EC,06,big)(A0,38,EC,06,big)(B0,38,EC,06,big)(C0,38,EC,06,big)
+(30,48,8E,0A,big)(40,48,8E,0A,big)(50,48,8E,0A,big)(60,48,8E,0A,big)(70,48,8E,0A,big)(80,48,8E,0A,big)(90,48,8E,0A,big)(A0,48,8E,0A,big)(B0,48,8E,0A,big)(C0,48,8E,0A,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
 So what are you, and what do you do, exactly?
@@ -39,21 +153,34 @@ So what are you, and what do you do, exactly?
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
->[wait=30] QUERY :[wait=30] "WHAT ARE YOU ?"[wait=30] =[wait=30] I AM WindRose Wishtonic-WFM[wait=30]"Wish-fulFilling Machine"[wait=30] Serial J02.U90.N07[wait=30][br]
->[wait=30] QUERY :[wait=30] "WHAT DO YOU DO, EXACTLY ?"[wait=30] =[wait=30] I RESOLVE WISHES[wait=30][br]
->[wait=30] STATE QUERY[wait=30] ?[wait=30] :[wait=30]
+$[wait=30] QUERY :[wait=30] "WHAT ARE YOU ?"[wait=30] =[wait=30] I AM WindRose Wishtonic-WFM[wait=30] "Wish-fulFilling Machine"[wait=30] Serial J02.U90.N07[wait=30][br]
+$[wait=30] QUERY :[wait=30] "WHAT DO YOU DO, EXACTLY ?"[wait=30] =[wait=30] I RESOLVE WISHES[wait=30][br]
+$[wait=30] STATE QUERY[wait=30] ?[wait=30] :[wait=30]
 [wait]
 [erase]
+
+/////////////
+// Scene 6 //
+/////////////
+
+[exani manual=slot 0, frame 4] // Demo (facing right, shocked)
 [font color=1]
 [topic]Demo[/topic]
-...No way![wait=30] Is this the same "Windrose" from Stocking Day legend?
+...[wait=30]No way![wait=30] Is this the same "Windrose" from Stocking Day legend?
 [wait]
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
->[wait=30] QUERY :[wait=30] "IS THIS THE SAME WINDROSE FROM STOCKING DAY LEGEND ?"[wait=30] =[wait=30] AFFIRMATIVE
+$[wait=30] QUERY :[wait=30] "IS THIS THE SAME WINDROSE FROM STOCKING DAY LEGEND ?"[wait=30] =[wait=30] AFFIRMATIVE
 [wait]
 [erase]
+
+/////////////
+// Scene 7 //
+/////////////
+
+[exani manual=slot 0, frame 0] // Demo (facing right, normal)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
 [font color=2]
 [topic]Iris[/topic]
 Ha.[wait=30] So the Windrose we blindly wished upon in the past is just a machine.[wait=30] Ironically, I was beginning to suspect this was a manufactured holiday.
@@ -61,60 +188,141 @@ Ha.[wait=30] So the Windrose we blindly wished upon in the past is just a machin
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
->[wait=30] QUERY QUOTA EXCEEDED[wait=30] .[wait=30].[wait=30].[wait=30][br]
->[wait=30] STATE "NAME",[wait=30] "FAVORITE SANDWICH",[wait=30] AND "WISH"
+$[wait=30] QUERY QUOTA EXCEEDED[wait=30] .[wait=30].[wait=30].[wait=30][br]
+$[wait=30] STATE "NAME",[wait=30] "FAVORITE SANDWICH",[wait=30] AND "WISH"
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[wait=30]
+
+/////////////
+// Scene 8 //
+/////////////
+
+[sprite=64]
+// Demo and Iris
+(30,2A,82,04,big)                          (58,2A,80,02,big)
+(30,3A,A2,44,big)                          (58,3A,A0,02,big)
+// Windrose
+                                                                                              (88,08,84,08,big)(98,08,86,08,big)(A8,08,88,08,big)(B8,08,8A,08,big)
+                                                                                              (88,18,A4,08,big)(98,18,A6,08,big)(A8,18,A8,08,big)(B8,18,AA,08,big)
+                                                                                              (88,28,C4,08,big)(98,28,C6,08,big)(A8,28,C8,08,big)(B8,28,CA,08,big)
+                                                                                              (88,38,E4,08,big)(98,38,E6,08,big)(A8,38,E8,08,big)(B8,38,EA,08,big)
+// Background
+(30,08,8C,06,big)(40,08,8C,06,big)(50,08,8C,06,big)(60,08,8C,06,big)(70,08,8C,06,big)(80,08,8C,06,big)(90,08,8C,06,big)(A0,08,8C,06,big)(B0,08,8C,06,big)(C0,08,8C,06,big)
+(30,18,AC,06,big)(40,18,AC,06,big)(50,18,AC,06,big)(60,18,AC,06,big)(70,18,AC,06,big)(80,18,AC,06,big)                                                   (C0,18,AC,06,big)
+(30,28,CC,06,big)(40,28,CC,06,big)(50,28,CC,06,big)(60,28,CC,06,big)(70,28,CC,06,big)(80,28,CC,06,big)                                                   (C0,28,CC,06,big)
+(30,38,EC,06,big)(40,38,EC,06,big)(50,38,EC,06,big)(60,38,EC,06,big)(70,38,EC,06,big)(80,38,EC,06,big)(90,38,EC,06,big)(A0,38,EC,06,big)(B0,38,EC,06,big)(C0,38,EC,06,big)
+(30,48,8E,0A,big)(40,48,8E,0A,big)(50,48,8E,0A,big)(60,48,8E,0A,big)(70,48,8E,0A,big)(80,48,8E,0A,big)(90,48,8E,0A,big)(A0,48,8E,0A,big)(B0,48,8E,0A,big)(C0,48,8E,0A,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
 Hey, looks like this is our chance.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 1] // Demo (facing right, looking up)
+[exani manual=slot 8, frame 1] // Iris (facing right, looking up)
+[wait=30]
+
+/////////////
+// Scene 9 //
+/////////////
+
+[sprite=64]
+// Demo and Iris
+(30,2A,82,04,big)                          (58,2A,80,02,big)
+(30,3A,A2,44,big)                          (58,3A,A0,42,big)
+// Windrose
+                                                                                              (88,08,84,08,big)(98,08,86,08,big)(A8,08,88,08,big)(B8,08,8A,08,big)
+                                                                                              (88,18,A4,08,big)(98,18,A6,08,big)(A8,18,A8,08,big)(B8,18,AA,08,big)
+                                                                                              (88,28,C4,08,big)(98,28,C6,08,big)(A8,28,C8,08,big)(B8,28,CA,08,big)
+                                                                                              (88,38,E4,08,big)(98,38,E6,08,big)(A8,38,E8,08,big)(B8,38,EA,08,big)
+// Background
+(30,08,8C,06,big)(40,08,8C,06,big)(50,08,8C,06,big)(60,08,8C,06,big)(70,08,8C,06,big)(80,08,8C,06,big)(90,08,8C,06,big)(A0,08,8C,06,big)(B0,08,8C,06,big)(C0,08,8C,06,big)
+(30,18,AC,06,big)(40,18,AC,06,big)(50,18,AC,06,big)(60,18,AC,06,big)(70,18,AC,06,big)(80,18,AC,06,big)                                                   (C0,18,AC,06,big)
+(30,28,CC,06,big)(40,28,CC,06,big)(50,28,CC,06,big)(60,28,CC,06,big)(70,28,CC,06,big)(80,28,CC,06,big)                                                   (C0,28,CC,06,big)
+(30,38,EC,06,big)(40,38,EC,06,big)(50,38,EC,06,big)(60,38,EC,06,big)(70,38,EC,06,big)(80,38,EC,06,big)(90,38,EC,06,big)(A0,38,EC,06,big)(B0,38,EC,06,big)(C0,38,EC,06,big)
+(30,48,8E,0A,big)(40,48,8E,0A,big)(50,48,8E,0A,big)(60,48,8E,0A,big)(70,48,8E,0A,big)(80,48,8E,0A,big)(90,48,8E,0A,big)(A0,48,8E,0A,big)(B0,48,8E,0A,big)(C0,48,8E,0A,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
-My name is Demo Rosemary Roseclair.[wait=30] The po' boy is my guilty pleasure.[wait=30] And uh[wait=30].[wait=30].[wait=30].[wait=30] I wish the entire mall could go back to normal?
+My name is Demo Rosemary Roseclair.[wait=30] The po' boy is my guilty pleasure.[wait=30] And uh...[wait=30] I wish the entire mall could go back to normal?
 [wait]
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
->[wait=30] ERROR :[wait=30] WISH CONTRADICTS PRE-EXISTING WISH[wait=30][br]
->[wait=30] CURRENT WISH:[wait=30] =[wait=30] "I'm bleedin' money over here! I wish all of these customers will shop here forever, even if it kills them!"
+$[wait=30] ERROR :[wait=30] WISH CONTRADICTS PRE-EXISTING WISH[wait=30][br]
+$[wait=30] CURRENT WISH :[wait=30] =[wait=30] "I'm bleedin' money over here![wait=30] I wish all of these customers will shop here forever, even if it kills them!"
 [wait]
 [erase]
+
+//////////////
+// Scene 10 //
+//////////////
+
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
 [font color=2]
 [topic]Iris[/topic]
-Ha.[wait=30] Seems it interpreted The Manager's wish literally.
+Seems it interpreted The Manager's wish literally.
 [wait]
 [erase]
+
+//////////////
+// Scene 11 //
+//////////////
+
+[exani manual=slot 8, frame 1] // Iris (facing right, looking up)
 [font color=3]
 [topic]Windrose[/topic]
->[wait=30] INITIATE WISH CONFLICT RESOLUTION CONTINGENCY[wait=30] ?[wait=30] :
+$[wait=30] INITIATE WISH CONFLICT RESOLUTION CONTINGENCY[wait=30] ?[wait=30] :
 [wait]
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-Um.[wait=30].[wait=30].[wait=30] Sure?
+Um...[wait=30] Sure?
 [wait]
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
->[wait=30] WISH CONFLICT RESOLUTION CONTINGENCY[wait=30] :[wait=30] ACTIVATING[wait=30][br]
->[wait=30] INITIATING COMBAT SYSTEMS[wait=30].[wait=30].[wait=30].[wait=30] <0%>[wait=30] <25%>
+$[wait=30] WISH CONFLICT RESOLUTION CONTINGENCY[wait=30] :[wait=30] ACTIVATING[wait=30][br]
+$[wait=30] INITIATING COMBAT SYSTEMS[wait=30] .[wait=30].[wait=30].[wait=30] <0%>[wait=30] <25%>
 [wait]
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-Oh, good![wait=30] .[wait=30].[wait=30].[wait=30]Wait, what?
+Oh, good![wait][br]
+
+//////////////
+// Scene 12 //
+//////////////
+
+[exani manual=slot 0, frame 4] // Demo (facing right, shocked)
+...[wait=30]Wait, what?
 [wait]
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
->[wait=30] INITIATING COMBAT SYSTEMS[wait=30].[wait=30].[wait=30].[wait=30] <75%>[wait=30] <100%>[wait=30][br]
->[wait=30] PREPARE FOR COMBAT
+$[wait=30] INITIATING COMBAT SYSTEMS[wait=30] .[wait=30].[wait=30].[wait=30] <75%>[wait=30] <100%>[wait=30][br]
+$[wait=30] PREPARE FOR COMBAT
 [wait]
 [erase]
+
+//////////////
+// Scene 13 //
+//////////////
+
+[exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
 Let's kick its proverbial butt.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+
+[end=00]
