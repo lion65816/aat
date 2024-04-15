@@ -57,6 +57,7 @@ level:
 054	PressuredWater.asm
 055	PressuredWater.asm
 057  057.asm
+05C  TeleportAtTime.asm
 05E	crithania_autoscroll.asm
 060	DisableLR_freescrollbabey.asm
 066	Gradient66.asm
@@ -69,17 +70,22 @@ level:
 06E	trivia_win08.asm
 06F	trivia_win16.asm
 074	Autoscroll74.asm
+076  TeleportAtTime.asm
 07A	BG_AutoScroll7A.asm
 07B	BG_AutoScroll7B.asm
+07C  TeleportAtTime.asm
 07D	craigdarroch.asm
 07E	FilterYoshi.asm
 07F	FilterYoshi_SimpleHP.asm
 080	infinite_dream.asm
 082	FilterYoshi_freescrollbabey.asm
+083  TeleportAtTime.asm
 084	DisableLeftLR.asm
 085	DisableRightLR.asm
 086	SPECIAL.asm
 087	008.asm
+088  TeleportAtTime.asm
+089  TeleportAtTime.asm
 090	green_garden_main.asm
 094	SPECIAL.asm
 095	Layer2Smash_095.asm
@@ -90,6 +96,7 @@ level:
 09A	SPECIAL.asm
 09B	SPECIAL.asm
 09E	abcd.asm
+09F  TeleportAtTime.asm
 0A0	DisableLR_freescrollbabey.asm
 0A1	freescrollbabey.asm
 0A2	freescrollbabey.asm
@@ -139,6 +146,7 @@ level:
 0D5	SPECIAL.asm
 0D6	SPECIAL.asm
 0D8	SPECIAL.asm
+0DA  TeleportAtTime.asm
 0DB	NoStatus_DisableLR.asm
 0DC	trivia_win32.asm
 0DD	MinStatus.asm
@@ -151,7 +159,9 @@ level:
 0E4	Credits.asm
 0E5	Credits.asm
 0EC	SPECIAL.asm
+0ED  TeleportAtTime.asm
 0EE	SPECIAL_EE.asm
+0EF  TeleportAtTime.asm
 0F0	F0_scroll.asm
 0F2	freescrollbabey.asm
 0F3	FG_AutoScroll.asm

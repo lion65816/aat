@@ -685,6 +685,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 746b	0	A block that will act like tile 25 for sprites
 747a	0	A block that will act like tile 25 for sprites
 747b	0	A block that will act like tile 25 for sprites
+7b94	0	Teleports the player if a specific button is pressed.
 7f09	0	
 7f66	0	
 7f6d	0	conveyer move left fast

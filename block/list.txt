@@ -473,6 +473,7 @@ R56C0-56D1:130 question_mark/giant_question_block_single.asm
 747A:130 mario_solid.asm
 747B:130 mario_solid.asm
 745C:130 sprite_solid.asm
+7B94:25 teleport_button.asm
 7F6D:130 conveyer move left fast.asm
 7F6E:130 conveyer move left fast.asm
 7F6E:130 conveyer move left fast.asm

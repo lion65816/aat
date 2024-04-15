@@ -38,7 +38,7 @@ Locals:
 23  originals/35 Bowser Zoom In.txt
 24  originals/36 Bowser Zoom Out.txt
 25  originals/37 Princess Peach is Rescued.txt
-26  silence/38 Staff Roll.txt
+26  originals/38 Staff Roll.txt
 27  originals/39 The Yoshis Are Home.txt
 28  silence/40 Cast List.txt
 29  Percussive_Maintenance.txt
