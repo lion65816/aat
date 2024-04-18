@@ -10,6 +10,10 @@
 09 postgame_boss.txt
 0A demoka.txt
 0B panda.txt
-0C broadsword.txt
-0D broadsword_diary.txt
-0E trivia.txt
+0C trivia.txt
+0D broadsword.txt
+0E broadsword_diary1.txt
+0F broadsword_diary2.txt
+10 broadsword_diary3.txt
+11 broadsword_diary4.txt
+12 broadsword_diary5.txt

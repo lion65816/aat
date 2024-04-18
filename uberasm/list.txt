@@ -329,7 +329,6 @@ level:
 1C8	DisableSideExit.asm
 1CC	shmup_with_hp_boss.asm
 1CE	BabaBlocks.asm
-1CF	BabaBlocks.asm
 1D0	FilterYoshi_DeathWarp.asm
 1D1	BabaBlocks.asm
 1D3	BabaBlocks.asm

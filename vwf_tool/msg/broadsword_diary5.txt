@@ -1,0 +1,62 @@
+//////////////
+// Scene 12 //
+//////////////
+
+[sprite=4]
+// Uncle Broadsword
+(70,2A,84,08,big)(80,2A,86,08,big)
+(70,3A,A4,08,big)(80,3A,A6,08,big)
+[/sprite]
+The following pages are dedicated to my archaeological findings on Food Desert Island.
+[wait]
+[br]I came across eight steles during my stay on the island, each with puzzling inscriptions.
+[wait]
+[br]Taken together, I hypothesize that the information on these steles may point to this island's latent secrets.
+[wait]
+[br]I have replicated these inscriptions as follows:
+[wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+
+//////////////
+// Scene 13 //
+//////////////
+
+[exani manual=slot 0, frame 0] // Demo (invisible)
+[exani manual=slot 1, frame 0] // Iris (invisible)
+[sprite=54]
+// Demo and Iris
+(58,2A,80,02,big)(98,2A,82,04,big)
+(58,3A,A0,02,big)(98,3A,A2,04,big)
+// Background
+(30,08,00,0F,big)(40,08,00,0F,big)(50,08,20,0F,big)(60,08,40,0F,big)(70,08,60,0F,big)(80,08,0E,0F,big)(90,08,2E,0F,big)(A0,08,4E,0F,big)(B0,08,00,0F,big)(C0,08,00,0F,big)
+(30,18,00,0F,big)(40,18,00,0F,big)(50,18,02,0F,big)(60,18,04,0F,big)(70,18,06,0F,big)(80,18,08,0F,big)(90,18,0A,0F,big)(A0,18,0C,0F,big)(B0,18,00,0F,big)(C0,18,00,0F,big)
+(30,28,00,0F,big)(40,28,00,0F,big)(50,28,22,0F,big)(60,28,24,0F,big)(70,28,26,0F,big)(80,28,28,0F,big)(90,28,2A,0F,big)(A0,28,2C,0F,big)(B0,28,00,0F,big)(C0,28,00,0F,big)
+(30,38,00,0F,big)(40,38,00,0F,big)(50,38,42,0F,big)(60,38,44,0F,big)(70,38,46,0F,big)(80,38,48,0F,big)(90,38,4A,0F,big)(A0,38,4C,0F,big)(B0,38,00,0F,big)(C0,38,00,0F,big)
+(30,48,00,0F,big)(40,48,00,0F,big)(50,48,62,0F,big)(60,48,64,0F,big)(70,48,66,0F,big)(80,48,68,0F,big)(90,48,6A,0F,big)(A0,48,6C,0F,big)(B0,48,00,0F,big)(C0,48,00,0F,big)
+[/sprite]
+...
+[wait]
+[erase]
+
+[exani manual=slot 1, frame 1] // Iris (visible)
+[font color=3]
+[topic]Iris[/topic]
+Hey, what gives?[wait=30] These pages are all missing!
+[wait]
+[erase]
+
+[exani manual=slot 0, frame 1] // Demo (visible)
+[exani manual=slot 1, frame 1] // Iris (visible)
+[font color=2]
+[topic]Demo[/topic]
+Sounds like typical Uncle B.[wait=30] If we want to follow this rabbit hole, it might be worth checking out the last eight places he visited?
+[wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+
+[end=00]
