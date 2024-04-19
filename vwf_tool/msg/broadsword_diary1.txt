@@ -88,7 +88,7 @@ I found a secret pipe underneath a bridge, while dodging a giant fish.
 [/sprite]
 [font color=1]
 [topic]Day 17[/topic]
-I discovered a hidden glade among a grove of Persea.
+While inside a forest of persea, I discovered a remote glade within the road less taken.
 [wait]
 [erase]
 [topic][/topic]

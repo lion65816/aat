@@ -1,3 +1,36 @@
+// Demo's and Iris' facial expressions are in ExGFX299.
+// Set AN2 to ExGFX299, and use the following ExAnimation manual trigger slots:
+// Slot 00, frame 00: Demo (facing right, normal)        Slot 08, frame 00: Iris (facing right, normal)
+// Slot 00, frame 01: Demo (facing right, looking up)    Slot 08, frame 01: Iris (facing right, looking up)
+// Slot 00, frame 02: Demo (facing right, annoyed)       Slot 08, frame 02: Iris (facing right, annoyed)
+// Slot 00, frame 03: Demo (facing right, happy)
+// Slot 00, frame 04: Demo (facing right, shocked)
+// Slot 00, frame 08: Demo (facing left, normal)         Slot 08, frame 08: Iris (facing left, normal)
+// Slot 00, frame 09: Demo (facing left, looking up)     Slot 08, frame 09: Iris (facing left, looking up)
+// Slot 00, frame 0A: Demo (facing left, annoyed)        Slot 08, frame 0A: Iris (facing left, annoyed)
+// Slot 00, frame 0B: Demo (facing left, happy)
+// Slot 00, frame 0C: Demo (facing left, shocked)
+
+/////////////
+// Scene 1 //
+/////////////
+
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[exani manual=slot 8, frame 8] // Iris (facing left, normal)
+[sprite=58]
+// Demo and Iris
+                                                                             (78,2A,80,02,big)        (90,2A,82,04,big)
+                                                                             (78,3A,A0,42,big)        (90,3A,A2,04,big)
+// Sign
+                                                   (60,28,C4,0A,big)(70,28,C6,0A,big)
+                                                   (60,38,E4,0A,big)(70,38,E6,0A,big)
+// Background
+(30,08,88,0C,big)(40,08,8A,0C,big)(50,08,8C,0C,big)(60,08,8E,0C,big)(70,08,00,0D,big)(80,08,02,0D,big)(90,08,04,0D,big)(A0,08,06,0D,big)(B0,08,08,0D,big)(C0,08,0A,0D,big)
+(30,18,A8,0C,big)(40,18,AA,0C,big)(50,18,AC,0C,big)(60,18,AE,0C,big)(70,18,20,0D,big)(80,18,22,0D,big)(90,18,24,0D,big)(A0,18,26,0D,big)(B0,18,28,0D,big)(C0,18,2A,0D,big)
+(30,28,C8,0C,big)(40,28,CA,0C,big)(50,28,CC,0C,big)(60,28,CE,0C,big)(70,28,40,0D,big)(80,28,42,0D,big)(90,28,44,0D,big)(A0,28,46,0D,big)(B0,28,48,0D,big)(C0,28,4A,0D,big)
+(30,38,E8,0C,big)(40,38,EA,0C,big)(50,38,EC,0C,big)(60,38,EE,0C,big)(70,38,60,0D,big)(80,38,62,0D,big)(90,38,64,0D,big)(A0,38,66,0D,big)(B0,38,68,0D,big)(C0,38,6A,0D,big)
+(30,48,E0,0C,big)(40,48,E0,0C,big)(50,48,E0,0C,big)(60,48,E0,0C,big)(70,48,E0,0C,big)(80,48,E0,0C,big)(90,48,E0,0C,big)(A0,48,E0,0C,big)(B0,48,E0,0C,big)(C0,48,E0,0C,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
 The mall directory says there's a grocery store a few floors up.
@@ -8,6 +41,33 @@ The mall directory says there's a grocery store a few floors up.
 Good.[wait=30] Now let's get the food so we can head back home already!
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 0] // Demo (facing right, normal)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[wait=30]
+
+/////////////
+// Scene 2 //
+/////////////
+
+[sprite=60]
+// Demo and Iris
+                                           (58,2A,80,02,big)        (70,2A,82,04,big)
+                                           (58,3A,A0,02,big)        (70,3A,A2,44,big)
+// Clerk
+                                                                                                                       (9E,28,84,06,big)
+                                                                                                                       (9E,38,A4,06,big)
+// Sign
+                 (40,28,C4,0A,big)(50,28,C6,0A,big)
+                 (40,38,E4,0A,big)(50,38,E6,0A,big)
+// Background
+(30,08,8C,0C,big)(40,08,8E,0C,big)(50,08,00,0D,big)(60,08,02,0D,big)(70,08,04,0D,big)(80,08,06,0D,big)(90,08,08,0D,big)(A0,08,0A,0D,big)(B0,08,0C,0D,big)(C0,08,0E,0D,big)
+(30,18,AC,0C,big)(40,18,AE,0C,big)(50,18,20,0D,big)(60,18,22,0D,big)(70,18,24,0D,big)(80,18,26,0D,big)(90,18,28,0D,big)(A0,18,2A,0D,big)(B0,18,2C,0D,big)(C0,18,2E,0D,big)
+(30,28,CC,0C,big)(40,28,CE,0C,big)(50,28,40,0D,big)(60,28,42,0D,big)(70,28,44,0D,big)(80,28,46,0D,big)(90,28,48,0D,big)(A0,28,4A,0D,big)(B0,28,4C,0D,big)(C0,28,4E,0D,big)
+(30,38,EC,0C,big)(40,38,EE,0C,big)(50,38,60,0D,big)(60,38,62,0D,big)(70,38,64,0D,big)(80,38,66,0D,big)(90,38,68,0D,big)(A0,38,6A,0D,big)(B0,38,6C,0D,big)(C0,38,6E,0D,big)
+(30,48,E0,0C,big)(40,48,E0,0C,big)(50,48,E0,0C,big)(60,48,E0,0C,big)(70,48,E0,0C,big)(80,48,E0,0C,big)(90,48,E0,0C,big)(A0,48,E0,0C,big)(B0,48,E0,0C,big)(C0,48,E0,0C,big)
+[/sprite]
 [font color=3]
 [topic]?????[/topic]
 Trust me, you don't want to go there right now.[wait=30] It's bedlam, I tell you!
@@ -20,27 +80,65 @@ And why should we take your word for it?[wait=30] We're on a tight schedule here
 [erase]
 [font color=3]
 [topic]?????[/topic]
-I used to work there.[wait=30].[wait=30].[wait=30] for less than a day.[wait=30] Then the Manager showed up with some kinda "washing machine". They twisted a few knobs, said a bunch of words, and next thing I know, the whole place's gone bonkers![wait=30] Not sure what happened, but it's too dangerous to go back in the grocery store now.
+I used to work there...[wait=30] for less than a day.[wait=30] Then the Manager showed up with some kinda "washing machine".
+[wait]
+[br]They twisted a few knobs, said a bunch of words, and next thing I know, the whole place's gone bonkers![wait=30] Not sure what happened, but it's too dangerous to go back in the grocery store now.
 [wait]
 [erase]
+
+/////////////
+// Scene 3 //
+/////////////
+
+[exani manual=slot 0, frame 1] // Demo (facing right, looking up)
 [font color=1]
 [topic]Demo[/topic]
-Wait, a "washing machine"...?
+(Wait, a "washing machine"...?)
 [wait]
 [erase]
+
+/////////////
+// Scene 4 //
+/////////////
+
+[exani manual=slot 0, frame 0] // Demo (facing right, normal)
+[exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
-Look, bub, we just need some veggies for our Stocking Day dinner.[wait=30] We already beat up the five scourges of the island to get this far.[wait=30] I think we can handle a little bedlam.
+Look, bub, we just need some veggies for our Stocking Day dinner.[wait=30] We already beat up the four scourges of the island to get this far.[wait=30] I think we can handle a little bedlam.
 [wait]
 [erase]
+
+/////////////
+// Scene 5 //
+/////////////
+
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
 [font color=3]
 [topic]?????[/topic]
-But the grocery store's the epicenter of all this madness.[wait=30] A co-worker tried to sneak in earlier to grab us some beefsteak and a couple yellow Forest Guardians and almost got killed![wait=30] Sucks 'cause we're pretty hungry.[wait=30] We've been stuck here for days!
+But the grocery store's the epicenter of all this madness.[wait=30] A co-worker tried to sneak in earlier to grab us some beefsteak and a couple yellow Forest Guardians and almost got killed!
+[wait]
+[br]Sucks 'cause we're pretty hungry.[wait=30] We've been stuck here for days!
 [wait]
 [erase]
+
+/////////////
+// Scene 6 //
+/////////////
+
+[exani manual=slot 0, frame 4] // Demo (facing right, shocked)
 [font color=1]
 [topic]Demo[/topic]
-YELLOW Forest Guardians?[wait=30] Yuck...[wait=30] But wait a minute.[wait=30] Why can't you leave?
+YELLOW Forest Guardians?[wait=30] Yuck...
+[wait]
+[erase]
+
+/////////////
+// Scene 7 //
+/////////////
+
+[exani manual=slot 0, frame 0] // Demo (facing right, normal)
+But wait a minute.[wait=30] Why can't you leave?
 [wait]
 [erase]
 [font color=3]
@@ -48,6 +146,36 @@ YELLOW Forest Guardians?[wait=30] Yuck...[wait=30] But wait a minute.[wait=30] W
 It's not just us.[wait=30] It seems like EVERYONE who was in the mall when things went cuckoo is stuck here!
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[exani manual=slot 8, frame 8] // Iris (facing left, normal)
+[wait=30]
+
+/////////////
+// Scene 8 //
+/////////////
+
+[sprite=62]
+// Demo and Iris
+                                                            (68,2A,80,02,big)        (80,2A,82,04,big)
+                                                            (68,3A,A0,42,big)        (80,3A,A2,04,big)
+// Rachel
+                 (40,2A,86,08,big)
+				 (40,3A,A6,08,big)
+// Clerk
+                                                                                                                                        (AE,28,84,06,big)
+                                                                                                                                        (AE,38,A4,06,big)
+// Sign
+                                  (50,28,C4,0A,big)(60,28,C6,0A,big)
+                                  (50,38,E4,0A,big)(60,38,E6,0A,big)
+// Background
+(30,08,8A,0C,big)(40,08,8C,0C,big)(50,08,8E,0C,big)(60,08,00,0D,big)(70,08,02,0D,big)(80,08,04,0D,big)(90,08,06,0D,big)(A0,08,08,0D,big)(B0,08,0A,0D,big)(C0,08,0C,0D,big)
+(30,18,AA,0C,big)(40,18,AC,0C,big)(50,18,AE,0C,big)(60,18,20,0D,big)(70,18,22,0D,big)(80,18,24,0D,big)(90,18,26,0D,big)(A0,18,28,0D,big)(B0,18,2A,0D,big)(C0,18,2C,0D,big)
+(30,28,CA,0C,big)(40,28,CC,0C,big)(50,28,CE,0C,big)(60,28,40,0D,big)(70,28,42,0D,big)(80,28,44,0D,big)(90,28,46,0D,big)(A0,28,48,0D,big)(B0,28,4A,0D,big)(C0,28,4C,0D,big)
+(30,38,EA,0C,big)(40,38,EC,0C,big)(50,38,EE,0C,big)(60,38,60,0D,big)(70,38,62,0D,big)(80,38,64,0D,big)(90,38,66,0D,big)(A0,38,68,0D,big)(B0,38,6A,0D,big)(C0,38,6C,0D,big)
+(30,48,E0,0C,big)(40,48,E0,0C,big)(50,48,E0,0C,big)(60,48,E0,0C,big)(70,48,E0,0C,big)(80,48,E0,0C,big)(90,48,E0,0C,big)(A0,48,E0,0C,big)(B0,48,E0,0C,big)(C0,48,E0,0C,big)
+[/sprite]
 [font color=3]
 [topic]Rachel[/topic]
 So THAT'S why I haven't heard from ya![wait=30] How ya doing, Clerk?
@@ -58,14 +186,50 @@ So THAT'S why I haven't heard from ya![wait=30] How ya doing, Clerk?
 Rach![wait=30] Nice to see you again!
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 0] // Demo (facing right, normal)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[wait=30]
+
+/////////////
+// Scene 9 //
+/////////////
+
+[sprite=62]
+// Demo and Iris
+                                                            (68,2A,80,02,big)        (80,2A,82,04,big)
+                                                            (68,3A,A0,02,big)        (80,3A,A2,44,big)
+// Rachel
+                                                                                                               (98,2A,86,48,big)
+				                                                                                               (98,3A,A6,48,big)
+// Clerk
+                                                                                                                                        (AE,28,84,06,big)
+                                                                                                                                        (AE,38,A4,06,big)
+// Sign
+                                  (50,28,C4,0A,big)(60,28,C6,0A,big)
+                                  (50,38,E4,0A,big)(60,38,E6,0A,big)
+// Background
+(30,08,8A,0C,big)(40,08,8C,0C,big)(50,08,8E,0C,big)(60,08,00,0D,big)(70,08,02,0D,big)(80,08,04,0D,big)(90,08,06,0D,big)(A0,08,08,0D,big)(B0,08,0A,0D,big)(C0,08,0C,0D,big)
+(30,18,AA,0C,big)(40,18,AC,0C,big)(50,18,AE,0C,big)(60,18,20,0D,big)(70,18,22,0D,big)(80,18,24,0D,big)(90,18,26,0D,big)(A0,18,28,0D,big)(B0,18,2A,0D,big)(C0,18,2C,0D,big)
+(30,28,CA,0C,big)(40,28,CC,0C,big)(50,28,CE,0C,big)(60,28,40,0D,big)(70,28,42,0D,big)(80,28,44,0D,big)(90,28,46,0D,big)(A0,28,48,0D,big)(B0,28,4A,0D,big)(C0,28,4C,0D,big)
+(30,38,EA,0C,big)(40,38,EC,0C,big)(50,38,EE,0C,big)(60,38,60,0D,big)(70,38,62,0D,big)(80,38,64,0D,big)(90,38,66,0D,big)(A0,38,68,0D,big)(B0,38,6A,0D,big)(C0,38,6C,0D,big)
+(30,48,E0,0C,big)(40,48,E0,0C,big)(50,48,E0,0C,big)(60,48,E0,0C,big)(70,48,E0,0C,big)(80,48,E0,0C,big)(90,48,E0,0C,big)(A0,48,E0,0C,big)(B0,48,E0,0C,big)(C0,48,E0,0C,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
 Your name is "Clerk"?[wait=30] Talk about nominative determinism.
 [wait]
 [erase]
+
+//////////////
+// Scene 10 //
+//////////////
+
+[exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
-.[wait=30].[wait=30].[wait=30] And when did you get here, Rachel?
+...[wait=30]And when did you get here, Rachel?
 [wait]
 [erase]
 [font color=3]
@@ -73,6 +237,12 @@ Your name is "Clerk"?[wait=30] Talk about nominative determinism.
 I tailed you and Demo right after y'all opened the Purrtal.[wait=30] It was my only ticket into the nexus.
 [wait]
 [erase]
+
+//////////////
+// Scene 11 //
+//////////////
+
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
 [font color=2]
 [topic]Iris[/topic]
 But I thought all residents of the island were allowed to pass through.
@@ -103,3 +273,8 @@ Yeah, let's kick its proverbial butt.
 Say, grab some tomato juice while you're there?[wait=30] The fountain water tastes bad.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[wait=30]
+
+[end=00]

@@ -1,0 +1,398 @@
+#amk 2
+
+#spc
+{
+    #title   "Robo Gang Johnny"
+    #game    "Chrono Trigger"
+    #author  "Yasunori Mitsuda"
+    #comment "Ported by KevinM"
+}
+
+#path "ct-johnny"
+
+#samples
+{
+    "../default/00 SMW @0.brr"
+    "../default/01 SMW @1.brr"
+    "../default/02 SMW @2.brr"
+    "../default/03 SMW @3.brr"
+    "../default/04 SMW @4.brr"
+    "../EMPTY.brr"
+    "../optimized/06 SMW @22.brr"
+    "../optimized/07 SMW @5.brr"
+    "../optimized/08 SMW @6.brr"
+    "../EMPTY.brr"
+    "../optimized/0A SMW @9.brr"
+    "../default/0B SMW @10.brr"
+    "../optimized/0C SMW @13.brr"
+    "../EMPTY.brr"
+    "../optimized/0E SMW @29.brr"
+    "../optimized/0F SMW @21.brr"
+    "../EMPTY.brr"
+    "../EMPTY.brr"
+    "../optimized/12 SMW @15.brr"
+    "../EMPTY.brr"
+
+    "Trumpet.brr"
+    "Contrabass.brr"
+    "Piano (Mid).brr"
+    "Clap.brr"
+    "Organ.brr"
+    "Kick.brr"
+    "Wood Block.brr"
+    "Floor Tom.brr"
+    "Closed Hi-Hat.brr"
+    "Open Hi-Hat.brr"
+    "Hanging Tom.brr"
+}
+
+#instruments
+{
+    "Trumpet.brr"       $FF $E0 $A0 $08 $01 ; @30
+    "Contrabass.brr"    $FF $F0 $A0 $02 $91 ; @31
+    "Piano (Mid).brr"   $FF $EE $A0 $04 $72 ; @32
+    "Clap.brr"          $FF $E0 $A0 $02 $DC ; @33
+    "Organ.brr"         $FF $E0 $A0 $07 $91 ; @34
+    "Kick.brr"          $FF $E0 $A0 $01 $83 ; @35
+    "Wood Block.brr"    $FF $F4 $A0 $02 $AE ; @36
+    "Floor Tom.brr"     $FF $E0 $A0 $06 $03 ; @37
+    "Closed Hi-Hat.brr" $FF $E0 $A0 $02 $DC ; @38
+    "Open Hi-Hat.brr"   $FF $E0 $A0 $02 $05 ; @39
+    "Hanging Tom.brr"   $FF $E0 $A0 $08 $97 ; @40
+}
+
+;==================;
+;       Echo       ;
+;==================;
+$EF $E7 $28 $28
+$F1 $05 $46 $01
+
+;==================;
+; Volume  /  Tempo ;
+;==================;
+   w140       t50
+
+; Original volumes: w202
+
+"I35 = @35 o6"
+"I36 = @36 o5"
+"I37 = @37 o4"
+"I38 = @38 o6"
+"I39 = @39 o6"
+"I40 = @40 o4"
+
+;==================;
+;    Channel #0    ;
+;==================;
+#0 $F4 $02 / r1^1^1^4
+@30 v215 y10 o4 l16 $DE $08 $14 $08
+[[
+r1
+g12 r6
+e12 r=56
+c+ r
+d8 c+ r
+d8 c+ r
+d8 e r
+g r e r=60
+g12 r6
+e12 r6
+c+ r
+d12 r6 < b r >
+]]2
+
+[[
+r2^4.
+$F4 $01 d+48 e8 $F4 $01 r=20 d r e8 g8 r8
+$F4 $01 g+48 a8 $F4 $01 r=20 a r g8 a r
+$F4 $01 a+48 b12 $F4 $01 r48 a r g8 a r e r
+r1^8
+]]2
+
+r2^4
+
+;==================;
+;    Channel #1    ;
+;==================;
+#1 /
+@31 v255 y10 o4 l16
+[g+=60 r g+32 r.
+d+=60 r d+32 r.
+g+=60 r g+32 r.
+> d8 d+32 r. d8 d+32 r. <]
+
+g+=60 r g+32 r.
+d+=60 r d+32 r.
+g+ r2^4..
+
+*4
+
+c+4 r8 [c+32 r.
+g+=60 r g+32 r.
+d+=60 r d+32 r.
+a+=60 r a+32 r.
+r8 g+8 b r > c+ r
+d8 d+ r <] b r g+ r
+f+4 g4
+g+4 r8 d+ d
+
+c+=60 r * b8 g+ r
+r8 > d+ r < c+8 d r
+d+2
+
+;==================;
+;    Channel #2    ;
+;==================;
+#2 / r4
+@32 v156 y13 o3 l24
+[a r3
+a4. r8
+a r3
+a r=40
+a4 r8
+a r3
+a4.] r8
+b r=40
+r1
+*
+a r=40
+a8. r16
+a r=40
+a r=40
+a8. r16
+a r3
+a4.
+r4
+a r3
+a r=40
+a4 r8
+a r3
+a4 r8
+a r=40
+a r3
+a r=40
+a4 r8
+a r=40
+a r=40
+a8. r16
+a r=40
+b r=40
+b r=40
+b8. r16
+b r3
+r1^2
+
+@33 v255 y10 o6 c4 r8
+
+@32 v156 y13 o3
+a r=40
+a r=40
+a8. r16
+a r=40
+b r=40
+b8. r16
+b r=40
+b r3
+r1^2
+
+@33 v255 y10 o6 c4
+
+;==================;
+;    Channel #3    ;
+;==================;
+#3 l8 / ; Originally channel #7
+(70)[
+I38 y3 [[v235 c v196 c]]7 v235 c
+I39 v188 f
+]
+I38 (71)[v235 c v196 c]4 v235 c^2
+
+I40 v196 y9 c+ c+16 v204 y13 < a+ v224 y16 g16
+
+(70)4
+
+[[
+I38 (71)7 v235 c
+I39 v188 f4
+I38 v196 c (71)3
+I39 v188 f4 f4 f4.
+I38 v196 c
+]]2
+
+;==================;
+;    Channel #4    ;
+;==================;
+#4 l8 / ; Originally channel #6
+(60)[
+I35 v255 y10 g4
+I36 v253 y8 a+
+I35 v255 y10 g g4
+I36 v253 y8 a+
+I35 v255 y10 g4 g
+I36 v253 y8 a+
+I35 v255 y10 g g4
+I36 v253 y8 a+4
+]
+(61)[
+I35 v255 y10 g4
+I36 v253 y8 a+
+]
+(62)[
+I35 v255 y10 g g4
+I36 v253 y8 a+
+]
+I35 v255 y10 g g4..
+I37 v185 y8 a32 v208 a32 v231 a2
+
+(60)3
+
+(61)
+(62)2
+I35 v255 y10 g4 g
+I36 v253 y8 a+
+(62)
+I35 v255 y10 g g4
+I36 v253 y8 a+4
+(60)
+(63)[
+I35 v255 y10 g4 g4 g4
+I36 v253 y8 a+4
+]
+(60)
+I35 v255 y10 g4
+I36 v253 y8 a+4.
+I35 v255 y10 g
+I36 v253 y8 a+4
+(63)
+
+;==================;
+;    Channel #5    ;
+;==================;
+#5 / r1^1^1^2
+@34 v100 y7 o5 l32 $DE $06 $14 $18 $EA $18
+$DC $48 $08 $E8 $48 $82 c4.
+$DC $26 $0F $F4 $01 < a+64 g+64 g64 f64 d+64 c+64 c64
+< a+64 g+64 g64 f64 d+64 c+64 r. $F4 $01
+r1^4
+
+> y8
+[[f r16.
+f8 d+ r16.
+f8 d+ r4...
+r1]]3
+r4
+f24 r12 d+24 r12
+c8 r8
+c r8..
+[c r8..
+c r8..
+c r8..
+d r8..
+d r8..
+d r8..
+d r8..
+c8 d+ r16.
+f r16. f+8
+g r16. d+8
+c r16.]
+< a+8. r16
+b8. r16
+> c24 r12
+f48 f+48 g=40
+f16 d+16
+c4 r8
+*
+
+o4 r8 f f+ [[g a+]]11 g r16.
+
+;==================;
+;    Channel #6    ;
+;==================;
+#6 r4 ; Originally channel #4
+@32 v130 y13 o3 l32
+d24 r3
+d4. r8
+d24 r3
+d24 r=40
+d4 r8
+d24 r3
+d4. r8
+e24 r=40
+r4
+
+@34 v100 y7 $DE $06 $14 $18 $EA $18
+$DC $48 $08 $E8 $48 $82 > g4. r1^2
+
+[[c r16.
+c8 r8
+c8 r1^2]]3
+r4
+c24 r12 < a+24 r12
+g+8 r8
+g+ r8..
+[g+ r8..
+g+ r8..
+g+ r8..
+a+ r8..
+a+ r8..
+a+ r8..
+a+ r8..
+r1]
+r1^4
+*
+
+o3 a+2^4.
+
+;==================;
+;    Channel #7    ;
+;==================;
+#7 / r4 ; Originally channel #3
+@32 v145 y13 o3 l24
+[e r3
+e4. r8
+e r3
+e r=40
+e4 r8
+e r3
+e4.] r8
+f+ r=40
+r1
+*
+e r=40
+e8. r16
+e r=40
+e r=40
+e8. r16
+e r3
+e4.
+r4
+e r3
+e r=40
+e4 r8
+e r3
+e4 r8
+e r=40
+e r3
+e r=40
+e4 r8
+e r=40
+e r=40
+e8. r16
+e r=40
+f+ r=40
+f+ r=40
+f+8. r16
+f+ r=40
+
+r1^1
+
+e r=40
+e r=40
+e8. r16
+e r=40
+f+ r=40
+f+8. r16
+f+ r=40
+f+ r3
+
+r1^2^4
