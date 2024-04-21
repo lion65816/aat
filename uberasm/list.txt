@@ -158,6 +158,12 @@ level:
 0E3	Credits.asm
 0E4	Credits.asm
 0E5	Credits.asm
+0E6	Credits.asm
+0E7	Credits.asm
+0E8	Credits.asm
+0E9	Credits.asm
+0EA	Credits.asm
+0EB	Credits.asm
 0EC	SPECIAL.asm
 0ED  TeleportAtTime.asm
 0EE	SPECIAL_EE.asm
