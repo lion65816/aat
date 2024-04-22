@@ -56,6 +56,11 @@ main:
 !EventBit = 1<<(7-(!Event&7))
 !EventRAM = $1F02+!EventIndex|!addr
 
+LDA $13D9|!addr             ; if not on a level tile skip
+    CMP #$03                    
+	BEQ ++
+	RTL
+++
 LDA !EventRAM
 AND #!EventBit
 BNE +

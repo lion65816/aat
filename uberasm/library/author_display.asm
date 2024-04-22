@@ -6,7 +6,7 @@
 !y_pos = $1B
 
 ; YXCPPPTT properties for all letters.
-!props = $39
+!props = $3D
 
 ; How many letters in each entry (automatically calculated).
 !letters = ((AuthorNames_end-AuthorNames)/96)
