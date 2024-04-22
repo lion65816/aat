@@ -17,7 +17,7 @@ I found a secret passage in a cave of frogs, with a door at the end of it.
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 9 //
@@ -38,6 +38,6 @@ Practicing for my marathon, I ran very quickly to the end of a boardwalk.
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 [end=00]

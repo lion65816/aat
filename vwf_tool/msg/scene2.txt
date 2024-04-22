@@ -15,6 +15,8 @@
 // Scene 1 //
 /////////////
 
+[skip=end]
+
 [exani manual=slot 0, frame 8] // Demo (facing left, normal)
 [exani manual=slot 8, frame 0] // Iris (facing right, normal)
 [sprite=60]
@@ -33,14 +35,14 @@
 [/sprite]
 [font color=1]
 [topic]Demo[/topic]
-So where's the grocery store?[wait=30] We're pretty far from the cabin now.
+So where's the grocery store?[wait=15] We're pretty far from the cabin now.
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
 [exani manual=slot 0, frame 0] // Demo (facing right, normal)
 [exani manual=slot 8, frame 0] // Iris (facing right, normal)
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 2 //
@@ -65,7 +67,7 @@ So where's the grocery store?[wait=30] We're pretty far from the cabin now.
 [/sprite]
 [font color=3]
 [topic]Mystery Person[/topic]
-HEY![wait=30] Check it out![wait=30] Don't miss out on this SWEET deal!
+HEY![wait=15] Check it out![wait=15] Don't miss out on this SWEET deal!
 [wait]
 [erase]
 [font color=2]
@@ -77,7 +79,7 @@ Maybe that loudmouth knows.
 [sprite=erase]
 [exani manual=slot 0, frame 0] // Demo (facing right, normal)
 [exani manual=slot 8, frame 0] // Iris (facing right, normal)
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 3 //
@@ -109,17 +111,17 @@ Excuse me, do you know where the nearest grocery store-
 [erase]
 [font color=3]
 [topic]Rachel[/topic]
-Howdy![wait=30] I'm Rachel, pilot and mechanic extraordinaire![wait=30] You don't look like you're from 'round these parts![wait=30] Say, what are your names?
+Howdy![wait=15] I'm Rachel, pilot and mechanic extraordinaire![wait=15] You don't look like you're from 'round these parts![wait=15] Say, what are your names?
 [wait]
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-I'm Demo, and the tall one is Iris.[wait=30] We're just visiting and we're looking for-
+I'm Demo, and the tall one is Iris.[wait=15] We're just visiting and we're looking for-
 [wait]
 [erase]
 [font color=3]
 [topic]Rachel[/topic]
-Transportation?[wait=30] Then you're in luck![wait=30] See these jets?[wait=30] I'm renting them out CHEAP![wait=30] These babies are sleek, fast, certified green, and positively GLEAMING!
+Transportation?[wait=15] Then you're in luck![wait=15] See these jets?[wait=15] I'm renting them out CHEAP![wait=15] These babies are sleek, fast, certified green, and positively GLEAMING!
 [wait]
 [erase]
 
@@ -133,12 +135,12 @@ Transportation?[wait=30] Then you're in luck![wait=30] See these jets?[wait=30] 
 Look,
 [wait]
 [erase]
-We really need to find a grocery store.[wait=30] If you can't help us with that, then we're leaving.
+We really need to find a grocery store.[wait=15] If you can't help us with that, then we're leaving.
 [wait]
 [erase]
 [font color=3]
 [topic]Rachel[/topic]
-Sorry girls, I've no clue myself.[wait=30] But there's probably one in the city east of here.
+Sorry girls, I've no clue myself.[wait=15] But there's probably one in the city east of here.
 [wait]
 [erase]
 
@@ -155,7 +157,7 @@ Sorry girls, I've no clue myself.[wait=30] But there's probably one in the city 
 [erase]
 [font color=3]
 [topic]Rachel[/topic]
-Actually, there's a shopping mall that's a bit closer.[wait=30] There might be a grocery store inside.[wait=30] You'd have to pass through the Purrtal, though.
+Actually, there's a shopping mall that's a bit closer.[wait=15] There might be a grocery store inside.[wait=15] You'd have to pass through the Purrtal, though.
 [wait]
 [erase]
 
@@ -166,12 +168,12 @@ Actually, there's a shopping mall that's a bit closer.[wait=30] There might be a
 [exani manual=slot 0, frame 0] // Demo (facing right, normal)
 [font color=2]
 [topic]Iris[/topic]
-...[wait=30]The what?
+...[wait=15]The what?
 [wait]
 [erase]
 [font color=3]
 [topic]Rachel[/topic]
-The Purrtal.[wait=30] It's our link to the interdimensional nexus, where beings from all walks of time and space can come together.[wait=30] So naturally, it was the perfect place to build a shopping mall.
+The Purrtal.[wait=15] It's our link to the interdimensional nexus, where beings from all walks of time and space can come together.[wait=15] So naturally, it was the perfect place to build a shopping mall.
 [wait]
 [erase]
 [font color=1]
@@ -187,12 +189,12 @@ Jee (sic), this got heavy real quickly.
 [exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
-Wait, so you're telling us that we may have to travel across dimensions...[wait=30] just to buy some food?!
+Wait, so you're telling us that we may have to travel across dimensions...[wait=15] just to buy some food?!
 [wait]
 [erase]
 [font color=3]
 [topic]Rachel[/topic]
-Well, it's not that simple.[wait=30] Y'see, the Purrtal only lets locals pass through, and it doesn't take kindly to outsiders.
+Well, it's not that simple.[wait=15] Y'see, the Purrtal only lets locals pass through, and it doesn't take kindly to outsiders.
 [wait]
 [erase]
 
@@ -203,12 +205,12 @@ Well, it's not that simple.[wait=30] Y'see, the Purrtal only lets locals pass th
 [exani manual=slot 8, frame 0] // Iris (facing right, normal)
 [font color=2]
 [topic]Iris[/topic]
-I guess we'll have to try.[wait=30] We don't have many options here.
+I guess we'll have to try.[wait=15] We don't have many options here.
 [wait]
 [erase]
 [font color=3]
 [topic]Rachel[/topic]
-Say, if you're headed in that direction, could you check up on a dear friend of mine?[wait=30] They started working at the mall a few days ago, but I haven't heard from them since.[wait=30] I'm getting worried...
+Say, if you're headed in that direction, could you check up on a dear friend of mine?[wait=15] They started working at the mall a few days ago, but I haven't heard from them since.[wait=15] I'm getting worried...
 [wait]
 [erase]
 [font color=1]
@@ -218,10 +220,10 @@ Sure, we can do a wellness check for you.
 [erase]
 [font color=3]
 [topic]Rachel[/topic]
-Super![wait=30] Tell you what.[wait=30] Fly back with me to my place, free of charge![wait=30] I've got something special that can help you on your journey.
+Super![wait=15] Tell you what.[wait=15] Fly back with me to my place, free of charge![wait=15] I've got something special that can help you on your journey.
 [wait]
 [erase]
-Plus, I also moonlight as a tour guide![wait=30] So I can give you the deets on any location you visit.
+Plus, I also moonlight as a tour guide![wait=15] So I can give you the deets on any location you visit.
 [wait]
 [erase]
 
@@ -232,7 +234,7 @@ Plus, I also moonlight as a tour guide![wait=30] So I can give you the deets on 
 [exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
-...[wait=30]If you're so knowledgeable about this place, then how do you not know for sure where the nearest grocery store is?
+...[wait=15]If you're so knowledgeable about this place, then how do you not know for sure where the nearest grocery store is?
 [wait]
 [erase]
 
@@ -243,18 +245,18 @@ Plus, I also moonlight as a tour guide![wait=30] So I can give you the deets on 
 [exani manual=slot 0, frame 2] // Demo (facing right, annoyed)
 [font color=3]
 [topic]Rachel[/topic]
-It's all about the online delivery, baby![wait=30] Seriously, who shops for food in person anymore?
+It's all about the online delivery, baby![wait=15] Seriously, who shops for food in person anymore?
 [wait]
 [erase]
 
 [exani manual=slot 0, frame 0] // Demo (facing right, normal)
 [exani manual=slot 8, frame 0] // Iris (facing right, normal)
-Oh![wait=30] Before I forget, here's my business card.[wait=30] Hop on board, and strap in tight!
+Oh![wait=15] Before I forget, here's my business card.[wait=15] Hop on board, and strap in tight!
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 //////////////
 // Scene 11 //
@@ -270,14 +272,15 @@ Oh![wait=30] Before I forget, here's my business card.[wait=30] Hop on board, an
 [/sprite]
 [font color=3]
 [topic]RACHEL'S REBATE ROTORCRAFT[/topic]
-"Your quick ticket 'round the isles!"[wait=30][br]
-Open 24/7 except for Tuesdays at 11:30 AM-12:30 PM[wait=30][br]
-Admission FREE with ownership of business card![wait=30][br]
+"Your quick ticket 'round the isles!"[wait=15][br]
+Open 24/7 except for Tuesdays at 11:30 AM-12:30 PM[wait=15][br]
+Admission FREE with ownership of business card![wait=15][br]
 (hey, look at that, that's you!)
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
+[label=end]
 [end=00]

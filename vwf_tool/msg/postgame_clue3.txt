@@ -25,7 +25,7 @@ It's a long shot, but maybe this fridge has some ingredients we can use.
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 2 //
@@ -49,12 +49,12 @@ It's a long shot, but maybe this fridge has some ingredients we can use.
 [/sprite]
 [font color=1]
 [topic]Demo[/topic]
-...[wait=30]Eh?[wait=30] What's this?
+...[wait=15]Eh?[wait=15] What's this?
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 3 //
@@ -84,7 +84,7 @@ Found a missing page from Uncle Broadsword's diary!
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 3 //
@@ -102,13 +102,13 @@ Found a missing page from Uncle Broadsword's diary!
 [font color=2]
 [topic]Log S[/topic]
 Close two eyes and keep one eye open?
-[wait=30]
+[wait=15]
 [br]
 What does that mean for a cyclops?
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 [end=00]

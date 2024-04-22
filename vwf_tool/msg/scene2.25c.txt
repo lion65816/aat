@@ -15,6 +15,8 @@
 // Scene 4 //
 /////////////
 
+[skip=end]
+
 [exani manual=slot 0, frame 3] // Demo (facing right, happy)
 [exani manual=slot 8, frame 8] // Iris (facing left, normal)
 [sprite=53]
@@ -41,7 +43,7 @@ Uncle B. also said that if we wished to the Windrose and slept quietly, our wish
 [wait]
 [erase]
 [topic][/topic]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 5 //
@@ -51,23 +53,23 @@ Uncle B. also said that if we wished to the Windrose and slept quietly, our wish
 [exani manual=slot 8, frame A] // Iris (facing left, annoyed)
 [font color=2]
 [topic]Iris[/topic]
-...[wait=30]Demo, that was Uncle Broadsword's way of getting us to shut up.[wait=30] We were rowdy back then.
+...[wait=15]Demo, that was Uncle Broadsword's way of getting us to shut up.[wait=15] We were rowdy back then.
 [wait]
-[br]Besides, the story doesn't make sense.[wait=30] Shouldn't the ABCDs have wished for their freedom instead of socks?
+[br]Besides, the story doesn't make sense.[wait=15] Shouldn't the ABCDs have wished for their freedom instead of socks?
 [wait]
 [erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 6 //
 /////////////
 
 [exani manual=slot 8, frame 8] // Iris (facing left, normal)
-Oh well.[wait=30] The only part of Stocking Day that I care about is the feast we'll be having.
+Oh well.[wait=15] The only part of Stocking Day that I care about is the feast we'll be having.
 [wait]
 [erase]
 [topic][/topic]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 7 //
@@ -76,11 +78,11 @@ Oh well.[wait=30] The only part of Stocking Day that I care about is the feast w
 [exani manual=slot 0, frame 2] // Demo (facing right, annoyed)
 [font color=1]
 [topic]Demo[/topic]
-Iris![wait=30] Don't be like that.[wait=30] There's more to Stocking Day than the food.
+Iris![wait=15] Don't be like that.[wait=15] There's more to Stocking Day than the food.
 [wait]
 [erase]
 [topic][/topic]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 8 //
@@ -94,7 +96,7 @@ Well, it's not every day we get to enjoy a dinner made with store-quality produc
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 9 //
@@ -120,11 +122,12 @@ Well, it's not every day we get to enjoy a dinner made with store-quality produc
 [/sprite]
 [font color=2]
 [topic]Iris[/topic]
-C'mon, let's go![wait=30] There might be a grocery store in the city up ahead.
+C'mon, let's go![wait=15] There might be a grocery store in the city up ahead.
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
+[label=end]
 [end=00]

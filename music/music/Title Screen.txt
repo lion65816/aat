@@ -1,0 +1,127 @@
+#amk 2
+
+#SPC
+
+{
+	#title "Title Screen"
+	#game "Mario is Missing! (NES)"
+	#author "Paul Wilkinson"
+	#comment "ported by S1Z2"
+}
+
+#path "MiM NES - Title Screen"
+
+#samples
+{
+#default
+"Square 12.5% o5l.brr"
+"Square 12.5% o4h.brr"
+"Square 12.5% o4l.brr"
+"Square 12.5% o3h.brr"
+"Square 12.5% o3l.brr"
+
+"Triangle o3l.brr"
+"Triangle o2h.brr"
+"Triangle o2l.brr"
+
+"Hat.brr"
+}
+
+#instruments
+{
+"Square 12.5% o5l.brr"         $00 $00 $7F $03 $FD ; @30
+"Square 12.5% o4h.brr"         $00 $00 $7F $05 $FD ; @31
+"Square 12.5% o4l.brr"         $00 $00 $7F $07 $FD ; @32
+"Square 12.5% o3h.brr"         $00 $00 $7F $0B $FD ; @33
+"Square 12.5% o3l.brr"         $00 $00 $7F $0F $FD ; @34
+
+"Triangle o3l.brr"             $00 $00 $7F $10 $00 ; @35
+"Triangle o2h.brr"             $00 $00 $7F $18 $00 ; @36
+"Triangle o2l.brr"             $00 $00 $7F $20 $00 ; @37
+"Hat.brr"                      $00 $00 $7F $0A $80 ; @38
+}
+
+; - Square and Triangle Stuff - ;
+
+"S12o5l=@30 o5"
+"S12o4h=@31 o4"
+"S12o4l=@32 o4"
+"S12o3h=@33 o3"
+"S12o3l=@34 o3"
+
+"To3l=@35 o3"
+"To2h=@36 o2"
+"To2l=@37 o2"
+
+; - Volume Commands and Macros - ;
+
+(!100)[v130 $E8 $20 $10]
+
+#0 w230 t40 ; w255
+
+$F4 $02 $F4 $01
+
+/
+
+y10 l16
+
+(!100,-1)
+
+r8 S12o3l f S12o3h a+8a+8r4
+S12o4l df8 S12o4h g8a8 S12o4l f8d8f8r4^16
+f8f8f8 S12o4h g8a8r8 f+16.f+8f+8f+8
+
+S12o4l f8r8^32
+S12o4h a+32g32 S12o4l f8 S12o4h ga+8 S12o5l c c+=2 d=22 rd8rc8
+S12o4h a+8rg [S12o5l c+8c S12o4h a+8f+a+8 S12o5l c8r S12o4h a+8r]
+[[r2]]6
+f+48g48g+8 r4.^48g
+S12o5l c+8c S12o4h a+8ga+8 S12o5l c8r S12o4h g 
+S12o5l c+=2 d=22 rd8 S12o4h g8rga+8 S12o5l c
+*r4
+S12o4h g8r4
+
+#1
+
+$F4 $01
+
+/
+
+y10 l16
+
+(!100,-1)
+
+$EE $08
+
+r8. S12o4l d8d8r1^4^16..d8d8d8d+8f8r8^64
+S12o5l c16.c8 S12o4h a+8 S12o5l c8d8
+r1^4^16.
+[S12o4h f+8r4 S12o4l f8d+8rd8r4^16] r4.
+S12o5l c8rc8rc8r S12o4h a8 S12o5l c8rc8r4.. S12o4h a
+S12o5l c8rc8 S12o4h a16. S12o5l c8d8e8c8 r1^1^16.
+*S12o3h g8r4
+
+#2
+v150 y10 l16
+
+(1)[To2h a+8r8.a+ To2l f8r8.f To3l d8 r8.
+To2l f To3l c+8 r8. To2l f To3l c8r8.c To2h g8
+r8.g To3l d+8r8. To2h gbr8 To3l cr8]
+
+To2h a+8r8.a+ To2l f8r8.f To3l cr4
+c To2h gr To2l f To2h a+r To3l c
+
+(2)[To2h f+r8 To3l c+r8 To2l fr8 To2h ar8a+r8ar8 To3l cr8
+To2l f To2h ga]
+
+(1)
+To3l c+8r8.c+ To2h g+8r8.g+ To3l dr4
+d To2h ar To2l f To2h a+r To3l c
+(2)
+
+#3
+v115 o4 @38 y10 l16
+
+[[
+[cccc8c c8.c8c c8.c8c ]2 c8.c8c cccc8c
+]]4

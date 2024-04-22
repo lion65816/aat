@@ -15,6 +15,8 @@
 // Scene 1 //
 /////////////
 
+[skip=end]
+
 [exani manual=slot 0, frame 8] // Demo (facing left, normal)
 [exani manual=slot 8, frame 8] // Iris (facing left, normal)
 [sprite=58]
@@ -38,14 +40,14 @@ The mall directory says there's a grocery store a few floors up.
 [erase]
 [font color=2]
 [topic]Iris[/topic]
-Good.[wait=30] Now let's get the food so we can head back home already!
+Good.[wait=15] Now let's get the food so we can head back home already!
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
 [exani manual=slot 0, frame 0] // Demo (facing right, normal)
 [exani manual=slot 8, frame 0] // Iris (facing right, normal)
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 2 //
@@ -70,19 +72,19 @@ Good.[wait=30] Now let's get the food so we can head back home already!
 [/sprite]
 [font color=3]
 [topic]?????[/topic]
-Trust me, you don't want to go there right now.[wait=30] It's bedlam, I tell you!
+Trust me, you don't want to go there right now.[wait=15] It's bedlam, I tell you!
 [wait]
 [erase]
 [font color=2]
 [topic]Iris[/topic]
-And why should we take your word for it?[wait=30] We're on a tight schedule here.
+And why should we take your word for it?[wait=15] We're on a tight schedule here.
 [wait]
 [erase]
 [font color=3]
 [topic]?????[/topic]
-I used to work there...[wait=30] for less than a day.[wait=30] Then the Manager showed up with some kinda "washing machine".
+I used to work there...[wait=15] for less than a day.[wait=15] Then the Manager showed up with some kinda "washing machine".
 [wait]
-[br]They twisted a few knobs, said a bunch of words, and next thing I know, the whole place's gone bonkers![wait=30] Not sure what happened, but it's too dangerous to go back in the grocery store now.
+[br]They twisted a few knobs, said a bunch of words, and next thing I know, the whole place's gone bonkers![wait=15] Not sure what happened, but it's too dangerous to go back in the grocery store now.
 [wait]
 [erase]
 
@@ -105,7 +107,7 @@ I used to work there...[wait=30] for less than a day.[wait=30] Then the Manager 
 [exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
-Look, bub, we just need some veggies for our Stocking Day dinner.[wait=30] We already beat up the four scourges of the island to get this far.[wait=30] I think we can handle a little bedlam.
+Look, bub, we just need some veggies for our Stocking Day dinner.[wait=15] We already beat up the four scourges of the island to get this far.[wait=15] I think we can handle a little bedlam.
 [wait]
 [erase]
 
@@ -116,9 +118,9 @@ Look, bub, we just need some veggies for our Stocking Day dinner.[wait=30] We al
 [exani manual=slot 8, frame 0] // Iris (facing right, normal)
 [font color=3]
 [topic]?????[/topic]
-But the grocery store's the epicenter of all this madness.[wait=30] A co-worker tried to sneak in earlier to grab us some beefsteak and a couple yellow Forest Guardians and almost got killed!
+But the grocery store's the epicenter of all this madness.[wait=15] A co-worker tried to sneak in earlier to grab us some beefsteak and a couple yellow Forest Guardians and almost got killed!
 [wait]
-[br]Sucks 'cause we're pretty hungry.[wait=30] We've been stuck here for days!
+[br]Sucks 'cause we're pretty hungry.[wait=15] We've been stuck here for days!
 [wait]
 [erase]
 
@@ -129,7 +131,7 @@ But the grocery store's the epicenter of all this madness.[wait=30] A co-worker 
 [exani manual=slot 0, frame 4] // Demo (facing right, shocked)
 [font color=1]
 [topic]Demo[/topic]
-YELLOW Forest Guardians?[wait=30] Yuck...
+YELLOW Forest Guardians?[wait=15] Yuck...
 [wait]
 [erase]
 
@@ -138,19 +140,19 @@ YELLOW Forest Guardians?[wait=30] Yuck...
 /////////////
 
 [exani manual=slot 0, frame 0] // Demo (facing right, normal)
-But wait a minute.[wait=30] Why can't you leave?
+But wait a minute.[wait=15] Why can't you leave?
 [wait]
 [erase]
 [font color=3]
 [topic]?????[/topic]
-It's not just us.[wait=30] It seems like EVERYONE who was in the mall when things went cuckoo is stuck here!
+It's not just us.[wait=15] It seems like EVERYONE who was in the mall when things went cuckoo is stuck here!
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
 [exani manual=slot 0, frame 8] // Demo (facing left, normal)
 [exani manual=slot 8, frame 8] // Iris (facing left, normal)
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 8 //
@@ -178,19 +180,19 @@ It's not just us.[wait=30] It seems like EVERYONE who was in the mall when thing
 [/sprite]
 [font color=3]
 [topic]Rachel[/topic]
-So THAT'S why I haven't heard from ya![wait=30] How ya doing, Clerk?
+So THAT'S why I haven't heard from ya![wait=15] How ya doing, Clerk?
 [wait]
 [erase]
 [font color=3]
 [topic]Clerk[/topic]
-Rach![wait=30] Nice to see you again!
+Rach![wait=15] Nice to see you again!
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
 [exani manual=slot 0, frame 0] // Demo (facing right, normal)
 [exani manual=slot 8, frame 0] // Iris (facing right, normal)
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 9 //
@@ -218,7 +220,7 @@ Rach![wait=30] Nice to see you again!
 [/sprite]
 [font color=1]
 [topic]Demo[/topic]
-Your name is "Clerk"?[wait=30] Talk about nominative determinism.
+Your name is "Clerk"?[wait=15] Talk about nominative determinism.
 [wait]
 [erase]
 
@@ -229,12 +231,12 @@ Your name is "Clerk"?[wait=30] Talk about nominative determinism.
 [exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
-...[wait=30]And when did you get here, Rachel?
+...[wait=15]And when did you get here, Rachel?
 [wait]
 [erase]
 [font color=3]
 [topic]Rachel[/topic]
-I tailed you and Demo right after y'all opened the Purrtal.[wait=30] It was my only ticket into the nexus.
+I tailed you and Demo right after y'all opened the Purrtal.[wait=15] It was my only ticket into the nexus.
 [wait]
 [erase]
 
@@ -250,17 +252,17 @@ But I thought all residents of the island were allowed to pass through.
 [erase]
 [font color=3]
 [topic]Rachel[/topic]
-I was, until I advised the Purrtal on some poor investments.[wait=30] Then I got banned.
+I was, until I advised the Purrtal on some poor investments.[wait=15] Then I got banned.
 [wait]
 [erase]
 [font color=3]
 [topic]Rachel[/topic]
-Anyway, Clerk, I have nothing but the greatest confidence in Demo and Iris here.[wait=30] If anyone can force their way out of a situation, these two can.
+Anyway, Clerk, I have nothing but the greatest confidence in Demo and Iris here.[wait=15] If anyone can force their way out of a situation, these two can.
 [wait]
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-I guess we've been called upon to save the day once again.[wait=30] We'll poke around upstairs and use violence if we have to.
+I guess we've been called upon to save the day once again.[wait=15] We'll poke around upstairs and use violence if we have to.
 [wait]
 [erase]
 [font color=2]
@@ -270,11 +272,12 @@ Yeah, let's kick its proverbial butt.
 [erase]
 [font color=3]
 [topic]Clerk[/topic]
-Say, grab some tomato juice while you're there?[wait=30] The fountain water tastes bad.
+Say, grab some tomato juice while you're there?[wait=15] The fountain water tastes bad.
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
+[label=end]
 [end=00]

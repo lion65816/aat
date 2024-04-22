@@ -2,6 +2,8 @@
 // Scene 3 //
 /////////////
 
+[skip=end]
+
 [sprite=55]
 // Small Demo and Small Iris
                                                                              (78,28,28,03,big)                                          (B0,28,2A,05,big)
@@ -38,6 +40,7 @@ When we were tiny, Uncle B. would tell us stories of the Windrose by the firepla
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
+[label=end]
 [end=00]

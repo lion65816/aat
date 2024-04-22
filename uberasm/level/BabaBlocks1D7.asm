@@ -26,10 +26,15 @@ main:
 	LDA #%00110000 : STA $00	;\ Retry if pressing L+R.
 	JSL RequestRetry_main		;/
 	JSL BabaBlocks_main
+
+	; Increment the event counter only when the
+	; Blue Switch is pressed for the first time.
+	LDA $13D2|!addr
+	BEQ .ret
 	LDA $0DC5|!addr
 	BNE .ret
 	INC $1F2E|!addr
 	LDA #$01
 	STA $0DC5|!addr
-	.ret
+.ret
 	RTL

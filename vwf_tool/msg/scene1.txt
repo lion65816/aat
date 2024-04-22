@@ -1,31 +1,33 @@
+[skip=end]
+
 [font color=2]
 [topic]?????[/topic]
-Demo...[wait=30] Wake up...
+Demo...[wait=15] Wake up...
 [wait]
 [erase]
 [font color=2]
 [topic]Iris[/topic]
-Demo![wait=30] WAKE UP!
+Demo![wait=15] WAKE UP!
 [wait]
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-...Huh?[wait=30] Wha...?
+...Huh?[wait=15] Wha...?
 [wait]
 [erase]
 [font color=2]
 [topic]Iris[/topic]
-Stop lazing around.[wait=30] Reminder that Uncle Broadsword's making us cater the ENTIRE party for Stocking Day, so I'll need your help.
+Stop lazing around.[wait=15] Reminder that Uncle Broadsword's making us cater the ENTIRE party for Stocking Day, so I'll need your help.
 [wait]
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-That's right, it's almost Stocking Day![wait=30] I should go and give Uncle B. his socks!
+That's right, it's almost Stocking Day![wait=15] I should go and give Uncle B. his socks!
 [wait]
 [erase]
 [font color=2]
 [topic]Iris[/topic]
-He's not here, Demo.[wait=30] That's why it's just the two of us, because he's "busy".
+He's not here, Demo.[wait=15] That's why it's just the two of us, because he's "busy".
 [wait]
 [erase]
 [font color=1]
@@ -35,22 +37,22 @@ Oh yeah, I forgot that Uncle B.'s spending another full day at his digsite.
 [erase]
 [font color=2]
 [topic]Iris[/topic]
-He didn't even greet us when we arrived here at his cabin.[wait=30] Sometimes, I think he cares about his work more than he cares about us.
+He didn't even greet us when we arrived here at his cabin.[wait=15] Sometimes, I think he cares about his work more than he cares about us.
 [wait]
 [erase]
 [font color=2]
 [topic]Iris[/topic]
-Anyway, can you lend me a leg?[wait=30] Take out some zucchinis out of the fridge and start chopping them up.
+Anyway, can you lend me a leg?[wait=15] Take out some zucchinis out of the fridge and start chopping them up.
 [wait]
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-Right.[wait=30] Let's see here...
+Right.[wait=15] Let's see here...
 [wait]
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-Uh...[wait=30] we have a problem.
+Uh...[wait=15] we have a problem.
 [wait]
 [erase]
 [font color=2]
@@ -60,22 +62,22 @@ What now?
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-There's nothing in the fridge.[wait=30] I guess Uncle B. mostly orders takeout.
+There's nothing in the fridge.[wait=15] I guess Uncle B. mostly orders takeout.
 [wait]
 [erase]
 [font color=2]
 [topic]Iris[/topic]
-How annoying.[wait=30] Well, looks like we have to go on a food run.[wait=30] Let's head outside and see if there's any grocery stores nearby.
+How annoying.[wait=15] Well, looks like we have to go on a food run.[wait=15] Let's head outside and see if there's any grocery stores nearby.
 [wait]
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-What, can't we gather food from ? blocks?[wait=30] Calle and I had so much fun doing that with Uncle B. last year!
+What, can't we gather food from ? blocks?[wait=15] Calle and I had so much fun doing that with Uncle B. last year!
 [wait]
 [erase]
 [font color=2]
 [topic]Iris[/topic]
-And then the holiday dinner was incredibly bland.[wait=30] This is supposed to be a feast, Demo.[wait=30] We need store-quality produce.
+And then the holiday dinner was incredibly bland.[wait=15] This is supposed to be a feast, Demo.[wait=15] We need store-quality produce.
 [wait]
 [erase]
 [font color=1]
@@ -83,8 +85,6 @@ And then the holiday dinner was incredibly bland.[wait=30] This is supposed to b
 And so, the voice of reason has spoken.
 [wait]
 [erase]
-[font color=3]
-[topic]Message box[/topic]
-Filled with determination, Demo and Iris seek out ingredients for holiday dinner.[wait=30] Will they find a grocery store in time?
-[wait]
-[erase]
+
+[label=end]
+[end=00]

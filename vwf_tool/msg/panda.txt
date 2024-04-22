@@ -21,20 +21,20 @@
 [/sprite]
 [font color=1]
 [topic]The Guy Who Quits History[/topic]
-It's the story of this dude who is just super fed up with the insanity of humanity,[wait=30] and what they did in the past,[wait=30] are doing in the present,[wait=30] and will probably keep doing in the future.
+It's the story of this dude who is just super fed up with the insanity of humanity,[wait=15] and what they did in the past,[wait=15] are doing in the present,[wait=15] and will probably keep doing in the future.
 [wait]
-[br]Mind you,[wait=30] he doesn't want to kill himself,[wait=30] or anything,[wait=30] he still wants to live,[wait=30] and so through an unexplained process,[wait=30] the guy quits history.
+[br]Mind you,[wait=15] he doesn't want to kill himself,[wait=15] or anything,[wait=15] he still wants to live,[wait=15] and so through an unexplained process,[wait=15] the guy quits history.
 [wait]
-[br]Being separated from history,[wait=30] he is now separated from time,[wait=30] he doesn't age and cannot die as his death is bound to affect someone,[wait=30] even a passerby,[wait=30] thus he is contrained to live,[wait=30] actually,[wait=30] completely unnoticed,[wait=30] as a statistically insignificant head in a crowd.
+[br]Being separated from history,[wait=15] he is now separated from time,[wait=15] he doesn't age and cannot die as his death is bound to affect someone,[wait=15] even a passerby,[wait=15] thus he is contrained to live,[wait=15] actually,[wait=15] completely unnoticed,[wait=15] as a statistically insignificant head in a crowd.
 [wait]
 [br]An eternal NPC.
 [wait]
-[br]He cannot have any meaningful conversations,[wait=30] idle chats with strangers are completely immemorable.
+[br]He cannot have any meaningful conversations,[wait=15] idle chats with strangers are completely immemorable.
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 2 //
@@ -61,24 +61,24 @@ It's the story of this dude who is just super fed up with the insanity of humani
 [/sprite]
 [font color=1]
 [topic]The Guy Who Quits History[/topic]
-He cannot purchase anything that is not so popular that his one sale contribution would be noticed by anyone,[wait=30] in fact,[wait=30] he can only go into wholesale superstores and franchised fast food restaurants.
+He cannot purchase anything that is not so popular that his one sale contribution would be noticed by anyone,[wait=15] in fact,[wait=15] he can only go into wholesale superstores and franchised fast food restaurants.
 [wait]
-[br]He cannot hunt or fish for his own food,[wait=30] as he would affect the history of TH.
+[br]He cannot hunt or fish for his own food,[wait=15] as he would affect the history of TH.
 [wait]
-[br]Nothing will ever affect his life or his existence,[wait=30] with the consequence that he will never affect the life or existence of anyone else,[wait=30] in good or in bad,[wait=30] for both the former and the latter. 
+[br]Nothing will ever affect his life or his existence,[wait=15] with the consequence that he will never affect the life or existence of anyone else,[wait=15] in good or in bad,[wait=15] for both the former and the latter. 
 [wait]
 [br]The story doesn't really end.
 [wait]
-[br]Living outside of history,[wait=30] he is free to witness the complete evolution of humanity and its end,[wait=30] and then kind of dicks around on a dead planet until the Sun goes supernova.
+[br]Living outside of history,[wait=15] he is free to witness the complete evolution of humanity and its end,[wait=15] and then kind of dicks around on a dead planet until the Sun goes supernova.
 [wait]
-[br]He then gets to float around in space until the heat death of the universe,[wait=30] never to encounter any extraterrestrial life,[wait=30] as that would affect their history too.
+[br]He then gets to float around in space until the heat death of the universe,[wait=15] never to encounter any extraterrestrial life,[wait=15] as that would affect their history too.
 [wait]
 [br][br]The end.
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 3 //
@@ -103,11 +103,11 @@ He cannot purchase anything that is not so popular that his one sale contributio
 [/sprite]
 [font color=2]
 [topic]Demo and Iris[/topic]
-.[wait=30].[wait=30].
+.[wait=15].[wait=15].
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 [end=00]

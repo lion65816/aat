@@ -17,7 +17,7 @@ I stopped by the old cabin, and helped myself to a snack from the icebox.
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 7 //
@@ -38,6 +38,6 @@ I adventured with a cat llama, who helped me peer through a window.
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 [end=00]

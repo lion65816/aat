@@ -47,59 +47,26 @@ if !SwitchFlags > 2
 endif
 
 load:
+	; Disable the status bar.
+	; Otherwise, there's a conflict with manual trigger 0, which displays the Demo/Iris head.
+	JSL NoStatus_load
+
+	; Lock the screen.
 	STZ $1A
 	STZ $1462|!addr
 	LDA $95
 	STA $1B
 	STA $1463|!addr
 	RTL
-	
+
 init:
-    stz $1411|!addr
-    	LDA $0DC3|!addr
-	BEQ +
-	LDA #$01 : STA $7FC072
-	LDA #$01 : STA $7FC07A
+    STZ $1411|!addr			;> Disable horizontal scroll.
+	LDA $95					;\ Disable vertical scroll
+	BNE +					;| if the screen is 00.
+	STZ $1412|!addr			;/
 +
-	LDA $0DC4|!addr
-	BEQ +
-	LDA #$01 : STA $7FC073
-	LDA #$01 : STA $7FC07B
-+
-	LDA $0DC5|!addr
-	BEQ +
-	LDA #$01 : STA $7FC074
-	LDA #$01 : STA $7FC07C
-+
-	LDA $0DC6|!addr
-	BEQ +
-	LDA #$01 : STA $7FC075
-	LDA #$01 : STA $7FC07D
-+
-	LDA $1F27|!addr
-	BEQ +
-	LDA #$01 : STA $7FC070
-	LDA #$01 : STA $7FC078
-+
-	LDA $1F28|!addr
-	BEQ +
-	LDA #$01 : STA $7FC071
-	LDA #$01 : STA $7FC079
-+
-	LDA $1F29|!addr
-	BEQ +
-	LDA #$01 : STA $7FC076
-	LDA #$01 : STA $7FC07E
-+
-	LDA $1F2A|!addr
-	BEQ +
-	LDA #$01 : STA $7FC077
-	LDA #$01 : STA $7FC07F
-+
-	LDA $95		
-	BNE +		
-	stz $1412|!addr
-rtl
+	JSR check_switch_status
+	RTL
 
 main:
 	STZ $00
@@ -137,47 +104,51 @@ else
 endif
 	STA !CDM16Ram
 	
-	LDA $0DC3|!addr
-	BEQ +
-	LDA #$01 : STA $7FC072
-	LDA #$01 : STA $7FC07A
+	;JSR check_switch_status
+	RTL
+
+check_switch_status:
+	; Brown block gates to the switches.
+    LDA $0DC3|!addr			;\ Green Switch
+	BEQ +					;| Note: Free RAM set in 057.asm.
+	LDA #$01 : STA $7FC072	;|
+	LDA #$01 : STA $7FC07A	;/
 +
-	LDA $0DC4|!addr
-	BEQ +
-	LDA #$01 : STA $7FC073
-	LDA #$01 : STA $7FC07B
+	LDA $0DC4|!addr			;\ Yellow Switch
+	BEQ +					;| Note: Free RAM set in FilterYoshi_15E.asm.
+	LDA #$01 : STA $7FC073	;|
+	LDA #$01 : STA $7FC07B	;/
 +
-	LDA $0DC5|!addr
-	BEQ +
-	LDA #$01 : STA $7FC074
-	LDA #$01 : STA $7FC07C
+	LDA $0DC5|!addr			;\ Blue Switch
+	BEQ +					;| Note: Free RAM set in BabaBlocks1D7.asm.
+	LDA #$01 : STA $7FC074	;|
+	LDA #$01 : STA $7FC07C	;/
 +
-	LDA $0DC6|!addr
-	BEQ +
-	LDA #$01 : STA $7FC075
-	LDA #$01 : STA $7FC07D
+	LDA $0DC6|!addr			;\ Red Switch
+	BEQ +					;| Note: Free RAM set in 1BA.asm.
+	LDA #$01 : STA $7FC075	;|
+	LDA #$01 : STA $7FC07D	;/
 +
-	LDA $1F27|!addr
-	BEQ +
-	LDA #$01 : STA $7FC070
-	LDA #$01 : STA $7FC078
+
+	; Switch block indicators (pressed/unpressed)
+	LDA $1F27|!addr			;\ Green Switch
+	BEQ +					;|
+	LDA #$01 : STA $7FC070	;|
+	LDA #$01 : STA $7FC078	;/
 +
-	LDA $1F28|!addr
-	BEQ +
-	LDA #$01 : STA $7FC071
-	LDA #$01 : STA $7FC079
+	LDA $1F28|!addr			;\ Yellow Switch
+	BEQ +					;|
+	LDA #$01 : STA $7FC071	;|
+	LDA #$01 : STA $7FC079	;/
 +
-	LDA $1F29|!addr
-	BEQ +
-	LDA #$01 : STA $7FC076
-	LDA #$01 : STA $7FC07E
+	LDA $1F29|!addr			;\ Blue Switch
+	BEQ +					;|
+	LDA #$01 : STA $7FC076	;|
+	LDA #$01 : STA $7FC07E	;/
 +
-	LDA $1F2A|!addr
-	BEQ +
-	LDA #$01 : STA $7FC077
-	LDA #$01 : STA $7FC07F
+	LDA $1F2A|!addr			;\ Red Switch
+	BEQ +					;|
+	LDA #$01 : STA $7FC077	;|
+	LDA #$01 : STA $7FC07F	;/
 +
-	LDA $95		
-	BNE +		
-	stz $1412|!addr
-+	RTL
+	RTS

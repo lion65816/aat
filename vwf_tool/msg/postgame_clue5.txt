@@ -15,7 +15,7 @@ Found a missing page from Uncle Broadsword's diary!
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 2 //
@@ -36,6 +36,6 @@ This might be a hidden passageway.
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 [end=00]

@@ -15,7 +15,7 @@ Found a missing page from Uncle Broadsword's diary!
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 2 //
@@ -32,13 +32,13 @@ Found a missing page from Uncle Broadsword's diary!
 [/sprite]
 [topic]Log P[/topic]
 A hidden entrance, perhaps?
-[wait=30]
+[wait=15]
 [br]
 We may need to use some science to figure this out.
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 [end=00]

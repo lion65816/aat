@@ -15,6 +15,8 @@
 // Scene 1 //
 /////////////
 
+[skip=end]
+
 [exani manual=slot 0, frame 8] // Demo (facing left, normal)
 [exani manual=slot 8, frame 8] // Iris (facing left, normal)
 [sprite=58]
@@ -40,7 +42,7 @@ Hey, Uncle B.!
 [sprite=erase]
 [exani manual=slot 0, frame B] // Demo (facing left, happy)
 [exani manual=slot 8, frame 8] // Iris (facing left, normal)
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 2 //
@@ -62,11 +64,11 @@ Hey, Uncle B.!
 [/sprite]
 [font color=3]
 [topic]Uncle Broadsword[/topic]
-Demo![wait=30] ...[wait=30]Eilish![wait=30] How are my lovely nieces?
+Demo![wait=15] ...[wait=15]Eilish![wait=15] How are my lovely nieces?
 [wait]
 [erase]
 [topic][/topic]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 3 //
@@ -75,11 +77,11 @@ Demo![wait=30] ...[wait=30]Eilish![wait=30] How are my lovely nieces?
 [exani manual=slot 8, frame A] // Iris (facing left, annoyed)
 [font color=2]
 [topic]Iris[/topic]
-...[wait=30]Never change, uncle.
+...[wait=15]Never change, uncle.
 [wait]
 [erase]
 [topic][/topic]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 4 //
@@ -89,12 +91,12 @@ Demo![wait=30] ...[wait=30]Eilish![wait=30] How are my lovely nieces?
 [exani manual=slot 8, frame 8] // Iris (facing left, normal)
 [font color=1]
 [topic]Demo[/topic]
-We're actually on a food run for holiday dinner.[wait=30] Do you know any grocery stores nearby?
+We're actually on a food run for holiday dinner.[wait=15] Do you know any grocery stores nearby?
 [wait]
 [erase]
 [font color=3]
 [topic]Uncle Broadsword[/topic]
-I'm afraid not.[wait=30] I always order out, so I never keep the fridge stocked.
+I'm afraid not.[wait=15] I always order out, so I never keep the fridge stocked.
 [wait]
 [erase]
 [font color=2]
@@ -104,12 +106,12 @@ Yeah, we noticed.
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-That's a bummer.[wait=30] Anyway, how's the excavation going?[wait=30] We've barely seen you since we arrived.
+That's a bummer.[wait=15] Anyway, how's the excavation going?[wait=15] We've barely seen you since we arrived.
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 5 //
@@ -132,12 +134,12 @@ That's a bummer.[wait=30] Anyway, how's the excavation going?[wait=30] We've bar
 [/sprite]
 [font color=3]
 [topic]Uncle Broadsword[/topic]
-Absolutely smashing![wait=30] I'm on the verge of a major discovery!
+Absolutely smashing![wait=15] I'm on the verge of a major discovery!
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 6 //
@@ -159,12 +161,12 @@ Absolutely smashing![wait=30] I'm on the verge of a major discovery!
 [/sprite]
 [font color=3]
 [topic]Uncle Broadsword[/topic]
-We've already unearthed much of these ruins, and I believe there are still more treasures waiting to be found.[wait=30] You're welcome to have a look inside!
+We've already unearthed much of these ruins, and I believe there are still more treasures waiting to be found.[wait=15] You're welcome to have a look inside!
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 7 //
@@ -186,7 +188,7 @@ We've already unearthed much of these ruins, and I believe there are still more 
 [/sprite]
 [font color=3]
 [topic]Uncle Broadsword[/topic]
-I'd like to record my findings, but I can't find my trusty notebook.[wait=30] It contains all the tales of my past exploits, and I now fear all is lost...
+I'd like to record my findings, but I can't find my trusty notebook.[wait=15] It contains all the tales of my past exploits, and I now fear all is lost...
 [wait]
 [erase]
 [font color=2]
@@ -196,7 +198,7 @@ If it makes you feel any better, we'll try to find your notebook while we go and
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 8 //
@@ -224,7 +226,7 @@ Marvelous, Irma!
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 9 //
@@ -250,12 +252,12 @@ Marvelous, Irma!
 [/sprite]
 [font color=3]
 [topic]Uncle Broadsword[/topic]
-Last I recall, it was with me on a visit to another archaeological site.[wait=30] The entrance had this same giant sculpture of an eyeball.[wait=30] It was quite the sight![wait=30] Perhaps I left the notebook somewhere there.
+Last I recall, it was with me on a visit to another archaeological site.[wait=15] The entrance had this same giant sculpture of an eyeball.[wait=15] It was quite the sight![wait=15] Perhaps I left the notebook somewhere there.
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 10 //
@@ -277,11 +279,12 @@ Last I recall, it was with me on a visit to another archaeological site.[wait=30
 [/sprite]
 [font color=1]
 [topic]Demo[/topic]
-We'll keep our eyes peeled.[wait=30] Later, Unc!
+We'll keep our eyes peeled.[wait=15] Later, Unc!
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
+[label=end]
 [end=goal]

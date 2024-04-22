@@ -17,7 +17,7 @@ I took a leap of faith from the stratosphere.
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 //////////////
 // Scene 11 //
@@ -38,6 +38,6 @@ I soared very high up an enormous tree.
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 [end=00]

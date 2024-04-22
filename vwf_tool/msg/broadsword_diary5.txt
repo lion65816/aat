@@ -18,7 +18,7 @@ The following pages are dedicated to my archaeological findings on Food Desert I
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 //////////////
 // Scene 13 //
@@ -44,7 +44,7 @@ The following pages are dedicated to my archaeological findings on Food Desert I
 [exani manual=slot 1, frame 1] // Iris (visible)
 [font color=3]
 [topic]Iris[/topic]
-Hey, what gives?[wait=30] These pages are all missing!
+Hey, what gives?[wait=15] These pages are all missing!
 [wait]
 [erase]
 
@@ -52,11 +52,11 @@ Hey, what gives?[wait=30] These pages are all missing!
 [exani manual=slot 1, frame 1] // Iris (visible)
 [font color=2]
 [topic]Demo[/topic]
-Sounds like typical Uncle B.[wait=30] If we want to follow this rabbit hole, it might be worth checking out the last eight places he visited?
+Sounds like typical Uncle B.[wait=15] If we want to follow this rabbit hole, it might be worth checking out the last eight places he visited?
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 [end=00]

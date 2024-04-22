@@ -10,12 +10,12 @@ NYAA!
 [erase]
 [font color=2]
 [topic]Iris[/topic]
-Uhh...[wait=30] was that you just now, sis?
+Uhh...[wait=15] was that you just now, sis?
 [wait]
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-Since when do I meow?[wait=30] That's more Calleoca's wheelhouse.
+Since when do I meow?[wait=15] That's more Calleoca's wheelhouse.
 [wait]
 [erase]
 [font color=3]
@@ -25,12 +25,12 @@ NYAA! NO ENTRY FOR OUTSIDERS.
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-Fancy that![wait=30] A giant ethereal cat face.[wait=30] This must be the Purrtal.
+Fancy that![wait=15] A giant ethereal cat face.[wait=15] This must be the Purrtal.
 [wait]
 [erase]
 [font color=2]
 [topic]Iris[/topic]
-Listen, we need access to the shopping mall.[wait=30] We have to buy some food, and there might be a grocery store inside.
+Listen, we need access to the shopping mall.[wait=15] We have to buy some food, and there might be a grocery store inside.
 [wait]
 [erase]
 [font color=3]
@@ -40,7 +40,7 @@ THOSE WHO ARE NOT DENIZENS OF THE ISLAND MAY NOT PASS.
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-.[wait=30].[wait=30].[wait=30]Please?
+.[wait=15].[wait=15].[wait=15]Please?
 [wait]
 [erase]
 [font color=3]
@@ -65,7 +65,7 @@ And how do we go about doing that?
 [erase]
 [font color=3]
 [topic]Purrtal[/topic]
-DEFEAT THE FOUR SCOURGES OF THIS ISLAND THAT EACH HOLD:[wait=30] A WILY DUO,[wait=30] A GREEDY BIRD,[wait=30] A BALL OF PLASMA,[wait=30] A FLYING RABBIT.
+DEFEAT THE FOUR SCOURGES OF THIS ISLAND THAT EACH HOLD:[wait=15] A WILY DUO,[wait=15] A GREEDY BIRD,[wait=15] A BALL OF PLASMA,[wait=15] A FLYING RABBIT.
 [wait]
 [erase]
 [font color=2]
@@ -80,6 +80,6 @@ NYAA!
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-Yeah, yeah, we get it![wait=30] C'mon, Iris.[wait=30] We've got scourges to scourge.
+Yeah, yeah, we get it![wait=15] C'mon, Iris.[wait=15] We've got scourges to scourge.
 [wait]
 [erase]

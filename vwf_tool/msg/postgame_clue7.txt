@@ -15,7 +15,7 @@ Found a missing page from Uncle Broadsword's diary!
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 2 //
@@ -32,13 +32,13 @@ Found a missing page from Uncle Broadsword's diary!
 [/sprite]
 [topic]Log M[/topic]
 Looks like some kind of cipher.
-[wait=30]
+[wait=15]
 [br]
 I couldn't figure it out completely...
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 [end=00]

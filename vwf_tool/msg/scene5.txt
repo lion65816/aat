@@ -1,6 +1,43 @@
+// Demo's and Iris' facial expressions are in ExGFX299.
+// Set AN2 to ExGFX299, and use the following ExAnimation manual trigger slots:
+// Slot 00, frame 00: Demo (facing right, normal)        Slot 08, frame 00: Iris (facing right, normal)
+// Slot 00, frame 01: Demo (facing right, looking up)    Slot 08, frame 01: Iris (facing right, looking up)
+// Slot 00, frame 02: Demo (facing right, annoyed)       Slot 08, frame 02: Iris (facing right, annoyed)
+// Slot 00, frame 03: Demo (facing right, happy)
+// Slot 00, frame 04: Demo (facing right, shocked)
+// Slot 00, frame 08: Demo (facing left, normal)         Slot 08, frame 08: Iris (facing left, normal)
+// Slot 00, frame 09: Demo (facing left, looking up)     Slot 08, frame 09: Iris (facing left, looking up)
+// Slot 00, frame 0A: Demo (facing left, annoyed)        Slot 08, frame 0A: Iris (facing left, annoyed)
+// Slot 00, frame 0B: Demo (facing left, happy)
+// Slot 00, frame 0C: Demo (facing left, shocked)
+
+/////////////
+// Scene 1 //
+/////////////
+
+[skip=end]
+
+[exani manual=slot 0, frame 1] // Demo (facing right, looking up)
+[exani manual=slot 8, frame 1] // Iris (facing right, looking up)
+[sprite=64]
+// Demo and Iris
+(30,2A,82,04,big)                          (58,2A,80,02,big)
+(30,3A,A2,44,big)                          (58,3A,A0,42,big)
+// Windrose
+                                                                                              (88,08,84,08,big)(98,08,86,08,big)(A8,08,88,08,big)(B8,08,8A,08,big)
+                                                                                              (88,18,A4,08,big)(98,18,A6,08,big)(A8,18,A8,08,big)(B8,18,AA,08,big)
+                                                                                              (88,28,C4,08,big)(98,28,C6,08,big)(A8,28,C8,08,big)(B8,28,CA,08,big)
+                                                                                              (88,38,E4,08,big)(98,38,E6,08,big)(A8,38,E8,08,big)(B8,38,EA,08,big)
+// Background
+(30,08,8C,06,big)(40,08,8C,06,big)(50,08,8C,06,big)(60,08,8C,06,big)(70,08,8C,06,big)(80,08,8C,06,big)(90,08,8C,06,big)(A0,08,8C,06,big)(B0,08,8C,06,big)(C0,08,8C,06,big)
+(30,18,AC,06,big)(40,18,AC,06,big)(50,18,AC,06,big)(60,18,AC,06,big)(70,18,AC,06,big)(80,18,AC,06,big)                                                   (C0,18,AC,06,big)
+(30,28,CC,06,big)(40,28,CC,06,big)(50,28,CC,06,big)(60,28,CC,06,big)(70,28,CC,06,big)(80,28,CC,06,big)                                                   (C0,28,CC,06,big)
+(30,38,EC,06,big)(40,38,EC,06,big)(50,38,EC,06,big)(60,38,EC,06,big)(70,38,EC,06,big)(80,38,EC,06,big)(90,38,EC,06,big)(A0,38,EC,06,big)(B0,38,EC,06,big)(C0,38,EC,06,big)
+(30,48,8E,0A,big)(40,48,8E,0A,big)(50,48,8E,0A,big)(60,48,8E,0A,big)(70,48,8E,0A,big)(80,48,8E,0A,big)(90,48,8E,0A,big)(A0,48,8E,0A,big)(B0,48,8E,0A,big)(C0,48,8E,0A,big)
+[/sprite]
 [font color=3]
 [topic]Windrose[/topic]
->[wait=30] WISH CONFLICT RESOLUTION CONTINGENCY[wait=30] :[wait=30] SUCCESS
+$[wait=15] WISH CONFLICT RESOLUTION CONTINGENCY[wait=15] :[wait=15] SUCCESS
 [wait]
 [erase]
 [font color=2]
@@ -10,9 +47,9 @@ Are we good here?
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
->[wait=30] PREVIOUS WISH:[wait=30] =[wait=30] VOIDED[wait=30][br]
->[wait=30] NEW WISH:[wait=30] =[wait=30] "I WISH THE ENTIRE MALL COULD GO BACK TO NORMAL"[wait=30][br]
->[wait=30] IS THIS CORRECT?
+$[wait=15] PREVIOUS WISH :[wait=15] =[wait=15] VOIDED[wait=15][br]
+$[wait=15] NEW WISH :[wait=15] =[wait=15] "I WISH THE ENTIRE MALL COULD GO BACK TO NORMAL"[wait=15][br]
+$[wait=15] IS THIS CORRECT?
 [wait]
 [erase]
 [font color=1]
@@ -22,13 +59,79 @@ Can I get a "pretty please" at the end?
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
->[wait=30] NEW WISH:[wait=30] =[wait=30] "I WISH THE ENTIRE MALL COULD GO BACK TO NORMAL. CAN I GET A PRETTY PLEASE AT THE END."[wait=30][br]
->[wait=30] NEW WISH:[wait=30] =[wait=30] GRANTED[wait=30]
+$[wait=15] NEW WISH :[wait=15] =[wait=15] "I WISH THE ENTIRE MALL COULD GO BACK TO NORMAL.[wait=15] CAN I GET A PRETTY PLEASE AT THE END."[wait=15][br]
+$[wait=15] NEW WISH :[wait=15] =[wait=15] GRANTED[wait=15]
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 4] // Demo (facing right, shocked)
+[exani manual=slot 8, frame 8] // Iris (facing left, normal)
+[wait=15]
+
+/////////////
+// Scene 2 //
+/////////////
+
+[sprite=64]
+// Demo and Iris
+(30,2A,82,04,big)                          (58,2A,80,02,big)
+(30,3A,A2,44,big)                          (58,3A,A0,42,big)
+// Windrose
+                                                                                              (88,08,84,08,big)(98,08,86,08,big)(A8,08,88,08,big)(B8,08,8A,08,big)
+                                                                                              (88,18,A4,08,big)(98,18,A6,08,big)(A8,18,A8,08,big)(B8,18,AA,08,big)
+                                                                                              (88,28,C4,08,big)(98,28,C6,08,big)(A8,28,C8,08,big)(B8,28,CA,08,big)
+                                                                                              (88,38,E4,08,big)(98,38,E6,08,big)(A8,38,E8,08,big)(B8,38,EA,08,big)
+// Background
+(30,08,00,0D,big)(40,08,02,0D,big)(50,08,04,0D,big)(60,08,06,0D,big)(70,08,08,0D,big)(80,08,0A,0D,big)(90,08,0C,0D,big)(A0,08,0E,0D,big)(B0,08,20,0C,big)(C0,08,22,0C,big)
+(30,18,20,0D,big)(40,18,22,0D,big)(50,18,24,0D,big)(60,18,26,0D,big)(70,18,28,0D,big)(80,18,2A,0D,big)                                                   (C0,18,42,0C,big)
+(30,28,40,0D,big)(40,28,42,0D,big)(50,28,44,0D,big)(60,28,46,0D,big)(70,28,48,0D,big)(80,28,4A,0D,big)                                                   (C0,28,62,0C,big)
+(30,38,60,0D,big)(40,38,62,0D,big)(50,38,64,0D,big)(60,38,66,0D,big)(70,38,68,0D,big)(80,38,6A,0D,big)(90,38,6C,0D,big)(A0,38,6E,0D,big)(B0,38,24,0C,big)(C0,38,26,0C,big)
+(30,48,64,0C,big)(40,48,66,0C,big)(50,48,28,0C,big)(60,48,2A,0C,big)(70,48,48,0C,big)(80,48,4A,0C,big)(90,48,68,0C,big)(A0,48,6A,0C,big)(B0,48,0C,0C,big)(C0,48,0E,0C,big)
+//(90,18,2C,0D,big)(A0,18,2E,0D,big)(B0,18,40,0C,big)
+//(90,28,4C,0D,big)(A0,28,4E,0D,big)(B0,28,60,0C,big)
+[/sprite]
+[font color=1]
+[topic]Demo and Iris[/topic]
+.[wait=15].[wait=15].
+[wait]
+[erase]
+
+/////////////
+// Scene 3 //
+/////////////
+
+[exani manual=slot 0, frame 3] // Demo (facing right, happy)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[font color=1]
+[topic]Demo[/topic]
+Now THAT'S more like it!
+[wait]
+[erase]
+
+/////////////
+// Scene 4 //
+/////////////
+
+[exani manual=slot 0, frame 1] // Demo (facing right, looking up)
+[exani manual=slot 8, frame 1] // Iris (facing right, looking up)
+[font color=3]
+[topic]Windrose[/topic]
+$[wait=15] SCANNING LOCATION[wait=15] .[wait=15].[wait=15].[wait=15][br]
+$[wait=15] SENTIENT LIFE-FORM DETECTED[wait=15] .[wait=15].[wait=15].[wait=15][br]
+$[wait=15] SENTIENT LIFE-FORM DETECTED[wait=15] .[wait=15].[wait=15].[wait=15][br]
+$[wait=15] STATE WI-
+[erase]
+
+/////////////
+// Scene 5 //
+/////////////
+
+[exani manual=slot 0, frame 1] // Demo (facing right, looking up)
+[exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
-Ugh.[wait=30] I really wish that thing would just shut up and disappear for good.
+Ugh.[wait=15] I really wish that thing would just shut up and disappear for good.
 [wait]
 [erase]
 [font color=3]
@@ -36,11 +139,55 @@ Ugh.[wait=30] I really wish that thing would just shut up and disappear for good
 Okay.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 4] // Demo (facing right, shocked)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[music=FF]
+[sfx 1DF9=23] // Play Lemmy/Wendy fall sound effect.
+[wait=15]
+
+/////////////
+// Scene 6 //
+/////////////
+
+[sprite=54]
+// Demo and Iris
+(30,2A,82,04,big)                          (58,2A,80,02,big)
+(30,3A,A2,44,big)                          (58,3A,A0,42,big)
+// Background
+(30,08,00,0D,big)(40,08,02,0D,big)(50,08,04,0D,big)(60,08,06,0D,big)(70,08,08,0D,big)(80,08,0A,0D,big)(90,08,0C,0D,big)(A0,08,0E,0D,big)(B0,08,20,0C,big)(C0,08,22,0C,big)
+(30,18,20,0D,big)(40,18,22,0D,big)(50,18,24,0D,big)(60,18,26,0D,big)(70,18,28,0D,big)(80,18,2A,0D,big)(90,18,2C,0D,big)(A0,18,2E,0D,big)(B0,18,40,0C,big)(C0,18,42,0C,big)
+(30,28,40,0D,big)(40,28,42,0D,big)(50,28,44,0D,big)(60,28,46,0D,big)(70,28,48,0D,big)(80,28,4A,0D,big)(90,28,4C,0D,big)(A0,28,4E,0D,big)(B0,28,60,0C,big)(C0,28,62,0C,big)
+(30,38,60,0D,big)(40,38,62,0D,big)(50,38,64,0D,big)(60,38,66,0D,big)(70,38,68,0D,big)(80,38,6A,0D,big)(90,38,6C,0D,big)(A0,38,6E,0D,big)(B0,38,24,0C,big)(C0,38,26,0C,big)
+(30,48,64,0C,big)(40,48,66,0C,big)(50,48,28,0C,big)(60,48,2A,0C,big)(70,48,48,0C,big)(80,48,4A,0C,big)(90,48,68,0C,big)(A0,48,6A,0C,big)(B0,48,0C,0C,big)(C0,48,0E,0C,big)
+[/sprite]
 [font color=1]
 [topic]Demo and Iris[/topic]
-.[wait=30].[wait=30].
+.[wait=15].[wait=15].
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[wait=15]
+
+/////////////
+// Scene 7 //
+/////////////
+
+[sprite=54]
+// Demo and Iris
+(30,2A,82,04,big)                          (58,2A,80,02,big)
+(30,3A,A2,44,big)                          (58,3A,A0,02,big)
+// Background
+(30,08,00,0D,big)(40,08,02,0D,big)(50,08,04,0D,big)(60,08,06,0D,big)(70,08,08,0D,big)(80,08,0A,0D,big)(90,08,0C,0D,big)(A0,08,0E,0D,big)(B0,08,20,0C,big)(C0,08,22,0C,big)
+(30,18,20,0D,big)(40,18,22,0D,big)(50,18,24,0D,big)(60,18,26,0D,big)(70,18,28,0D,big)(80,18,2A,0D,big)(90,18,2C,0D,big)(A0,18,2E,0D,big)(B0,18,40,0C,big)(C0,18,42,0C,big)
+(30,28,40,0D,big)(40,28,42,0D,big)(50,28,44,0D,big)(60,28,46,0D,big)(70,28,48,0D,big)(80,28,4A,0D,big)(90,28,4C,0D,big)(A0,28,4E,0D,big)(B0,28,60,0C,big)(C0,28,62,0C,big)
+(30,38,60,0D,big)(40,38,62,0D,big)(50,38,64,0D,big)(60,38,66,0D,big)(70,38,68,0D,big)(80,38,6A,0D,big)(90,38,6C,0D,big)(A0,38,6E,0D,big)(B0,38,24,0C,big)(C0,38,26,0C,big)
+(30,48,64,0C,big)(40,48,66,0C,big)(50,48,28,0C,big)(60,48,2A,0C,big)(70,48,48,0C,big)(80,48,4A,0C,big)(90,48,68,0C,big)(A0,48,6A,0C,big)(B0,48,0C,0C,big)(C0,48,0E,0C,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
 Well, that was sudden and anticlimactic.
@@ -48,36 +195,111 @@ Well, that was sudden and anticlimactic.
 [erase]
 [font color=2]
 [topic]Iris[/topic]
-.[wait=30].[wait=30].[wait=30]Yeah, didn't expect that one to actually get through.
+...[wait=15]Yeah, didn't expect that one to actually get through.
 [wait]
 [erase]
+[music=D6]
 [font color=2]
 [topic]Iris[/topic]
-Anyway, it's for the best.[wait=30] Too dangerous to keep something like that around here.
+Anyway, it's for the best.[wait=15] Too dangerous to keep something like that around here.
+[wait]
+[erase]
+
+/////////////
+// Scene 8 //
+/////////////
+
+[exani manual=slot 0, frame C] // Demo (facing left, shocked)
+[font color=1]
+[topic]Demo[/topic]
+So, does this mean that Stocking Day is...[wait=15] CANCELED?!
+[wait]
+[erase]
+
+/////////////
+// Scene 9 //
+/////////////
+
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[font color=2]
+[topic]Iris[/topic]
+Nonsense, Demo.[wait=15] We don't need some big, dumb wishing machine to celebrate.[wait=15] Stocking Day is more about spending time with family, after all.
 [wait]
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-So, does this mean that Stocking Day is[wait=30].[wait=30].[wait=30].[wait=30] CANCELED?!
+Wow, that sounded really corny.
+[wait]
+[exani manual=slot 0, frame B] // Demo (facing left, happy)
+[br]But also...[wait=15] kind of sweet?
 [wait]
 [erase]
+
+//////////////
+// Scene 10 //
+//////////////
+
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
-Nonsense, Demo.[wait=30] We don't need some big, dumb wishing machine to celebrate.[wait=30] Stocking Day is more about spending time with family, after all.
+...[wait=15]Whatever.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 0] // Demo (facing right, normal)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[wait=15]
+
+//////////////
+// Scene 11 //
+//////////////
+
+[sprite=54]
+// Demo and Iris
+                                           (58,2A,80,02,big)                                                                            (A0,1E,82,04,big)
+                                           (58,3A,A0,42,big)                                                                            (A0,2E,C2,04,big)
+// Background
+(30,08,00,0D,big)(40,08,02,0D,big)(50,08,04,0D,big)(60,08,06,0D,big)(70,08,08,0D,big)(80,08,0A,0D,big)(90,08,0C,0D,big)(A0,08,0E,0D,big)(B0,08,20,0C,big)(C0,08,22,0C,big)
+(30,18,20,0D,big)(40,18,22,0D,big)(50,18,24,0D,big)(60,18,26,0D,big)(70,18,28,0D,big)(80,18,2A,0D,big)(90,18,2C,0D,big)(A0,18,2E,0D,big)(B0,18,40,0C,big)(C0,18,42,0C,big)
+(30,28,40,0D,big)(40,28,42,0D,big)(50,28,44,0D,big)(60,28,46,0D,big)(70,28,48,0D,big)(80,28,4A,0D,big)(90,28,4C,0D,big)(A0,28,4E,0D,big)(B0,28,60,0C,big)(C0,28,62,0C,big)
+(30,38,60,0D,big)(40,38,62,0D,big)(50,38,64,0D,big)(60,38,66,0D,big)(70,38,68,0D,big)(80,38,6A,0D,big)(90,38,6C,0D,big)(A0,38,6E,0D,big)(B0,38,24,0C,big)(C0,38,26,0C,big)
+(30,48,64,0C,big)(40,48,66,0C,big)(50,48,28,0C,big)(60,48,2A,0C,big)(70,48,48,0C,big)(80,48,4A,0C,big)(90,48,68,0C,big)(A0,48,6A,0C,big)(B0,48,0C,0C,big)(C0,48,0E,0C,big)
+[/sprite]
+[font color=2]
+[topic]Iris[/topic]
+Now if you'll excuse me, I'm gonna go buy some vegetables already.[wait=15] Stocking Day dinner won't cook itself.
+[wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 0] // Demo (facing right, normal)
+[wait=15]
+
+//////////////
+// Scene 12 //
+//////////////
+
+[sprite=52]
+// Demo
+                                           (58,2A,80,02,big)
+                                           (58,3A,A0,42,big)
+// Background
+(30,08,00,0D,big)(40,08,02,0D,big)(50,08,04,0D,big)(60,08,06,0D,big)(70,08,08,0D,big)(80,08,0A,0D,big)(90,08,0C,0D,big)(A0,08,0E,0D,big)(B0,08,20,0C,big)(C0,08,22,0C,big)
+(30,18,20,0D,big)(40,18,22,0D,big)(50,18,24,0D,big)(60,18,26,0D,big)(70,18,28,0D,big)(80,18,2A,0D,big)(90,18,2C,0D,big)(A0,18,2E,0D,big)(B0,18,40,0C,big)(C0,18,42,0C,big)
+(30,28,40,0D,big)(40,28,42,0D,big)(50,28,44,0D,big)(60,28,46,0D,big)(70,28,48,0D,big)(80,28,4A,0D,big)(90,28,4C,0D,big)(A0,28,4E,0D,big)(B0,28,60,0C,big)(C0,28,62,0C,big)
+(30,38,60,0D,big)(40,38,62,0D,big)(50,38,64,0D,big)(60,38,66,0D,big)(70,38,68,0D,big)(80,38,6A,0D,big)(90,38,6C,0D,big)(A0,38,6E,0D,big)(B0,38,24,0C,big)(C0,38,26,0C,big)
+(30,48,64,0C,big)(40,48,66,0C,big)(50,48,28,0C,big)(60,48,2A,0C,big)(70,48,48,0C,big)(80,48,4A,0C,big)(90,48,68,0C,big)(A0,48,6A,0C,big)(B0,48,0C,0C,big)(C0,48,0E,0C,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
-Wow, that sounded really corny.[wait=30] But also[wait=30].[wait=30].[wait=30].[wait=30] kind of sweet?
+Wait, you forgot the shopping cart-
+[wait]
+[exani manual=slot 0, frame 2] // Demo (facing right, annoyed)
+[br]Oh, nevermind...
 [wait]
 [erase]
-[font color=2]
-[topic]Iris[/topic]
-.[wait=30].[wait=30].[wait=30]Whatever.
-[wait]
-[erase]
-[font color=2]
-[topic]Iris[/topic]
-Now if you'll excuse me, I'm gonna go buy some vegetables already.[wait=30] Stocking Day dinner won't cook itself.
-[wait]
-[erase]
+
+[label=end]
+[end=00]

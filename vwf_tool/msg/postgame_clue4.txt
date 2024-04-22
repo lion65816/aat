@@ -15,7 +15,7 @@ Found a missing page from Uncle Broadsword's diary!
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 2 //
@@ -32,13 +32,13 @@ Found a missing page from Uncle Broadsword's diary!
 [/sprite]
 [topic]Log T[/topic]
 Seems to form part of an ancient phrase.
-[wait=30]
+[wait=15]
 [br]
 There are some missing characters.
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 [end=00]

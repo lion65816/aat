@@ -15,6 +15,8 @@
 // Scene 1 //
 /////////////
 
+[skip=end]
+
 [exani manual=slot 0, frame 0] // Demo (facing right, normal)
 [exani manual=slot 8, frame 9] // Iris (facing left, looking up)
 [sprite=53]
@@ -41,7 +43,7 @@ This place looks familiar, but I can't quite put my leg on it...
 [wait]
 [erase]
 [topic][/topic]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 2 //
@@ -51,11 +53,12 @@ This place looks familiar, but I can't quite put my leg on it...
 [exani manual=slot 8, frame 8] // Iris (facing left, normal)
 [font color=1]
 [topic]Demo[/topic]
-How could you forget, sis?[wait=30] Uncle B. used to take us here to celebrate Stockings Day past!
+How could you forget, sis?[wait=15] Uncle B. used to take us here to celebrate Stockings Day past!
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
+[label=end]
 [end=00]

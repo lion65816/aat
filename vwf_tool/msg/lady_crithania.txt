@@ -5,7 +5,7 @@
 17 days later...
 [wait]
 [erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 2 //
@@ -27,7 +27,7 @@ Next slide
 [wait]
 [erase]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 3 //
@@ -54,7 +54,7 @@ Next slide
 [wait]
 [erase]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 4 //
@@ -76,6 +76,6 @@ End slideshow
 [wait]
 [erase]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 [end=00]

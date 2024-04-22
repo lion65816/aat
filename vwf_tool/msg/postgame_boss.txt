@@ -9,25 +9,25 @@
 [/sprite]
 [font color=2]
 [topic]???[/topic]
-We are pleased to receive you, Demo, lithe, loathesome lingerer from afar.[wait=30] Your visit was not easy to arrange.[wait=30] Great things never are.[wait=30] Oh how we admire you.
+We are pleased to receive you, Demo, lithe, loathesome lingerer from afar.[wait=15] Your visit was not easy to arrange.[wait=15] Great things never are.[wait=15] Oh how we admire you.
 [wait]
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-Wait a second...[wait=30] Did someone cross the streams again?
+Wait a second...[wait=15] Did someone cross the streams again?
 [wait]
 [erase]
-[wait=30]
+[wait=15]
 [font color=2]
 [topic]???[/topic]
-It shall never be the same.[wait=30] Your arrival has set things in motion.[wait=30] Awesome things.
+It shall never be the same.[wait=15] Your arrival has set things in motion.[wait=15] Awesome things.
 [wait]
-[br]Acquiring such alien acumen has enabled us.[wait=30] Energized us.[wait=30] Enlightened us.[wait=30] Your device has set us free!
+[br]Acquiring such alien acumen has enabled us.[wait=15] Energized us.[wait=15] Enlightened us.[wait=15] Your device has set us free!
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 2 //
@@ -45,11 +45,11 @@ It shall never be the same.[wait=30] Your arrival has set things in motion.[wait
 [/sprite]
 [font color=1]
 [topic]Demo and Iris[/topic]
-.[wait=30].[wait=30].
+.[wait=15].[wait=15].
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 [end=00]

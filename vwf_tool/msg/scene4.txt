@@ -15,6 +15,8 @@
 // Scene 1 //
 /////////////
 
+[skip=end]
+
 [exani manual=slot 0, frame 9] // Demo (facing left, looking up)
 [exani manual=slot 8, frame 0] // Iris (facing right, normal)
 [sprite=54]
@@ -30,14 +32,14 @@
 [/sprite]
 [font color=1]
 [topic]Demo[/topic]
-Whoa![wait=30] Not what I was expecting on the other side.
+Whoa![wait=15] Not what I was expecting on the other side.
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
 [exani manual=slot 0, frame 4] // Demo (facing right, shocked)
 [exani manual=slot 8, frame 1] // Iris (facing right, looking up)
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 2 //
@@ -61,10 +63,10 @@ Whoa![wait=30] Not what I was expecting on the other side.
 [/sprite]
 [font color=3]
 [topic]?????[/topic]
-$[wait=30] SCANNING LOCATION[wait=30] .[wait=30].[wait=30].[wait=30][br]
-$[wait=30] SENTIENT LIFE-FORM DETECTED[wait=30] .[wait=30].[wait=30].[wait=30][br]
-$[wait=30] SENTIENT LIFE-FORM DETECTED[wait=30] .[wait=30].[wait=30].[wait=30][br]
-$[wait=30] STATE QUERY[wait=30] ?[wait=30] :[wait=30]
+$[wait=15] SCANNING LOCATION[wait=15] .[wait=15].[wait=15].[wait=15][br]
+$[wait=15] SENTIENT LIFE-FORM DETECTED[wait=15] .[wait=15].[wait=15].[wait=15][br]
+$[wait=15] SENTIENT LIFE-FORM DETECTED[wait=15] .[wait=15].[wait=15].[wait=15][br]
+$[wait=15] STATE QUERY[wait=15] ?[wait=15] :[wait=15]
 [wait]
 [erase]
 [font color=2]
@@ -74,8 +76,8 @@ Is this the "washing machine" that Clerk was talking about?
 [erase]
 [font color=3]
 [topic]?????[/topic]
-$[wait=30] QUERY :[wait=30] "IS THIS THE WASHING MACHINE THAT CLERK WAS TALKING ABOUT ?"[wait=30] =[wait=30] KINDA[wait=30][br]
-$[wait=30] STATE QUERY[wait=30] ?[wait=30] :[wait=30]
+$[wait=15] QUERY :[wait=15] "IS THIS THE WASHING MACHINE THAT CLERK WAS TALKING ABOUT ?"[wait=15] =[wait=15] KINDA[wait=15][br]
+$[wait=15] STATE QUERY[wait=15] ?[wait=15] :[wait=15]
 [wait]
 [erase]
 
@@ -93,7 +95,7 @@ I wasn't talking to you.
 [sprite=erase]
 [exani manual=slot 0, frame 8] // Demo (facing left, normal)
 [exani manual=slot 8, frame 0] // Iris (facing right, normal)
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 4 //
@@ -124,7 +126,7 @@ Wait sis, maybe we can get some info out of it.
 [sprite=erase]
 [exani manual=slot 0, frame 1] // Demo (facing right, looking up)
 [exani manual=slot 8, frame 1] // Iris (facing right, looking up)
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 5 //
@@ -153,9 +155,9 @@ So what are you, and what do you do, exactly?
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
-$[wait=30] QUERY :[wait=30] "WHAT ARE YOU ?"[wait=30] =[wait=30] I AM WindRose Wishtonic-WFM[wait=30] "Wish-fulFilling Machine"[wait=30] Serial J02.U90.N07[wait=30][br]
-$[wait=30] QUERY :[wait=30] "WHAT DO YOU DO, EXACTLY ?"[wait=30] =[wait=30] I RESOLVE WISHES[wait=30][br]
-$[wait=30] STATE QUERY[wait=30] ?[wait=30] :[wait=30]
+$[wait=15] QUERY :[wait=15] "WHAT ARE YOU ?"[wait=15] =[wait=15] I AM WindRose Wishtonic-WFM[wait=15] "Wish-fulFilling Machine"[wait=15] Serial J02.U90.N07[wait=15][br]
+$[wait=15] QUERY :[wait=15] "WHAT DO YOU DO, EXACTLY ?"[wait=15] =[wait=15] I RESOLVE WISHES[wait=15][br]
+$[wait=15] STATE QUERY[wait=15] ?[wait=15] :[wait=15]
 [wait]
 [erase]
 
@@ -166,12 +168,12 @@ $[wait=30] STATE QUERY[wait=30] ?[wait=30] :[wait=30]
 [exani manual=slot 0, frame 4] // Demo (facing right, shocked)
 [font color=1]
 [topic]Demo[/topic]
-...[wait=30]No way![wait=30] Is this the same "Windrose" from Stocking Day legend?
+...[wait=15]No way![wait=15] Is this the same "Windrose" from Stocking Day legend?
 [wait]
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
-$[wait=30] QUERY :[wait=30] "IS THIS THE SAME WINDROSE FROM STOCKING DAY LEGEND ?"[wait=30] =[wait=30] AFFIRMATIVE
+$[wait=15] QUERY :[wait=15] "IS THIS THE SAME WINDROSE FROM STOCKING DAY LEGEND ?"[wait=15] =[wait=15] AFFIRMATIVE
 [wait]
 [erase]
 
@@ -183,19 +185,19 @@ $[wait=30] QUERY :[wait=30] "IS THIS THE SAME WINDROSE FROM STOCKING DAY LEGEND 
 [exani manual=slot 8, frame 0] // Iris (facing right, normal)
 [font color=2]
 [topic]Iris[/topic]
-Ha.[wait=30] So the Windrose we blindly wished upon in the past is just a machine.[wait=30] Ironically, I was beginning to suspect this was a manufactured holiday.
+Ha.[wait=15] So the Windrose we blindly wished upon in the past is just a machine.[wait=15] Ironically, I was beginning to suspect this was a manufactured holiday.
 [wait]
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
-$[wait=30] QUERY QUOTA EXCEEDED[wait=30] .[wait=30].[wait=30].[wait=30][br]
-$[wait=30] STATE "NAME",[wait=30] "FAVORITE SANDWICH",[wait=30] AND "WISH"
+$[wait=15] QUERY QUOTA EXCEEDED[wait=15] .[wait=15].[wait=15].[wait=15][br]
+$[wait=15] STATE "NAME",[wait=15] "FAVORITE SANDWICH",[wait=15] AND "WISH"
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
 [exani manual=slot 0, frame 8] // Demo (facing left, normal)
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 8 //
@@ -226,7 +228,7 @@ Hey, looks like this is our chance.
 [sprite=erase]
 [exani manual=slot 0, frame 1] // Demo (facing right, looking up)
 [exani manual=slot 8, frame 1] // Iris (facing right, looking up)
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 9 //
@@ -250,13 +252,13 @@ Hey, looks like this is our chance.
 [/sprite]
 [font color=1]
 [topic]Demo[/topic]
-My name is Demo Rosemary Roseclair.[wait=30] The po' boy is my guilty pleasure.[wait=30] And uh...[wait=30] I wish the entire mall could go back to normal?
+My name is Demo Rosemary Roseclair.[wait=15] The po' boy is my guilty pleasure.[wait=15] And uh...[wait=15] I wish the entire mall could go back to normal?
 [wait]
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
-$[wait=30] ERROR :[wait=30] WISH CONTRADICTS PRE-EXISTING WISH[wait=30][br]
-$[wait=30] CURRENT WISH :[wait=30] =[wait=30] "I'm bleedin' money over here![wait=30] I wish all of these customers will shop here forever, even if it kills them!"
+$[wait=15] ERROR :[wait=15] WISH CONTRADICTS PRE-EXISTING WISH[wait=15][br]
+$[wait=15] CURRENT WISH :[wait=15] =[wait=15] "I'm bleedin' money over here![wait=15] I wish all of these customers will shop here forever, even if it kills them!"
 [wait]
 [erase]
 
@@ -278,18 +280,18 @@ Seems it interpreted The Manager's wish literally.
 [exani manual=slot 8, frame 1] // Iris (facing right, looking up)
 [font color=3]
 [topic]Windrose[/topic]
-$[wait=30] INITIATE WISH CONFLICT RESOLUTION CONTINGENCY[wait=30] ?[wait=30] :
+$[wait=15] INITIATE WISH CONFLICT RESOLUTION CONTINGENCY[wait=15] ?[wait=15] :
 [wait]
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-Um...[wait=30] Sure?
+Um...[wait=15] Sure?
 [wait]
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
-$[wait=30] WISH CONFLICT RESOLUTION CONTINGENCY[wait=30] :[wait=30] ACTIVATING[wait=30][br]
-$[wait=30] INITIATING COMBAT SYSTEMS[wait=30] .[wait=30].[wait=30].[wait=30] <0%>[wait=30] <25%>
+$[wait=15] WISH CONFLICT RESOLUTION CONTINGENCY[wait=15] :[wait=15] ACTIVATING[wait=15][br]
+$[wait=15] INITIATING COMBAT SYSTEMS[wait=15] .[wait=15].[wait=15].[wait=15] (0%)[wait=15] (25%)
 [wait]
 [erase]
 [font color=1]
@@ -301,13 +303,13 @@ Oh, good![wait][br]
 //////////////
 
 [exani manual=slot 0, frame 4] // Demo (facing right, shocked)
-...[wait=30]Wait, what?
+...[wait=15]Wait, what?
 [wait]
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
-$[wait=30] INITIATING COMBAT SYSTEMS[wait=30] .[wait=30].[wait=30].[wait=30] <75%>[wait=30] <100%>[wait=30][br]
-$[wait=30] PREPARE FOR COMBAT
+$[wait=15] INITIATING COMBAT SYSTEMS[wait=15] .[wait=15].[wait=15].[wait=15] (75%)[wait=15] (100%)[wait=15][br]
+$[wait=15] PREPARE FOR COMBAT
 [wait]
 [erase]
 
@@ -323,6 +325,7 @@ Let's kick its proverbial butt.
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
+[label=end]
 [end=00]

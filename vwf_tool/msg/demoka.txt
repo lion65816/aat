@@ -20,7 +20,7 @@ Looks like the only way out of here is up.
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 2 //
@@ -39,13 +39,13 @@ Looks like the only way out of here is up.
 [font color=2]
 [topic]Iris[/topic]
 Now just how are we supposed to get up there?
-[wait=30]
+[wait=15]
 Become magical girls and fly?
 [wait]
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 3 //
@@ -72,7 +72,7 @@ That can be arranged.
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 4 //
@@ -89,11 +89,11 @@ That can be arranged.
 [font color=3]
 [topic]Kyubey[/topic]
 It's simple.[br]
-[wait=30]
+[wait=15]
 [label=contract]
 [pad left=24]
 Just make a contract with me.[br]
-[wait=30]
+[wait=15]
 No.[br]
 Yes.[br]
 YES!!!
@@ -101,7 +101,7 @@ YES!!!
 [branch=no,yes,yess]
 [label=no]
 Then how are you going to beat the level?[br]
-[wait=30]
+[wait=15]
 [jump=contract]
 [label=yes]
 Excellent.
@@ -113,7 +113,7 @@ I appreciate your enthusiasm!
 [erase]
 [topic][/topic]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 /////////////
 // Scene 5 //
@@ -132,7 +132,7 @@ I appreciate your enthusiasm!
 [/sprite]
 [music=CA]
 You have become meguca!
-[wait=30]
+[wait=15]
 [br]You can now do magical things!
 [wait]
 [br]Hold L/R to lock your direction!
@@ -141,6 +141,6 @@ You have become meguca!
 [wait]
 [erase]
 [sprite=erase]
-[wait=30]
+[wait=15]
 
 [end=00]

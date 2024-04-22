@@ -212,3 +212,5 @@ D1  plok-boss.txt
 D2  madnessU.txt
 D3  Wildlands.txt
 D4  207 Robo Gang Johnny.txt
+D5  Secret of Evermore - Tinker Tinderbox.txt
+D6  Title Screen.txt
