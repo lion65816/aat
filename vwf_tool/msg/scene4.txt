@@ -71,12 +71,12 @@ $[wait=15] STATE QUERY[wait=15] ?[wait=15] :[wait=15]
 [erase]
 [font color=2]
 [topic]Iris[/topic]
-Is this the "washing machine" that Clerk was talking about?
+Is this the ["]washing machine" that Clerk was talking about?
 [wait]
 [erase]
 [font color=3]
 [topic]?????[/topic]
-$[wait=15] QUERY :[wait=15] "IS THIS THE WASHING MACHINE THAT CLERK WAS TALKING ABOUT ?"[wait=15] =[wait=15] KINDA[wait=15][br]
+$[wait=15] QUERY :[wait=15] ["]IS THIS THE WASHING MACHINE THAT CLERK WAS TALKING ABOUT ?"[wait=15] =[wait=15] KINDA[wait=15][br]
 $[wait=15] STATE QUERY[wait=15] ?[wait=15] :[wait=15]
 [wait]
 [erase]
@@ -155,8 +155,8 @@ So what are you, and what do you do, exactly?
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
-$[wait=15] QUERY :[wait=15] "WHAT ARE YOU ?"[wait=15] =[wait=15] I AM WindRose Wishtonic-WFM[wait=15] "Wish-fulFilling Machine"[wait=15] Serial J02.U90.N07[wait=15][br]
-$[wait=15] QUERY :[wait=15] "WHAT DO YOU DO, EXACTLY ?"[wait=15] =[wait=15] I RESOLVE WISHES[wait=15][br]
+$[wait=15] QUERY :[wait=15] ["]WHAT ARE YOU ?"[wait=15] =[wait=15] I AM WindRose Wishtonic-WFM[wait=15] ["]Wish-fulFilling Machine"[wait=15] Serial J02.U90.N07[wait=15][br]
+$[wait=15] QUERY :[wait=15] ["]WHAT DO YOU DO, EXACTLY ?"[wait=15] =[wait=15] I RESOLVE WISHES[wait=15][br]
 $[wait=15] STATE QUERY[wait=15] ?[wait=15] :[wait=15]
 [wait]
 [erase]
@@ -168,12 +168,12 @@ $[wait=15] STATE QUERY[wait=15] ?[wait=15] :[wait=15]
 [exani manual=slot 0, frame 4] // Demo (facing right, shocked)
 [font color=1]
 [topic]Demo[/topic]
-...[wait=15]No way![wait=15] Is this the same "Windrose" from Stocking Day legend?
+...[wait=15]No way![wait=15] Is this the same ["]Windrose" from Stocking Day legend?
 [wait]
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
-$[wait=15] QUERY :[wait=15] "IS THIS THE SAME WINDROSE FROM STOCKING DAY LEGEND ?"[wait=15] =[wait=15] AFFIRMATIVE
+$[wait=15] QUERY :[wait=15] ["]IS THIS THE SAME WINDROSE FROM STOCKING DAY LEGEND ?"[wait=15] =[wait=15] AFFIRMATIVE
 [wait]
 [erase]
 
@@ -191,7 +191,7 @@ Ha.[wait=15] So the Windrose we blindly wished upon in the past is just a machin
 [font color=3]
 [topic]Windrose[/topic]
 $[wait=15] QUERY QUOTA EXCEEDED[wait=15] .[wait=15].[wait=15].[wait=15][br]
-$[wait=15] STATE "NAME",[wait=15] "FAVORITE SANDWICH",[wait=15] AND "WISH"
+$[wait=15] STATE ["]NAME",[wait=15] ["]FAVORITE SANDWICH",[wait=15] AND ["]WISH"
 [wait]
 [erase]
 [topic][/topic]
@@ -258,7 +258,7 @@ My name is Demo Rosemary Roseclair.[wait=15] The po' boy is my guilty pleasure.[
 [font color=3]
 [topic]Windrose[/topic]
 $[wait=15] ERROR :[wait=15] WISH CONTRADICTS PRE-EXISTING WISH[wait=15][br]
-$[wait=15] CURRENT WISH :[wait=15] =[wait=15] "I'm bleedin' money over here![wait=15] I wish all of these customers will shop here forever, even if it kills them!"
+$[wait=15] CURRENT WISH :[wait=15] =[wait=15] ["]I'M BLEEDIN' MONEY OVER HERE![wait=15] I WISH ALL OF THESE CUSTOMERS WILL SHOP HERE FOREVER, EVEN IF IT KILLS THEM!"
 [wait]
 [erase]
 

@@ -48,18 +48,18 @@ Are we good here?
 [font color=3]
 [topic]Windrose[/topic]
 $[wait=15] PREVIOUS WISH :[wait=15] =[wait=15] VOIDED[wait=15][br]
-$[wait=15] NEW WISH :[wait=15] =[wait=15] "I WISH THE ENTIRE MALL COULD GO BACK TO NORMAL"[wait=15][br]
+$[wait=15] NEW WISH :[wait=15] =[wait=15] ["]I WISH THE ENTIRE MALL COULD GO BACK TO NORMAL"[wait=15][br]
 $[wait=15] IS THIS CORRECT?
 [wait]
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-Can I get a "pretty please" at the end?
+Can I get a ["]pretty please" at the end?
 [wait]
 [erase]
 [font color=3]
 [topic]Windrose[/topic]
-$[wait=15] NEW WISH :[wait=15] =[wait=15] "I WISH THE ENTIRE MALL COULD GO BACK TO NORMAL.[wait=15] CAN I GET A PRETTY PLEASE AT THE END."[wait=15][br]
+$[wait=15] NEW WISH :[wait=15] =[wait=15] ["]I WISH THE ENTIRE MALL COULD GO BACK TO NORMAL.[wait=15] CAN I GET A PRETTY PLEASE AT THE END."[wait=15][br]
 $[wait=15] NEW WISH :[wait=15] =[wait=15] GRANTED[wait=15]
 [wait]
 [erase]
@@ -300,6 +300,9 @@ Wait, you forgot the shopping cart-
 [br]Oh, nevermind...
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[wait=15]
 
 [label=end]
 [end=00]

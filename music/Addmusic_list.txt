@@ -214,3 +214,4 @@ D3  Wildlands.txt
 D4  207 Robo Gang Johnny.txt
 D5  Secret of Evermore - Tinker Tinderbox.txt
 D6  Title Screen.txt
+D7  Let's Meet in the Mysterious Forest.txt

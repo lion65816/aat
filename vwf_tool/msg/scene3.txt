@@ -65,8 +65,8 @@ Good.[wait=15] Now let's get the food so we can head back home already!
                  (40,38,E4,0A,big)(50,38,E6,0A,big)
 // Background
 (30,08,8C,0C,big)(40,08,8E,0C,big)(50,08,00,0D,big)(60,08,02,0D,big)(70,08,04,0D,big)(80,08,06,0D,big)(90,08,08,0D,big)(A0,08,0A,0D,big)(B0,08,0C,0D,big)(C0,08,0E,0D,big)
-(30,18,AC,0C,big)(40,18,AE,0C,big)(50,18,20,0D,big)(60,18,22,0D,big)(70,18,24,0D,big)(80,18,26,0D,big)(90,18,28,0D,big)(A0,18,2A,0D,big)(B0,18,2C,0D,big)(C0,18,2E,0D,big)
-(30,28,CC,0C,big)(40,28,CE,0C,big)(50,28,40,0D,big)(60,28,42,0D,big)(70,28,44,0D,big)(80,28,46,0D,big)(90,28,48,0D,big)(A0,28,4A,0D,big)(B0,28,4C,0D,big)(C0,28,4E,0D,big)
+(30,18,AC,0C,big)(40,18,AE,0C,big)(50,18,20,0D,big)(60,18,22,0D,big)(70,18,24,0D,big)(80,18,26,0D,big)(90,18,28,0D,big)(A0,18,E2,0C,big)(B0,18,2C,0D,big)(C0,18,2E,0D,big)
+(30,28,CC,0C,big)(40,28,CE,0C,big)(50,28,40,0D,big)(60,28,42,0D,big)(70,28,44,0D,big)(80,28,46,0D,big)(90,28,C0,0C,big)(A0,28,C2,0C,big)(B0,28,4C,0D,big)(C0,28,4E,0D,big)
 (30,38,EC,0C,big)(40,38,EE,0C,big)(50,38,60,0D,big)(60,38,62,0D,big)(70,38,64,0D,big)(80,38,66,0D,big)(90,38,68,0D,big)(A0,38,6A,0D,big)(B0,38,6C,0D,big)(C0,38,6E,0D,big)
 (30,48,E0,0C,big)(40,48,E0,0C,big)(50,48,E0,0C,big)(60,48,E0,0C,big)(70,48,E0,0C,big)(80,48,E0,0C,big)(90,48,E0,0C,big)(A0,48,E0,0C,big)(B0,48,E0,0C,big)(C0,48,E0,0C,big)
 [/sprite]
@@ -82,7 +82,7 @@ And why should we take your word for it?[wait=15] We're on a tight schedule here
 [erase]
 [font color=3]
 [topic]?????[/topic]
-I used to work there...[wait=15] for less than a day.[wait=15] Then the Manager showed up with some kinda "washing machine".
+I used to work there...[wait=15] for less than a day.[wait=15] Then the Manager showed up with some kinda ["]washing machine".
 [wait]
 [br]They twisted a few knobs, said a bunch of words, and next thing I know, the whole place's gone bonkers![wait=15] Not sure what happened, but it's too dangerous to go back in the grocery store now.
 [wait]
@@ -95,7 +95,7 @@ I used to work there...[wait=15] for less than a day.[wait=15] Then the Manager 
 [exani manual=slot 0, frame 1] // Demo (facing right, looking up)
 [font color=1]
 [topic]Demo[/topic]
-(Wait, a "washing machine"...?)
+(Wait, a ["]washing machine"...?)
 [wait]
 [erase]
 
@@ -163,8 +163,8 @@ It's not just us.[wait=15] It seems like EVERYONE who was in the mall when thing
                                                             (68,2A,80,02,big)        (80,2A,82,04,big)
                                                             (68,3A,A0,42,big)        (80,3A,A2,04,big)
 // Rachel
-                 (40,2A,86,08,big)
-				 (40,3A,A6,08,big)
+                 (40,29,86,08,big)
+				 (40,39,A6,08,big)
 // Clerk
                                                                                                                                         (AE,28,84,06,big)
                                                                                                                                         (AE,38,A4,06,big)
@@ -173,8 +173,8 @@ It's not just us.[wait=15] It seems like EVERYONE who was in the mall when thing
                                   (50,38,E4,0A,big)(60,38,E6,0A,big)
 // Background
 (30,08,8A,0C,big)(40,08,8C,0C,big)(50,08,8E,0C,big)(60,08,00,0D,big)(70,08,02,0D,big)(80,08,04,0D,big)(90,08,06,0D,big)(A0,08,08,0D,big)(B0,08,0A,0D,big)(C0,08,0C,0D,big)
-(30,18,AA,0C,big)(40,18,AC,0C,big)(50,18,AE,0C,big)(60,18,20,0D,big)(70,18,22,0D,big)(80,18,24,0D,big)(90,18,26,0D,big)(A0,18,28,0D,big)(B0,18,2A,0D,big)(C0,18,2C,0D,big)
-(30,28,CA,0C,big)(40,28,CC,0C,big)(50,28,CE,0C,big)(60,28,40,0D,big)(70,28,42,0D,big)(80,28,44,0D,big)(90,28,46,0D,big)(A0,28,48,0D,big)(B0,28,4A,0D,big)(C0,28,4C,0D,big)
+(30,18,AA,0C,big)(40,18,AC,0C,big)(50,18,AE,0C,big)(60,18,20,0D,big)(70,18,22,0D,big)(80,18,24,0D,big)(90,18,26,0D,big)(A0,18,28,0D,big)(B0,18,E2,0C,big)(C0,18,2C,0D,big)
+(30,28,CA,0C,big)(40,28,CC,0C,big)(50,28,CE,0C,big)(60,28,40,0D,big)(70,28,42,0D,big)(80,28,44,0D,big)(90,28,46,0D,big)(A0,28,C0,0C,big)(B0,28,C2,0C,big)(C0,28,4C,0D,big)
 (30,38,EA,0C,big)(40,38,EC,0C,big)(50,38,EE,0C,big)(60,38,60,0D,big)(70,38,62,0D,big)(80,38,64,0D,big)(90,38,66,0D,big)(A0,38,68,0D,big)(B0,38,6A,0D,big)(C0,38,6C,0D,big)
 (30,48,E0,0C,big)(40,48,E0,0C,big)(50,48,E0,0C,big)(60,48,E0,0C,big)(70,48,E0,0C,big)(80,48,E0,0C,big)(90,48,E0,0C,big)(A0,48,E0,0C,big)(B0,48,E0,0C,big)(C0,48,E0,0C,big)
 [/sprite]
@@ -203,8 +203,8 @@ Rach![wait=15] Nice to see you again!
                                                             (68,2A,80,02,big)        (80,2A,82,04,big)
                                                             (68,3A,A0,02,big)        (80,3A,A2,44,big)
 // Rachel
-                                                                                                               (98,2A,86,48,big)
-				                                                                                               (98,3A,A6,48,big)
+                                                                                                               (98,29,86,48,big)
+				                                                                                               (98,39,A6,48,big)
 // Clerk
                                                                                                                                         (AE,28,84,06,big)
                                                                                                                                         (AE,38,A4,06,big)
@@ -213,14 +213,14 @@ Rach![wait=15] Nice to see you again!
                                   (50,38,E4,0A,big)(60,38,E6,0A,big)
 // Background
 (30,08,8A,0C,big)(40,08,8C,0C,big)(50,08,8E,0C,big)(60,08,00,0D,big)(70,08,02,0D,big)(80,08,04,0D,big)(90,08,06,0D,big)(A0,08,08,0D,big)(B0,08,0A,0D,big)(C0,08,0C,0D,big)
-(30,18,AA,0C,big)(40,18,AC,0C,big)(50,18,AE,0C,big)(60,18,20,0D,big)(70,18,22,0D,big)(80,18,24,0D,big)(90,18,26,0D,big)(A0,18,28,0D,big)(B0,18,2A,0D,big)(C0,18,2C,0D,big)
-(30,28,CA,0C,big)(40,28,CC,0C,big)(50,28,CE,0C,big)(60,28,40,0D,big)(70,28,42,0D,big)(80,28,44,0D,big)(90,28,46,0D,big)(A0,28,48,0D,big)(B0,28,4A,0D,big)(C0,28,4C,0D,big)
+(30,18,AA,0C,big)(40,18,AC,0C,big)(50,18,AE,0C,big)(60,18,20,0D,big)(70,18,22,0D,big)(80,18,24,0D,big)(90,18,26,0D,big)(A0,18,28,0D,big)(B0,18,E2,0C,big)(C0,18,2C,0D,big)
+(30,28,CA,0C,big)(40,28,CC,0C,big)(50,28,CE,0C,big)(60,28,40,0D,big)(70,28,42,0D,big)(80,28,44,0D,big)(90,28,46,0D,big)(A0,28,C0,0C,big)(B0,28,C2,0C,big)(C0,28,4C,0D,big)
 (30,38,EA,0C,big)(40,38,EC,0C,big)(50,38,EE,0C,big)(60,38,60,0D,big)(70,38,62,0D,big)(80,38,64,0D,big)(90,38,66,0D,big)(A0,38,68,0D,big)(B0,38,6A,0D,big)(C0,38,6C,0D,big)
 (30,48,E0,0C,big)(40,48,E0,0C,big)(50,48,E0,0C,big)(60,48,E0,0C,big)(70,48,E0,0C,big)(80,48,E0,0C,big)(90,48,E0,0C,big)(A0,48,E0,0C,big)(B0,48,E0,0C,big)(C0,48,E0,0C,big)
 [/sprite]
 [font color=1]
 [topic]Demo[/topic]
-Your name is "Clerk"?[wait=15] Talk about nominative determinism.
+Your name is ["]Clerk"?[wait=15] Talk about nominative determinism.
 [wait]
 [erase]
 

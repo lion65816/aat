@@ -53,8 +53,8 @@ So where's the grocery store?[wait=15] We're pretty far from the cabin now.
          (38,2A,82,04,big)                         (60,2A,80,02,big)
          (38,3A,A2,44,big)                         (60,3A,A0,42,big)
 // Rachel
-                                                                                                                                                         (C0,2A,C2,06,big)
-                                                                                                                                                         (C0,3A,E2,06,big)
+                                                                                                                                                         (C0,29,C2,06,big)
+                                                                                                                                                         (C0,39,E2,06,big)
 // Clouds
                                                             (68,08,60,0A,big)(78,08,62,0A,big)(88,08,64,0A,big)
 (30,38,62,0A,big)(40,38,64,0A,big)
@@ -90,8 +90,8 @@ Maybe that loudmouth knows.
                  (40,2A,82,04,big)                 (60,2A,80,02,big)
                  (40,3A,A2,44,big)                 (60,3A,A0,42,big)
 // Rachel
-                                                                                                                       (A0,2A,C2,06,big)
-                                                                                                                       (A0,3A,E2,06,big)
+                                                                                                                       (A0,29,C2,06,big)
+                                                                                                                       (A0,39,E2,06,big)
 // Jet (underside)
                                                                                                                                                          (C0,38,EE,08,big)
 // Clouds
@@ -272,7 +272,7 @@ Oh![wait=15] Before I forget, here's my business card.[wait=15] Hop on board, an
 [/sprite]
 [font color=3]
 [topic]RACHEL'S REBATE ROTORCRAFT[/topic]
-"Your quick ticket 'round the isles!"[wait=15][br]
+["]Your quick ticket 'round the isles!"[wait=15][br]
 Open 24/7 except for Tuesdays at 11:30 AM-12:30 PM[wait=15][br]
 Admission FREE with ownership of business card![wait=15][br]
 (hey, look at that, that's you!)

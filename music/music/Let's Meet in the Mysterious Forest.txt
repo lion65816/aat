@@ -1,0 +1,124 @@
+#amk 2
+
+#spc {
+	#title		"Let's Meet in the Mysterious Forest"
+	#game		"Mario and Luigi: Bowser's Inside Story"
+	#length		"0:54"
+	#author		"Yoko Shimomura"
+	#comment	"Arranged by SMWCentral user Landonb8x"
+}
+
+#instruments
+{
+@0 $FA $60 $B8 $06 $00
+@3 $FB $6A $B8 $03 $00
+@2 $FF $F3 $8C $03 $04
+@11 $E6 $63 $B8 $03 $00
+@6 $FA $80 $00 $05 $FF
+}
+
+$EF$79$1A$1A
+$F1$02$3A$00
+
+#0 w255 t39 @4 o2 v110 l16 $DB$0B
+[g>rdrgrdr<]2/
+[g>rdrgrdr<]7 g>rdrg8r8
+[fr>crfr8.<d+ra+r>d+r8.<]2
+r8g8>c8<a+agrere4
+[fr>crfrcr<fr>crfrcr< d+ra+r>d+r<a+rd+ra+r>d+r<a+r]2
+<a+r>fra+r8.crgr>cr8.<<g+r>d+rg+r8.<a+r>fra+r8.
+<[d+rgr]8
+g+r>d+rg+r8.<a+r>fra+r8.<br>f+rbr8.c+rg+r>c+r8.
+<[f+r8.]4[dr8.]2<[ar8.]2
+[g>rdrgrdr<]4
+
+#1 o4 v170 l16
+r1/@31 o4 v170 l16 $DB$08
+(1)[dddrc+rdrerfr$f4$02[[d48<g48>]]3d48$f4$02r^24]
+dddrc+rdrere48d48e48fedc+r
+(1)
+erfr24[d48g48]3r48fedr4..
+(3)[gagferfga]rdrr4
+(3)adrr4
+r2r8gr24$f4$02[c48g48]6$f4$02r48
+r1r1 @32 v135
+>r8 $DB$0Ac8 $DB$09d8 $DB$08e8 $DB$07gf $DB$08e $DB$09f $DB$08e4
+r8 $DB$09d8 $DB$09d+8 $DB$08g8 $DB$07a+ $DB$08a $DB$09g $DB$08a $DB$09g8 $DB$0Afr48 $DB$0Af48 $DB$09g48
+$DB$08a+8 @9 v140 <r8dr4..er4..cr4..dr8
+[r8.gr8.g]4r
+r4cr4..dr4..d+r4..fr8
+[r8.f+r8.f+]3r8.er8.er
+r1r1
+
+#2 o3 v170 l16
+r1/@31 o3 v170 l16 $DB$08
+(2)[gggrgrgrgrg]rr4
+(2)rgggr
+(2)rr4
+grgr8.grgrr4
+[r4.a8r4.g8]2
+@26 v255 $f4$03 $DB$10 rc32c32c8 @31 v130 $f4$03 $DB$08
+r2>cr8.<
+@26 v255 $f4$03 $DB$10 rc32c32c8 @31 v130 $f4$03 $DB$08
+(4)[r8a8r4.a8r4.g8r4.g8r8]r8
+(4)
+@9 o5 v140 ffaagrfgarerr4
+(8)[ccggfrd+fgrdr]r4
+[r8dr]8
+(8) @32 v135 a+4 @9 v140
+d+d+a+a+g+rf+g+a+rfr @32 v135 >c+4< @9 v140
+<[r8br]6>[r8c+r]2
+r1r1
+
+#3 @30 o5 v195 l16 $DB$0D
+r1/
+(5)[r2.c+dc+d]
+r2.c+ded
+(5)
+r2r8.d32e32g8.r
+r2.<a+>c<a+>c
+r2.<a+>cd+d
+r1
+<r8c8d8e8gfefe4
+(6)[r8d8d+8g8a+agag8f.g32]
+>c2<a+4a4
+(6)
+>dr4r4..<gaga
+r2.fga+g+
+@34 v125 g+2.g4f+2g2 @30 v195 $DB$0D
+r2.fgfg
+r2.g+a+>c+<b
+r1r1..>c+dc+d
+r2.c+dgr
+
+#4 o5 l16
+r1/ @30 v195 r1r1r1 $DB$09
+r2r8.g32a32b8.r
+<c2<a+2a2a+2g2...r
+r1
+(7)[r8a+8>c8d+8gfd+fd+8d8]
+c2<a+4a4
+(7)
+r1r1r1r1r1r1
+@34 v140 b2.a+4a4b4>c+4e4d1
+r1
+
+#5 @33 l16 $DB$06
+r1/o5 v150 r1r1r1r1r1r1r1
+a1a+1a1>c2<a+2
+r1r2... @34 v125 <d+48f48g48> @33 v150 $DB$06
+o3 a+1^1
+r1r1
+f+1^2a4>c+4<b1
+r1
+
+#6 l16
+r1/ @33 o5 v150 r1r1r1r1r1r1r1 $DB$06
+c1d+1c1f2d+2
+r1r1 o4
+d+1^1
+r1r1 v100
+@34 r1r4<f+4a4>c+4<b1
+r1
+
+#7

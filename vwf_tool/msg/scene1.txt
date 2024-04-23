@@ -1,15 +1,64 @@
+// Demo's and Iris' facial expressions are in ExGFX299.
+// Set AN2 to ExGFX299, and use the following ExAnimation manual trigger slots:
+// Slot 00, frame 00: Demo (facing right, normal)        Slot 08, frame 00: Iris (facing right, normal)
+// Slot 00, frame 01: Demo (facing right, looking up)    Slot 08, frame 01: Iris (facing right, looking up)
+// Slot 00, frame 02: Demo (facing right, annoyed)       Slot 08, frame 02: Iris (facing right, annoyed)
+// Slot 00, frame 03: Demo (facing right, happy)
+// Slot 00, frame 04: Demo (facing right, shocked)
+// Slot 00, frame 08: Demo (facing left, normal)         Slot 08, frame 08: Iris (facing left, normal)
+// Slot 00, frame 09: Demo (facing left, looking up)     Slot 08, frame 09: Iris (facing left, looking up)
+// Slot 00, frame 0A: Demo (facing left, annoyed)        Slot 08, frame 0A: Iris (facing left, annoyed)
+// Slot 00, frame 0B: Demo (facing left, happy)
+// Slot 00, frame 0C: Demo (facing left, shocked)
+// Slot 01, frame 00: Demo (facing right, sleeping)
+// Slot 01, frame 01: Demo (facing right, stirring)
+// Slot 01, frame 02: Demo (facing left, sleeping)
+// Slot 01, frame 03: Demo (facing left, stirring)
+
+/////////////
+// Scene 1 //
+/////////////
+
 [skip=end]
 
+[wait=120]
 [font color=2]
 [topic]?????[/topic]
 Demo...[wait=15] Wake up...
 [wait]
 [erase]
+[topic][/topic]
+[exani manual=slot 1, frame 0] // Demo (facing right, sleeping)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[wait=15]
+
+/////////////
+// Scene 2 //
+/////////////
+
+[sprite=54]
+// Demo and Iris
+(30,2A,82,04,big)                                                            (78,23,84,02,big)
+(30,3A,A2,04,big)                                                            (78,33,A4,02,big)
+// Background
+(30,08,00,07,big)(40,08,02,07,big)(50,08,04,07,big)(60,08,06,07,big)(70,08,08,07,big)(80,08,0A,07,big)(90,08,0C,07,big)(A0,08,0E,07,big)(B0,08,8C,08,big)(C0,08,8E,08,big)
+(30,18,20,07,big)(40,18,22,07,big)(50,18,24,07,big)(60,18,26,07,big)(70,18,28,07,big)(80,18,2A,07,big)(90,18,2C,07,big)(A0,18,2E,07,big)(B0,18,AC,08,big)(C0,18,AE,08,big)
+(30,28,40,07,big)(40,28,42,07,big)(50,28,44,07,big)(60,28,46,07,big)(70,28,48,07,big)(80,28,4A,07,big)(90,28,4C,07,big)(A0,28,4E,07,big)(B0,28,CC,08,big)(C0,28,CE,08,big)
+(30,38,60,07,big)(40,38,62,07,big)(50,38,64,07,big)(60,38,66,07,big)(70,38,68,07,big)(80,38,6A,07,big)(90,38,6C,07,big)(A0,38,6E,07,big)(B0,38,EC,08,big)(C0,38,EE,08,big)
+(30,48,E0,0C,big)(40,48,E0,0C,big)(50,48,E0,0C,big)(60,48,E0,0C,big)(70,48,E0,0C,big)(80,48,E0,0C,big)(90,48,E0,0C,big)(A0,48,E0,0C,big)(B0,48,E0,0C,big)(C0,48,E0,0C,big)
+[/sprite]
+[font color=1]
+[topic]Demo[/topic]
+Zzz...[wait=15] video games...
+[wait]
+[erase]
+[exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
 Demo![wait=15] WAKE UP!
 [wait]
 [erase]
+[exani manual=slot 1, frame 1] // Demo (facing right, stirring)
 [font color=1]
 [topic]Demo[/topic]
 ...Huh?[wait=15] Wha...?
@@ -20,6 +69,27 @@ Demo![wait=15] WAKE UP!
 Stop lazing around.[wait=15] Reminder that Uncle Broadsword's making us cater the ENTIRE party for Stocking Day, so I'll need your help.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[wait=15]
+
+/////////////
+// Scene 3 //
+/////////////
+
+[sprite=54]
+// Demo and Iris
+                                                   (60,2A,82,04,big)                                  (90,2A,80,02,big)
+                                                   (60,3A,A2,04,big)                                  (90,3A,A0,02,big)
+// Background
+(30,08,8E,0D,big)(40,08,88,0C,big)(50,08,8A,0C,big)(60,08,00,07,big)(70,08,02,07,big)(80,08,04,07,big)(90,08,06,07,big)(A0,08,08,07,big)(B0,08,0A,07,big)(C0,08,0C,07,big)
+(30,18,AE,0D,big)(40,18,A8,0C,big)(50,18,AA,0C,big)(60,18,20,07,big)(70,18,22,07,big)(80,18,24,07,big)(90,18,26,07,big)(A0,18,28,07,big)(B0,18,2A,07,big)(C0,18,2C,07,big)
+(30,28,CE,0D,big)(40,28,C8,0C,big)(50,28,CA,0C,big)(60,28,40,07,big)(70,28,42,07,big)(80,28,44,07,big)(90,28,46,07,big)(A0,28,48,07,big)(B0,28,4A,07,big)(C0,28,4C,07,big)
+(30,38,EE,0D,big)(40,38,E8,0C,big)(50,38,EA,0C,big)(60,38,60,07,big)(70,38,62,07,big)(80,38,64,07,big)(90,38,66,07,big)(A0,38,68,07,big)(B0,38,6A,07,big)(C0,38,6C,07,big)
+(30,48,E0,0C,big)(40,48,E0,0C,big)(50,48,E0,0C,big)(60,48,E0,0C,big)(70,48,E0,0C,big)(80,48,E0,0C,big)(90,48,E0,0C,big)(A0,48,E0,0C,big)(B0,48,E0,0C,big)(C0,48,E0,0C,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
 That's right, it's almost Stocking Day![wait=15] I should go and give Uncle B. his socks!
@@ -27,29 +97,89 @@ That's right, it's almost Stocking Day![wait=15] I should go and give Uncle B. h
 [erase]
 [font color=2]
 [topic]Iris[/topic]
-He's not here, Demo.[wait=15] That's why it's just the two of us, because he's "busy".
+He's not here, Demo.[wait=15] That's why it's just the two of us, because he's ["]busy".
 [wait]
 [erase]
+[exani manual=slot 0, frame 9] // Demo (facing left, looking up)
 [font color=1]
 [topic]Demo[/topic]
 Oh yeah, I forgot that Uncle B.'s spending another full day at his digsite.
 [wait]
 [erase]
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
 He didn't even greet us when we arrived here at his cabin.[wait=15] Sometimes, I think he cares about his work more than he cares about us.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[exani manual=slot 8, frame 8] // Iris (facing left, normal)
+[wait=15]
+
+/////////////
+// Scene 4 //
+/////////////
+
+[sprite=54]
+// Demo and Iris
+                                                                                     (80,2A,82,04,big)                                  (B0,2A,80,02,big)
+                                                                                     (80,3A,C2,04,big)                                  (B0,3A,E2,02,big)
+// Background
+(30,08,80,0B,big)(40,08,82,0B,big)(50,08,84,0B,big)(60,08,86,0B,big)(70,08,88,0B,big)(80,08,8A,0D,big)(90,08,8C,0D,big)(A0,08,8E,0D,big)(B0,08,88,0C,big)(C0,08,8A,0C,big)
+(30,18,A0,0B,big)(40,18,A2,0B,big)(50,18,A4,0B,big)(60,18,A6,0B,big)(70,18,A8,0B,big)(80,18,AA,0D,big)(90,18,AC,0D,big)(A0,18,AE,0D,big)(B0,18,A8,0C,big)(C0,18,AA,0C,big)
+(30,28,C0,0B,big)(40,28,C2,0B,big)(50,28,C4,0B,big)(60,28,C6,0B,big)(70,28,C8,0B,big)(80,28,CA,0D,big)(90,28,CC,0D,big)(A0,28,CE,0D,big)(B0,28,C8,0C,big)(C0,28,CA,0C,big)
+(30,38,E0,0B,big)(40,38,E2,0B,big)(50,38,E4,0B,big)(60,38,E6,0B,big)(70,38,E8,0B,big)(80,38,EA,0D,big)(90,38,EC,0D,big)(A0,38,EE,0D,big)(B0,38,E8,0C,big)(C0,38,EA,0C,big)
+(30,48,E0,0C,big)(40,48,E0,0C,big)(50,48,E0,0C,big)(60,48,E0,0C,big)(70,48,E0,0C,big)(80,48,E0,0C,big)(90,48,E0,0C,big)(A0,48,E0,0C,big)(B0,48,E0,0C,big)(C0,48,E0,0C,big)
+[/sprite]
 [font color=2]
 [topic]Iris[/topic]
-Anyway, can you lend me a leg?[wait=15] Take out some zucchinis out of the fridge and start chopping them up.
+Anyway, can you lend me a leg?[wait=15] Take some zucchinis out of the fridge and start chopping them up.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 8, frame 8] // Iris (facing left, normal)
+[wait=15]
+
+/////////////
+// Scene 5 //
+/////////////
+
+[sprite=54]
+// Demo and Iris
+                 (40,2A,C4,02,big)                                                   (80,2A,82,04,big)
+                 (40,3A,E4,02,big)                                                   (80,3A,A2,44,big)
+// Background
+(30,08,80,0B,big)(40,08,82,0B,big)(50,08,84,0B,big)(60,08,86,0B,big)(70,08,88,0B,big)(80,08,8A,0D,big)(90,08,8C,0D,big)(A0,08,8E,0D,big)(B0,08,88,0C,big)(C0,08,8A,0C,big)
+(30,18,A0,0B,big)(40,18,A2,0B,big)(50,18,A4,0B,big)(60,18,A6,0B,big)(70,18,A8,0B,big)(80,18,AA,0D,big)(90,18,AC,0D,big)(A0,18,AE,0D,big)(B0,18,A8,0C,big)(C0,18,AA,0C,big)
+(30,28,C0,0B,big)(40,28,C2,0B,big)(50,28,C4,0B,big)(60,28,C6,0B,big)(70,28,C8,0B,big)(80,28,CA,0D,big)(90,28,CC,0D,big)(A0,28,CE,0D,big)(B0,28,C8,0C,big)(C0,28,CA,0C,big)
+(30,38,E0,0B,big)(40,38,E2,0B,big)(50,38,E4,0B,big)(60,38,E6,0B,big)(70,38,E8,0B,big)(80,38,EA,0D,big)(90,38,EC,0D,big)(A0,38,EE,0D,big)(B0,38,E8,0C,big)(C0,38,EA,0C,big)
+(30,48,E0,0C,big)(40,48,E0,0C,big)(50,48,E0,0C,big)(60,48,E0,0C,big)(70,48,E0,0C,big)(80,48,E0,0C,big)(90,48,E0,0C,big)(A0,48,E0,0C,big)(B0,48,E0,0C,big)(C0,48,E0,0C,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
 Right.[wait=15] Let's see here...
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[wait=15]
+
+/////////////
+// Scene 6 //
+/////////////
+
+[sprite=50]                              
+// Background
+(30,08,0C,0E,big)(40,08,0E,0E,big)(50,08,20,0E,big)(60,08,20,0E,big)(70,08,20,0E,big)(80,08,20,0E,big)(90,08,20,0E,big)(A0,08,20,0E,big)(B0,08,22,0E,big)(C0,08,24,0E,big)
+(30,18,0C,0E,big)(40,18,26,0E,big)(50,18,28,0E,big)(60,18,2A,0E,big)(70,18,2A,0E,big)(80,18,2A,0E,big)(90,18,2A,0E,big)(A0,18,2A,0E,big)(B0,18,2E,0E,big)(C0,18,40,0E,big)
+(30,28,42,0E,big)(40,28,46,0E,big)(50,28,48,0E,big)(60,28,4A,0E,big)(70,28,4A,0E,big)(80,28,4A,0E,big)(90,28,4A,0E,big)(A0,28,4C,0E,big)(B0,28,4E,0E,big)(C0,28,60,0E,big)
+(30,38,62,0E,big)(40,38,64,0E,big)(50,38,20,0E,big)(60,38,20,0E,big)(70,38,20,0E,big)(80,38,20,0E,big)(90,38,20,0E,big)(A0,38,20,0E,big)(B0,38,66,0E,big)(C0,38,68,0E,big)
+(30,48,6A,0E,big)(40,48,0E,0E,big)(50,48,20,0E,big)(60,48,20,0E,big)(70,48,20,0E,big)(80,48,20,0E,big)(90,48,20,0E,big)(A0,48,20,0E,big)(B0,48,22,0E,big)(C0,48,6C,0E,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
 Uh...[wait=15] we have a problem.
@@ -65,6 +195,27 @@ What now?
 There's nothing in the fridge.[wait=15] I guess Uncle B. mostly orders takeout.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 0] // Demo (facing right, normal)
+[exani manual=slot 8, frame 8] // Iris (facing left, normal)
+[wait=15]
+
+/////////////
+// Scene 7 //
+/////////////
+
+[sprite=54]
+// Demo and Iris
+                 (40,2A,80,02,big)                                                   (80,2A,82,04,big)
+                 (40,3A,A0,42,big)                                                   (80,3A,A2,44,big)
+// Background
+(30,08,80,0B,big)(40,08,82,0B,big)(50,08,84,0B,big)(60,08,86,0B,big)(70,08,88,0B,big)(80,08,8A,0D,big)(90,08,8C,0D,big)(A0,08,8E,0D,big)(B0,08,88,0C,big)(C0,08,8A,0C,big)
+(30,18,A0,0B,big)(40,18,A2,0B,big)(50,18,A4,0B,big)(60,18,A6,0B,big)(70,18,A8,0B,big)(80,18,AA,0D,big)(90,18,AC,0D,big)(A0,18,AE,0D,big)(B0,18,A8,0C,big)(C0,18,AA,0C,big)
+(30,28,C0,0B,big)(40,28,C2,0B,big)(50,28,C4,0B,big)(60,28,C6,0B,big)(70,28,C8,0B,big)(80,28,CA,0D,big)(90,28,CC,0D,big)(A0,28,CE,0D,big)(B0,28,C8,0C,big)(C0,28,CA,0C,big)
+(30,38,E0,0B,big)(40,38,E2,0B,big)(50,38,E4,0B,big)(60,38,E6,0B,big)(70,38,E8,0B,big)(80,38,EA,0D,big)(90,38,EC,0D,big)(A0,38,EE,0D,big)(B0,38,E8,0C,big)(C0,38,EA,0C,big)
+(30,48,E0,0C,big)(40,48,E0,0C,big)(50,48,E0,0C,big)(60,48,E0,0C,big)(70,48,E0,0C,big)(80,48,E0,0C,big)(90,48,E0,0C,big)(A0,48,E0,0C,big)(B0,48,E0,0C,big)(C0,48,E0,0C,big)
+[/sprite]
 [font color=2]
 [topic]Iris[/topic]
 How annoying.[wait=15] Well, looks like we have to go on a food run.[wait=15] Let's head outside and see if there's any grocery stores nearby.
@@ -72,19 +223,44 @@ How annoying.[wait=15] Well, looks like we have to go on a food run.[wait=15] Le
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-What, can't we gather food from ? blocks?[wait=15] Calle and I had so much fun doing that with Uncle B. last year!
+What, can't we gather food from ["]?" blocks?[wait=15] Calle and I had so much fun doing that with Uncle B. last year!
 [wait]
 [erase]
+[exani manual=slot 8, frame A] // Iris (facing left, annoyed)
 [font color=2]
 [topic]Iris[/topic]
 And then the holiday dinner was incredibly bland.[wait=15] This is supposed to be a feast, Demo.[wait=15] We need store-quality produce.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 2] // Demo (facing right, annoyed)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[wait=15]
+
+/////////////
+// Scene 8 //
+/////////////
+
+[sprite=54]
+// Demo and Iris
+                 (40,2A,80,02,big)                                                                                                               (B8,2A,82,04,big)
+                 (40,3A,A0,42,big)                                                                                                               (B8,3A,C2,44,big)
+// Background
+(30,08,80,0B,big)(40,08,82,0B,big)(50,08,84,0B,big)(60,08,86,0B,big)(70,08,88,0B,big)(80,08,8A,0D,big)(90,08,8C,0D,big)(A0,08,8E,0D,big)(B0,08,88,0C,big)(C0,08,8A,0C,big)
+(30,18,A0,0B,big)(40,18,A2,0B,big)(50,18,A4,0B,big)(60,18,A6,0B,big)(70,18,A8,0B,big)(80,18,AA,0D,big)(90,18,AC,0D,big)(A0,18,AE,0D,big)(B0,18,A8,0C,big)(C0,18,AA,0C,big)
+(30,28,C0,0B,big)(40,28,C2,0B,big)(50,28,C4,0B,big)(60,28,C6,0B,big)(70,28,C8,0B,big)(80,28,CA,0D,big)(90,28,CC,0D,big)(A0,28,CE,0D,big)(B0,28,C8,0C,big)(C0,28,CA,0C,big)
+(30,38,E0,0B,big)(40,38,E2,0B,big)(50,38,E4,0B,big)(60,38,E6,0B,big)(70,38,E8,0B,big)(80,38,EA,0D,big)(90,38,EC,0D,big)(A0,38,EE,0D,big)(B0,38,E8,0C,big)(C0,38,EA,0C,big)
+(30,48,E0,0C,big)(40,48,E0,0C,big)(50,48,E0,0C,big)(60,48,E0,0C,big)(70,48,E0,0C,big)(80,48,E0,0C,big)(90,48,E0,0C,big)(A0,48,E0,0C,big)(B0,48,E0,0C,big)(C0,48,E0,0C,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
 And so, the voice of reason has spoken.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[wait=15]
 
 [label=end]
 [end=00]
