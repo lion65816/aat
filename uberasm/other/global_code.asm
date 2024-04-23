@@ -131,4 +131,8 @@ main:
 	STA $2122 ; Format = -bbbbbgg gggrrrrr
 	LDA #$33 ; High byte
 	STA $2122
+	REP #$20
+	LDA #$14A5
+	STA $0701|!addr
+	SEP #$20
 	RTS
