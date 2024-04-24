@@ -131,7 +131,7 @@ level:
 0C4	reloadRoom3.asm
 0C5	NoStatus_intro_stage.asm
 0C6	freescrollbabey.asm
-0C7	NoStatus.asm
+0C7	NoStatus_title.asm
 0C8	PitCode2.asm
 0C9	NoStatus_DisableInputs.asm
 0CA	NoStatus_DisableInputs.asm
@@ -363,6 +363,7 @@ level:
 1EF	elevator_shaft.asm
 1F0	elevator_shaft.asm
 1F1	elevator_shaft.asm
+1F2  TeleportAtTime.asm
 1F4	NoStatus.asm
 1F5	1F5.asm
 1F6	hdmatest_freescrollbabey.asm
