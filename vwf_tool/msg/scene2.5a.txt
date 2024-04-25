@@ -1,28 +1,149 @@
-[font color=2]
-[topic]Iris[/topic]
-According to Rachel, the Purrtal should be around here somewhere...
+// Demo's, Iris', and the Purrtal's facial expressions are in ExGFX333.
+// Set AN2 to ExGFX333, and use the following ExAnimation manual trigger slots:
+// Slot 00, frame 00: Demo (facing right, normal)        Slot 08, frame 00: Iris (facing right, normal)
+// Slot 00, frame 01: Demo (facing right, looking up)    Slot 08, frame 01: Iris (facing right, looking up)
+// Slot 00, frame 02: Demo (facing right, annoyed)       Slot 08, frame 02: Iris (facing right, annoyed)
+// Slot 00, frame 03: Demo (facing right, happy)
+// Slot 00, frame 04: Demo (facing right, shocked)
+// Slot 00, frame 08: Demo (facing left, normal)         Slot 08, frame 08: Iris (facing left, normal)
+// Slot 00, frame 09: Demo (facing left, looking up)     Slot 08, frame 09: Iris (facing left, looking up)
+// Slot 00, frame 0A: Demo (facing left, annoyed)        Slot 08, frame 0A: Iris (facing left, annoyed)
+// Slot 00, frame 0B: Demo (facing left, happy)
+// Slot 00, frame 0C: Demo (facing left, shocked)
+// Slot 01, frame 00: Purrtal (no expression)
+// Slot 01, frame 01: Purrtal (neutral)
+// Slot 01, frame 02: Purrtal (nyaa)
+// Slot 02, frame 00: Demo (facing towards the Purrtal)  Slot 03, frame 00: Iris (facing towards the Purrtal)
+// Slot 02, frame 01: Demo (facing right, annoyed)       Slot 03, frame 01: Iris (facing left, annoyed)
+
+/////////////
+// Scene 1 //
+/////////////
+
+[exani manual=slot 0, frame 0] // Demo (facing right, normal)
+[exani manual=slot 8, frame 9] // Iris (facing left, looking up)
+[sprite=54]
+// Demo and Iris
+                 (40,2A,82,04,big)                                                                                     (A0,2A,80,02,big)
+                 (40,3A,A2,04,big)                                                                                     (A0,3A,A0,02,big)
+// Background
+(30,08,00,09,big)(40,08,02,09,big)(50,08,04,09,big)(60,08,06,09,big)(70,08,08,09,big)(80,08,0A,09,big)(90,08,0C,09,big)(A0,08,0E,0B,big)(B0,08,8C,0A,big)(C0,08,8E,0A,big)
+(30,18,20,09,big)(40,18,22,09,big)(50,18,24,09,big)(60,18,26,09,big)(70,18,28,09,big)(80,18,2A,09,big)(90,18,2C,09,big)(A0,18,2E,0B,big)(B0,18,AC,0A,big)(C0,18,AE,0A,big)
+(30,28,40,09,big)(40,28,42,09,big)(50,28,44,09,big)(60,28,46,09,big)(70,28,48,09,big)(80,28,4A,09,big)(90,28,4C,09,big)(A0,28,4E,0B,big)(B0,28,CC,0A,big)(C0,28,CE,0A,big)
+(30,38,60,09,big)(40,38,62,09,big)(50,38,64,09,big)(60,38,66,09,big)(70,38,68,09,big)(80,38,6A,09,big)(90,38,6C,09,big)(A0,38,6E,0B,big)(B0,38,EC,0A,big)(C0,38,EE,0A,big)
+(30,48,CA,08,big)(40,48,CA,08,big)(50,48,CA,08,big)(60,48,CA,08,big)(70,48,CA,08,big)(80,48,CA,08,big)(90,48,CA,08,big)(A0,48,CA,08,big)(B0,48,CA,08,big)(C0,48,CA,08,big)
+[/sprite]
+[font color=1]
+[topic]Demo[/topic]
+I wonder why this place is all messed up.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[wait=15]
+
+/////////////
+// Scene 2 //
+/////////////
+
+[sprite=60]
+// Demo and Iris
+                 (40,2A,82,04,big)                                                                                     (A0,2A,80,02,big)
+                 (40,3A,A2,04,big)                                                                                     (A0,3A,A0,02,big)
+// Purrtal (emerging)
+                                  (50,20,86,06,big)(60,20,88,06,big)(70,20,8A,06,big)
+                                  (50,30,A6,06,big)(60,30,A8,06,big)(70,30,AA,06,big)
+// Background
+(30,08,00,09,big)(40,08,02,09,big)(50,08,04,09,big)(60,08,06,09,big)(70,08,08,09,big)(80,08,0A,09,big)(90,08,0C,09,big)(A0,08,0E,0B,big)(B0,08,8C,0A,big)(C0,08,8E,0A,big)
+(30,18,20,09,big)(40,18,22,09,big)(50,18,24,09,big)(60,18,26,09,big)(70,18,28,09,big)(80,18,2A,09,big)(90,18,2C,09,big)(A0,18,2E,0B,big)(B0,18,AC,0A,big)(C0,18,AE,0A,big)
+(30,28,40,09,big)(40,28,42,09,big)(50,28,44,09,big)(60,28,46,09,big)(70,28,48,09,big)(80,28,4A,09,big)(90,28,4C,09,big)(A0,28,4E,0B,big)(B0,28,CC,0A,big)(C0,28,CE,0A,big)
+(30,38,60,09,big)(40,38,62,09,big)(50,38,64,09,big)(60,38,66,09,big)(70,38,68,09,big)(80,38,6A,09,big)(90,38,6C,09,big)(A0,38,6E,0B,big)(B0,38,EC,0A,big)(C0,38,EE,0A,big)
+(30,48,CA,08,big)(40,48,CA,08,big)(50,48,CA,08,big)(60,48,CA,08,big)(70,48,CA,08,big)(80,48,CA,08,big)(90,48,CA,08,big)(A0,48,CA,08,big)(B0,48,CA,08,big)(C0,48,CA,08,big)
+[/sprite]
+[font color=2]
+[topic]Iris[/topic]
+Dunno, but according to Rachel, the Purrtal should be around here somewhere-
+[wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 4] // Demo (facing right, shocked)
+[exani manual=slot 1, frame 2] // Purrtal (nyaa)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[wait=15]
+
+/////////////
+// Scene 3 //
+/////////////
+
+[sprite=63]
+// Demo and Iris
+                 (40,2A,82,04,big)                                                                                     (A0,2A,80,02,big)
+                 (40,3A,A2,04,big)                                                                                     (A0,3A,A0,02,big)
+// Purrtal
+                                                            (68,10,80,07,big)(78,10,82,07,big)(88,10,84,07,big)
+                                                            (68,20,A0,07,big)(78,20,A2,07,big)(88,20,A4,07,big)
+                                                            (68,30,C0,07,big)(78,30,C2,07,big)(88,30,C4,07,big)
+// Background
+(30,08,00,09,big)(40,08,02,09,big)(50,08,04,09,big)(60,08,06,09,big)(70,08,08,09,big)(80,08,0A,09,big)(90,08,0C,09,big)(A0,08,0E,0B,big)(B0,08,8C,0A,big)(C0,08,8E,0A,big)
+(30,18,20,09,big)(40,18,22,09,big)(50,18,24,09,big)(60,18,26,09,big)(70,18,28,09,big)(80,18,2A,09,big)(90,18,2C,09,big)(A0,18,2E,0B,big)(B0,18,AC,0A,big)(C0,18,AE,0A,big)
+(30,28,40,09,big)(40,28,42,09,big)(50,28,44,09,big)(60,28,46,09,big)(70,28,48,09,big)(80,28,4A,09,big)(90,28,4C,09,big)(A0,28,4E,0B,big)(B0,28,CC,0A,big)(C0,28,CE,0A,big)
+(30,38,60,09,big)(40,38,62,09,big)(50,38,64,09,big)(60,38,66,09,big)(70,38,68,09,big)(80,38,6A,09,big)(90,38,6C,09,big)(A0,38,6E,0B,big)(B0,38,EC,0A,big)(C0,38,EE,0A,big)
+(30,48,CA,08,big)(40,48,CA,08,big)(50,48,CA,08,big)(60,48,CA,08,big)(70,48,CA,08,big)(80,48,CA,08,big)(90,48,CA,08,big)(A0,48,CA,08,big)(B0,48,CA,08,big)(C0,48,CA,08,big)
+[/sprite]
 [font color=3]
 [topic]?????[/topic]
+[sfx 1DFC=18] // Play thunder sound effect.
 NYAA!
 [wait]
 [erase]
+[exani manual=slot 1, frame 1] // Purrtal (neutral)
+[exani manual=slot 8, frame 2] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
 Uhh...[wait=15] was that you just now, sis?
 [wait]
 [erase]
+[exani manual=slot 0, frame A] // Demo (facing left, annoyed)
+[exani manual=slot 1, frame 1] // Purrtal (neutral)
 [font color=1]
 [topic]Demo[/topic]
 Since when do I meow?[wait=15] That's more Calleoca's wheelhouse.
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 1, frame 2] // Purrtal (nyaa)
+[exani manual=slot 2, frame 0] // Demo (facing towards the Purrtal)
+[exani manual=slot 3, frame 0] // Iris (facing towards the Purrtal)
+[wait=15]
+
+/////////////
+// Scene 4 //
+/////////////
+
+[sprite=63]
+// Demo and Iris (facing towards the Purrtal)
+                 (40,2A,C4,04,big)                                                                                     (A0,2A,84,02,big)
+                 (40,3A,E4,04,big)                                                                                     (A0,3A,A4,02,big)
+// Purrtal
+                                                            (68,10,80,07,big)(78,10,82,07,big)(88,10,84,07,big)
+                                                            (68,20,A0,07,big)(78,20,A2,07,big)(88,20,A4,07,big)
+                                                            (68,30,C0,07,big)(78,30,C2,07,big)(88,30,C4,07,big)
+// Background
+(30,08,00,09,big)(40,08,02,09,big)(50,08,04,09,big)(60,08,06,09,big)(70,08,08,09,big)(80,08,0A,09,big)(90,08,0C,09,big)(A0,08,0E,0B,big)(B0,08,8C,0A,big)(C0,08,8E,0A,big)
+(30,18,20,09,big)(40,18,22,09,big)(50,18,24,09,big)(60,18,26,09,big)(70,18,28,09,big)(80,18,2A,09,big)(90,18,2C,09,big)(A0,18,2E,0B,big)(B0,18,AC,0A,big)(C0,18,AE,0A,big)
+(30,28,40,09,big)(40,28,42,09,big)(50,28,44,09,big)(60,28,46,09,big)(70,28,48,09,big)(80,28,4A,09,big)(90,28,4C,09,big)(A0,28,4E,0B,big)(B0,28,CC,0A,big)(C0,28,CE,0A,big)
+(30,38,60,09,big)(40,38,62,09,big)(50,38,64,09,big)(60,38,66,09,big)(70,38,68,09,big)(80,38,6A,09,big)(90,38,6C,09,big)(A0,38,6E,0B,big)(B0,38,EC,0A,big)(C0,38,EE,0A,big)
+(30,48,CA,08,big)(40,48,CA,08,big)(50,48,CA,08,big)(60,48,CA,08,big)(70,48,CA,08,big)(80,48,CA,08,big)(90,48,CA,08,big)(A0,48,CA,08,big)(B0,48,CA,08,big)(C0,48,CA,08,big)
+[/sprite]
 [font color=3]
 [topic]?????[/topic]
-NYAA! NO ENTRY FOR OUTSIDERS.
+[sfx 1DFC=18] // Play thunder sound effect.
+NYAA![wait=15] NO ENTRY FOR OUTSIDERS.
 [wait]
 [erase]
+[exani manual=slot 1, frame 1] // Purrtal (neutral)
 [font color=1]
 [topic]Demo[/topic]
 Fancy that![wait=15] A giant ethereal cat face.[wait=15] This must be the Purrtal.
@@ -33,53 +154,291 @@ Fancy that![wait=15] A giant ethereal cat face.[wait=15] This must be the Purrta
 Listen, we need access to the shopping mall.[wait=15] We have to buy some food, and there might be a grocery store inside.
 [wait]
 [erase]
+[exani manual=slot 1, frame 2] // Purrtal (nyaa)
 [font color=3]
 [topic]Purrtal[/topic]
 THOSE WHO ARE NOT DENIZENS OF THE ISLAND MAY NOT PASS.
 [wait]
 [erase]
+[exani manual=slot 1, frame 1] // Purrtal (neutral)
 [font color=1]
 [topic]Demo[/topic]
-.[wait=15].[wait=15].[wait=15]Please?
+...[wait=15]Please?
 [wait]
 [erase]
+[exani manual=slot 1, frame 2] // Purrtal (nyaa)
 [font color=3]
 [topic]Purrtal[/topic]
+[sfx 1DFC=18] // Play thunder sound effect.
 NO.
 [wait]
 [erase]
+[exani manual=slot 1, frame 1] // Purrtal (neutral)
+[exani manual=slot 2, frame 1] // Demo (facing left, annoyed)
 [font color=1]
 [topic]Demo[/topic]
 Dang.
 [wait]
 [erase]
+[exani manual=slot 1, frame 2] // Purrtal (nyaa)
+[exani manual=slot 2, frame 0] // Demo (facing towards the Purrtal)
 [font color=3]
 [topic]Purrtal[/topic]
 EXCEPTIONS MAY BE MADE FOR OUTSIDERS WHO PROVE THEIR METTLE.
 [wait]
 [erase]
+[exani manual=slot 1, frame 1] // Purrtal (neutral)
 [font color=2]
 [topic]Iris[/topic]
 And how do we go about doing that?
 [wait]
 [erase]
+[exani manual=slot 1, frame 2] // Purrtal (nyaa)
 [font color=3]
 [topic]Purrtal[/topic]
-DEFEAT THE FOUR SCOURGES OF THIS ISLAND THAT EACH HOLD:[wait=15] A WILY DUO,[wait=15] A GREEDY BIRD,[wait=15] A BALL OF PLASMA,[wait=15] A FLYING RABBIT.
+DEFEAT THE FOUR SCOURGES OF THIS ISLAND.[wait=15] A WILY DUO.[wait=15] A GREEDY BIRD.[wait=15] A BALL OF PLASMA.[wait=15] A FLYING RABBIT.
+[wait]
+[br]THEN RETURN TO ME.
 [wait]
 [erase]
+[exani manual=slot 1, frame 1] // Purrtal (neutral)
+[exani manual=slot 3, frame 1] // Iris (facing right, annoyed)
 [font color=2]
 [topic]Iris[/topic]
 Nothing is ever easy, huh?
 [wait]
 [erase]
+[exani manual=slot 1, frame 2] // Purrtal (nyaa)
+[exani manual=slot 3, frame 0] // Iris (facing towards the Purrtal)
 [font color=3]
 [topic]Purrtal[/topic]
+[sfx 1DFC=18] // Play thunder sound effect.
 NYAA!
 [wait]
 [erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[exani manual=slot 1, frame 1] // Purrtal (neutral)
+[exani manual=slot 8, frame 8] // Iris (facing left, normal)
+[wait=15]
+
+/////////////
+// Scene 5 //
+/////////////
+
+[sprite=63]
+// Demo and Iris (walking away)
+         (38,2A,82,04,big)                         (60,2A,80,02,big)
+         (38,3A,E2,04,big)                         (60,3A,E0,02,big)
+// Purrtal
+                                                            (68,10,80,07,big)(78,10,82,07,big)(88,10,84,07,big)
+                                                            (68,20,A0,07,big)(78,20,A2,07,big)(88,20,A4,07,big)
+                                                            (68,30,C0,07,big)(78,30,C2,07,big)(88,30,C4,07,big)
+// Background
+(30,08,00,09,big)(40,08,02,09,big)(50,08,04,09,big)(60,08,06,09,big)(70,08,08,09,big)(80,08,0A,09,big)(90,08,0C,09,big)(A0,08,0E,0B,big)(B0,08,8C,0A,big)(C0,08,8E,0A,big)
+(30,18,20,09,big)(40,18,22,09,big)(50,18,24,09,big)(60,18,26,09,big)(70,18,28,09,big)(80,18,2A,09,big)(90,18,2C,09,big)(A0,18,2E,0B,big)(B0,18,AC,0A,big)(C0,18,AE,0A,big)
+(30,28,40,09,big)(40,28,42,09,big)(50,28,44,09,big)(60,28,46,09,big)(70,28,48,09,big)(80,28,4A,09,big)(90,28,4C,09,big)(A0,28,4E,0B,big)(B0,28,CC,0A,big)(C0,28,CE,0A,big)
+(30,38,60,09,big)(40,38,62,09,big)(50,38,64,09,big)(60,38,66,09,big)(70,38,68,09,big)(80,38,6A,09,big)(90,38,6C,09,big)(A0,38,6E,0B,big)(B0,38,EC,0A,big)(C0,38,EE,0A,big)
+(30,48,CA,08,big)(40,48,CA,08,big)(50,48,CA,08,big)(60,48,CA,08,big)(70,48,CA,08,big)(80,48,CA,08,big)(90,48,CA,08,big)(A0,48,CA,08,big)(B0,48,CA,08,big)(C0,48,CA,08,big)
+[/sprite]
 [font color=1]
 [topic]Demo[/topic]
 Yeah, yeah, we get it![wait=15] C'mon, Iris.[wait=15] We've got scourges to scourge.
 [wait]
 [erase]
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//[end=exit]
+
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 1, frame 2] // Purrtal (nyaa)
+[exani manual=slot 2, frame 0] // Demo (facing towards the Purrtal)
+[exani manual=slot 3, frame 0] // Iris (facing towards the Purrtal)
+[wait=15]
+
+/////////////
+// Scene 1 //
+/////////////
+
+[sprite=63]
+// Demo and Iris (facing towards the Purrtal)
+                 (40,2A,C4,04,big)                                                                                     (A0,2A,84,02,big)
+                 (40,3A,E4,04,big)                                                                                     (A0,3A,A4,02,big)
+// Purrtal
+                                                            (68,10,80,07,big)(78,10,82,07,big)(88,10,84,07,big)
+                                                            (68,20,A0,07,big)(78,20,A2,07,big)(88,20,A4,07,big)
+                                                            (68,30,C0,07,big)(78,30,C2,07,big)(88,30,C4,07,big)
+// Background
+(30,08,00,09,big)(40,08,02,09,big)(50,08,04,09,big)(60,08,06,09,big)(70,08,08,09,big)(80,08,0A,09,big)(90,08,0C,09,big)(A0,08,0E,0B,big)(B0,08,8C,0A,big)(C0,08,8E,0A,big)
+(30,18,20,09,big)(40,18,22,09,big)(50,18,24,09,big)(60,18,26,09,big)(70,18,28,09,big)(80,18,2A,09,big)(90,18,2C,09,big)(A0,18,2E,0B,big)(B0,18,AC,0A,big)(C0,18,AE,0A,big)
+(30,28,40,09,big)(40,28,42,09,big)(50,28,44,09,big)(60,28,46,09,big)(70,28,48,09,big)(80,28,4A,09,big)(90,28,4C,09,big)(A0,28,4E,0B,big)(B0,28,CC,0A,big)(C0,28,CE,0A,big)
+(30,38,60,09,big)(40,38,62,09,big)(50,38,64,09,big)(60,38,66,09,big)(70,38,68,09,big)(80,38,6A,09,big)(90,38,6C,09,big)(A0,38,6E,0B,big)(B0,38,EC,0A,big)(C0,38,EE,0A,big)
+(30,48,CA,08,big)(40,48,CA,08,big)(50,48,CA,08,big)(60,48,CA,08,big)(70,48,CA,08,big)(80,48,CA,08,big)(90,48,CA,08,big)(A0,48,CA,08,big)(B0,48,CA,08,big)(C0,48,CA,08,big)
+[/sprite]
+[font color=3]
+[topic]Purrtal[/topic]
+[sfx 1DFC=18] // Play thunder sound effect.
+NYAA![wait=15] DEFEAT THE FOUR SCOURGES OF THIS ISLAND.[wait=15] THEN RETURN TO ME.
+[wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[wait=15]
+
+/////////////
+// Scene 2 //
+/////////////
+
+[sprite=61]
+// Items (feather and carrot)
+                                                            (64,33,C8,4C,big)(7E,34,E8,0E,big)
+// Demo and Iris (stacking the items)
+                                           (58,2A,82,04,big)                                  (88,2A,80,02,big)
+                                           (58,3A,C2,04,big)                                  (88,3A,EA,02,big)
+// Items (Sparky and Thwomp)
+                                                                    (70,2B,E6,0E,big)
+                                                                    (70,38,C6,0C,big)
+// Purrtal
+(30,10,84,07,big)
+(30,20,A4,07,big)
+(30,30,C4,07,big)
+// Background
+(30,08,0A,09,big)(40,08,0C,09,big)(50,08,0E,0B,big)(60,08,8C,0A,big)(70,08,8E,0A,big)(80,08,00,09,big)(90,08,02,09,big)(A0,08,04,09,big)(B0,08,06,09,big)(C0,08,08,09,big)
+(30,18,2A,09,big)(40,18,2C,09,big)(50,18,2E,0B,big)(60,18,AC,0A,big)(70,18,AE,0A,big)(80,18,20,09,big)(90,18,22,09,big)(A0,18,24,09,big)(B0,18,26,09,big)(C0,18,28,09,big)
+(30,28,4A,09,big)(40,28,4C,09,big)(50,28,4E,0B,big)(60,28,CC,0A,big)(70,28,CE,0A,big)(80,28,40,09,big)(90,28,42,09,big)(A0,28,44,09,big)(B0,28,46,09,big)(C0,28,48,09,big)
+(30,38,6A,09,big)(40,38,6C,09,big)(50,38,6E,0B,big)(60,38,EC,0A,big)(70,38,EE,0A,big)(80,38,60,09,big)(90,38,62,09,big)(A0,38,64,09,big)(B0,38,66,09,big)(C0,38,68,09,big)
+(30,48,CA,08,big)(40,48,CA,08,big)(50,48,CA,08,big)(60,48,CA,08,big)(70,48,CA,08,big)(80,48,CA,08,big)(90,48,CA,08,big)(A0,48,CA,08,big)(B0,48,CA,08,big)(C0,48,CA,08,big)
+[/sprite]
+[font color=1]
+[topic]Demo[/topic]
+We defeated them and stole their items, too.[wait=15] Is this good enough?
+[wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 1, frame 1] // Purrtal (neutral)
+[exani manual=slot 2, frame 0] // Demo (facing towards the Purrtal)
+[exani manual=slot 3, frame 0] // Iris (facing towards the Purrtal)
+[wait=15]
+
+/////////////
+// Scene 3 //
+/////////////
+
+[sprite=65]
+// Demo and Iris (facing towards the Purrtal)
+                 (40,2A,C4,04,big)                                                                                     (A0,2A,84,02,big)
+                 (40,3A,E4,04,big)                                                                                     (A0,3A,A4,02,big)
+// Items (Sparky and Thwomp)
+                                                                                                                                                         (C0,2B,E6,0E,big)
+                                                                                                                                                         (C0,38,C6,0C,big)
+// Purrtal
+                                                            (68,10,80,07,big)(78,10,82,07,big)(88,10,84,07,big)
+                                                            (68,20,A0,07,big)(78,20,A2,07,big)(88,20,A4,07,big)
+                                                            (68,30,C0,07,big)(78,30,C2,07,big)(88,30,C4,07,big)
+// Background
+(30,08,00,09,big)(40,08,02,09,big)(50,08,04,09,big)(60,08,06,09,big)(70,08,08,09,big)(80,08,0A,09,big)(90,08,0C,09,big)(A0,08,0E,0B,big)(B0,08,8C,0A,big)(C0,08,8E,0A,big)
+(30,18,20,09,big)(40,18,22,09,big)(50,18,24,09,big)(60,18,26,09,big)(70,18,28,09,big)(80,18,2A,09,big)(90,18,2C,09,big)(A0,18,2E,0B,big)(B0,18,AC,0A,big)(C0,18,AE,0A,big)
+(30,28,40,09,big)(40,28,42,09,big)(50,28,44,09,big)(60,28,46,09,big)(70,28,48,09,big)(80,28,4A,09,big)(90,28,4C,09,big)(A0,28,4E,0B,big)(B0,28,CC,0A,big)(C0,28,CE,0A,big)
+(30,38,60,09,big)(40,38,62,09,big)(50,38,64,09,big)(60,38,66,09,big)(70,38,68,09,big)(80,38,6A,09,big)(90,38,6C,09,big)(A0,38,6E,0B,big)(B0,38,EC,0A,big)(C0,38,EE,0A,big)
+(30,48,CA,08,big)(40,48,CA,08,big)(50,48,CA,08,big)(60,48,CA,08,big)(70,48,CA,08,big)(80,48,CA,08,big)(90,48,CA,08,big)(A0,48,CA,08,big)(B0,48,CA,08,big)(C0,48,CA,08,big)
+[/sprite]
+[font color=3]
+[topic]Purrtal[/topic]
+...[wait=15]You didn't have to rob them.[wait=15] Just defeat them.
+[wait]
+[erase]
+[exani manual=slot 1, frame 2] // Purrtal (nyaa)
+[font color=3]
+[topic]Purrtal[/topic]
+IN ANY CASE, YOU OUTSIDERS HAVE PROVEN YOURSELVES WORTHY![wait=15] THE PATH TO THE NEXUS SHALL OPEN FOR YOU.[wait=15] JUST JUMP THROUGH MY FACE.
+[wait]
+[sfx 1DFC=18] // Play thunder sound effect.
+[br]NYAA!
+[wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 0, frame 8] // Demo (facing left, normal)
+[exani manual=slot 1, frame 0] // Purrtal (no expression)
+[exani manual=slot 8, frame 0] // Iris (facing right, normal)
+[wait=15]
+
+/////////////
+// Scene 4 //
+/////////////
+
+[sprite=65]
+// Demo and Iris
+                 (40,2A,82,04,big)                                                                                     (A0,2A,80,02,big)
+                 (40,3A,A2,44,big)                                                                                     (A0,3A,A0,42,big)
+// Items (Sparky and Thwomp)
+                                                                                                                                                         (C0,2B,E6,0E,big)
+                                                                                                                                                         (C0,38,C6,0C,big)
+// Purrtal
+                                                            (68,10,80,07,big)(78,10,82,07,big)(88,10,84,07,big)
+                                                            (68,20,A0,07,big)(78,20,A2,07,big)(88,20,A4,07,big)
+                                                            (68,30,C0,07,big)(78,30,C2,07,big)(88,30,C4,07,big)
+// Background
+(30,08,00,09,big)(40,08,02,09,big)(50,08,04,09,big)(60,08,06,09,big)(70,08,08,09,big)(80,08,0A,09,big)(90,08,0C,09,big)(A0,08,0E,0B,big)(B0,08,8C,0A,big)(C0,08,8E,0A,big)
+(30,18,20,09,big)(40,18,22,09,big)(50,18,24,09,big)(60,18,26,09,big)(70,18,28,09,big)(80,18,2A,09,big)(90,18,2C,09,big)(A0,18,2E,0B,big)(B0,18,AC,0A,big)(C0,18,AE,0A,big)
+(30,28,40,09,big)(40,28,42,09,big)(50,28,44,09,big)(60,28,46,09,big)(70,28,48,09,big)(80,28,4A,09,big)(90,28,4C,09,big)(A0,28,4E,0B,big)(B0,28,CC,0A,big)(C0,28,CE,0A,big)
+(30,38,60,09,big)(40,38,62,09,big)(50,38,64,09,big)(60,38,66,09,big)(70,38,68,09,big)(80,38,6A,09,big)(90,38,6C,09,big)(A0,38,6E,0B,big)(B0,38,EC,0A,big)(C0,38,EE,0A,big)
+(30,48,CA,08,big)(40,48,CA,08,big)(50,48,CA,08,big)(60,48,CA,08,big)(70,48,CA,08,big)(80,48,CA,08,big)(90,48,CA,08,big)(A0,48,CA,08,big)(B0,48,CA,08,big)(C0,48,CA,08,big)
+[/sprite]
+[font color=2]
+[topic]Iris[/topic]
+Well, this is our last chance to save Stocking Day.[wait=15] Here goes nothing...
+[wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[exani manual=slot 1, frame 0] // Purrtal (no expression)
+[exani manual=slot 2, frame 0] // Demo (facing towards the Purrtal)
+[exani manual=slot 3, frame 0] // Iris (facing towards the Purrtal)
+[wait=15]
+
+/////////////
+// Scene 5 //
+/////////////
+
+[sprite=65]
+// Demo and Iris
+                 (60,0A,8E,05,big)                                                                                     (88,1A,8C,03,big)
+                 (60,1A,AE,05,big)                                                                                     (88,2A,AC,03,big)
+// Items (Sparky and Thwomp)
+                                                                                                                                                         (C0,2B,E6,0E,big)
+                                                                                                                                                         (C0,38,C6,0C,big)
+// Purrtal
+                                                            (68,10,80,07,big)(78,10,82,07,big)(88,10,84,07,big)
+                                                            (68,20,A0,07,big)(78,20,A2,07,big)(88,20,A4,07,big)
+                                                            (68,30,C0,07,big)(78,30,C2,07,big)(88,30,C4,07,big)
+// Background
+(30,08,00,09,big)(40,08,02,09,big)(50,08,04,09,big)(60,08,06,09,big)(70,08,08,09,big)(80,08,0A,09,big)(90,08,0C,09,big)(A0,08,0E,0B,big)(B0,08,8C,0A,big)(C0,08,8E,0A,big)
+(30,18,20,09,big)(40,18,22,09,big)(50,18,24,09,big)(60,18,26,09,big)(70,18,28,09,big)(80,18,2A,09,big)(90,18,2C,09,big)(A0,18,2E,0B,big)(B0,18,AC,0A,big)(C0,18,AE,0A,big)
+(30,28,40,09,big)(40,28,42,09,big)(50,28,44,09,big)(60,28,46,09,big)(70,28,48,09,big)(80,28,4A,09,big)(90,28,4C,09,big)(A0,28,4E,0B,big)(B0,28,CC,0A,big)(C0,28,CE,0A,big)
+(30,38,60,09,big)(40,38,62,09,big)(50,38,64,09,big)(60,38,66,09,big)(70,38,68,09,big)(80,38,6A,09,big)(90,38,6C,09,big)(A0,38,6E,0B,big)(B0,38,EC,0A,big)(C0,38,EE,0A,big)
+(30,48,CA,08,big)(40,48,CA,08,big)(50,48,CA,08,big)(60,48,CA,08,big)(70,48,CA,08,big)(80,48,CA,08,big)(90,48,CA,08,big)(A0,48,CA,08,big)(B0,48,CA,08,big)(C0,48,CA,08,big)
+[/sprite]
+[wait]
+[erase]
+[topic][/topic]
+[sprite=erase]
+[wait=15]
+
+[end=00]

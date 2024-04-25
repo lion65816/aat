@@ -36,6 +36,7 @@ Demo...[wait=15] Wake up...
 // Scene 2 //
 /////////////
 
+[music=D7]
 [sprite=54]
 // Demo and Iris
 (30,2A,82,04,big)                                                            (78,23,84,02,big)
@@ -136,7 +137,7 @@ He didn't even greet us when we arrived here at his cabin.[wait=15] Sometimes, I
 [/sprite]
 [font color=2]
 [topic]Iris[/topic]
-Anyway, can you lend me a leg?[wait=15] Take some zucchinis out of the fridge and start chopping them up.
+Anyway, can you lend me a leg?[wait=15] Take some zucchinis and aubergines out of the fridge and start chopping them up.
 [wait]
 [erase]
 [topic][/topic]
