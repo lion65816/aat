@@ -1,6 +1,8 @@
 ; To be upplied to a level using UberASMTool.
 
-init:                   ;\  This section is to be used in the INIT code of levelASM
+init:
+	JSL main
+                        ;\  This section is to be used in the INIT code of levelASM
    REP #$20             ; | 
    LDA #$0F02           ; | Use Mode 02 on register 210F
    STA $4330            ; | 4330 = Mode, 4331 = Register
@@ -37,7 +39,7 @@ init:                   ;\  This section is to be used in the INIT code of level
 main:                   ;\  This section is to be used in the MAIN code of levelASM
    LDY #$00             ; | Y will be the loop counter.
    LDX #$00             ; | X the index for writing the table to the RAM
-   LDA $13              ; | Speed of waves
+   LDA $14              ; | Speed of waves
    LSR #2               ; | Slowing down A
    STA $00              ;/  Save for later use.
 

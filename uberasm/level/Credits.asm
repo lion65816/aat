@@ -37,6 +37,12 @@ init:
 	RTL
 
 main:
+	LDA $71
+	CMP #$06
+	BNE +
+	LDA #$2A
+	STA $100|!addr
+	+
 	LDA $15
 	AND #~!HeldDownDisabler15
 	STA $15

@@ -90,13 +90,7 @@ RTL
 Normal:
     lda $13D4|!addr
     ora $13D2|!addr
-    ora $1B87|!addr
     bne .return
-    lda $13D9|!addr
-    beq .ok
-    cmp #$03
-    bne .return
-.ok
     lda !ButtonRAM
     and #!ButtonValue
     beq .return

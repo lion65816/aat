@@ -70,7 +70,7 @@ d+d+a+a+g+rf+g+a+rfr @32 v135 >c+4< @9 v140
 <[r8br]6>[r8c+r]2
 r1r1
 
-#3 @30 o5 v195 l16 $DB$0D
+#3 @30 o5 v155 l16 $DB$0D
 r1/
 (5)[r2.c+dc+d]
 r2.c+ded
@@ -92,7 +92,7 @@ r1r1..>c+dc+d
 r2.c+dgr
 
 #4 o5 l16
-r1/ @30 v195 r1r1r1 $DB$09
+r1/ @30 v155 r1r1r1 $DB$09
 r2r8.g32a32b8.r
 <c2<a+2a2a+2g2...r
 r1
@@ -122,3 +122,4 @@ r1r1 v100
 r1
 
 #7
+

@@ -57,7 +57,7 @@ level:
 054	PressuredWater.asm
 055	PressuredWater.asm
 057  057.asm
-05C  TeleportAtTime.asm
+05C  TeleportAtTimeNoMosaic.asm
 05E	crithania_autoscroll.asm
 060	DisableLR_freescrollbabey.asm
 066	Gradient66.asm
@@ -70,22 +70,22 @@ level:
 06E	trivia_win08.asm
 06F	trivia_win16.asm
 074	Autoscroll74.asm
-076  TeleportAtTime.asm
+076  TeleportAtTimeNoMosaic.asm
 07A	BG_AutoScroll7A.asm
 07B	BG_AutoScroll7B.asm
-07C  TeleportAtTime.asm
+07C  TeleportAtTimeNoMosaic.asm
 07D	craigdarroch.asm
 07E	FilterYoshi.asm
 07F	FilterYoshi_SimpleHP.asm
 080	infinite_dream.asm
 082	FilterYoshi_freescrollbabey.asm
-083  TeleportAtTime.asm
+083  TeleportAtTimeNoMosaic.asm
 084	DisableLeftLR.asm
 085	DisableRightLR.asm
 086	SPECIAL.asm
 087	008.asm
-088  TeleportAtTime.asm
-089  TeleportAtTime.asm
+088  TeleportAtTimeNoMosaic.asm
+089  TeleportAtTimeNoMosaic.asm
 090	green_garden_main.asm
 094	SPECIAL.asm
 095	Layer2Smash_095.asm
@@ -96,7 +96,7 @@ level:
 09A	SPECIAL.asm
 09B	SPECIAL.asm
 09E	abcd.asm
-09F  TeleportAtTime.asm
+09F  TeleportAtTimeNoMosaic.asm
 0A0	DisableLR_freescrollbabey.asm
 0A1	freescrollbabey.asm
 0A2	freescrollbabey.asm
@@ -146,7 +146,7 @@ level:
 0D5	SPECIAL.asm
 0D6	SPECIAL.asm
 0D8	SPECIAL.asm
-0DA  TeleportAtTime.asm
+0DA  TeleportAtTimeNoMosaic.asm
 0DB	NoStatus_DisableLR.asm
 0DC	trivia_win32.asm
 0DD	MinStatus.asm
@@ -165,9 +165,9 @@ level:
 0EA	Credits.asm
 0EB	Credits.asm
 0EC	SPECIAL.asm
-0ED  TeleportAtTime.asm
+0ED  TeleportAtTimeNoMosaic.asm
 0EE	SPECIAL_EE.asm
-0EF  TeleportAtTime.asm
+0EF  TeleportAtTimeNoMosaic.asm
 0F0	F0_scroll.asm
 0F2	freescrollbabey.asm
 0F3	FG_AutoScroll.asm
@@ -363,7 +363,7 @@ level:
 1EF	elevator_shaft.asm
 1F0	elevator_shaft.asm
 1F1	elevator_shaft.asm
-1F2  TeleportAtTime.asm
+1F2  1F2_8BPP.asm
 1F4	NoStatus.asm
 1F5	1F5.asm
 1F6	hdmatest_freescrollbabey.asm
@@ -400,6 +400,12 @@ gamemode:
     15 retry_gm15.asm
     16 retry_gm16.asm
     19 retry_gm19.asm
+    2A 2A-2F_NoMosaicFade.asm
+    2B 2A-2F_NoMosaicFade.asm
+    2C 2A-2F_NoMosaicFade.asm
+    2D 2A-2F_NoMosaicFade.asm
+    2E 2A-2F_NoMosaicFade.asm
+    2F 2A-2F_NoMosaicFade.asm
 
 global:		other/global_code.asm	; global code.
 statusbar:	other/status_code.asm	; status bar code.
