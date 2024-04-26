@@ -60,6 +60,7 @@ level:
 05C  TeleportAtTimeNoMosaic.asm
 05E	crithania_autoscroll.asm
 060	DisableLR_freescrollbabey.asm
+062  vertical_level_end_fix.asm
 066	Gradient66.asm
 068	craigdarroch.asm
 069	craigdarroch.asm

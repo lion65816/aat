@@ -3,7 +3,7 @@
 
 !controller	= $16		; Up, Down, Left, Right, B, X or Y, Start, Select => $16
 				; A, X, L, R => $18
-!mask		= $C0		; Up = $08,	Down = $04,	Left = $02,	Right = $01
+!mask		= $10		; Up = $08,	Down = $04,	Left = $02,	Right = $01
 				; B = $80,	X or Y = $40,	Select = $20,	Start = $10
 				; A = $80,	X = $40,	L = $20,	R = $10
 

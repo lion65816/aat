@@ -33,10 +33,11 @@ load:
 RTL
 
 main:
-	LDA #%10111111 : STA $00
-	LDA #%10110000 : STA $01
+	LDA #%11101111 : STA $00
+	LDA #%11110000 : STA $01
 	JSL DisableButton_main
-
+	LDA #$FF
+	STA $13D3|!addr
 LDA $9D			; Checks animation lock flag
 ORA $13D4|!addr		; or pause flag
 BNE .stop		; then stop the scroll

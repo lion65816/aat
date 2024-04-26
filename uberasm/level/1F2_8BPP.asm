@@ -178,4 +178,14 @@ UploadPalette:
 main:
 	;LDA #$01
 	;STA $13FB|!addr
+	LDA #$FF
+	STA $13D3|!addr
+	LDA $16
+	CMP #%00010000
+	BNE +
+	stz $88             ;\
+	stz $89             ;| Activate teleport.
+	lda #$06            ;|
+	sta $71             ;/
+	+
 	RTL
