@@ -790,6 +790,20 @@ Graphics:
         LDA #$34                                ;> YXPP CCCT = 0011 0100 = $34
 ++
         STA $0303|!Base2,y
+        REP #$20
+        LDA $010B|!addr                         ;\ Special case: load a different tile for the
+        CMP #$01E5                              ;/ indicator graphics in sublevel 1E5.
+        BEQ ..change_tile
+        BRA ..skip
+..change_tile
+        SEP #$20
+        LDA #$6B
+        STA $0302|!Base2,y
+        LDA $0303|!Base2,y
+        ORA #$01
+        STA $0303|!Base2,y
+..skip
+        SEP #$20
         LDY #$02
         LDA #$02
         JSL $01B7B3|!BankB
