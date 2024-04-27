@@ -2,6 +2,8 @@
 // Scene 1 //
 /////////////
 
+[skip=end]
+
 [sprite=62]
 // Demo and Iris
 (70,2A,80,02,big)(88,2A,82,04,big)
@@ -111,4 +113,5 @@ What does that mean for a cyclops?
 [sprite=erase]
 [wait=15]
 
+[label=end]
 [end=00]

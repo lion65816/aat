@@ -2,6 +2,8 @@
 // Scene 6 //
 /////////////
 
+[skip=end]
+
 [sprite=50]
 // Background
 (30,08,00,0B,big)(40,08,02,0B,big)(50,08,04,0B,big)(60,08,06,0B,big)(70,08,08,0B,big)(80,08,0A,0B,big)(90,08,0C,0B,big)(A0,08,0E,0B,big)(B0,08,20,0A,big)(C0,08,22,0A,big)
@@ -40,4 +42,5 @@ I adventured with a cat llama, who helped me peer through a window.
 [sprite=erase]
 [wait=15]
 
+[label=end]
 [end=00]

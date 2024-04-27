@@ -2,6 +2,8 @@
 // Scene 1 //
 /////////////
 
+[skip=end]
+
 [sprite=4]
 // Demo and Iris
 (30,2A,80,0E,big)(48,2A,82,0C,big)
@@ -52,4 +54,5 @@ It shall never be the same.[wait=15] Your arrival has set things in motion.[wait
 [sprite=erase]
 [wait=15]
 
+[label=end]
 [end=00]

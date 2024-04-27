@@ -61,6 +61,12 @@ init:
 
 	JSL RequestRetry_init
 
+	; Always keep Demo big.
+	LDA $19
+	BNE +
+	LDA #$01
+	STA $19
++
 	RTL
 
 .windowTable:

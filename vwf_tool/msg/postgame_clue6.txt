@@ -2,6 +2,8 @@
 // Scene 1 //
 /////////////
 
+[skip=end]
+
 [music=CA]
 [sprite=5]
 // Page
@@ -41,4 +43,5 @@ There are some missing characters.
 [sprite=erase]
 [wait=15]
 
+[label=end]
 [end=00]

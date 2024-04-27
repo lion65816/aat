@@ -2,6 +2,8 @@
 // Scene 1 //
 /////////////
 
+[skip=end]
+
 [music=CA]
 [sprite=5]
 // Page
@@ -38,4 +40,5 @@ This particular square seems to be very important.
 [sprite=erase]
 [wait=15]
 
+[label=end]
 [end=00]

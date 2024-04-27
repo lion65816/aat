@@ -2,6 +2,8 @@
 // Scene 1 //
 /////////////
 
+[skip=no]
+
 [music=CA]
 [sprite=6]
 // Diary

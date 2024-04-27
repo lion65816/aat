@@ -2,6 +2,8 @@
 // Scene 1 //
 /////////////
 
+[skip=end]
+
 [sprite=54]
 // Demo and Iris
 (60,2A,84,02,big)(90,2A,82,0C,big)
@@ -143,4 +145,5 @@ You have become meguca!
 [sprite=erase]
 [wait=15]
 
+[label=end]
 [end=00]

@@ -2,6 +2,8 @@
 // Scene 1 //
 /////////////
 
+[skip=end]
+
 [sprite=58]
 // Demo and Iris
 (38,2A,80,04,big)(50,2A,82,02,big)
@@ -110,4 +112,5 @@ He cannot purchase anything that is not so popular that his one sale contributio
 [sprite=erase]
 [wait=15]
 
+[label=end]
 [end=00]

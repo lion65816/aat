@@ -2,6 +2,8 @@
 // Scene 1 //
 /////////////
 
+[skip=end]
+
 [music=CA]
 [sprite=5]
 // Page
@@ -41,4 +43,5 @@ We may need to use some science to figure this out.
 [sprite=erase]
 [wait=15]
 
+[label=end]
 [end=00]

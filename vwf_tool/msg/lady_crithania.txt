@@ -2,6 +2,8 @@
 // Scene 1 //
 /////////////
 
+[skip=end]
+
 17 days later...
 [wait]
 [erase]
@@ -78,4 +80,5 @@ End slideshow
 [sprite=erase]
 [wait=15]
 
+[label=end]
 [end=00]

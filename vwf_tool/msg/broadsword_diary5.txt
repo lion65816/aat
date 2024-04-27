@@ -2,6 +2,8 @@
 // Scene 12 //
 //////////////
 
+[skip=end]
+
 [sprite=4]
 // Uncle Broadsword
 (70,2A,84,08,big)(80,2A,86,08,big)
@@ -59,4 +61,5 @@ Sounds like typical Uncle B.[wait=15] If we want to follow this rabbit hole, it 
 [sprite=erase]
 [wait=15]
 
+[label=end]
 [end=00]
