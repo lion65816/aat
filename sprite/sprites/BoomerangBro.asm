@@ -8,6 +8,37 @@
 
 !BoomerangNumber = $00      ; Extended sprite number (from list.txt) of the boomerang (boomerang.asm).
 
+TILEMAP:	db $48,$4A,$7F,$4e		;last byte is for hammer (all tables)
+		db $48,$5A,$2F,$4e
+		db $46,$4A,$7F,$4e
+		db $46,$5A,$2F,$4e
+
+HORZ_DISP:	db $00,$00,$08,$0A
+		db $00,$08,$00,$F6
+
+VERT_DISP:	db $F8,$08,$08,$F2
+
+TILE_SIZE:	db $02,$00,$00,$02		;$00 - 8x8, $02 - 16x16
+
+PROPERTIES:	db $40,$00			;actually only contains horizontal flip data, properties are set through CFG/json (except for the hammer).
+
+		!HammerProp = #!Palette9|!SP3SP4
+
+;don't touch, made so it's actually easy to change hardcoded prop without having to look up for help
+
+!Palette8 = %00000000
+!Palette9 = %00000010
+!PaletteA = %00000100
+!PaletteB = %00000110
+!PaletteC = %00001000
+!PaletteD = %00001010
+!PaletteE = %00001100
+!PaletteF = %00001110
+
+!SP1SP2 = %00000000
+!SP3SP4 = %00000001
+
+
 print "INIT ",pc
     JSR FaceMario
     JSL $01ACF9|!BankB
@@ -168,115 +199,103 @@ SpriteCode:
 Graphics:
     %GetDrawInfo()
 
-    LDA !157C,x
-    STA $02
-
     LDA !1602,x
-    ASL A
-    STA $03
+                ASL A
+                ASL A                   ;  | $03 = index to frame start (frame to show * 2 tile per frame)
+                STA $03                 ; /
 
-    PHY
-    LDY #$00
-    LDA !14C8,x
-    CMP #$08
-    BEQ +
-        LDY #$01
-+   TYA
-    PLY
-    STA $04
-    ASL A
-    STA $05
+                LDA !157C,x             ; \ $02 = sprite direction
+                STA $02                 ; /
 
-    LDA !163E,x
-    BEQ .noHammer
-    CMP #$01
-    BEQ .noHammer
-    PHX
-    LDX #$F8                        ; boomerang x position
-    LDA $02
-    BEQ +
-        LDX #$08                    ; boomerang x position
-+   TXA
-    CLC : ADC $00
-    STA $0300|!Base2,y
+		LDA !15F6,x
+		STA $05
 
-    LDA $01
-    CLC : ADC #$F0                  ; boomerang y position
-    STA $0301|!Base2,y
+                LDA !163E,x
+                BEQ Pre_LOOP_START
+		DEC
+		BEQ Pre_LOOP_START
 
-    LDA #$EA                        ; boomerang tilemap
-    STA $0302|!Base2,y
+		LDX #$03		;load 4 tiles
+		BRA After_Pre_LOOP_START
 
-    LDX $02
-    LDA BoomerangFlip,x
-    ORA $64
-    STA $0303|!Base2,y
-    INY #4
-    PLX
-.noHammer
-    PHX
-    LDX #$01
--   LDA $00
-    STA $0300|!Base2,y
+Pre_LOOP_START:
+                LDX #$02                ;3 tiles if hammer isn't shown
 
-    PHX
-    TXA
-    CLC : ADC $05
-    TAX
-    LDA $01
-    CLC : ADC Y_Disp,x              ; y position determined by dead/alive state.
-    STA $0301|!Base2,y
-    PLX
+After_Pre_LOOP_START:
+		STX $04			;amount of tiles to store
+		;STX $06		;store current OAM slot index used to eliminate most PHX : PLX combinations (because really)
 
-    PHX
-    TXA
-    CLC : ADC $03
-    TAX
-    LDA Tilemap,x                   ; tilemap determined by $1602,x.
-    STA $0302|!Base2,y
-    PLX
+LOOP_START:
+		STX $06
 
-    PHX
-    LDX $15E9|!Base2
-    LDA !15F6,x                     ; palette based on cfg file.
-    PHX
-    LDX $02
-    BNE +
-        ORA #$40                    ; flip by x if $157C,x = #$00
-+   LDX $04
-    BEQ +
-        ORA #$80                    ; flip by y if $14C8,x = #$02 (dead)
-+   PLX
-    ORA $64                         ; apply level settings
-    STA $0303|!Base2,y
-    PLX
+		LDA $02
+		BNE NO_ADJ
+		;ASL
+		;ASL
+		TXA
+		CLC : ADC #$04		;whoops, i kinda forgot how this works, this should be about right
+	        TAX
 
-    INY #4
+NO_ADJ:
+                LDA $00                 ; \ tile x position = sprite x location ($00)
+                CLC
+                ADC HORZ_DISP,x
+                STA $0300|!Base2,y      ; /
+                 
+		LDX $06			;restore OAM slot
+                                        
+		LDA $01                 ; \ tile y position = sprite y location ($01) + tile displacement
+		CLC                     ;  |
+		ADC VERT_DISP,x         ;  |
+		STA $0301|!Base2,y      ; /
+                    
+		LDA TILE_SIZE,x
+		PHA
+		TYA                     ; \ get index to sprite property map ($460)...
+		LSR A                   ; |    ...we use the sprite OAM index...
+		LSR A                   ; |    ...and divide by 4 because a 16x16 tile is 4 8x8 tiles
+		TAX                     ; | 
+		PLA
+		STA $0460|!Base2,x      ; /  
 
-    DEX
-    BPL -
-    PLX
+		LDX $06
+		;PHX
+		TXA                     ; \ X = index to horizontal displacement
+		ORA $03                 ; / get index of tile (index to first tile of frame + current tile number)
+		TAX
+                                 
+		LDA TILEMAP,x           ; \ store tile
+		STA $0302|!Base2,y      ; / 
 
-    LDY #$02
-    LDA #$02
-    JSL $01B7B3|!BankB
-    RTS
+		LDX $06
+		LDA !HammerProp
+		CPX #$03		;check hammer tile to apply hardcoded prop
+		BEQ .ItsHammer
 
-Y_Disp:
-    db $F0,$00,$08,$F8
+		LDA $05            	; get palette info
 
-Tilemap:
-    db $A0,$C0
-    db $A0,$E0
-    db $A2,$C2
-    db $A2,$E2
-;    db $A2,$C2
-;    db $A2,$E2
-;    db $A2,$C0
-;    db $A2,$E0
+.ItsHammer
+		LDX $02                 ; \
+		ORA PROPERTIES,x        ;  | get tile PROPERTIES using sprite direction
+		ORA $64                 ;  | ?? what is in 64, level PROPERTIES... disable layer priority??
+		STA $0303|!Base2,y      ; / store tile PROPERTIES
 
-BoomerangFlip:
-    db $89,$C9
+		LDX $06			;and restore OAM slot also
+
+		INY                     ;  | increase index to sprite tile map ($300)...
+		INY                     ;  |    ...we wrote 1 16x16 tile...
+		INY                     ;  |    ...sprite OAM is 8x8...
+		INY                     ;  |    ...so increment 4 times
+		;DEC $06                 ;  | go to next tile of frame and loop
+		DEX
+		BPL LOOP_START          ; / 
+
+		LDX $15E9|!Base2	;
+                    
+		LDY #$FF                ; \
+		LDA $04			;  | A = number of tiles drawn - 1
+		JSL $01B7B3|!BankB	; / don't draw if offscreen
+		RTS                     ; RETURN
 
 GenerateHammer:
     LDA !15A0,x

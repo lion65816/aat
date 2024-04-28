@@ -127,7 +127,7 @@ level:
 0BC	FilterYoshi_freescrollbabey.asm
 0BE	reloadRoom3.asm
 0BF	SPECIAL_mode2.asm
-0C0	DisableLR.asm
+0C0	DisableLR_freescrollbabey.asm
 0C2	reloadRoom3.asm
 0C4	reloadRoom3.asm
 0C5	NoStatus_intro_stage.asm

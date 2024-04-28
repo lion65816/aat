@@ -105,14 +105,14 @@ MusicTBL:	;Each byte corresponds to a 32x32 block on the main map.
 	;These X/Y stuff are 32x32 coordinates on LM's OW Editor, check it up
 	;Don't forget to read the readme for more info!
 
-  db $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C3, $C3, $C3, $C3, $C4, $C4 
-  db $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C3, $C3, $C3, $C3, $C4, $C4 
-  db $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C3, $C1, $C3, $C3, $C3, $C3, $C3, $C4, $C4 
-  db $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C3, $C3, $C3, $C3, $C3, $C3, $C3, $C4, $C4 
+  db $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C3, $C3, $C3, $C3, $C3, $C3 
+  db $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C3, $C3, $C3, $C3, $C3, $C3 
+  db $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C3, $C1, $C3, $C3, $C3, $C3, $C3, $C3, $C3 
+  db $C1, $C1, $C1, $C1, $C1, $C1, $C1, $C3, $C3, $C3, $C3, $C3, $C3, $C3, $C3, $C3 
   db $C2, $C2, $C2, $C2, $C2, $C2, $C3, $C3, $C3, $C3, $C3, $C3, $C3, $C3, $C3, $C3 
   db $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C3, $C3, $C3, $C3, $C4, $C4, $C3, $C3, $C3 
-  db $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C3, $C3, $C3, $C3, $C3, $C3, $C3, $C3 
-  db $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C3, $C3, $C3, $C3, $C3, $C3, $C3 
+  db $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C4, $C3, $C3, $C3, $C3, $C3, $C3, $C3, $C3 
+  db $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C4, $C4, $C3, $C3, $C3, $C3, $C3, $C3, $C3 
   db $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C3, $C3, $C3, $C3, $C3, $C3, $C3 
   db $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C3, $C3, $C3, $C3, $C3, $C4, $C4 
   db $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C2, $C3, $C3, $C3, $C3, $C3, $C4, $C4 

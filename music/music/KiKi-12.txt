@@ -1,6 +1,5 @@
 ;Encoding: Shift-JIS
 ;For AddmusicK 1.0.8
-;2023/10/21
 ;==============================================================================
 #amk 2
 ;==============================================================================
@@ -23,122 +22,133 @@
 #endif
 }
 ;==============================================================================
+#path "kiki-12"
+
+#samples
+{
+	#optimized
+	"kiki_sample_04.brr"
+	"kiki_sample_05.brr"
+	"kiki_sample_06.brr"
+	"kiki_sample_07.brr"
+	"kiki_sample_0A.brr"
+	"kiki_sample_0C.brr"
+	"kiki_sample_0D.brr"
+	"kiki_sample_0F.brr"
+	"kiki_sample_10.brr"
+}
+
 #instruments
 {
-	@0	$8E $E0 $00 $06 $00	;@30
-	@14	$8E $EB $00 $07 $00	;@31
-	@3	$8E $6A $00 $03 $00	;@32
-	@8	$FF $EE $00 $1E $00	;@33
-	@6	$FB $E2 $00 $03 $00	;@34
-	@23	$00 $00 $7F $07 $00	;@35
+	"kiki_sample_04.brr"	$8F $E0 $00 $01 $00	;@30
+	"kiki_sample_05.brr"	$8F $E0 $00 $07 $A0	;@31
+	"kiki_sample_06.brr"	$8F $EB $00 $03 $00	;@32
+	"kiki_sample_07.brr"	$FF $EE $00 $16 $F0	;@33
+	"kiki_sample_0A.brr"	$FF $E0 $00 $04 $00	;@34
+	"kiki_sample_0C.brr"	$8F $E0 $00 $07 $A0	;@35
+	"kiki_sample_0D.brr"	$FF $F6 $00 $07 $B0	;@36
+	"kiki_sample_0F.brr"	$8F $E0 $00 $07 $10	;@37
+	"kiki_sample_10.brr"	$8F $E0 $00 $07 $A0	;@38
 }
 ;==============================================================================
 ;Macros
 ;Rhythm Sample
-"@b=@21 h4"			;Bass Drum 	o4a
-"@s=@29 h-3"		;Snare 		o3e
-"@h=@23 h-3 v140"	;Hi-hat 	o3a
-"@i=@35"			;Rim Shot
+"@b=@35 "
+"@s=@36"
+"@h=@37"
+"@i=@38"
 ;==============================================================================
 $EF $77 $32 $32
 $F1 $06 $48 $00
 $F5 $34 $33 $00 $D9 $E5 $01 $FC $EB
-w140 t53/
+w140 ;w182
+t26/
 ;==============================================================================
-#0 v220 o4 @30 p24,16,32
-(001)[c4d4f4g4>c4<a4g8a16g16f4 c4d4f4g8a16g16f8>c8<a2^8 r8>
-c4d4f4e8c8<g8>c8<a4g8a16g16f4 c4d4f4] g4>c4<a2g8r8
-(001) g8a16g16f8g8f2.
-l8
-r4f4.gargfgagfg2f4.gargfgagfdr
-dfg4a4f4g4a4>c4<a4 gf g16a16g16f16g2. g16a16g16f16g2. c8r2^8
+#0 v220 o5 @30 $DE $0C $18 $40
+(001)[c8d8f8g8>c8<a8g16a32g32f8 c8d8f8g16a32g32f16>c16<a4^16 r16>
+c8d8f8e16c16<g16>c16<a8g16a32g32f8 c8d8f8] g8>c8<a4g16r16
+(001) g16a32g32f16g16f4.
+l16
+r8f8.gargfgagfg4f8.gargfgagfdr
+dfg8a8f8g8a8>c8<a8 gf g32a32g32f32g4. g32a32g32f32g4. > c16r4^16
 ;==============================================================================
 #1
-@31 v182 o4 y7 l16
-g4
-(101)[ [[a8ar>ar<ar g8gr>gr<gr]]2
-f8fr>fr<fr g8gr>gr<gr a8ar>ar<ar a8>ar<g8>gr< 
-f8fr>fr<fr e8er>er<er d8dr>dr<dr [[f8fr>fr<fr]]2] f8fr>fr<fr [[g8gr>gr<gr]]2
-
-(101) g8gr>gr<gr f8frfrfr>f8gra8>cr
-@32 o5 l8 y20
-(102)[fd<a>fd<a>fd ge<a>ge<a>ge
-fd<a>fd<a>fd gd<a>gd<a>gd]
-[[r4]]9
-@30 l16 v144
-y0 (103)[q7f gagf q78 gagf q75 gagf] r4
-y20 (103)
-@31 v182 q7f o5 y7
-c8c16r16<g16r16e16r16c16r16r8
+v180
+@32 y7 l16 q7f
+o4 g8
+(101)[ [[q7f a q2f a>a<a q7f g q2f g>g<g ]]2
+q7f f q2f f>f<f q7f g q2f g>g<g q7f a q2f a>a<a q7f a q2f >a q6f <g q2f >g
+q7f <f q2f f>f<f q7f e q2f e>e<e q7f d q2f d>d<d [[q7f f q2f f>f<f]]2
+] q7f f q2f f>f<f  [[q7f g q2f g>g<g]]2
+(101) q7f g q2f g>g<g q7f f q2f fff q7f >f q2f g q7f a q2f >c 
+@31 y20 o4
+(102)[q7f fd<a>fd<a>fdge<a>ge<a>ge fd<a>fd<a>fdgd<a>gd<a>gd]
+r2r2
+@30 v150 l32
+o6  y0 r8 q7f gagf q48 gagf q12 gagf y20 r8 q7f gagf q78 gagf q72 gagf
+@32 y7
+q4f <c16 q2f c16<g16e16c16r16 q7f ;g8
 ;==============================================================================
-#2 v255 @33 o2 l16 $FA $03 $7F
-c4
-(201)[ [[d8drdrdr c8crcrcr]]2 < a+8a+ra+ra+r > c8crcrcr d8drdrdr d8>dr<c8>cr<<
-a+8a+ra+ra+r a8ararar g8grgrgr f8frfrfr a+8a+ra+ra+r]
-a+8a+ra+ra+r > c8crcrcr c8g8e8c8
-
-(201) c8crcrcr <f8>fr <a8>ar c8>cr <e8>er<
-
-l8 d2rd<a>d c+2rc+<a>c+ c2rc<g>c <b2rbgb
+#2 @33 v255
+q7f o2 c8 
 l16
-a+8a+ra+ra+r> c8crcrcr c+8c+rc+rc+r d8drdrdr < 
-[[a+8a+ra+ra+r]]2 > [[c8crcrcr]]2 cr>cr<grercr r8
-;==============================================================================
-#3 v255 o4 l4
-@b c4 [[@b c4 @s c4]]31
-@b c8c8 @s c8 @b c8c4 
-[[@s c8 @b c8c4 @s c4 @b c4]]3
-@s c8 @b c8c4 @s c8c8
-[[@b c4 @s c4]]8 @b c2.
-;==============================================================================
-#4 v180
-r4 y10
-@34 o4 l2 p24,16,32 $E5 $18 $06 $20
-(401)[fefcdef2.e4defc] d1e1
-(401) de<a4>c4f4g4
-f1e1f1f1
-l8 y14
-fd<a>dge<a+>ege<a+>eafcffd<a>dfd<a>dge<a+>ege<a+>e>c>
-c16r16<g16r16e16r16c16r16r8
+(201)[ [[q7f d q2f ddd q7f c q2f ccc]]2
+q7f < a+ q2f a+a+a+ q7f > c q2f ccc q7f d q2f ddd q7f d q2f >d q7f <c q2f >c<<
+q7f a+ q2f a+a+a+ q7f a q2f aaa q7f g q2f ggg q7f f q2f fff q7f a+ q2f a+a+a+]
 
+q7f a+ q2f a+a+a+ q7f >c q2f ccc q7f cgec 
+
+(201) q7f c q2f ccc q7f < f q2f >f q7f <a q2f >a q7f c q2f > c q7f <e q2f >e< 
+
+q7f d4rd<a>dc+4rc+<a>c+c4rc<g>c<b4rbgba+
+
+q2f a+a+a+ q7f >c q2f ccc q7f c+ q2f c+c+c+ q7f d q2f ddd<
+[[q7f a+ q2f a+a+a+]]2 [[q7f >c q2f ccc]]2 c>c<gecr
+;==============================================================================
+#3 v255 o4 l16
+@b c8 [[@b c8 @s c8]]31
+@b cc @s c @b cc8 
+[[@s c @b cc8 @s c8 @b c8]]3
+@s c @b cc8 @s cc
+[[@b c8 @s c8]]8 @b c4.
+;==============================================================================
+#4 v150
+r8 y10 $DE $0C $18 $40
+@34 o4 l4
+(401)[fefcdef4.e8defc] d2e2
+(401) de<a8>c8f8g8
+f2e2f2f2
+l16 y14
+q4f fd<a>dge<a+>ege<a+>eafcffd<a>dfd<a>dge<a+>ege<a+>e>c>
+q2f c<gec r
 ;==============================================================================
 #5
-@31 v182 o4 y13 l16
-e4
-(501)[ [[f8fr>fr<fr e8er>er<er]]2 d8dr>dr<dr e8er>er<er f8fr>fr<fr f8>fr<e8>er<
-d8dr>dr<dr c8cr>cr<cr <a+8a+r>a+r<a+r> c8cr>cr<cr d8dr>dr<dr]
-d8dr>dr<dr [[e8er>er<er]]2
-(501) e8er>er<er c8cr>cr<cr >c8drf8gr
+@32 v180 y13 l16
+o4 e8
+(501)[ [[q7f f q2f f>f<f q7f e q2f e>e<e]]2
+q7f d q2f d>d<d q7f e q2f e>e<e q7f f q2f f>f<f q7f f q2f >f q6f <e q2f >e 
+q7f <d q2f d>d<d q7f c q2f c>c<c q7f <a+ q2f a+>a+<a+ q7f >c q2f c>c<c 
+q7f d q2f d>d<d] q7f d q2f d>d<d [[q7f e q2f e>e<e]]2
 
-@32 y0
-$FA$02$F4 (102) $FA$02$00
-@34 y10 o4 v120 p24,16,32 $E5$18$06$20 d2e2e2f2f1g1 $DF $E5$00$00$00
-@31 y13 o4 v182 c8>g16r16e16r16c16r16g16r16r8
+(501) q7f e q2f e>e<e q7f c q2f c>c<c q7f >c q2f d q7f f q2f g 
+
+@31 y0 $FA$02$F4 (102) $FA$02$00
+@34 q7f y10 v100 $EE $20 o4 d4e4e4f4f2g2 $EE $00
+@32 y13 v150  q4f c q2f >gec<gr 
 ;==============================================================================
-#6 v180
-r4 y10
-@34 o4 l2 p24,16,32 $E5 $18 $06 $20
-(601)[dcd<ga+>cd2.c4<a+>cd<a] a+1>c1
-(601) <fgf4a4>c4e4<
-a1a1a1a1>
-l8 y6
-d<a+fa>ec<g>cec+<g>c+fd<
-a>dd<a+fa>d<a+fa>ec<g>cec<g>cg>
-g16r16e16r16c16r16<g16r16r8
-
+#6 v150
+r8 y10
+@34 o4 l4 $DE $0C $18 $40
+(601)[dcd<ga+>cd4.c8<a+>cd<a] a+2>c2
+(601) <fgf8a8>c8e8<
+a2a2a2a2>
+l16 y6
+q4f d<a+fa>ec<g>cec+<g>c+fd<a>dd<a+fa>d<a+fa>ec<g>cec<g>cg>
+q2f gec<gr
 ;==============================================================================
-#7 l192
-"setD1=v120 $E8$30$00"
-"setD2=v120 $E8$18$3C"
-"BaseNote04=[[<gagaa>c<a>c]]6"
-"BaseNote08=[[<gagaa>c<a>c]]3"
-"I_04=h8 setD1 BaseNote04 h0"
-"I_08=h8 setD2 BaseNote08 h0"
-
-@i I_04 @h [[c8]]29 @i I_08 @h c8 @i I_08
-@h [[c8]]61 @i I_08 @h c8 @i I_08
-@h [[c8]]30
-[@h c8c8 @i I_08 @h c8c8 @i I_04 @h c8]4
-@h [[c8]]33 @i I_08 @h c8
-r2^8
-
+#7 v255 l16
+q75 @i c8 
+(701)[@h [[c]]29 @i c @h c @i c @h [[c]]32 ]
+(701)
+[[@i c @h cc @i c8 @h ccc]]4
+q73 @h [[c]]31 @i c c r6...

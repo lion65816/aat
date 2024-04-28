@@ -4,6 +4,22 @@
 ;; then flies back toward the direction it was thrown.
 ;; Can be caught by the Boomerang Bros.
 
+        !HammerProp = #!Palette9|!SP3SP4
+
+;don't touch, made so it's actually easy to change hardcoded prop without having to look up for help
+
+!Palette8 = %00000000
+!Palette9 = %00000010
+!PaletteA = %00000100
+!PaletteB = %00000110
+!PaletteC = %00001000
+!PaletteD = %00001010
+!PaletteE = %00001100
+!PaletteF = %00001110
+
+!SP1SP2 = %00000000
+!SP3SP4 = %00000001
+
 print "MAIN ",pc
 Boomerang:
     JSR Graphics
@@ -12,7 +28,8 @@ Boomerang:
     BNE Return
 
     %SpeedNoGrav()
-    %ExtendedHurt()
+    ;%ExtendedHurt()
+	JSR CustomInteraction
 
     INC $0E05|!Base2,x
     LDA $176F|!Base2,x              ; if timer isn't zero, branch.
@@ -84,7 +101,7 @@ Graphics:
     LDA Tilemap,x
     STA $0202|!Base2,y
 
-    LDA #$09                        ; palette
+    LDA !HammerProp                       ; palette
     PHY
     TXY
     LDX $03                         ; flip based on direction.
@@ -108,4 +125,79 @@ Properties:
     db $00,$00,$C0,$C0
 
 Tilemap:
-    db $E8,$EA,$E8,$EA
+    db $4B,$4E,$4B,$4E
+
+CustomInteraction:
+JSR GetExClipping
+JSL $03B664|!BankB			;get mario's clipping
+JSL $03B72B|!BankB
+BCC .nah
+
+LDY #$00               ;A:25A1 X:0007 Y:0001 D:0000 DB:03 S:01EA P:envMXdizCHC:0130 VC:085 00 FL:924
+LDA $96                ;A:25A1 X:0007 Y:0000 D:0000 DB:03 S:01EA P:envMXdiZCHC:0146 VC:085 00 FL:924
+SEC                    ;A:2546 X:0007 Y:0000 D:0000 DB:03 S:01EA P:envMXdizCHC:0170 VC:085 00 FL:924
+SBC $1715|!Base2,x              ;A:2546 X:0007 Y:0000 D:0000 DB:03 S:01EA P:envMXdizCHC:0184 VC:085 00 FL:924
+STA $0F                ;A:25D6 X:0007 Y:0000 D:0000 DB:03 S:01EA P:eNvMXdizcHC:0214 VC:085 00 FL:924
+LDA $97                ;A:25D6 X:0007 Y:0000 D:0000 DB:03 S:01EA P:eNvMXdizcHC:0238 VC:085 00 FL:924
+SBC $1729|!Base2,x            ;A:2501 X:0007 Y:0000 D:0000 DB:03 S:01EA P:envMXdizcHC:0262 VC:085 00 FL:924
+BPL +            ;A:25FF X:0007 Y:0000 D:0000 DB:03 S:01EA P:eNvMXdizcHC:0294 VC:085 00 FL:924
+INY                    ;A:25FF X:0007 Y:0000 D:0000 DB:03 S:01EA P:eNvMXdizcHC:0310 VC:085 00 FL:924
+
++
+LDA $0F					;
+CMP #$E6				;
+BPL .hurt
+
+LDA $140D|!Base2		; if player's either spinjumping
+ORA $187A|!Base2		; or on yoshi
+BNE .Spinjmp			; make sprite die in four stars of life force that last 23 frames.
+
+.nah
+RTS
+
+.hurt
+	PHB
+	LDA.b #($02|!BankB>>16)
+	PHA
+	PLB
+	PHK
+	PEA.w .return-1
+	PEA.w $B889-1
+	JML $02A469|!BankB
+.return
+	PLB
+	RTS				;p-sure should be RTL
+	
+.Spinjmp
+JSL $01AB9E|!BankB 
+JSL $01AA33|!BankB
+
+LDA #$02			;
+STA $1DF9|!Base2		; spin-killed sound effect
+RTS
+
+GetExClipping:
+LDA $171F|!Base2,x		;Get X position
+SEC				;Calculate hitbox
+SBC #$02			;
+STA $04				;
+
+LDA $1733|!Base2,x		;
+SBC #$00			;Take care of high byte
+STA $0A				;
+
+LDA #$0C			;width
+STA $06				;
+
+LDA $1715|!Base2,x		;Y pos
+;SEC				;
+;SBC #$04			;
+STA $05				;
+
+LDA $1729|!Base2,x		;
+;SBC #$00			;
+STA $0B				;
+
+LDA #$10			;length
+STA $07				;
+RTS				;
