@@ -178,7 +178,7 @@ The Purrtal.[wait=15] It's our link to the interdimensional nexus, where beings 
 [erase]
 [font color=1]
 [topic]Demo[/topic]
-Jee (sic), this got heavy real quickly.
+Gee, this got heavy real quickly.
 [wait]
 [erase]
 

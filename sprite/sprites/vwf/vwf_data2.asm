@@ -31,6 +31,6 @@ print "MAIN ",pc
 BinPtr:
 	incbin "vwf_data2.bin"
 DataPtr:
-	dw BinPtr+$0,  BinPtr+$BAD,  BinPtr+$1A12,  BinPtr+$1BAF,  BinPtr+$1E65,  BinPtr+$22E2,  BinPtr+$332A,  BinPtr+$34C8
-	dw BinPtr+$41A1,  BinPtr+$4FDD
+	dw BinPtr+$0,  BinPtr+$BAD,  BinPtr+$1A0C,  BinPtr+$1BA9,  BinPtr+$1E5F,  BinPtr+$22DC,  BinPtr+$3324,  BinPtr+$3FFD
+	dw BinPtr+$4E39
 RoutinePtr:

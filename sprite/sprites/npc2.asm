@@ -782,12 +782,15 @@ Graphics:
         LDA #$80
         STA $0302|!Base2,y
         LDA $14
-        AND #$04                                ;> Change the palette every four frames (flashing).
+        ;AND #$04                               ;> Change the palette every four frames (flashing).
+        AND #$08                                ;> Mirror every eight frames.
         BEQ +
-        LDA #$38                                ;> YXPP CCCT = 0011 1000 = $38
+        ;LDA #$38                               ;> YXPP CCCT = 0011 1000 = $38
+        LDA #$30
         BRA ++
 +
-        LDA #$34                                ;> YXPP CCCT = 0011 0100 = $34
+        ;LDA #$34                               ;> YXPP CCCT = 0011 0100 = $34
+        LDA #$70
 ++
         STA $0303|!Base2,y
         REP #$20
@@ -1000,15 +1003,22 @@ Graphics:
         REP #$20
         LDA $010B|!addr                         ;\ Shift the indicator 8 pixels to the right
         CMP #$000F                              ;| if sublevel 00F.
-        BEQ ..shift                             ;/
+        BEQ ..shift8                            ;/
+        CMP #$01E6                              ;\ Shift the indicator 4 pixels to the right
+        BEQ ..shift4                            ;/ if sublevel 1E6.
         SEP #$20
         LDA $00
         CLC : ADC #$00
         BRA ..store
-..shift
+..shift8
         SEP #$20
         LDA $00
         CLC : ADC #$08
+        BRA ..store
+..shift4
+        SEP #$20
+        LDA $00
+        CLC : ADC #$04
 ..store
         STA $0300|!Base2,y
         LDA $01
@@ -1017,14 +1027,31 @@ Graphics:
         LDA #$80
         STA $0302|!Base2,y
         LDA $14
-        AND #$04                                ;> Change the palette every four frames (flashing).
+        ;AND #$04                               ;> Change the palette every four frames (flashing).
+        AND #$08                                ;> Mirror every eight frames.
         BEQ +
-        LDA #$38                                ;> YXPP CCCT = 0011 1000 = $38
+        ;LDA #$38                               ;> YXPP CCCT = 0011 1000 = $38
+        LDA #$30
         BRA ++
 +
-        LDA #$34                                ;> YXPP CCCT = 0011 0100 = $34
+        ;LDA #$34                               ;> YXPP CCCT = 0011 0100 = $34
+        LDA #$70
 ++
         STA $0303|!Base2,y
+        REP #$20
+        LDA $010B|!addr                         ;\ Special case: load a different tile for the
+        CMP #$01E6                              ;/ indicator graphics in sublevel 1E6.
+        BEQ ..change_tile
+        BRA ..skip
+..change_tile
+        SEP #$20
+        LDA #$6B
+        STA $0302|!Base2,y
+        LDA $0303|!Base2,y
+        ORA #$01
+        STA $0303|!Base2,y
+..skip
+        SEP #$20
         LDY #$02
         LDA #$04
         JSL $01B7B3|!BankB

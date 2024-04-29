@@ -290,9 +290,10 @@ main:
 	LDA #$1E				;\ Reset the coin counter to 30.
 	STA $0DC0|!addr			;/
 .coin_counter
-	LDA $0DC0|!addr		;\ Load coin counter into scratch RAM.
-	STA $00				;| Zero out the high byte for 16-bit arithmetic.
-	STZ $01				;/
+	LDA $0DC0|!addr		;\ Set the appropriate coin counter frame
+	SEC					;| for manual trigger 1.
+	SBC #$1A			;|
+	STA $7FC071			;/
 	LDY.b #$02			;> Request 2 tiles to draw.
 	REP #$30			;> (As the index registers were 8-bit, this fills their high bytes with zeroes)
 	LDA.w #$0000		;> Maximum priority. Input parameter for call to MaxTile.
@@ -327,19 +328,8 @@ draw_coin_counter:
 	LDA TileCoord,y		;\ Load tile X and Y coordinates
 	STA $400000,x		;/
 
-	LDA TileProps,y		;> Load tile properties.
-	CMP #$3082			;\ Branch if not the actual counter tile.
-	BNE +				;/
-	LDA $00				;\ Calculate the offset of the counter
-	SEC					;| tile based on the coin counter.
-	SBC #$0019			;|
-	ASL					;|
-	STA $00				;|
-	LDA #$3080			;|
-	CLC					;|
-	ADC $00				;/
-+
-	STA $400002,x
+	LDA TileProps,y		;\ Load tile properties.
+	STA $400002,x		;/
 
 	INX #4				;\ Move to next slot and loop
 	DEY #2				;|
@@ -365,4 +355,4 @@ TileCoord:				; YYXX
 	dw $5804,$5814		; Draw directly below the HP meter.
 
 TileProps:				; High byte = YXPPCCCT, low byte = tile number
-	dw $3080,$3082		; The second tile will change depending on coin count.
+	dw $30AC,$30AE		; The second tile will change depending on coin count.

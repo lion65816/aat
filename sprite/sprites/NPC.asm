@@ -672,7 +672,7 @@ endif
 .showMessage
 
         ; AAT edit: Do not show the message; only teleport if
-        ; sublevel is 17, 19, 5B, 6A-6F, 82, B1, 123, 12E, 15F, 1AE, 1C9, or 1DE.
+        ; sublevel is 17, 19, 5B, 82, B1, 123, 12E, 15F, 1AE, 1C9, or 1DE.
         REP #$20
         LDA $010B|!addr
         CMP #$0017
@@ -680,18 +680,6 @@ endif
         CMP #$0019
         BEQ +
         CMP #$005B
-        BEQ +
-        CMP #$006A
-        BEQ +
-        CMP #$006B
-        BEQ +
-        CMP #$006C
-        BEQ +
-        CMP #$006D
-        BEQ +
-        CMP #$006E
-        BEQ +
-        CMP #$006F
         BEQ +
         CMP #$0082
         BEQ +
@@ -834,12 +822,15 @@ Graphics:
         LDA #$80
         STA $0302|!Base2,y
         LDA $14
-        AND #$04                                ;> Change the palette every four frames (flashing).
+        ;AND #$04                               ;> Change the palette every four frames (flashing).
+        AND #$08                                ;> Mirror every eight frames.
         BEQ +
-        LDA #$38                                ;> YXPP CCCT = 0011 1000 = $38
+        ;LDA #$38                               ;> YXPP CCCT = 0011 1000 = $38
+        LDA #$30
         BRA ++
 +
-        LDA #$34                                ;> YXPP CCCT = 0011 0100 = $34
+        ;LDA #$34                               ;> YXPP CCCT = 0011 0100 = $34
+        LDA #$70
 ++
         STA $0303|!Base2,y
         LDY #$02
@@ -1023,19 +1014,7 @@ Graphics:
         PLY
         REP #$20
         LDA $010B|!addr                         ;\ Shift the indicator 8 pixels to the right
-        CMP #$000F                              ;| if sublevel F, 6A-6F, 15F, or 1EA.
-        BEQ ..shift_right                       ;|
-        CMP #$006A                              ;|
-        BEQ ..shift_right                       ;|
-        CMP #$006B                              ;|
-        BEQ ..shift_right                       ;|
-        CMP #$006C                              ;|
-        BEQ ..shift_right                       ;|
-        CMP #$006D                              ;|
-        BEQ ..shift_right                       ;|
-        CMP #$006E                              ;|
-        BEQ ..shift_right                       ;|
-        CMP #$006F                              ;|
+        CMP #$000F                              ;| if sublevel F, 15F, or 1EA.
         BEQ ..shift_right                       ;|
         CMP #$015F                              ;|
         BEQ ..shift_right                       ;|
@@ -1065,12 +1044,15 @@ Graphics:
         LDA #$80
         STA $0302|!Base2,y
         LDA $14
-        AND #$04                                ;> Change the palette every four frames (flashing).
+        ;AND #$04                               ;> Change the palette every four frames (flashing).
+        AND #$08                                ;> Mirror every eight frames.
         BEQ +
-        LDA #$38                                ;> YXPP CCCT = 0011 1000 = $38
+        ;LDA #$38                               ;> YXPP CCCT = 0011 1000 = $38
+        LDA #$30
         BRA ++
 +
-        LDA #$34                                ;> YXPP CCCT = 0011 0100 = $34
+        ;LDA #$34                               ;> YXPP CCCT = 0011 0100 = $34
+        LDA #$70
 ++
         STA $0303|!Base2,y
         LDY #$02

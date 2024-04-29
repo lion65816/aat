@@ -3,8 +3,7 @@
 02 scene2.25a.txt
 03 scene2.25b.txt
 04 scene2.25c.txt
-05 scene2.5a.txt
-06 scene2.5b.txt
-07 scene3.txt
-08 scene4.txt
-09 scene5.txt
+05 scene2.5.txt
+06 scene3.txt
+07 scene4.txt
+08 scene5.txt
