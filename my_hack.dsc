@@ -521,6 +521,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 4a20	0	Solid if the corresponding switch is activated.
 4a21	0	Solid if the corresponding switch is activated.
 4a22	0	Solid if the corresponding switch is activated.
+4bc1	0	<Selective Sprite Only> Block
 4d5f	0	Shatters if Demo touches it from above or the side.
 4d6c	0	Correct password block.
 4d6d	0	Correct password block.

@@ -312,6 +312,7 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 4A20:25 BlockBlue.asm
 4A21:25 BlockRed.asm
 4A22:25 BlockYellow.asm
+4BC1:130 selective_spriteonly_block.asm
 4D5F:130 shatter_mario_above_side.asm
 4D6C:124 password_correct.asm
 4D6D:11F password_correct.asm
