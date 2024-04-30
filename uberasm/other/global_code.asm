@@ -6,8 +6,6 @@
 
 load:
 	STZ !CustomPalette
-	RTS
-
 init:
 	RTS
 
@@ -29,24 +27,31 @@ main:
 	STA $0DBE|!addr	
 
 +++	JSL mario_exgfx_main
+	RTS
 
+nmi:
+	LDA #$80
+	STA $2100
 	; Handle custom palette for intro stage.
 	LDA !CustomPalette
-	CMP #$01
+	DEC
 	BNE +
 	JSL GrayscalePalette_main
+	BRA ++
 +
 	; Handle custom palette for Level 125 secret path.
-	CMP #$02
+	DEC
 	BNE +
 	JSL InvertPalette_main
+	BRA ++
 +
 	; Handle custom palette for Level 121 if the player is Iris.
-	CMP #$03
+	DEC
 	BNE +
 	JSL BlueIrisPalette_main
 +
 	; Skip if a level is already uploading custom player palettes.
+++
 	LDA !PaletteUsed
 	BNE .Return
 	
@@ -58,9 +63,7 @@ main:
 
 	; Handle Iris palette with ExAnimation custom trigger.
 	LDA $0DB3|!addr 
-	CMP #$00
 	BNE .Iris
-	
 
 .Demo
 	; Prevents Iris' eye colors from loading prematurely when switching to her on the overworld.
@@ -74,19 +77,15 @@ main:
 	STA $2122 ; Format = -bbbbbgg gggrrrrr
 	LDA #$00 ; High byte
 	STA $2122
-	LDA #$84 ; Colour number. This is palette 0, colour 2.
-	STA $2121
 	LDA #$3F ; Low byte of SNES RGB
 	STA $2122 ; Format = -bbbbbgg gggrrrrr
 	LDA #$02 ; High byte
 	STA $2122
-	LDA #$85 ; Colour number. This is palette 0, colour 2.
-	STA $2121
 	LDA #$3F ; Low byte of SNES RGB
 	STA $2122 ; Format = -bbbbbgg gggrrrrr
 	LDA #$0F ; High byte
 	STA $2122
-	JML .Return
+	RTS
 
 .Iris
 	; Prevents Demo's eye colors from loading prematurely when switching to her on the overworld.
@@ -100,20 +99,14 @@ main:
 	STA $2122 ; Format = -bbbbbgg gggrrrrr
 	LDA #$4C ; High byte
 	STA $2122
-	LDA #$84 ; Colour number. This is palette 0, colour 2.
-	STA $2121
 	LDA #$B3 ; Low byte of SNES RGB
 	STA $2122 ; Format = -bbbbbgg gggrrrrr
 	LDA #$59 ; High byte
 	STA $2122
-	LDA #$85 ; Colour number. This is palette 0, colour 2.
-	STA $2121
 	LDA #$99 ; Low byte of SNES RGB
 	STA $2122 ; Format = -bbbbbgg gggrrrrr
 	LDA #$72 ; High byte
 	STA $2122
-	JML .Return
-
 .Return
 	RTS
 	
@@ -125,8 +118,6 @@ main:
 	STA $2122 ; Format = -bbbbbgg gggrrrrr
 	LDA #$37 ; High byte
 	STA $2122
-	LDA #$85 ; Colour number. This is palette 0, colour 2.
-	STA $2121
 	LDA #$EC ; Low byte of SNES RGB
 	STA $2122 ; Format = -bbbbbgg gggrrrrr
 	LDA #$33 ; High byte
@@ -136,3 +127,4 @@ main:
 	STA $0701|!addr
 	SEP #$20
 	RTS
+

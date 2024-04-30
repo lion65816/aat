@@ -80,6 +80,8 @@ patches
 	patch\patch\revealspeed.asm
 	patch\patch\custom_intro_march.asm
 	patch\patch\side_exit_goal.asm
+	patch\patch\spinspinspinaaaaaugghh.asm
+	patch\patch\courseclear.asm
 ]
 -- patch\patch\blockmask.asm
 -- patch\patch\BetterYoshiInteraction.asm

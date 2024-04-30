@@ -1419,6 +1419,30 @@ endif
 ;DMA ROM -> RAM ROUTINE
 
 if !SA1 == 1
+	PHX
+	PHB
+	REP #$30
+	LDA #$0004
+	STA !Timers
+	LDY !SlotDestination
+	LDX !SlotPointer
+-
+	LDA #$007F
+	MVN $41,gfx>>16
+	TXA
+	CLC
+	ADC #$0180
+	TAX
+	TYA
+	CLC
+	ADC #$0180
+	TAY
+	DEC !Timers
+	BNE -
+	PLB
+	SEP #$10
+	PLX
+	if 1 == 0
 ;set destination RAM address
 	REP #$20
 	LDY #$C4
@@ -1476,6 +1500,7 @@ if !SA1 == 1
 	INC !Timers
 	BRA -
 +
+	endif
 else
 ;common DMA settings
 	REP #$20
