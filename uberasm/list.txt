@@ -144,7 +144,7 @@ level:
 0D1	MWIVJS1.asm
 0D3	SPECIAL.asm
 0D4	SPECIAL_NoStatus_HorzWrap.asm
-0D5	SPECIAL.asm
+0D5	ashspawn_uberASM_Reset_Small_Noflight.asm
 0D6	SPECIAL.asm
 0D8	SPECIAL.asm
 0DA  TeleportAtTimeNoMosaic.asm

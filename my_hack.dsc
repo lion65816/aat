@@ -399,7 +399,25 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1982	0	Print the room/author names for sublevel 154.
 1983	0	Print the room/author names for sublevel 154.
 19ff	0	Erase the room/author names.
+1a48	0	Solid if anything goes left
 1a8f	0	Fade out the music.
+1adf	0	A block that acts like a mid-air suspended Spiny.
+1ae0	0	Turns the player small when inside.
+1ae1	0	Turns the player small when inside.
+1ae2	0	Turns the player into Big Mario when inside.
+1ae3	0	Turns the player into Big Mario when inside.
+1ae4	0	Turns the player into Fire Mario when inside.
+1ae5	0	Turns the player into Fire Mario when inside.
+1ae6	0	Turns the player into Cape Mario when inside.
+1ae7	0	Turns the player into Cape Mario when inside.
+1af0	0	Turns the player small when inside.
+1af1	0	Turns the player small when inside.
+1af2	0	Turns the player into Big Mario when inside.
+1af3	0	Turns the player into Big Mario when inside.
+1af4	0	Turns the player into Fire Mario when inside.
+1af5	0	Turns the player into Fire Mario when inside.
+1af6	0	Turns the player into Cape Mario when inside.
+1af7	0	Turns the player into Cape Mario when inside.
 1b90	0	Acts as 25 if a specific switch is active.
 1b91	0	Acts as 25 if a specific switch isn't active.
 1b92	0	Displays level message 1.
@@ -407,6 +425,10 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1c90	0	A block that will act like tile 25 for Moving Coins
 1d0e	0	weak_break_block.asm
 1d0f	0	A Donut Lift, which will fall shortly after being stepped on.
+1d93	0	Teleports the player.
+1d94	0	Teleports the player.
+1da3	0	Teleports the player.
+1da4	0	Teleports the player.
 1e2f	0	Teleports the player using a specific screen exit.
 1f18	0	A block that, when touched by the player, will change the background music to a new value and then destroy itself.
 1f1b	0	Adds 20 seconds to the clock and shatters

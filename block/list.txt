@@ -191,6 +191,24 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 1983:20 final_castle_door_154.asm
 19FF:25 final_castle_door_erase.asm
 1A8F:25 fade_out_music.asm
+1ADF:25 spinyblock0D5.asm
+1AE0:25 turnsmall.asm
+1AE1:25 turnsmall.asm
+1AE2:25 turnbig.asm
+1AE3:25 turnbig.asm
+1AE4:25 turnfire.asm
+1AE5:25 turnfire.asm
+1AE6:25 turncape.asm
+1AE7:25 turncape.asm
+1AF0:25 turnsmall.asm
+1AF1:25 turnsmall.asm
+1AF2:25 turnbig.asm
+1AF3:25 turnbig.asm
+1AF4:25 turnfire.asm
+1AF5:25 turnfire.asm
+1AF6:25 turncape.asm
+1AF7:25 turncape.asm
+1A48:25 one_way_right.asm
 1B90:130 switch_act - OFF.asm
 1B91:130 switch_act.asm
 1B92:130 4season_msg.asm
@@ -198,6 +216,10 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 1C90:130 sprite_solid_coin_pass.asm
 1D0E:130 weak_break_block.asm
 1D0F:130 donutblk_solid.asm
+1D93:25 teleport.asm
+1D94:25 teleport.asm
+1DA3:25 teleport.asm
+1DA4:25 teleport.asm
 1E2F:25 screentele.asm
 1F18:25 touchdown.asm
 1F1B:130 addtimetouch.asm
