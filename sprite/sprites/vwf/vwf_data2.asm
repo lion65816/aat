@@ -31,6 +31,44 @@ print "MAIN ",pc
 BinPtr:
 	incbin "vwf_data2.bin"
 DataPtr:
-	dw BinPtr+$0,  BinPtr+$BAD,  BinPtr+$1A0C,  BinPtr+$1BA9,  BinPtr+$1E5F,  BinPtr+$22DC,  BinPtr+$3324,  BinPtr+$3FFD
-	dw BinPtr+$4E39
+	dw BinPtr+$0,  BinPtr+$BAD,  BinPtr+$1A0C,  BinPtr+$1BA9,  BinPtr+$1E5F,  BinPtr+$22DC,  BinPtr+$3338,  BinPtr+$4011
+	dw BinPtr+$4E4D
 RoutinePtr:
+	dw Routine00
+Routine00:
+
+
+
+!EventRAM1 = $1F02+($43>>3) ;\ Beat Level 6: Thwompire State Building
+!EventBit1 = 1<<(7-($43&7)) ;/
+!EventRAM2 = $1F02+($2A>>3) ;\ Beat Level D: Puella Magi Demoka Magica
+!EventBit2 = 1<<(7-($2A&7)) ;/
+!EventRAM3 = $1F02+($5A>>3) ;\ Beat Level 101: Spikes do hurt (sometimes)
+!EventBit3 = 1<<(7-($5A&7)) ;/
+!EventRAM4 = $1F02+($1B>>3) ;\ Beat Level 11D: Castle of SERIOUS BUSINESS (normal exit)
+!EventBit4 = 1<<(7-($1B&7)) ;/
+STZ $18C5
+LDA !EventRAM1
+AND #!EventBit1
+BNE +
+RTL
++
+LDA !EventRAM2
+AND #!EventBit2
+BNE +
+RTL
++
+LDA !EventRAM3
+AND #!EventBit3
+BNE +
+RTL
++
+LDA !EventRAM4
+AND #!EventBit4
+BNE +
+RTL
++
+LDA #$01
+STA $18C5
+RTL
+

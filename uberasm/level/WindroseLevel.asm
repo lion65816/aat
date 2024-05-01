@@ -51,6 +51,10 @@ math round off
 !HPByte = $58
 !PowerupResult = $7C
 
+load:
+	JSL NoStatus_load
+	RTL
+
 init:
     REP #$20
 

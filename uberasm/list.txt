@@ -307,7 +307,7 @@ level:
 1A7	BG_AutoScroll1A7.asm
 1A8	leafspawn_uberASM_1A8.asm
 1A9	SPECIAL_InitSpriteFacing.asm
-1AA  WindroseLevel.asm
+1AA	WindroseLevel.asm
 1AB	TeleportOnCoins.asm
 1AD	SPECIAL.asm
 1AF	SPECIAL.asm

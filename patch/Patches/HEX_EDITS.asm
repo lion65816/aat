@@ -384,3 +384,33 @@ org $0292FF
 	db $10
 org $029310
 	db $10
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Miscellaneous palette hex edits ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+org $038882|!bank			;change Mega mole palette
+db $09					; change palette from 8 to C (YXPPCCCT $x1 -> $x9)
+
+org $02A2E7|!bank			;change hammer extended GFX from B to A
+db $45,$45,$05,$05			; changed palette from B to A
+db $85,$85,$C5,$C5			; (YXPPCCCT: $x7 -> $x5)
+
+ORG $07F47D|!bank			;Flying Mushroom
+db $2A					;change palette from 8 to D (green)
+
+org ($07F3FE+$1B)|!bank  ; Football
+db $05  ; palette A | originally: db $01
+
+org ($07F3FE+$7D)|!bank  ; P-Balloon
+db $25  ; palette A | originally: db $21
+
+org ($07F3FE+$2E)|!bank  ; Spike Top
+db $15  ; palette A | originally: db $19
+
+org $02CAFA|!bank        ; Chuck Arm
+db $4B,$0B  ; palette D | originally db $47,$07
+
+; Fix Diggin' Flower arm palette.
+org $02CB96|!bank
+	db $4B,$0B		; Use palette D (originally: db $47,$07)

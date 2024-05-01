@@ -14,6 +14,7 @@ initial_patch = initial_patch.bps
 -- asar
 patches
 [
+	patch\Patches\HEX_EDITS.asm
 	patch\BounceBlocks\CustBounceBlocks.asm
 	patch\Fixes\100exits.asm
 	patch\Fixes\BallChainYoshiFix.asm
@@ -42,6 +43,7 @@ patches
 	patch\Fixes\yourfatface.asm
 	patch\Patches\1control.asm
 	patch\Patches\auto.asm
+	patch\Patches\banzai_palette.asm
 	patch\Patches\BetterBonusGame.asm
 	patch\Patches\BetterVertCamera.asm
 	patch\Patches\bg.asm
@@ -57,12 +59,13 @@ patches
 	patch\Patches\ExtendedLevelNames.asm
 	patch\Patches\extendmario.asm
 	patch\Patches\extendnstl.asm
+	patch\Patches\falling_spike_palette.asm
 	patch\Patches\flagfreescroll.asm
 	patch\Patches\footballlol.asm
-	patch\Patches\HEX_EDITS.asm
 	patch\Patches\InlineLayer3Message.asm
 	patch\Patches\layer1_events.asm
   	patch\Patches\luigi.asm
+	patch\Patches\mole_palette.asm
 	patch\Patches\more_hardcoded_paths.asm
 	patch\Patches\m_sprites.asm
 	patch\Patches\ndp.asm
@@ -70,6 +73,7 @@ patches
 	patch\Patches\nuke_statusbar.asm
 	patch\Patches\optimize_2132_store.asm
 	patch\Patches\overworld_map_names.asm
+	patch\Patches\OverworldPalFix.asm
 	patch\Patches\owcount.asm
 	patch\Patches\OWMusic.asm
 	patch\Patches\OWtileSounds.asm
@@ -86,10 +90,7 @@ patches
 ]
 -- patch\patch\999.asm
 -- patch\patch\shellbuzzyfix.asm
--- patch\patch\banzai_palette.asm
--- patch\patch\IrisPalFix.asm
 -- patch\patch\timeupfix.asm
--- patch\patch\mole_palette.asm
 -- patch\patch\save_everything.asm
 -- patch\patch\blockmask.asm
 -- patch\patch\BetterYoshiInteraction.asm

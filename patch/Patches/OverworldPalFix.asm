@@ -1,3 +1,5 @@
+; Overworld Yoshi and Switch Palace Palette Fixes
+
 !yellow = $0C
 !blue   = $09
 !red    = $0A
