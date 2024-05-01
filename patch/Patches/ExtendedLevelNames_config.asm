@@ -45,7 +45,7 @@ NameData:
  db "    ONLY TREES     "
  ;Level 00A
  db "                   "
- db "   (WIP) SPECIAL   "
+ db "      SPECIAL      "
  ;Level 00B
  db "  Siege at Castle  "
  db "    Wolfenstein    "
