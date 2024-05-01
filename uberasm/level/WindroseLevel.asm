@@ -153,6 +153,19 @@ main:
 
     SEP #$20
 
+    ;Disable sprite interaction on held items
+    LDX #$15                        ;Starting index
+    .loop:
+    LDA !14C8,x                     ;Sprite status
+    CMP #$09 : BEQ +                ;Check if carryable
+    CMP #$0A : BEQ +                ;Check if kicked
+    CMP #$0B : BNE +++              ;Check if held
+    LDA #$08 : ORA !1686,x          ;Add noninteraction bit
+    BRA ++
++   LDA #$F7 : AND !1686,x          ;Remove noninteraction bit
+++  STA !1686,x                     ;Update tweaker bits
++++ DEX : BNE .loop                 ;Iterate, stop upon reaching boss itself
+
     JSR $1E85                       ;Wait for SA-1 to finish
     .return:
 RTL
@@ -162,8 +175,12 @@ SAMain:
     PHK : PLB
     ;~~to do~~: draw sprites (and everything else)   ;don't draw any sprites in mode 7 level code :(
 
+    ;Make Demo small when she only has one hit point
+    LDA !HPByte : DEC : BNE +                   ;Check 1 HP
+    STA $19                                     ;Store small
+
     ;;Attacks
-    LDX !BossState                              ;Load current state
++   LDX !BossState                              ;Load current state
     JSR (States,x)                              ;Execute state-dependent behavior
 
     ;;Expiration timers
@@ -555,7 +572,8 @@ RTS
 ;     LDA ..tableMain-2,y : AND #$08 : BEQ +          ;Check sound flag
 ;     LDA #$23 : STA $7DFC                            ;Sound: step on tile
     ;7DFC: 29 (correct)? 23 (step on tile)? 09 (shot)?? 06 (fireball)?? 14 (unused)?? 19 (pop)? 1C (switch block eject)??
-    LDA #$15 : STA $7DF9                            ;Sound: Hit 3
+;    LDA #$15 : STA $7DF9                            ;Sound: Hit 3
+    LDA #$32 : STA $7DF9                            ;SMAS climb sound
     ;7DF9: 10 (magic)?? 13-19 (hit)???
     ;Pop is kinda nice. Not correct. Step on tile is all right.
     ;Not unused. Not eject.
@@ -641,7 +659,7 @@ RTS
     ;Prepare for next projectile
     INY                                             ;Increment attack phase
 +   LDA ..tableTimer-2,y : STA !AttackTimerA        ;Set timer until next projectile
-    LDA #$15 : STA $7DF9                            ;Sound: Hit 3
+    LDA #$32 : STA $7DF9                            ;SMAS climb sound
     CPY.b #..tableTimer-..tableMain+1               ;Check for end of table
     BCC + : LDY #$01                                ;Loop attack phase if we've reached the end of the table
 +   STY !AttackPhase                                ;Store attack phase
@@ -847,7 +865,7 @@ RTS
 
 ..stall:
     INY : STY !AttackPhase
-    LDA #$16 : STA $7DF9                            ;Sound: Hit 4
+    LDA #$23 : STA $7DFC                            ;Sound: step on tile
     LDA #$F0 : STA !AttackTimerA                    ;Set timer (240 frames, about 4 seconds)
 RTS
 
@@ -889,7 +907,7 @@ RTS
     ;Prepare for next projectile
     INY                                             ;Increment attack phase
     LDA ..tableTimer-2,y : STA !AttackTimerA        ;Set timer until next projectile
-    LDA #$15 : STA $7DF9                            ;Sound: Hit 3
+    LDA #$32 : STA $7DF9                            ;SMAS climb sound
     STY !AttackPhase                                ;Store attack phase
 RTS
 
@@ -1021,7 +1039,7 @@ RTS
     ;Prepare for next projectile
     INY                                             ;Increment attack phase
 +   LDA ..tableTimer-2,y : STA !AttackTimerA        ;Set timer until next projectile
-    LDA #$15 : STA $7DF9                            ;Sound: Hit 3
+    LDA #$32 : STA $7DF9                            ;SMAS climb sound
 +   STY !AttackPhase                                ;Store attack phase
 RTS
 

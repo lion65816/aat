@@ -12,7 +12,7 @@ main:
 	; Yellow Switch is pressed for the first time.
 	LDA $0DC4|!addr
 	BNE .ret
-	INC $1F2E|!addr
+	;INC $1F2E|!addr
 	LDA #$01
 	STA $0DC4|!addr
 	JML .ret

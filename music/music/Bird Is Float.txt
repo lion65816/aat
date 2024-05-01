@@ -1,0 +1,150 @@
+#amk 2
+
+#path "lonelymountain"
+
+#spc
+{
+    #title   "Bird Is Float"
+    #game    "Baba Is You"
+    #author  "Arvi Teikari"
+    #comment "Ported by Fyre150"
+}
+
+#samples
+{
+	#optimized
+	"01 wind.brr" 
+	"02 low.brr" 
+	"03 sin.brr" 
+	"04 mid.brr" 
+	"05 pwshh.brr" 
+}
+
+#instruments
+{
+	"01 wind.brr" $00 $00 $C5 $01 $3F ; @30
+	"02 low.brr" $00 $00 $C7 $02 $F6 ; @31
+	"03 sin.brr" $8E $B6 $7F $05 $E6 ; @32
+	"04 mid.brr" $00 $00 $C7 $05 $EB ; @33
+	"05 pwshh.brr" $FF $EF $7F $05 $46 ; @34
+}
+
+(!900)[$f4$09]
+
+;-----------------------;
+;        Echo           ;
+;-----------------------;
+$ef $ff $20 $e0 
+$f1 $09 $32 $01 
+
+
+
+;-----------------------;
+;   Volume  /  Tempo    ;
+;-----------------------;
+    w250       t40 
+
+
+
+;-----------------------;
+;        Macros         ;
+;-----------------------;
+"WIND = @30"
+"LOW = @31 v240" 
+"SIN = @32"
+"MID = @33 v120" 
+"PWSH = @34"
+
+"A1C = $ed$5a$1c"
+"GAD = $fa$01$ad"
+"GAE = $fa$01$ae"
+
+"P10 = q7f y10"
+"P11 = q78 y10,1,0"
+"P12 = q74"
+"P20 = q7b y10"
+"P50 = q7f y10"
+"P51 = q7a y10,1,0"
+"P52 = q78"
+"P53 = q76"
+"P54 = q74"
+"P55 = q73"
+
+"T00 = $fa$02$00"
+"TFF = $fa$02$ff"
+
+"VF30 = v70 $e8$60$76"
+"VF31 = $e8$60$4a"
+
+"L = $F4$01"
+"ET = $F4$03"
+
+"DD60 = $dd$00$60"
+
+"DCR = $dc$c0$06"
+"DCM = $dc$c0$0a"
+"DCL = $dc$c0$0d"
+
+
+
+;-----------------------;
+;       Channels        ;
+;-----------------------;
+#0 $F4$02 / v100 WIND y10  
+L [[ [DCR b+2 DD60 f+ f+2 DD60 c DCM c2 DD60 d+ d+2 DD60 c
+DCL c2 DD60 f+ f+2 DD60 d DCM d2 DD60 a a2 DD60 e
+DCR e2 DD60 g g2 DD60 b+ DCM b+2 DD60 f+ f+2 DD60 c 
+DCL c2 DD60 d+ d+2 DD60 c DCM c2 DD60 f+ f+2 DD60 d
+DCR d2 DD60 a a2 DD60 e DCM e2 DD60 g g2 DD60 b+
+DCL b+2 DD60 f+ f+2 DD60 c DCM c2 DD60 d+ d+2 DD60 c
+DCR c2 DD60 f+ f+2 DD60 d DCM d2 DD60 a a2 DD60 e
+DCL e2 DD60 g g2 DD60 b+ DCM b+2 DD60 f+ f+2 DD60 c 
+DCR c2 DD60 d+ d+2 DD60 c DCM c2 DD60 f+ f+2 DD60 d]
+DCL d2 DD60 a a2 DD60 e DCM e2 DD60 g g2 DD60 b+]]2
+* DCL d2 DD60 a a2 DD60 e DCM e2 DD60 g GAE g2 DD60 b+ L
+
+
+#1 o4 (!900,-1) [[r2]]8 
+LOW [[q7d f1 GAD ^1 r1^1 q7f c1 GAD ^1 r1^1]]2 [[r2]]16
+[q7d f1^8 GAD ^2.. q7a b+1^8 GAD ^2.. q7b a+1^8 GAD ^2..] q7f c1^8 GAD ^2.. [[r2]]8
+[[LOW * MID q7f b+1^8 GAD ^2..]]2 [[r2]]8
+
+
+#2 [[r1]]12 SIN o4 v145 l6 
+r2 P10 d+ P11 d+ P12 d+ P10 g P11 g P12 g P10 f P11 f P12 f q73f q72ffr1^1
+(21)[P20 b+ P11 b+ P12 b+ P10 f P11 f P12 f P10 c P11 c P12 c q73c q72cc] r1^1
+(20)[P10 c P11 c P12 c P10 g P11 g P12 g P10 f P11 f P12 f q73f q72ff] r1^1
+(21) r1^1 (20) r1^1 (21) r1^1^1^1 
+P10 <g P11 g P12 g P10 a+ P11 a+ P12 a+ P10 a P11 a P12 a q73a q72aa> (20) r1^1 
+(22)[P20 b+ P11 b+ P12 b+ P10 a+ P11 a+ P12 a+ P10 f P11 f P12 f q73f q72ff] r1^1
+(20) P10 b+ P11 b+ P12 b+ P10 g P11 g P12 g P10 a+ P11 a+ P12 a+ q73a+ q72a+a+ 
+(22) P10 c P11 c P12 c P10 o3 a+ P11 a+ P12 a+ P10 g P11 g P12 g 
+v125 [y10q75g y10,1,0q73gg] v110 * v95 * v80 * r1r1
+
+
+#3 [[r1]]20
+SIN A1C o4 l8 y10,1,0
+(69)[VF30 [[q7efg]]4 VF31 [[q7efg]]4 
+VF30 [[q7egq7db+]]4 VF31 [[q7egq7db+]]4 
+VF30 [[q7fd+q7ef]]4 VF31 [[q7fd+q7ef]]4 
+VF30 [[q7db+q7egq7fcq7eg]]2 VF31 [[q7db+q7egq7fcq7eg]]2 ]2
+[[r2]]8 * SIN o3 v145 l6 r2 
+P10 a P11 a P12 a P10 b P11 b P12 b P10 a P11 a P12 a q73a q72 aa
+P10 g P11 g P12 g P10>d+ P11 d+ P12 d+ P10 f P11 f P12 f q73f q72ff
+P10 f P11 f P12 f P10 f P11 f P12 f P10 d P11 d P12 d q73d q72dd<
+P10 g P11 g P12 g P10 g P11 g P12 g P10 c P11 c P12 c
+v125 [y10q75c y10,1,0q73cc] v110 * v95 * v80 * r1r1
+
+
+#4 [[r1]]40 MID o5 (!900,-1) 
+[[q7b a1^8 GAD ^2.. q78>d+1^8 GAD ^2.. 
+q79 d1^8 GAD ^2..< q7d f1^8 GAD ^2..]]2 [[r2]]8
+
+
+#5 [[r1]]28 PWSH o4 v130 l6
+r2 [[T00 [P50 c P51 c P52 c P53 c P54 c P55 c]2 TFF *2 ]]2 T00 r1^1
+v100 *2 v130 [[T00 *2 TFF *2]]4 r1r1r1. 
+
+
+#6 [[r1]]48 SIN A1C o4 l8 y10,1,0 (69) [[r2]]8
+

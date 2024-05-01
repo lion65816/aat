@@ -48,6 +48,7 @@ F	0F Hurt while flying.txt
 2F	2F tickingsfx.txt
 30   3C Selecting a character (SMB2).txt
 31   36 Wandering Hammer Bros, multiple ticks (SMB3).txt
+32   30 Climbing (SMAS).txt
 
 SFX1DFC:
 1	01 Coin.txt
