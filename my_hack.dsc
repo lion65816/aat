@@ -398,6 +398,11 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1981	0	Print the room/author names for sublevel 14E.
 1982	0	Print the room/author names for sublevel 154.
 1983	0	Print the room/author names for sublevel 154.
+19de	0	Erase the room/author names.
+19df	0	Erase the room/author names.
+19ee	0	Erase the room/author names.
+19ef	0	Erase the room/author names.
+19fe	0	Erase the room/author names.
 19ff	0	Erase the room/author names.
 1a48	0	Solid if anything goes left
 1a8f	0	Fade out the music.
@@ -708,6 +713,36 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 746b	0	A block that will act like tile 25 for sprites
 747a	0	A block that will act like tile 25 for sprites
 747b	0	A block that will act like tile 25 for sprites
+7504	0	Print the room/author names for sublevel 1AA.
+7505	0	Print the room/author names for sublevel 1AA.
+7506	0	Print the room/author names for sublevel 1AA.
+7507	0	Print the room/author names for sublevel 1AA.
+7508	0	Print the room/author names for sublevel 1AA.
+7509	0	Print the room/author names for sublevel 1AA.
+7514	0	Print the room/author names for sublevel 1AA.
+7515	0	Print the room/author names for sublevel 1AA.
+7516	0	Print the room/author names for sublevel 1AA.
+7517	0	Print the room/author names for sublevel 1AA.
+7518	0	Print the room/author names for sublevel 1AA.
+7519	0	Print the room/author names for sublevel 1AA.
+7524	0	Print the room/author names for sublevel 1AA.
+7525	0	Print the room/author names for sublevel 1AA.
+7526	0	Print the room/author names for sublevel 1AA.
+7527	0	Print the room/author names for sublevel 1AA.
+7528	0	Print the room/author names for sublevel 1AA.
+7529	0	Print the room/author names for sublevel 1AA.
+7534	0	Print the room/author names for sublevel 1AA.
+7535	0	Print the room/author names for sublevel 1AA.
+7536	0	Print the room/author names for sublevel 1AA.
+7537	0	Print the room/author names for sublevel 1AA.
+7538	0	Print the room/author names for sublevel 1AA.
+7539	0	Print the room/author names for sublevel 1AA.
+7544	0	Print the room/author names for sublevel 1AA.
+7545	0	Print the room/author names for sublevel 1AA.
+7546	0	Print the room/author names for sublevel 1AA.
+7547	0	Print the room/author names for sublevel 1AA.
+7548	0	Print the room/author names for sublevel 1AA.
+7549	0	Print the room/author names for sublevel 1AA.
 7b94	0	Teleports the player if a specific button is pressed.
 7f09	0	
 7f66	0	

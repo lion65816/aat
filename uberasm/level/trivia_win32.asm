@@ -4,10 +4,9 @@ load:
 
 init:
 	JSL DisableSideExit_init
-	LDA $0DBE|!addr
-	CLC
-	ADC #$20
-	STA $0DBE|!addr
+	LDA #$20
+	STA $18E4|!addr
+	STZ $18E5|!addr
 	RTL
 
 main:

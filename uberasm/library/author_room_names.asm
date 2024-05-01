@@ -30,6 +30,7 @@ main:
 +	CMP #$10 : BNE + : JMP .print146
 +	CMP #$11 : BNE + : JMP .print14E
 +	CMP #$12 : BNE + : JMP .print154
++	CMP #$13 : BNE + : JMP .print1AA
 +	JMP .return
 
 .erase
@@ -126,6 +127,11 @@ main:
 	LDA.b #text154     : STA $00
 	LDA.b #text154>>8  : STA $01
 	LDA.b #text154>>16 : STA $02
+	JMP .next
+.print1AA
+	LDA.b #text1AA     : STA $00
+	LDA.b #text1AA>>8  : STA $01
+	LDA.b #text1AA>>16 : STA $02
 	JMP .next
 .next
 	; Use the MaxTile system to request OAM slots. Needs SA-1 v1.40.
@@ -314,3 +320,7 @@ text14E:
 text154:
 	dw !__,!T_,!h_,!e_,!y_,!__,!w_,!a_,!r_,!n_,!e_,!d_,!__,!y_,!o_,!u_,!PD,!PD,!PD,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
 	dw !__,!__,!__,!b_,!y_,!__,!C_,!a_,!t_,!a_,!b_,!o_,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+
+text1AA:
+	dw !__,!T_,!h_,!e_,!__,!G_,!r_,!o_,!c_,!e_,!r_,!y_,!__,!S_,!t_,!o_,!r_,!e_,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
+	dw !__,!__,!__,!b_,!y_,!__,!L_,!o_,!r_,!d_,!__,!R_,!u_,!b_,!y_,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__,!__
