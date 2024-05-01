@@ -1,18 +1,18 @@
 db "                              " ; 000
 db "Nao                      [[]^^" ; 001
-db "DiskPoppy, SAJewers      [[]^^" ; 002
+db "DiskPoppy, SAJewers      [[[]^" ; 002
 db "KobaBeach                [[]^^" ; 003
 db "Jolpengammler            [[[[[" ; 004
 db "SAJewers                 ^^^^^" ; 005
-db "PSI Ninja                [[[[^" ; 006
+db "PSI Ninja                [[[[]" ; 006
 db "Luckwaive                []^^^" ; 007
 db "Lord Ruby                [[[[^" ; 008
 db "Nao                      [[[^^" ; 009
 db "talkhaus                 [[[[[" ; 00A
 db "KobaBeach                [[^^^" ; 00B
 db "Nao                      [[[]^" ; 00C
-db "PSI Ninja                [[[^^" ; 00D
-db "EllenHouraisan           [[[[^" ; 00E
+db "PSI Ninja                [[[]^" ; 00D
+db "EllenHouraisan           [[[]^" ; 00E
 db "Bumpty                   ^^^^^" ; 00F
 db "4season                  [[[[^" ; 010
 db "Catabo                   [[]^^" ; 011
@@ -24,9 +24,9 @@ db "Luckwaive                [[]^^" ; 016
 db "Camwoodstock and Tori    [^^^^" ; 017
 db "SAJewers                 [^^^^" ; 018
 db "PSI Ninja                []^^^" ; 019
-db "WitherSnow               [[[]^" ; 01A
+db "WitherSnow               [[[^^" ; 01A
 db "Heraga                   [[[]^" ; 01B
-db "DJ Buckley               [[[]^" ; 01C
+db "DJ Buckley               [[[^^" ; 01C
 db "Big Brawler              ^^^^^" ; 01D
 db "DJ Buckley               [[[^^" ; 01E
 db "Nao                      [[[[[" ; 01F
@@ -35,7 +35,7 @@ db "Scarfley                 [[[^^" ; 021
 db "EllenHouraisan           [[^^^" ; 022
 db "4season                  [[^^^" ; 023
 db "levelengine              [[]^^" ; 024
-db "Scarfley                 [[[[^" ; 101
+db "Scarfley                 [[[]^" ; 101
 db "SAJewers                 [[^^^" ; 102
 db "SAJewers                 [[[^^" ; 103
 db "davidvama21, 4season     [[[^^" ; 104
@@ -52,27 +52,27 @@ db "SAJewers                 [[[^^" ; 10E
 db "Big Brawler              [[[[^" ; 10F
 db "4season                  [[[^^" ; 110
 db "PSI Ninja                ^^^^^" ; 111
-db "4season                  [[[[[" ; 112
+db "4season                  [[[[]" ; 112
 db "MexicanCradily           [[[^^" ; 113
-db "Big Brawler              [[]^^" ; 114
+db "Big Brawler              [[[^^" ; 114
 db "EllenHouraisan           [[^^^" ; 115
-db "Sam Deluxe               [[]^^" ; 116
+db "Sam Deluxe               [[^^^" ; 116
 db "Scarfley                 [[[]^" ; 117
 db "Bumpty                   [[[^^" ; 118
 db "4season                  [[[[]" ; 119
 db "SAJewers                 ^^^^^" ; 11A
-db "Nitrogen                 [[[[^" ; 11B
+db "Nitrogen                 [[[]^" ; 11B
 db "PSI Ninja                [[[^^" ; 11C
 db "Catabo                   [[[]^" ; 11D
-db "Scarfley                 []^^^" ; 11E
-db "EllenHouraisan           [[[^^" ; 11F
+db "Scarfley                 [[^^^" ; 11E
+db "EllenHouraisan           [[]^^" ; 11F
 db "Nitrogen                 [[[^^" ; 120
 db "PSI Ninja                [[[[^" ; 121
-db "PSI Ninja                [[[[^" ; 122
-db "PSI Ninja                [[[]^" ; 123
-db "eltiolavara9             []^^^" ; 124
-db "Bumpty                   [[[]^" ; 125
-db "4season                  [[[]^" ; 126
+db "PSI Ninja                [[[]^" ; 122
+db "PSI Ninja                [[[[^" ; 123
+db "eltiolavara9             [[^^^" ; 124
+db "Bumpty                   [[[^^" ; 125
+db "4season                  [[[[]" ; 126
 db "Scarfley                 [[[^^" ; 127
 db "Daizo                    [[[[^" ; 128
 db "4season                  [^^^^" ; 129
@@ -81,12 +81,12 @@ db "Bumpty                   [[[]^" ; 12B
 db "levelengine              [[[[[" ; 12C
 db "tangy                    ^^^^^" ; 12D
 db "PSI Ninja                ^^^^^" ; 12E
-db "Bumpty                   [[]^^" ; 12F
+db "Bumpty                   [[[^^" ; 12F
 db "WitherSnow               [[[[^" ; 130
 db "4season                  [[[]^" ; 131
 db "Catabo                   [[^^^" ; 132
-db "Big Brawler              [[[[]" ; 133
-db "levelengine              [[]^^" ; 134
+db "Big Brawler              [[[[^" ; 133
+db "levelengine              [[[^^" ; 134
 db "4season                  [[[]^" ; 135
 db "4season                  [[[[]" ; 136
 db "Big Brawler              [[[[^" ; 137
