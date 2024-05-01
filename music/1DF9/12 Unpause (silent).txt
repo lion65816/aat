@@ -1,6 +1,20 @@
-$E0 $FF #jsr changePause
+#jsr changePause
 
 #asm changePause
-{
-	jmp UnpauseMusic_silent
+{	
+	mov a, #$01			;\ Set pause flag to solve issue when doing start+select quickly
+	mov !PauseMusic, a	;/
+	
+	dec a
+	mov $0387, a
+	
+	mov $f2, #$5c		; \ Key off voices
+	mov $f3, #$ff		; / (so the music doesn't restart playing when using start+select)
+	
+	mov	a, #$7f		;\
+	mov	y, #$0c		;| Set left master volume to $7f
+	call DSPWrite	;/
+	mov	a, #$7f		;\
+	mov	y, #$1c		;| Set right master volume to $7f
+	jmp	DSPWrite	;/
 }

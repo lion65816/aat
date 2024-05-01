@@ -14,81 +14,88 @@ initial_patch = initial_patch.bps
 -- asar
 patches
 [
-	patch\patch\HEX_EDITS.asm
-	patch\patch\deathcounter.asm
-	patch\patch\dcsave.asm
-	patch\patch\PIR.asm
-	patch\patch\100exits.asm
-	patch\patch\auto.asm
-	patch\patch\BallChainYoshiFix.asm
-	patch\patch\circle_fix.asm
-	patch\patch\extendnstl.asm
-	patch\patch\optimize_2132_store.asm
-	patch\patch\fireberryfix.asm
-	patch\patch\FireFix.asm
-	patch\patch\Fixes.asm
-	patch\patch\HammerBroFix.asm
-	patch\patch\No Silent Bullet.asm
-	patch\patch\No Sprite Interaction Fix.asm
-	patch\patch\RolloverFix.asm
-	patch\patch\savepromptselect.asm
-	patch\patch\scrollfix.asm
-	patch\patch\shellbuzzyfix.asm
-	patch\patch\slopepassfix.asm
-	patch\patch\yourfatface.asm
-	patch\patch\BounceBlocks\CustBounceBlocks.asm
-	patch\patch\ExtendedLevelNames.asm
-	patch\patch\extendmario.asm
-	patch\patch\simpleHP.asm
-	patch\patch\easy_mode7.asm
-	patch\patch\timeupfix.asm
-	patch\patch\bg_candle_flames_fix.asm
-	patch\patch\SpriteScrollFix.asm
-	patch\patch\walljumpnoteblockglitchfix.asm
-	patch\patch\flagfreescroll.asm
-	patch\patch\bg.asm
-	patch\patch\InlineLayer3Message.asm
-  	patch\patch\luigi.asm
-	patch\patch\FixFeather.asm
-	patch\patch\owcount.asm
-	patch\patch\ndp.asm
-	patch\patch\sprite_item_box.asm
-	patch\patch\nuke_statusbar.asm
-	patch\patch\1control.asm
-	patch\patch\lives.asm
-	patch\patch\playerpalupdate.asm
-	patch\patch\BetterBonusGame.asm
-	patch\patch\torpedo_ted_priority.asm
-	patch\patch\falling_spike_palette.asm
-	patch\patch\mole_palette.asm
-	patch\patch\IrisPalFix.asm
-	patch\patch\layer1_events.asm
-	patch\patch\more_hardcoded_paths.asm
-	patch\patch\OWMusic.asm
-	patch\patch\perlevel_mario_start.asm
-	patch\patch\OWtileSounds.asm
-	patch\patch\DarkenPause.asm
-	patch\patch\m_sprites.asm
-	patch\patch\ExtendedSpriteDespawnRangeFix.asm
-	patch\patch\banzai_palette.asm
-	patch\patch\castle_cutscene_hex_edits.asm
-	patch\patch\castle_cutscene_exgfx.asm
-	patch\patch\castle_cutscene_palettes.asm
-	patch\patch\YoshiSpriteInteractionsFix.asm
-	patch\patch\overworld_map_names.asm
-	patch\patch\save_everything.asm
-	patch\patch\revealspeed.asm
-	patch\patch\custom_intro_march.asm
-	patch\patch\side_exit_goal.asm
-	patch\patch\spinspinspinaaaaaugghh.asm
-	patch\patch\courseclear.asm
+	patch\BounceBlocks\CustBounceBlocks.asm
+	patch\Fixes\100exits.asm
+	patch\Fixes\BallChainYoshiFix.asm
+	patch\Fixes\bg_candle_flames_fix.asm
+	patch\Fixes\circle_fix.asm
+	patch\Fixes\ConveyorFireFix.asm
+	patch\Fixes\ExtendedSpriteDespawnRangeFix.asm
+	patch\Fixes\fireberryfix.asm
+	patch\Fixes\FireFix.asm
+	patch\Fixes\Fixes.asm
+	patch\Fixes\FixFeather.asm
+	patch\Fixes\fixmush.asm
+	patch\Fixes\HammerBroFix.asm
+	patch\Fixes\lives.asm
+	patch\Fixes\netkoopafix.asm
+	patch\Fixes\No Sprite Interaction Fix.asm
+	patch\Fixes\PIR.asm
+	patch\Fixes\RolloverFix.asm
+	patch\Fixes\scrollfix.asm
+	patch\Fixes\slopepassfix.asm
+	patch\Fixes\spinspinspinaaaaaugghh.asm
+	patch\Fixes\SpriteScrollFix.asm
+	patch\Fixes\tidefix.asm
+	patch\Fixes\walljumpnoteblockglitchfix.asm
+	patch\Fixes\YoshiSpriteInteractionsFix.asm
+	patch\Fixes\yourfatface.asm
+	patch\Patches\1control.asm
+	patch\Patches\auto.asm
+	patch\Patches\BetterBonusGame.asm
+	patch\Patches\BetterVertCamera.asm
+	patch\Patches\bg.asm
+	patch\Patches\castle_cutscene_exgfx.asm
+	patch\Patches\castle_cutscene_hex_edits.asm
+	patch\Patches\castle_cutscene_palettes.asm
+	patch\Patches\courseclear.asm
+	patch\Patches\custom_intro_march.asm
+	patch\Patches\DarkenPause.asm
+	patch\Patches\dcsave.asm
+	patch\Patches\deathcounter.asm
+	patch\Patches\easy_mode7.asm
+	patch\Patches\ExtendedLevelNames.asm
+	patch\Patches\extendmario.asm
+	patch\Patches\extendnstl.asm
+	patch\Patches\flagfreescroll.asm
+	patch\Patches\footballlol.asm
+	patch\Patches\HEX_EDITS.asm
+	patch\Patches\InlineLayer3Message.asm
+	patch\Patches\layer1_events.asm
+  	patch\Patches\luigi.asm
+	patch\Patches\more_hardcoded_paths.asm
+	patch\Patches\m_sprites.asm
+	patch\Patches\ndp.asm
+	patch\Patches\No Silent Bullet.asm
+	patch\Patches\nuke_statusbar.asm
+	patch\Patches\optimize_2132_store.asm
+	patch\Patches\overworld_map_names.asm
+	patch\Patches\owcount.asm
+	patch\Patches\OWMusic.asm
+	patch\Patches\OWtileSounds.asm
+	patch\Patches\perlevel_mario_start.asm
+	patch\Patches\playerpalupdate.asm
+	patch\Patches\revealspeed.asm
+	patch\Patches\savepromptselect.asm
+	patch\Patches\side_exit_goal.asm
+	patch\Patches\simpleHP.asm
+	patch\Patches\Spotlight.asm
+	patch\Patches\sprite_item_box.asm
+	patch\Patches\torpedo_ted_priority.asm
+
 ]
+-- patch\patch\999.asm
+-- patch\patch\shellbuzzyfix.asm
+-- patch\patch\banzai_palette.asm
+-- patch\patch\IrisPalFix.asm
+-- patch\patch\timeupfix.asm
+-- patch\patch\mole_palette.asm
+-- patch\patch\save_everything.asm
 -- patch\patch\blockmask.asm
 -- patch\patch\BetterYoshiInteraction.asm
 -- patch\patch\ticking.asm
 -- patch\patch\bwram_plus.asm
 -- patch\patch\midway\multi_midway_1.7.asm
--- patch\patch\999.asm
 -- patch\patch\remove_statusbar_toggled.asm
 -- patch\patch\red_path_fade.asm
 
@@ -140,7 +147,7 @@ build_order
                             -- are not explicitly mentioned in this build order
 
     PIXI                    -- Insert custom sprites
-    patch\patch\side_exit_goal.asm -- Requires PIXI to be run first
+    patch\Patches\side_exit_goal.asm -- Requires PIXI to be run first
     Levels                  -- Insert all levels
 
     PIXI                    -- Uncomment this if you're using Lunar Magic 3.31 or higher

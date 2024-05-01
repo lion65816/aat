@@ -1,6 +1,11 @@
-$E0 $FF #jsr changePause $DA $02 $0C $54 $B4 $B0 $B4 $18 $B0
+#jsr changePause $DA $02 $0C $54 $B4 $B0 $B4 $18 $B0
 
 #asm changePause
 {
-	jmp UnpauseMusic
+	mov	a, #$7f		;\
+	mov	y, #$0c		;| Set left master volume to $7f
+	call DSPWrite	;/
+	mov	a, #$7f		;\
+	mov	y, #$1c		;| Set right master volume to $7f
+	jmp	DSPWrite	;/
 }

@@ -1,0 +1,592 @@
+#amk 2
+
+#spc
+{
+#title "Cosmoclock Contraption" ;Cosmocadran Quotidien
+#game " "
+#author "bebn legg"
+#comment "You logged on? You tapped in?"
+}
+
+;#path "SNES SDK SamplesV5.1/Samples"
+#path "cosmoclock"
+
+#samples
+{
+#horloge
+"Drawbar Organ.brr"
+"Rhodes.brr"
+"Kick.brr"
+"Snare 2.brr"
+"Closed Hihat 1.brr"
+"Open Hihat.brr"
+"Fingered Electric Bass.brr"
+"Fretless Bass Wave.brr"
+"Woodblock.brr"
+;"Conga.brr"	;@12
+;"Rhodes.brr"
+;"Fantasy.brr"	;@2
+;"Cannon.brr"	;SMW Thunder
+"Tenor Sax.brr"
+"Pizzicato Strings.brr"
+"Fantasy Synth.brr"
+;"Strings Wave.brr" ;@1
+"Sawtooth Wave.brr"
+;"Clarinet Wave.brr" ;@6
+;"Honky Tonk Piano.brr"	;@9
+;"Heavy Guitar.brr"	;@17
+}
+
+#instruments
+{
+"Drawbar Organ.brr" $84 $E0 $00 $03 $00	;@30
+"Rhodes.brr" $84 $E0 $B8 $03 $00	;@31
+"Kick.brr" $FF $E0 $B8 $07 $A0	;@32
+"Snare 2.brr" $FF $E0 $B8 $07 $A0
+"Closed Hihat 1.brr" $FF $E0 $B8 $07 $A0 ;@34
+"Open Hihat.brr" $FF $F4 $B8 $07 $A0
+"Fingered Electric Bass.brr" $FF $F0 $B8 $11 $00	;@36
+"Fretless Bass Wave.brr" $8F $E6 $B8 $10 $00		;@37
+"Woodblock.brr" $FF $E0 $B8 $07 $A0	;@38
+@12 $FF $E0 $B8 $04 $A0	;@39
+"Rhodes.brr" $FF $EE $B8 $03 $00	;@40
+"Drawbar Organ.brr" $8C $F0 $00 $03 $00	;@30 ;"Sawtooth Wave.brr" $FF $E0 $B8 $04 $00	;@41
+"../optimized/13 SMW Thunder.brr" $FF $E0 $B8 $11 $00
+@2 $FF $F0 $B8 $06 $00	;@43
+"Tenor Sax.brr" $FF $E0 $B8 $07 $00
+"Pizzicato Strings.brr" $FE $F2 $B8 $06 $00
+"Fantasy Synth.brr" $FE $F0 $B8 $03 $00	;@46
+"Drawbar Organ.brr" $EE $E0 $00 $03 $00	;@47
+"Sawtooth Wave.brr" $FF $E0 $B8 $04 $00	;@48
+@1 $FE $E0 $00 $03 $00	;@49
+@6 $AD $F0 $B8 $06 $00
+@9 $FF $E0 $B8 $02 $A8	;@51
+@17 $FE $EA $B8 $05 $00
+}
+
+"V00=v000" "V01=v040" "V02=v050" "V03=v055" "V04=v060" "V05=v070" "V06=v075" "V07=v080" "V08=v085" "V09=v090" "V10=v095" "V11=v100" "V12=v105" "V13=v110" "V14=v113" "V15=v117" "V16=v120" "V17=v123" "V18=v127" "V19=v130" "V20=v133" "V21=v137" "V22=v140" "V23=v142" "V24=v145" "V25=v148" "V26=v150" "V27=v153" "V28=v155" "V29=v158" "V30=v160" "V31=v163" "V32=v167" "V33=v170" "V34=v172" "V35=v174" "V36=v176" "V37=v178" "V38=v180" "V39=v183" "V40=v185" "V41=v187" "V42=v190" "V43=v193" "V44=v195" "V45=v197" "V46=v200" "V47=v202" "V48=v204" "V49=v206" "V50=v208" "V51=v210" "V52=v212" "V53=v214" "V54=v216" "V55=v217" "V56=v220" "V57=v222" "V58=v223" "V59=v224" "V60=v226" "V61=v228" "V62=v230" "V63=v232" "V64=v234"
+
+"M=@32"
+"S=@33"
+"K=@34"
+"J=@35"
+"I=@38"
+"U=@39"
+"X=@42"
+
+"minipvol=V36"
+"pulsetrem= "
+
+"←=y13"
+"→=y7"
+
+"StrVib=p12,4,32"
+
+$EF $FF $27 $CD
+$F1 $07 $D0 $00	;7 delay?
+
+#0 w180 t53 $F4 $02
+
+V32 o3 l1 @30 $F4 $01 y14 p6,16,24
+g a+gf ga+>t50c1^1
+
+t57
+$F4 $03 $DF
+y10 o4 r2 $F4 $01 l16 V40 Mc8Kc8Mc8Sc8	;10
+
+/
+
+(22)[Mc8Kcc Mc8Kc8 Mc8Jc8 Mc8Kcc	;11
+Mc8Kc8 Mc8Jc8 Mc8Kcc Mc8Kc8]8	;12
+
+[[ (0)[Mc8Kcc Sc8Kc8 Mc8Jc8 Sc8Kcc	;11
+Mc8Kc8 Sc8Jc8] (1)[Mc8Kcc Sc8Kc8] ]]3
+(0) (2)[Sc8Kcc Mc8Kc8]
+
+[[(0)(1)]]3
+(0)(2)
+
+[[(0)(1)]]3
+(0)(2)
+
+l12
+[[(10)[McKcc Sc6Kc Mc6Jc ScKcc	;51
+Mc6Kc Sc6Jc] McKcc Sc6Kc]]3	;52
+
+(10)
+l16 Sc8Kcc Mc8Kc8	;58
+
+[[Mc8.Sc Mc8Sc8 Mc8.c Sc8.Mc	;59
+Sc8.Mc8.Sc8 Mc8.Sc8.c8]]8	;60
+
+(22)4
+
+;[[r2]]255
+
+
+
+#1
+V32 o3 l1 @30 $F4 $01 y13 p6,16,24
+d+ fd+1^1d+fg1^1
+
+r1 $F4 $01/
+y10 @36 V40 o2 $DF
+(100)[ [[c8>c8<<]]4
+[[g+8>g+8<]]4
+[[a+8>a+8]]4
+[[c8>c8<]]4 ]
+(102)[d+8>d+8<]4
+(104)[f8>f8<]4
+(106)[g8>g8<]3 a+8>a+8
+[[c8>c8<<]]4	;18
+
+@37 
+(100)4
+
+$FA $02 $F4
+[[g+8>g+8<]]4
+(104)4
+(106)4
+(102)4
+(104)4
+[[d8>d8<]]4
+(102)4
+(104)4
+
+$FA $02 $00
+(100)
+(112)[c8>c8<<]4
+[[g+8>g+8<]]4
+[[a+8>a+8]]4
+(112)2 (124)[c6>c12<<]6
+
+(117)[ [[g+6>g+12<]]4
+[[a+6>a+12<]]4 ]
+
+(124)8
+(117)
+(124)2
+(112)2	;58
+
+l16 y11
+(168)[>cr>cr8.cc<cr>cr8cr8]	;59
+$FA $02 $FE (168) $FA $02 $00
+(176)[<cr>cr8.cc< cr>c<cr>crc]	;61
+(172)[<<a+r>a+<a+r8>a+a+<a+r>a+<a+r>a+ra+	;62
+cr>cr crcc< cr>cr8crc]	;63
+(178)[<<a+r>a+<a+ r8>a+a+< a+r>a+<a+r>a+<ra+]	;64
+(12)[>cr>c<c rc>cc< cr>cr< c>crc]	;65
+(21)[<d+r>d+<d+ rd+>d+d+< d+r>d+<d+ r>d+d+d+]	;66
+
+(168)
+$FA $02 $FE (168) $FA $02 $00
+(176)
+$FA $02 $05 (172)
+$FA $02 $02 (178)
+$FA $02 $FE (12)
+$FA $02 $FD (21)
+
+$FA $02 $00 l16 y10
+(113)[o2 c8>c8<r8c8<a+8ga+r>c8r	;75
+c8>c8<rc8r d+8rf8rg8]	;76
+d+8g+8r8d+8f+8d+f+f+4	;77
+g+4a+4d+4.<b8	;78
+(113)
+>a+8<a+8r8>a+8 f8<a+>f r8d+8	;81
+c8ra+<a+>b<b>b>c4<c4	;82
+
+
+
+;[[r2]]255
+
+
+
+
+#2
+V32 o3 l1 @30 $F4 $01 y12 p6,16,24
+c dc1^1 cdd+e
+
+
+r1 $F4 $01
+/
+
+y10 @37 V40 o2 $DF
+
+(100)2
+
+$f4 $03 V32 l16 o4 [[(200)[Xr8c4cc8.c8.cc4c4c4c]c8.c8]]7	;20
+(200)c8.cc
+
+[[(200)c8.c8]]3
+(200)cc8cc	;42
+
+[[(200)c8.c8]]3
+(200)cc12c12c12
+
+l12
+(211)[rc4cc4c6c c4c4c6cc6]c6	;52
+(211)cc
+(211)c6.
+c4cc4c6cc4 c4 c12^8 l16ccc12c12c12	;58
+
+$F4 $03 @46 o4 l16 V24
+←c<→g←c>→d+<←g→c>←f<→c> ←c<→g←c→a+←g→c←g>→f	;59
+←g<→a+←d>→a+<←a+→d>>←c<<→d> ←g<→a+←d>→f<←a+→d←a+→b>	;←gr<→a+>←a+r→c>←cr< →g<←gr>→fr<<←a+>→a+←b>	;60
+→c<←g→c>←d+<→g←c>→f<←c> →g<←g→c>←a+<→g←c>→b<←c>> ;→c<←c→d+←cr<→a+>←c→d+> ←d+→c←d+→g←d+→g←a+→g>←c8<→c4>←c8<→c4<< l24 ←a+→d←f→d ←f→a+←f→a+>	;62
+←c8<→c8<←c8>>→c8<←c8<→c8< l32 ←a+>→d←f→d ←f→a+←f→a+>
+l16 ←c→a+>←cr<→a+r←g→f r←gr→f ←d+r→c←f	;63
+→gr←cr8.<→a+r>←cr8.→d+r8.	;64
+←c>→cr<←c> →d+r<←d+>→f r<←d+>→gr< ←a+>→a+r←b	;65
+>→c<←c→a+<←a+> →g<←g>→f<←f> →c<←c→g<←g> →a+<←a+>→f<←f	;66
+
+>→g^<←d+>→f^<←c>→d+^ <←a+^>→a+^←d+^>→d+^	;67
+←c^<→d>←d ^<→d+>←d+^→d<←dr>→c<<r←a+>→a+r>	;68
+←c<<→c>>←d→d+<< ←d+>>→f<<←g>>→g< ←c→d+>←a+<→a+>←f4	;69
+→d+<←a+→d+>←f< →a+←d+>→g<←a+> →a+<←a+→d+>←g< →a+←d+>→a+<←d+	;70
+>>→cr<←a+→a r←f→cr ←d+<→c←f>→c<←f→c>←d+>→d	;71
+←d+r→d←c<→g<←c→d+←c>> →d+<<←d+>→f<←g>>→d<<←d+>→a+r	;72
+>←cr<<→a+>←a+<→f←a+>>→d←d+ →f←d→d+←c→d<←a+>→c<←g>	;73
+→cr8.<←gr8.→d+r8.←cr8.
+
+@51 l16 V32 (225)[y12 o4 c8r8c8r4<a+8r8>c8	;75
+r8c8r<a+8rf2]	;76
+g+4r2g+8r4g+8rg8rf+4. l32 y10 gg+a+b	;78
+(225) l16
+a+8r8a+8r4g+8r8a+8 r8a+8rb8.>c2	;82
+
+
+;[[r2]]255
+
+
+
+#3
+V32 o2 l1 @30 $F4 $01 y11 p6,16,24
+g+ a+g1^1g+a+>c1^1
+
+ r1 $F4 $01 
+/$DF $F4 $03
+minipvol o4 l16 y10
+[[(300)[Ug8Ic8 Uc12c24c12c24 g8g12 >c8^24c8<]	;11
+(301)[Ic4c4 Uc8c12>c24^8c8<]	;12
+(300)
+(302)[Ic4c4 Uc8c12>c24^8c12c24<] ]]4	;8 left
+
+
+
+
+@43 V16 o4 l4 $f4 $03 p6,64
+(350)[r2.c1<g+a+2.a+
+>c1..<a+>c2.<g+a+2.a+>c1<g+2.g
+g+1g2.<a+>c1c2.d+f1g2.fg2a+2]
+
+@40 $DF l16 o5
+(326)[→cr<←gr→cr←gr> →cr<←gr→cr←a+r>	;43
+→cr<←a+r→cr←a+r>→cr<←a+r→cr>←cr]	;44
+<→d+r>←d+r<→cr>←cr<<→br>←br<→a+r>←a+r	;45
+>→cr<←cr→a+r<←a+r>>→cr<<←gr>→gr←cr	;46
+
+(326)
+>→f<←f>→d+<←d+>→c<←c→b<←b>→a+r<←a+r>→gr<←gr>>	;49
+→c<r←cr→a+r<←a+r>>→cr<<←gr>→a+r<←a+>→c48←d+48→f+48
+
+[[l12 (327)[←g→c←g>→c<←g→c]2
+[←d+<→g+>←d+→g+←d+<→g+>]2
+[←f<→a+>←f→a+←f<→a+>]2
+(327)2]]2
+
+;y13 @31 V24 StrVib l1 o3
+;ga+gfga+>cd+2@47<<a+2>@31 ga+>cd+fga+>c
+
+ @50 l16 V32 o3 →c<←g→c>←d+<→g←c>→f<←c> →c<←g→c←a+→g←c→g>←f	;59
+→g<←a+→d>←a+<→a+←d>>→c<<←d> →g<←a+→d>←f<→a+←d→a+←b>	;→gr<←a+>→a+r←c>→cr< ←g<→gr>←fr<<→a+>←a+→b>	;60
+←c<→g←c>→d+<←g→c>←f<→c> ←g<→g←c>→a+<←g→c>←b<→c>> ;←c<→c←d+→cr<←a+>→c←d+> →d+←c→d+←g→d+←g→a+←g>→c8<←c4>→c8<←c4<< l24 →a+←d→f←d →f←a+→f←a+>	;62
+→c8<←c8<→c8>>←c8<→c8<←c8< l32 →a+>←d→f←d →f←a+→f←a+>
+l16 →c←a+>→cr<←a+r→g←f r→gr←f →d+r←c→f	;63
+←gr→cr8.<←a+r>→cr8.←d+r8.	;64
+→c>←cr<→c> ←d+r<→d+>←f r<→d+>←gr< →a+>←a+r→b	;65
+>←c<→c←a+<→a+> ←g<→g>←f<→f> ←c<→c←g<→g> ←a+<→a+>←f<→f	;66
+
+>←g^<→d+>←f^<→c>←d+^ <→a+^>←a+^→d+^>←d+^	;67
+→c^<←d>→d ^<←d+>→d+^←d<→dr>←c<<r→a+>←a+r>	;68
+→c<<←c>>→d←d+<< →d+>>←f<<→g>>←g< →c←d+>→a+<←a+>→f4	;69
+←d+<→a+←d+>→f< ←a+→d+>←g<→a+> ←a+<→a+←d+>→g< ←a+→d+>←a+<→d+	;70
+>>←cr<→a+←a r→f←cr →d+<←c→f>←c<→f←c>→d+>←d	;71
+→d+r←d→c<←g<→c←d+→c>> ←d+<<→d+>←f<→g>>←d<<→d+>←a+r	;72
+>→cr<<←a+>→a+<←f→a+>>←d→d+ ←f→d←d+→c←d<→a+>←c<→g>	;73
+←cr8.<→gr8.←d+r8.→cr8.
+
+@51 l16 V32 (325)[y10 o3 g8r8g8r4f8r8g8	;75
+r8g8rf8rd2]	;76
+d+4r2d+8r4d+8rd8rc+2	;78
+(325)
+f8r8f8r4d+8r8f8 r8f8rg8.g2	;82
+
+;[[r2]]255
+
+
+
+#4
+V24 o3 l1 @31 $F4 $01 y9 p12,6,24
+g a+gf ga+>c1^1
+
+r1 $F4 $01 
+/
+[[r2]]14   $F4 $03
+l16 y10
+V40 o4 r4 Sc4c8.c8.cc	;18
+
+$F4 $03 @40 V26 o4 l16 p24,24
+
+
+
+r4 →cr>←cr>→cr<←gr→cr<←gr	;19
+→g+r>←g+r<→g+r←d+r<→g+r>←d+r→cr←g+r	;20
+→a+r<←a+r<→a+r>←a+r>→dr<←a+r>→fr←a+r	;21
+>→cr2...<	;22
+
+(400)[r4 ←cr>→cr>←cr<→gr←cr<→gr]	;19
+(401)[←g+r>→g+r<←g+r→d+r<←g+r>→d+r←cr→g+r	;20
+←a+r<→a+r<←a+r>→a+r>←dr<→a+r>←fr→a+r	;21
+>←cr<→cr<←cr>>→cr<←cr<→cr>>←cr→]d+r	;26
+
+(400)(401)<cr	;30
+
+<←cr→a+r>←cr>→a+r>←cr<→gr←cr<→gr	;31
+(401)>d+r
+
+←g+r→a+r<←a+r>→g+r ←g+r→a+r<←a+r>→g+r	;35
+←fr8.→d+r8.←cr8.<→fr>←fr	;36
+→gr←g+r→cr←gr →gr←g+r→cr←fr	;37
+→d+r8.<←a+r8.>→cr8.<←gr>→gr	;38
+←fr→cr←d+r→fr ←cr→d+r←fr→g+r	;39
+←gr8.<→gr8.>←gr8.<→gr>←fr	;40
+→gr←dr<→gr>←gr→dr<←gr>→dr←fr	;41
+→gr8.<←gr8.>→gr8.<←;gr8.		;42
+
+@44 V24 o4 y9 p12,6,24
+f4g8.r>c8.r<a+rargf+8.	;43
+<a+4. $DD $00 $0C >d+ f4.g+4(465)[a+a+g+r fd+8.<f4 $DD $00 $0C a+b4]	;45
+>c2^8^24 (425)[l24<a+>cd+fd+ fg+a]	l16 ;46
+>c8r8<g8.g+r8f8c8d+8	;47
+g8r8d+8r8f8r8<a4 $DD $00 $0C >c+	;48
+(465)c2. c4 $DD $00 $0C f+
+
+l12 grg>c8.r16<a+ragf+r	;51
+d+<g+>d+f<a+>fc6 $DD $00 $09 g+ c6g+6	;52
+(485)[a+a+g+f16d+8.<f $DD $00 $06 a+rbr>cr]c2^8^24 (425)	;54
+>c<r6grg+r6fcrd+	;55
+grdd+re fd+cc+<ba+
+(485)>c2
+
+@48 y10 o2 $DF V00 $E8 $60 $71 $F4 $01 [[a+=2>d=2>f=2a+=2]]12
+
+pulsetrem y0
+$DC $C0 $13 (496)[<g+=2>c=2d+=2g=2]24
+$DC $C0 $00 (411)[<a+=2>d=2f=2a+=2]24
+$DC $C0 $13 [[<g=2>c=2d+=2g=2]]24
+$DC $C0 $00 [[<f=2a+=2>d=2f=2]]24
+
+$DC $C0 $13 (496)24
+$DC $C0 $00 (411)24
+$DC $C0 $13 (420)[c=2d+=2g=2>c=2]24
+$DC $C0 $00 (405)[<d+=2g=2a+=2>d+=2]12 [[<<a+=2>d+=2g=2a+=2]]12
+
+
+$DC $C0 $13 (496)24
+$DC $C0 $00 (411)24
+$DC $C0 $13 (420)24
+$DC $C0 $00 (405)24
+
+
+$DC $C0 $13 [[f=2a=2>c=2f=2]]24
+$DC $C0 $00 [[<g+=2>c=2d+=2g=2]]24
+$DC $C0 $13 [[<a+=2>d=2f=2a+=2]]24
+$DC $C0 $00 [[c=2d+=2g=2>c=2]]24
+
+
+;$F4 $01	;V24
+;@31 StrVib l1 o3 y11
+;d+fd+dd+fga+ d+fga+>cd+fg
+
+$F4 $01 @51 l16 V32 (499)[y8 o3 d+8r8d+8r4d8r8d+8	;75
+r8d+8rd8r<a+2>]	;76
+c4r2c8r4c8<rb8ra+2	;78
+(499)
+>d8r8d8r4c8r8d8 r8d8rd+8.d+2	;82
+
+;[[r2]]255
+
+
+
+#5
+V24 o3 l1 @31 $F4 $01 y8 p12,6,24
+d+ fd+1^1d+fg1^1 $DF
+
+V00 $F4 $01 r1
+/
+
+@52  y10 
+o3 c<g+a+>cd+fgc
+
+;[[r2]]18 $F4 $01
+
+
+@41 V18 o4 l16
+
+r4 ←cr>→cr>←cr<→gr←cr<→gr	;19
+←g+r>→g+r<←g+r→d+r<←g+r>→d+r←cr→g+r	;20
+←a+r<→a+r<←a+r>→a+r>←dr<→a+r>←fr→a+r	;21
+>←cr2...<	;22
+
+(500)[r4 →cr>←cr>→cr<←gr→cr<←gr]	;19
+(501)[→g+r>←g+r<→g+r←d+r<→g+r>←d+r→cr←g+r	;20
+→a+r<←a+r<→a+r>←a+r>→dr<←a+r>→fr←a+r	;21
+>→cr<←cr<→cr>>←cr<→cr<←cr>>→cr←]d+r	;26
+
+(500)(501)<cr	;30
+
+<→cr←a+r>→cr>←a+r>→cr<←gr→cr<←gr	;31
+(501)>d+r
+
+→g+r←a+r<→a+r>←g+r →g+r←a+r<→a+r>←g+r	;35
+→fr8.←d+r8.→cr8.<←fr>→fr	;36
+←gr→g+r←cr→gr ←gr→g+r←cr→fr	;37
+←d+r8.<→a+r8.>←cr8.<→gr>←gr	;38
+→fr←cr→d+r←fr →cr←d+r→fr←g+r	;39
+→gr8.<←gr8.>→gr8.<←gr>→fr	;40
+←gr→dr<←gr>→gr←dr<→gr>←dr→fr	;41
+←gr8.<→gr8.>←gr8.<→;gr8.		;42
+
+@44 V24 y11 l16 o3 ;p12,6,24
+g4a+8.r>g8.rgrfrd+c8.	;43
+<d+4. $DD $00 $0C g+ a+4.>c4 ffd+rc<g+8.<g+4 $DD $00 $0C >c+ d4	;45
+d+2^8^24 (585)[l24 fga+ga+>cd+f l16]	;46
+g8r8c8.d+r8c8<g8a+8	;47
+a+8r8g8r8a+8r8f4 $DD $00 $0C a	;48
+>ffd+rc<g+8.<f4 $DD $00 $0C a+ b4>c2.
+
+d+4 $DD $00 $0C a	;50
+
+l12 a+ra+>g8.r16grfd+cr	;51
+<g+d+g+a+fa+ g+6 $DD $00 $09 >c<g+6>c6	;52
+ffd+c16<g+8.<g+ $DD $00 $06 >c+ rdrd+rd+2^8^24 (585)
+>gr6crd+r6c<gra+	;55
+a+rf+ gra a+ag+af+f	;56
+>ffd+c16<g+8.<f $DD $00 $06 a+rbr>crc2 @46 o3 V32 c12<a+12>c12 l24 d+cd+ga+b	;58
+
+;y9 @31 V24 StrVib l1 o3
+;cdc<a+>cdd+g cdd+ga>cdd+
+
+;@47 V13 $F4 $01 y10
+;$FA $00 $20 $Fa $02 $F4
+
+y10 $F4 $01 $DF
+@47 V13 y20 o4
+
+$DC $C0 $00 (596)[d+=2g=2<g+=2>c=2]24
+$DC $C0 $13 (511)[f=2a+=2<a+=2>d=2]24
+$DC $C0 $00 [[d+=2g=2<g=2>c=2]]24
+$DC $C0 $13 [[d=2f=2<f=2a+=2>]]24
+
+$DC $C0 $00 (596)24
+$DC $C0 $13 (511)24
+$DC $C0 $00 (520)[g=2>c=2<c=2d+=2]24
+$DC $C0 $13 (505)[a+=2>d+=2<d+=2g=2]12 [[g=2a+=2<a+=2>d+=2]]12
+
+
+$DC $C0 $00 (596)24
+$DC $C0 $13 (511)24
+$DC $C0 $00 (520)24
+$DC $C0 $13 (505)24
+
+
+$DC $C0 $00 [[>c=2f=2<f=2a=2]]24
+$DC $C0 $13 [[>d+=2g=2<g+=2>c=2]]24
+$DC $C0 $00 [[f=2a+=2<a+=2>d=2]]24
+$DC $C0 $13 [[g=2>c=2<c=2d+=2]]24
+
+$F4 $01
+@44 V24 o4 p12,6,24 l16
+
+y9
+(567)[c8<a+>c r8<gr a+r>cr c8<a+>c
+<rg>d+8cd8<ga+2]	;76
+(568)[g+8f+g+ r8d+r f+rg+rg+8f+g+	;77
+r8g+r8gr8f+2]	;78
+(567)
+(569)[a+8g+a+ r8fr g+ra+r a+8g+a+ r8a+r8br8>c2]	;82
+
+;[[r2]]255
+
+
+
+#6
+V24 o3 l1 @31 $F4 $01 y7 p12,6,24
+c dc1^1 cdd+e $DF
+
+r1 $F4 $01 $F4 $03 /
+[[r2]]32 
+minipvol o4 l16 y10
+
+[[(300)(301)(300)(302)]]6 ;+2 triplet
+
+[[(605)[Ug4Ic12Uc24c12c24g12g12g12>c6c12<	;51
+Ic4c4Uc6^24c24>]c6c12	;52
+(605)c12c12c12 ]]2
+
+;y7 @31 V24 StrVib l1 o2 $F4 $03
+;g+a+gfg+a+>cd+ <g+a+>cd+fg+a+>c	;74
+
+V40 o4 l16
+[[Kc8cc8cJc8 Kc8cJc8.Kc8]]16	;59
+
+[[(300)(301)(300)(302)]]2 ;+2 triplet
+
+;[[r2]]255
+
+
+
+#7
+V24 o2 l1 @31 $F4 $01 y6 p12,6,24
+g+ a+g1^1g+a+>c1^1 $DF
+
+$F4 $01 r1 / $FA $02 $00
+[[r2]]32  y10 @45 V36  (350)
+
+l16 o5 V24 @41
+(726)[←cr<→gr←cr→gr> ←cr<→gr←cr→a+r>	;43
+←cr<→a+r←cr→a+r>←cr<→a+r←cr>→cr]	;44
+<←d+r>→d+r<←cr>→cr<<←br>→br<←a+r>→a+r	;45
+>←cr<→cr←a+r<→a+r>>←cr<<→gr>←gr→cr	;46
+
+(726)
+>←f<→f>←d+<→d+>←c<→c←b<→b>←a+r<→a+r>←gr<→gr>>	;49
+←c<r→cr←a+r<→a+r>>←cr<<→gr>←a+r<→a+>←c48→d+48←f+48
+
+
+[[l12 (727)[→g←c→g>←c<→g←c]2
+[→d+<←g+>→d+←g+→d+<←g+>]2
+[→f<←a+>→f←a+→f<←a+>]2
+(727)2]]2
+
+@49 V40 y9
+(168)
+$FA $02 $FE (168) $FA $02 $00
+(176)
+(172)
+(178)
+(12)
+(21)
+
+(168) 
+$FA $02 $FE (168) $FA $02 $00
+(176)
+$FA $02 $05 (172)
+$FA $02 $02 (178)
+$FA $02 $FE (12)
+$FA $02 $FD (21) $FA $02 $F4
+
+@44 V24 p12,6,24 y11
+(567)(568)(567)(569)
+
+;[[r2]]255

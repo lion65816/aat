@@ -133,6 +133,8 @@
 85 Kun.json
 86 water_activator.json
 87 volcano_lotus008.json
+88 WindroseSprite.json
+89 WindroseProjectile.json
 8A fire_snake.json
 8B falling_fireball.cfg
 8C clusterspawn.json

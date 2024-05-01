@@ -5,7 +5,7 @@
 
 ;Some variables you can change
 
-!Pause		= $12			;Pause SFX, change to 12 to allow music playing
+!Pause		= $11			;Pause SFX, change to 12 to allow music playing
 !Unpause	= $12			;Unpause SFX
 !Pausebright	= $06			;Pause brightness - dark
 !Unpausebright	= $0F			;Unpaused brightness - normal
