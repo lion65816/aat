@@ -176,6 +176,10 @@ UploadPalette:
        RTS
 
 main:
+	LDA #$20 : STA $2131
+	REP #$20
+	LDA #$6FFB : STA $0703
+	SEP #$20
 	;LDA #$01
 	;STA $13FB|!addr
 	LDA #$FF

@@ -154,6 +154,7 @@ build_order
     PIXI                    -- Uncomment this if you're using Lunar Magic 3.31 or higher
 
     AddMusicK               -- Insert custom music
+    patch\Patches\OWMusic.asm -- Requires AMK to be run first
     GPS                     -- Insert custom blocks
     UberASM                 -- Insert UberASM code
 
