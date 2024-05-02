@@ -1,5 +1,6 @@
 !FixBill = 1		; If set, the facing fix will apply to the Bullet Bill.
 !FixSpikeTop = 1	; If set, the facing fix will apply to the Spike Top.
+!FixEerie = 1		; If set, the facing fix will apply to the Eerie.
 
 if !sa1
 !dbr = $01
@@ -72,6 +73,28 @@ PEA.w .next-1					;|
 PEA.w $90B8						;|
 JML $0183F5|!bank				;\ The Spike Top's init code starts with a JSR to SubHorzPos but we already did that, so let's skip that part of the routine.
 .notspiketop
+endif
+
+if !FixEerie
+LDA !9E,x
+CMP #$38
+BEQ .eerie
+CMP #$39
+BNE .noteerie
+.eerie
+TYA
+BIT !B6,x
+BPL +
+EOR #$01
++
+DEC
+BMI .next
+LDA !B6,x
+EOR #$FF
+INC
+STA !B6,x
+BRA .next
+.noteerie
 endif
 
 TYA				;/
