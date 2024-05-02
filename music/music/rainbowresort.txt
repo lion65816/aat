@@ -1,0 +1,150 @@
+
+#amk 2
+#path "rainbowresort"
+#spc
+{
+	#author "Pinci"
+	#game	"Kirby's Adventure (KDL3)"
+	#title	"Rainbow Resort"
+}
+#samples 
+{ 
+		#optimized
+		"kick.brr"
+		"closed.brr"
+		"snare.brr"
+		"panflute.brr"
+		"Ding.brr"
+		"ElePiano.brr"
+		"trumpet.brr"
+		"string.brr"
+		"bass.brr"
+		"open.brr"
+		"woodblock.brr"
+}
+#instruments 
+{ 
+		"kick.brr" $FF $E0 $00 $0E $87
+		"closed.brr" $FF $E0 $00 $09 $99
+		"snare.brr" $FF $E0 $00 $0C $1B
+		"string.brr" $88 $0D $00 $03 $CE
+		"panflute.brr" $FB $E0 $00 $03 $D0
+		"Ding.brr" $FD $F0 $00 $03 $C6
+		"ElePiano.brr" $BF $13 $00 $06 $00
+		"trumpet.brr" $FF $E0 $00 $04 $00
+		"string.brr" $8A $E0 $00 $03 $CE
+		"bass.brr" $FF $E0 $00 $04 $00
+		"open.brr" $FF $E0 $B8 $08 $8D
+		"woodblock.brr" $FF $E0 $B8 $12 $30
+}
+$EF $1C $3C $3C
+$F1 $04 $3C $00
+$F5 $7F $00 $00 $00 $00 $00 $00 $00
+t66
+#0 v250 w140 
+o3 @31
+ q73 g+8 q74 g+8 q75 g+8 q76 g+8 q77 g+8 q78 g+8
+ [ y10 @30 q7f c8 q7c c8 q78 y08 @31 g+16r16 y10 q7f @32 e8 q78 @31 y08 g+16r16 y10 @30 q7c c8
+ @30 c8 q7c c8 y08 @40 q78 a+8 y10 @32 q7f e8 @31 y08 q76 g+16r16 y10 @30 q7c c8
+ y10 @30 q7f c8 q7c c8 q78 y08 @31 g+16r16 y10 q7f @32 e8 q78 @31 y08 g+16r16 y10 @30 q7c c8]1
+ @30 c8 q7c c8 y08 @40 q78 a+8 y10 @32 q7f e8 @31 y08 q78 g+8 q76 g+8
+*1
+ @30 y10 q7f c8 q7c c8 @40 y08 q78 a+8 q7f y10 @32 q7a e16 q7c e16 q7f e8e8
+/[ y10 @30 q7f c8 q7c c8 y08 @31 q78 g+8 q76 g+8 q78 g+8 q76 g+8
+ y10 @30 q7f c8 @31 y08 q76 g+8 @40 q78 a+8 @30 y10 q7f c8 y08 @31 q78 g+8 y10 @32 q7f e8]7
+ y10 @30 q7f c8 q7c c8 y08 @31 q78 g+8 q76 g+8 q78 g+8 q76 g+8
+ y10 @30 q7f c8 @31 y08 q76 g+8 @40 q78 a+8 @30 y10 q7f c8 y08 @40 q77 a+8 q7a a+8
+[q7f @30 q7f c8r8 y08 q7b @41 c+8r4 q7c y10 @30 c8
+ q7f c8 q7b y08 @41 c+8r4c+8 q7c y10 @30 c8]8
+
+#1 v220  $DE $18 $0C $20 
+o3 @39 q7f g+16r8.<g+16r8.d+16r8.
+ q7f c+8 q7c c+8>> v160 q7f $F4 $03 @34  y08 g+8> y12 c8 y08 f4
+ [ y10 v220 $F4 $03 @39 <<< q7f c+8 q7c c+8>> v160 q7f @34 $F4 $03 y12 g8 y08 a+8> y12 d+4
+ y10 v220 $F4 $03 @39 <<< q7f c+8 q7c c+8>> v160 q7f @34 $F4 $03 y08 g+8> y12 c8 y08 f4]3
+ $F4 $03 @39 v220 y10 <<< q7f c+8 q7c c+8>  q7f c+8 q7c c+8< q7f g+8 q7c c+8 $F4 $03 
+ / [y10 $F4 $03 @39 v220 q7f d8 q7c d8>>>> v180 $F4 $03 @35 c+16r16<a16> q76 c+16< q7f b16 q76 a16> q7f e16< q76 b16]14
+ $F4 $03 @39 v220 q7f <<<c+8 q7c c+8>>> v180 $F4 $03 @35 q7f b16r16 q7f e16 q76 b16> q7f e16< q76 e16 q7f e16> q76 e16
+ $F4 $03 @39 v220 q7f <<<<f+8 q7c f+8>>>> v180 $F4 $03 @35 q7f c+16r16< q7f f+16> q76 c+16 q7f f+16< q76 f+16 q7f f+16> q76 f+16 v0 $DF 
+o3 $F4 $03
+ v250(1)[@31 q78 y13 g+8 y07 g+8]21 $F4 $03 
+ (2)[@40 q74 y07 a+8 q76 y13 a+8 q78 y07 a+8 q76 y13 a+8 q7a y07 a+8 q78 y17 a+8 ]1  $F4 $03 
+(1)21
+ $F4 $03 (2)1
+
+#2 v200  @35 
+r4.o5 y10 q7f g+16r8 q76 y12 g+16> q7f y17 g+16r16 y20
+ $DC $FF $00 q7f f16 q76 g+16< q7f g+16> q76 f16 q7f c+16< q76 g+16 q7f g+16> q76 c+16 q7f g+16< q76 g+16r16>g+16
+r8< q7f g16r16a+16 q76 g16 q7f g16 q76 a+16> q7f g16< q76 g16> q7f g16 q76 g16
+ $DC $FF $14 [ q7f f16 q76 g16< q7f g+16> q76 f16 q7f c+16< q76 g+16 q7f g+16> q76 c+16 q7f g+16< q76 g+16r16>g+16
+r8< q7f g16r16a+16 q76 g16 q7f g16 q76 a+16> q7f g16< q76 g16> q7f g16 q76 g16]1 $DC $FF $00 *1 $DC $FF $14 *1 /q7f v140 y15 @34
+[<<d8f+8a8>c+8f+8r8
+<d8e8g+8b8>e8r8]7
+<c+8f+8g+8b8>e8r8
+<<f+8>f+8g+8b8a+8<f+8
+[ y10  $F4 $03 @39 v220 <<b8>>> y15 $F4 $03 @37 v140 f+8a8>d8<a8f+8
+ y10  $F4 $03 @39 v220 <<<b8>>> y15 $F4 $03 @37 v140 g+8b8>e8<b8g+8
+ y10  $F4 $03 @39 v220 <<<b8>>> y15 $F4 $03 @37 v140 f+8a8>d8<a8f+8
+ y10  $F4 $03 @39 v220 <<<b8>>> y15 $F4 $03 @37 v140 g+8b8>e8<b8g+8
+ y10  $F4 $03 @39 v220 <<c+8>> y15 $F4 $03 @37 v140 a8b8>e8<b8a8
+ y10  $F4 $03 @39 v220 <<d8>> y15 $F4 $03 @37 v140 a8b8>e8<b8a8
+ y10  $F4 $03 @39 v220 <<e8>> y15 $F4 $03 @37 v140 a8b8>e8<g+8e8
+ y10  $F4 $03 @39 v220 <<e8>>]1 y15 $F4 $03 @37 v140 g+8>d8f+8 q7c b8<<< q7f y10 $F4 $03 @39 v200 e8 $F4 $03 $FA $02 $01
+*1 $F4 $03 @37 y15 v140 $FA $02 $00 >>g+8>d+8g+8> q7c d+8< q7e b8
+
+#3 v180
+r1
+r1
+r1..
+r64 y00 $EE $14  @36 
+o5g+4f4c4
+g4d+4<a+4
+>f4c4<g+4
+>d+4<a+4d+8... /$EE $00 q7f @34 y05 v140
+[<f+8b8>d8f+8a8r8
+<f+8a8>c+8e8g+8r8]7
+<g+8>c+8e8g+8b8r8
+<c+8>c+8e8g+8f+8<c+8 @37
+[r8b8>f+8a8f+8<b8
+r8b8>g+8b8e8<b8
+r8b8>f+8a8f+8<b8
+r8b8>g+8b8e8<b8
+r8>c+8a8b8a8c+8
+r8d8a8b8a8d8
+r8e8a8b8>d8<b8]1
+r8e8g+8>d8 q7c f+8r8 q7f 
+$FA $02 $01 *1
+r8 $FA $02 $00 <f8>c+8f8 q7c b8 q7e f8
+
+#4 v180 y20
+r1
+r1
+r1.. @36
+o5g+4f4c4
+g4d+4<a+4
+>f4c4<g+4
+>d+4<a+4d+4 / $FA $02 $00 $DF y10 $DE $24 $0C $20 @38 
+>> v100 $E8 $40 $C8 q7d c+2< q7f b8a8
+g+4f+4 @33 g+4 @38
+a4. q7c f+8 q7a c+4
+< q7c @33 b2 @38 v100 $E8 $20 $C8 q7f b4 @38 
+>> v120 $E8 $40 $C8 q7d c+2< q7f b8a8
+g+4f+4 @33 g+4 @38
+a4. q7c f+8> q7a c+4 $DF 
+ q7c @33 <b4> q7f @36 y00 e16r16< y20 e16r16> y00 e16r16 y20 e16r16
+< y10c+2<b8a8
+g+4f+4g+4
+a4.f+8c+4
+<b2.
+>>c+2<b8a8
+g+4f+4g+4
+a4.f+8>c+4
+ <b4> q7f @36 y00 e16r16< y20 e16r16> y00 e16r16 y20 e16r16 y10 @34 $DE $24 $0C $20 
+[> q7c $E8 $10 $64 f+16 $E8 $60 $C8 ^16^4. q7c e8 q7f d8
+ c+2<b4
+a4f+4>c+4
+<g+2> q7c e4 q7f 
+< $E8 $10 $64 a16 $E8 $40 $C8 ^16^4.> q7c e4 q7f 
+c+4<f+4a4
+ $E8 $10 $64 b16 $E8 $60 $C8 ^16^2^8
+> q7c $E8 $10 $64 e16 $E8 $60 $C8 ^16^2^8]1 $FA $02 $01 @38 *1
