@@ -9,7 +9,7 @@ db "Luckwaive                [^^^^" ; 007
 db "Lord Ruby                [[[[^" ; 008
 db "Nao                      [[]^^" ; 009
 db "talkhaus                 [[[[[" ; 00A
-db "KobaBeach                []^^^" ; 00B
+db "KobaBeach                [^^^^" ; 00B
 db "Nao                      [[[]^" ; 00C
 db "PSI Ninja                [[[]^" ; 00D
 db "EllenHouraisan           [[[]^" ; 00E

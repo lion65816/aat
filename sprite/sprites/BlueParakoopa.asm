@@ -430,6 +430,10 @@ BlueParatroopa:
        LDA #$F8
        STA $7D
        STA !154C,x
+	LDA $187A|!addr
+	BEQ +
+	JSL $01AA33|!bank
++
 .ReturnInteract
        LDX $15E9|!Base2
        RTS                  ; return
