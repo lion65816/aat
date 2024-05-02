@@ -19,7 +19,7 @@ db "Catabo                   [[^^^" ; 011
 db "Catabo                   [[[^^" ; 012
 db "4season                  [[[[^" ; 013
 db "Sam Deluxe               ]^^^^" ; 014
-db "4season                  [[[^^" ; 015
+db "4season                  [[[]^" ; 015
 db "Luckwaive                [[^^^" ; 016
 db "Camwoodstock and Tori    ]^^^^" ; 017
 db "SAJewers                 ]^^^^" ; 018
