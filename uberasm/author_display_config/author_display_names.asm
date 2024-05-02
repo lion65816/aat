@@ -1,7 +1,7 @@
 db "                              " ; 000
 db "Nao                      [[^^^" ; 001
 db "DiskPoppy, SAJewers      [[[^^" ; 002
-db "KobaBeach                [[^^^" ; 003
+db "KobaBeach                [^^^^" ; 003
 db "Jolpengammler            [[[[[" ; 004
 db "SAJewers                 ^^^^^" ; 005
 db "PSI Ninja                [[[[]" ; 006
@@ -65,7 +65,7 @@ db "Nitrogen                 [[[]^" ; 11B
 db "PSI Ninja                [[[^^" ; 11C
 db "Catabo                   [[[]^" ; 11D
 db "Scarfley                 []^^^" ; 11E
-db "EllenHouraisan           [[^^^" ; 11F
+db "EllenHouraisan           []^^^" ; 11F
 db "Nitrogen                 [[[^^" ; 120
 db "PSI Ninja                [[[[]" ; 121
 db "PSI Ninja                [[[]^" ; 122
