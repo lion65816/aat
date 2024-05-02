@@ -16,7 +16,7 @@
 
 ; Boss HP. Should be equal or lower than 4.
 
-!HP = 4
+!HP = 3
 
 ; 16x16 tiles used by the boss.
 
@@ -32,7 +32,7 @@
 
 !Speed4 = $02
 
-!Speed3 = $03
+!Speed3 = $02
 
 !Speed2 = $03
 
@@ -59,7 +59,7 @@
 
 !Jump1 = $FF
 
-!JumpF = $40		; Jump period when on "frenzy" state.		
+!JumpF = $C0		; Jump period when on "frenzy" state.		
 
 ; Defines related to the spawn of lava particles.
 
@@ -68,10 +68,10 @@
 !ExSpriteNumber = $0C	; Number of the extended sprite spawned by the sprite.
 					; It is set to spawn Volcano Lotus particles.
 				
-!NPart = $04		; Number of particles spawned. It should be set to
+!NPart = $03		; Number of particles spawned. It should be set to
 					; 4, 3, 2 or 1; other values will cause errors.
 
-!ExtraP = $02		; When the HP of the boss is equal or below this, the
+!ExtraP = $01		; When the HP of the boss is equal or below this, the
 					; boss will spawn an extra lava particle over his
 					; head.
 
@@ -80,7 +80,7 @@
 
 !Cycles4 = $02
 
-!Cycles3 = $03
+!Cycles3 = $02
 
 !Cycles2 = $03
 
