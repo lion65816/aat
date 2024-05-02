@@ -22,7 +22,7 @@ db "Sam Deluxe               ]^^^^" ; 014
 db "4season                  [[[^^" ; 015
 db "Luckwaive                [[^^^" ; 016
 db "Camwoodstock and Tori    ]^^^^" ; 017
-db "SAJewers                 [^^^^" ; 018
+db "SAJewers                 ]^^^^" ; 018
 db "PSI Ninja                [^^^^" ; 019
 db "WitherSnow               [[[^^" ; 01A
 db "Heraga                   [[[]^" ; 01B
