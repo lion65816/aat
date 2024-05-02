@@ -38,6 +38,7 @@ patches
 	patch\Fixes\spinspinspinaaaaaugghh.asm
 	patch\Fixes\SpriteScrollFix.asm
 	patch\Fixes\tidefix.asm
+	patch\Fixes\timeupfix.asm
 	patch\Fixes\walljumpnoteblockglitchfix.asm
 	patch\Fixes\YoshiSpriteInteractionsFix.asm
 	patch\Fixes\yourfatface.asm
@@ -90,7 +91,6 @@ patches
 ]
 -- patch\patch\999.asm
 -- patch\patch\shellbuzzyfix.asm
--- patch\patch\timeupfix.asm
 -- patch\patch\save_everything.asm
 -- patch\patch\blockmask.asm
 -- patch\patch\BetterYoshiInteraction.asm

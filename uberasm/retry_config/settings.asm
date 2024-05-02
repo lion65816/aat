@@ -46,7 +46,7 @@
 
 ; If 1, it fixes the issue where dying in a level with the timer set to 0
 ; shows the "TIME UP!" message when exiting the level.
-    !time_up_fix = 1
+    !time_up_fix = 0
 
 ; If 1, it fixes the issue where you can drop the reserve item in the item box
 ; by pressing Select while Mario is dying or while the Retry prompt is shown.
