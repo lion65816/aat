@@ -384,6 +384,9 @@ level:
 ; 6 = Star World.
 overworld:
 ; Insert files here
+0  switchpalacecrush.asm
+1  switchpalacecrush.asm
+2  switchpalacecrush.asm
 4  floating_ow.asm
 
 ; Game mode list. Valid values: 00-FF.
