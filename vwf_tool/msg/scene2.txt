@@ -19,7 +19,7 @@
 
 [exani manual=slot 0, frame 8] // Demo (facing left, normal)
 [exani manual=slot 8, frame 0] // Iris (facing right, normal)
-[sprite=60]
+[sprite=78]
 // Demo and Iris
                                                             (68,2A,82,04,big)                         (90,2A,80,02,big)
                                                             (68,3A,A2,44,big)                         (90,3A,A0,02,big)
@@ -32,6 +32,13 @@
 (30,28,6C,08,big)(40,28,46,08,big)(50,28,48,08,big)(60,28,4A,08,big)(70,28,4C,08,big)(80,28,E0,08,big)(90,28,E0,08,big)(A0,28,E0,08,big)(B0,28,C4,08,big)(C0,28,C6,08,big)
 (30,38,E0,08,big)(40,38,E0,08,big)(50,38,E0,08,big)(60,38,E0,08,big)(70,38,E0,08,big)(80,38,E0,08,big)(90,38,E0,08,big)(A0,38,E0,08,big)(B0,38,E0,08,big)(C0,38,E0,08,big)
 (30,48,66,0C,big)(40,48,66,0C,big)(50,48,66,0C,big)(60,48,66,0C,big)(70,48,66,0C,big)(80,48,66,0C,big)(90,48,66,0C,big)(A0,48,66,0C,big)(B0,48,66,0C,big)(C0,48,66,0C,big)
+// (Press START to skip) (18 tiles)
+(2C,C8,C4,01,small) // (
+(34,C8,C5,01,small)(3C,C8,C6,01,small)(44,C8,C7,01,small)(4C,C8,C8,01,small)(54,C8,C8,01,small) // Press
+(64,C8,CA,01,small)(6C,C8,CB,01,small)(74,C8,CC,01,small)(7C,C8,CD,01,small)(84,C8,CB,01,small) // START
+(94,C8,CE,01,small)(9C,C8,CF,01,small) // to
+(AC,C8,C8,01,small)(B4,C8,D4,01,small)(BC,C8,D5,01,small)(C4,C8,D6,01,small) // skip
+(CC,C8,D7,01,small) // )
 [/sprite]
 [font color=1]
 [topic]Demo[/topic]
@@ -152,7 +159,7 @@ Sorry girls, I've no clue myself.[wait=15] But there's probably one in the city 
 [exani manual=slot 8, frame 0] // Iris (facing right, normal)
 [font color=1]
 [topic]Demo[/topic]
-*sigh* We have to walk even further?
+*sigh*[wait=15] We have to walk even further?
 [wait]
 [erase]
 [font color=3]

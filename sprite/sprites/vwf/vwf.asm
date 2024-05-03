@@ -390,13 +390,9 @@ VWFMainCode:
     LDA.w !SkipPos+1			; Determine if the current text can be skipped with START
     BMI .WaitVblank
     XBA
-    ;LDA $16
-    ;AND #$10					; Check if START has been pressed
-    ;BEQ .WaitVblank
-    LDA $17						;\ AAT edit:
-    AND #%11110000				;| Skip when A+X+L+R is pressed.
-    CMP #%11110000				;|
-    BNE .WaitVblank				;/
+    LDA $16
+    AND #$10					; Check if START has been pressed
+    BEQ .WaitVblank
     LDA.w !SkipPos				; Get skip position and use it as the new VWF data index
     TAY
     INC.w !Skipped				; Activate "text skipped" flag
@@ -548,7 +544,7 @@ RunGlobal:
 
     LDA #$FF				; Erase Mario
     STA $78
-    JSL $00E2BD                 ; Run Mario's pose handler
+    ;JSL $00E2BD                 ; Run Mario's pose handler (AAT edit: commenting out this line fixes wrong palettes that show up when too many tiles are on the screen)
 
     PLP 
     PLX 
