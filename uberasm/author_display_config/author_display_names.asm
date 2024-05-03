@@ -1,5 +1,5 @@
 db "                              " ; 000
-db "Nao                      [[^^^" ; 001
+db "Nao                      [[]^^" ; 001
 db "DiskPoppy, SAJewers      [[[^^" ; 002
 db "KobaBeach                [^^^^" ; 003
 db "Jolpengammler            [[[[[" ; 004
@@ -12,9 +12,9 @@ db "talkhaus                 [[[[[" ; 00A
 db "KobaBeach                [^^^^" ; 00B
 db "Nao                      [[[]^" ; 00C
 db "PSI Ninja                [[[]^" ; 00D
-db "EllenHouraisan           [[[]^" ; 00E
+db "EllenHouraisan           [[[[^" ; 00E
 db "Bumpty                   ^^^^^" ; 00F
-db "4season                  [[[[^" ; 010
+db "4season                  [[[]^" ; 010
 db "Catabo                   [[^^^" ; 011
 db "Catabo                   [[[^^" ; 012
 db "4season                  [[[[^" ; 013
@@ -25,7 +25,7 @@ db "Camwoodstock and Tori    ]^^^^" ; 017
 db "SAJewers                 ]^^^^" ; 018
 db "PSI Ninja                [^^^^" ; 019
 db "WitherSnow               [[[^^" ; 01A
-db "Heraga                   [[[]^" ; 01B
+db "Heraga                   [[[^^" ; 01B
 db "DJ Buckley               [[]^^" ; 01C
 db "Big Brawler              ^^^^^" ; 01D
 db "DJ Buckley               [[]^^" ; 01E
@@ -44,8 +44,8 @@ db "Lord Ruby                [[^^^" ; 106
 db "raekuul                  [^^^^" ; 107
 db "SAJewers                 [[^^^" ; 108
 db "SAJewers                 [^^^^" ; 109
-db "DJ Buckley               [[[^^" ; 10A
-db "levelengine              [[[]^" ; 10B
+db "DJ Buckley               [[]^^" ; 10A
+db "levelengine              [[[^^" ; 10B
 db "Catabo                   [[^^^" ; 10C
 db "Big Brawler              [[^^^" ; 10D
 db "SAJewers                 [[]^^" ; 10E
@@ -54,10 +54,10 @@ db "4season                  [[[^^" ; 110
 db "PSI Ninja                ^^^^^" ; 111
 db "4season                  [[[[]" ; 112
 db "MexicanCradily           [[]^^" ; 113
-db "Big Brawler              [[]^^" ; 114
+db "Big Brawler              [[^^^" ; 114
 db "EllenHouraisan           []^^^" ; 115
 db "Sam Deluxe               []^^^" ; 116
-db "Scarfley                 [[[^^" ; 117
+db "Scarfley                 [[]^^" ; 117
 db "Bumpty                   [[[^^" ; 118
 db "4season                  [[[[]" ; 119
 db "SAJewers                 ^^^^^" ; 11A
