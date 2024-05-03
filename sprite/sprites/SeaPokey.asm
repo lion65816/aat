@@ -32,43 +32,43 @@
 
 !Speed4 = $02
 
-!Speed3 = $02
+!Speed3 = $08
 
-!Speed2 = $03
+!Speed2 = $0C
 
-!Speed1 = $04
+!Speed1 = $0F
 
 ; Speed when on "frenzy" state. The number refers to the HP of the boss.
 
 !SpeedF4 = $09
 
-!SpeedF3 = $09
+!SpeedF3 = $0A
 
-!SpeedF2 = $0A
+!SpeedF2 = $0E
 
-!SpeedF1 = $0B
+!SpeedF1 = $12
 
 ; Jump period. Set it to $00 and the boss will not jump. 
 ; The number refers to the HP of the boss.
 
 !Jump4 = $00
 
-!Jump3 = $00
+!Jump3 = $A5
 
-!Jump2 = $00
+!Jump2 = $A5
 
-!Jump1 = $FF
+!Jump1 = $A5
 
-!JumpF = $C0		; Jump period when on "frenzy" state.		
+!JumpF = $90		; Jump period when on "frenzy" state.		
 
 ; Defines related to the spawn of lava particles.
 
-!Shoot = $D0		; Time between each spray of lava particles.
+!Shoot = $B0		; Time between each spray of lava particles.
 
 !ExSpriteNumber = $0C	; Number of the extended sprite spawned by the sprite.
 					; It is set to spawn Volcano Lotus particles.
 				
-!NPart = $03		; Number of particles spawned. It should be set to
+!NPart = $02		; Number of particles spawned. It should be set to
 					; 4, 3, 2 or 1; other values will cause errors.
 
 !ExtraP = $01		; When the HP of the boss is equal or below this, the
@@ -80,15 +80,15 @@
 
 !Cycles4 = $02
 
-!Cycles3 = $02
+!Cycles3 = $03
 
-!Cycles2 = $03
+!Cycles2 = $04
 
-!Cycles1 = $04
+!Cycles1 = $05
 
 ; Other defines.
 
-!JHeight = $D0		; Related to the height the boss will reach when jumping.
+!JHeight = $A0		; Related to the height the boss will reach when jumping.
 					; Higher values mean less height.
 
 !FTime = $BF		; Related to the duration of the "frenzy" state.
