@@ -15,7 +15,7 @@ if read1($00FFD5) == $23
 endif
 
 org $009D6C		; number of total exits (or the number after which we show the *96 graphics) 
-	CMP #96		; CHANGE THIS!!! (it's in decimal btw)
+	CMP #122		; CHANGE THIS!!! (it's in decimal btw)
 	BCC $06
 	LDY #$87        ;\ Two tiles for the *96 gfx
 	LDA #$88        ;/ Tile number targets GFX28,GFX29 (or whatever you set LG1,LG2 to for the titlescreen level)
