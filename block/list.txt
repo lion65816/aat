@@ -469,6 +469,7 @@ R56C0-56D1:130 question_mark/giant_question_block_single.asm
 7204:25 SwimSE.asm
 7213:25 QuicksandPit.asm
 7214:25 QuicksandPit.asm
+721F:25 PurkinjeScreenTele.asm
 7223:25 QuicksandPit.asm
 7224:25 QuicksandPit.asm
 7233:25 QuicksandPit.asm

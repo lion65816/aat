@@ -31,7 +31,7 @@ db "Big Brawler              ^^^^^" ; 01D
 db "DJ Buckley               [[]^^" ; 01E
 db "Nao                      [[[[]" ; 01F
 db "HatKid and SAJewers      [[^^^" ; 020
-db "Scarfley                 [[]^^" ; 021
+db "Scarfley                 [[^^^" ; 021
 db "EllenHouraisan           []^^^" ; 022
 db "4season                  []^^^" ; 023
 db "levelengine              [[^^^" ; 024
