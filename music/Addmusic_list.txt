@@ -114,7 +114,7 @@ Locals:
 6F  NSMBWii Volcano.txt
 70  rambirumble.txt
 71  3tank.txt
-72  DS_Luigi_Casino.txt
+72  Weezer_BuddyHolly.txt
 73  Opus 13.txt
 74  Title Bells.txt
 75  Infinite Possibilities.txt

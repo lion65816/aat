@@ -1,0 +1,570 @@
+#SPC
+#amk 2
+{
+	#author "Weezer"
+	#title "Buddy Holly (Karaoke)"
+	#game "Pinkerton"
+}
+
+#0
+@5
+o3
+c8 c8 c8 c8 c8 c8 c8 c8 
+c8 c8 c8 c8 c8 c8 d+8 d+8 
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+c8 c8 c8 c8 c8 c8 c8 c8 
+c8 c8 c8 c8 c8 c8 d+8 d+8 
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c16 r16 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c16 r16 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+< g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 > d+8 d+8 d+8 d+8 
+< g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+> c+8 c+8 c+8 c+8 < a+8 a+8 a+8 a+8 
+f8 f8 f8 f8 f8 f8 f8 f8 
+g+8 g+8 a+8 a+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 a+8 a+8 a+8 a+8 
+g+8 g+8 g+8 g+16 g+16 g+16 g+16 g+8 g+8 g+8 
+c8 c8 c8 c8 c8 c8 c8 c8 
+c8 c8 c8 c8 c8 c8 d+8 d+8 
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+c8 c8 c8 c8 c8 c8 c8 c8 
+c8 c8 c8 c8 c8 c8 d+8 d+8 
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+c8 c8 c8 c8 c8 c8 c8 c8 
+c8 c8 c8 c8 c8 c8 d+8 d+8 
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c16 r16 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c16 r16 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+< g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 > d+8 d+8 d+8 d+8 
+< g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+> c+8 c+8 c+8 c+8 < a+8 a+8 a+8 a+8 
+f8 f8 f8 f8 f8 f8 f8 f8 
+g+8 g+8 a+8 a+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 a+8 a+8 a+8 a+8 
+g+8 g+8 g+8 g+16 g+16 g+16 g+16 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 a+8 a+8 a+8 a+8 
+g+8 g+8 g+8 g+16 g+16 g+16 g+16 g+8 g+8 r8 g+8 g+8 g+8 d+8 c8 d+8 c8 a+32 r16. >> c32 r16. << f8 d+8 f8 g8 f8 d+8 c8 
+g+8 g+8 g+8 d+8 c8 d+8 c8 > d+32 r16. > c32 r16. << f8 d+8 f8 g8 f8 d+8 c8 
+g+8 g+8 g+8 d+8 c8 d+8 c8 > d+32 r16. > c32 r16. << f8 d+8 f8 g8 f8 d+8 c8 
+g+8 g+8 g+8 d+8 c8 d+8 c8 > f8 
+f8 < f8 d+8 f8 g8 f8 d+8 c8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c16 r16 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c16 r16 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+r1
+< g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 > d+8 d+8 d+8 d+8 
+< g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+> c+8 c+8 c+8 c+8 < a+8 a+8 a+8 a+8 
+f8 f8 f8 f8 f8 f8 f8 f8 
+g+8 g+8 a+8 a+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 a+8 a+8 a+8 a+8 
+g+8 g+8 g+8 g+16 g+16 g+16 g+16 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 a+8 a+8 a+8 a+8 
+g+8 g+8 g+8 g+16 g+16 g+16 g+16 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 a+8 a+8 a+8 a+8 
+g+8 g+8 g+8 g+16 g+16 g+16 g+16 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 a+8 a+8 a+8 a+8 
+g+8 g+8 g+8 d+8 f8 d+8 f8 r1
+r8 > c2 r2 
+; Channel Length (Bar):82
+
+#1 ; Chord note separated from channel #0
+o1
+f8 f8 f8 f8 f8 f8 f8 f8 
+f8 f8 f8 f8 f8 f8 g8 g8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+f8 f8 f8 f8 f8 f8 f8 f8 
+f8 f8 f8 f8 f8 f8 g8 g8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+> g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g8 g8 g16 r16 c4 c8 c8 c8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g8 g8 g16 r16 c4 c8 c8 c8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+c+8 c+8 c+8 c+8 a+8 a+8 a+8 a+8 
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+g+8 g+8 g+8 g+8 d+8 d+8 d+8 d+8 
+c8 c8 c8 c8 c8 c8 c8 c8 
+c+8 c+8 d+8 d+8 d+8 d+8 d+8 d+8 
+d+8 d+8 c+8 c+8 d+8 d+8 d+8 d+8 
+d+8 d+8 d+8 d+16 d+16 d+16 d+16 d+8 d+8 d+8 
+< f8 f8 f8 f8 f8 f8 f8 f8 
+f8 f8 f8 f8 f8 f8 g8 g8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+f8 f8 f8 f8 f8 f8 f8 f8 
+f8 f8 f8 f8 f8 f8 g8 g8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+f8 f8 f8 f8 f8 f8 f8 f8 
+f8 f8 f8 f8 f8 f8 g8 g8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+> g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g8 g8 g16 r16 c4 c8 c8 c8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g8 g8 g16 r16 c4 c8 c8 c8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+c+8 c+8 c+8 c+8 a+8 a+8 a+8 a+8 
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+g+8 g+8 g+8 g+8 d+8 d+8 d+8 d+8 
+c8 c8 c8 c8 c8 c8 c8 c8 
+c+8 c+8 d+8 d+8 d+8 d+8 d+8 d+8 
+d+8 d+8 c+8 c+8 d+8 d+8 d+8 d+8 
+d+8 d+8 d+8 d+16 d+16 d+16 d+16 d+8 d+8 d+8 
+d+8 d+8 c+8 c+8 d+8 d+8 d+8 d+8 
+d+8 d+8 d+8 d+16 d+16 d+16 d+16 d+8 d+8 r8 d+8 d+8 d+8 < a+8 f8 a+8 f8 > g+8 
+> c32 r16. < c8 < g+8 a+8 > c8 < a+8 g+8 f8 
+> d+8 d+8 d+8 < a+8 f8 a+8 f8 >> c8 
+c32 r16. < c8 < g+8 a+8 > c8 < a+8 g+8 f8 
+> d+8 d+8 d+8 < a+8 f8 a+8 f8 >> c8 
+c32 r16. < c8 < g+8 a+8 > c8 < a+8 g+8 f8 
+> d+8 d+8 d+8 < a+8 f8 a+8 f8 >> c32 r16. c32 r16. < c8 < g+8 a+8 > c8 < a+8 g+8 f8 
+> g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g8 g8 g16 r16 c4 c8 c8 c8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g8 g8 g16 r16 c4 c8 c8 c8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+r1
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+c+8 c+8 c+8 c+8 a+8 a+8 a+8 a+8 
+d+8 d+8 d+8 d+8 d+8 d+8 d+8 d+8 
+g+8 g+8 g+8 g+8 d+8 d+8 d+8 d+8 
+c8 c8 c8 c8 c8 c8 c8 c8 
+c+8 c+8 d+8 d+8 d+8 d+8 d+8 d+8 
+d+8 d+8 c+8 c+8 d+8 d+8 d+8 d+8 
+d+8 d+8 d+8 d+16 d+16 d+16 d+16 d+8 d+8 d+8 
+d+8 d+8 c+8 c+8 d+8 d+8 d+8 d+8 
+d+8 d+8 d+8 d+16 d+16 d+16 d+16 d+8 d+8 d+8 
+d+8 d+8 c+8 c+8 d+8 d+8 d+8 d+8 
+d+8 d+8 d+8 d+16 d+16 d+16 d+16 d+8 d+8 d+8 
+d+8 d+8 c+8 c+8 d+8 d+8 d+8 d+8 
+d+8 d+8 d+8 < a+8 > c8 < a+8 > c8 r8 
+; Channel Length (Bar):80
+
+#2 ; Chord note separated from channel #0
+@5
+o2
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c16 r16 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c16 r16 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+< g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 > d+8 d+8 d+8 d+8 
+< g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+> c+8 c+8 c+8 c+8 < a+8 a+8 a+8 a+8 
+f8 f8 f8 f8 f8 f8 f8 f8 
+g+8 g+8 a+8 a+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 a+8 a+8 a+8 a+8 
+g+8 g+8 g+8 d+16 d+16 g+16 g+16 g+8 g+8 g+8 
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c16 r16 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c16 r16 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+< g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 > d+8 d+8 d+8 d+8 
+< g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+> c+8 c+8 c+8 c+8 < a+8 a+8 a+8 a+8 
+f8 f8 f8 f8 f8 f8 f8 f8 
+g+8 g+8 a+8 a+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 a+8 a+8 a+8 a+8 
+g+8 g+8 g+8 d+16 d+16 g+16 g+16 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 a+8 a+8 a+8 a+8 
+g+8 g+8 g+8 d+16 d+16 g+16 g+16 g+8 g+8 r8 g+8 g+8 g+8 r2 > f32 r8.. < f8 r2. g+8 g+8 g+8 r2 > g+32 r8.. < f8 r2. g+8 g+8 g+8 r2 > g+32 r8.. < f8 r2. g+8 g+8 g+8 r2 > g+32 r16. g+32 r16. < f8 r2. > c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c16 r16 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c16 r16 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+r1
+< g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 > d+8 d+8 d+8 d+8 
+< g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+> c+8 c+8 c+8 c+8 < a+8 a+8 a+8 a+8 
+f8 f8 f8 f8 f8 f8 f8 f8 
+g+8 g+8 a+8 a+8 g+8 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 a+8 a+8 a+8 a+8 
+g+8 g+8 g+8 d+16 d+16 g+16 g+16 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 a+8 a+8 a+8 a+8 
+g+8 g+8 g+8 d+16 d+16 g+16 g+16 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 a+8 a+8 a+8 a+8 
+g+8 g+8 g+8 d+16 d+16 g+16 g+16 g+8 g+8 g+8 
+g+8 g+8 g+8 g+8 a+8 a+8 a+8 a+8 
+g+8 g+8 g+8 d+8 f8 d+8 f8 r8 
+; Channel Length (Bar):80
+
+#2 ; Chord note separated from channel #0
+@5
+o3
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r2 a+8 a+8 a+8 a+8 
+r1
+g+8 g+8 g+8 g+8 r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+a+8 a+8 a+8 a+8 
+r1
+g+8 g+8 g+8 g+8 r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+a+8 a+8 a+8 a+8 
+r1
+g+8 g+8 g+8 g+8 r2 
+; Channel Length (Bar):70
+
+
+
+
+;#3
+;@7
+;o4
+;c12 r32. c+12 r32. c12 r32. g4 r8 f8^32^64 r12 c12 r32. < a+12 r32. g+12 r32. > c4 r4. c12 r32. c+12 r32. c12 r32. g4 r8 f8^32^64 r12 c8 r16 < a+32. r48 g+2 r4 > c12 r32. c+12 r32. c12 r32. g4 r8 f8^32^64 r12 c12 r32. < a+12 r32. g+12 r32. > c4 r4. c12 r32. c+12 r32. c12 r32. g8^32^64 r12 f8^32^64 r12 d+12 r32. c32. r48 < a+32. r48 g+2 r4. > g+8^32^64 r12 f8^32^64 r6^24 f12 r32. c12 r32. d+4^32^64 
+;r12 f12 r32. c32. r48 < a+32. r48 g+3 r8^32^64 > g+8^32^64 r12 f8^32^64 r6^24 f12 r32. c12 r32. d+4^32^64 
+;r12 f12 r32. f2 r8 g+8^32^64 r12 f8^32^64 r3 f12 r32. g+8. 
+;r16 c+8^32^64 r12 e8^32^64 r12 f+8^32^64 r12 g+6^24 
+;r8^32^64 f8^32^64 r12 d+8^32^64 r12 c12 r32. < g+12 r32. a+12 r32. > c12 r32. < a+12 r32. g+12 r32. f8^32^64 r12 d+8^32^64 r3 > f8^32^64 r12 d+8^32^64 r12 c12 r32. < g+12 r32. a+12 r32. > c12 r32. < a+12 r32. g+12 r32. a+3 r8^32^64 f8^32^64 r12 g8^32^64 r12 g+8^32^64 r12 a+12 r32. > c12 r32. < f12 r32. f12 r32. d+12 r32. d+12 r32. f32. r48 g+32. r48 g+12 r4^32^64 g+8^32^64 r12 > f8^32^64 r12 d+12 r32. c8^32^64 r12 < g+4^32^64 
+;r1
+;r1
+;r1
+;r1
+;r2^3 > c12 r32. c+12 r32. c12 r32. g4 r8 f8^32^64 r12 c12 r32. < a+12 r32. g+12 r32. > c4 r8 c8^32^64 r12 c12 r32. c+12 r32. c12 r32. g4 r8 f8^32^64 r12 c8 r16 < a+32. r48 g+2 r4 > c12 r32. c+12 r32. c12 r32. g4 r8 f8^32^64 r12 c12 r32. < a+12 r32. g+12 r32. > c4 r4. c12 r32. c+12 r32. c12 r32. g4 f8^32^64 r12 d+12 r32. c32. r48 < a+32. r48 g+2 r4. > g+8^32^64 r12 f8^32^64 r6^24 f12 r32. c12 r32. d+4^32^64 
+;r12 f12 r32. c32. r48 < a+32. r48 g+3 r8^32^64 > g+8^32^64 r12 f8^32^64 r6^24 f12 r32. c12 r32. d+4^32^64 
+;r12 f12 r32. f2 r8 g+8^32^64 r12 f8^32^64 r3 f12 r32. g+6^24 
+;r32. c+8^32^64 r12 e8^32^64 r12 f+8^32^64 r12 g+6^24 
+;r8^32^64 f8^32^64 r12 d+8^32^64 r12 c12 r32. < g+12 r32. a+12 r32. > c12 r32. < a+12 r32. g+12 r32. f8^32^64 r12 d+8^32^64 r3 > f8^32^64 r12 d+8^32^64 r12 c12 r32. < g+12 r32. a+12 r32. > c12 r32. < a+12 r32. g+12 r32. a+3 r8^32^64 f8^32^64 r12 g8^32^64 r12 g+8^32^64 r12 a+12 r32. > c12 r32. < f12 r32. f12 r32. d+12 r32. d+12 r32. f32. r48 g+32. r48 g+12 r4^32^64 g+8^32^64 r12 > f8^32^64 r12 d+12 r32. c8^32^64 r12 < g+4^32^64 
+;r2^3 g+8^32^64 r12 > f8^32^64 r12 d+12 r32. c8^32^64 r12 < g+4^32^64 
+;r2^3 g+12 r8^32^64 g+12 r16.. g+32. r48 g+12 r32. g+32. r48 g+32. r48 g+32. r8^48 g+32. r48 g+32. r48 g+32. r48 g+12 r32. g+12 r32. a+32. r48 a+32. r48 > c12 r32. < a+32. r48 a+32. r48 g+12 r8^32^64 g+12 r8^32^64 g+12 r8^32^64 g+12 r32. g+32. r48 g+32. r48 g+32. r6^24 g+12 r32. g+12 r32. g+12 r32. a+32. r48 a+32. r48 > c12 r32. < a+12 r32. g+12 r8^32^64 g+12 r32. g+12 r32. g+32. r48 d+8 r16 g+12 r32. g+12 r32. g+12 r8^32^64 g+32. r48 g+32. r48 g+32. r48 g+32. r48 g+12 r32. a+12 r32. > c12 r32. < a+32. r48 a+32. r48 g+12 r8^32^64 g+32. r48 g+32. r48 g+32. r48 g+32. r48 g+32. r48 g+32. r48 g+32. r48 g+32. r48 g+32. r48 g+32. r48 g+32. r48 g+32. r48 g+12 r8^32^64 g+32. r48 g+32. r48 g+32. r48 g+32. r48 g+12 r32. a+12 r32. > c12 r32. c+12 r32. d+12 r32. f12 r32. g4 r8 f8^32^64 r12 d+8^32^64 r12 c+12 r32. c8^32^64 r12 c+12 r32. < g+2 r1
+;r1
+;r2.. f12 r32. g+6^24 
+;r32. e8^32^64 r12 g+8^32^64 r12 a+8^32^64 r12 > g+6^24 
+;r32. e8^32^64 r12 g+8^32^64 r12 a+8^32^64 r12 > c6^24 
+;r2^4^8^32^64 << g+8^32^64 r12 > f8^32^64 r12 d+8^32^64 r12 c12 r32. < g+12 r32. a+12 r32. > c12 r32. < a+12 r32. g+12 r32. f8^32^64 r12 d+8^32^64 r3 > f8^32^64 r12 d+8^32^64 r12 c12 r32. < g+12 r32. a+12 r32. > c12 r32. < a+12 r32. g+12 r32. a+3 r8^32^64 f8^32^64 r12 g8^32^64 r12 g+8^32^64 r12 a+12 r32. > c12 r32. < f12 r32. f12 r32. d+12 r32. d+12 r32. f32. r48 g+32. r48 g+12 r4^32^64 g+8^32^64 r12 > f8^32^64 r12 d+12 r32. c8^32^64 r12 < g+4^32^64 
+;r2^3 g+8^32^64 r12 > f8^32^64 r12 d+12 r32. c8^32^64 r12 < g+4^32^64 
+;r2^3 g+8^32^64 r12 > f8^32^64 r12 d+12 r32. c8^32^64 r12 < g+4^32^64 
+;r2^3 g+8^32^64 r12 > f8^32^64 r12 d+12 r32. c8^32^64 r12 < g+4^32^64 
+;r1
+;r2^3 c2 r2 
+; Channel Length (Bar):82
+
+#4
+@14
+o2
+f8 f8 f8 > c8 < f8 f8 f8 > c8 
+< f8 f8 f8 > c8 < f8 f8 g8 g8 
+g+8 g+8 g+8 > d+8 < g+8 g+8 g+8 > d+8 
+< g+8 g+8 g+8 > d+8 < g+8 g+8 g+8 > d+8 
+< f8 f8 f8 > c8 < f8 f8 f8 > c8 
+< f8 f8 f8 > c8 < f8 f8 g8 g8 
+g+8 g+8 g+8 > d+8 < g+8 g+8 g+8 > d+8 
+< g+8 g+8 g+8 g+8 a+8 a+8 > c8 c8 
+c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c8 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c8 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+< g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+f8 f8 f8 f8 d+8 d+8 d+8 d+8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+f8 f8 f8 f8 d+8 d+8 d+8 d+8 
+f8 f8 f8 f8 f8 f8 f8 f8 
+> c+8 c+8 d+8 d+8 < g+8 g+8 g+8 g+8 
+g+8 g+8 > c+8 c+8 d+8 d+8 d+8 d+8 
+< g+8 g+8 g+8 d+16 d+16 g+16 g+16 g+8 g+8 g+8 
+f8 f8 f8 > c8 < f8 f8 f8 > c8 
+< f8 f8 f8 > c8 < f8 f8 g8 g8 
+g+8 g+8 g+8 > d+8 < g+8 g+8 g+8 > d+8 
+< g+8 g+8 g+8 > d+8 < g+8 g+8 g+8 > d+8 
+< f8 f8 f8 > c8 < f8 f8 f8 > c8 
+< f8 f8 f8 > c8 < f8 f8 g8 g8 
+g+8 g+8 g+8 > d+8 < g+8 g+8 g+8 > d+8 
+< g+8 g+8 g+8 > d+8 < g+8 g+8 g+8 > d+8 
+< f8 f8 f8 > c8 < f8 f8 f8 > c8 
+< f8 f8 f8 > c8 < f8 f8 g8 g8 
+g+8 g+8 g+8 > d+8 < g+8 g+8 g+8 > d+8 
+< g+8 g+8 g+8 > d+8 < g+8 g+8 g+8 g+8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c8 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c8 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+< g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+f8 f8 f8 f8 d+8 d+8 d+8 d+8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+f8 f8 f8 f8 d+8 d+8 d+8 d+8 
+f8 f8 f8 f8 f8 f8 f8 f8 
+> c+8 c+8 d+8 d+8 < g+8 g+8 g+8 g+8 
+g+8 g+8 > c+8 c+8 d+8 d+8 d+8 d+8 
+< g+8 g+8 g+8 d+16 d+16 g+16 g+16 g+8 g+8 g+8 
+g+8 g+8 > c+8 c+8 d+8 d+8 d+8 d+8 
+< g+8 g+8 g+8 d+16 d+16 g+16 g+16 g+8 g+8 r8 g+8 g+8 g+8 d+8 f8 d+8 f8 r4 f8 g+8 a+8 > c8 < a+8 g+8 f8 
+g+8 g+8 g+8 d+8 f8 d+8 f8 r4 f8 g+8 a+8 > c8 < a+8 g+8 f8 
+g+8 g+8 g+8 d+8 f8 d+8 f8 r4 f8 g+8 a+8 > c8 < a+8 g+8 f8 
+g+8 g+8 g+8 d+8 f8 d+8 f8 r4 f8 g+8 a+8 > c8 < a+8 g+8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c8 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c8 c8 c8 < f4 f8 f8 f8 
+> c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+c+8 c+8 c+8 c+8 c+8 c+8 c+8 c+8 
+r1
+< g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+f8 f8 f8 f8 d+8 d+8 d+8 d+8 
+g+8 g+8 g+8 g+8 g+8 g+8 g+8 g+8 
+f8 f8 f8 f8 d+8 d+8 d+8 d+8 
+f8 f8 f8 f8 f8 f8 f8 f8 
+> c+8 c+8 d+8 d+8 < g+8 g+8 g+8 g+8 
+g+8 g+8 > c+8 c+8 d+8 d+8 d+8 d+8 
+< g+8 g+8 g+8 d+16 d+16 g+16 g+16 g+8 g+8 g+8 
+g+8 g+8 > c+8 c+8 d+8 d+8 d+8 d+8 
+< g+8 g+8 g+8 d+16 d+16 g+16 g+16 g+8 g+8 g+8 
+g+8 g+8 > c+8 c+8 d+8 d+8 d+8 d+8 
+< g+8 g+8 g+8 d+16 d+16 g+16 g+16 g+8 g+8 g+8 
+g+8 g+8 > c+8 c+8 d+8 d+8 d+8 d+8 
+< g+8 g+8 g+8 d+8 f8 d+8 f8 r1
+r8 >>> c2 r2 
+; Channel Length (Bar):82
+
+#5
+@3
+o4
+r1
+r1
+r1
+r2 c16 c+16 c16 c+16 c1
+c4 
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+c8 c+8 c16. f32 g4. f4 
+c8 < a+8 g+8 > c4^16 r16 < a+4 
+> c8 c+8 c16. f32 g4. f4 
+c8. < a+16 g+2^8 r1
+r1
+r1
+r2^8 > c16 c+16 c16 c+16 c1
+c4 
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+> a8 f8 a8 b8 b4 a8 f8 
+e1
+e1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+r1
+<< c2 r2 
+; Channel Length (Bar):82
+
+#6
+@10
+o2
+c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 c16 
+<< c16 r16 c16 r16 >> c16 r16 c16 r16 << c16 r16 c16 r16 >> c16 r16 c16 r16 < c2 r2 
+; Channel Length (Bar):82
+
