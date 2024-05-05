@@ -19,8 +19,6 @@
 // Scene 1 //
 /////////////
 
-[skip=end]
-
 [wait=120]
 [font color=2]
 [topic]?????[/topic]
@@ -37,17 +35,25 @@ Demo...[wait=15] Wake up...
 /////////////
 
 [music=D7]
-[sprite=54]
+[sprite=72]
 // Demo and Iris
 (30,2A,82,04,big)                                                            (78,23,84,02,big)
 (30,3A,A2,04,big)                                                            (78,33,A4,02,big)
 // Background
-(30,08,00,07,big)(40,08,02,07,big)(50,08,04,07,big)(60,08,06,07,big)(70,08,08,07,big)(80,08,0A,07,big)(90,08,0C,07,big)(A0,08,0E,07,big)(B0,08,8C,08,big)(C0,08,8E,08,big)
+(30,08,08,07,big)(40,08,08,07,big)(50,08,08,07,big)(60,08,08,07,big)(70,08,08,07,big)(80,08,0A,07,big)(90,08,0C,07,big)(A0,08,0E,07,big)(B0,08,8C,08,big)(C0,08,8E,08,big)
 (30,18,20,07,big)(40,18,22,07,big)(50,18,24,07,big)(60,18,26,07,big)(70,18,28,07,big)(80,18,2A,07,big)(90,18,2C,07,big)(A0,18,2E,07,big)(B0,18,AC,08,big)(C0,18,AE,08,big)
 (30,28,40,07,big)(40,28,42,07,big)(50,28,44,07,big)(60,28,46,07,big)(70,28,48,07,big)(80,28,4A,07,big)(90,28,4C,07,big)(A0,28,4E,07,big)(B0,28,CC,08,big)(C0,28,CE,08,big)
 (30,38,60,07,big)(40,38,62,07,big)(50,38,64,07,big)(60,38,66,07,big)(70,38,68,07,big)(80,38,6A,07,big)(90,38,6C,07,big)(A0,38,6E,07,big)(B0,38,EC,08,big)(C0,38,EE,08,big)
 (30,48,E0,0C,big)(40,48,E0,0C,big)(50,48,E0,0C,big)(60,48,E0,0C,big)(70,48,E0,0C,big)(80,48,E0,0C,big)(90,48,E0,0C,big)(A0,48,E0,0C,big)(B0,48,E0,0C,big)(C0,48,E0,0C,big)
+// (Press START to skip) (18 tiles)
+(2C,C8,00,01,small) // (
+(34,C8,01,01,small)(3C,C8,02,01,small)(44,C8,03,01,small)(4C,C8,04,01,small)(54,C8,04,01,small) // Press
+(64,C8,05,01,small)(6C,C8,06,01,small)(74,C8,07,01,small)(7C,C8,10,01,small)(84,C8,06,01,small) // START
+(94,C8,11,01,small)(9C,C8,12,01,small) // to
+(AC,C8,04,01,small)(B4,C8,13,01,small)(BC,C8,14,01,small)(C4,C8,15,01,small) // skip
+(CC,C8,16,01,small) // )
 [/sprite]
+[skip=end]
 [font color=1]
 [topic]Demo[/topic]
 Zzz...[wait=15] video games...
@@ -85,7 +91,7 @@ Stop lazing around.[wait=15] Reminder that Uncle Broadsword's making us cater th
                                                    (60,2A,82,04,big)                                  (90,2A,80,02,big)
                                                    (60,3A,A2,04,big)                                  (90,3A,A0,02,big)
 // Background
-(30,08,8E,0D,big)(40,08,88,0C,big)(50,08,8A,0C,big)(60,08,00,07,big)(70,08,02,07,big)(80,08,04,07,big)(90,08,06,07,big)(A0,08,08,07,big)(B0,08,0A,07,big)(C0,08,0C,07,big)
+(30,08,8E,0D,big)(40,08,88,0C,big)(50,08,8A,0C,big)(60,08,08,07,big)(70,08,08,07,big)(80,08,08,07,big)(90,08,08,07,big)(A0,08,08,07,big)(B0,08,0A,07,big)(C0,08,0C,07,big)
 (30,18,AE,0D,big)(40,18,A8,0C,big)(50,18,AA,0C,big)(60,18,20,07,big)(70,18,22,07,big)(80,18,24,07,big)(90,18,26,07,big)(A0,18,28,07,big)(B0,18,2A,07,big)(C0,18,2C,07,big)
 (30,28,CE,0D,big)(40,28,C8,0C,big)(50,28,CA,0C,big)(60,28,40,07,big)(70,28,42,07,big)(80,28,44,07,big)(90,28,46,07,big)(A0,28,48,07,big)(B0,28,4A,07,big)(C0,28,4C,07,big)
 (30,38,EE,0D,big)(40,38,E8,0C,big)(50,38,EA,0C,big)(60,38,60,07,big)(70,38,62,07,big)(80,38,64,07,big)(90,38,66,07,big)(A0,38,68,07,big)(B0,38,6A,07,big)(C0,38,6C,07,big)

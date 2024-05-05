@@ -15,8 +15,6 @@
 // Scene 1 //
 /////////////
 
-[skip=end]
-
 [exani manual=slot 0, frame 8] // Demo (facing left, normal)
 [exani manual=slot 8, frame 0] // Iris (facing right, normal)
 [sprite=78]
@@ -40,6 +38,7 @@
 (AC,C8,C8,01,small)(B4,C8,D4,01,small)(BC,C8,D5,01,small)(C4,C8,D6,01,small) // skip
 (CC,C8,D7,01,small) // )
 [/sprite]
+[skip=end]
 [font color=1]
 [topic]Demo[/topic]
 So where's the grocery store?[wait=15] We're pretty far from the cabin now.

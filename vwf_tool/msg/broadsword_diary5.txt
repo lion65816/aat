@@ -2,13 +2,12 @@
 // Scene 12 //
 //////////////
 
-[skip=end]
-
 [sprite=4]
 // Uncle Broadsword
 (70,2A,84,08,big)(80,2A,86,08,big)
 (70,3A,A4,08,big)(80,3A,A6,08,big)
 [/sprite]
+[skip=end]
 The following pages are dedicated to my archaeological findings on Food Desert Island.
 [wait]
 [br]I came across eight steles during my stay on the island, each with puzzling inscriptions.

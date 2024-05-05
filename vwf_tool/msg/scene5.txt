@@ -15,11 +15,9 @@
 // Scene 1 //
 /////////////
 
-[skip=end]
-
 [exani manual=slot 0, frame 1] // Demo (facing right, looking up)
 [exani manual=slot 8, frame 1] // Iris (facing right, looking up)
-[sprite=64]
+[sprite=82]
 // Demo and Iris
 (30,2A,82,04,big)                          (58,2A,80,02,big)
 (30,3A,A2,44,big)                          (58,3A,A0,42,big)
@@ -34,7 +32,15 @@
 (30,28,CC,06,big)(40,28,CC,06,big)(50,28,CC,06,big)(60,28,CC,06,big)(70,28,CC,06,big)(80,28,CC,06,big)                                                   (C0,28,CC,06,big)
 (30,38,EC,06,big)(40,38,EC,06,big)(50,38,EC,06,big)(60,38,EC,06,big)(70,38,EC,06,big)(80,38,EC,06,big)(90,38,EC,06,big)(A0,38,EC,06,big)(B0,38,EC,06,big)(C0,38,EC,06,big)
 (30,48,8E,0A,big)(40,48,8E,0A,big)(50,48,8E,0A,big)(60,48,8E,0A,big)(70,48,8E,0A,big)(80,48,8E,0A,big)(90,48,8E,0A,big)(A0,48,8E,0A,big)(B0,48,8E,0A,big)(C0,48,8E,0A,big)
+// (Press START to skip) (18 tiles)
+(2C,C8,C4,01,small) // (
+(34,C8,C5,01,small)(3C,C8,C6,01,small)(44,C8,C7,01,small)(4C,C8,C8,01,small)(54,C8,C8,01,small) // Press
+(64,C8,CA,01,small)(6C,C8,CB,01,small)(74,C8,CC,01,small)(7C,C8,CD,01,small)(84,C8,CB,01,small) // START
+(94,C8,CE,01,small)(9C,C8,CF,01,small) // to
+(AC,C8,C8,01,small)(B4,C8,D4,01,small)(BC,C8,D5,01,small)(C4,C8,D6,01,small) // skip
+(CC,C8,D7,01,small) // )
 [/sprite]
+[skip=end]
 [font color=3]
 [topic]Windrose[/topic]
 $[wait=15] WISH CONFLICT RESOLUTION CONTINGENCY[wait=15] :[wait=15] SUCCESS

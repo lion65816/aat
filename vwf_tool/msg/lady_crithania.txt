@@ -2,8 +2,6 @@
 // Scene 1 //
 /////////////
 
-[skip=end]
-
 17 days later...
 [wait]
 [erase]
@@ -13,7 +11,7 @@
 // Scene 2 //
 /////////////
 
-[sprite=53]
+[sprite=71]
 // Iceberg
 (40,30,26,0F,big)
 // Ship
@@ -24,7 +22,15 @@
 (30,28,00,0F,big)(40,28,00,0F,big)(50,28,00,0F,big)(60,28,06,0D,big)(70,28,08,0D,big)(80,28,0A,0D,big)(90,28,0A,0D,big)(A0,28,0A,0D,big)(B0,28,0C,0D,big)(C0,28,0E,0D,big)
 (30,38,02,0F,big)(40,38,02,0F,big)(50,38,02,0F,big)(60,38,02,0F,big)(70,38,02,0F,big)(80,38,02,0F,big)(90,38,02,0F,big)(A0,38,02,0F,big)(B0,38,02,0F,big)(C0,38,02,0F,big)
 (30,48,04,0F,big)(40,48,04,0F,big)(50,48,04,0F,big)(60,48,04,0F,big)(70,48,04,0F,big)(80,48,04,0F,big)(90,48,04,0F,big)(A0,48,04,0F,big)(B0,48,04,0F,big)(C0,48,04,0F,big)
+// (Press START to skip) (18 tiles)
+(2C,C8,C4,01,small) // (
+(34,C8,C5,01,small)(3C,C8,C6,01,small)(44,C8,C7,01,small)(4C,C8,C8,01,small)(54,C8,C8,01,small) // Press
+(64,C8,CA,01,small)(6C,C8,CB,01,small)(74,C8,CC,01,small)(7C,C8,CD,01,small)(84,C8,CB,01,small) // START
+(94,C8,CE,01,small)(9C,C8,CF,01,small) // to
+(AC,C8,C8,01,small)(B4,C8,D4,01,small)(BC,C8,D5,01,small)(C4,C8,D6,01,small) // skip
+(CC,C8,D7,01,small) // )
 [/sprite]
+[skip=end]
 Next slide
 [wait]
 [erase]

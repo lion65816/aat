@@ -15,11 +15,9 @@
 // Scene 1 //
 /////////////
 
-[skip=end]
-
 [exani manual=slot 0, frame 8] // Demo (facing left, normal)
 [exani manual=slot 8, frame 8] // Iris (facing left, normal)
-[sprite=58]
+[sprite=76]
 // Demo and Iris
                                                                              (78,2A,80,02,big)        (90,2A,82,04,big)
                                                                              (78,3A,A0,42,big)        (90,3A,A2,04,big)
@@ -32,7 +30,15 @@
 (30,28,C8,0C,big)(40,28,CA,0C,big)(50,28,CC,0C,big)(60,28,CE,0C,big)(70,28,40,0D,big)(80,28,42,0D,big)(90,28,44,0D,big)(A0,28,46,0D,big)(B0,28,48,0D,big)(C0,28,4A,0D,big)
 (30,38,E8,0C,big)(40,38,EA,0C,big)(50,38,EC,0C,big)(60,38,EE,0C,big)(70,38,60,0D,big)(80,38,62,0D,big)(90,38,64,0D,big)(A0,38,66,0D,big)(B0,38,68,0D,big)(C0,38,6A,0D,big)
 (30,48,E0,0C,big)(40,48,E0,0C,big)(50,48,E0,0C,big)(60,48,E0,0C,big)(70,48,E0,0C,big)(80,48,E0,0C,big)(90,48,E0,0C,big)(A0,48,E0,0C,big)(B0,48,E0,0C,big)(C0,48,E0,0C,big)
+// (Press START to skip) (18 tiles)
+(2C,C8,80,01,small) // (
+(34,C8,81,01,small)(3C,C8,82,01,small)(44,C8,83,01,small)(4C,C8,84,01,small)(54,C8,84,01,small) // Press
+(64,C8,85,01,small)(6C,C8,86,01,small)(74,C8,87,01,small)(7C,C8,90,01,small)(84,C8,86,01,small) // START
+(94,C8,91,01,small)(9C,C8,92,01,small) // to
+(AC,C8,84,01,small)(B4,C8,93,01,small)(BC,C8,94,01,small)(C4,C8,95,01,small) // skip
+(CC,C8,96,01,small) // )
 [/sprite]
+[skip=end]
 [font color=1]
 [topic]Demo[/topic]
 The mall directory says there's a grocery store a few floors up.

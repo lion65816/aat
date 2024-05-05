@@ -2,13 +2,19 @@
 // Scene 1 //
 /////////////
 
-[skip=end]
-
-[sprite=4]
+[sprite=22]
 // Demo and Iris
 (30,2A,80,0E,big)(48,2A,82,0C,big)
 (30,3A,A0,0E,big)(48,3A,A2,0C,big)
+// (Press START to skip) (18 tiles)
+(2C,CC,C4,01,small) // (
+(34,CC,C5,01,small)(3C,CC,C6,01,small)(44,CC,C7,01,small)(4C,CC,C8,01,small)(54,CC,C8,01,small) // Press
+(64,CC,CA,01,small)(6C,CC,CB,01,small)(74,CC,CC,01,small)(7C,CC,CD,01,small)(84,CC,CB,01,small) // START
+(94,CC,CE,01,small)(9C,CC,CF,01,small) // to
+(AC,CC,C8,01,small)(B4,CC,D4,01,small)(BC,CC,D5,01,small)(C4,CC,D6,01,small) // skip
+(CC,CC,D7,01,small) // )
 [/sprite]
+[skip=end]
 [font color=2]
 [topic]???[/topic]
 We are pleased to receive you, Demo, lithe, loathesome lingerer from afar.[wait=15] Your visit was not easy to arrange.[wait=15] Great things never are.[wait=15] Oh how we admire you.

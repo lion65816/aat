@@ -2,16 +2,22 @@
 // Scene 1 //
 /////////////
 
-[skip=end]
-
 [music=CA]
-[sprite=5]
+[sprite=23]
 // Page
 (78,18,E0,06,big)
 // Demo and Iris
 (58,2A,80,02,big)(98,2A,82,04,big)
 (58,3A,A0,02,big)(98,3A,A2,04,big)
+// (Press START to skip) (18 tiles)
+(2C,C8,84,00,small) // (
+(34,C8,85,00,small)(3C,C8,86,00,small)(44,C8,87,00,small)(4C,C8,88,00,small)(54,C8,88,00,small) // Press
+(64,C8,89,00,small)(6C,C8,8A,00,small)(74,C8,8B,00,small)(7C,C8,94,00,small)(84,C8,8A,00,small) // START
+(94,C8,95,00,small)(9C,C8,96,00,small) // to
+(AC,C8,88,00,small)(B4,C8,97,00,small)(BC,C8,98,00,small)(C4,C8,99,00,small) // skip
+(CC,C8,9A,00,small) // )
 [/sprite]
+[skip=end]
 Found a missing page from Uncle Broadsword's diary!
 [wait]
 [erase]

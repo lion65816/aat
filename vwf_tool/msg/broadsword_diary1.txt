@@ -2,17 +2,23 @@
 // Scene 1 //
 /////////////
 
-[skip=no]
-
 [music=CA]
-[sprite=6]
+[sprite=24]
 // Diary
 (78,08,C2,06,big)
 (78,18,E2,06,big)
 // Demo and Iris
 (58,2A,80,02,big)(98,2A,82,04,big)
 (58,3A,A0,02,big)(98,3A,A2,04,big)
+// (Press START to skip) (18 tiles)
+(2C,C8,2E,00,small) // (
+(34,C8,2F,00,small)(3C,C8,3E,00,small)(44,C8,3F,00,small)(4C,C8,4C,00,small)(54,C8,4C,00,small) // Press
+(64,C8,4D,00,small)(6C,C8,4E,00,small)(74,C8,4F,00,small)(7C,C8,5C,00,small)(84,C8,4E,00,small) // START
+(94,C8,5D,00,small)(9C,C8,5E,00,small) // to
+(AC,C8,4C,00,small)(B4,C8,5F,00,small)(BC,C8,6C,00,small)(C4,C8,6D,00,small) // skip
+(CC,C8,7C,00,small) // )
 [/sprite]
+[skip=no]
 Found Uncle Broadsword's missing diary!
 [wait]
 [erase]

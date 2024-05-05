@@ -681,6 +681,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 7204	0	
 7213	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
 7214	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
+721f	0	Teleports the player using a specific screen exit.
 7223	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
 7224	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.
 7233	0	A quicksand block that makes Mario and sprites slowly sink but keeps Mario from walking at full speed.

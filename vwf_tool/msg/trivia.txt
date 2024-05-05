@@ -26,7 +26,7 @@ RTL
 [/sprite]
 [font color=3]
 [topic]Nevada[/topic]
-Hi Demo and Iris![wait][br]
+Hi Demo![wait=15] Hi Iris![wait][br]
 Good to see you make it out to my weekly trivia night this time![wait=15] I'm starting soon.[wait]
 [erase]
 If you answer the first question correctly, you win a 1-Up.[wait][br]

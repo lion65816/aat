@@ -15,8 +15,6 @@
 // Scene 4 //
 /////////////
 
-[skip=end]
-
 [exani manual=slot 0, frame 3] // Demo (facing right, happy)
 [exani manual=slot 8, frame 8] // Iris (facing left, normal)
 [sprite=53]
@@ -37,6 +35,7 @@
 (30,38,A6,0C,big)(40,38,EA,0C,big)(50,38,EC,0C,big)(60,38,EE,0C,big)                 (80,38,A8,0C,big)(90,38,AA,0C,big)(A0,38,AC,0C,big)
 (30,48,C6,0C,big)(40,48,C6,0C,big)(50,48,C6,0C,big)(60,48,C6,0C,big)(70,48,C6,0C,big)(80,48,C6,0C,big)(90,48,C6,0C,big)(A0,48,C6,0C,big)(B0,48,C6,0C,big)(C0,48,C6,0C,big)
 [/sprite]
+[skip=end]
 [font color=1]
 [topic]Demo[/topic]
 Uncle B. also said that if we wished to the Windrose and slept quietly, our wishes would be answered too!
