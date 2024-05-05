@@ -164,7 +164,12 @@ gm14_end:
 	LDA $13E6|!addr		;\
 	CMP #$01			;| If the status bar is disabled in the level,
 	BEQ +				;/ then branch.
-	JSR custom_bar
+
+	LDA $19				;\ Print a different head based on the current powerup.
+	STA $7FC070			;/ Uses Manual 0 Global ExAnimation trigger.
+
+	%invoke_sa1(custom_bar)
+	;JSR custom_bar
 +
 	RTS
 
@@ -175,7 +180,9 @@ gm14_end:
 ; shortly after their main code.
 ;=====================================
 
-!NumTilesMax = $1E		;> Full status bar ($1E = 30 tiles)
+!MainLvlBackup	= $192C|!addr	;Have to resort to using a freeram because of too many resources changing $13BF temporarily
+
+!NumTilesMax = $1D		;> Full status bar ($1D = 29 tiles)
 !NumTilesMin = $04		;> Minimal status bar ($04 = 4 tiles)
 ;!NumTilesMin = $0E		;> Minimal status bar ($0E = 14 tiles)
 !Offset = $1010			;> YYXX
@@ -200,7 +207,8 @@ custom_bar:
 	JSR draw_custom_bar
 .return
 	SEP #$30
-	RTS
+	;RTS
+	RTL
 
 draw_custom_bar:
 	PHB
@@ -209,307 +217,451 @@ draw_custom_bar:
 
 	; OAM table
 	LDX $3100			;> Main index (16-bit pointer to the OAM general buffer)
-	SEP #$20
-	LDA $13E6|!addr		;\ Load the loop index depending on status bar type.
-	CMP #$02			;/
+	STX $00
+	SEP #$10
+	LDX #$40
+	STX $02
+	LDX $13E6|!addr		;\ Load the loop index depending on status bar type.
+	CPX #$02			;/
 	BEQ +
-	LDY.w #$0000+((!NumTilesMax-1)*2)
+	LDX.b #$00+((!NumTilesMax-1)*2)
 	BRA ++
 +
-	LDY.w #$0000+((!NumTilesMin-1)*2)
+	LDX.b #$00+((!NumTilesMin-1)*2)
 ++
-	REP #$20
+	TXA
+	INC #2
+	ASL
+	STA $0C
+	LDY #$00
 -
-	LDA TileCoord,y		;\ Load tile X and Y coordinates
-	CLC					;| Add offset for the entire status bar.
-	ADC #!Offset		;|
-	;PHY
-	;PHX
-	;SEP #$30
-	;JSR offsets
-	;REP #$30
-	;PLX
-	;PLY
-	STA $400000,x		;/
+	JSR (counters,x)
+	DEX #2
+	BPL -
 
-	LDA TileProps,y		;> Load tile properties.
-	PHY					;\
-	PHX					;| Need to be in 8-bit mode for the following subroutine.
-	SEP #$30			;| Note that the high byte of A will remain preserved,
-	JSR counters		;| while the high bytes of X and Y will be cleared.
-	REP #$30			;| This shouldn't matter for X and Y if they only contain 8-bit values.
-	PLX					;| The subroutine returns the updated tile number in the low byte of A.
-	PLY					;/
-	STA $400002,x
-
-	INX #4				;\
-	DEY #2				;| Move to next slot and loop
-	BPL -				;/
-
+	TYA
+	LSR
+	LSR
+	STA $03
+	LDA #$F0F0
+-
+	CPY $0C
+	BEQ +
+	STA [$00],y
+	INY #4
+	BRA -
++
 	; OAM extra bits
+	LDY $03
+	DEY #2
+	REP #$10
 	LDX $3102			;> Bit table index (16-bit pointer to the OAM attribute buffer)
-	SEP #$20
-	LDA $13E6|!addr		;\ Load the loop index depending on status bar type.
-	CMP #$02			;/
-	BEQ +
-	LDY.w #$0000+((!NumTilesMax-2))
-	BRA ++
-+
-	LDY.w #$0000+((!NumTilesMin-2))
-++
-	REP #$20
+
+	LDA #$0000		;\ Store extra bits for two tiles at a time.
 -
-	LDA TileExtra,y		;\ Store extra bits for two tiles at a time.
 	STA $400000,x		;/ 
 
 	INX #2				;\
 	DEY #2				;| Loop to set the remaining OAM extra bits.
 	BPL -				;/
-
+	INY
+	BMI +
+	INX
++
+	LDA #$0200
+	STA $400000-2,x
 	PLB
 	RTS
 
-offsets:
-	PHA
-	LDA $13E6|!addr
-	CMP #$02
-	BNE +
-	PLA
-	CPY #$08
-	BEQ ++
-	CPY #$0A
-	BEQ ++
-	CPY #$0C
-	BEQ ++
-	CPY #$0E
-	BEQ ++
-	CPY #$10
-	BEQ ++
-	CPY #$12
-	BEQ ++
-	CPY #$14
-	BEQ +++
-	CPY #$16
-	BEQ +++
-	CPY #$18
-	BEQ +++
-	CPY #$1A
-	BNE .return
-+++
-	XBA
-	SEC
-	SBC #$04
-	XBA
-	BRA .return
-++
-	XBA
-	CLC
-	ADC #$04
-	XBA
-	BRA .return
-+
-	PLA
+counters:
+dw .default
+dw .default
+dw .return
+dw .lives
+dw .return
+dw .return
+dw .return
+dw .return
+dw .raocoins
+dw .default
+dw .default
+dw .return
+dw .bonusstars
+dw .default
+dw .return
+dw .return
+dw .timer
+dw .default
+dw .default
+dw .return
+dw .coins
+dw .demosiris
+dw .demosiris
+dw .demosiris
+dw .demosiris
+dw .return
+dw .return
+dw .return
+dw .demos
+
+.default
+	LDA TileCoord,x
+	STA [$00],y
+	INY #2
+	LDA TileProps,x
+	STA [$00],y
+	INY #2
 .return
 	RTS
 
-counters:
-	CPY #$00			;> Demo/Iris head
-	BNE +
-	LDA $19				;\ Print a different head based on the current powerup.
-	STA $7FC070			;/ Uses Manual 0 Global ExAnimation trigger.
-	LDA #$44
-	XBA					;\ Since A is overwritten here,
-	LDA #$30			;| need to put the properties
-	XBA					;/ in the high byte.
+.lives
+	SEP #$20
+	LDA $0DBE|!addr
+	INC
+	PHX
+	JSR get2digits
+	LDX TileProps+7
+	STX $07
+	REP #$20
+	LDA TileCoord+6
+	STA [$00],y
+	INY #2
+	LDA $06
+	STA [$00],y
+	INY #2
+	LDX $04
+	BEQ +
+	LDX TileProps+5
+	STX $05
+	LDA TileCoord+4
+	STA [$00],y
+	INY #2
+	LDA $04
+	STA [$00],y
+	INY #2
 +
-	CPY #$04			;> Lives counter (tens digit)
+	PLX
+	DEX #2
+	RTS
+
+.raocointable
+db %00100011 ;db %11000100	;00-07
+db %01110001 ;db %10001110	;08-0F
+db %11111011 ;db %11011111	;10-17
+db %01110010 ;db %01001110	;18-1F
+db %11111011 ;db %11011111	;20-24,101-103
+db %10110111 ;db %11101101	;104-10B
+db %10111111 ;db %11111101	;10C-113
+db %01101100 ;db %00110110	;114-11B
+db %11111101 ;db %10111111	;11C-123
+db %11101111 ;db %11110111	;124-12B
+db %10010111 ;db %11101001	;12C-133
+db %11111110 ;db %01111111	;134-13B
+db %00000000
+.raocoins
+	SEP #$20
+	PHX
+	STY $03
+	LDA $1426|!addr
 	BNE +
-	JSR lives
-	STX $00
-	JSR convert_digit
-	JMP .return
+	LDA !MainLvlBackup
+	BNE ++
+	LDA $13BF|!addr			;Assume that $13BF will be set to the correct value on the first frame of the HUD being drawn
+	STA !MainLvlBackup
+++
+	LDA $13BF|!addr
+	CMP !MainLvlBackup
+	BNE +
+	LSR #3
+	TAY
+	LDA $13BF|!addr
+	AND #$07
+	TAX
+	LDA .raocointable,y
+	AND.l $0DA8A6|!bank,x
+	BNE ++
+	LDA #$FF
+	STA $1420|!addr
+	STA $1422|!addr
+	BRA +
+++
+	LDA $1F2F|!addr,y
+	AND.l $0DA8A6|!bank,X
+	BEQ +
+	LDA #$05
+	STA $1420|!addr
+	STA $1422|!addr
 +
-	CPY #$06			;> Lives counter (ones digit)
-	BNE +
-	JSR lives
-	STA $00
-	JSR convert_digit
-	JMP .return
+	STZ $05
+	LDY $03
+	LDA $1422|!addr
+	STA $04
+	REP #$20
+	BMI ++
+	LDX #$08
+-
+	LDA TileCoord+8,x
+	STA [$00],y
+	INY #2
+	LDA.w #$3046
+	DEC $04
+	BPL +
+	INC
 +
-	CPY #$08			;> Dragon Coin #1
+	STA [$00],y
+	INY #2
+	DEX #2
+	BPL -
+++
+	PLX
+	TXA
+	SEC
+	SBC #$0008
+	TAX
+	RTS
+
+.bonusstars
+	SEP #$20
+	PHX
+	LDX $0DB3|!addr
+	LDA $0F48|!addr,x
+	JSR get2digits
+	LDX TileProps+$19
+	STX $07
+	REP #$20
+	LDA TileCoord+$18
+	STA [$00],y
+	INY #2
+	LDA $06
+	STA [$00],y
+	INY #2
+	LDX $04
+	BEQ +
+	LDX TileProps+$17
+	STX $05
+	LDA TileCoord+$16
+	STA [$00],y
+	INY #2
+	LDA $04
+	STA [$00],y
+	INY #2
++
+	PLX
+	DEX #2
+	RTS
+
+.timer
+	PHX
+	LDX #$1D
+	STX $04
+	STZ $06
+	LDX $0F31|!addr
+	BEQ +
+	INC $06
+	LDA TileCoord+$20
+	STA [$00],y
+	INY #2
+	CPX #$0A
+	BCS ++
+	LDA digits,x
+	STA $04
+++
+	LDX TileProps+$21
+	STX $05
+	LDA $04
+	STA [$00],y
+	INY #2
++
+	LDX #$1D
+	STX $04
+	LDX $0F32|!addr
 	BNE +
-	JSR dragon_coin_check
-	BNE +++
-	LDA $1420|!addr		;> Load Dragon Coins collected for the current level.
-	CMP #$01
-	BCC ++
+	LDA $06
+	BEQ +++
++
+	LDA TileCoord+$1E
+	STA [$00],y
+	INY #2
+	CPX #$0A
+	BCS ++
+	LDA digits,x
+	STA $04
+++
+	LDX TileProps+$1F
+	STX $05
+	LDA $04
+	STA [$00],y
+	INY #2
 +++
-	LDA #$46
-	JMP .return
+	LDX #$1D
+	STX $04
+	LDX $0F33|!addr
+	LDA TileCoord+$1C
+	STA [$00],y
+	INy #2
+	CPX #$0A
+	BCS ++
+	LDA digits,x
+	STA $04
 ++
-	LDA #$47
-	JMP .return
+	LDX TileProps+$1D
+	STX $05
+	LDA $04
+	STA [$00],y
+	INY #2
+	PLX
+	DEX #4
+	RTS
+
+.coins
+	SEP #$20
+	PHX
+	LDA $0DBF|!addr
+	JSR get2digits
+	LDX TileProps+$29
+	STX $07
+	REP #$20
+	LDA TileCoord+$28
+	STA [$00],y
+	INY #2
+	LDA $06
+	STA [$00],y
+	INY #2
+	LDX $04
+	BEQ +
+	LDX TileProps+$27
+	STX $05
+	LDA TileCoord+$26
+	STA [$00],y
+	INY #2
+	LDA $04
+	STA [$00],y
+	INY #2
 +
-	CPY #$0A			;> Dragon Coin #2
+	PLX
+	DEX #2
+	RTS
+
+.demosiris
+	LDA TileCoord,x
+	STA [$00],y
+	INY #2
+	PHX
+	LDA TileProps,x
+	STA $04
+	LDX $0DB3|!addr
+	BEQ +
+	LDX #$3A
+	STX $05
++
+	LDA $04
+	STA [$00],y
+	INY #2
+	PLX
+	RTS
+
+.demos
+	SEP #$20
+	PHX
+	LDA $010A|!addr
+	ASL
+	CLC
+	ADC $010A|!addr
+	TAX
+	LDA.l $41C7EF,x
+	REP #$20
 	BNE +
-	JSR dragon_coin_check
-	BNE +++
-	LDA $1420|!addr		;> Load Dragon Coins collected for the current level.
-	CMP #$02
+	LDA.l $41C7ED,x
+	CMP #$2710
 	BCC ++
-+++
-	LDA #$46
-	JMP .return
++
+	LDA #$270F
 ++
-	LDA #$47
-	JMP .return
+	STZ $06
+	STZ $08
+	STZ $0A
+-
+	CMP #$03E8
+	BCC +
+	INC $0A
+	SBC #$03E8
+	BRA -
 +
-	CPY #$0C			;> Dragon Coin #3
-	BNE +
-	JSR dragon_coin_check
-	BNE +++
-	LDA $1420|!addr		;> Load Dragon Coins collected for the current level.
-	CMP #$03
-	BCC ++
-+++
-	LDA #$46
-	JMP .return
-++
-	LDA #$47
-	JMP .return
+-
+	CMP #$0064
+	BCC +
+	INC $08
+	SBC #$0064
+	BRA -
 +
-	CPY #$0E			;> Dragon Coin #4
-	BNE +
-	JSR dragon_coin_check
-	BNE +++
-	LDA $1420|!addr		;> Load Dragon Coins collected for the current level.
-	CMP #$04
-	BCC ++
-+++
-	LDA #$46
-	JMP .return
-++
-	LDA #$47
-	JMP .return
+-
+	CMP #$000A
+	BCC +
+	INC $06
+	SBC #$000A
+	BRA -
 +
-	CPY #$10			;> Dragon Coin #5
-	BNE +
-	JSR dragon_coin_check
-	BNE +++
-	LDA $1420|!addr		;> Load Dragon Coins collected for the current level.
-	CMP #$05
-	BCC ++
-+++
-	LDA #$46
-	JMP .return
-++
-	LDA #$47
-	JMP .return
-+
-	CPY #$18			;> Bonus stars counter (tens digit)
-	BNE +
-	JSR bonus_stars
-	STX $00
-	JSR convert_digit
-	JMP .return
-+
-	CPY #$1A			;> Bonus stars counter (ones digit)
-	BNE +
-	JSR bonus_stars
-	STA $00
-	JSR convert_digit
-	JMP .return
-+
-	CPY #$1E			;> Timer (hundreds digit)
-	BNE +
-	JSR timer
-	JSR convert_digit
-	JMP .return
-+
-	CPY #$20			;> Timer (tens digit)
-	BNE +
-	JSR timer
-	LDA $01
-	STA $00
-	JSR convert_digit
-	JMP .return
-+
-	CPY #$22			;> Timer (ones digit)
-	BNE +
-	JSR timer
-	LDA $02
-	STA $00
-	JSR convert_digit
-	JMP .return
-+
-	CPY #$28			;> Coin counter (tens digit)
-	BNE +
-	JSR coins
-	STX $00
-	JSR convert_digit
-	JMP .return
-+
-	CPY #$2A			;> Coin counter (ones digit)
-	BNE +
-	JSR coins
-	STA $00
-	JSR convert_digit
-	JMP .return
-+
-	CPY #$2C			;\
-	BEQ ++				;|
-	CPY #$2E			;| Death counter ("demos")
-	BEQ ++				;|
-	CPY #$30			;|
-	BEQ ++				;|
-	CPY #$32			;/
-	BNE +
-++
-	PHA
-	LDA $0DB3|!addr
-	BEQ ++
-	PLA
-	XBA
-	LDA #$3A			;> If Iris, use palette row D.
-	XBA
-	JMP .return
-++
-	PLA
-	XBA
-	LDA #$36			;> If Demo, use palette row B.
-	XBA
-	JMP .return
-+
-	CPY #$34			;> Death counter (1,000s digit)
-	BNE +
-	JSR deaths
+	TAX
+	LDA digits,x
+	STA $04
+	LDX TileProps+$39
+	STX $05
+	LDA TileCoord+$38
+	STA [$00],y
+	INY #2
+	LDA $04
+	STA [$00],y
+	INY #2
+	STZ $04
+	LDX $0A
+	BEQ +
+	INC $04
+	LDA digits,x
+	STA $0A
+	LDX TileProps+$37
+	STX $0B
+	LDA TileCoord+$36
+	STA [$00],y
+	INY #2
 	LDA $0A
-	STA $00
-	JSR convert_digit
-	JMP .return
+	STA [$00],y
+	INY #2
 +
-	CPY #$36			;> Death counter (100s digit)
-	BNE +
-	JSR deaths
-	STX $00
-	JSR convert_digit
-	JMP .return
+	LDX $08
+	BNE ++
+	LDA $04
+	BEQ +
+++
+	INC $04
+	LDA digits,x
+	STA $08
+	LDX TileProps+$35
+	STX $09
+	LDA TileCoord+$34
+	STA [$00],y
+	INY #2
+	LDA $08
+	STA [$00],y
+	INY #2
 +
-	CPY #$38			;> Death counter (10s digit)
-	BNE +
-	JSR deaths
-	STY $00
-	JSR convert_digit
-	JMP .return
+	LDX $06
+	BNE ++
+	LDA $04
+	BEQ +
+++
+	LDA digits,x
+	STA $06
+	LDX TileProps+$33
+	STX $07
+	LDA TileCoord+$32
+	STA [$00],y
+	INY #2
+	LDA $06
+	STA [$00],y
+	INY #2
 +
-	CPY #$3A			;> Death counter (1s digit)
-	BNE +
-	JSR deaths
-	STA $00
-	JSR convert_digit
-	JMP .return
-+
-.return
+	PLX
+	DEX #6
 	RTS
 
 digits:
@@ -517,224 +669,60 @@ digits:
 	db $30,$31,$32,$33	;> 4, 5, 6, 7
 	db $38,$39			;> 8, 9
 
-convert_digit:
-	LDY $00				;> Load the digit, stored to $00 by the counters subroutine.
-	CPY #$0A			;\ If greater than 9,
-	BCS .default		;/ then print the default tile.
-	LDA digits,y		;> Otherwise, load the digit's tile number.
-	BRA .return
-.default
-	LDA #$0A			;> The default tile is blank.
-.return
-	XBA					;\ Put the tile properties in the high byte,
-	LDA #$30			;| just in case it was overwritten (e.g., by
-	XBA					;/ the HexToDecSuper subroutine).
-	RTS
-
-lives:
-	LDA $0DBE|!addr		;\ Load current player's lives.
-	INC A				;/ SMW indexes from zero, so need to add one here to account for that.
-	JSL $00974C			;> HexToDec function (returns ones digit in A and tens digit in X)
-	CPX #$00			;\ Print a blank tile instead of a leading zero.
-	BEQ +				;/
-	BRA .return
-+
-	LDX #$0A
-.return
-	RTS
-
-timer:
-	LDA $0F31|!addr		;> Load hundreds digit of timer
-	BNE +				;> If it's not a zero, then branch.
-	LDA #$0A			;> Otherwise, print a blank tile instead of a leading zero.
-+
-	STA $00
-	LDA $0F32|!addr		;> Load tens digit of timer
-	STA $01
-	BNE +				;> If it's not a zero, then branch.
-	LDA $00				;\ Otherwise, check if the hundreds digit was also
-	CMP #$0A			;/ a zero (in this case, a blank tile).
-	BNE +				;> If not, then branch.
-	STA $01				;> Otherwise, print a blank tile instead of a leading zero.
-+
-	LDA $0F33|!addr		;> Load ones digit of timer
-	STA $02
-	RTS
-
-coins:
-	LDA $0DBF|!addr		;> Load current player's coins.
-	JSL $00974C			;> HexToDec function (returns ones digit in A and tens digit in X)
-	CPX #$00			;\ Print a blank tile instead of a leading zero.
-	BEQ +				;/
-	BRA .return
-+
-	LDX #$0A
-.return
-	RTS
-
-bonus_stars:
-	LDA $0DB3|!addr
-	BNE .iris
-	LDA $0F48|!addr		;> Load Demo's bonus stars.
-	BRA +
-.iris
-	LDA $0F49|!addr		;> Load Iris' bonus stars.
-+
-	JSL $00974C			;> HexToDec function (returns ones digit in A and tens digit in X)
-	CPX #$00			;\ Print a blank tile instead of a leading zero.
-	BEQ +				;/
-	BRA .return
-+
-	LDX #$0A
-.return
-	RTS
-
-deaths:
-	LDA $010A|!addr		;\
-	ASL					;| Load the current save file number and put it in X.
-	CLC					;| X is the offset for the Demo counter of the current save.
-	ADC $010A|!addr		;|
-	TAX					;/
-	REP #$20			;> For the following subroutine: A = 16-bit, XY = 8-bit
-	LDA $41C7ED,x		;> Load the first two bytes of the Demo counter as input.
-	CMP #$2710			;> Check for 9,999 deaths.
-	BCC +				;> If less than 9,999 deaths, then update the counter normally.
-	SEP #$20			;\
-	LDA #$09			;| Otherwise, cap the counter display at 9,999
-	TAY					;| in order to prevent rollover. Need to restore A
-	TAX					;| to 8-bit mode here since that would've otherwise
-	STA $0A				;| been done in the HexToDecSuper subroutine.
-	BRA .return			;/
-+
-	JSR HexToDecSuper	;> Note: The high byte of the Demo counter is not used here.
-
-	; Handle leading zeroes.
-	PHA					;> Preserve the 1s digit.
-	LDA $0A				;> Load 1000s digit of death counter.
-	BNE +				;> If it's not a zero, then branch.
-	LDA #$0A			;\ Otherwise, print a blank tile instead of a leading zero.
-	STA $0A				;/
-+
-	CPX #$00			;\ If the 100s digit of death counter
-	BNE +				;/ is not a zero, then branch.
-	LDA $0A				;\ Otherwise, check if the 1000s digit was also
-	CMP #$0A			;/ a zero (in this case, a blank tile).
-	BNE +				;> If not, then branch.
-	TAX					;> Otherwise, print a blank tile instead of a leading zero.
-+
-	CPY #$00			;\ If the 10s digit of death counter
-	BNE +				;/ is not a zero, then branch.
-	CPX #$0A			;> Otherwise, check if the 100s digit was also a zero (in this case, a blank tile).
-	BNE +				;> If not, then branch.
-	LDA $0A				;\ Otherwise, check if the 1000s digit was also
-	CMP #$0A			;/ a zero (in this case, a blank tile).
-	BNE +				;> If not, then branch.
-	TAY					;> Otherwise, print a blank tile instead of a leading zero.
-+
-	PLA					;> Restore the 1s digit.
-
-.return
-	RTS
-
-; Check if all Dragon Coins had been collected in a level. Returns A = 0 if true.
-; Needed for when the player exits and reenters a level with all Dragon Coins collected.
-; Adapted from PassableOnAllDragonCoins.asm block.
-dragon_coin_check:
-	LDA.W $13BF|!addr              
-	LSR #3                    
-	TAY                       
-	LDA.W $13BF|!addr              
-	AND.B #$07                
-	TAX                       
-	LDA.W $1F2F|!addr,Y             
-	AND.L $0DA8A6|!bank,X
-	RTS
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; HexToDecSuper: Convert a 16-bit hexadecimal
-;                value to decimal.
-;
-; Input:
-; -A = 16-bit value to convert
-; -8-bit XY (m = 0, x = 1)
-;
-; Output:
-; -A = 1s digit of the original number
-; -Y = 10s digit of the original number
-; -X = 100s digit of the original number
-; -$0A = 1000s digit of the original number
-; -$0B = 10000s digit of the original number
-; -8-bit AXY (m = 1, x = 1)
-;
-; Sources: https://smwc.me/427749
-;          https://smwc.me/1031342
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-HexToDecSuper:
-	STZ $0A
-	STZ $0B
-	LDY #$00
+get2digits:
 	LDX #$00
-
-.StartCompare4
-	CMP #$2710
-	BCC .StartCompare5
-	SBC #$2710
-	INC $0B
-	BRA .StartCompare4
-
-.StartCompare5
-	CMP #$03E8
-	BCC .StartCompare6
-	SBC #$03E8
-	INC $0A
-	BRA .StartCompare5
-
-.StartCompare6
-	CMP #$0064
-	BCC .StartCompare7
-	SBC #$0064
+	SEC
+	BRA +
+-
 	INX
-	BRA .StartCompare6
-
-.StartCompare7
-	CMP #$000A
-	BCC .FinishHTD3
-	SBC #$000A
-	INY
-	BRA .StartCompare7
-
-.FinishHTD3
-	SEP #$20
++
+	SBC #$0A
+	BCS -
+	ADC #$0A
+	PHX
+	TAX
+	LDA digits,x
+	STA $06
+	STZ $04
+	LDA #$1D
+	PLX
+	BEQ ++
+	CPX #$0A
+	BCS +
+	LDA digits,x
++
+	STA $04
+++
 	RTS
 
 TileCoord:						; YYXX
-	dw $0000,$0410,$0418,$0420	; Lives counter
-	dw $0030,$0038,$0040,$0048	; Dragon coins
-	dw $0050,$0058				; Dragon coins (continued)
-	dw $0834,$083C,$0844,$084C	; Bonus star counter
-	dw $0088,$0090,$0098,$00A0	; Timer
-	dw $0888,$0890,$0898,$08A0	; Coin counter
-	dw $00B4,$00BC,$00C4,$00CC	; Death counter ("demos")
-	dw $08B4,$08BC,$08C4,$08CC	; Death counter (digits)
+	dw $0000+!Offset,$0410+!Offset,$0418+!Offset,$0420+!Offset	; Lives counter
+	dw $0050+!Offset,$0048+!Offset,$0040+!Offset,$0038+!Offset	; Dragon coins
+	dw $0030+!Offset											; Dragon coins (continued)
+	dw $0834+!Offset,$083C+!Offset,$0844+!Offset,$084C+!Offset	; Bonus star counter
+	dw $0088+!Offset,$00A0+!Offset,$0098+!Offset,$0090+!Offset	; Timer
+	dw $0888+!Offset,$0890+!Offset,$0898+!Offset,$08A0+!Offset	; Coin counter
+	dw $00B4+!Offset,$00BC+!Offset,$00C4+!Offset,$00CC+!Offset	; Death counter ("demos")
+	dw $08C4+!Offset,$08BC+!Offset,$08B4+!Offset,$08CC+!Offset	; Death counter (digits)
 
 ; Y index starts from 58 (decimal), then decrements by 2 each time
 TileProps:						; High byte = YXPPCCCT, low byte = tile number
 	dw $3044,$3029,$300A,$300A	; Lives counter				indices 00-06
 	dw $300A,$300A,$300A,$300A	; Dragon coins				indices 08-0E
-	dw $300A,$300A				; Dragon coins (continued)	indices 10-12
-	dw $30EF,$3029,$300A,$300A	; Bonus star counter		indices 14-1A
-	dw $307E,$3023,$300A,$300A	; Timer						indices 1C-22
-	dw $3046,$3029,$300A,$300A	; Coin counter				indices 24-2A
-	dw $360C,$360D,$361A,$361B	; Death counter ("demos")	indices 2C-32
-	dw $300A,$300A,$300A,$300A	; Death counter (digits)	indices 34-3A
+	dw $300A					; Dragon coins (continued)	indices 10
+	dw $30EF,$3029,$300A,$300A	; Bonus star counter		indices 12-18
+	dw $307E,$300A,$300A,$300A	; Timer						indices 1A-20
+	dw $3046,$3029,$300A,$300A	; Coin counter				indices 22-28
+	dw $360C,$360D,$361A,$361B	; Death counter ("demos")	indices 2A-30
+	dw $300A,$300A,$300A,$300A	; Death counter (digits)	indices 32-38
 
 ; Y index starts from 28 (decimal), then decrements by 2 each time
 TileExtra:						; High byte = first tile, low byte = second tile
-	dw $0200,$0000				; Lives counter				indices 00-02
-	dw $0000,$0000				; Dragon coins				indices 04-06
-	dw $0000					; Dragon coins (continued)	indices 08-09
-	dw $0000,$0000				; Bonus star counter		indices 0A-0C
-	dw $0000,$0000				; Timer						indices 0E-10
-	dw $0000,$0000				; Coin counter				indices 12-14
-	dw $0000,$0000				; Death counter	("demos")	indices 16-18
-	dw $0000,$0000				; Death counter (digits)	indices 1A-1C
+	dw $0200,$0000				; Lives counter			
+	dw $0000,$0000				; Dragon coins			
+	db $00						; Dragon coins (continued)
+	dw $0000,$0000				; Bonus star counter	
+	dw $0000,$0000				; Timer					
+	dw $0000,$0000				; Coin counter			
+	dw $0000,$0000				; Death counter	("demos")
+	dw $0000,$0000				; Death counter (digits)
