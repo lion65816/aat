@@ -6,8 +6,12 @@
 main:
 LDA $1470|!addr
 ORA $148F|!addr
-BEQ .notcarrying
+BNE .carrying
+LDA #$40
+STA $15
+STA $16
+STZ $18
+.carrying
 LDA #$40
 TSB $15
-.notcarrying
 RTL
