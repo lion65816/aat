@@ -203,9 +203,9 @@ Draw:
 
 BaseCoord:
 !counter #= !MaxHP
-!tempcoordinate #= !EyeOrigin+((!MaxHP-1)*$1000)
+!tempcoordinate #= !EyeOrigin ;+((!MaxHP-1)*$1000)
 while !counter > 0
 	dw !tempcoordinate
-	!tempcoordinate #= !tempcoordinate-$1000
+	!tempcoordinate #= !tempcoordinate+$1000
 	!counter #= !counter-1
 endif
