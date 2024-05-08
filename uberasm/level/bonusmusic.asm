@@ -37,7 +37,7 @@ init:
 	RTL
 	
 main:
-	LDA $0DD9|!addr
+	LDA $1479|!addr
 	CMP #$03
 	BNE +
 	LDA #$03

@@ -8,6 +8,6 @@ JMP Main : JMP Main : JMP Main
 
 Main:
 	LDA #$03
-	STA $0DD9|!addr
+	STA $1479|!addr
 Return:
 	RTL
