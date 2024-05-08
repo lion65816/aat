@@ -21,6 +21,7 @@ level:
 00E	LevelIntro.asm
 00F	GradientLevelF.asm
 010	LevelIntroV2.asm
+012	ceiling.asm
 013	LevelIntroV2.asm
 015	LevelIntroV2.asm
 016	LevelIntro.asm
@@ -29,6 +30,7 @@ level:
 01F	LevelIntro.asm
 020	leafspawn_uberASM_20.asm
 021	LevelIntro.asm
+022	ceiling.asm
 023	LevelIntroV2.asm
 02A	Thwompire2A.asm
 02B	Thwompire2B.asm
@@ -51,6 +53,8 @@ level:
 03E	SPECIAL.asm
 042	watertides.asm
 044	FilterYoshi.asm
+046	ceiling.asm
+04A	ceiling.asm
 051	PitCode.asm
 052	Thwompire52.asm
 053	PressuredWater.asm
@@ -59,6 +63,7 @@ level:
 057  057.asm
 05C  TeleportAtTimeNoMosaic.asm
 05E	crithania_autoscroll.asm
+05F	ceiling.asm
 060	DisableLR_freescrollbabey.asm
 062  vertical_level_end_fix.asm
 066	Gradient66.asm
@@ -70,6 +75,9 @@ level:
 06D	trivia_win04.asm
 06E	trivia_win08.asm
 06F	trivia_win16.asm
+071	ceiling.asm
+072	ceiling.asm
+073	ceiling.asm
 074	Autoscroll74.asm
 076  TeleportAtTimeNoMosaic.asm
 07A	BG_AutoScroll7A.asm
@@ -87,7 +95,10 @@ level:
 087	008.asm
 088  TeleportAtTimeNoMosaic.asm
 089  TeleportAtTimeNoMosaic.asm
+08B	ceiling.asm
+08F	ceiling.asm
 090	green_garden_main.asm
+093	ceiling.asm
 094	SPECIAL.asm
 095	Layer2Smash_095.asm
 096	SPECIAL.asm
@@ -179,6 +190,7 @@ level:
 0F8	BG_AutoScroll.asm
 0F9	leafspawn_uberASM.asm
 0FB	ashspawn_uberASM_SimpleHP.asm
+0FD	ceiling.asm
 0FF	InitSpriteFacing.asm
 100	bonusmusic.asm
 101	LevelIntro.asm

@@ -29,6 +29,7 @@ BNE +
 LDA !C2,x
 BEQ +
 STZ !C2,x
+	STZ !1504,x
 LDA $14AF|!addr
 EOR #$01
 STA $14AF|!addr
@@ -50,6 +51,49 @@ LDA !extra_byte_2,x
 AND #$0F
 STA !1510,x
 +
+
+	LDA !1504,x
+	BEQ +
+	LDA !1540,x
+	BEQ +		;Calculate the remaining time
+if !sa1
+	STZ $2250	
+	LDA !extra_byte_2,x
+	AND #$0F
+	INC
+	STA $2251
+	STZ $2252
+	LDA !1540,x
+	DEC
+	STA $2253
+	STZ $2254
+	LDA !1510,x
+	REP #$21
+	AND #$00FF
+	ADC $2306
+else
+	LDA !extra_byte_2,x
+	AND #$0F
+	INC
+	STA $4202
+	LDA !1540,x
+	DEC
+	STA $4203
+	LDA !1510,x
+	REP #$21
+	AND #$00FF
+	ADC $4216
+endif
+	CMP #$0078	;Check if time remaining is 2 seconds
+	SEP #$20
+	BCS +
+	STZ !1504,x
+	LDA #$24
+	STA $1DFC|!addr
+
++
+
+
 
 LDA !1558,x
 BNE .Return
@@ -82,6 +126,8 @@ LDA #$0B
 STA $1DF9|!addr
 LDA !extra_byte_1,x
 STA !1540,x
+	LDA #$01
+	STA !1504,x
 LDA $14AF|!addr
 EOR #$01
 STA $14AF|!addr
@@ -100,6 +146,8 @@ LDA !1558,x
 STA $02
 LDA !1540,x
 STA $03
+	LDA !1504,x
+	STA $05
 LDA !extra_byte_2,x
 PHP
 
@@ -131,8 +179,10 @@ PLP
 BPL +
 LDA $03
 BEQ +
-CMP #$30
-BCS +
+	LDA $05
+	BNE +
+;CMP #$30
+;BCS +
 LDA #$01
 STA $04
 PHY
