@@ -45,7 +45,7 @@ db "raekuul                  ]^^^^" ; 107
 db "SAJewers                 [[^^^" ; 108
 db "SAJewers                 ]^^^^" ; 109
 db "DJ Buckley               [[]^^" ; 10A
-db "levelengine              [[[^^" ; 10B
+db "levelengine              [[[]^" ; 10B
 db "Catabo                   [[^^^" ; 10C
 db "Big Brawler              [[^^^" ; 10D
 db "SAJewers                 [[]^^" ; 10E
