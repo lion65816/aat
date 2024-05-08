@@ -263,6 +263,22 @@ org $03D32E|!bank
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;Only applies to sprite memory $0A
+org $02A773+$A
+db $13    ;Highest slot for normal sprites
+org $02A7AC+$A
+db $FF    ;Lowest slot-1 for normal sprites
+org $02A786+$A
+db $04    ;Highest slot for reserved sprite 1
+org $02A799+$A
+db $03    ;Highest slot for reserved sprite 2 (has a hardcoded lowest slot 0)
+org $02A7BF+$A
+db $00    ;Lowest slot-1 for reserved sprite 1 (Slot 0 is reserved for held items)
+org $02A7D2+$A
+db $86    ;Reserved sprite 1 ID, also applies to custom sprite $86
+org $02A7E4+$A
+db $6D    ;Reserved sprite 2 ID, ($6D is Wiggler disassembly)
+
 ; Banzai Bill hex edits (needs SP2 = ExGFX181 and SP4 = ExGFX182).
 org $02D5C4|!bank						;\
 	db $80,$82,$84,$86,$A0,$88,$CE,$EE	;| Tilemap
