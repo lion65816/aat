@@ -195,9 +195,11 @@ level:
 100	bonusmusic.asm
 101	LevelIntro.asm
 103	LevelIntro.asm
+104	ceiling.asm
 106	WigglerInteractionFix.asm
 108	LevelIntro.asm
 109	leafspawn_uberASM.asm
+10B	ceiling.asm
 10D	LevelIntro.asm
 10E	balloon.asm
 10F	LevelIntro.asm
@@ -219,6 +221,7 @@ level:
 127	LevelIntroRGSwitch.asm
 128	craigdarroch.asm
 129	easy_going.asm
+12A	ceiling.asm
 12B	Gradient12B.asm
 12C	DisableLeftLR.asm
 12E	digsite.asm
@@ -226,6 +229,7 @@ level:
 130	LevelIntro.asm
 131	LevelIntro.asm
 133	LevelIntro.asm
+134	ceiling.asm
 135	LevelIntroV2.asm
 136	LevelIntroV2.asm
 137	LevelIntro.asm
@@ -259,6 +263,7 @@ level:
 155	BG_AutoScroll4.asm
 156	tank.asm
 157	FilterYoshi_freescrollbabey_InitSpriteFacing.asm
+158	ceiling.asm
 159	RemoveYoshi.asm
 15B	craigdarroch.asm
 15D	whales_main.asm
@@ -272,7 +277,7 @@ level:
 165	thornbush.asm
 166	FilterYoshi.asm
 167	InitSpriteFacingFilterYoshi.asm
-168	lvlfilter.asm
+168	lvlfilterceiling.asm
 169	DisableLR.asm
 16A	FilterYoshi_MWIVJS1.asm
 16B	FilterYoshi.asm
@@ -293,7 +298,7 @@ level:
 17A	volcano.asm
 17B	infinite_dream.asm
 17C	lvlfilter.asm
-17D	FilterYoshi.asm
+17D	FilterYoshiceiling.asm
 17E	FilterYoshi.asm
 180	Elevator.asm
 181	Elevator.asm

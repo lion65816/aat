@@ -1,22 +1,8 @@
-init:
-	JSL freescrollbabey_init
+load:
+	JSL FilterYoshi_load
 	RTL
 
 main:
-	LDX #!sprite_slots-1
-.loop
-	LDY !sprite_misc_154c,x
-	LDA !sprite_num,x
-	CMP #$86 : BNE +
-	LDA !sprite_being_eaten,x
-	BEQ +
-	LDY #$80
-+
-	TYA
-	STA !sprite_misc_154c,x
-	DEX : BPL .loop
-
-	;ceiling fix
 	LDA $97			; mario y (high (next frame))
 	BPL CEILING_RETURN	; if not negative, return
 	LDY #$00		; load 0 in to Y 
@@ -48,4 +34,3 @@ CEILING_RETURN:
 
 CEILING_TABLE:
 	db $E8,$F0		; how high above the screen mario can go for small and big mario
-

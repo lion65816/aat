@@ -4,7 +4,7 @@ db "DiskPoppy, SAJewers      [[[^^" ; 002
 db "KobaBeach                [^^^^" ; 003
 db "Jolpengammler            [[[[[" ; 004
 db "SAJewers                 ^^^^^" ; 005
-db "PSI Ninja                [[[[]" ; 006
+db "PSI Ninja                [[[[^" ; 006
 db "Luckwaive                [^^^^" ; 007
 db "Lord Ruby                [[[[^" ; 008
 db "Nao                      [[]^^" ; 009
@@ -53,7 +53,7 @@ db "Big Brawler              [[[[^" ; 10F
 db "4season                  [[[^^" ; 110
 db "PSI Ninja                ^^^^^" ; 111
 db "4season                  [[[[]" ; 112
-db "MexicanCradily           [[]^^" ; 113
+db "MexicanCradily           [[^^^" ; 113
 db "Big Brawler              [[^^^" ; 114
 db "EllenHouraisan           []^^^" ; 115
 db "Sam Deluxe               []^^^" ; 116
@@ -77,7 +77,7 @@ db "Scarfley                 [[]^^" ; 127
 db "Daizo                    [[[[^" ; 128
 db "4season                  ]^^^^" ; 129
 db "RoyKirbs                 [^^^^" ; 12A
-db "Bumpty                   [[[[^" ; 12B
+db "Bumpty                   [[[]^" ; 12B
 db "levelengine              [[[[[" ; 12C
 db "tangy                    ^^^^^" ; 12D
 db "PSI Ninja                ^^^^^" ; 12E
@@ -87,7 +87,7 @@ db "4season                  [[[]^" ; 131
 db "Catabo                   []^^^" ; 132
 db "Big Brawler              [[[[^" ; 133
 db "levelengine              [[[^^" ; 134
-db "4season                  [[[]^" ; 135
+db "4season                  [[[[^" ; 135
 db "4season                  [[[[]" ; 136
 db "Big Brawler              [[[]^" ; 137
 db "Gbreezesunset            [[[]^" ; 138
