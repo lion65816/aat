@@ -32,5 +32,14 @@ init:
 	STZ $61
 	STZ $62
 	STZ $63
+	STZ $1493|!addr
 	
 	RTL
+	
+main:
+	LDA $0DD9|!addr
+	CMP #$03
+	BNE +
+	LDA #$03
+	STA $0DD5|!addr
++	RTL

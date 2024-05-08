@@ -464,6 +464,7 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 2d8c	0	Can't pass unless spinjumping
 2d8f	0	This block boosts the player upwards.
 31fa	0	Teleport the player via screen exit.
+32bd	0	Set $0dd9 to #$03
 3300	0	BlkMus1.asm
 3301	0	A block which destroys (Baby) Yoshi if touched.
 3525	0	Throw block with infinite uses.
