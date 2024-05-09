@@ -938,7 +938,7 @@ SpriteCode:
 	RTS
 
 .T_hwomp
-	LDA #$01 : STA $7FC0FC
+	LDA $7FC0FC : ORA #$02
 
 	LDA $14 : AND #$1F
 	BNE +
@@ -999,7 +999,7 @@ SpriteCode:
 ;.yposh
 
 .ReturnToPoint
-	LDA #$00 : STA $7FC0FC
+	LDA $7FC0FC : AND #$FD
 	LDA !BossSubTimer,x
 	CMP #$50
 	BCC +
@@ -1048,7 +1048,7 @@ SpriteCode:
 		dw FINISH_SUBSTATE
 
 .timerstuffman
-	LDA #$01 : STA $7FC0FC
+	LDA $7FC0FC : ORA #$02
 	LDA #$40 : STA !BossSubTimer,x
 	LDA #$0E : STA $1DFC|!Base2
 	INC !BossSubStates,x
@@ -1091,7 +1091,7 @@ SpriteCode:
 	db $20,-$20
 
 .TheReurn
-	LDA #$00 : STA $7FC0FC
+	LDA $7FC0FC : AND #$FD
 	JMP .Stool
 
 ;;;;;;;
@@ -2087,28 +2087,29 @@ BombDamage:
 	RTS
 
 .damageboss
-	LDA #$56 : STA !BossDamageTimer,x
-	INC !HealthRam,x
-	
-	LDA !HealthRam,x : TAY
-	LDA FINISH_SUBSTATE_StateLists,y : STA !BossCurrentAttackOffset,x
-	LDA !BossCurrentAttackOffset,x : TAY
-	LDA FINISH_SUBSTATE_BEGIN,y : STA !BossStates,x
-	STZ !BossSubStates,x
-	STZ !BossSubTimer,x
-	STZ !SpriteXSpeed,x : STZ !SpriteYSpeed,x
-	STZ !GroundHit,x
-	
-	JSR KillAllButSelf
-	
-	LDA !HealthRam,x
-	CMP #$05 : BNE .nokillboss
-	LDA #$0B : STA !BossStates,x
-	ASL A : STA !SpriteXLowTarget,x
-	LDA #$FF : STA !BossSubTimer,x
-.nokillboss
-	RTS
+    LDA #$56 : STA !BossDamageTimer,x
+    INC !HealthRam,x
+    
+    LDA !HealthRam,x : TAY
+    LDA FINISH_SUBSTATE_StateLists,y : STA !BossCurrentAttackOffset,x
+    LDA !BossCurrentAttackOffset,x : TAY
+    LDA FINISH_SUBSTATE_BEGIN,y : STA !BossStates,x
+    STZ !BossSubStates,x
+    STZ !BossSubTimer,x
+    STZ !SpriteXSpeed,x : STZ !SpriteYSpeed,x
+    STZ !GroundHit,x
 
+    LDA #$03 : STA !FrameIndex,x ; reset frame
+    
+    JSR KillAllButSelf
+    
+    LDA !HealthRam,x
+    CMP #$05 : BNE .nokillboss
+    LDA #$0B : STA !BossStates,x
+    ASL A : STA !SpriteXLowTarget,x
+    LDA #$FF : STA !BossSubTimer,x
+.nokillboss
+    RTS
 
 KillAllButSelf:
 	PHY
