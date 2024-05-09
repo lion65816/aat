@@ -3,7 +3,7 @@ print "A block that, when touched by the player, will change the background musi
 !SFXFade = $9B			;the number of the VolumeFade sound effect
 !SFXPort = $1DFB		;the port that the above sound effect is available at
 
-!freeram = $18CC|!addr	; Free RAM flag to only show the message once per level.
+!freeram = $18CB|!addr	; Free RAM flag to only show the message once per level.
 
 db $42
 JMP Main : JMP Main : JMP Main
