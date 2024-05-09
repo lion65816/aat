@@ -1,5 +1,6 @@
 load:
 	;JSL MinStatus_load
+	JSL FilterYoshi_load
 	RTL
 
 init:
