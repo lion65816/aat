@@ -4,6 +4,9 @@
 ; must keep carrying it until the end of the level.
 
 main:
+LDA #$03 : STA $1497|!addr
+LDA #$80
+TRB $16
 LDA $1470|!addr
 ORA $148F|!addr
 BNE .carrying
