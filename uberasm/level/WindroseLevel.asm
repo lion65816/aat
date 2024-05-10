@@ -168,6 +168,14 @@ main:
 
     JSR $1E85                       ;Wait for SA-1 to finish
     .return:
+    
+    ;Retry Code
+	LDA $010B|!addr
+	STA $0C
+	LDA $010C|!addr
+	ORA #$04
+	STA $0D
+	JSL MultipersonReset_main
 RTL
 
 SAMain:
