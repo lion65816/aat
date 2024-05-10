@@ -1,8 +1,3 @@
-; Needs to be the same free RAM address as in RequestRetry.asm.
-!RetryRequested = $18D8|!addr
-
-!screen_num = $0D
-
 macro call_library(i)
 	PHB
 	LDA.b #<i>>>16
@@ -13,7 +8,7 @@ macro call_library(i)
 endmacro
 
 init:         	; CURRENTLY HAS THE INIT CODE FOR THE HDMA (MODIFY IF ADDING OTHER FILES)
-	JSL RequestRetry_init
+	JSL start_select_init
 
 	LDA #$17    ;\  BG1, BG2, BG3, OBJ on main screen (TM)
 	STA $212C   ; | 
@@ -75,13 +70,9 @@ init:         	; CURRENTLY HAS THE INIT CODE FOR THE HDMA (MODIFY IF ADDING OTHE
 main:         ; CURRENTLY HAS THE MAIN CODE FROM THE DISABLE FLIGHT FILE
 	STZ $149F|!addr
 
-	; Exit out of the room with a special button combination (A+X+L+R).
-	LDA #%11110000 : STA $00
-	JSL RequestRetry_main
-	LDA !RetryRequested
-	BNE .return
+	JSL start_select_main
 
-	; Otherwise, the room will reload upon death.
+	; Reload the room upon death.
 	LDA $010B|!addr
 	STA $0C
 	LDA $010C|!addr
