@@ -94,7 +94,7 @@
 ; If 1, green and red Koopas/Shells will turn into yellow and blue when the special world is passed (vanilla behavior).
 ; This of course won't apply to the Special Green Shell, like in vanilla.
 ; This also makes Shells with a Koopa inside not draw the eyes and not shake when the Koopa is about to come out of them.
-!SWColorChange      = 1
+!SWColorChange      = 0
 
 ; If the above flag is set, green and red Koopas will turn into yellow and blue Koopas.
 ; Since their properties are not based on their sprite number anymore, but on the Extra Byte 1, when changing their color they'll keep the original properties.
@@ -104,7 +104,7 @@
 
 ; This is the level that, when beaten, triggers the "Special World passed" flag.
 ; Change this to what you change in LM (or leave $125 if you don't change it)
-!SWPassedLevel      = $0105
+!SWPassedLevel      = $00
 
 ; SFX that plays when kicking the sprite.
 !KickedSFX          = $03

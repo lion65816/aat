@@ -430,3 +430,11 @@ db $4B,$0B  ; palette D | originally db $47,$07
 ; Fix Diggin' Flower arm palette.
 org $02CB96|!bank
 	db $4B,$0B		; Use palette D (originally: db $47,$07)
+	
+
+org $02A988	; Change from 10 to 80 to disable the green and red koopa shells
+	db $80		;from becoming yellow and blue after the special world is passed
+org $02A98F	; What sprite Green Koopa becomes after beating Special World
+	db $04
+org $02A995	; What Red Koopa becomes after beating Special World 
+	db $05
