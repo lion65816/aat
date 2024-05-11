@@ -4,9 +4,6 @@
 ; https://sneslab.net/wiki/Offset_Change_Mode
 ; https://nesdoug.com/2022/05/30/other-modes/
 
-; Needs to be the same free RAM address as in RequestRetry.asm.
-!RetryRequested = $18D8|!addr
-
 init:
 	LDA #$02		;\ Activate Mode 2.
 	STA $3E			;/
@@ -59,7 +56,7 @@ init:
 	LDA #$08				;\ enable HDMA channel 3
 	TSB $0D9F|!addr			;/
 
-	JSL RequestRetry_init
+	JSL start_select_init
 
 	; Always keep Demo big.
 	LDA $19
@@ -80,18 +77,14 @@ main:
 	STZ $2111		;\ ...then the starting indices of the horizontal/vertical offset tables.
 	STZ $2112		;/
 
-	; Exit out of SPECIAL rooms with a special button combination (A+X+L+R).
-	LDA #%11110000 : STA $00
-	JSL RequestRetry_main
-	LDA !RetryRequested
-	BNE .return
+	JSL start_select_main
 
 	; Disable L and R buttons.
 	LDA #%00000000 : STA $00
 	LDA #%00110000 : STA $01
 	JSL DisableButton_main
 
-	; Otherwise, the SPECIAL rooms will reload upon death.
+	; Reload the room upon death.
 	LDA $010B|!addr
 	STA $0C
 	LDA $010C|!addr

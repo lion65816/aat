@@ -1,6 +1,3 @@
-; Needs to be the same free RAM address as in RequestRetry.asm.
-!RetryRequested = $18D8|!addr
-
 init:                         ; Code to be inserted INIT
    	REP #$20                  ;\  16 bit mode
    	LDA #$0000                ; | 
@@ -12,7 +9,7 @@ init:                         ; Code to be inserted INIT
    	STA $4334                 ; | 
    	LDA #$08                  ; | 
    	TSB $0D9F|!addr           ; | enable HDMA channel 3
-	JSL RequestRetry_init
+	JSL start_select_init
 	RTL
 	
 .BrightTable:                 ; 
@@ -21,13 +18,9 @@ init:                         ; Code to be inserted INIT
    db $00
 
 main:
-	; Exit out of SPECIAL rooms with a special button combination (A+X+L+R).
-	LDA #%11110000 : STA $00
-	JSL RequestRetry_main
-	LDA !RetryRequested
-	BNE .return
+	JSL start_select_main
 
-	; Otherwise, the SPECIAL rooms will reload upon death.
+	; Reload the room upon death.
 	LDA $010B|!addr
 	STA $0C
 	LDA $010C|!addr

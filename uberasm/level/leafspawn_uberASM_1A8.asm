@@ -12,19 +12,16 @@
 !cluster_y_low = $1E02|!addr
 !cluster_x_low = $1E16|!addr
 
-; Needs to be the same free RAM address as in RequestRetry.asm.
-!RetryRequested = $18D8|!addr
-
 init:
-JSL RequestRetry_init
+	JSL start_select_init
 
-LDA $71						;if castle entrance/no yoshi sign cutscene plays
-CMP #$0A					;don't spawn clusters (if the sublevel you're using should have them, you'll have to use a sprite version)
-BEQ .Re						;
+	LDA $71					;if castle entrance/no yoshi sign cutscene plays
+	CMP #$0A				;don't spawn clusters (if the sublevel you're using should have them, you'll have to use a sprite version)
+	BEQ .Re					;
 
-;PHB
-;PHK
-;PLB
+	;PHB
+	;PHK
+	;PLB
 
 	LDY #!SpikeCount
 -
@@ -65,13 +62,9 @@ InitXSpeed:
 db $06,$F1,$FC,$00,$ED,$FB,$0D,$00,$FF,$0D,$14,$F0,$EF,$0C,$07,$EE,$F5,$00,$04,$F0
 
 main:
-	; Exit out of SPECIAL rooms with a special button combination (A+X+L+R).
-	LDA #%11110000 : STA $00
-	JSL RequestRetry_main
-	LDA !RetryRequested
-	BNE .return
+	JSL start_select_main
 
-	; Otherwise, the SPECIAL rooms will reload upon death.
+	; Reload the room upon death.
 	LDA $010B|!addr
 	STA $0C
 	LDA $010C|!addr
