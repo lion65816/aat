@@ -21,7 +21,7 @@ NameData:
  db "tragic concussions*"
  ;Level 002
  db "                   "
- db " City of Gulp Gulp "
+ db "City of Washed Sin "
  ;Level 003
  db "  Demo in the Sky  "
  db "   (no diamonds)   "
