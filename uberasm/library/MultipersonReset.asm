@@ -1,3 +1,7 @@
+init:
+	STZ $14AF|!addr ;Reset On/Off
+	RTL
+
 main:
 	LDA $71				;\ Skip if not dying.
 	CMP #$09			;|
