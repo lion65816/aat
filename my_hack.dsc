@@ -244,6 +244,10 @@
 7c6	0	Password door number 1
 7f0	0	Thwomp Crush Block\nA block that shatters when hit by a Thwomp.
 7f1	0	Sprites touching this block will die as if by lava.
+a0e	0	A block which destroys (Baby) Yoshi if touched.
+a1e	0	A block which destroys (Baby) Yoshi if touched.
+a2e	0	A block which destroys (Baby) Yoshi if touched.
+a2f	0	A block which destroys (Baby) Yoshi if touched.
 a72	0	Activates the nearest laser shooter when touched by the player or a sprite.
 a8b	0	A block which destroys (Baby) Yoshi if touched.
 a9b	0	A block which destroys (Baby) Yoshi if touched.
