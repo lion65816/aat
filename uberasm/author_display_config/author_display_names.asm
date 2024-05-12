@@ -89,7 +89,7 @@ db "Big Brawler              [[[[^" ; 133
 db "levelengine              [[[^^" ; 134
 db "4season                  [[[[^" ; 135
 db "4season                  [[[[]" ; 136
-db "Big Brawler              [[[]^" ; 137
+db "Big Brawler              [[[[^" ; 137
 db "Gbreezesunset            [[[]^" ; 138
 db "Big Brawler              [[[[^" ; 139
 db "Gbreezesunset            [[[[^" ; 13A

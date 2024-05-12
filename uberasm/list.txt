@@ -226,7 +226,7 @@ level:
 12C	DisableLeftLR.asm
 12E	digsite.asm
 12F	whales_intro.asm
-130	LevelIntro.asm
+130	LevelIntroV3.asm
 131	LevelIntro.asm
 133	LevelIntro.asm
 134	ceiling.asm

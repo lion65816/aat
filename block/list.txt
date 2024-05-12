@@ -36,6 +36,10 @@
 7C6:25 door_block1.asm
 7F0:130 thwompcrush.asm
 7F1:5 killsprite_lava.asm
+A0E:25 no_yoshi_keep_powerups.asm
+A1E:25 no_yoshi_keep_powerups.asm
+A2E:25 no_yoshi_keep_powerups.asm
+A2F:25 no_yoshi_keep_powerups.asm
 A72:100 laser_both.asm
 A8B:25 no_yoshi_keep_powerups.asm
 A9B:25 no_yoshi_keep_powerups.asm
