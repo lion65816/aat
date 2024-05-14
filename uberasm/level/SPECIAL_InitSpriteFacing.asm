@@ -1,6 +1,7 @@
 init:
 	JSL start_select_init
 	JSL InitSpriteFacing_init
+	JSL MultipersonReset_init
 	RTL
 
 main:

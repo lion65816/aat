@@ -56,6 +56,7 @@ load:
 	RTL
 
 init:
+	JSL MultipersonReset_init
     REP #$20
 
     ;;Mode 7 setup

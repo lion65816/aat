@@ -11,6 +11,7 @@
 ; Uses HDMA channels 3 and 4.
 init:
 	JSL start_select_init
+	JSL MultipersonReset_init
 
 	REP   #$20 ; 16-bit A
 

@@ -25,6 +25,7 @@
 !SkipBonusGame = 1
 
 init:
+	JSL MultipersonReset_init
     ;JSL SimpleHP_init
     ; Code adapted from $0583B8 and $0585FF
     lda $1925|!addr     ;\

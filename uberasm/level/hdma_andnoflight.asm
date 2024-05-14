@@ -9,6 +9,7 @@ endmacro
 
 init:         	; CURRENTLY HAS THE INIT CODE FOR THE HDMA (MODIFY IF ADDING OTHER FILES)
 	JSL start_select_init
+	JSL MultipersonReset_init
 
 	LDA #$17    ;\  BG1, BG2, BG3, OBJ on main screen (TM)
 	STA $212C   ; | 

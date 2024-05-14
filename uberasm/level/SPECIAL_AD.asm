@@ -2,6 +2,7 @@ init:
 	JSL start_select_init
 	JSL freescrollbabey_init
 	JSL ConstantAutoscrollAD_init
+	JSL MultipersonReset_init
 	RTL
 
 main:

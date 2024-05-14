@@ -10,6 +10,7 @@ HeightTable:
 RiseTable:
 	db $FF,$01
 init:
+	JSL MultipersonReset_init
 	stz !RAM_switch
 	LDA #!DEF_lowest
 	STA $24

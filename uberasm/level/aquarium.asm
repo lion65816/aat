@@ -13,7 +13,7 @@
 !down = 3
 
 init:
-
+	JSL MultipersonReset_init
 	STZ $1411|!addr
 
 

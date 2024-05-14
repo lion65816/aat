@@ -119,6 +119,7 @@ function offset(addr,x) = (addr)+(4*(!layer-1))+(2*(x))
 
 init:
     jsl start_select_init
+    JSL MultipersonReset_init
 
     stz !phase
     stz !timer

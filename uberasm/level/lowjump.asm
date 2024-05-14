@@ -2,6 +2,10 @@
 
 !screen_num = $0D
 
+init:
+	JSL MultipersonReset_init
+	RTL
+	
 main:
     LDA ($19B8+!screen_num)|!addr
     STA $0C

@@ -4,6 +4,7 @@ load:
 
 init:
 	JSL SimpleHP_init
+	JSL MultipersonReset_init
 	RTL
 
 !screen_num = $0D

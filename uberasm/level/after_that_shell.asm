@@ -1,7 +1,7 @@
 !screen_num = $0D
 
-load:
-	STZ $14AF|!addr				; Reset switch status to "On".
+init:
+	JSL MultipersonReset_init
 	RTL
 
 init:

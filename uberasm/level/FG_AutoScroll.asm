@@ -20,6 +20,7 @@
 
 init:
 	JSL start_select_init
+	JSL MultipersonReset_init
 	RTL
 
 main:

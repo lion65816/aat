@@ -8,6 +8,7 @@ db $FA,$FB,$FC,$FD
 
 init:
 	JSL start_select_init
+	JSL MultipersonReset_init
 
 	LDX #!sprite_slots
 -

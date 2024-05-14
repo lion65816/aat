@@ -100,6 +100,7 @@ CheckProgress:
 
 init:
 	JSL RequestRetry_init
+	JSL MultipersonReset_init
 
 	STZ $1411|!addr
 	STZ $1412|!addr

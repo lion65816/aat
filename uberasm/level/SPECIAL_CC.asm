@@ -10,6 +10,7 @@ init:                         ; Code to be inserted INIT
    	LDA #$08                  ; | 
    	TSB $0D9F|!addr           ; | enable HDMA channel 3
 	JSL start_select_init
+	JSL MultipersonReset_init
 	RTL
 	
 .BrightTable:                 ; 

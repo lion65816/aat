@@ -1,6 +1,5 @@
 init:
-
-	STZ $14AF|!addr
+	JSL MultipersonReset_init
 	RTL
 
 !screen_num = $0D

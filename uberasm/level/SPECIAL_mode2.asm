@@ -5,6 +5,7 @@
 ; https://nesdoug.com/2022/05/30/other-modes/
 
 init:
+	JSL MultipersonReset_init
 	LDA #$02		;\ Activate Mode 2.
 	STA $3E			;/
 
