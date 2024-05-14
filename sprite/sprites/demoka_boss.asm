@@ -194,13 +194,13 @@ Intro_Sequence:
 ;=============================================
 
 X_Accel:
-	db $02,$FE,$06,$FA		;> The horizontal acceleration of the sprite.
+	db $02,$FE,$04,$FC		;> The horizontal acceleration of the sprite.
 Y_Accel:
-	db $02,$FE,$06,$FA		;> The vertical acceleration of the sprite.
+	db $02,$FE,$04,$FC		;> The vertical acceleration of the sprite.
 Max_X_Speed:
-	db $28,$D8,$38,$C8		;> The maximum horizontal speed of the sprite.
+	db $28,$D8,$48,$B8		;> The maximum horizontal speed of the sprite.
 Max_Y_Speed:
-	db $18,$E8,$28,$D8		;> The maximum vertical speed of the sprite.
+	db $18,$E8,$38,$C8		;> The maximum vertical speed of the sprite.
 
 Phase_3:
 	LDA !14C8,x
@@ -302,8 +302,6 @@ Phase_4:
 	BEQ +
 	JMP .return
 +
-	LDA #$00
-	%SubOffScreen()
 
 	LDA $14				;\ Every 128 frames,
 	CMP #$80			;| spawn a Homing Bullet.
@@ -368,14 +366,14 @@ Phase_4:
 	INY #2				;/
 +
 	LDA XSpeeds,y
-	STA !B6,x
+	STA !sprite_speed_x,x
 	LDY !151C,x
 	LDA !Enraged		;\ While enraged, increase the Y speed.
 	BEQ +				;|
 	INY #2				;/
 +
 	LDA YSpeeds,y
-	STA !AA,x
+	STA !sprite_speed_y,x
 
 	JSL $01802A			;> Update X/Y position, including gravity and block interaction.
 .return:
@@ -404,6 +402,8 @@ Enrage:
 	BEQ .phase6
 	BNE .return
 .phase5
+	STZ !sprite_speed_x,x
+	STZ !sprite_speed_y,x
 	STZ !SpawnedBullets	;> Reset this flag just in case the boss becomes enraged during phase 8.
 	LDA $14				;\ Play the coin SFX
 	AND #$02			;| every other frame.
@@ -424,6 +424,8 @@ Enrage:
 	INC !PhaseNumber
 	INC !Enraged		;> !Enraged = $02
 .phase6
+	STZ !sprite_speed_x,x
+	STZ !sprite_speed_y,x
 	LDA !154C,x
 	CMP #$80
 	BEQ .change_to_phase3
@@ -466,6 +468,8 @@ Spawn_Bullets:
 	BEQ .phase8
 	JMP .return
 .phase7
+	STZ !sprite_speed_x,x
+	STZ !sprite_speed_y,x
 	JSR BulletWarning
 
 	LDA $14				;\ Play the coin SFX
@@ -486,6 +490,8 @@ Spawn_Bullets:
 	STA !154C,x
 	INC !PhaseNumber
 .phase8
+	STZ !sprite_speed_x,x
+	STZ !sprite_speed_y,x
 	LDA !154C,x
 	CMP #$80
 	BNE +
@@ -526,8 +532,8 @@ Spawn_Bullets:
 	LDA BulletHeightHigh,y
 	STA !14D4,x
 	LDA #$00
-	STA !B6,x
-	STA !AA,x
+	STA !sprite_speed_x,x
+	STA !sprite_speed_y,x
 	LDA #$01
 	STA !SpawnedBullets
 	INY
@@ -564,8 +570,8 @@ Spawn_Bullets:
 	LDA BanzaiHeightHigh,y
 	STA !14D4,x
 	LDA #$00
-	STA !B6,x
-	STA !AA,x
+	STA !sprite_speed_x,x
+	STA !sprite_speed_y,x
 	LDA #$01
 	STA !SpawnedBullets
 	INY
@@ -592,7 +598,6 @@ Death_Sequence:
 	BEQ .phase9
 	CMP #$0A
 	BEQ .phase10
-	;BNE .return
 	JMP .return
 .phase9
 	PHX
