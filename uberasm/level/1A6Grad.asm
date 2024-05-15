@@ -9,9 +9,13 @@
 
 ; Set up the HDMA gradient.
 ; Uses HDMA channels 3 and 4.
+
+load:
+	JSL MultipersonReset_load
+	RTL
+	
 init:
 	JSL start_select_init
-	JSL MultipersonReset_init
 
 	REP   #$20 ; 16-bit A
 

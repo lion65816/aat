@@ -1,7 +1,10 @@
+load:
+	JSL MultipersonReset_load
+	RTL
+
 init:
 	JSL InitSpriteFacing_init
 	JSL start_select_init
-	JSL MultipersonReset_init
 	RTL
 
 main:

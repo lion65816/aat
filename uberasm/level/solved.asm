@@ -1,5 +1,6 @@
-init:
-	JSL MultipersonReset_init
+
+load:
+	JSL MultipersonReset_load
 	RTL
 
 !screen_num = $0D

@@ -9,8 +9,10 @@ HeightTable:
 	db !DEF_lowest-1,!DEF_highest+1
 RiseTable:
 	db $FF,$01
+load:
+	JSL MultipersonReset_load
+	RTL
 init:
-	JSL MultipersonReset_init
 	stz !RAM_switch
 	LDA #!DEF_lowest
 	STA $24

@@ -1,7 +1,7 @@
 !screen_num = $0D
 
 load:
-	JSL MultipersonReset_init	;> Reset switch status to "On".
+	JSL MultipersonReset_load	;> Reset switch status to "On".
 	RTL
 
 init:

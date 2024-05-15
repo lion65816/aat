@@ -12,9 +12,12 @@
 !cluster_y_low = $1E02|!addr
 !cluster_x_low = $1E16|!addr
 
+load:
+	JSL MultipersonReset_load
+	RTL
+
 init:
 	JSL start_select_init
-	JSL MultipersonReset_init
 
 	LDA $71					;if castle entrance/no yoshi sign cutscene plays
 	CMP #$0A				;don't spawn clusters (if the sublevel you're using should have them, you'll have to use a sprite version)

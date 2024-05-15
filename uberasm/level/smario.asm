@@ -1,6 +1,9 @@
+load:
+	JSL MultipersonReset_load
+	RTL
+	
 init:
 	JSL start_select_init
-	JSL MultipersonReset_init
 
 	LDA $19
 	CMP #$03

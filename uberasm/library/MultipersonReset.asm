@@ -1,4 +1,4 @@
-init:
+load:
 	STZ $14AF|!addr ;Reset On/Off
 	RTL
 

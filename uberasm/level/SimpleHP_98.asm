@@ -24,8 +24,11 @@
 ; 1 = if getting 100 bonus stars, you'll be teleported anyway
 !SkipBonusGame = 1
 
+load:
+	JSL MultipersonReset_load
+	RTL
+
 init:
-	JSL MultipersonReset_init
     ;JSL SimpleHP_init
     ; Code adapted from $0583B8 and $0585FF
     lda $1925|!addr     ;\

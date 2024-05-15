@@ -53,10 +53,11 @@ math round off
 
 load:
 	JSL NoStatus_load
+	JSL MultipersonReset_load
 	RTL
 
 init:
-	JSL MultipersonReset_init
+
     REP #$20
 
     ;;Prevent left wall from bouncing the player and right wall from killing the player,

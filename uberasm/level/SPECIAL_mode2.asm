@@ -4,8 +4,11 @@
 ; https://sneslab.net/wiki/Offset_Change_Mode
 ; https://nesdoug.com/2022/05/30/other-modes/
 
+load:
+	JSL MultipersonReset_load
+	RTL
+
 init:
-	JSL MultipersonReset_init
 	LDA #$02		;\ Activate Mode 2.
 	STA $3E			;/
 

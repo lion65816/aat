@@ -1,7 +1,10 @@
+load:
+	JSL MultipersonReset_load
+	RTL
+	
 init:
 	JSL start_select_init
 	JSL ashspawn_uberASM_Init
-	JSL MultipersonReset_init
 	RTL
 
 main:

@@ -117,9 +117,12 @@ function offset(addr,x) = (addr)+(4*(!layer-1))+(2*(x))
 !speed       #= offset($1446|!addr,!direction)
 !fraction    #= offset($144E|!addr,!direction)
 
+load:
+	JSL MultipersonReset_load
+	RTL
+	
 init:
     jsl start_select_init
-    JSL MultipersonReset_init
 
     stz !phase
     stz !timer

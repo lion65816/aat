@@ -98,9 +98,12 @@ CheckProgress:
 
 ;----------------------------------------------------------------------------- ACTUAL CODE BELOW (NO TOUCH)
 
+load:
+	JSL MultipersonReset_load
+	RTL
+	
 init:
 	JSL RequestRetry_init
-	JSL MultipersonReset_init
 
 	STZ $1411|!addr
 	STZ $1412|!addr

@@ -17,9 +17,12 @@
 !Left = 0	:	!Right = 1	:	!Up = 2		:	!Down = 3
 !DiagUL = 4	:	!DiagUR = 5	:	!DiagDL = 6	:	!DiagDR = 7
 
+load:
+	JSL MultipersonReset_load
+	RTL
+	
 init:
 	JSL start_select_init
-	JSL MultipersonReset_init
 	RTL
 
 main:

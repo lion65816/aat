@@ -1,9 +1,12 @@
 !SprSize = $16		;> Number of SA-1 sprite slots ($16 = 22).
 
+load:
+	JSL MultipersonReset_load
+	RTL
+	
 init:
 	JSL FilterFireCape_init
 	JSL start_select_init
-	JSL MultipersonReset_init
 	RTL
 
 main:

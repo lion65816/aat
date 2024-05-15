@@ -12,8 +12,11 @@
 !up = 2
 !down = 3
 
+load:
+	JSL MultipersonReset_load
+	RTL
+	
 init:
-	JSL MultipersonReset_init
 	STZ $1411|!addr
 
 

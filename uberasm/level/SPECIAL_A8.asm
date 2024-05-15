@@ -1,7 +1,9 @@
+load:
+	JSL MultipersonReset_load
+	RTL
 init:
 	JSL start_select_init
 	JSL freescrollbabey_init
-	JSL MultipersonReset_init
 	RTL
 
 main:

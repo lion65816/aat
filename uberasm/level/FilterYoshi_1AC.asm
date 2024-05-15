@@ -1,9 +1,6 @@
 load:
 	JSL FilterYoshi_load
-	RTL
-	
-init:
-	JSL MultipersonReset_init
+	JSL MultipersonReset_load
 	RTL
 	
 main:

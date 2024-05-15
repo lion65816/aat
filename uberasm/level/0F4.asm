@@ -6,9 +6,12 @@ db $3F,$40
 XSpd:
 db $FA,$FB,$FC,$FD
 
+load:
+	JSL MultipersonReset_load
+	RTL
+
 init:
 	JSL start_select_init
-	JSL MultipersonReset_init
 
 	LDX #!sprite_slots
 -

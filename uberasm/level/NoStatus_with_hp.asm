@@ -1,10 +1,10 @@
 load:
+	JSL MultipersonReset_load
 	JSL NoStatus_load
 	RTL
 
 init:
 	JSL SimpleHP_init
-	JSL MultipersonReset_init
 	RTL
 
 !screen_num = $0D
