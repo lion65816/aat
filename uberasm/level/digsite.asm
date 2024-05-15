@@ -86,4 +86,17 @@ main:
 +
 	DEX
 	BPL -
+
+	LDX #!SprSize-1
+-
+	LDA !9E,x			;\ Check if the sprite is a Green Goopa (in this case, a Green Shell).
+	CMP #$04			;|
+	BNE +				;/
+	LDA !167A,x			;\ Modify fourth tweaker byte to process while off screen
+	ORA #$04			;| (i.e., the shell won't despawn).
+	STA !167A,x			;/
++
+	DEX
+	BPL -
+
 	RTL
