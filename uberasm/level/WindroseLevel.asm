@@ -59,6 +59,11 @@ init:
 	JSL MultipersonReset_init
     REP #$20
 
+    ;;Prevent left wall from bouncing the player and right wall from killing the player,
+    ;;just in case Mall rooms A4 or 14E were played first (which don't reset the Layer 1 X speed scrolling values).
+    STZ $1446|!addr
+    STZ $144E|!addr
+
     ;;Mode 7 setup
     LDX.b #$07 : STX $3E            ;Mode 7
     LDA #$2020 : STA $38            ;Default scaling for both axes
