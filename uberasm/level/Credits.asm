@@ -1,7 +1,7 @@
 ;================================;
 ;quickass autowalk by mathos edited by Tattletale
 ;================================;
-!Speed = $14    ; player x speed: see https://www.smwcentral.net/?p=nmap&m=smwram#7E007B for details
+!Speed = $2A    ; player x speed: see https://www.smwcentral.net/?p=nmap&m=smwram#7E007B for details
 !Direction = 1  ; 1 = right, 0 = left : see https://www.smwcentral.net/?p=nmap&m=smwram#7E0076 for details
                 ; make sure it's coherent with your speed !
 
@@ -34,9 +34,27 @@ load:
 init:
     LDA.b #!Direction
 	STA $76
+	STZ $1696|!addr
+	STZ $18F6|!addr
 	RTL
 
 main:
+	LDA #$08
+	STA $1496|!addr
+	INC $1696|!addr
+	LDA $1696|!addr
+	CMP #$08
+	BNE +
+	STZ $1696|!addr
+	INC $18F6|!addr
+	LDA $18F6|!addr
+	CMP #$03
+	BNE +
+	STZ $18F6|!addr
+
+	+
+	LDA $18F6|!addr
+	STA $13E0|!addr
 	LDA $71
 	CMP #$06
 	BNE +

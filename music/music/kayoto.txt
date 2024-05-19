@@ -1,5 +1,5 @@
 ; Set to 0 to make it not loop like the original.
-#define LOOP 1
+#define LOOP 0
 
 #amk 2
 

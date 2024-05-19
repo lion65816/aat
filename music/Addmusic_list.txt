@@ -219,3 +219,4 @@ D7  Let's Meet in the Mysterious Forest.txt
 D8  Secret of Evermore - Menu.txt
 D9  Bird Is Float.txt
 DA  rainbowresort.txt
+DB  Wharf (Surface).txt
