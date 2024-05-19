@@ -5,7 +5,7 @@
 ;	this is NOT a level number, but a screen number! so if this is $00, the pipe you take you to the
 ;	exit set up in screen 00.
 
-	!ScreenExit = $14
+	!ScreenExit = $15
 
 ;USE A CONDITION?
 ;	0 = no, 1 = yes

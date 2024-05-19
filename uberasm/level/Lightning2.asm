@@ -7,6 +7,14 @@ load:
 	RTL
 	
 main:
+		; Reload the room upon death.
+		LDA $010B|!addr
+		STA $0C
+		LDA $010C|!addr
+		ORA #$04
+		STA $0D
+		JSL MultipersonReset_main
+		
 		PHX
 		LDX.W $0681|!addr
 		LDA.B #$10

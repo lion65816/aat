@@ -1,0 +1,72 @@
+#am4
+;txt generated with AddMML
+#0
+w250 t40 @16 v255 y12
+$EF $3F $20 $20
+$F1 $08 $63 $00
+$F2 $F8 $20 $20
+q7F
+r=72o5 c8f8g8a=72c8
+/
+g=72c8f2^4e8f8f=72g16a16e4c16d16e8d2^4f8e16f=84f8e8d16c4^16g4g8e16f4^16f8g8a=72a+8a8g16f4^16f=72e16d16e8
+(1)[r8]67
+o4 f8r2g8a8a+8a=72e8e4f8e8d+4>c=72<a8a+8>c8c=72<b8b2a+2>c4d4c2<g=72a8a+2>g4f8g8e2^8c8f8g8a=72c8
+
+#1
+@0 v160 y8 q7F r2^4o4 a8c8f8c8
+/
+g8c8e8c8f8<a8>d8f8a8d8e4f8<a+8>d8f8e8<g8>c8e8d8<f8a+8>d8f8<a8>e4d8<g8a+8>d8e8<g8>c8e8e8<g8>c8e8f16<a16>d16f16e16<g16>c16e16f8<f8a+8>d8f8<a8>d8f8c16<g16>c16d16e16f16e16d16e2
+(2)[r2]32
+o4 a8c8f8c8
+
+#2
+@16 v170 y8 q7F r2^4o4 f2
+/
+e2d2^4c4d2c2<a+2^4>c4d2e2e2f4e4d2d2c2^2
+(2)16
+(3)[o5 f16r16]8
+(4)[o5 e16r16]8
+(5)[o5 d+16r16]8
+(6)[o5 d16r16]16
+(4)8
+(5)8
+(4)8
+o4 f2
+
+#3
+@11 v180 y10 q7F r2^2^4
+/
+
+(1)57
+o5 c8f8g8a=72c8g=72c8f2^4e8f8f=72g16a16e4c16d16e8d2^4f8e16f=84f8e8d16c4^16g4g8e16f4^16f8g8a=72a+8a8g16f4^16f=72e16d16e2r2^2^8<e8f8g8a4>c4a8a+8g2d+8f8g2^2<g2a4a+4g=72f8e8g8>c8e8g4a4a+4a8a+8g2>c2r2
+
+#4
+@1 v160 y10 q7F r2^4o2 f2
+/
+
+(7)[o2 c2d2^4c4<a+2a2g2^4a4a+2>c=72<a+8a2>d4c4<a+2a2]1
+o2 c2^2f2
+(7)1
+g=72f8e4>c4
+(2)8
+<<g2^2>c2^2d+2^2c2^2f2
+
+#5
+@16 v200 y10 q7F r2^4o4 a8c8f8c8
+/
+g8c8e8c8f8<a8>d8f8a8d8e4f8<a+8>d8f8e8<g8>c8e8d8<f8a+8>d8f8<a8>e4d8<g8a+8>d8e8<g8>c8e8e8<g8>c8e8f16<a16>d16f16e16<g16>c16e16f8<g8>c8d8f8<a8>d8f8c16<g16>c16d16e16f16e16d16e2
+(2)32
+a8c8f8c8
+
+#6
+@1 v160 y10 q7F r2^2^4
+/
+
+(2)14
+o3 g2f2>c=72<a+8a=72g8f4>e8c8d2g4f16e16d16c16<a+=72a8g4a4a+8>c8d8f8g4a8a+8>c4c8<a8f8e8d8c8d4<f4>f8g16a=36a+16>c16c4<a+16a16g16f16e2
+(2)17
+
+#7
+?1
+
+?2
