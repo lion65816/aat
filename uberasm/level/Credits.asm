@@ -22,6 +22,9 @@
 ;a = A; x = X; l = L; r = R, - = null/unused.
 !NewlyPressedDisabler18 = %00000000
 
+;Free RAM addresses to help control the walking animation/pose for Demo.
+!FreeRAM1 = $1696|!addr
+!FreeRAM2 = $18F6|!addr
 
 ;===========================================================================================================================================
 
@@ -29,31 +32,33 @@ load:
 	JSL NoStatus_load
 	LDA #$01		;\ Always keep Demo big.
 	STA $19			;/
+	LDA #$03		;\ Give Iris Demo's palette.
+	STA $1477|!addr	;/ Handled by global_code.asm.
 	RTL
 
 init:
     LDA.b #!Direction
 	STA $76
-	STZ $1696|!addr
-	STZ $18F6|!addr
+	STZ !FreeRAM1
+	STZ !FreeRAM2
 	RTL
 
 main:
 	LDA #$08
 	STA $1496|!addr
-	INC $1696|!addr
-	LDA $1696|!addr
+	INC !FreeRAM1
+	LDA !FreeRAM1
 	CMP #$08
 	BNE +
-	STZ $1696|!addr
-	INC $18F6|!addr
-	LDA $18F6|!addr
+	STZ !FreeRAM1
+	INC !FreeRAM2
+	LDA !FreeRAM2
 	CMP #$03
 	BNE +
-	STZ $18F6|!addr
+	STZ !FreeRAM2
 
 	+
-	LDA $18F6|!addr
+	LDA !FreeRAM2
 	STA $13E0|!addr
 	LDA $71
 	CMP #$06
