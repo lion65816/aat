@@ -30,6 +30,14 @@ load:
 
 init:
     ;JSL SimpleHP_init
+    JSL start_select_init
+
+    ; If Small Demo, filter to Big Demo.
+    LDA $19
+    BNE +
+    LDA #$01
+    STA $19
++
     ; Code adapted from $0583B8 and $0585FF
     lda $1925|!addr     ;\
     cmp #$09            ;|
@@ -103,12 +111,16 @@ init:
 
 main:
     ;JSL SimpleHP_main
+    JSL start_select_main
+
+    ; Reload the room upon death.
     LDA $010B|!addr
     STA $0C
     LDA $010C|!addr
     ORA #$04
     STA $0D
     JSL MultipersonReset_main
+
     lda $1493|!addr     ;\ If the level isn't ending, return.
     beq .return         ;/
 if !TeleportType == 1
