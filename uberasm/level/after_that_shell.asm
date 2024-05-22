@@ -7,6 +7,13 @@ load:
 init:
 	JSL freescrollbabey_init
 	JSL RequestRetry_init
+
+	; If Small Demo, filter to Big Demo.
+	LDA $19
+	BNE +
+	LDA #$01
+	STA $19
++
 	RTL
 
 main:
