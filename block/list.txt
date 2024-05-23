@@ -223,6 +223,10 @@ EFF:130 SSP_Tiles/pass_if_in_pipe.asm
 1B92:130 4season_msg.asm
 1B93:130 4season_msg02.asm
 1C90:130 sprite_solid_coin_pass.asm
+1C91:25 one_way_right.asm
+1C92:25 one_way_left.asm
+1C93:25 one_way_down.asm
+1C94:25 one_way_up_coin_pass.asm
 1D0E:130 weak_break_block.asm
 1D0F:130 donutblk_solid.asm
 1D93:25 teleport.asm

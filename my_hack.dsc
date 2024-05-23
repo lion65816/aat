@@ -432,6 +432,10 @@ eff	0	SSP_Tiles/pass_if_in_pipe.asm
 1b92	0	Displays level message 1.
 1b93	0	Displays level message 2.
 1c90	0	A block that will act like tile 25 for Moving Coins
+1c91	0	Solid if anything goes left
+1c92	0	Solid if anything goes right
+1c93	0	Solid if anything goes up
+1c94	0	Solid if anything goes down (except for Moving Coin sprites)
 1d0e	0	weak_break_block.asm
 1d0f	0	A Donut Lift, which will fall shortly after being stepped on.
 1d93	0	Teleports the player.
