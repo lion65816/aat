@@ -579,8 +579,8 @@ print "MAIN ",pc
 ;; the first 4 tiles are all $A2, but the second is flipped horizontally, third vertically, and fourth horizontally and vertically
 
 .tilemap
-	db $86,$FC,$8A,$FC,$FF	; SMB3
-	db $C0,$FC,$E0,$FC,$FF
+	db $00,$02,$20,$22,$FF	; SMB3
+	db $04,$06,$24,$26,$FF
 
 	db $00,$02,$20,$22,$A8	; SMM2; idle (AAT edit: use two frames in SP3)
 	db $04,$06,$24,$26,$A8
