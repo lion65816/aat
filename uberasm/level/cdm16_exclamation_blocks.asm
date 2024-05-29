@@ -25,8 +25,8 @@
 ; If you set the above to !Both then add +4 to get all the inverted values.
 ; Note that for internal limitations, you can only enter multiples of 4 except if !SwitchFlags
 ; is set to !Both in which you need to use a multiple of eight instead.
-!CDM16Flags = $10
-
+!CDM16Flags = $00
+!CDM16FlagsAlt = $08
 
 ; Internal defines, do not change!
 
@@ -36,39 +36,48 @@
 
 !CDM16Ram #= $7FC060+(!CDM16Flags>>3)
 !CDM16Upper #= !CDM16Flags&$4
+!CDM16RamAlt #= $7FC060+(!CDM16FlagsAlt>>3)
+!CDM16UpperAlt #= !CDM16FlagsAlt&$4
 
 if !SwitchFlags == !Both && !CDM16Flags&7 > 0
 	warn "\!CDM16Flag is not divisible by 8, rounding down to nearest multiple of 8."
 elseif !CDM16Flags&3 > 0
 	warn "\!CDM16Flag is not divisible by 4, rounding down to nearest multiple of 4."
 endif
+
+if !SwitchFlags == !Both && !CDM16FlagsAlt&7 > 0
+	warn "\!CDM16FlagAlt is not divisible by 8, rounding down to nearest multiple of 8."
+elseif !CDM16FlagsAlt&3 > 0
+	warn "\!CDM16FlagAlt is not divisible by 4, rounding down to nearest multiple of 4."
+endif
+
 if !SwitchFlags > 2
 	error "Error, \!CDM16Flag is an invalid value!"
 endif
 
-load:
-	; Disable the status bar.
-	; Otherwise, there's a conflict with manual trigger 0, which displays the Demo/Iris head.
-	JSL NoStatus_load
-
+init:
 	; Lock the screen.
 	STZ $1A
 	STZ $1462|!addr
-	LDA $95
-	STA $1B
-	STA $1463|!addr
-	RTL
-
-init:
-    STZ $1411|!addr			;> Disable horizontal scroll.
+	STZ $1411|!addr			;> Disable horizontal scroll.
 	LDA $95					;\ Disable vertical scroll
 	BNE +					;| if the screen is 00.
 	STZ $1412|!addr			;/
 +
-	JSR check_switch_status
+	STA $1B
+	STA $1463|!addr
+	REP #$20			;Fix layer 2 position
+	LDA $1462|!addr
+	LSR
+	STA $1466|!addr
+	STA $1E
+	SEP #$20
 	RTL
 
-main:
+load:
+	; Disable the status bar.
+	JSL NoStatus_load
+
 	STZ $00
 	LDX #$03
 -	LDA $1F27|!addr,x
@@ -103,52 +112,39 @@ else
 	endif
 endif
 	STA !CDM16Ram
-	
-	;JSR check_switch_status
+
+	STZ $00
+	LDX #$03
+-	LDA $0DC3|!addr,x	;set in levelASM of each sublevel containing a switch
+	LSR
+	ROL $00
+	DEX
+	BPL -
+if !SwitchFlags == !Both
+	LDA $00
+	ASL #4
+	ORA $00
+	EOR #$F0
+	STA !CDM16RamAlt
+else
+	if !CDM16UpperAlt
+		LDA $00
+		ASL #4
+		STA $00
+		LDA !CDM16RamAlt
+		AND #$0F
+		ORA $00
+		if !SwitchFlags == !Inverted
+			EOR #$F0
+		endif
+	else
+		LDA !CDM16RamAlt
+		AND #$F0
+		ORA $00
+		if !SwitchFlags == !Inverted
+			EOR #$0F
+		endif
+	endif
+endif
+	STA !CDM16RamAlt
 	RTL
-
-check_switch_status:
-	; Brown block gates to the switches.
-    LDA $0DC3|!addr			;\ Green Switch
-	BEQ +					;| Note: Free RAM set in 057.asm.
-	LDA #$01 : STA $7FC072	;|
-	LDA #$01 : STA $7FC07A	;/
-+
-	LDA $0DC4|!addr			;\ Yellow Switch
-	BEQ +					;| Note: Free RAM set in FilterYoshi_15E.asm.
-	LDA #$01 : STA $7FC073	;|
-	LDA #$01 : STA $7FC07B	;/
-+
-	LDA $0DC5|!addr			;\ Blue Switch
-	BEQ +					;| Note: Free RAM set in BabaBlocks1D7.asm.
-	LDA #$01 : STA $7FC074	;|
-	LDA #$01 : STA $7FC07C	;/
-+
-	LDA $0DC6|!addr			;\ Red Switch
-	BEQ +					;| Note: Free RAM set in 1BA.asm.
-	LDA #$01 : STA $7FC075	;|
-	LDA #$01 : STA $7FC07D	;/
-+
-
-	; Switch block indicators (pressed/unpressed)
-	LDA $1F27|!addr			;\ Green Switch
-	BEQ +					;|
-	LDA #$01 : STA $7FC070	;|
-	LDA #$01 : STA $7FC078	;/
-+
-	LDA $1F28|!addr			;\ Yellow Switch
-	BEQ +					;|
-	LDA #$01 : STA $7FC071	;|
-	LDA #$01 : STA $7FC079	;/
-+
-	LDA $1F29|!addr			;\ Blue Switch
-	BEQ +					;|
-	LDA #$01 : STA $7FC076	;|
-	LDA #$01 : STA $7FC07E	;/
-+
-	LDA $1F2A|!addr			;\ Red Switch
-	BEQ +					;|
-	LDA #$01 : STA $7FC077	;|
-	LDA #$01 : STA $7FC07F	;/
-+
-	RTS
