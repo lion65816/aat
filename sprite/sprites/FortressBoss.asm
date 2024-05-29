@@ -342,53 +342,46 @@ endif
 !maxtile_finish_oam			= $0084B4
 
 ;######################################
-;############## Defines ###############
+;########### Boss Defines #############
 ;######################################
+!SFXBuffer					= !SpriteDecTimer3
+!BossDamageTimer			= !SpriteDecTimer4
+!IntroTimer_Buffer			= !SpriteDecTimer5
+!IntroTimer					= !SpriteDecTimer6
+!BossSubTimer				= !SpriteDecTimer7
 
-!FrameIndex			= !SpriteMiscTable13
-!GlobalFlip			= !SpriteMiscTable5
-
-!HealthRam			= !SpriteMiscTable3
-
-!BossDamageTimer	= !SpriteDecTimer4
-
-!IntroTimer			= !SpriteDecTimer6
-!IntroTimer_Buffer	= !SpriteDecTimer5
-!GroundHit			= !SpriteMiscTable10
-!BossStates			= !SpriteMiscTable11
-!BossSubStates		= !SpriteMiscTable12
-
-!SpriteXLowTarget = !SpriteMiscTable6
-!SpriteXHighTarget = !SpriteMiscTable7
-!SpriteYLowTarget = !SpriteMiscTable8
-!SpriteYHighTarget = !SpriteMiscTable9
-
-!BossCurrentAttackOffset = !SpriteMiscTable14
-
-!BossSubTimer		= !SpriteDecTimer7
-
-
-!MissileAnimation		= !SpriteMiscTable10
-!MissileType			= !SpriteMiscTable11
-!MissilePos				= !SpriteMiscTable12
-
-!PencilState			= !BossStates
-!PencilTimer			= !IntroTimer
-
+;!SpriteMiscTable1 - DO NOT USE
+;!SpriteMiscTable2 - DO NOT USE
+!HealthRam					= !SpriteMiscTable3
+!SFXToPlay					= !SpriteMiscTable4; - unused originally
+!GlobalFlip					= !SpriteMiscTable5
+!SpriteXLowTarget			= !SpriteMiscTable6
+!SpriteXHighTarget			= !SpriteMiscTable7
+!SpriteYLowTarget			= !SpriteMiscTable8
+!SpriteYHighTarget			= !SpriteMiscTable9
+!GroundHit					= !SpriteMiscTable10
+!BossStates					= !SpriteMiscTable11
+!BossSubStates				= !SpriteMiscTable12
+!FrameIndex					= !SpriteMiscTable13
+!BossCurrentAttackOffset	= !SpriteMiscTable14
+!SFXBank					= $418800; - noob boss ram whoa
 !SpriteInit_Because_ThisisDumb		= !SpriteMiscTable15
+
+;######################################
+;########## Attack Defines ############
+;######################################
+!MissileAnimation			= !SpriteMiscTable10
+!MissileType				= !SpriteMiscTable11
+!MissilePos					= !SpriteMiscTable12
+
+!PencilState				= !BossStates
+!PencilTimer				= !IntroTimer
+
 
 ;######################################
 ;########### Init Routine #############
 ;######################################
 print "INIT ",pc
-;	LDA $18CC|!Base2
-;	BNE +
-;	LDX #$00
-;	INC $18CC|!Base2
-;+
-;	STZ !WhatSlotToBeIn,x
-;	LDA #$24 : STA !BossCurrentAttackOffset,x
-
 	; uncomment these to kill boss right away (test)
 ;		LDA #$05 : STA !HealthRam,x
 ;		LDA #$0B : STA !BossStates,x
@@ -407,13 +400,13 @@ print "INIT ",pc
 
 	LDA #$00
 	STA !GlobalFlip,x
+	%invoke_snes(.setthedumbramsto00)
+RTL
+.setthedumbramsto00
+	LDA #$00
 	STA $7FC0FC
 	STA $7FC0FD
-	
-	;JSL InitWrapperChangeAnimationFromStart
-    ;Here you can write your Init Code
-    ;This will be excecuted when the sprite is spawned 
-RTL
+	RTL
 
 ;######################################
 ;########## Main Routine ##############
@@ -422,25 +415,12 @@ print "MAIN ",pc
     PHB
     PHK
     PLB
-;	JSR HandleSlot
     JSR SpriteCode
     JSR GraphicRoutine    ; why not do this?
 	JSR DISPLAY_HEALTH
     PLB
 RTL
 
-HandleSlot:
-;	LDA !WhatSlotToBeIn,x
-;	TAX
-;	STA !WhatSlotToBeIn,x
-;
-;RTS
-	
-
-
-;>Routine: SpriteCode
-;>Description: This routine excecute the logic of the sprite
-;>RoutineLength: Short
 WhatSprite:
 	db $00,$1E,$2A,$2B,$2C
 Return:
@@ -460,32 +440,16 @@ SpriteCode:
 	; $03 - Bolder Big
 	; $04 - Pencil (Deadly)
 
-; First frame in sprite code, essentially an init but actually functional
+; First frame in sprite code, essentially an init but actually functional (for some reason)
 	LDA !SpriteInit_Because_ThisisDumb,x
 	BNE +
 	INC !SpriteInit_Because_ThisisDumb,x
-
-; HATE that I can't do this
-	; LDA $18CC|!Base2
-	; BNE ++
-	; CPX #$00
-	; BEQ ++
-	; STZ $01 : STZ $00
-	; STZ $03 : STZ $02
-	;;;;LDA #$00 : STA $04
-	; LDA !CustomSpriteNumber,x : SEC : %SpawnSprite();Safe()
-	; STZ !14C8,x
-	; RTS
- ; ++	
-	; INC $18CC|!Base2
 
 	LDA !extra_byte_1,x ; simplest way of doing it imo
 	TAY
 	LDA WhatSprite,y
 	STA !FrameIndex,x
 +
-
-    ;Here you can put code that will be excecuted each frame even if the sprite is locked
 
     LDA !SpriteStatus,x			        
 	CMP #$08                            ;if sprite dead return
@@ -497,7 +461,7 @@ SpriteCode:
     %SubOffScreen()
 
     JSR InteractMarioSprite
-	LDA !FrameIndex,x
+	LDA !FrameIndex,x ; 
 	JSL $0086DF|!BankB
 		dw .Faro
 		dw .Faro
@@ -636,7 +600,7 @@ SpriteCode:
 	STA $18E6|!Base2
 	JMP .IsDamaged
 +
-	LDA #$00 : STA $7FC0FD
+	%invoke_snes(.set7fc0fdto0bs)
 	LDA !BossStates,x
 	JSL $0086DF|!BankB
 		dw .Missiles ; DONE
@@ -651,10 +615,17 @@ SpriteCode:
 		dw .RAM ; DONE
 		dw .Wyatt ; .ThwompLand + .Earthquake
 		dw .YouAreDeadDeadDead
+.set7fc0fdto0bs
+	LDA #$00 : STA $7FC0FD
+	RTL
 
 ;;;;;;;
 .MissilesM
+	%invoke_snes(.set7fc0fdto1bs)
+	BRA .Missiles
+.set7fc0fdto1bs
 	LDA #$01 : STA $7FC0FD
+	RTL
 .Missiles
 ;;;;;;;
 	LDA !BossSubStates,x
@@ -717,6 +688,7 @@ SpriteCode:
 		dw .ReturnToGround
 		dw FINISH_SUBSTATE
 .jumpandfly
+	%invoke_snes(.set7fc0fdto1bs)
 	
 	LDA #-$0C : STA !sprite_speed_y,x
 	JSL $01801A|!BankB ; y
@@ -806,6 +778,7 @@ SpriteCode:
 	INC !BossSubStates,x
 	BRA .Bolders
 .flyup
+	%invoke_snes(.set7fc0fdto1bs)
 ;	LDA #$40 : STA !BossSubTimer,x
 	
 	LDA #-$18 : STA !sprite_speed_y,x
@@ -866,7 +839,8 @@ SpriteCode:
 ;;;;;;;
 ;;;;;;;
 .Pencils
-	LDA #$01 : STA $7FC0FD
+;	LDA #$01 : STA $7FC0FD
+	%invoke_snes(.set7fc0fdto1bs)
 
 	LDA !BossSubStates,x
 	JSL $0086DF|!BankB
@@ -937,8 +911,11 @@ SpriteCode:
 	JSR .PrestoItsGusto
 	RTS
 
+.Set02To7FC0FC
+	LDA $7FC0FC : ORA #$02 : STA $7FC0FC
+	RTL
 .T_hwomp
-	LDA $7FC0FC : ORA #$02
+	%invoke_snes(.Set02To7FC0FC)
 
 	LDA $14 : AND #$1F
 	BNE +
@@ -998,8 +975,11 @@ SpriteCode:
 	db $38,$5B,$40,$60
 ;.yposh
 
+.Clear02To7FC0FC
+	LDA $7FC0FC : AND #$FD : STA $7FC0FC
+	RTL
 .ReturnToPoint
-	LDA $7FC0FC : AND #$FD
+	%invoke_snes(.Clear02To7FC0FC)
 	LDA !BossSubTimer,x
 	CMP #$50
 	BCC +
@@ -1037,7 +1017,8 @@ SpriteCode:
 ;;;;;;;
 ;;;;;;;
 .Fire
-	LDA #$01 : STA $7FC0FD
+;	LDA #$01 : STA $7FC0FD
+	%invoke_snes(.set7fc0fdto1bs)
 	LDA !BossSubStates,x
 	JSL $0086DF|!BankB
 		dw .timerstuffman
@@ -1048,7 +1029,8 @@ SpriteCode:
 		dw FINISH_SUBSTATE
 
 .timerstuffman
-	LDA $7FC0FC : ORA #$02
+	;LDA $7FC0FC : ORA #$02 : STA $7FC0FC
+	%invoke_snes(.Set02To7FC0FC)
 	LDA #$40 : STA !BossSubTimer,x
 	LDA #$0E : STA $1DFC|!Base2
 	INC !BossSubStates,x
@@ -1091,7 +1073,8 @@ SpriteCode:
 	db $20,-$20
 
 .TheReurn
-	LDA $7FC0FC : AND #$FD
+;	LDA $7FC0FC : AND #$FD : STA $7FC0FC
+	%invoke_snes(.Clear02To7FC0FC)
 	JMP .Stool
 
 ;;;;;;;
@@ -1112,7 +1095,7 @@ SpriteCode:
 		dw .Stool
 		dw FINISH_SUBSTATE
 .SetTimer
-	LDA #$20 : STA !BossSubTimer,x
+	LDA #$20 : STA !BossSubTimer,x : STA $1887|!addr
 	INC !BossSubStates,x
 	BRA .Earthquake
 
@@ -1123,6 +1106,7 @@ SpriteCode:
 	JSR .DoPose1
 	LDA #$30 : STA !BossSubTimer,x
 	INC !BossSubStates,x
+	LDA #$0E : STA $1DFC|!addr
 +	RTS
 
 .ReturnRise
@@ -1139,6 +1123,11 @@ SpriteCode:
 	BNE +
 	LDA #$20 : STA !BossSubTimer,x
 	INC !BossSubStates,x
+	;LDA #$2B : STA $1DFC|!addr ; fall sfx
+	;LDA #$00 : 
+	STZ $00
+	LDA #$28 : STA $01
+	JSR SetUpPlaySFX
 +
 
 	LDA $14
@@ -1148,6 +1137,7 @@ SpriteCode:
 	RTS
 
 .SMAAAASH
+	JSR PlaySFXForOneFrame
 
 	LDA !GroundHit,x
 	BNE +
@@ -1318,7 +1308,7 @@ JSL $01802A|!BankB
 	JSL $0086DF|!BankB
 		dw .SetTimern
 		dw .PoofGone
-		dw .PrestoItsGusto
+		dw .PrestoItsGuston
 		dw .ThwompsForDaysButWithATwist
 		dw .ThwompsForDaysButWithATwist
 		dw .ThwompsForDaysButWithATwist
@@ -1338,6 +1328,14 @@ JSL $01802A|!BankB
 		dw .ThwompsForDaysTwistFinale
 		dw .ThwompsForDaysTwistFinale
 		dw FINISH_SUBSTATE
+
+.PrestoItsGuston
+	LDA !BossSubTimer,x
+	BNE +
+	LDA #$40 : STA $1887|!addr
++
+	JSR .PrestoItsGusto
+	RTS
 
 .ThwompsForDaysButWithATwist
 	JSR .definitelyknowwhatimdoing
@@ -1364,13 +1362,6 @@ JSL $01802A|!BankB
 	BNE +
 	JSR .T_hanos
 +	RTS
-;	LDA !BossSubTimer,x
-;	BNE +
-;;	STZ !GroundHit,x
-;	STZ !sprite_speed_y,x
-;	LDA #$FF : STA !BossSubTimer,x
-;	INC !BossSubStates,x
-;+
 .ahdamnit
 	LDA !BossSubStates,x
 	INC : AND #$03
@@ -1379,9 +1370,7 @@ JSL $01802A|!BankB
 		dw .Rise
 		dw .Rise
 		dw .SMAAAASH
-	
-	
-;;;;;;;
+
 
 
 
@@ -2137,33 +2126,30 @@ KillAllButSelf:
 	DEY : BPL -
 	PLY
 	RTS
-;>EndRoutine
 
-;######################################
-;######## Sub Routine Space ###########
-;######################################
 
-;Here you can write routines or tables
+PlaySFXForOneFrame:
+	LDA !SFXBuffer,x
+	BEQ +
+	
+	LDA !SFXBank,x : TAY ; I mean really it can only be 0 or 3
+	LDA !SFXToPlay,x : STA $1DF9|!addr,y
+	
++	RTS
 
-;Don't Delete or write another >Section Graphics or >End Section
-;All code between >Section Graphics and >End Graphics Section will be changed by Dyzen : Sprite Maker
-;>Section Graphics
+SetUpPlaySFX:
+	LDA #$02 : STA !SFXBuffer,x ; do you need more than 1 frame?
+	LDA $00 : STA !SFXBank,x ; 0 or 3 is recommended
+	LDA $01 : STA !SFXToPlay,x ; what sfx
+	RTS
+
 ;######################################
 ;########## Graphics Space ############
 ;######################################
-
-;This space is for routines used for graphics
-;if you don't know enough about asm then
-;don't edit them.
-
-;>Routine: GraphicRoutine
-;>Description: Updates tiles on the oam map
-;results will be visible the next frame.
-;>RoutineLength: Short
 GraphicRoutine:
 	; basic flash
 	LDA !BossDamageTimer,x
-	LSR A : AND #$01
+	LSR A : AND #$01 ; make it a 30fps flash for raocow :point_at_camera:
 	BEQ +
 	RTS
 +
@@ -2262,13 +2248,8 @@ GraphicRoutine:
                                         ;A = #$00 => only tiles of 8x8, A = #$02 = only tiles of 16x16, A = #$04 = tiles of 8x8 or 16x16
                                         ;if you select A = #$04 then you must put the sizes of the tiles in !TileSize
 RTS
-;>EndRoutine
 
-;All words that starts with '@' and finish with '.' will be replaced by Dyzen
 
-;>Table: FramesLengths
-;>Description: How many tiles use each frame.
-;>ValuesSize: 16
 FramesLength:
     dw $0001,$0002,$0002,$000C,$000D,$000D,$0012,$0012,$0012,$0012,$000F,$000F,$000F,$000B,$000B,$000B
 	dw $000B,$0008,$0008,$0008,$0008,$0005,$0006,$0006,$0006,$0007,$0007,$0007,$0007,$0004,$0008,$0008
@@ -2276,21 +2257,12 @@ FramesLength:
 	dw $0001,$0002,$0002,$000C,$000D,$000D,$0012,$0012,$0012,$0012,$000F,$000F,$000F,$000B,$000B,$000B
 	dw $000B,$0008,$0008,$0008,$0008,$0005,$0006,$0006,$0006,$0007,$0007,$0007,$0007,$0004,$0008,$0008
 	dw $0008,$0008,$0008,$0008,$0008,$0008,$000B,$000B,$000B,$000B,$0009,$0003,$0003
-;>EndTable
 
 
-;>Table: FramesFlippers
-;>Description: Values used to add values to FramesStartPosition and FramesEndPosition
-;To use a flipped version of the frames.
-;>ValuesSize: 16
 FramesFlippers:
     dw $0000,$005A
-;>EndTable
 
 
-;>Table: FramesStartPosition
-;>Description: Indicates the index where starts each frame
-;>ValuesSize: 16
 FramesStartPosition:
     dw $0001,$0004,$0007,$0014,$0022,$0030,$0043,$0056,$0069,$007C,$008C,$009C,$00AC,$00B8,$00C4,$00D0
 	dw $00DC,$00E5,$00EE,$00F7,$0100,$0106,$010D,$0114,$011B,$0123,$012B,$0133,$013B,$0140,$0149,$0152
@@ -2298,11 +2270,8 @@ FramesStartPosition:
 	dw $01CC,$01CF,$01D2,$01DF,$01ED,$01FB,$020E,$0221,$0234,$0247,$0257,$0267,$0277,$0283,$028F,$029B
 	dw $02A7,$02B0,$02B9,$02C2,$02CB,$02D1,$02D8,$02DF,$02E6,$02EE,$02F6,$02FE,$0306,$030B,$0314,$031D
 	dw $0326,$032F,$0338,$0341,$034A,$0353,$035F,$036B,$0377,$0383,$038D,$0391,$0395
-;>EndTable
 
-;>Table: FramesEndPosition
-;>Description: Indicates the index where end each frame
-;>ValuesSize: 16
+
 FramesEndPosition:
     dw $0000,$0002,$0005,$0008,$0015,$0023,$0031,$0044,$0057,$006A,$007D,$008D,$009D,$00AD,$00B9,$00C5
 	dw $00D1,$00DD,$00E6,$00EF,$00F8,$0101,$0107,$010E,$0115,$011C,$0124,$012C,$0134,$013C,$0141,$014A
@@ -2310,12 +2279,10 @@ FramesEndPosition:
 	dw $01CB,$01CD,$01D0,$01D3,$01E0,$01EE,$01FC,$020F,$0222,$0235,$0248,$0258,$0268,$0278,$0284,$0290
 	dw $029C,$02A8,$02B1,$02BA,$02C3,$02CC,$02D2,$02D9,$02E0,$02E7,$02EF,$02F7,$02FF,$0307,$030C,$0315
 	dw $031E,$0327,$0330,$0339,$0342,$034B,$0354,$0360,$036C,$0378,$0384,$038E,$0392
-;>EndTable
 
 
-;>Table: Tiles
-;>Description: Tiles codes of each tile of each frame
-;>ValuesSize: 8
+
+
 Tiles:
     
 Frame0_FarAway_Tiles:
@@ -2506,12 +2473,11 @@ Frame43_Bolder_TilesFlipX:
 	db $CC,$EC,$CE,$EE
 Frame44_Pencil_TilesFlipX:
 	db $4A,$6A,$6A,$6A
-;>EndTable
 
 
-;>Table: Properties
-;>Description: Properties of each tile of each frame
-;>ValuesSize: 8
+
+
+
 Properties:
     
 Frame0_FarAway_Properties:
@@ -2704,10 +2670,10 @@ Frame43_Bolder_PropertiesFlipX:
 	db $6D,$6D,$6D,$6D
 Frame44_Pencil_PropertiesFlipX:
 	db $6D,$6D,$6D,$6D
-;>EndTable
-;>Table: XDisplacements
-;>Description: X Displacement of each tile of each frame
-;>ValuesSize: 8
+
+
+
+
 XDisplacements:
     
 Frame0_FarAway_XDisp:
@@ -2898,10 +2864,10 @@ Frame43_Bolder_XDispFlipX:
 	db $08,$08,$F8,$F8
 Frame44_Pencil_XDispFlipX:
 	db $00,$00,$00,$00
-;>EndTable
-;>Table: YDisplacements
-;>Description: Y Displacement of each tile of each frame
-;>ValuesSize: 8
+
+
+
+
 YDisplacements:
     
 Frame0_FarAway_YDisp:
@@ -3092,10 +3058,10 @@ Frame43_Bolder_YDispFlipX:
 	db $F8,$08,$F8,$08
 Frame44_Pencil_YDispFlipX:
 	db $00,$10,$20,$30
-;>EndTable
-;>Table: Sizes.
-;>Description: size of each tile of each frame
-;>ValuesSize: 8
+
+
+
+
 Sizes:
     
 Frame0_FarAway_Sizes:
@@ -3286,18 +3252,7 @@ Frame43_Bolder_SizesFlipX:
 	db $02,$02,$02,$02
 Frame44_Pencil_SizesFlipX:
 	db $02,$02,$02,$02
-;>EndTable
 
-;>End Graphics Section
-
-;Don't Delete or write another >Section Animation or >End Section
-;All code between >Section Animations and >End Animations Section will be changed by Dyzen : Sprite Maker
-;>Section Animations
-;>End Animations Section
-
-;Don't Delete or write another >Section Hitbox Interaction or >End Section
-;All code between >Section Hitboxes Interaction and >End Hitboxes Interaction Section will be changed by Dyzen : Sprite Maker
-;>Section Hitboxes Interaction
 ;######################################
 ;######## Interaction Space ###########
 ;######################################
@@ -3637,7 +3592,13 @@ RTS
 	RTS
 +
 
-	LDA $7FC0FD
+	BRA .a
+.check7FC0FD
+	LDA $7FC0FD : STA $00
+	RTL
+.a	
+	%invoke_snes(.check7FC0FD)
+	LDA $00
 	BNE JustHurt
 	%SubVertPos()
 	LDA !ScratchF
@@ -3663,11 +3624,6 @@ DoLogic:
 +
 	STA $7D						;$01AA3F	|/
 	RTS							;$01AA41	|
-	
-    
-;>End Hitboxes Interaction Section
-
-
 
 
 ; this thing is total garbage btw, I'm just needing it for demonstration.
