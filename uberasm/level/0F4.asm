@@ -36,6 +36,9 @@ init:
 	RTL
 
 main:
+	LDA $13D4|!addr
+	ORA $9D
+	BNE .ret
 	DEC !FreeRAM
 	BNE .ret
 	LDA #$56

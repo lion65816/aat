@@ -146,12 +146,41 @@ load_game_over:
     phb : phk : plb
     phx : phy : php
 
+	; Reload vanilla save data from SRAM
+	LDA.b #!bank8
+	PHA
+	PLB
+	PHK
+	PEA.w (+)-1
+	PEA.w $84CE
+	LDX $010A|!addr
+	JML $009DB5|!bank
++
+	BNE .ret	;In a case where save file hasn't been saved yet, don't reload the save
+
+	PHK
+	PLB
+	LDY.w #$0000
+-
+if !sa1
+	LDA.l $41C000,x
+else
+	LDA.l $700000,X
+endif
+	STA.w $1F49|!addr,Y
+	INX
+	INY
+	CPY.w #$008D
+	BCC -
+
     ; Set the save table size.
     rep #$30
     lda.w #!save_table_size_game_over : sta $06
 
     ; Load the save file.
     jsr load_file
+
+.ret
 
     ; Restore DBR, P, X and Y.
     plp : ply : plx
