@@ -159,7 +159,7 @@ Locals:
 9C  FactoryAmb.txt
 9D  TH_10_5_Reisen_X3.txt
 9E  dissolution.txt
-9F  FF4_-_The_Final_Battle.txt
+9F  FF4_-_The_Final_Battle_except_I_mowed_the_lawnmower_man.txt
 A0  Professor Layton & the curious Village - Puzzles.txt
 A1  Another Winter.txt
 A2  MegaTurricanStage31.txt
