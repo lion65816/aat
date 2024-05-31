@@ -2005,7 +2005,6 @@ GetScreenSide_Sprite:
 
 
 DetectDamage:
-
 	LDY.b #!SprSize-1
 -
 	PHX : TYX
@@ -2013,15 +2012,18 @@ DetectDamage:
 	PLX
 	CMP #$94 ; TNT
 	BNE +
+	
+	PHX : TYX
+	LDA !7FAB10,x
+	PLX
+	AND #$08
+	BEQ +
 
 	LDA !14C8,y
 	CMP #$08
 	BNE + ; invalid
 	LDA !1534,y
 	BEQ + ; not exploding
-;	STA $18E6|!Base2
-;	LDA !1528,y
-;	STA $18CB
 	JSR BombLogic
 +	DEY
 	BPL -
