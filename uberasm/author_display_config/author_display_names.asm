@@ -30,7 +30,7 @@ db "DJ Buckley               [[]^^" ; 01C
 db "Big Brawler              ^^^^^" ; 01D
 db "DJ Buckley               [[]^^" ; 01E
 db "Nao                      [[[[[" ; 01F
-db "HatKid and SAJewers      [[^^^" ; 020
+db "HatKid and SAJewers      []^^^" ; 020
 db "Scarfley                 [[^^^" ; 021
 db "EllenHouraisan           []^^^" ; 022
 db "4season                  []^^^" ; 023
@@ -69,7 +69,7 @@ db "EllenHouraisan           []^^^" ; 11F
 db "Nitrogen                 [[[^^" ; 120
 db "PSI Ninja                [[[[]" ; 121
 db "PSI Ninja                [[[[^" ; 122
-db "PSI Ninja                [[[[^" ; 123
+db "PSI Ninja                [[[]^" ; 123
 db "eltiolavara9             []^^^" ; 124
 db "Bumpty                   [[[^^" ; 125
 db "4season                  [[[[]" ; 126
@@ -85,7 +85,7 @@ db "Bumpty                   [[]^^" ; 12F
 db "WitherSnow               [[[[^" ; 130
 db "4season                  [[[]^" ; 131
 db "Catabo                   []^^^" ; 132
-db "Big Brawler              [[[[^" ; 133
+db "Big Brawler              [[[]^" ; 133
 db "levelengine              [[[^^" ; 134
 db "4season                  [[[[^" ; 135
 db "4season                  [[[[]" ; 136
