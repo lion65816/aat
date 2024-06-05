@@ -221,18 +221,16 @@ draw_custom_bar:
 	SEP #$10
 	LDX #$40
 	STX $02
+	LDA.w #!NumTilesMax*4
 	LDX $13E6|!addr		;\ Load the loop index depending on status bar type.
 	CPX #$02			;/
-	BEQ +
-	LDX.b #$00+((!NumTilesMax-1)*2)
-	BRA ++
+	BNE +
+	LDA.w #!NumTilesMin*4
 +
-	LDX.b #$00+((!NumTilesMin-1)*2)
-++
-	TXA
-	INC #2
-	ASL
 	STA $0C
+	LSR
+	TAX
+	DEX #2
 	LDY #$00
 -
 	JSR (counters,x)
@@ -242,6 +240,8 @@ draw_custom_bar:
 	TYA
 	LSR
 	LSR
+	DEC
+	ADC $3102
 	STA $03
 	LDA #$F0F0
 -
@@ -251,25 +251,34 @@ draw_custom_bar:
 	INY #4
 	BRA -
 +
+	TYA
+	LSR
+	LSR
+	TAY
+	DEY
 	; OAM extra bits
-	LDY $03
-	DEY #2
 	REP #$10
 	LDX $3102			;> Bit table index (16-bit pointer to the OAM attribute buffer)
 
-	LDA #$0000		;\ Store extra bits for two tiles at a time.
+;Store Extra OAM bits for all allocated tiles
+	LDA #$0000
+	BRA +
 -
-	STA $400000,x		;/ 
+	STA $400000,x
 
-	INX #2				;\
-	DEY #2				;| Loop to set the remaining OAM extra bits.
-	BPL -				;/
-	INY
-	BMI +
-	INX
+	INX #2
 +
-	LDA #$0200
-	STA $400000-2,x
+	DEY #2
+	BPL -
+	INY
+	BPL +
+	DEX
++
+	STA $400000,x
+	SEP #$20
+	LDX $03
+	LDA #$02
+	STA $400000,x
 	PLB
 	RTS
 
