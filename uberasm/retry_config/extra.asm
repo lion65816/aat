@@ -183,8 +183,7 @@ gm14_end:
 !MainLvlBackup	= $192C|!addr	;Have to resort to using a freeram because of too many resources changing $13BF temporarily
 
 !NumTilesMax = $1D		;> Full status bar ($1D = 29 tiles)
-!NumTilesMin = $04		;> Minimal status bar ($04 = 4 tiles)
-;!NumTilesMin = $0E		;> Minimal status bar ($0E = 14 tiles)
+!NumTilesMin = $09		;> Minimal status bar ($09 = 9 tiles), prints only the lives and Dragon Coin counters
 !Offset = $1010			;> YYXX
 
 custom_bar:
