@@ -27,3 +27,10 @@ resource/temp/all.map16
 *.extmod
 *.lnk
 .lunar_helper/
+music/asm/SFX1DF9Table.bin
+music/asm/SFX1DFCTable.bin
+music/asm/SFXData.bin
+music/asm/tempmain.asm
+music/temp.log
+music/temp.txt
+
