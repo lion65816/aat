@@ -8,7 +8,7 @@ level:
 000	bonusmusic.asm
 002	cityofgulpgulp.asm
 004	LevelIntro.asm
-005	LevelIntro.asm
+005	LevelIntro128.asm
 006	LevelIntro.asm
 007	freescrollbabey.asm
 008	008.asm
@@ -16,7 +16,7 @@ level:
 00A	ashspawn_uberASM_DisableSideExit.asm
 00B	LevelIntro.asm
 00C	LevelIntro.asm
-00D	LevelIntroV2.asm
+00D	LevelIntro00D.asm
 00E	LevelIntro.asm
 00F	GradientLevelF.asm
 010	LevelIntroV2.asm
@@ -218,7 +218,7 @@ level:
 125	purkinje_no_flowers.asm
 126	LevelIntroV2.asm
 127	LevelIntroRGSwitch.asm
-128	LevelIntro.asm
+128	LevelIntro128.asm
 129	easy_going.asm
 12A	ceiling.asm
 12B	Gradient12B.asm

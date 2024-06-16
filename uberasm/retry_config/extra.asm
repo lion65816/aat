@@ -402,11 +402,17 @@ db %00000000
 +
 	STZ $05
 	LDY $03
+	LDX #$08
+	LDA $13E6|!addr
+	BEQ +
+	LDX.b #TileCoord_raocoin_min-TileCoord	;use different positions for raocoins in minimalist HUD
++
 	LDA $1422|!addr
 	STA $04
 	REP #$20
 	BMI ++
-	LDX #$08
+	LDA #$0004
+	STA $06
 -
 	LDA TileCoord+8,x
 	STA [$00],y
@@ -419,6 +425,7 @@ db %00000000
 	STA [$00],y
 	INY #2
 	DEX #2
+	DEC $06
 	BPL -
 ++
 	PLX
@@ -712,6 +719,11 @@ TileCoord:						; YYXX
 	dw $0888+!Offset,$0890+!Offset,$0898+!Offset,$08A0+!Offset	; Coin counter
 	dw $00B4+!Offset,$00BC+!Offset,$00C4+!Offset,$00CC+!Offset	; Death counter ("demos")
 	dw $08C4+!Offset,$08BC+!Offset,$08B4+!Offset,$08CC+!Offset	; Death counter (digits)
+
+.raocoin_min:
+	dw $04D8+!Offset,$04D0+!Offset,$04C8+!Offset,$04C0+!Offset	; Dragon coins in minimalist HUD
+	dw $04B8+!Offset
+
 
 ; Y index starts from 58 (decimal), then decrements by 2 each time
 TileProps:						; High byte = YXPPCCCT, low byte = tile number
