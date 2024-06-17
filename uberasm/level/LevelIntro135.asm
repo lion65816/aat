@@ -1,3 +1,7 @@
+!topEdge = $00A0	; where the "top" wrap point is
+!botEdge = $01A0	; where the "bottom" wrap point is
+!dist = !botEdge-!topEdge
+
 init:
 	JSL DisableSideExit_init
 	JSR draw_sign_prep
@@ -8,6 +12,12 @@ main:
 	JSL freezetimer_main
 	JSR draw_sign_prep
 	JSL DrawSign_main			;> Input parameters are $00-$07.
+
+	LDA $9D
+	BNE .noWrap
+	JSR WrapMario
+	JSR WrapSprites
+.noWrap
 	RTL
 
 draw_sign_prep:
@@ -27,6 +37,60 @@ draw_sign_prep:
 	STA $06						;|
 	LDA.b #TileProps>>16		;|
 	STA $07						;/
+	RTS
+
+WrapMario:
+	LDA $13E0|!addr		; don't wrap if dead
+	CMP #$3E
+	BEQ .noWrap
+	REP #$20
+	LDA $96
+	CMP #!botEdge
+	BMI .checkAbove
+	SEC : SBC #!dist
+	STA $96
+	BRA .noWrap
+.checkAbove
+	CMP #!topEdge
+	BPL .noWrap
+	CLC : ADC #!dist
+	STA $96
+.noWrap
+	SEP #$20
+	RTS
+
+
+WrapSprites:
+	LDX #!sprite_slots-1
+.loop
+	LDA !14C8,x
+	BEQ .skip
+	CMP #$02
+	BEQ .skip
+	LDA !14D4,x
+	XBA
+	LDA !D8,x
+	REP #$20
+	CMP #!botEdge
+	BMI .checkAbove
+	SEC : SBC #!dist
+	SEP #$20
+	STA !D8,x
+	XBA
+	STA !14D4,x
+	BRA .skip
+.checkAbove
+	CMP #!topEdge
+	BPL .skip
+	CLC : ADC #!dist
+	SEP #$20
+	STA !D8,x
+	XBA
+	STA !14D4,x
+.skip
+	SEP #$20
+	DEX
+	BPL .loop
 	RTS
 
 TileCoord:						; YYXX
