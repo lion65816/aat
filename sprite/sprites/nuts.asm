@@ -5,7 +5,7 @@
 ; sprite data
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                     
-!tile = $E0
+!tile = $60
 
 !mata_debiles_fireballs = 0
 !mata_debiles_cape_spin = 0
@@ -74,6 +74,7 @@ SUB_GFX:
     LDX $15E9|!addr               ;  |
     ORA !15F6,x             ;  | get palette info
     ORA $64                 ;  | ?? what is in 64, level properties... disable layer priority??
+    ORA #$01                ;  | use the second graphics page
     STA $0303|!addr,y             ; / store tile properties
 
     PLX                     ; pull, X = sprite index

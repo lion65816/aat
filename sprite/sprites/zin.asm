@@ -170,17 +170,29 @@ NO_CONTACT2:        RTS
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 TILEMAP:
-			 db $C6,$C8,$E6,$E8     ;1
-			 db $C6,$C8,$E6,$E8     ;1
-			 db $CA,$CC,$EA,$EC     ;1
-             db $CA,$CC,$EA,$EC     ;1
+			 db $46,$48,$66,$68     ;1
+			 db $46,$48,$66,$68     ;1
+			 db $4A,$4C,$6A,$6C     ;1
+             db $4A,$4C,$6A,$6C     ;1
 			  
-			 db $80,$82,$A0,$A2     ;1
-	         db $84,$86,$A4,$A6     ;2
-	         db $88,$8A,$A8,$AA     ;3
-	         db $8C,$8E,$AC,$AE     ;4
-	         db $C2,$C4,$E2,$E4     ;5
-			 db $80,$82,$A0,$A2     ;1
+			 db $00,$02,$20,$22     ;1
+	         db $04,$06,$24,$26     ;2
+	         db $08,$0A,$28,$2A     ;3
+	         db $0C,$0E,$2C,$2E     ;4
+	         db $42,$44,$62,$64     ;5
+
+			 ;db $80,$82,$A0,$A2     ;1
+			 ;db $C6,$C8,$E6,$E8     ;1
+			 ;db $C6,$C8,$E6,$E8     ;1
+			 ;db $CA,$CC,$EA,$EC     ;1
+             ;db $CA,$CC,$EA,$EC     ;1
+			  
+			 ;db $80,$82,$A0,$A2     ;1
+	         ;db $84,$86,$A4,$A6     ;2
+	         ;db $88,$8A,$A8,$AA     ;3
+	         ;db $8C,$8E,$AC,$AE     ;4
+	         ;db $C2,$C4,$E2,$E4     ;5
+			 ;db $80,$82,$A0,$A2     ;1
 
 X_OFFSET:    db $0E,$FE,$0E,$FE,$FE,$0E,$FE,$0E
 Y_OFFSET:    db $F0,$F0,$00,$00
@@ -254,6 +266,7 @@ LOOP_START:          PHX
                     BNE NO_FLIP             ;  |
                     ORA #$40                ; /    ...flip tile
 NO_FLIP:             ORA $64                 ; add in tile priority of level
+                    ORA #$01                ; use the second graphics page
                     STA $0303|!addr,y             ; store tile properties
                     PLX            
                     
