@@ -29,6 +29,9 @@ overworld_map_names:
 	; Determine which row of logos to load (relevant for the main map).
 	STZ $03				;\ By default, the offset is zero (first row).
 	STZ $04				;/
+	STZ $05				;\ High byte contains the YXPPCCCT.
+	LDA #$3E			;| By default, use palette row F.
+	STA $06				;/
 	LDA $13D9|!addr		;\ If the overworld process is zero, check for special cases first.
 	BEQ .other_checks	;/
 	CMP #$0A			;\ Don't draw the logo while switching between submaps.
@@ -52,6 +55,8 @@ overworld_map_names:
 	BNE ++
 	LDA #$20			;\ Use the second row of 16x16 tiles if track $C1 is playing (for Cosmic Heaven).
 	STA $03				;/
+	LDA #$38			;\ Use palette row C for Cosmic Heaven.
+	STA $06				;/
 ++
 
 	; Load the 24-bit address of the logo/blank tilemaps.
@@ -97,9 +102,9 @@ Draw:
 	LDA TileYX,y					;\ Load base X and Y coordinates
 	STA $400000,x					;/
 
-	LDA [$00],y						;\ Get the appropriate tile.
-	CLC								;|
-	ADC #!TileProp					;/
+	LDA [$00],y						;> Get the appropriate tile.
+	CLC								;\ Add the YXPPCCCT for the logo.
+	ADC $05							;/
 	CLC								;\ Add the row offset for the logo.
 	ADC $03							;/
 	STA $400002,x					;> Store to MaxTile
