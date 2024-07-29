@@ -162,7 +162,19 @@ main:
 	BNE .ret
 	LDA $1DEA|!addr
 	CMP #$FF
-	BNE .ret
+	BEQ +
+	AND #$07
+	TAX
+	LDA $1DEA|!addr
+	LSR #3
+	TAY
+	LDA $1F02|!addr,y
+	AND BitTable,x
+	BEQ .ret
++
 	STZ $1B86|!addr
 .ret
 	RTL
+
+BitTable:
+db $80,$40,$20,$10,$08,$04,$02,$01
