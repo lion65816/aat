@@ -265,6 +265,7 @@ level:
 158	ceiling.asm
 159	RemoveYoshi.asm
 15B	craigdarroch.asm
+15C	FilterYoshi.asm
 15D	whales_main.asm
 15E	FilterYoshi_15E.asm
 15F	trivia.asm
