@@ -25,6 +25,7 @@
 !SkipBonusGame = 1
 
 load:
+	JSL FilterYoshi_load
 	JSL MultipersonReset_load
 	RTL
 
