@@ -176,7 +176,7 @@ AirBarPositionYoshi:
 ;the last two is with riding yoshi. Also applies to carrying sprites.
 
 SubGfx:	JSR GetPalette
-	LDA !15F6,x		; NOTE: Reinstate to use the palette from the cfg file
+	;LDA !15F6,x		; NOTE: Reinstate to use the palette from the cfg file
 	STA $02
 	
 	LDA !RAM_AirMeter	; Load address to be timed
