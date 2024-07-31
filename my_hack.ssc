@@ -124,7 +124,7 @@ Add 40 to make it stun and 80 to make it spawn shockwaves.
 54 0030 A Homing Horizontal Thwomp that goes right, then returns to it's original position.
 54 0032 -4,0,34 12,0,35 -4,16,44 12,16,45
 57 0020 Actually 5 different sprites in one. Extra Byte 1 setting 00 is the Fortress Boss, 01 is a missile that shoots up then back down at the player, 02 is a mini castle, 03 is a bolder that creates chuck rocks when landing on the ground, and 04 is a pencil that goes up once and then down to destroy itself.
-57 0022 0,-8,44D
+57 0022 0,-8,43E
 58 0030 A rubber duck that functions like a springboard. Floats in water if sprite buoyancy is enabled and cannot be held.
 58 0032 0,0,0
 59 0020 Undefined Sprite
